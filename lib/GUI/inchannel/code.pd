@@ -1,4 +1,4 @@
-#N canvas 644 14 450 300 10;
+#N canvas 11 133 450 300 10;
 #N canvas 394 249 679 490 selector 0;
 #X obj 354 264 s \$1GUI_channel_togui;
 #X obj 13 36 r \$1GUI_channel_fromgui;
@@ -34,10 +34,10 @@
 #X restore 354 169 pd getnames;
 #X msg 354 191 append \$1;
 #X obj 354 149 t b b;
-#X obj 325 68 loadbang;
+#X obj 354 68 loadbang;
 #X msg 412 141 bang;
-#X msg 439 169 name --- \, options;
-#X obj 325 89 t b b;
+#X msg 436 167 name --- \, options;
+#X obj 354 89 t b b;
 #X msg 78 99 \$2;
 #X obj 13 58 unpack 0 s;
 #X obj 78 78 s2l :;
@@ -126,6 +126,7 @@
 100;
 #X obj 75 76 t f f f;
 #X obj 119 156 gui_sr \$1GUI_input_EQ_mid1_q %d_IN_EQ_MID1_Q;
+#X obj 56 217 Rgui_Stogui_offset \$1GUI_input_EQ_mid1_gain 100;
 #X connect 0 0 3 0;
 #X connect 3 0 1 0;
 #X connect 3 1 2 0;
@@ -138,6 +139,7 @@
 #X obj 97 122 gui_sr_offset \$1GUI_input_EQ_mid2_gain %d_IN_EQ_MID2_GAIN
 100;
 #X obj 119 156 gui_sr \$1GUI_input_EQ_mid2_q %d_IN_EQ_MID2_Q;
+#X obj 56 217 Rgui_Stogui_offset \$1GUI_input_EQ_mid2_gain 100;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
@@ -149,6 +151,7 @@
 #X obj 39 83 gui_sr \$1GUI_input_EQ_hi_f %d_IN_EQ_HIGH_TRANS_FREQ;
 #X obj 39 103 gui_sr_offset \$1GUI_input_EQ_hi_gain %d_IN_EQ_HIGH_GAIN
 100;
+#X obj 38 133 Rgui_Stogui_offset \$1GUI_input_EQ_hi_gain 100;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
@@ -159,19 +162,21 @@
 #X obj 39 83 gui_sr \$1GUI_input_EQ_lo_f %d_IN_EQ_LOW_TRANS_FREQ;
 #X obj 39 103 gui_sr_offset \$1GUI_input_EQ_lo_gain %d_IN_EQ_LOW_GAIN
 100;
+#X obj 56 217 Rgui_Stogui_offset \$1GUI_input_EQ_lo_gain 100;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
 #X restore 125 365 pd lo;
 #N canvas 163 149 666 302 hicut 0;
 #X obj 115 27 inlet;
-#X obj 115 82 gui_sr \$1GUI_input_EQ_hicut_f %d_IN_EQ_HIGHCUT_FREQ
-;
 #X obj 115 56 t f f;
-#X obj 115 102 gui_sr \$1GUI_input_EQ_hicut %d_IN_EQ_HIGHCUT_ON;
-#X connect 0 0 2 0;
-#X connect 2 0 1 0;
-#X connect 2 1 3 0;
+#X obj 115 82 gui_sr_offset \$1GUI_input_EQ_hicut_f %d_IN_EQ_HIGHCUT_FREQ
+;
+#X obj 115 102 gui_sr_offset \$1GUI_input_EQ_hicut %d_IN_EQ_HIGHCUT_ON
+;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
 #X restore 124 255 pd hicut;
 #N canvas 289 191 666 302 locut 0;
 #X obj 115 47 inlet;
@@ -253,20 +258,38 @@
 #X connect 10 1 11 0;
 #X connect 11 0 12 0;
 #X restore 205 131 pd EQ;
-#N canvas 0 0 830 392 plugins 0;
-#X obj 51 106 r \$1GUI_plugin1_fromgui;
-#X obj 216 106 r \$1GUI_plugin1_on_fromgui;
-#X obj 403 106 r \$1GUI_plugin1_settings_fromgui;
-#X obj 51 166 r \$1GUI_plugin2_fromgui;
-#X obj 216 166 r \$1GUI_plugin2_on_fromgui;
-#X obj 403 166 r \$1GUI_plugin2_settings_fromgui;
-#X obj 46 221 r \$1GUI_plugin3_fromgui;
-#X obj 211 221 r \$1GUI_plugin3_on_fromgui;
-#X obj 398 221 r \$1GUI_plugin3_settings_fromgui;
-#X obj 46 281 r \$1GUI_plugin4_fromgui;
-#X obj 211 281 r \$1GUI_plugin4_on_fromgui;
-#X obj 398 281 r \$1GUI_plugin4_settings_fromgui;
-#X obj 40 19 inlet ID#;
+#N canvas 108 103 804 325 plugins 0;
+#X obj 110 30 inlet ID#;
+#X obj 110 66 t f f f f;
+#N canvas 0 0 450 300 plugin-gui 0;
+#X obj 102 41 inlet;
+#X obj 102 211 TEST/gui;
+#X connect 0 0 1 0;
+#X restore 88 268 pd plugin-gui;
+#X obj 262 221 print pluggy;
+#X obj 110 101 inchannel/helper/plugin \$1GUI_plugin1 1;
+#X msg 436 75 options none TEST TUST TAST \, name plugins;
+#X obj 436 48 r fakepopup;
+#X obj 129 121 inchannel/helper/plugin \$1GUI_plugin2 2;
+#X obj 148 142 inchannel/helper/plugin \$1GUI_plugin3 3;
+#X obj 168 162 inchannel/helper/plugin \$1GUI_plugin4 4;
+#X obj 141 218 t a a;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 1 1 7 0;
+#X connect 1 2 8 0;
+#X connect 1 3 9 0;
+#X connect 4 0 10 0;
+#X connect 5 0 4 1;
+#X connect 5 0 7 1;
+#X connect 5 0 8 1;
+#X connect 5 0 9 1;
+#X connect 6 0 5 0;
+#X connect 7 0 10 0;
+#X connect 8 0 10 0;
+#X connect 9 0 10 0;
+#X connect 10 0 2 0;
+#X connect 10 1 3 0;
 #X restore 312 139 pd plugins;
 #N canvas 266 173 845 473 aux 0;
 #X obj 38 9 inlet ID#;
@@ -768,7 +791,7 @@
 #X obj 533 152 t b b;
 #X msg 559 196 options;
 #X msg 394 181 1_adc \, 2_adc \, 1_aux;
-#X msg 532 126 bang;
+#X msg 533 126 bang;
 #N canvas 0 0 450 300 input-gain 0;
 #X obj 30 99 r \$1GUI_input_ingain_fromgui;
 #X obj 30 120 + 100;
@@ -818,6 +841,7 @@
 #X connect 5 0 2 0;
 #X restore 36 144 pd input-invert;
 #X obj 97 64 t f f f f;
+#X obj 533 70 r fakepopup;
 #X connect 0 0 12 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
@@ -830,6 +854,7 @@
 #X connect 12 1 11 0;
 #X connect 12 2 9 0;
 #X connect 12 3 10 0;
+#X connect 13 0 7 0;
 #X restore 304 55 pd INPUTSECTION;
 #N canvas 0 0 744 314 FADER 0;
 #X obj 210 19 inlet ID#;

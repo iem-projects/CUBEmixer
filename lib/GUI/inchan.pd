@@ -22,13 +22,13 @@ aux1 0 -4 0 8 -262144 -1 -1 -100 256;
 #X obj 2 181 cnv 15 63 36 empty empty empty 25 12 0 8 -228992 -66577
 0;
 #X obj 3 185 tgl 15 0 \$0GUIinchan_plugin1_tgl_fromgui \$0GUIinchan_plugin1_tgl_togui
-plugin1 20 7 0 8 -262144 -1 -1 0 1;
-#X obj 3 202 tgl 15 0 \$0GUIinchan_plugin2_select_fromgui \$0GUIinchan_plugin2_select_togui
+plugin1 20 7 0 8 -262144 -1 -1 1 1;
+#X obj 3 202 tgl 15 0 \$0GUIinchan_plugin2_tgl_fromgui \$0GUIinchan_plugin2_tgl_togui
 plugin2 20 7 0 8 -262144 -1 -1 0 1;
 #X obj 39 352 vsl 8 101 0 100 0 0 \$0GUIinchan_subfader_fromgui \$0GUIinchan_subfader_togui
 empty 0 -8 0 8 -262144 -1 -1 0 1;
 #X obj 13 22 hradio 15 1 0 3 \$0GUIinchan_select \$0GUIinchan_select
-empty 0 -6 0 8 -262144 -1 -1 0;
+empty 0 -6 0 8 -262144 -1 -1 2;
 #X obj 10 22 cnv 15 50 15 empty \$0GUIinchan_inputselectname input
 3 6 0 12 -225271 -66577 0;
 #X obj 36 51 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux2_gain_fromgui \$0GUIinchan_aux2_gain_togui
