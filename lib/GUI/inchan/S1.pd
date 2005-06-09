@@ -1,0 +1,152 @@
+#N canvas 222 21 116 126 10;
+#X obj 3 2 cnv 15 64 98 2 empty direct 10 8 0 8 -233017 -66577 0;
+#X obj 4 22 tgl 15 0 2903GUIdirect_bus1_fromgui 2903GUIdirect_bus1_togui
+1 5 8 0 8 -262144 -1 -166441 0 100;
+#X obj 32 22 tgl 15 0 2903GUIdirect_bus2_fromgui 2903GUIdirect_bus2_togui
+2 5 8 0 8 -262144 -1 -166441 0 100;
+#X obj 4 48 tgl 15 0 2903GUIdirect_bus5_fromgui 2903GUIdirect_bus5_togui
+5 5 8 0 8 -262144 -1 -166441 0 100;
+#X obj 32 48 tgl 15 0 2903GUIdirect_bus6_fromgui 2903GUIdirect_bus6_togui
+6 5 8 0 8 -262144 -1 -166441 0 100;
+#X obj 4 74 tgl 15 0 2903GUIdirect_bus9_fromgui 2903GUIdirect_bus9_togui
+9 5 8 0 8 -262144 -1 -166441 0 100;
+#X obj 32 74 tgl 15 0 2903GUIdirect_bus10_fromgui 2903GUIdirect_bus10_togui
+10 2 8 0 8 -262144 -1 -166441 0 100;
+#X obj 4 100 tgl 15 0 2903GUIdirect_bus13_fromgui 2903GUIdirect_bus13_togui
+13 2 8 0 8 -262144 -1 -166441 0 100;
+#X obj 32 100 tgl 15 0 2903GUIdirect_bus14_fromgui 2903GUIdirect_bus14_togui
+14 2 8 0 8 -262144 -1 -166441 0 100;
+#X obj 102 22 parent$0;
+#X obj 102 3 loadbang;
+#N canvas 0 369 964 309 code 0;
+#X obj 165 25 inlet;
+#X obj 151 244 outlet;
+#X obj 197 244 outlet;
+#X obj 243 244 outlet;
+#X obj 289 244 outlet;
+#X obj 165 72 t s s s s;
+#X msg 165 47 symbol \$1GUIdirect_;
+#X msg 151 97 send \$1bus1_fromgui \, receive \$1bus1_togui;
+#X msg 197 134 send \$1bus2_fromgui \, receive \$1bus2_togui;
+#X msg 243 170 send \$1bus3_fromgui \, receive \$1bus3_togui;
+#X msg 289 207 send \$1bus4_fromgui \, receive \$1bus4_togui;
+#X connect 0 0 6 0;
+#X connect 5 0 7 0;
+#X connect 5 1 8 0;
+#X connect 5 2 9 0;
+#X connect 5 3 10 0;
+#X connect 6 0 5 0;
+#X connect 7 0 1 0;
+#X connect 8 0 2 0;
+#X connect 9 0 3 0;
+#X connect 10 0 4 0;
+#X restore 13 20 pd code . . .;
+#X obj 60 22 tgl 15 0 2903GUIdirect_bus3_fromgui 2903GUIdirect_bus3_togui
+3 5 8 0 8 -262144 -1 -166441 0 100;
+#X obj 88 22 tgl 15 0 2903GUIdirect_bus4_fromgui 2903GUIdirect_bus4_togui
+4 5 8 0 8 -262144 -1 -166441 0 100;
+#X obj 60 48 tgl 15 0 2903GUIdirect_bus7_fromgui 2903GUIdirect_bus7_togui
+7 5 8 0 8 -262144 -1 -166441 0 100;
+#X obj 88 48 tgl 15 0 2903GUIdirect_bus8_fromgui 2903GUIdirect_bus8_togui
+8 5 8 0 8 -262144 -1 -166441 0 100;
+#X obj 60 74 tgl 15 0 2903GUIdirect_bus11_fromgui 2903GUIdirect_bus11_togui
+11 2 8 0 8 -262144 -1 -166441 0 100;
+#X obj 88 74 tgl 15 0 2903GUIdirect_bus12_fromgui 2903GUIdirect_bus12_togui
+12 2 8 0 8 -262144 -1 -166441 0 100;
+#X obj 60 100 tgl 15 0 2903GUIdirect_bus15_fromgui 2903GUIdirect_bus15_togui
+15 2 8 0 8 -262144 -1 -166441 0 100;
+#X obj 88 100 tgl 15 0 2903GUIdirect_bus16_fromgui 2903GUIdirect_bus16_togui
+16 2 8 0 8 -262144 -1 -166441 0 100;
+#X obj 106 45 t s s s s;
+#N canvas 0 369 964 309 code 0;
+#X obj 165 25 inlet;
+#X obj 151 244 outlet;
+#X obj 197 244 outlet;
+#X obj 243 244 outlet;
+#X obj 289 244 outlet;
+#X obj 165 72 t s s s s;
+#X msg 165 47 symbol \$1GUIdirect_;
+#X msg 289 208 send \$1bus8_fromgui \, receive \$1bus8_togui;
+#X msg 243 170 send \$1bus7_fromgui \, receive \$1bus7_togui;
+#X msg 197 134 send \$1bus6_fromgui \, receive \$1bus6_togui;
+#X msg 151 97 send \$1bus5_fromgui \, receive \$1bus5_togui;
+#X connect 0 0 6 0;
+#X connect 5 0 10 0;
+#X connect 5 1 9 0;
+#X connect 5 2 8 0;
+#X connect 5 3 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 0;
+#X connect 8 0 3 0;
+#X connect 9 0 2 0;
+#X connect 10 0 1 0;
+#X restore 21 60 pd code . . .;
+#N canvas 0 369 964 309 code 0;
+#X obj 165 25 inlet;
+#X obj 151 244 outlet;
+#X obj 197 244 outlet;
+#X obj 243 244 outlet;
+#X obj 289 244 outlet;
+#X obj 165 72 t s s s s;
+#X msg 165 47 symbol \$1GUIdirect_;
+#X msg 289 207 send \$1bus12_fromgui \, receive \$1bus12_togui;
+#X msg 243 170 send \$1bus11_fromgui \, receive \$1bus11_togui;
+#X msg 197 134 send \$1bus10_fromgui \, receive \$1bus10_togui;
+#X msg 151 97 send \$1bus9_fromgui \, receive \$1bus9_togui;
+#X connect 0 0 6 0;
+#X connect 5 0 10 0;
+#X connect 5 1 9 0;
+#X connect 5 2 8 0;
+#X connect 5 3 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 0;
+#X connect 8 0 3 0;
+#X connect 9 0 2 0;
+#X connect 10 0 1 0;
+#X restore 106 94 pd code . . .;
+#N canvas 0 369 964 309 code 0;
+#X obj 165 25 inlet;
+#X obj 151 244 outlet;
+#X obj 197 244 outlet;
+#X obj 243 244 outlet;
+#X obj 289 244 outlet;
+#X obj 165 72 t s s s s;
+#X msg 165 47 symbol \$1GUIdirect_;
+#X msg 151 97 send \$1bus13_fromgui \, receive \$1bus13_togui;
+#X msg 197 134 send \$1bus14_fromgui \, receive \$1bus14_togui;
+#X msg 243 170 send \$1bus15_fromgui \, receive \$1bus15_togui;
+#X msg 289 207 send \$1bus16_fromgui \, receive \$1bus16_togui;
+#X connect 0 0 6 0;
+#X connect 5 0 7 0;
+#X connect 5 1 8 0;
+#X connect 5 2 9 0;
+#X connect 5 3 10 0;
+#X connect 6 0 5 0;
+#X connect 7 0 1 0;
+#X connect 8 0 2 0;
+#X connect 9 0 3 0;
+#X connect 10 0 4 0;
+#X restore 3 80 pd code . . .;
+#X connect 9 0 20 0;
+#X connect 10 0 9 0;
+#X connect 11 0 1 0;
+#X connect 11 1 2 0;
+#X connect 11 2 12 0;
+#X connect 11 3 13 0;
+#X connect 20 0 11 0;
+#X connect 20 1 21 0;
+#X connect 20 2 22 0;
+#X connect 20 3 23 0;
+#X connect 21 0 3 0;
+#X connect 21 1 4 0;
+#X connect 21 2 14 0;
+#X connect 21 3 15 0;
+#X connect 22 0 5 0;
+#X connect 22 1 6 0;
+#X connect 22 2 16 0;
+#X connect 22 3 17 0;
+#X connect 23 0 7 0;
+#X connect 23 1 8 0;
+#X connect 23 2 18 0;
+#X connect 23 3 19 0;
+#X coords 0 0 1 1 67 100 1;
