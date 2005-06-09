@@ -278,17 +278,8 @@
 #X obj 132 133 inchan/helper/plugin \$1GUIinchan_plugin1 \$2_IN_PLUGIN1
 plugin1;
 #X obj 466 64 t s s s s;
-#X obj 134 181 inchan/helper/plugin \$1GUIinchan_plugin2 \$2_IN_PLUGIN2
-plugin2;
-#X obj 523 134 inchan/helper/plugin \$1GUIinchan_plugin3 \$2_IN_PLUGIN3
-plugin3;
-#X obj 521 182 inchan/helper/plugin \$1GUIinchan_plugin4 \$2_IN_PLUGIN4
-plugin4;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
-#X connect 2 1 3 0;
-#X connect 2 2 4 0;
-#X connect 2 3 5 0;
 #X restore 162 251 pd plugin;
 #X text 24 23 this is the main section of the GUI input-channel. ALL
 values are stored here \, and from here they are sent to other modules

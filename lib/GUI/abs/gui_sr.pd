@@ -15,16 +15,17 @@ inlet.;
 it to "1_BUS1_GAIN";
 #X text 93 308 [gui_sr bus1_gain %d_BUS1_GAIN];
 #X obj 139 39 inlet master_sr;
-#X obj 312 255 iem_s;
+#X obj 377 295 iem_s;
 #X obj 312 179 t b s;
 #X obj 312 152 symbol;
-#X msg 362 214 set \$1;
-#X msg 312 234 set \$1;
+#X msg 407 214 set \$1;
+#X msg 377 274 set \$1;
 #X obj 312 108 inlet sendonce2set;
 #X text 66 446 if you send a symbol to the 2nd inlet \, the current
 value will be sent with a prepended "set"-message to the receiver given
 ;
-#X obj 312 213 any 0;
+#X obj 312 213 any;
+#X obj 312 246 route bang;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 2 0 20 1;
@@ -38,4 +39,5 @@ value will be sent with a prepended "set"-message to the receiver given
 #X connect 16 0 13 1;
 #X connect 17 0 13 0;
 #X connect 18 0 15 0;
-#X connect 20 0 17 0;
+#X connect 20 0 21 0;
+#X connect 21 1 17 0;
