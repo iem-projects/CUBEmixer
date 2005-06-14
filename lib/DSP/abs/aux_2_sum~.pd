@@ -1,0 +1,6 @@
+#N canvas 0 0 498 348 10;
+#X obj 40 62 catch~ \$1_AUX_SND;
+#X obj 40 100 s~ \$1_AUX_SUM;
+#X obj 23 13 inlet~;
+#X obj 22 154 outlet~;
+#X connect 0 0 1 0;
