@@ -26,6 +26,7 @@ value will be sent with a prepended "set"-message to the receiver given
 ;
 #X obj 312 213 any;
 #X obj 312 246 route bang;
+#X msg 312 269 set;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 2 0 20 1;
@@ -40,4 +41,6 @@ value will be sent with a prepended "set"-message to the receiver given
 #X connect 17 0 13 0;
 #X connect 18 0 15 0;
 #X connect 20 0 21 0;
+#X connect 21 0 22 0;
 #X connect 21 1 17 0;
+#X connect 22 0 13 0;
