@@ -358,10 +358,10 @@
 #X obj 607 258 s \$1GUI_aux4_togui;
 #X msg 532 183 options aux1 aux2 aux3 aux4 \, name AUX;
 #X obj 537 156 loadbang;
-#X obj 38 64 inchannel/helper/aux \$1GUI_aux1 %d_IN_AUX_1;
-#X obj 57 84 inchannel/helper/aux \$1GUI_aux2 %d_IN_AUX_2;
-#X obj 76 104 inchannel/helper/aux \$1GUI_aux3 %d_IN_AUX_3;
-#X obj 96 124 inchannel/helper/aux \$1GUI_aux4 %d_IN_AUX_4;
+#X obj 38 64 inchannel/helper/auxiliary \$1GUI_aux1 %d_IN_AUX_1;
+#X obj 57 84 inchannel/helper/auxiliary \$1GUI_aux2 %d_IN_AUX_2;
+#X obj 76 104 inchannel/helper/auxiliary \$1GUI_aux3 %d_IN_AUX_3;
+#X obj 96 124 inchannel/helper/auxiliary \$1GUI_aux4 %d_IN_AUX_4;
 #X connect 0 0 1 0;
 #X connect 1 0 9 0;
 #X connect 1 1 10 0;

@@ -60,14 +60,14 @@
 #X restore 63 138 pd select;
 #N canvas 0 0 481 202 aux 0;
 #X obj 27 17 inlet \$0GUI-prepend;
-#X obj 26 69 inchan/helper/aux \$1GUIinchan_aux1 \$2_IN_AUX_1 aux1
+#X obj 26 69 inchan/helper/auxiliary \$1GUIinchan_aux1 \$2_IN_AUX_1 aux1
 ;
 #X obj 26 41 t s s s s;
-#X obj 36 89 inchan/helper/aux \$1GUIinchan_aux2 \$2_IN_AUX_2 aux2
+#X obj 36 89 inchan/helper/auxiliary \$1GUIinchan_aux2 \$2_IN_AUX_2 aux2
 ;
-#X obj 56 109 inchan/helper/aux \$1GUIinchan_aux3 \$2_IN_AUX_3 aux3
+#X obj 56 109 inchan/helper/auxiliary \$1GUIinchan_aux3 \$2_IN_AUX_3 aux3
 ;
-#X obj 76 129 inchan/helper/aux \$1GUIinchan_aux4 \$2_IN_AUX_4 aux4
+#X obj 76 129 inchan/helper/auxiliary \$1GUIinchan_aux4 \$2_IN_AUX_4 aux4
 ;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
