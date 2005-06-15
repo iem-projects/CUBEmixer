@@ -1,250 +1,93 @@
-Konzept für den neuen Cube 3D-Mixer vom 20.8.2004 rev. 10.05.05  rev. 17.05.05  rev. 18.05.05
+1. Spalte = send/receive-name
 
 
-
-
-Ziele:
-1.) freies routing der IO-Umgebung
-2.) Plugin-Möglichkeit
-3.) zeitvariante Ambisonic-Spatialisierung
-4.) zeitvariante  Matrix-Spatialisierung
-5.) Standard-Mischpult-Effekte wie Delay, Invertierung, Lowcut, Highcut, 4-fach-EQ, Compander
-6.) Trennung von DSP-Engine, GUI-Oberfläche, Cue-Speicher, MIDI-Interface über mehrere Computer
-7.) möglichst geringe Message-Verarbeitungs-Aufwand
-8.) grösstmögliche Übersichtlichkeit für weitere Maintenance
-9.) leichte Erweiterbarkeit der Anzahl von Kanalzügen, Inputs und Outputs
-10.) Rückabfragbarkeit aller Parameter
-11.) Auxiliaries: Zusatz-Eingänge (AUX_RET) und -Ausgänge (AUX_SUM) bilden die
-                  Aus- und Eingänge von Auxiliary-Plugins
-
-
-
-
-
-prinzipiell werden 
-Frequenzen in Hz,
-Gains in MIDI-dB
-On-Off in 0 oder 1,
-Zeiten in ms,
-Quellen, Ziele oder Übertragungskennlinien als <symbols>.
-
-
-Übergabeargumente für Gesamt-Modul:
-1.) Anzahl der ADCs (52)
-2.) Anzahl der Input-Kanal-Züge (24)
-3.) Anzahl der AUX-Sends (4)
-4.) Anzahl der AUX-Return-Kanal-Züge (8)
-5.) Anzahl der BUS-Summen (16)
-6.) Anzahl der DACs (52)
-7.) Index für EFFECT-PLUG-IN (1)
-8.) Index für AUX-PLUG-IN (1)
-
-
-Funktions Beschreibung des DSP-Moduls:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-folgende Module:
-1.) ADC-IN-Distribute : verteilt Signal von adc~ auf ADC-Sender.
-2.) AUX-SUM-Distribute : summiert AUX_SNDs und verteilt auf AUX_SUM-Sender.
-3.) PLAY-PLUG-IN : Soundfileplayer versenden ihr Signal auf PLAY
-4.) IN-MIX-CH : empfängt ADC, AUX_RET oder PLAY, verzögert, invertiert,
-                filtert optional Signal, bearbeitet optional die Dynamik des Signals,
-                regelt Lautstärke, verschickt Signal an AUX_SND oder BUS,
-                spatialisiert Signal in Ambisonic-Domain AMBI_BUS.
-5.) EFFECT-PLUG-IN : kann nach Compander-Stufe und vor Fader eingeschliffen werden,
-                     ist default ein Stück Draht zwischen inlet~ und outlet~,
-                     wird in jedem IN-MIX-CH-Modul gleich eingebaut,
-                     muss daher switch-bar sein.
-6.) AUX-RET-CH : ist ein vereinfachter IN-MIX-CH-Kanalzug, empfängt via AUX_RET,
-                 regelt Lautstärke, verschickt Signal an BUS,
-                 spatialisiert Signal in Ambisonic-Domain AMBI_BUS.
-7.) AUX-PLUG-IN (Reverb) : diese Plugins existieren default als Inselpatches und müssen
-                           ersetzt werden, sie empfangen ihr Signal via AUX_SUM
-                           und versenden ihr Signal via AUX_RET.
-8.) REC-PLUG-IN : Soundfilerecorder empfangen ihr Signal von AMBI_SUM oder OUT_SUM
-9.) AMBI-Gain-Decode : summiert AMBI_BUS Signale, regelt gemeinsam die Lautstärke,
-                       versendet via AMBI_SUM, dekodiert Ambisonic-Signale zu
-                       Lautsprechersignale und versendet sie via DEC_OUT.
-10.) BUS-Gain-Matrix-OUT : empfängt die BUS Signale, regelt individuell die
-                           BUS-Lautstärke, schickt BUS in die Matrix,
-                           Matrix-Ausgang wird versendet via OUT.
-11.) OUT-DAC-Distribute : empfängt Signale via DEC_OUT und OUT und
-                          summiert sie, versendet sie via OUT_SUM,
-                          kompensiert sie in Lautstärke und Laufzeit
-                          und führt sie Richtung dac~.
-
-
-Routing Parameter werden nur am Anfang geladen und eingestellt, und dürfen im Sound einen
+======================================================================================
+Routing Parameter werden nur am Anfang geladen und eingestellt, und duerfen im Sound einen
 Knackser verursachen.
-  (für IN-MIX-CH)
+  (fuer IN-MIX-CH)
 
-$1_IN_SEL_SRC : selected INPUT or AUX-RET (1_ADC ... 52_ADC, 1_AUX_RET ... 8_AUX_RET)
+$1_IN_SEL : selected INPUT or AUX-RET (1_ADC ... 52_ADC, 1_AUX ... 8_AUX)
 $1_IN_DEL : Delay (0 ... 1000 ms)
 $1_IN_INV : Signal-Inverter (+1 or -1)
-$1_IN_AUX_SND_DST_1 : selected Destination of 1. AUX-SND (1_AUX_SND ... 8_AUX_SND)
-$1_IN_AUX_SND_DST_2 : selected Destination of 2. AUX-SND (1_AUX_SND ... 8_AUX_SND)
-$1_IN_AUX_SND_DST_3 : selected Destination of 3. AUX-SND (1_AUX_SND ... 8_AUX_SND)
-$1_IN_AUX_SND_DST_4 : selected Destination of 4. AUX-SND (1_AUX_SND ... 8_AUX_SND)
-$1_IN_BUS_SND_DST_1 : selected Destination of 1. BUS_SND (1_BUS ... 16_BUS)
-$1_IN_BUS_SND_DST_2 : selected Destination of 2. BUS_SND (1_BUS ... 16_BUS)
-$1_IN_BUS_SND_DST_3 : selected Destination of 3. BUS_SND (1_BUS ... 16_BUS)
-$1_IN_BUS_SND_DST_4 : selected Destination of 4. BUS_SND (1_BUS ... 16_BUS)
+$1_IN_AUX_1_DST : selected Destination of 1. AUX-SND (1_AUX ... 8_AUX) (--> audio-engine: [throw~ 1_AUX_SND])
 
-Operating Parameter werden im Betrieb ständig nachgeladen und verursachen keine Knackser.
-  (für IN-MIX-CH)
+Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine Knackser.
+  (fuer IN-MIX-CH)
+
+$1_IN_CH_ON:
 
 $1_IN_ADJ_GAIN : adjust the INPUT-Level (0 ... 150 MIDI-dB)
-$1_IN_LOWCUT_FREQ :
-$1_IN_LOWCUT_ON1_OFF0 :
+
+$1_IN_EQ_ON :
+$1_IN_LOWCUT_FREQ : in Hz
+$1_IN_LOWCUT_ON : positive logik (1=on, 0=off)
 $1_IN_HIGHCUT_FREQ :
-$1_IN_HIGHCUT_ON_OFF :
+$1_IN_HIGHCUT_ON :
 $1_IN_EQ_LOW_TRANS_FREQ :
 $1_IN_EQ_LOW_GAIN :
-$1_IN_EQ_MID1_FREQ :
-$1_IN_EQ_MID1_Q :
-$1_IN_EQ_MID1_GAIN :
 $1_IN_EQ_MID2_FREQ :
 $1_IN_EQ_MID2_Q :
 $1_IN_EQ_MID2_GAIN :
+$1_IN_EQ_MID1_FREQ : (> MID2_FREQ)
+$1_IN_EQ_MID1_Q :
+$1_IN_EQ_MID1_GAIN :
 $1_IN_EQ_HIGH_TRANS_FREQ :
 $1_IN_EQ_HIGH_GAIN :
-$1_IN_EQ_ON1_OFF0 :
-$1_IN_COMPANDER_PEAK_RATIO :
-$1_IN_COMPANDER_ATT_TIME :
-$1_IN_COMPANDER_DEL_TIME :
-$1_IN_COMPANDER_REL_TIME :
-$1_IN_COMPANDER_OUT_GAIN :
-$1_IN_COMPANDER_CHARACTERISTIC :
-$1_IN_COMPANDER_ON1_OFF0 :
-$1_IN_FADER_GAIN :
+
+$1_IN_AUX_1_PRE  : Pre-Fader or Post-Fader of 1. AUX-SND (0 or 1) (default=0=post; 1=pre)
+$1_IN_AUX_1_GAIN : Gain of 1. AUX-SND (0 .. 150 MIDI-dB) 
+
+$1_IN_FADER_GAIN : Main-Gain of fader (0 .. 150 MIDI-dB) 
+
+$1_IN_SPATIALIZATION : 0, 1,... (0==ambisonic, 1==direct)
+
 $1_IN_AMBI_RAD :
-$1_IN_AMBI_AZM :
-$1_IN_AMBI_ELV :
-$1_IN_AMBI_ON1_OFF0 :
-$1_IN_AUX_SND_PST1_PRE0_1 : Pre-Fader or Post-Fader of 1. AUX-SND (0 or 1)
-$1_IN_AUX_SND_PST1_PRE0_2 : Pre-Fader or Post-Fader of 2. AUX-SND (0 or 1)
-$1_IN_AUX_SND_PST1_PRE0_3 : Pre-Fader or Post-Fader of 3. AUX-SND (0 or 1)
-$1_IN_AUX_SND_PST1_PRE0_4 : Pre-Fader or Post-Fader of 4. AUX-SND (0 or 1)
-$1_IN_AUX_SND_GAIN_1 : Gain of 1. AUX-SND (0 or 150 MIDI-dB)
-$1_IN_AUX_SND_GAIN_2 : Gain of 2. AUX-SND (0 or 150 MIDI-dB)
-$1_IN_AUX_SND_GAIN_3 : Gain of 3. AUX-SND (0 or 150 MIDI-dB)
-$1_IN_AUX_SND_GAIN_4 : Gain of 4. AUX-SND (0 or 150 MIDI-dB)
-$1_IN_BUS_SND_GAIN_1 : Gain of 1. BUS-SND (0 or 150 MIDI-dB)
-$1_IN_BUS_SND_GAIN_2 : Gain of 2. BUS-SND (0 or 150 MIDI-dB)
-$1_IN_BUS_SND_GAIN_3 : Gain of 3. BUS-SND (0 or 150 MIDI-dB)
-$1_IN_BUS_SND_GAIN_4 : Gain of 4. BUS-SND (0 or 150 MIDI-dB)
-$1_IN_CH_ON1_OFF0 :
+$1_IN_AMBI_AZM : in degree
+$1_IN_AMBI_ELV : in degree
 
-Routing Parameter werden nur am Anfang geladen und eingestellt, und dürfen im Sound einen
-Knackser verursachen.
-  (für AUX-RET-CH)
+$1_IN_BUS_1_GAIN : Gain of 1.(1..16) BUS-SND (0 or 150 MIDI-dB)
 
-$1_AUX_RET_SRC : selected AUX-RET (1_AUX_RET ... 50_AUX_RET)
-$1_AUX_BUS_SND_DST_1 : selected Destination of 1. BUS_SND (1_DOUT ... 52_DOUT)
-$1_AUX_BUS_SND_DST_2 : selected Destination of 2. BUS_SND (1_DOUT ... 52_DOUT)
-$1_AUX_BUS_SND_DST_3 : selected Destination of 3. BUS_SND (1_DOUT ... 52_DOUT)
-$1_AUX_BUS_SND_DST_4 : selected Destination of 4. BUS_SND (1_DOUT ... 52_DOUT)
-
-Operating Parameter werden im Betrieb ständig nachgeladen und verursachen keine Knackser.
-  (für AUX-RET-CH)
-
-$1_AUX_GAIN : adjust the INPUT-Level (0 ... 150 MIDI-dB)
-$1_AUX_FADER_GAIN :
-$1_AUX_AMBI_RAD : zeitlich 3.) (1 )
-$1_AUX_AMBI_AZM : zeitlich 2.)
-$1_AUX_AMBI_ELV : zeitlich 1.)
-$1_AUX_AMBI_ON1_OFF0 :
-$1_AUX_BUS_SND_GAIN_1 : Gain of 1. BUS-SND (0 or 150 MIDI-dB)
-$1_AUX_BUS_SND_GAIN_2 : Gain of 2. BUS-SND (0 or 150 MIDI-dB)
-$1_AUX_BUS_SND_GAIN_3 : Gain of 3. BUS-SND (0 or 150 MIDI-dB)
-$1_AUX_BUS_SND_GAIN_4 : Gain of 4. BUS-SND (0 or 150 MIDI-dB)
-$1_AUX_CH_ON1_OFF0
+$1_IN_LFC_GAIN : Gain of subwoofer(0 or 150 MIDI-dB)
 
 
-Operating Parameter werden im Betrieb ständig nachgeladen und verursachen keine Knackser.
-  (für MAIN-OUT-Gain)
+============================================================================================
 
-$1_OUTPUT_MAIN_GAIN : Direct-Output-Level (0 ... 150 MIDI-dB)
+Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine Knackser.
+  (fuer MAIN-OUT-Gain)
 
+OUT_BUS_1_GAIN:  Direct-Output-Level fuer BUS1(1..16) (0 ... 150 MIDI-dB)
+OUT_AMBI_GAIN:   gesamt-lautstaerke fuer ambisonic-decoder
+OUT_LFC_1_GAIN:  gesamt-lautstaerke fuer subwoofer-kanal 1(1..2)
 
-Routing Parameter und Presets werden nur am Anfang geladen und eingestellt, und dürfen im Sound einen
-Knackser verursachen.
-  (für AMBI-Decode-Cube)
-
-AMBI_LS_INDEX_ELV_AZM : list of 3 floats: index + elevation + azimuth 
-                           (1 0 0, 2 0 30, 12 0 330, 13 30 22.5, 25 90 0)
-AMBI_MIRROR_WEIGHT :  (0.863)
-AMBI_ORDER_WEIGHT :  (1 1 1 1 1)
+OUT_MASTER_GAIN: master-gain (alles!)
 
 
-Operating Parameter werden im Betrieb ständig nachgeladen und verursachen keine Knackser.
-  (für AMBI-Decode)
+============================================================================================
+AMBI_ORDER_WEIGHT :  1 1 1 1 1 ...
 
-AMBI_MAIN_GAIN : Ambisonic-Output-Level (0 ... 150 MIDI-dB)
-
-
-Routing Parameter und Presets werden nur am Anfang geladen und eingestellt, und dürfen im Sound einen
-Knackser verursachen.
-  (für AMBI-DIRECT-OUT-DAC-Distribute)
-
-$1_DAC_SET_AMBI_DAC_SRC : Quellname von Ambisonic-Dekoder bezüglich des DACs mit Nr. $1
-$1_DAC_SET_BUS_DAC_SRC : Quellname von Direct-Out bezüglich des DACs mit Nr. $1
-$1_DAC_SET_COMPENSATION_GAIN : Kompensations Gain in MIDI dB bezüglich des DACs mit Nr. $1
-$1_DAC_SET_COMPENSATION_DEL : Kompensations Delay in ms bezüglich des DACs mit Nr. $1
+bus-routing-matrix:: 
+BUS_ROUTE: matrix 18 52 .... (werte in MIDI-db)
+           element n m gain
 
 
-Operating Parameter werden im Betrieb ständig nachgeladen und verursachen keine Knackser.
-  (für AMBI-DIRECT-OUT-DAC-Distribute)
+Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine Knackser.
+  (fuer mehrere Module)
 
-$1_DOUT_MAIN_GAIN : Direct-Output-Level (0 ... 150 MIDI-dB)
+$1_IN_VU_SRC: 0=input("adc in"), 1=pre, 2=post
 
-    
-Operating Parameter werden im Betrieb ständig nachgeladen und verursachen keine Knackser.
-  (für mehrere Module)
 
-$1_VU_SRC : <symbol>
+VU_BRIDGE_SRC : <symbol>
       Nach VU kann folgen:
         IN   : routet VU-Meter zum Eingang nach Input-Gain;
         IN_PRE  : routet VU-Meter vor dem Fader, nach dem Effekt;
         IN_POST  : routet VU-Meter nach dem Fader;
         AUX_POST  : routet VU-Meter nach dem Aux-Sum-Fader;
         AMBI_SUM  : routet VU-Meter nach dem Ambi-Gain und Decoder;
-        DOUT_SUM  : routet VU-Meter nach Main-Out-Gain;
+        BUS_SUM  : routet VU-Meter nach Main-Out-Gain;
         DAC_OUT  : routet VU-Meter unmittelbar vor dac~;
-      dem VU-Meter-Werte-Pärchen wird noch der Kanal-Index vorgehängt.
+      dem VU-Meter-Werte-Paerchen wird noch der Kanal-Index vorgehaengt.
 
 
 
-zusätzlich benötigte GUI-Objekte
-1.) Text-Display ohne Rahmen, wie eine Mischung aus comment, numberbox und symbolbox
-     hat inlet und outlet;
-     Name : "label" Kurzform "lab"
-     float-, symbol-, list- und anything-message werden angezeigt und gespeichert
-     optional durch bang-message oder mouse-click wird gespeicherte message ausgegeben
-     Properties: Fontsize, Fontcolor, Activity, Labeltext
-
-2.) Potentiometer: Kurzform: "pot"
-     wie vslider, 
-     Properties: size, top-, bottom-value, lin, log, endless, init, send, receive, label, back-, front-, label-color
-
-3.) Alt-Image  Name: "alt_image"
-     2 übergabeargumente <symbols> first gif , second gif
-     inlet für <float> 0 oder 1
-
-
-
-Es wurde bis auf weiteres auf die Reduzierung der Verzögerungszeiten zwischen
+Es wurde bis auf weiteres auf die Reduzierung der Verzoegerungszeiten zwischen
 s~ und r~ bzw. zwischen throw~ und catch~ verzichtet.
