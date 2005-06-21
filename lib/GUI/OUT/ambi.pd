@@ -1,0 +1,54 @@
+#N canvas 657 145 114 194 10;
+#X obj 2 1 cnv 15 63 198 empty empty AMBIS. 1 12 0 14 -233017 -66577
+0;
+#X obj 10 91 cnv 2 38 2 empty empty empty 20 12 0 14 -33289 -66577
+0;
+#X obj 16 24 bng 15 250 50 0 \$0GUIambi_showsettings \$0GUIambi_showsettings
+set 20 7 0 8 -62784 -1 -1;
+#X obj 16 46 vsl 30 131 0 130 0 0 \$0GUIambiout_fader \$0GUIambiout_fader
+-inf 1 140 0 8 -228992 -1 -1 0 1;
+#N canvas 67 126 695 544 code 0;
+#X obj 52 141 route float;
+#X obj 131 403 - 100;
+#X msg 52 464 label \$1;
+#X msg 52 442 symbol -inf;
+#X obj 52 248 max 0;
+#X obj 52 269 select 0 100;
+#X obj 91 382 makefilename %03d;
+#X msg 91 361 0;
+#X obj 131 422 makefilename %+03d;
+#X obj 52 208 t f f;
+#X obj 52 185 fadtodb;
+#X obj 143 290 dbtofad;
+#X obj 143 269 sendreceive OUT_AMBI_GAIN;
+#X obj 52 120 r \$0GUIambiout_fader;
+#X obj 52 487 s \$0GUIambiout_fader;
+#X obj 455 416 r \$0GUIambi_showsettings;
+#X msg 455 485 \; \$1-ambisonic.settings vis 1;
+#X obj 455 461 makefilename pd-%d;
+#X obj 455 436 i \$0;
+#X connect 0 0 10 0;
+#X connect 1 0 8 0;
+#X connect 2 0 14 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 5 1 7 0;
+#X connect 5 2 1 0;
+#X connect 6 0 2 0;
+#X connect 7 0 6 0;
+#X connect 8 0 2 0;
+#X connect 9 0 4 0;
+#X connect 9 1 12 0;
+#X connect 10 0 9 0;
+#X connect 11 0 14 0;
+#X connect 12 0 11 0;
+#X connect 13 0 0 0;
+#X connect 15 0 18 0;
+#X connect 17 0 16 0;
+#X connect 18 0 17 0;
+#X restore 9 61 pd code;
+#N canvas 0 0 450 300 2762-ambisonic.settings 0;
+#X text 176 95 comment;
+#X restore -21 122 pd \$0-ambisonic.settings;
+#X coords 0 0 1 1 65 200 1;

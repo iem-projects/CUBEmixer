@@ -1,0 +1,3424 @@
+#N canvas 346 2 535 784 10;
+#X obj 31 44 nbx 3 14 -100 50 0 0 \$0GUI_1x1_fromgui \$0GUI_1x1_togui
+BUS01 0 -4 0 8 -166848 -1 -1 0 256;
+#X obj 62 44 nbx 3 14 -100 50 0 0 \$0GUI_2x1_fromgui \$0GUI_2x1_togui
+BUS02 0 -4 0 8 -208252 -1 -62784 0 256;
+#X obj 93 44 nbx 3 14 -100 50 0 0 \$0GUI_3x1_fromgui \$0GUI_3x1_togui
+BUS03 0 -4 0 8 -166848 -1 -1 0 256;
+#X obj 124 44 nbx 3 14 -100 50 0 0 \$0GUI_4x1_fromgui \$0GUI_4x1_togui
+BUS04 0 -4 0 8 -208252 -1 -62784 0 256;
+#X obj 155 44 nbx 3 14 -100 50 0 0 \$0GUI_5x1_fromgui \$0GUI_5x1_togui
+BUS05 0 -4 0 8 -166848 -1 -1 0 256;
+#X obj 186 44 nbx 3 14 -100 50 0 0 \$0GUI_6x1_fromgui \$0GUI_6x1_togui
+BUS06 0 -4 0 8 -208252 -1 -62784 0 256;
+#X obj 217 44 nbx 3 14 -100 50 0 0 \$0GUI_7x1_fromgui \$0GUI_7x1_togui
+BUS07 0 -4 0 8 -166848 -1 -1 0 256;
+#X obj 248 44 nbx 3 14 -100 50 0 0 \$0GUI_8x1_fromgui \$0GUI_8x1_togui
+BUS08 0 -4 0 8 -208252 -1 -62784 0 256;
+#X obj 279 44 nbx 3 14 -100 50 0 0 \$0GUI_9x1_fromgui \$0GUI_9x1_togui
+BUS09 0 -4 0 8 -166848 -1 -1 0 256;
+#X obj 310 44 nbx 3 14 -100 50 0 0 \$0GUI_10x1_fromgui \$0GUI_10x1_togui
+BUS10 0 -4 0 8 -208252 -1 -62784 0 256;
+#X obj 341 44 nbx 3 14 -100 50 0 0 \$0GUI_11x1_fromgui \$0GUI_11x1_togui
+BUS11 0 -4 0 8 -166848 -1 -1 0 256;
+#X obj 372 44 nbx 3 14 -100 50 0 0 \$0GUI_12x1_fromgui \$0GUI_12x1_togui
+BUS12 0 -4 0 8 -208252 -1 -62784 0 256;
+#X obj 403 44 nbx 3 14 -100 50 0 0 \$0GUI_13x1_fromgui \$0GUI_13x1_togui
+BUS13 0 -4 0 8 -166848 -1 -1 0 256;
+#X obj 434 44 nbx 3 14 -100 50 0 0 \$0GUI_14x1_fromgui \$0GUI_14x1_togui
+BUS14 0 -4 0 8 -208252 -1 -62784 0 256;
+#X obj 465 44 nbx 3 14 -100 50 0 0 \$0GUI_15x1_fromgui \$0GUI_15x1_togui
+BUS15 0 -4 0 8 -166848 -1 -1 0 256;
+#X obj 496 44 nbx 3 14 -100 50 0 0 \$0GUI_16x1_fromgui \$0GUI_16x1_togui
+BUS16 0 -4 0 8 -208252 -1 -62784 0 256;
+#X obj 31 58 nbx 3 14 -100 50 0 0 \$0GUI_1x2_fromgui \$0GUI_1x2_togui
+LS02 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 58 nbx 3 14 -100 50 0 0 \$0GUI_2x2_fromgui \$0GUI_2x2_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 58 nbx 3 14 -100 50 0 0 \$0GUI_3x2_fromgui \$0GUI_3x2_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 58 nbx 3 14 -100 50 0 0 \$0GUI_4x2_fromgui \$0GUI_4x2_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 58 nbx 3 14 -100 50 0 0 \$0GUI_5x2_fromgui \$0GUI_5x2_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 58 nbx 3 14 -100 50 0 0 \$0GUI_6x2_fromgui \$0GUI_6x2_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 58 nbx 3 14 -100 50 0 0 \$0GUI_7x2_fromgui \$0GUI_7x2_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 58 nbx 3 14 -100 50 0 0 \$0GUI_8x2_fromgui \$0GUI_8x2_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 58 nbx 3 14 -100 50 0 0 \$0GUI_9x2_fromgui \$0GUI_9x2_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 58 nbx 3 14 -100 50 0 0 \$0GUI_10x2_fromgui \$0GUI_10x2_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 58 nbx 3 14 -100 50 0 0 \$0GUI_11x2_fromgui \$0GUI_11x2_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 58 nbx 3 14 -100 50 0 0 \$0GUI_12x2_fromgui \$0GUI_12x2_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 58 nbx 3 14 -100 50 0 0 \$0GUI_13x2_fromgui \$0GUI_13x2_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 58 nbx 3 14 -100 50 0 0 \$0GUI_14x2_fromgui \$0GUI_14x2_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 58 nbx 3 14 -100 50 0 0 \$0GUI_15x2_fromgui \$0GUI_15x2_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 58 nbx 3 14 -100 50 0 0 \$0GUI_16x2_fromgui \$0GUI_16x2_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 72 nbx 3 14 -100 50 0 0 \$0GUI_1x3_fromgui \$0GUI_1x3_togui
+LS03 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 72 nbx 3 14 -100 50 0 0 \$0GUI_2x3_fromgui \$0GUI_2x3_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 72 nbx 3 14 -100 50 0 0 \$0GUI_3x3_fromgui \$0GUI_3x3_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 72 nbx 3 14 -100 50 0 0 \$0GUI_4x3_fromgui \$0GUI_4x3_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 72 nbx 3 14 -100 50 0 0 \$0GUI_5x3_fromgui \$0GUI_5x3_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 72 nbx 3 14 -100 50 0 0 \$0GUI_6x3_fromgui \$0GUI_6x3_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 72 nbx 3 14 -100 50 0 0 \$0GUI_7x3_fromgui \$0GUI_7x3_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 72 nbx 3 14 -100 50 0 0 \$0GUI_8x3_fromgui \$0GUI_8x3_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 72 nbx 3 14 -100 50 0 0 \$0GUI_9x3_fromgui \$0GUI_9x3_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 72 nbx 3 14 -100 50 0 0 \$0GUI_10x3_fromgui \$0GUI_10x3_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 72 nbx 3 14 -100 50 0 0 \$0GUI_11x3_fromgui \$0GUI_11x3_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 72 nbx 3 14 -100 50 0 0 \$0GUI_12x3_fromgui \$0GUI_12x3_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 72 nbx 3 14 -100 50 0 0 \$0GUI_13x3_fromgui \$0GUI_13x3_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 72 nbx 3 14 -100 50 0 0 \$0GUI_14x3_fromgui \$0GUI_14x3_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 72 nbx 3 14 -100 50 0 0 \$0GUI_15x3_fromgui \$0GUI_15x3_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 72 nbx 3 14 -100 50 0 0 \$0GUI_16x3_fromgui \$0GUI_16x3_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 86 nbx 3 14 -100 50 0 0 \$0GUI_1x4_fromgui \$0GUI_1x4_togui
+LS04 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 86 nbx 3 14 -100 50 0 0 \$0GUI_2x4_fromgui \$0GUI_2x4_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 86 nbx 3 14 -100 50 0 0 \$0GUI_3x4_fromgui \$0GUI_3x4_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 86 nbx 3 14 -100 50 0 0 \$0GUI_4x4_fromgui \$0GUI_4x4_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 86 nbx 3 14 -100 50 0 0 \$0GUI_5x4_fromgui \$0GUI_5x4_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 86 nbx 3 14 -100 50 0 0 \$0GUI_6x4_fromgui \$0GUI_6x4_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 86 nbx 3 14 -100 50 0 0 \$0GUI_7x4_fromgui \$0GUI_7x4_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 86 nbx 3 14 -100 50 0 0 \$0GUI_8x4_fromgui \$0GUI_8x4_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 86 nbx 3 14 -100 50 0 0 \$0GUI_9x4_fromgui \$0GUI_9x4_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 86 nbx 3 14 -100 50 0 0 \$0GUI_10x4_fromgui \$0GUI_10x4_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 86 nbx 3 14 -100 50 0 0 \$0GUI_11x4_fromgui \$0GUI_11x4_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 86 nbx 3 14 -100 50 0 0 \$0GUI_12x4_fromgui \$0GUI_12x4_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 86 nbx 3 14 -100 50 0 0 \$0GUI_13x4_fromgui \$0GUI_13x4_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 86 nbx 3 14 -100 50 0 0 \$0GUI_14x4_fromgui \$0GUI_14x4_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 86 nbx 3 14 -100 50 0 0 \$0GUI_15x4_fromgui \$0GUI_15x4_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 86 nbx 3 14 -100 50 0 0 \$0GUI_16x4_fromgui \$0GUI_16x4_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 100 nbx 3 14 -100 50 0 0 \$0GUI_1x5_fromgui \$0GUI_1x5_togui
+LS05 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 100 nbx 3 14 -100 50 0 0 \$0GUI_2x5_fromgui \$0GUI_2x5_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 100 nbx 3 14 -100 50 0 0 \$0GUI_3x5_fromgui \$0GUI_3x5_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 100 nbx 3 14 -100 50 0 0 \$0GUI_4x5_fromgui \$0GUI_4x5_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 100 nbx 3 14 -100 50 0 0 \$0GUI_5x5_fromgui \$0GUI_5x5_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 100 nbx 3 14 -100 50 0 0 \$0GUI_6x5_fromgui \$0GUI_6x5_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 100 nbx 3 14 -100 50 0 0 \$0GUI_7x5_fromgui \$0GUI_7x5_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 100 nbx 3 14 -100 50 0 0 \$0GUI_8x5_fromgui \$0GUI_8x5_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 100 nbx 3 14 -100 50 0 0 \$0GUI_9x5_fromgui \$0GUI_9x5_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 100 nbx 3 14 -100 50 0 0 \$0GUI_10x5_fromgui \$0GUI_10x5_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 100 nbx 3 14 -100 50 0 0 \$0GUI_11x5_fromgui \$0GUI_11x5_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 100 nbx 3 14 -100 50 0 0 \$0GUI_12x5_fromgui \$0GUI_12x5_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 100 nbx 3 14 -100 50 0 0 \$0GUI_13x5_fromgui \$0GUI_13x5_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 100 nbx 3 14 -100 50 0 0 \$0GUI_14x5_fromgui \$0GUI_14x5_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 100 nbx 3 14 -100 50 0 0 \$0GUI_15x5_fromgui \$0GUI_15x5_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 100 nbx 3 14 -100 50 0 0 \$0GUI_16x5_fromgui \$0GUI_16x5_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 114 nbx 3 14 -100 50 0 0 \$0GUI_1x6_fromgui \$0GUI_1x6_togui
+LS06 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 114 nbx 3 14 -100 50 0 0 \$0GUI_2x6_fromgui \$0GUI_2x6_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 114 nbx 3 14 -100 50 0 0 \$0GUI_3x6_fromgui \$0GUI_3x6_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 114 nbx 3 14 -100 50 0 0 \$0GUI_4x6_fromgui \$0GUI_4x6_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 114 nbx 3 14 -100 50 0 0 \$0GUI_5x6_fromgui \$0GUI_5x6_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 114 nbx 3 14 -100 50 0 0 \$0GUI_6x6_fromgui \$0GUI_6x6_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 114 nbx 3 14 -100 50 0 0 \$0GUI_7x6_fromgui \$0GUI_7x6_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 114 nbx 3 14 -100 50 0 0 \$0GUI_8x6_fromgui \$0GUI_8x6_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 114 nbx 3 14 -100 50 0 0 \$0GUI_9x6_fromgui \$0GUI_9x6_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 114 nbx 3 14 -100 50 0 0 \$0GUI_10x6_fromgui \$0GUI_10x6_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 114 nbx 3 14 -100 50 0 0 \$0GUI_11x6_fromgui \$0GUI_11x6_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 114 nbx 3 14 -100 50 0 0 \$0GUI_12x6_fromgui \$0GUI_12x6_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 114 nbx 3 14 -100 50 0 0 \$0GUI_13x6_fromgui \$0GUI_13x6_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 114 nbx 3 14 -100 50 0 0 \$0GUI_14x6_fromgui \$0GUI_14x6_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 114 nbx 3 14 -100 50 0 0 \$0GUI_15x6_fromgui \$0GUI_15x6_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 114 nbx 3 14 -100 50 0 0 \$0GUI_16x6_fromgui \$0GUI_16x6_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 128 nbx 3 14 -100 50 0 0 \$0GUI_1x7_fromgui \$0GUI_1x7_togui
+LS07 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 128 nbx 3 14 -100 50 0 0 \$0GUI_2x7_fromgui \$0GUI_2x7_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 128 nbx 3 14 -100 50 0 0 \$0GUI_3x7_fromgui \$0GUI_3x7_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 128 nbx 3 14 -100 50 0 0 \$0GUI_4x7_fromgui \$0GUI_4x7_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 128 nbx 3 14 -100 50 0 0 \$0GUI_5x7_fromgui \$0GUI_5x7_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 128 nbx 3 14 -100 50 0 0 \$0GUI_6x7_fromgui \$0GUI_6x7_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 128 nbx 3 14 -100 50 0 0 \$0GUI_7x7_fromgui \$0GUI_7x7_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 128 nbx 3 14 -100 50 0 0 \$0GUI_8x7_fromgui \$0GUI_8x7_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 128 nbx 3 14 -100 50 0 0 \$0GUI_9x7_fromgui \$0GUI_9x7_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 128 nbx 3 14 -100 50 0 0 \$0GUI_10x7_fromgui \$0GUI_10x7_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 128 nbx 3 14 -100 50 0 0 \$0GUI_11x7_fromgui \$0GUI_11x7_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 128 nbx 3 14 -100 50 0 0 \$0GUI_12x7_fromgui \$0GUI_12x7_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 128 nbx 3 14 -100 50 0 0 \$0GUI_13x7_fromgui \$0GUI_13x7_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 128 nbx 3 14 -100 50 0 0 \$0GUI_14x7_fromgui \$0GUI_14x7_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 128 nbx 3 14 -100 50 0 0 \$0GUI_15x7_fromgui \$0GUI_15x7_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 128 nbx 3 14 -100 50 0 0 \$0GUI_16x7_fromgui \$0GUI_16x7_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 142 nbx 3 14 -100 50 0 0 \$0GUI_1x8_fromgui \$0GUI_1x8_togui
+LS08 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 142 nbx 3 14 -100 50 0 0 \$0GUI_2x8_fromgui \$0GUI_2x8_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 142 nbx 3 14 -100 50 0 0 \$0GUI_3x8_fromgui \$0GUI_3x8_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 142 nbx 3 14 -100 50 0 0 \$0GUI_4x8_fromgui \$0GUI_4x8_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 142 nbx 3 14 -100 50 0 0 \$0GUI_5x8_fromgui \$0GUI_5x8_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 142 nbx 3 14 -100 50 0 0 \$0GUI_6x8_fromgui \$0GUI_6x8_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 142 nbx 3 14 -100 50 0 0 \$0GUI_7x8_fromgui \$0GUI_7x8_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 142 nbx 3 14 -100 50 0 0 \$0GUI_8x8_fromgui \$0GUI_8x8_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 142 nbx 3 14 -100 50 0 0 \$0GUI_9x8_fromgui \$0GUI_9x8_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 142 nbx 3 14 -100 50 0 0 \$0GUI_10x8_fromgui \$0GUI_10x8_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 142 nbx 3 14 -100 50 0 0 \$0GUI_11x8_fromgui \$0GUI_11x8_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 142 nbx 3 14 -100 50 0 0 \$0GUI_12x8_fromgui \$0GUI_12x8_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 142 nbx 3 14 -100 50 0 0 \$0GUI_13x8_fromgui \$0GUI_13x8_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 142 nbx 3 14 -100 50 0 0 \$0GUI_14x8_fromgui \$0GUI_14x8_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 142 nbx 3 14 -100 50 0 0 \$0GUI_15x8_fromgui \$0GUI_15x8_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 142 nbx 3 14 -100 50 0 0 \$0GUI_16x8_fromgui \$0GUI_16x8_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 156 nbx 3 14 -100 50 0 0 \$0GUI_1x9_fromgui \$0GUI_1x9_togui
+LS09 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 156 nbx 3 14 -100 50 0 0 \$0GUI_2x9_fromgui \$0GUI_2x9_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 156 nbx 3 14 -100 50 0 0 \$0GUI_3x9_fromgui \$0GUI_3x9_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 156 nbx 3 14 -100 50 0 0 \$0GUI_4x9_fromgui \$0GUI_4x9_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 156 nbx 3 14 -100 50 0 0 \$0GUI_5x9_fromgui \$0GUI_5x9_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 156 nbx 3 14 -100 50 0 0 \$0GUI_6x9_fromgui \$0GUI_6x9_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 156 nbx 3 14 -100 50 0 0 \$0GUI_7x9_fromgui \$0GUI_7x9_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 156 nbx 3 14 -100 50 0 0 \$0GUI_8x9_fromgui \$0GUI_8x9_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 156 nbx 3 14 -100 50 0 0 \$0GUI_9x9_fromgui \$0GUI_9x9_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 156 nbx 3 14 -100 50 0 0 \$0GUI_10x9_fromgui \$0GUI_10x9_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 156 nbx 3 14 -100 50 0 0 \$0GUI_11x9_fromgui \$0GUI_11x9_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 156 nbx 3 14 -100 50 0 0 \$0GUI_12x9_fromgui \$0GUI_12x9_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 156 nbx 3 14 -100 50 0 0 \$0GUI_13x9_fromgui \$0GUI_13x9_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 156 nbx 3 14 -100 50 0 0 \$0GUI_14x9_fromgui \$0GUI_14x9_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 156 nbx 3 14 -100 50 0 0 \$0GUI_15x9_fromgui \$0GUI_15x9_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 156 nbx 3 14 -100 50 0 0 \$0GUI_16x9_fromgui \$0GUI_16x9_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 170 nbx 3 14 -100 50 0 0 \$0GUI_1x10_fromgui \$0GUI_1x10_togui
+LS10 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 170 nbx 3 14 -100 50 0 0 \$0GUI_2x10_fromgui \$0GUI_2x10_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 170 nbx 3 14 -100 50 0 0 \$0GUI_3x10_fromgui \$0GUI_3x10_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 170 nbx 3 14 -100 50 0 0 \$0GUI_4x10_fromgui \$0GUI_4x10_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 170 nbx 3 14 -100 50 0 0 \$0GUI_5x10_fromgui \$0GUI_5x10_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 170 nbx 3 14 -100 50 0 0 \$0GUI_6x10_fromgui \$0GUI_6x10_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 170 nbx 3 14 -100 50 0 0 \$0GUI_7x10_fromgui \$0GUI_7x10_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 170 nbx 3 14 -100 50 0 0 \$0GUI_8x10_fromgui \$0GUI_8x10_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 170 nbx 3 14 -100 50 0 0 \$0GUI_9x10_fromgui \$0GUI_9x10_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 170 nbx 3 14 -100 50 0 0 \$0GUI_10x10_fromgui \$0GUI_10x10_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 170 nbx 3 14 -100 50 0 0 \$0GUI_11x10_fromgui \$0GUI_11x10_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 170 nbx 3 14 -100 50 0 0 \$0GUI_12x10_fromgui \$0GUI_12x10_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 170 nbx 3 14 -100 50 0 0 \$0GUI_13x10_fromgui \$0GUI_13x10_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 170 nbx 3 14 -100 50 0 0 \$0GUI_14x10_fromgui \$0GUI_14x10_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 170 nbx 3 14 -100 50 0 0 \$0GUI_15x10_fromgui \$0GUI_15x10_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 170 nbx 3 14 -100 50 0 0 \$0GUI_16x10_fromgui \$0GUI_16x10_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 184 nbx 3 14 -100 50 0 0 \$0GUI_1x11_fromgui \$0GUI_1x11_togui
+LS11 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 184 nbx 3 14 -100 50 0 0 \$0GUI_2x11_fromgui \$0GUI_2x11_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 184 nbx 3 14 -100 50 0 0 \$0GUI_3x11_fromgui \$0GUI_3x11_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 184 nbx 3 14 -100 50 0 0 \$0GUI_4x11_fromgui \$0GUI_4x11_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 184 nbx 3 14 -100 50 0 0 \$0GUI_5x11_fromgui \$0GUI_5x11_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 184 nbx 3 14 -100 50 0 0 \$0GUI_6x11_fromgui \$0GUI_6x11_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 184 nbx 3 14 -100 50 0 0 \$0GUI_7x11_fromgui \$0GUI_7x11_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 184 nbx 3 14 -100 50 0 0 \$0GUI_8x11_fromgui \$0GUI_8x11_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 184 nbx 3 14 -100 50 0 0 \$0GUI_9x11_fromgui \$0GUI_9x11_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 184 nbx 3 14 -100 50 0 0 \$0GUI_10x11_fromgui \$0GUI_10x11_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 184 nbx 3 14 -100 50 0 0 \$0GUI_11x11_fromgui \$0GUI_11x11_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 184 nbx 3 14 -100 50 0 0 \$0GUI_12x11_fromgui \$0GUI_12x11_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 184 nbx 3 14 -100 50 0 0 \$0GUI_13x11_fromgui \$0GUI_13x11_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 184 nbx 3 14 -100 50 0 0 \$0GUI_14x11_fromgui \$0GUI_14x11_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 184 nbx 3 14 -100 50 0 0 \$0GUI_15x11_fromgui \$0GUI_15x11_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 184 nbx 3 14 -100 50 0 0 \$0GUI_16x11_fromgui \$0GUI_16x11_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 198 nbx 3 14 -100 50 0 0 \$0GUI_1x12_fromgui \$0GUI_1x12_togui
+LS12 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 198 nbx 3 14 -100 50 0 0 \$0GUI_2x12_fromgui \$0GUI_2x12_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 198 nbx 3 14 -100 50 0 0 \$0GUI_3x12_fromgui \$0GUI_3x12_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 198 nbx 3 14 -100 50 0 0 \$0GUI_4x12_fromgui \$0GUI_4x12_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 198 nbx 3 14 -100 50 0 0 \$0GUI_5x12_fromgui \$0GUI_5x12_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 198 nbx 3 14 -100 50 0 0 \$0GUI_6x12_fromgui \$0GUI_6x12_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 198 nbx 3 14 -100 50 0 0 \$0GUI_7x12_fromgui \$0GUI_7x12_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 198 nbx 3 14 -100 50 0 0 \$0GUI_8x12_fromgui \$0GUI_8x12_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 198 nbx 3 14 -100 50 0 0 \$0GUI_9x12_fromgui \$0GUI_9x12_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 198 nbx 3 14 -100 50 0 0 \$0GUI_10x12_fromgui \$0GUI_10x12_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 198 nbx 3 14 -100 50 0 0 \$0GUI_11x12_fromgui \$0GUI_11x12_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 198 nbx 3 14 -100 50 0 0 \$0GUI_12x12_fromgui \$0GUI_12x12_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 198 nbx 3 14 -100 50 0 0 \$0GUI_13x12_fromgui \$0GUI_13x12_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 198 nbx 3 14 -100 50 0 0 \$0GUI_14x12_fromgui \$0GUI_14x12_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 198 nbx 3 14 -100 50 0 0 \$0GUI_15x12_fromgui \$0GUI_15x12_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 198 nbx 3 14 -100 50 0 0 \$0GUI_16x12_fromgui \$0GUI_16x12_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 212 nbx 3 14 -100 50 0 0 \$0GUI_1x13_fromgui \$0GUI_1x13_togui
+LS13 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 212 nbx 3 14 -100 50 0 0 \$0GUI_2x13_fromgui \$0GUI_2x13_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 212 nbx 3 14 -100 50 0 0 \$0GUI_3x13_fromgui \$0GUI_3x13_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 212 nbx 3 14 -100 50 0 0 \$0GUI_4x13_fromgui \$0GUI_4x13_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 212 nbx 3 14 -100 50 0 0 \$0GUI_5x13_fromgui \$0GUI_5x13_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 212 nbx 3 14 -100 50 0 0 \$0GUI_6x13_fromgui \$0GUI_6x13_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 212 nbx 3 14 -100 50 0 0 \$0GUI_7x13_fromgui \$0GUI_7x13_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 212 nbx 3 14 -100 50 0 0 \$0GUI_8x13_fromgui \$0GUI_8x13_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 212 nbx 3 14 -100 50 0 0 \$0GUI_9x13_fromgui \$0GUI_9x13_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 212 nbx 3 14 -100 50 0 0 \$0GUI_10x13_fromgui \$0GUI_10x13_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 212 nbx 3 14 -100 50 0 0 \$0GUI_11x13_fromgui \$0GUI_11x13_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 212 nbx 3 14 -100 50 0 0 \$0GUI_12x13_fromgui \$0GUI_12x13_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 212 nbx 3 14 -100 50 0 0 \$0GUI_13x13_fromgui \$0GUI_13x13_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 212 nbx 3 14 -100 50 0 0 \$0GUI_14x13_fromgui \$0GUI_14x13_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 212 nbx 3 14 -100 50 0 0 \$0GUI_15x13_fromgui \$0GUI_15x13_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 212 nbx 3 14 -100 50 0 0 \$0GUI_16x13_fromgui \$0GUI_16x13_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 226 nbx 3 14 -100 50 0 0 \$0GUI_1x14_fromgui \$0GUI_1x14_togui
+LS14 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 226 nbx 3 14 -100 50 0 0 \$0GUI_2x14_fromgui \$0GUI_2x14_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 226 nbx 3 14 -100 50 0 0 \$0GUI_3x14_fromgui \$0GUI_3x14_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 226 nbx 3 14 -100 50 0 0 \$0GUI_4x14_fromgui \$0GUI_4x14_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 226 nbx 3 14 -100 50 0 0 \$0GUI_5x14_fromgui \$0GUI_5x14_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 226 nbx 3 14 -100 50 0 0 \$0GUI_6x14_fromgui \$0GUI_6x14_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 226 nbx 3 14 -100 50 0 0 \$0GUI_7x14_fromgui \$0GUI_7x14_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 226 nbx 3 14 -100 50 0 0 \$0GUI_8x14_fromgui \$0GUI_8x14_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 226 nbx 3 14 -100 50 0 0 \$0GUI_9x14_fromgui \$0GUI_9x14_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 226 nbx 3 14 -100 50 0 0 \$0GUI_10x14_fromgui \$0GUI_10x14_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 226 nbx 3 14 -100 50 0 0 \$0GUI_11x14_fromgui \$0GUI_11x14_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 226 nbx 3 14 -100 50 0 0 \$0GUI_12x14_fromgui \$0GUI_12x14_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 226 nbx 3 14 -100 50 0 0 \$0GUI_13x14_fromgui \$0GUI_13x14_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 226 nbx 3 14 -100 50 0 0 \$0GUI_14x14_fromgui \$0GUI_14x14_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 226 nbx 3 14 -100 50 0 0 \$0GUI_15x14_fromgui \$0GUI_15x14_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 226 nbx 3 14 -100 50 0 0 \$0GUI_16x14_fromgui \$0GUI_16x14_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 240 nbx 3 14 -100 50 0 0 \$0GUI_1x15_fromgui \$0GUI_1x15_togui
+LS15 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 240 nbx 3 14 -100 50 0 0 \$0GUI_2x15_fromgui \$0GUI_2x15_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 240 nbx 3 14 -100 50 0 0 \$0GUI_3x15_fromgui \$0GUI_3x15_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 240 nbx 3 14 -100 50 0 0 \$0GUI_4x15_fromgui \$0GUI_4x15_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 240 nbx 3 14 -100 50 0 0 \$0GUI_5x15_fromgui \$0GUI_5x15_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 240 nbx 3 14 -100 50 0 0 \$0GUI_6x15_fromgui \$0GUI_6x15_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 240 nbx 3 14 -100 50 0 0 \$0GUI_7x15_fromgui \$0GUI_7x15_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 240 nbx 3 14 -100 50 0 0 \$0GUI_8x15_fromgui \$0GUI_8x15_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 240 nbx 3 14 -100 50 0 0 \$0GUI_9x15_fromgui \$0GUI_9x15_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 240 nbx 3 14 -100 50 0 0 \$0GUI_10x15_fromgui \$0GUI_10x15_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 240 nbx 3 14 -100 50 0 0 \$0GUI_11x15_fromgui \$0GUI_11x15_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 240 nbx 3 14 -100 50 0 0 \$0GUI_12x15_fromgui \$0GUI_12x15_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 240 nbx 3 14 -100 50 0 0 \$0GUI_13x15_fromgui \$0GUI_13x15_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 240 nbx 3 14 -100 50 0 0 \$0GUI_14x15_fromgui \$0GUI_14x15_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 240 nbx 3 14 -100 50 0 0 \$0GUI_15x15_fromgui \$0GUI_15x15_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 240 nbx 3 14 -100 50 0 0 \$0GUI_16x15_fromgui \$0GUI_16x15_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 254 nbx 3 14 -100 50 0 0 \$0GUI_1x16_fromgui \$0GUI_1x16_togui
+LS16 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 254 nbx 3 14 -100 50 0 0 \$0GUI_2x16_fromgui \$0GUI_2x16_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 254 nbx 3 14 -100 50 0 0 \$0GUI_3x16_fromgui \$0GUI_3x16_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 254 nbx 3 14 -100 50 0 0 \$0GUI_4x16_fromgui \$0GUI_4x16_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 254 nbx 3 14 -100 50 0 0 \$0GUI_5x16_fromgui \$0GUI_5x16_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 254 nbx 3 14 -100 50 0 0 \$0GUI_6x16_fromgui \$0GUI_6x16_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 254 nbx 3 14 -100 50 0 0 \$0GUI_7x16_fromgui \$0GUI_7x16_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 254 nbx 3 14 -100 50 0 0 \$0GUI_8x16_fromgui \$0GUI_8x16_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 254 nbx 3 14 -100 50 0 0 \$0GUI_9x16_fromgui \$0GUI_9x16_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 254 nbx 3 14 -100 50 0 0 \$0GUI_10x16_fromgui \$0GUI_10x16_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 254 nbx 3 14 -100 50 0 0 \$0GUI_11x16_fromgui \$0GUI_11x16_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 254 nbx 3 14 -100 50 0 0 \$0GUI_12x16_fromgui \$0GUI_12x16_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 254 nbx 3 14 -100 50 0 0 \$0GUI_13x16_fromgui \$0GUI_13x16_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 254 nbx 3 14 -100 50 0 0 \$0GUI_14x16_fromgui \$0GUI_14x16_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 254 nbx 3 14 -100 50 0 0 \$0GUI_15x16_fromgui \$0GUI_15x16_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 254 nbx 3 14 -100 50 0 0 \$0GUI_16x16_fromgui \$0GUI_16x16_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 268 nbx 3 14 -100 50 0 0 \$0GUI_1x17_fromgui \$0GUI_1x17_togui
+LS17 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 268 nbx 3 14 -100 50 0 0 \$0GUI_2x17_fromgui \$0GUI_2x17_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 268 nbx 3 14 -100 50 0 0 \$0GUI_3x17_fromgui \$0GUI_3x17_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 268 nbx 3 14 -100 50 0 0 \$0GUI_4x17_fromgui \$0GUI_4x17_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 268 nbx 3 14 -100 50 0 0 \$0GUI_5x17_fromgui \$0GUI_5x17_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 268 nbx 3 14 -100 50 0 0 \$0GUI_6x17_fromgui \$0GUI_6x17_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 268 nbx 3 14 -100 50 0 0 \$0GUI_7x17_fromgui \$0GUI_7x17_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 268 nbx 3 14 -100 50 0 0 \$0GUI_8x17_fromgui \$0GUI_8x17_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 268 nbx 3 14 -100 50 0 0 \$0GUI_9x17_fromgui \$0GUI_9x17_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 268 nbx 3 14 -100 50 0 0 \$0GUI_10x17_fromgui \$0GUI_10x17_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 268 nbx 3 14 -100 50 0 0 \$0GUI_11x17_fromgui \$0GUI_11x17_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 268 nbx 3 14 -100 50 0 0 \$0GUI_12x17_fromgui \$0GUI_12x17_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 268 nbx 3 14 -100 50 0 0 \$0GUI_13x17_fromgui \$0GUI_13x17_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 268 nbx 3 14 -100 50 0 0 \$0GUI_14x17_fromgui \$0GUI_14x17_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 268 nbx 3 14 -100 50 0 0 \$0GUI_15x17_fromgui \$0GUI_15x17_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 268 nbx 3 14 -100 50 0 0 \$0GUI_16x17_fromgui \$0GUI_16x17_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 282 nbx 3 14 -100 50 0 0 \$0GUI_1x18_fromgui \$0GUI_1x18_togui
+LS18 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 282 nbx 3 14 -100 50 0 0 \$0GUI_2x18_fromgui \$0GUI_2x18_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 282 nbx 3 14 -100 50 0 0 \$0GUI_3x18_fromgui \$0GUI_3x18_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 282 nbx 3 14 -100 50 0 0 \$0GUI_4x18_fromgui \$0GUI_4x18_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 282 nbx 3 14 -100 50 0 0 \$0GUI_5x18_fromgui \$0GUI_5x18_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 282 nbx 3 14 -100 50 0 0 \$0GUI_6x18_fromgui \$0GUI_6x18_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 282 nbx 3 14 -100 50 0 0 \$0GUI_7x18_fromgui \$0GUI_7x18_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 282 nbx 3 14 -100 50 0 0 \$0GUI_8x18_fromgui \$0GUI_8x18_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 282 nbx 3 14 -100 50 0 0 \$0GUI_9x18_fromgui \$0GUI_9x18_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 282 nbx 3 14 -100 50 0 0 \$0GUI_10x18_fromgui \$0GUI_10x18_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 282 nbx 3 14 -100 50 0 0 \$0GUI_11x18_fromgui \$0GUI_11x18_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 282 nbx 3 14 -100 50 0 0 \$0GUI_12x18_fromgui \$0GUI_12x18_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 282 nbx 3 14 -100 50 0 0 \$0GUI_13x18_fromgui \$0GUI_13x18_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 282 nbx 3 14 -100 50 0 0 \$0GUI_14x18_fromgui \$0GUI_14x18_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 282 nbx 3 14 -100 50 0 0 \$0GUI_15x18_fromgui \$0GUI_15x18_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 282 nbx 3 14 -100 50 0 0 \$0GUI_16x18_fromgui \$0GUI_16x18_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 296 nbx 3 14 -100 50 0 0 \$0GUI_1x19_fromgui \$0GUI_1x19_togui
+LS19 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 296 nbx 3 14 -100 50 0 0 \$0GUI_2x19_fromgui \$0GUI_2x19_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 296 nbx 3 14 -100 50 0 0 \$0GUI_3x19_fromgui \$0GUI_3x19_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 296 nbx 3 14 -100 50 0 0 \$0GUI_4x19_fromgui \$0GUI_4x19_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 296 nbx 3 14 -100 50 0 0 \$0GUI_5x19_fromgui \$0GUI_5x19_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 296 nbx 3 14 -100 50 0 0 \$0GUI_6x19_fromgui \$0GUI_6x19_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 296 nbx 3 14 -100 50 0 0 \$0GUI_7x19_fromgui \$0GUI_7x19_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 296 nbx 3 14 -100 50 0 0 \$0GUI_8x19_fromgui \$0GUI_8x19_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 296 nbx 3 14 -100 50 0 0 \$0GUI_9x19_fromgui \$0GUI_9x19_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 296 nbx 3 14 -100 50 0 0 \$0GUI_10x19_fromgui \$0GUI_10x19_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 296 nbx 3 14 -100 50 0 0 \$0GUI_11x19_fromgui \$0GUI_11x19_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 296 nbx 3 14 -100 50 0 0 \$0GUI_12x19_fromgui \$0GUI_12x19_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 296 nbx 3 14 -100 50 0 0 \$0GUI_13x19_fromgui \$0GUI_13x19_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 296 nbx 3 14 -100 50 0 0 \$0GUI_14x19_fromgui \$0GUI_14x19_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 296 nbx 3 14 -100 50 0 0 \$0GUI_15x19_fromgui \$0GUI_15x19_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 296 nbx 3 14 -100 50 0 0 \$0GUI_16x19_fromgui \$0GUI_16x19_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 310 nbx 3 14 -100 50 0 0 \$0GUI_1x20_fromgui \$0GUI_1x20_togui
+LS20 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 310 nbx 3 14 -100 50 0 0 \$0GUI_2x20_fromgui \$0GUI_2x20_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 310 nbx 3 14 -100 50 0 0 \$0GUI_3x20_fromgui \$0GUI_3x20_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 310 nbx 3 14 -100 50 0 0 \$0GUI_4x20_fromgui \$0GUI_4x20_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 310 nbx 3 14 -100 50 0 0 \$0GUI_5x20_fromgui \$0GUI_5x20_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 310 nbx 3 14 -100 50 0 0 \$0GUI_6x20_fromgui \$0GUI_6x20_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 310 nbx 3 14 -100 50 0 0 \$0GUI_7x20_fromgui \$0GUI_7x20_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 310 nbx 3 14 -100 50 0 0 \$0GUI_8x20_fromgui \$0GUI_8x20_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 310 nbx 3 14 -100 50 0 0 \$0GUI_9x20_fromgui \$0GUI_9x20_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 310 nbx 3 14 -100 50 0 0 \$0GUI_10x20_fromgui \$0GUI_10x20_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 310 nbx 3 14 -100 50 0 0 \$0GUI_11x20_fromgui \$0GUI_11x20_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 310 nbx 3 14 -100 50 0 0 \$0GUI_12x20_fromgui \$0GUI_12x20_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 310 nbx 3 14 -100 50 0 0 \$0GUI_13x20_fromgui \$0GUI_13x20_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 310 nbx 3 14 -100 50 0 0 \$0GUI_14x20_fromgui \$0GUI_14x20_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 310 nbx 3 14 -100 50 0 0 \$0GUI_15x20_fromgui \$0GUI_15x20_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 310 nbx 3 14 -100 50 0 0 \$0GUI_16x20_fromgui \$0GUI_16x20_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 324 nbx 3 14 -100 50 0 0 \$0GUI_1x21_fromgui \$0GUI_1x21_togui
+LS21 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 324 nbx 3 14 -100 50 0 0 \$0GUI_2x21_fromgui \$0GUI_2x21_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 324 nbx 3 14 -100 50 0 0 \$0GUI_3x21_fromgui \$0GUI_3x21_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 324 nbx 3 14 -100 50 0 0 \$0GUI_4x21_fromgui \$0GUI_4x21_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 324 nbx 3 14 -100 50 0 0 \$0GUI_5x21_fromgui \$0GUI_5x21_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 324 nbx 3 14 -100 50 0 0 \$0GUI_6x21_fromgui \$0GUI_6x21_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 324 nbx 3 14 -100 50 0 0 \$0GUI_7x21_fromgui \$0GUI_7x21_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 324 nbx 3 14 -100 50 0 0 \$0GUI_8x21_fromgui \$0GUI_8x21_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 324 nbx 3 14 -100 50 0 0 \$0GUI_9x21_fromgui \$0GUI_9x21_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 324 nbx 3 14 -100 50 0 0 \$0GUI_10x21_fromgui \$0GUI_10x21_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 324 nbx 3 14 -100 50 0 0 \$0GUI_11x21_fromgui \$0GUI_11x21_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 324 nbx 3 14 -100 50 0 0 \$0GUI_12x21_fromgui \$0GUI_12x21_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 324 nbx 3 14 -100 50 0 0 \$0GUI_13x21_fromgui \$0GUI_13x21_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 324 nbx 3 14 -100 50 0 0 \$0GUI_14x21_fromgui \$0GUI_14x21_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 324 nbx 3 14 -100 50 0 0 \$0GUI_15x21_fromgui \$0GUI_15x21_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 324 nbx 3 14 -100 50 0 0 \$0GUI_16x21_fromgui \$0GUI_16x21_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 338 nbx 3 14 -100 50 0 0 \$0GUI_1x22_fromgui \$0GUI_1x22_togui
+LS22 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 338 nbx 3 14 -100 50 0 0 \$0GUI_2x22_fromgui \$0GUI_2x22_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 338 nbx 3 14 -100 50 0 0 \$0GUI_3x22_fromgui \$0GUI_3x22_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 338 nbx 3 14 -100 50 0 0 \$0GUI_4x22_fromgui \$0GUI_4x22_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 338 nbx 3 14 -100 50 0 0 \$0GUI_5x22_fromgui \$0GUI_5x22_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 338 nbx 3 14 -100 50 0 0 \$0GUI_6x22_fromgui \$0GUI_6x22_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 338 nbx 3 14 -100 50 0 0 \$0GUI_7x22_fromgui \$0GUI_7x22_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 338 nbx 3 14 -100 50 0 0 \$0GUI_8x22_fromgui \$0GUI_8x22_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 338 nbx 3 14 -100 50 0 0 \$0GUI_9x22_fromgui \$0GUI_9x22_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 338 nbx 3 14 -100 50 0 0 \$0GUI_10x22_fromgui \$0GUI_10x22_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 338 nbx 3 14 -100 50 0 0 \$0GUI_11x22_fromgui \$0GUI_11x22_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 338 nbx 3 14 -100 50 0 0 \$0GUI_12x22_fromgui \$0GUI_12x22_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 338 nbx 3 14 -100 50 0 0 \$0GUI_13x22_fromgui \$0GUI_13x22_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 338 nbx 3 14 -100 50 0 0 \$0GUI_14x22_fromgui \$0GUI_14x22_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 338 nbx 3 14 -100 50 0 0 \$0GUI_15x22_fromgui \$0GUI_15x22_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 338 nbx 3 14 -100 50 0 0 \$0GUI_16x22_fromgui \$0GUI_16x22_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 352 nbx 3 14 -100 50 0 0 \$0GUI_1x23_fromgui \$0GUI_1x23_togui
+LS23 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 352 nbx 3 14 -100 50 0 0 \$0GUI_2x23_fromgui \$0GUI_2x23_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 352 nbx 3 14 -100 50 0 0 \$0GUI_3x23_fromgui \$0GUI_3x23_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 352 nbx 3 14 -100 50 0 0 \$0GUI_4x23_fromgui \$0GUI_4x23_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 352 nbx 3 14 -100 50 0 0 \$0GUI_5x23_fromgui \$0GUI_5x23_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 352 nbx 3 14 -100 50 0 0 \$0GUI_6x23_fromgui \$0GUI_6x23_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 352 nbx 3 14 -100 50 0 0 \$0GUI_7x23_fromgui \$0GUI_7x23_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 352 nbx 3 14 -100 50 0 0 \$0GUI_8x23_fromgui \$0GUI_8x23_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 352 nbx 3 14 -100 50 0 0 \$0GUI_9x23_fromgui \$0GUI_9x23_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 352 nbx 3 14 -100 50 0 0 \$0GUI_10x23_fromgui \$0GUI_10x23_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 352 nbx 3 14 -100 50 0 0 \$0GUI_11x23_fromgui \$0GUI_11x23_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 352 nbx 3 14 -100 50 0 0 \$0GUI_12x23_fromgui \$0GUI_12x23_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 352 nbx 3 14 -100 50 0 0 \$0GUI_13x23_fromgui \$0GUI_13x23_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 352 nbx 3 14 -100 50 0 0 \$0GUI_14x23_fromgui \$0GUI_14x23_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 352 nbx 3 14 -100 50 0 0 \$0GUI_15x23_fromgui \$0GUI_15x23_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 352 nbx 3 14 -100 50 0 0 \$0GUI_16x23_fromgui \$0GUI_16x23_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 366 nbx 3 14 -100 50 0 0 \$0GUI_1x24_fromgui \$0GUI_1x24_togui
+LS24 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 366 nbx 3 14 -100 50 0 0 \$0GUI_2x24_fromgui \$0GUI_2x24_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 366 nbx 3 14 -100 50 0 0 \$0GUI_3x24_fromgui \$0GUI_3x24_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 366 nbx 3 14 -100 50 0 0 \$0GUI_4x24_fromgui \$0GUI_4x24_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 366 nbx 3 14 -100 50 0 0 \$0GUI_5x24_fromgui \$0GUI_5x24_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 366 nbx 3 14 -100 50 0 0 \$0GUI_6x24_fromgui \$0GUI_6x24_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 366 nbx 3 14 -100 50 0 0 \$0GUI_7x24_fromgui \$0GUI_7x24_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 366 nbx 3 14 -100 50 0 0 \$0GUI_8x24_fromgui \$0GUI_8x24_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 366 nbx 3 14 -100 50 0 0 \$0GUI_9x24_fromgui \$0GUI_9x24_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 366 nbx 3 14 -100 50 0 0 \$0GUI_10x24_fromgui \$0GUI_10x24_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 366 nbx 3 14 -100 50 0 0 \$0GUI_11x24_fromgui \$0GUI_11x24_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 366 nbx 3 14 -100 50 0 0 \$0GUI_12x24_fromgui \$0GUI_12x24_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 366 nbx 3 14 -100 50 0 0 \$0GUI_13x24_fromgui \$0GUI_13x24_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 366 nbx 3 14 -100 50 0 0 \$0GUI_14x24_fromgui \$0GUI_14x24_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 366 nbx 3 14 -100 50 0 0 \$0GUI_15x24_fromgui \$0GUI_15x24_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 366 nbx 3 14 -100 50 0 0 \$0GUI_16x24_fromgui \$0GUI_16x24_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 380 nbx 3 14 -100 50 0 0 \$0GUI_1x25_fromgui \$0GUI_1x25_togui
+LS25 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 380 nbx 3 14 -100 50 0 0 \$0GUI_2x25_fromgui \$0GUI_2x25_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 380 nbx 3 14 -100 50 0 0 \$0GUI_3x25_fromgui \$0GUI_3x25_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 380 nbx 3 14 -100 50 0 0 \$0GUI_4x25_fromgui \$0GUI_4x25_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 380 nbx 3 14 -100 50 0 0 \$0GUI_5x25_fromgui \$0GUI_5x25_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 380 nbx 3 14 -100 50 0 0 \$0GUI_6x25_fromgui \$0GUI_6x25_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 380 nbx 3 14 -100 50 0 0 \$0GUI_7x25_fromgui \$0GUI_7x25_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 380 nbx 3 14 -100 50 0 0 \$0GUI_8x25_fromgui \$0GUI_8x25_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 380 nbx 3 14 -100 50 0 0 \$0GUI_9x25_fromgui \$0GUI_9x25_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 380 nbx 3 14 -100 50 0 0 \$0GUI_10x25_fromgui \$0GUI_10x25_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 380 nbx 3 14 -100 50 0 0 \$0GUI_11x25_fromgui \$0GUI_11x25_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 380 nbx 3 14 -100 50 0 0 \$0GUI_12x25_fromgui \$0GUI_12x25_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 380 nbx 3 14 -100 50 0 0 \$0GUI_13x25_fromgui \$0GUI_13x25_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 380 nbx 3 14 -100 50 0 0 \$0GUI_14x25_fromgui \$0GUI_14x25_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 380 nbx 3 14 -100 50 0 0 \$0GUI_15x25_fromgui \$0GUI_15x25_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 380 nbx 3 14 -100 50 0 0 \$0GUI_16x25_fromgui \$0GUI_16x25_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 394 nbx 3 14 -100 50 0 0 \$0GUI_1x26_fromgui \$0GUI_1x26_togui
+LS26 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 394 nbx 3 14 -100 50 0 0 \$0GUI_2x26_fromgui \$0GUI_2x26_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 394 nbx 3 14 -100 50 0 0 \$0GUI_3x26_fromgui \$0GUI_3x26_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 394 nbx 3 14 -100 50 0 0 \$0GUI_4x26_fromgui \$0GUI_4x26_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 394 nbx 3 14 -100 50 0 0 \$0GUI_5x26_fromgui \$0GUI_5x26_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 394 nbx 3 14 -100 50 0 0 \$0GUI_6x26_fromgui \$0GUI_6x26_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 394 nbx 3 14 -100 50 0 0 \$0GUI_7x26_fromgui \$0GUI_7x26_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 394 nbx 3 14 -100 50 0 0 \$0GUI_8x26_fromgui \$0GUI_8x26_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 394 nbx 3 14 -100 50 0 0 \$0GUI_9x26_fromgui \$0GUI_9x26_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 394 nbx 3 14 -100 50 0 0 \$0GUI_10x26_fromgui \$0GUI_10x26_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 394 nbx 3 14 -100 50 0 0 \$0GUI_11x26_fromgui \$0GUI_11x26_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 394 nbx 3 14 -100 50 0 0 \$0GUI_12x26_fromgui \$0GUI_12x26_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 394 nbx 3 14 -100 50 0 0 \$0GUI_13x26_fromgui \$0GUI_13x26_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 394 nbx 3 14 -100 50 0 0 \$0GUI_14x26_fromgui \$0GUI_14x26_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 394 nbx 3 14 -100 50 0 0 \$0GUI_15x26_fromgui \$0GUI_15x26_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 394 nbx 3 14 -100 50 0 0 \$0GUI_16x26_fromgui \$0GUI_16x26_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 408 nbx 3 14 -100 50 0 0 \$0GUI_1x27_fromgui \$0GUI_1x27_togui
+LS27 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 408 nbx 3 14 -100 50 0 0 \$0GUI_2x27_fromgui \$0GUI_2x27_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 408 nbx 3 14 -100 50 0 0 \$0GUI_3x27_fromgui \$0GUI_3x27_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 408 nbx 3 14 -100 50 0 0 \$0GUI_4x27_fromgui \$0GUI_4x27_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 408 nbx 3 14 -100 50 0 0 \$0GUI_5x27_fromgui \$0GUI_5x27_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 408 nbx 3 14 -100 50 0 0 \$0GUI_6x27_fromgui \$0GUI_6x27_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 408 nbx 3 14 -100 50 0 0 \$0GUI_7x27_fromgui \$0GUI_7x27_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 408 nbx 3 14 -100 50 0 0 \$0GUI_8x27_fromgui \$0GUI_8x27_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 408 nbx 3 14 -100 50 0 0 \$0GUI_9x27_fromgui \$0GUI_9x27_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 408 nbx 3 14 -100 50 0 0 \$0GUI_10x27_fromgui \$0GUI_10x27_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 408 nbx 3 14 -100 50 0 0 \$0GUI_11x27_fromgui \$0GUI_11x27_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 408 nbx 3 14 -100 50 0 0 \$0GUI_12x27_fromgui \$0GUI_12x27_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 408 nbx 3 14 -100 50 0 0 \$0GUI_13x27_fromgui \$0GUI_13x27_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 408 nbx 3 14 -100 50 0 0 \$0GUI_14x27_fromgui \$0GUI_14x27_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 408 nbx 3 14 -100 50 0 0 \$0GUI_15x27_fromgui \$0GUI_15x27_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 408 nbx 3 14 -100 50 0 0 \$0GUI_16x27_fromgui \$0GUI_16x27_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 422 nbx 3 14 -100 50 0 0 \$0GUI_1x28_fromgui \$0GUI_1x28_togui
+LS28 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 422 nbx 3 14 -100 50 0 0 \$0GUI_2x28_fromgui \$0GUI_2x28_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 422 nbx 3 14 -100 50 0 0 \$0GUI_3x28_fromgui \$0GUI_3x28_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 422 nbx 3 14 -100 50 0 0 \$0GUI_4x28_fromgui \$0GUI_4x28_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 422 nbx 3 14 -100 50 0 0 \$0GUI_5x28_fromgui \$0GUI_5x28_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 422 nbx 3 14 -100 50 0 0 \$0GUI_6x28_fromgui \$0GUI_6x28_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 422 nbx 3 14 -100 50 0 0 \$0GUI_7x28_fromgui \$0GUI_7x28_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 422 nbx 3 14 -100 50 0 0 \$0GUI_8x28_fromgui \$0GUI_8x28_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 422 nbx 3 14 -100 50 0 0 \$0GUI_9x28_fromgui \$0GUI_9x28_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 422 nbx 3 14 -100 50 0 0 \$0GUI_10x28_fromgui \$0GUI_10x28_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 422 nbx 3 14 -100 50 0 0 \$0GUI_11x28_fromgui \$0GUI_11x28_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 422 nbx 3 14 -100 50 0 0 \$0GUI_12x28_fromgui \$0GUI_12x28_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 422 nbx 3 14 -100 50 0 0 \$0GUI_13x28_fromgui \$0GUI_13x28_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 422 nbx 3 14 -100 50 0 0 \$0GUI_14x28_fromgui \$0GUI_14x28_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 422 nbx 3 14 -100 50 0 0 \$0GUI_15x28_fromgui \$0GUI_15x28_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 422 nbx 3 14 -100 50 0 0 \$0GUI_16x28_fromgui \$0GUI_16x28_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 436 nbx 3 14 -100 50 0 0 \$0GUI_1x29_fromgui \$0GUI_1x29_togui
+LS29 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 436 nbx 3 14 -100 50 0 0 \$0GUI_2x29_fromgui \$0GUI_2x29_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 436 nbx 3 14 -100 50 0 0 \$0GUI_3x29_fromgui \$0GUI_3x29_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 436 nbx 3 14 -100 50 0 0 \$0GUI_4x29_fromgui \$0GUI_4x29_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 436 nbx 3 14 -100 50 0 0 \$0GUI_5x29_fromgui \$0GUI_5x29_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 436 nbx 3 14 -100 50 0 0 \$0GUI_6x29_fromgui \$0GUI_6x29_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 436 nbx 3 14 -100 50 0 0 \$0GUI_7x29_fromgui \$0GUI_7x29_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 436 nbx 3 14 -100 50 0 0 \$0GUI_8x29_fromgui \$0GUI_8x29_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 436 nbx 3 14 -100 50 0 0 \$0GUI_9x29_fromgui \$0GUI_9x29_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 436 nbx 3 14 -100 50 0 0 \$0GUI_10x29_fromgui \$0GUI_10x29_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 436 nbx 3 14 -100 50 0 0 \$0GUI_11x29_fromgui \$0GUI_11x29_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 436 nbx 3 14 -100 50 0 0 \$0GUI_12x29_fromgui \$0GUI_12x29_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 436 nbx 3 14 -100 50 0 0 \$0GUI_13x29_fromgui \$0GUI_13x29_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 436 nbx 3 14 -100 50 0 0 \$0GUI_14x29_fromgui \$0GUI_14x29_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 436 nbx 3 14 -100 50 0 0 \$0GUI_15x29_fromgui \$0GUI_15x29_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 436 nbx 3 14 -100 50 0 0 \$0GUI_16x29_fromgui \$0GUI_16x29_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 450 nbx 3 14 -100 50 0 0 \$0GUI_1x30_fromgui \$0GUI_1x30_togui
+LS30 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 450 nbx 3 14 -100 50 0 0 \$0GUI_2x30_fromgui \$0GUI_2x30_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 450 nbx 3 14 -100 50 0 0 \$0GUI_3x30_fromgui \$0GUI_3x30_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 450 nbx 3 14 -100 50 0 0 \$0GUI_4x30_fromgui \$0GUI_4x30_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 450 nbx 3 14 -100 50 0 0 \$0GUI_5x30_fromgui \$0GUI_5x30_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 450 nbx 3 14 -100 50 0 0 \$0GUI_6x30_fromgui \$0GUI_6x30_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 450 nbx 3 14 -100 50 0 0 \$0GUI_7x30_fromgui \$0GUI_7x30_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 450 nbx 3 14 -100 50 0 0 \$0GUI_8x30_fromgui \$0GUI_8x30_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 450 nbx 3 14 -100 50 0 0 \$0GUI_9x30_fromgui \$0GUI_9x30_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 450 nbx 3 14 -100 50 0 0 \$0GUI_10x30_fromgui \$0GUI_10x30_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 450 nbx 3 14 -100 50 0 0 \$0GUI_11x30_fromgui \$0GUI_11x30_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 450 nbx 3 14 -100 50 0 0 \$0GUI_12x30_fromgui \$0GUI_12x30_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 450 nbx 3 14 -100 50 0 0 \$0GUI_13x30_fromgui \$0GUI_13x30_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 450 nbx 3 14 -100 50 0 0 \$0GUI_14x30_fromgui \$0GUI_14x30_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 450 nbx 3 14 -100 50 0 0 \$0GUI_15x30_fromgui \$0GUI_15x30_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 450 nbx 3 14 -100 50 0 0 \$0GUI_16x30_fromgui \$0GUI_16x30_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 464 nbx 3 14 -100 50 0 0 \$0GUI_1x31_fromgui \$0GUI_1x31_togui
+LS31 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 464 nbx 3 14 -100 50 0 0 \$0GUI_2x31_fromgui \$0GUI_2x31_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 464 nbx 3 14 -100 50 0 0 \$0GUI_3x31_fromgui \$0GUI_3x31_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 464 nbx 3 14 -100 50 0 0 \$0GUI_4x31_fromgui \$0GUI_4x31_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 464 nbx 3 14 -100 50 0 0 \$0GUI_5x31_fromgui \$0GUI_5x31_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 464 nbx 3 14 -100 50 0 0 \$0GUI_6x31_fromgui \$0GUI_6x31_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 464 nbx 3 14 -100 50 0 0 \$0GUI_7x31_fromgui \$0GUI_7x31_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 464 nbx 3 14 -100 50 0 0 \$0GUI_8x31_fromgui \$0GUI_8x31_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 464 nbx 3 14 -100 50 0 0 \$0GUI_9x31_fromgui \$0GUI_9x31_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 464 nbx 3 14 -100 50 0 0 \$0GUI_10x31_fromgui \$0GUI_10x31_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 464 nbx 3 14 -100 50 0 0 \$0GUI_11x31_fromgui \$0GUI_11x31_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 464 nbx 3 14 -100 50 0 0 \$0GUI_12x31_fromgui \$0GUI_12x31_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 464 nbx 3 14 -100 50 0 0 \$0GUI_13x31_fromgui \$0GUI_13x31_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 464 nbx 3 14 -100 50 0 0 \$0GUI_14x31_fromgui \$0GUI_14x31_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 464 nbx 3 14 -100 50 0 0 \$0GUI_15x31_fromgui \$0GUI_15x31_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 464 nbx 3 14 -100 50 0 0 \$0GUI_16x31_fromgui \$0GUI_16x31_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 478 nbx 3 14 -100 50 0 0 \$0GUI_1x32_fromgui \$0GUI_1x32_togui
+LS32 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 478 nbx 3 14 -100 50 0 0 \$0GUI_2x32_fromgui \$0GUI_2x32_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 478 nbx 3 14 -100 50 0 0 \$0GUI_3x32_fromgui \$0GUI_3x32_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 478 nbx 3 14 -100 50 0 0 \$0GUI_4x32_fromgui \$0GUI_4x32_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 478 nbx 3 14 -100 50 0 0 \$0GUI_5x32_fromgui \$0GUI_5x32_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 478 nbx 3 14 -100 50 0 0 \$0GUI_6x32_fromgui \$0GUI_6x32_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 478 nbx 3 14 -100 50 0 0 \$0GUI_7x32_fromgui \$0GUI_7x32_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 478 nbx 3 14 -100 50 0 0 \$0GUI_8x32_fromgui \$0GUI_8x32_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 478 nbx 3 14 -100 50 0 0 \$0GUI_9x32_fromgui \$0GUI_9x32_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 478 nbx 3 14 -100 50 0 0 \$0GUI_10x32_fromgui \$0GUI_10x32_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 478 nbx 3 14 -100 50 0 0 \$0GUI_11x32_fromgui \$0GUI_11x32_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 478 nbx 3 14 -100 50 0 0 \$0GUI_12x32_fromgui \$0GUI_12x32_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 478 nbx 3 14 -100 50 0 0 \$0GUI_13x32_fromgui \$0GUI_13x32_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 478 nbx 3 14 -100 50 0 0 \$0GUI_14x32_fromgui \$0GUI_14x32_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 478 nbx 3 14 -100 50 0 0 \$0GUI_15x32_fromgui \$0GUI_15x32_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 478 nbx 3 14 -100 50 0 0 \$0GUI_16x32_fromgui \$0GUI_16x32_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 492 nbx 3 14 -100 50 0 0 \$0GUI_1x33_fromgui \$0GUI_1x33_togui
+LS33 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 492 nbx 3 14 -100 50 0 0 \$0GUI_2x33_fromgui \$0GUI_2x33_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 492 nbx 3 14 -100 50 0 0 \$0GUI_3x33_fromgui \$0GUI_3x33_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 492 nbx 3 14 -100 50 0 0 \$0GUI_4x33_fromgui \$0GUI_4x33_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 492 nbx 3 14 -100 50 0 0 \$0GUI_5x33_fromgui \$0GUI_5x33_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 492 nbx 3 14 -100 50 0 0 \$0GUI_6x33_fromgui \$0GUI_6x33_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 492 nbx 3 14 -100 50 0 0 \$0GUI_7x33_fromgui \$0GUI_7x33_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 492 nbx 3 14 -100 50 0 0 \$0GUI_8x33_fromgui \$0GUI_8x33_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 492 nbx 3 14 -100 50 0 0 \$0GUI_9x33_fromgui \$0GUI_9x33_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 492 nbx 3 14 -100 50 0 0 \$0GUI_10x33_fromgui \$0GUI_10x33_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 492 nbx 3 14 -100 50 0 0 \$0GUI_11x33_fromgui \$0GUI_11x33_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 492 nbx 3 14 -100 50 0 0 \$0GUI_12x33_fromgui \$0GUI_12x33_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 492 nbx 3 14 -100 50 0 0 \$0GUI_13x33_fromgui \$0GUI_13x33_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 492 nbx 3 14 -100 50 0 0 \$0GUI_14x33_fromgui \$0GUI_14x33_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 492 nbx 3 14 -100 50 0 0 \$0GUI_15x33_fromgui \$0GUI_15x33_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 492 nbx 3 14 -100 50 0 0 \$0GUI_16x33_fromgui \$0GUI_16x33_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 506 nbx 3 14 -100 50 0 0 \$0GUI_1x34_fromgui \$0GUI_1x34_togui
+LS34 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 506 nbx 3 14 -100 50 0 0 \$0GUI_2x34_fromgui \$0GUI_2x34_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 506 nbx 3 14 -100 50 0 0 \$0GUI_3x34_fromgui \$0GUI_3x34_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 506 nbx 3 14 -100 50 0 0 \$0GUI_4x34_fromgui \$0GUI_4x34_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 506 nbx 3 14 -100 50 0 0 \$0GUI_5x34_fromgui \$0GUI_5x34_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 506 nbx 3 14 -100 50 0 0 \$0GUI_6x34_fromgui \$0GUI_6x34_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 506 nbx 3 14 -100 50 0 0 \$0GUI_7x34_fromgui \$0GUI_7x34_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 506 nbx 3 14 -100 50 0 0 \$0GUI_8x34_fromgui \$0GUI_8x34_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 506 nbx 3 14 -100 50 0 0 \$0GUI_9x34_fromgui \$0GUI_9x34_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 506 nbx 3 14 -100 50 0 0 \$0GUI_10x34_fromgui \$0GUI_10x34_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 506 nbx 3 14 -100 50 0 0 \$0GUI_11x34_fromgui \$0GUI_11x34_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 506 nbx 3 14 -100 50 0 0 \$0GUI_12x34_fromgui \$0GUI_12x34_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 506 nbx 3 14 -100 50 0 0 \$0GUI_13x34_fromgui \$0GUI_13x34_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 506 nbx 3 14 -100 50 0 0 \$0GUI_14x34_fromgui \$0GUI_14x34_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 506 nbx 3 14 -100 50 0 0 \$0GUI_15x34_fromgui \$0GUI_15x34_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 506 nbx 3 14 -100 50 0 0 \$0GUI_16x34_fromgui \$0GUI_16x34_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 520 nbx 3 14 -100 50 0 0 \$0GUI_1x35_fromgui \$0GUI_1x35_togui
+LS35 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 520 nbx 3 14 -100 50 0 0 \$0GUI_2x35_fromgui \$0GUI_2x35_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 520 nbx 3 14 -100 50 0 0 \$0GUI_3x35_fromgui \$0GUI_3x35_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 520 nbx 3 14 -100 50 0 0 \$0GUI_4x35_fromgui \$0GUI_4x35_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 520 nbx 3 14 -100 50 0 0 \$0GUI_5x35_fromgui \$0GUI_5x35_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 520 nbx 3 14 -100 50 0 0 \$0GUI_6x35_fromgui \$0GUI_6x35_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 520 nbx 3 14 -100 50 0 0 \$0GUI_7x35_fromgui \$0GUI_7x35_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 520 nbx 3 14 -100 50 0 0 \$0GUI_8x35_fromgui \$0GUI_8x35_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 520 nbx 3 14 -100 50 0 0 \$0GUI_9x35_fromgui \$0GUI_9x35_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 520 nbx 3 14 -100 50 0 0 \$0GUI_10x35_fromgui \$0GUI_10x35_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 520 nbx 3 14 -100 50 0 0 \$0GUI_11x35_fromgui \$0GUI_11x35_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 520 nbx 3 14 -100 50 0 0 \$0GUI_12x35_fromgui \$0GUI_12x35_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 520 nbx 3 14 -100 50 0 0 \$0GUI_13x35_fromgui \$0GUI_13x35_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 520 nbx 3 14 -100 50 0 0 \$0GUI_14x35_fromgui \$0GUI_14x35_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 520 nbx 3 14 -100 50 0 0 \$0GUI_15x35_fromgui \$0GUI_15x35_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 520 nbx 3 14 -100 50 0 0 \$0GUI_16x35_fromgui \$0GUI_16x35_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 534 nbx 3 14 -100 50 0 0 \$0GUI_1x36_fromgui \$0GUI_1x36_togui
+LS36 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 534 nbx 3 14 -100 50 0 0 \$0GUI_2x36_fromgui \$0GUI_2x36_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 534 nbx 3 14 -100 50 0 0 \$0GUI_3x36_fromgui \$0GUI_3x36_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 534 nbx 3 14 -100 50 0 0 \$0GUI_4x36_fromgui \$0GUI_4x36_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 534 nbx 3 14 -100 50 0 0 \$0GUI_5x36_fromgui \$0GUI_5x36_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 534 nbx 3 14 -100 50 0 0 \$0GUI_6x36_fromgui \$0GUI_6x36_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 534 nbx 3 14 -100 50 0 0 \$0GUI_7x36_fromgui \$0GUI_7x36_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 534 nbx 3 14 -100 50 0 0 \$0GUI_8x36_fromgui \$0GUI_8x36_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 534 nbx 3 14 -100 50 0 0 \$0GUI_9x36_fromgui \$0GUI_9x36_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 534 nbx 3 14 -100 50 0 0 \$0GUI_10x36_fromgui \$0GUI_10x36_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 534 nbx 3 14 -100 50 0 0 \$0GUI_11x36_fromgui \$0GUI_11x36_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 534 nbx 3 14 -100 50 0 0 \$0GUI_12x36_fromgui \$0GUI_12x36_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 534 nbx 3 14 -100 50 0 0 \$0GUI_13x36_fromgui \$0GUI_13x36_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 534 nbx 3 14 -100 50 0 0 \$0GUI_14x36_fromgui \$0GUI_14x36_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 534 nbx 3 14 -100 50 0 0 \$0GUI_15x36_fromgui \$0GUI_15x36_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 534 nbx 3 14 -100 50 0 0 \$0GUI_16x36_fromgui \$0GUI_16x36_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 548 nbx 3 14 -100 50 0 0 \$0GUI_1x37_fromgui \$0GUI_1x37_togui
+LS37 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 548 nbx 3 14 -100 50 0 0 \$0GUI_2x37_fromgui \$0GUI_2x37_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 548 nbx 3 14 -100 50 0 0 \$0GUI_3x37_fromgui \$0GUI_3x37_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 548 nbx 3 14 -100 50 0 0 \$0GUI_4x37_fromgui \$0GUI_4x37_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 548 nbx 3 14 -100 50 0 0 \$0GUI_5x37_fromgui \$0GUI_5x37_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 548 nbx 3 14 -100 50 0 0 \$0GUI_6x37_fromgui \$0GUI_6x37_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 548 nbx 3 14 -100 50 0 0 \$0GUI_7x37_fromgui \$0GUI_7x37_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 548 nbx 3 14 -100 50 0 0 \$0GUI_8x37_fromgui \$0GUI_8x37_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 548 nbx 3 14 -100 50 0 0 \$0GUI_9x37_fromgui \$0GUI_9x37_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 548 nbx 3 14 -100 50 0 0 \$0GUI_10x37_fromgui \$0GUI_10x37_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 548 nbx 3 14 -100 50 0 0 \$0GUI_11x37_fromgui \$0GUI_11x37_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 548 nbx 3 14 -100 50 0 0 \$0GUI_12x37_fromgui \$0GUI_12x37_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 548 nbx 3 14 -100 50 0 0 \$0GUI_13x37_fromgui \$0GUI_13x37_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 548 nbx 3 14 -100 50 0 0 \$0GUI_14x37_fromgui \$0GUI_14x37_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 548 nbx 3 14 -100 50 0 0 \$0GUI_15x37_fromgui \$0GUI_15x37_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 548 nbx 3 14 -100 50 0 0 \$0GUI_16x37_fromgui \$0GUI_16x37_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 562 nbx 3 14 -100 50 0 0 \$0GUI_1x38_fromgui \$0GUI_1x38_togui
+LS38 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 562 nbx 3 14 -100 50 0 0 \$0GUI_2x38_fromgui \$0GUI_2x38_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 562 nbx 3 14 -100 50 0 0 \$0GUI_3x38_fromgui \$0GUI_3x38_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 562 nbx 3 14 -100 50 0 0 \$0GUI_4x38_fromgui \$0GUI_4x38_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 562 nbx 3 14 -100 50 0 0 \$0GUI_5x38_fromgui \$0GUI_5x38_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 562 nbx 3 14 -100 50 0 0 \$0GUI_6x38_fromgui \$0GUI_6x38_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 562 nbx 3 14 -100 50 0 0 \$0GUI_7x38_fromgui \$0GUI_7x38_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 562 nbx 3 14 -100 50 0 0 \$0GUI_8x38_fromgui \$0GUI_8x38_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 562 nbx 3 14 -100 50 0 0 \$0GUI_9x38_fromgui \$0GUI_9x38_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 562 nbx 3 14 -100 50 0 0 \$0GUI_10x38_fromgui \$0GUI_10x38_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 562 nbx 3 14 -100 50 0 0 \$0GUI_11x38_fromgui \$0GUI_11x38_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 562 nbx 3 14 -100 50 0 0 \$0GUI_12x38_fromgui \$0GUI_12x38_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 562 nbx 3 14 -100 50 0 0 \$0GUI_13x38_fromgui \$0GUI_13x38_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 562 nbx 3 14 -100 50 0 0 \$0GUI_14x38_fromgui \$0GUI_14x38_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 562 nbx 3 14 -100 50 0 0 \$0GUI_15x38_fromgui \$0GUI_15x38_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 562 nbx 3 14 -100 50 0 0 \$0GUI_16x38_fromgui \$0GUI_16x38_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 576 nbx 3 14 -100 50 0 0 \$0GUI_1x39_fromgui \$0GUI_1x39_togui
+LS39 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 576 nbx 3 14 -100 50 0 0 \$0GUI_2x39_fromgui \$0GUI_2x39_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 576 nbx 3 14 -100 50 0 0 \$0GUI_3x39_fromgui \$0GUI_3x39_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 576 nbx 3 14 -100 50 0 0 \$0GUI_4x39_fromgui \$0GUI_4x39_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 576 nbx 3 14 -100 50 0 0 \$0GUI_5x39_fromgui \$0GUI_5x39_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 576 nbx 3 14 -100 50 0 0 \$0GUI_6x39_fromgui \$0GUI_6x39_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 576 nbx 3 14 -100 50 0 0 \$0GUI_7x39_fromgui \$0GUI_7x39_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 576 nbx 3 14 -100 50 0 0 \$0GUI_8x39_fromgui \$0GUI_8x39_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 576 nbx 3 14 -100 50 0 0 \$0GUI_9x39_fromgui \$0GUI_9x39_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 576 nbx 3 14 -100 50 0 0 \$0GUI_10x39_fromgui \$0GUI_10x39_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 576 nbx 3 14 -100 50 0 0 \$0GUI_11x39_fromgui \$0GUI_11x39_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 576 nbx 3 14 -100 50 0 0 \$0GUI_12x39_fromgui \$0GUI_12x39_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 576 nbx 3 14 -100 50 0 0 \$0GUI_13x39_fromgui \$0GUI_13x39_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 576 nbx 3 14 -100 50 0 0 \$0GUI_14x39_fromgui \$0GUI_14x39_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 576 nbx 3 14 -100 50 0 0 \$0GUI_15x39_fromgui \$0GUI_15x39_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 576 nbx 3 14 -100 50 0 0 \$0GUI_16x39_fromgui \$0GUI_16x39_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 590 nbx 3 14 -100 50 0 0 \$0GUI_1x40_fromgui \$0GUI_1x40_togui
+LS40 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 590 nbx 3 14 -100 50 0 0 \$0GUI_2x40_fromgui \$0GUI_2x40_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 590 nbx 3 14 -100 50 0 0 \$0GUI_3x40_fromgui \$0GUI_3x40_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 590 nbx 3 14 -100 50 0 0 \$0GUI_4x40_fromgui \$0GUI_4x40_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 590 nbx 3 14 -100 50 0 0 \$0GUI_5x40_fromgui \$0GUI_5x40_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 590 nbx 3 14 -100 50 0 0 \$0GUI_6x40_fromgui \$0GUI_6x40_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 590 nbx 3 14 -100 50 0 0 \$0GUI_7x40_fromgui \$0GUI_7x40_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 590 nbx 3 14 -100 50 0 0 \$0GUI_8x40_fromgui \$0GUI_8x40_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 590 nbx 3 14 -100 50 0 0 \$0GUI_9x40_fromgui \$0GUI_9x40_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 590 nbx 3 14 -100 50 0 0 \$0GUI_10x40_fromgui \$0GUI_10x40_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 590 nbx 3 14 -100 50 0 0 \$0GUI_11x40_fromgui \$0GUI_11x40_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 590 nbx 3 14 -100 50 0 0 \$0GUI_12x40_fromgui \$0GUI_12x40_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 590 nbx 3 14 -100 50 0 0 \$0GUI_13x40_fromgui \$0GUI_13x40_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 590 nbx 3 14 -100 50 0 0 \$0GUI_14x40_fromgui \$0GUI_14x40_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 590 nbx 3 14 -100 50 0 0 \$0GUI_15x40_fromgui \$0GUI_15x40_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 590 nbx 3 14 -100 50 0 0 \$0GUI_16x40_fromgui \$0GUI_16x40_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 604 nbx 3 14 -100 50 0 0 \$0GUI_1x41_fromgui \$0GUI_1x41_togui
+LS41 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 604 nbx 3 14 -100 50 0 0 \$0GUI_2x41_fromgui \$0GUI_2x41_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 604 nbx 3 14 -100 50 0 0 \$0GUI_3x41_fromgui \$0GUI_3x41_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 604 nbx 3 14 -100 50 0 0 \$0GUI_4x41_fromgui \$0GUI_4x41_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 604 nbx 3 14 -100 50 0 0 \$0GUI_5x41_fromgui \$0GUI_5x41_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 604 nbx 3 14 -100 50 0 0 \$0GUI_6x41_fromgui \$0GUI_6x41_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 604 nbx 3 14 -100 50 0 0 \$0GUI_7x41_fromgui \$0GUI_7x41_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 604 nbx 3 14 -100 50 0 0 \$0GUI_8x41_fromgui \$0GUI_8x41_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 604 nbx 3 14 -100 50 0 0 \$0GUI_9x41_fromgui \$0GUI_9x41_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 604 nbx 3 14 -100 50 0 0 \$0GUI_10x41_fromgui \$0GUI_10x41_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 604 nbx 3 14 -100 50 0 0 \$0GUI_11x41_fromgui \$0GUI_11x41_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 604 nbx 3 14 -100 50 0 0 \$0GUI_12x41_fromgui \$0GUI_12x41_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 604 nbx 3 14 -100 50 0 0 \$0GUI_13x41_fromgui \$0GUI_13x41_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 604 nbx 3 14 -100 50 0 0 \$0GUI_14x41_fromgui \$0GUI_14x41_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 604 nbx 3 14 -100 50 0 0 \$0GUI_15x41_fromgui \$0GUI_15x41_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 604 nbx 3 14 -100 50 0 0 \$0GUI_16x41_fromgui \$0GUI_16x41_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 618 nbx 3 14 -100 50 0 0 \$0GUI_1x42_fromgui \$0GUI_1x42_togui
+LS42 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 618 nbx 3 14 -100 50 0 0 \$0GUI_2x42_fromgui \$0GUI_2x42_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 618 nbx 3 14 -100 50 0 0 \$0GUI_3x42_fromgui \$0GUI_3x42_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 618 nbx 3 14 -100 50 0 0 \$0GUI_4x42_fromgui \$0GUI_4x42_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 618 nbx 3 14 -100 50 0 0 \$0GUI_5x42_fromgui \$0GUI_5x42_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 618 nbx 3 14 -100 50 0 0 \$0GUI_6x42_fromgui \$0GUI_6x42_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 618 nbx 3 14 -100 50 0 0 \$0GUI_7x42_fromgui \$0GUI_7x42_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 618 nbx 3 14 -100 50 0 0 \$0GUI_8x42_fromgui \$0GUI_8x42_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 618 nbx 3 14 -100 50 0 0 \$0GUI_9x42_fromgui \$0GUI_9x42_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 618 nbx 3 14 -100 50 0 0 \$0GUI_10x42_fromgui \$0GUI_10x42_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 618 nbx 3 14 -100 50 0 0 \$0GUI_11x42_fromgui \$0GUI_11x42_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 618 nbx 3 14 -100 50 0 0 \$0GUI_12x42_fromgui \$0GUI_12x42_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 618 nbx 3 14 -100 50 0 0 \$0GUI_13x42_fromgui \$0GUI_13x42_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 618 nbx 3 14 -100 50 0 0 \$0GUI_14x42_fromgui \$0GUI_14x42_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 618 nbx 3 14 -100 50 0 0 \$0GUI_15x42_fromgui \$0GUI_15x42_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 618 nbx 3 14 -100 50 0 0 \$0GUI_16x42_fromgui \$0GUI_16x42_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 632 nbx 3 14 -100 50 0 0 \$0GUI_1x43_fromgui \$0GUI_1x43_togui
+LS43 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 632 nbx 3 14 -100 50 0 0 \$0GUI_2x43_fromgui \$0GUI_2x43_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 632 nbx 3 14 -100 50 0 0 \$0GUI_3x43_fromgui \$0GUI_3x43_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 632 nbx 3 14 -100 50 0 0 \$0GUI_4x43_fromgui \$0GUI_4x43_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 632 nbx 3 14 -100 50 0 0 \$0GUI_5x43_fromgui \$0GUI_5x43_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 632 nbx 3 14 -100 50 0 0 \$0GUI_6x43_fromgui \$0GUI_6x43_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 632 nbx 3 14 -100 50 0 0 \$0GUI_7x43_fromgui \$0GUI_7x43_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 632 nbx 3 14 -100 50 0 0 \$0GUI_8x43_fromgui \$0GUI_8x43_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 632 nbx 3 14 -100 50 0 0 \$0GUI_9x43_fromgui \$0GUI_9x43_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 632 nbx 3 14 -100 50 0 0 \$0GUI_10x43_fromgui \$0GUI_10x43_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 632 nbx 3 14 -100 50 0 0 \$0GUI_11x43_fromgui \$0GUI_11x43_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 632 nbx 3 14 -100 50 0 0 \$0GUI_12x43_fromgui \$0GUI_12x43_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 632 nbx 3 14 -100 50 0 0 \$0GUI_13x43_fromgui \$0GUI_13x43_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 632 nbx 3 14 -100 50 0 0 \$0GUI_14x43_fromgui \$0GUI_14x43_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 632 nbx 3 14 -100 50 0 0 \$0GUI_15x43_fromgui \$0GUI_15x43_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 632 nbx 3 14 -100 50 0 0 \$0GUI_16x43_fromgui \$0GUI_16x43_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 646 nbx 3 14 -100 50 0 0 \$0GUI_1x44_fromgui \$0GUI_1x44_togui
+LS44 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 646 nbx 3 14 -100 50 0 0 \$0GUI_2x44_fromgui \$0GUI_2x44_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 646 nbx 3 14 -100 50 0 0 \$0GUI_3x44_fromgui \$0GUI_3x44_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 646 nbx 3 14 -100 50 0 0 \$0GUI_4x44_fromgui \$0GUI_4x44_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 646 nbx 3 14 -100 50 0 0 \$0GUI_5x44_fromgui \$0GUI_5x44_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 646 nbx 3 14 -100 50 0 0 \$0GUI_6x44_fromgui \$0GUI_6x44_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 646 nbx 3 14 -100 50 0 0 \$0GUI_7x44_fromgui \$0GUI_7x44_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 646 nbx 3 14 -100 50 0 0 \$0GUI_8x44_fromgui \$0GUI_8x44_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 646 nbx 3 14 -100 50 0 0 \$0GUI_9x44_fromgui \$0GUI_9x44_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 646 nbx 3 14 -100 50 0 0 \$0GUI_10x44_fromgui \$0GUI_10x44_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 646 nbx 3 14 -100 50 0 0 \$0GUI_11x44_fromgui \$0GUI_11x44_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 646 nbx 3 14 -100 50 0 0 \$0GUI_12x44_fromgui \$0GUI_12x44_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 646 nbx 3 14 -100 50 0 0 \$0GUI_13x44_fromgui \$0GUI_13x44_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 646 nbx 3 14 -100 50 0 0 \$0GUI_14x44_fromgui \$0GUI_14x44_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 646 nbx 3 14 -100 50 0 0 \$0GUI_15x44_fromgui \$0GUI_15x44_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 646 nbx 3 14 -100 50 0 0 \$0GUI_16x44_fromgui \$0GUI_16x44_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 660 nbx 3 14 -100 50 0 0 \$0GUI_1x45_fromgui \$0GUI_1x45_togui
+LS45 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 660 nbx 3 14 -100 50 0 0 \$0GUI_2x45_fromgui \$0GUI_2x45_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 660 nbx 3 14 -100 50 0 0 \$0GUI_3x45_fromgui \$0GUI_3x45_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 660 nbx 3 14 -100 50 0 0 \$0GUI_4x45_fromgui \$0GUI_4x45_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 660 nbx 3 14 -100 50 0 0 \$0GUI_5x45_fromgui \$0GUI_5x45_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 660 nbx 3 14 -100 50 0 0 \$0GUI_6x45_fromgui \$0GUI_6x45_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 660 nbx 3 14 -100 50 0 0 \$0GUI_7x45_fromgui \$0GUI_7x45_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 660 nbx 3 14 -100 50 0 0 \$0GUI_8x45_fromgui \$0GUI_8x45_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 660 nbx 3 14 -100 50 0 0 \$0GUI_9x45_fromgui \$0GUI_9x45_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 660 nbx 3 14 -100 50 0 0 \$0GUI_10x45_fromgui \$0GUI_10x45_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 660 nbx 3 14 -100 50 0 0 \$0GUI_11x45_fromgui \$0GUI_11x45_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 660 nbx 3 14 -100 50 0 0 \$0GUI_12x45_fromgui \$0GUI_12x45_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 660 nbx 3 14 -100 50 0 0 \$0GUI_13x45_fromgui \$0GUI_13x45_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 660 nbx 3 14 -100 50 0 0 \$0GUI_14x45_fromgui \$0GUI_14x45_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 660 nbx 3 14 -100 50 0 0 \$0GUI_15x45_fromgui \$0GUI_15x45_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 660 nbx 3 14 -100 50 0 0 \$0GUI_16x45_fromgui \$0GUI_16x45_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 674 nbx 3 14 -100 50 0 0 \$0GUI_1x46_fromgui \$0GUI_1x46_togui
+LS46 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 674 nbx 3 14 -100 50 0 0 \$0GUI_2x46_fromgui \$0GUI_2x46_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 674 nbx 3 14 -100 50 0 0 \$0GUI_3x46_fromgui \$0GUI_3x46_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 674 nbx 3 14 -100 50 0 0 \$0GUI_4x46_fromgui \$0GUI_4x46_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 674 nbx 3 14 -100 50 0 0 \$0GUI_5x46_fromgui \$0GUI_5x46_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 674 nbx 3 14 -100 50 0 0 \$0GUI_6x46_fromgui \$0GUI_6x46_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 674 nbx 3 14 -100 50 0 0 \$0GUI_7x46_fromgui \$0GUI_7x46_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 674 nbx 3 14 -100 50 0 0 \$0GUI_8x46_fromgui \$0GUI_8x46_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 674 nbx 3 14 -100 50 0 0 \$0GUI_9x46_fromgui \$0GUI_9x46_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 674 nbx 3 14 -100 50 0 0 \$0GUI_10x46_fromgui \$0GUI_10x46_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 674 nbx 3 14 -100 50 0 0 \$0GUI_11x46_fromgui \$0GUI_11x46_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 674 nbx 3 14 -100 50 0 0 \$0GUI_12x46_fromgui \$0GUI_12x46_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 674 nbx 3 14 -100 50 0 0 \$0GUI_13x46_fromgui \$0GUI_13x46_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 674 nbx 3 14 -100 50 0 0 \$0GUI_14x46_fromgui \$0GUI_14x46_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 674 nbx 3 14 -100 50 0 0 \$0GUI_15x46_fromgui \$0GUI_15x46_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 674 nbx 3 14 -100 50 0 0 \$0GUI_16x46_fromgui \$0GUI_16x46_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 688 nbx 3 14 -100 50 0 0 \$0GUI_1x47_fromgui \$0GUI_1x47_togui
+LS47 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 688 nbx 3 14 -100 50 0 0 \$0GUI_2x47_fromgui \$0GUI_2x47_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 688 nbx 3 14 -100 50 0 0 \$0GUI_3x47_fromgui \$0GUI_3x47_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 688 nbx 3 14 -100 50 0 0 \$0GUI_4x47_fromgui \$0GUI_4x47_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 688 nbx 3 14 -100 50 0 0 \$0GUI_5x47_fromgui \$0GUI_5x47_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 688 nbx 3 14 -100 50 0 0 \$0GUI_6x47_fromgui \$0GUI_6x47_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 688 nbx 3 14 -100 50 0 0 \$0GUI_7x47_fromgui \$0GUI_7x47_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 688 nbx 3 14 -100 50 0 0 \$0GUI_8x47_fromgui \$0GUI_8x47_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 688 nbx 3 14 -100 50 0 0 \$0GUI_9x47_fromgui \$0GUI_9x47_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 688 nbx 3 14 -100 50 0 0 \$0GUI_10x47_fromgui \$0GUI_10x47_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 688 nbx 3 14 -100 50 0 0 \$0GUI_11x47_fromgui \$0GUI_11x47_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 688 nbx 3 14 -100 50 0 0 \$0GUI_12x47_fromgui \$0GUI_12x47_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 688 nbx 3 14 -100 50 0 0 \$0GUI_13x47_fromgui \$0GUI_13x47_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 688 nbx 3 14 -100 50 0 0 \$0GUI_14x47_fromgui \$0GUI_14x47_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 688 nbx 3 14 -100 50 0 0 \$0GUI_15x47_fromgui \$0GUI_15x47_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 688 nbx 3 14 -100 50 0 0 \$0GUI_16x47_fromgui \$0GUI_16x47_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 702 nbx 3 14 -100 50 0 0 \$0GUI_1x48_fromgui \$0GUI_1x48_togui
+LS48 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 702 nbx 3 14 -100 50 0 0 \$0GUI_2x48_fromgui \$0GUI_2x48_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 702 nbx 3 14 -100 50 0 0 \$0GUI_3x48_fromgui \$0GUI_3x48_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 702 nbx 3 14 -100 50 0 0 \$0GUI_4x48_fromgui \$0GUI_4x48_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 702 nbx 3 14 -100 50 0 0 \$0GUI_5x48_fromgui \$0GUI_5x48_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 702 nbx 3 14 -100 50 0 0 \$0GUI_6x48_fromgui \$0GUI_6x48_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 702 nbx 3 14 -100 50 0 0 \$0GUI_7x48_fromgui \$0GUI_7x48_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 702 nbx 3 14 -100 50 0 0 \$0GUI_8x48_fromgui \$0GUI_8x48_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 702 nbx 3 14 -100 50 0 0 \$0GUI_9x48_fromgui \$0GUI_9x48_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 702 nbx 3 14 -100 50 0 0 \$0GUI_10x48_fromgui \$0GUI_10x48_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 702 nbx 3 14 -100 50 0 0 \$0GUI_11x48_fromgui \$0GUI_11x48_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 702 nbx 3 14 -100 50 0 0 \$0GUI_12x48_fromgui \$0GUI_12x48_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 702 nbx 3 14 -100 50 0 0 \$0GUI_13x48_fromgui \$0GUI_13x48_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 702 nbx 3 14 -100 50 0 0 \$0GUI_14x48_fromgui \$0GUI_14x48_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 702 nbx 3 14 -100 50 0 0 \$0GUI_15x48_fromgui \$0GUI_15x48_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 702 nbx 3 14 -100 50 0 0 \$0GUI_16x48_fromgui \$0GUI_16x48_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 31 716 nbx 3 14 -100 50 0 0 \$0GUI_1x49_fromgui \$0GUI_1x49_togui
+LS49 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 716 nbx 3 14 -100 50 0 0 \$0GUI_2x49_fromgui \$0GUI_2x49_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 716 nbx 3 14 -100 50 0 0 \$0GUI_3x49_fromgui \$0GUI_3x49_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 716 nbx 3 14 -100 50 0 0 \$0GUI_4x49_fromgui \$0GUI_4x49_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 716 nbx 3 14 -100 50 0 0 \$0GUI_5x49_fromgui \$0GUI_5x49_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 716 nbx 3 14 -100 50 0 0 \$0GUI_6x49_fromgui \$0GUI_6x49_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 716 nbx 3 14 -100 50 0 0 \$0GUI_7x49_fromgui \$0GUI_7x49_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 716 nbx 3 14 -100 50 0 0 \$0GUI_8x49_fromgui \$0GUI_8x49_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 716 nbx 3 14 -100 50 0 0 \$0GUI_9x49_fromgui \$0GUI_9x49_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 716 nbx 3 14 -100 50 0 0 \$0GUI_10x49_fromgui \$0GUI_10x49_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 716 nbx 3 14 -100 50 0 0 \$0GUI_11x49_fromgui \$0GUI_11x49_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 716 nbx 3 14 -100 50 0 0 \$0GUI_12x49_fromgui \$0GUI_12x49_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 716 nbx 3 14 -100 50 0 0 \$0GUI_13x49_fromgui \$0GUI_13x49_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 716 nbx 3 14 -100 50 0 0 \$0GUI_14x49_fromgui \$0GUI_14x49_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 716 nbx 3 14 -100 50 0 0 \$0GUI_15x49_fromgui \$0GUI_15x49_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 716 nbx 3 14 -100 50 0 0 \$0GUI_16x49_fromgui \$0GUI_16x49_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 730 nbx 3 14 -100 50 0 0 \$0GUI_1x50_fromgui \$0GUI_1x50_togui
+LS50 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 730 nbx 3 14 -100 50 0 0 \$0GUI_2x50_fromgui \$0GUI_2x50_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 730 nbx 3 14 -100 50 0 0 \$0GUI_3x50_fromgui \$0GUI_3x50_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 730 nbx 3 14 -100 50 0 0 \$0GUI_4x50_fromgui \$0GUI_4x50_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 730 nbx 3 14 -100 50 0 0 \$0GUI_5x50_fromgui \$0GUI_5x50_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 730 nbx 3 14 -100 50 0 0 \$0GUI_6x50_fromgui \$0GUI_6x50_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 730 nbx 3 14 -100 50 0 0 \$0GUI_7x50_fromgui \$0GUI_7x50_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 730 nbx 3 14 -100 50 0 0 \$0GUI_8x50_fromgui \$0GUI_8x50_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 730 nbx 3 14 -100 50 0 0 \$0GUI_9x50_fromgui \$0GUI_9x50_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 730 nbx 3 14 -100 50 0 0 \$0GUI_10x50_fromgui \$0GUI_10x50_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 730 nbx 3 14 -100 50 0 0 \$0GUI_11x50_fromgui \$0GUI_11x50_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 730 nbx 3 14 -100 50 0 0 \$0GUI_12x50_fromgui \$0GUI_12x50_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 730 nbx 3 14 -100 50 0 0 \$0GUI_13x50_fromgui \$0GUI_13x50_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 730 nbx 3 14 -100 50 0 0 \$0GUI_14x50_fromgui \$0GUI_14x50_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 730 nbx 3 14 -100 50 0 0 \$0GUI_15x50_fromgui \$0GUI_15x50_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 730 nbx 3 14 -100 50 0 0 \$0GUI_16x50_fromgui \$0GUI_16x50_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 744 nbx 3 14 -100 50 0 0 \$0GUI_1x51_fromgui \$0GUI_1x51_togui
+LS51 -25 7 0 8 -166848 -1 -1 0 256;
+#X obj 62 744 nbx 3 14 -100 50 0 0 \$0GUI_2x51_fromgui \$0GUI_2x51_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 93 744 nbx 3 14 -100 50 0 0 \$0GUI_3x51_fromgui \$0GUI_3x51_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 124 744 nbx 3 14 -100 50 0 0 \$0GUI_4x51_fromgui \$0GUI_4x51_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 155 744 nbx 3 14 -100 50 0 0 \$0GUI_5x51_fromgui \$0GUI_5x51_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 186 744 nbx 3 14 -100 50 0 0 \$0GUI_6x51_fromgui \$0GUI_6x51_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 217 744 nbx 3 14 -100 50 0 0 \$0GUI_7x51_fromgui \$0GUI_7x51_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 248 744 nbx 3 14 -100 50 0 0 \$0GUI_8x51_fromgui \$0GUI_8x51_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 279 744 nbx 3 14 -100 50 0 0 \$0GUI_9x51_fromgui \$0GUI_9x51_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 310 744 nbx 3 14 -100 50 0 0 \$0GUI_10x51_fromgui \$0GUI_10x51_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 341 744 nbx 3 14 -100 50 0 0 \$0GUI_11x51_fromgui \$0GUI_11x51_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 372 744 nbx 3 14 -100 50 0 0 \$0GUI_12x51_fromgui \$0GUI_12x51_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 403 744 nbx 3 14 -100 50 0 0 \$0GUI_13x51_fromgui \$0GUI_13x51_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 434 744 nbx 3 14 -100 50 0 0 \$0GUI_14x51_fromgui \$0GUI_14x51_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 465 744 nbx 3 14 -100 50 0 0 \$0GUI_15x51_fromgui \$0GUI_15x51_togui
+empty 0 0 0 8 -166848 -1 -1 0 256;
+#X obj 496 744 nbx 3 14 -100 50 0 0 \$0GUI_16x51_fromgui \$0GUI_16x51_togui
+empty 0 0 0 8 -208252 -1 -1 0 256;
+#X obj 31 758 nbx 3 14 -100 50 0 0 \$0GUI_1x52_fromgui \$0GUI_1x52_togui
+LS52 -25 7 0 8 -187584 -1 -355 0 256;
+#X obj 62 758 nbx 3 14 -100 50 0 0 \$0GUI_2x52_fromgui \$0GUI_2x52_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 93 758 nbx 3 14 -100 50 0 0 \$0GUI_3x52_fromgui \$0GUI_3x52_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 124 758 nbx 3 14 -100 50 0 0 \$0GUI_4x52_fromgui \$0GUI_4x52_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 155 758 nbx 3 14 -100 50 0 0 \$0GUI_5x52_fromgui \$0GUI_5x52_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 186 758 nbx 3 14 -100 50 0 0 \$0GUI_6x52_fromgui \$0GUI_6x52_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 217 758 nbx 3 14 -100 50 0 0 \$0GUI_7x52_fromgui \$0GUI_7x52_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 248 758 nbx 3 14 -100 50 0 0 \$0GUI_8x52_fromgui \$0GUI_8x52_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 279 758 nbx 3 14 -100 50 0 0 \$0GUI_9x52_fromgui \$0GUI_9x52_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 310 758 nbx 3 14 -100 50 0 0 \$0GUI_10x52_fromgui \$0GUI_10x52_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 341 758 nbx 3 14 -100 50 0 0 \$0GUI_11x52_fromgui \$0GUI_11x52_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 372 758 nbx 3 14 -100 50 0 0 \$0GUI_12x52_fromgui \$0GUI_12x52_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 403 758 nbx 3 14 -100 50 0 0 \$0GUI_13x52_fromgui \$0GUI_13x52_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 434 758 nbx 3 14 -100 50 0 0 \$0GUI_14x52_fromgui \$0GUI_14x52_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 465 758 nbx 3 14 -100 50 0 0 \$0GUI_15x52_fromgui \$0GUI_15x52_togui
+empty 0 0 0 8 -187584 -1 -1 0 256;
+#X obj 496 758 nbx 3 14 -100 50 0 0 \$0GUI_16x52_fromgui \$0GUI_16x52_togui
+empty 0 0 0 8 -228992 -1 -1 0 256;
+#X obj 215 10 namecanvas \$0BUSmatrix;
+#N canvas 0 0 450 300 /SUBPATCH/ 0;
+#X obj 0 39 cnv 15 400 16 empty dummy BUS-ROUTING 160 10 0 14 -233017
+-66577 0;
+#N canvas 62 0 552 762 nbxreceivers 0;
+#X obj -20 -20 outlet;
+#X obj 31 14 OUT/BUS/helper/matrix_fromgui \$0GUI_1x1 1 1;
+#X obj 62 14 OUT/BUS/helper/matrix_fromgui \$0GUI_2x1 2 1;
+#X obj 93 14 OUT/BUS/helper/matrix_fromgui \$0GUI_3x1 3 1;
+#X obj 124 14 OUT/BUS/helper/matrix_fromgui \$0GUI_4x1 4 1;
+#X obj 155 14 OUT/BUS/helper/matrix_fromgui \$0GUI_5x1 5 1;
+#X obj 186 14 OUT/BUS/helper/matrix_fromgui \$0GUI_6x1 6 1;
+#X obj 217 14 OUT/BUS/helper/matrix_fromgui \$0GUI_7x1 7 1;
+#X obj 248 14 OUT/BUS/helper/matrix_fromgui \$0GUI_8x1 8 1;
+#X obj 279 14 OUT/BUS/helper/matrix_fromgui \$0GUI_9x1 9 1;
+#X obj 310 14 OUT/BUS/helper/matrix_fromgui \$0GUI_10x1 10 1;
+#X obj 341 14 OUT/BUS/helper/matrix_fromgui \$0GUI_11x1 11 1;
+#X obj 372 14 OUT/BUS/helper/matrix_fromgui \$0GUI_12x1 12 1;
+#X obj 403 14 OUT/BUS/helper/matrix_fromgui \$0GUI_13x1 13 1;
+#X obj 434 14 OUT/BUS/helper/matrix_fromgui \$0GUI_14x1 14 1;
+#X obj 465 14 OUT/BUS/helper/matrix_fromgui \$0GUI_15x1 15 1;
+#X obj 496 14 OUT/BUS/helper/matrix_fromgui \$0GUI_16x1 16 1;
+#X obj 31 28 OUT/BUS/helper/matrix_fromgui \$0GUI_1x2 1 2;
+#X obj 62 28 OUT/BUS/helper/matrix_fromgui \$0GUI_2x2 2 2;
+#X obj 93 28 OUT/BUS/helper/matrix_fromgui \$0GUI_3x2 3 2;
+#X obj 124 28 OUT/BUS/helper/matrix_fromgui \$0GUI_4x2 4 2;
+#X obj 155 28 OUT/BUS/helper/matrix_fromgui \$0GUI_5x2 5 2;
+#X obj 186 28 OUT/BUS/helper/matrix_fromgui \$0GUI_6x2 6 2;
+#X obj 217 28 OUT/BUS/helper/matrix_fromgui \$0GUI_7x2 7 2;
+#X obj 248 28 OUT/BUS/helper/matrix_fromgui \$0GUI_8x2 8 2;
+#X obj 279 28 OUT/BUS/helper/matrix_fromgui \$0GUI_9x2 9 2;
+#X obj 310 28 OUT/BUS/helper/matrix_fromgui \$0GUI_10x2 10 2;
+#X obj 341 28 OUT/BUS/helper/matrix_fromgui \$0GUI_11x2 11 2;
+#X obj 372 28 OUT/BUS/helper/matrix_fromgui \$0GUI_12x2 12 2;
+#X obj 403 28 OUT/BUS/helper/matrix_fromgui \$0GUI_13x2 13 2;
+#X obj 434 28 OUT/BUS/helper/matrix_fromgui \$0GUI_14x2 14 2;
+#X obj 465 28 OUT/BUS/helper/matrix_fromgui \$0GUI_15x2 15 2;
+#X obj 496 28 OUT/BUS/helper/matrix_fromgui \$0GUI_16x2 16 2;
+#X obj 31 42 OUT/BUS/helper/matrix_fromgui \$0GUI_1x3 1 3;
+#X obj 62 42 OUT/BUS/helper/matrix_fromgui \$0GUI_2x3 2 3;
+#X obj 93 42 OUT/BUS/helper/matrix_fromgui \$0GUI_3x3 3 3;
+#X obj 124 42 OUT/BUS/helper/matrix_fromgui \$0GUI_4x3 4 3;
+#X obj 155 42 OUT/BUS/helper/matrix_fromgui \$0GUI_5x3 5 3;
+#X obj 186 42 OUT/BUS/helper/matrix_fromgui \$0GUI_6x3 6 3;
+#X obj 217 42 OUT/BUS/helper/matrix_fromgui \$0GUI_7x3 7 3;
+#X obj 248 42 OUT/BUS/helper/matrix_fromgui \$0GUI_8x3 8 3;
+#X obj 279 42 OUT/BUS/helper/matrix_fromgui \$0GUI_9x3 9 3;
+#X obj 310 42 OUT/BUS/helper/matrix_fromgui \$0GUI_10x3 10 3;
+#X obj 341 42 OUT/BUS/helper/matrix_fromgui \$0GUI_11x3 11 3;
+#X obj 372 42 OUT/BUS/helper/matrix_fromgui \$0GUI_12x3 12 3;
+#X obj 403 42 OUT/BUS/helper/matrix_fromgui \$0GUI_13x3 13 3;
+#X obj 434 42 OUT/BUS/helper/matrix_fromgui \$0GUI_14x3 14 3;
+#X obj 465 42 OUT/BUS/helper/matrix_fromgui \$0GUI_15x3 15 3;
+#X obj 496 42 OUT/BUS/helper/matrix_fromgui \$0GUI_16x3 16 3;
+#X obj 31 56 OUT/BUS/helper/matrix_fromgui \$0GUI_1x4 1 4;
+#X obj 62 56 OUT/BUS/helper/matrix_fromgui \$0GUI_2x4 2 4;
+#X obj 93 56 OUT/BUS/helper/matrix_fromgui \$0GUI_3x4 3 4;
+#X obj 124 56 OUT/BUS/helper/matrix_fromgui \$0GUI_4x4 4 4;
+#X obj 155 56 OUT/BUS/helper/matrix_fromgui \$0GUI_5x4 5 4;
+#X obj 186 56 OUT/BUS/helper/matrix_fromgui \$0GUI_6x4 6 4;
+#X obj 217 56 OUT/BUS/helper/matrix_fromgui \$0GUI_7x4 7 4;
+#X obj 248 56 OUT/BUS/helper/matrix_fromgui \$0GUI_8x4 8 4;
+#X obj 279 56 OUT/BUS/helper/matrix_fromgui \$0GUI_9x4 9 4;
+#X obj 310 56 OUT/BUS/helper/matrix_fromgui \$0GUI_10x4 10 4;
+#X obj 341 56 OUT/BUS/helper/matrix_fromgui \$0GUI_11x4 11 4;
+#X obj 372 56 OUT/BUS/helper/matrix_fromgui \$0GUI_12x4 12 4;
+#X obj 403 56 OUT/BUS/helper/matrix_fromgui \$0GUI_13x4 13 4;
+#X obj 434 56 OUT/BUS/helper/matrix_fromgui \$0GUI_14x4 14 4;
+#X obj 465 56 OUT/BUS/helper/matrix_fromgui \$0GUI_15x4 15 4;
+#X obj 496 56 OUT/BUS/helper/matrix_fromgui \$0GUI_16x4 16 4;
+#X obj 31 70 OUT/BUS/helper/matrix_fromgui \$0GUI_1x5 1 5;
+#X obj 62 70 OUT/BUS/helper/matrix_fromgui \$0GUI_2x5 2 5;
+#X obj 93 70 OUT/BUS/helper/matrix_fromgui \$0GUI_3x5 3 5;
+#X obj 124 70 OUT/BUS/helper/matrix_fromgui \$0GUI_4x5 4 5;
+#X obj 155 70 OUT/BUS/helper/matrix_fromgui \$0GUI_5x5 5 5;
+#X obj 186 70 OUT/BUS/helper/matrix_fromgui \$0GUI_6x5 6 5;
+#X obj 217 70 OUT/BUS/helper/matrix_fromgui \$0GUI_7x5 7 5;
+#X obj 248 70 OUT/BUS/helper/matrix_fromgui \$0GUI_8x5 8 5;
+#X obj 279 70 OUT/BUS/helper/matrix_fromgui \$0GUI_9x5 9 5;
+#X obj 310 70 OUT/BUS/helper/matrix_fromgui \$0GUI_10x5 10 5;
+#X obj 341 70 OUT/BUS/helper/matrix_fromgui \$0GUI_11x5 11 5;
+#X obj 372 70 OUT/BUS/helper/matrix_fromgui \$0GUI_12x5 12 5;
+#X obj 403 70 OUT/BUS/helper/matrix_fromgui \$0GUI_13x5 13 5;
+#X obj 434 70 OUT/BUS/helper/matrix_fromgui \$0GUI_14x5 14 5;
+#X obj 465 70 OUT/BUS/helper/matrix_fromgui \$0GUI_15x5 15 5;
+#X obj 496 70 OUT/BUS/helper/matrix_fromgui \$0GUI_16x5 16 5;
+#X obj 31 84 OUT/BUS/helper/matrix_fromgui \$0GUI_1x6 1 6;
+#X obj 62 84 OUT/BUS/helper/matrix_fromgui \$0GUI_2x6 2 6;
+#X obj 93 84 OUT/BUS/helper/matrix_fromgui \$0GUI_3x6 3 6;
+#X obj 124 84 OUT/BUS/helper/matrix_fromgui \$0GUI_4x6 4 6;
+#X obj 155 84 OUT/BUS/helper/matrix_fromgui \$0GUI_5x6 5 6;
+#X obj 186 84 OUT/BUS/helper/matrix_fromgui \$0GUI_6x6 6 6;
+#X obj 217 84 OUT/BUS/helper/matrix_fromgui \$0GUI_7x6 7 6;
+#X obj 248 84 OUT/BUS/helper/matrix_fromgui \$0GUI_8x6 8 6;
+#X obj 279 84 OUT/BUS/helper/matrix_fromgui \$0GUI_9x6 9 6;
+#X obj 310 84 OUT/BUS/helper/matrix_fromgui \$0GUI_10x6 10 6;
+#X obj 341 84 OUT/BUS/helper/matrix_fromgui \$0GUI_11x6 11 6;
+#X obj 372 84 OUT/BUS/helper/matrix_fromgui \$0GUI_12x6 12 6;
+#X obj 403 84 OUT/BUS/helper/matrix_fromgui \$0GUI_13x6 13 6;
+#X obj 434 84 OUT/BUS/helper/matrix_fromgui \$0GUI_14x6 14 6;
+#X obj 465 84 OUT/BUS/helper/matrix_fromgui \$0GUI_15x6 15 6;
+#X obj 496 84 OUT/BUS/helper/matrix_fromgui \$0GUI_16x6 16 6;
+#X obj 31 98 OUT/BUS/helper/matrix_fromgui \$0GUI_1x7 1 7;
+#X obj 62 98 OUT/BUS/helper/matrix_fromgui \$0GUI_2x7 2 7;
+#X obj 93 98 OUT/BUS/helper/matrix_fromgui \$0GUI_3x7 3 7;
+#X obj 124 98 OUT/BUS/helper/matrix_fromgui \$0GUI_4x7 4 7;
+#X obj 155 98 OUT/BUS/helper/matrix_fromgui \$0GUI_5x7 5 7;
+#X obj 186 98 OUT/BUS/helper/matrix_fromgui \$0GUI_6x7 6 7;
+#X obj 217 98 OUT/BUS/helper/matrix_fromgui \$0GUI_7x7 7 7;
+#X obj 248 98 OUT/BUS/helper/matrix_fromgui \$0GUI_8x7 8 7;
+#X obj 279 98 OUT/BUS/helper/matrix_fromgui \$0GUI_9x7 9 7;
+#X obj 310 98 OUT/BUS/helper/matrix_fromgui \$0GUI_10x7 10 7;
+#X obj 341 98 OUT/BUS/helper/matrix_fromgui \$0GUI_11x7 11 7;
+#X obj 372 98 OUT/BUS/helper/matrix_fromgui \$0GUI_12x7 12 7;
+#X obj 403 98 OUT/BUS/helper/matrix_fromgui \$0GUI_13x7 13 7;
+#X obj 434 98 OUT/BUS/helper/matrix_fromgui \$0GUI_14x7 14 7;
+#X obj 465 98 OUT/BUS/helper/matrix_fromgui \$0GUI_15x7 15 7;
+#X obj 496 98 OUT/BUS/helper/matrix_fromgui \$0GUI_16x7 16 7;
+#X obj 31 112 OUT/BUS/helper/matrix_fromgui \$0GUI_1x8 1 8;
+#X obj 62 112 OUT/BUS/helper/matrix_fromgui \$0GUI_2x8 2 8;
+#X obj 93 112 OUT/BUS/helper/matrix_fromgui \$0GUI_3x8 3 8;
+#X obj 124 112 OUT/BUS/helper/matrix_fromgui \$0GUI_4x8 4 8;
+#X obj 155 112 OUT/BUS/helper/matrix_fromgui \$0GUI_5x8 5 8;
+#X obj 186 112 OUT/BUS/helper/matrix_fromgui \$0GUI_6x8 6 8;
+#X obj 217 112 OUT/BUS/helper/matrix_fromgui \$0GUI_7x8 7 8;
+#X obj 248 112 OUT/BUS/helper/matrix_fromgui \$0GUI_8x8 8 8;
+#X obj 279 112 OUT/BUS/helper/matrix_fromgui \$0GUI_9x8 9 8;
+#X obj 310 112 OUT/BUS/helper/matrix_fromgui \$0GUI_10x8 10 8;
+#X obj 341 112 OUT/BUS/helper/matrix_fromgui \$0GUI_11x8 11 8;
+#X obj 372 112 OUT/BUS/helper/matrix_fromgui \$0GUI_12x8 12 8;
+#X obj 403 112 OUT/BUS/helper/matrix_fromgui \$0GUI_13x8 13 8;
+#X obj 434 112 OUT/BUS/helper/matrix_fromgui \$0GUI_14x8 14 8;
+#X obj 465 112 OUT/BUS/helper/matrix_fromgui \$0GUI_15x8 15 8;
+#X obj 496 112 OUT/BUS/helper/matrix_fromgui \$0GUI_16x8 16 8;
+#X obj 31 126 OUT/BUS/helper/matrix_fromgui \$0GUI_1x9 1 9;
+#X obj 62 126 OUT/BUS/helper/matrix_fromgui \$0GUI_2x9 2 9;
+#X obj 93 126 OUT/BUS/helper/matrix_fromgui \$0GUI_3x9 3 9;
+#X obj 124 126 OUT/BUS/helper/matrix_fromgui \$0GUI_4x9 4 9;
+#X obj 155 126 OUT/BUS/helper/matrix_fromgui \$0GUI_5x9 5 9;
+#X obj 186 126 OUT/BUS/helper/matrix_fromgui \$0GUI_6x9 6 9;
+#X obj 217 126 OUT/BUS/helper/matrix_fromgui \$0GUI_7x9 7 9;
+#X obj 248 126 OUT/BUS/helper/matrix_fromgui \$0GUI_8x9 8 9;
+#X obj 279 126 OUT/BUS/helper/matrix_fromgui \$0GUI_9x9 9 9;
+#X obj 310 126 OUT/BUS/helper/matrix_fromgui \$0GUI_10x9 10 9;
+#X obj 341 126 OUT/BUS/helper/matrix_fromgui \$0GUI_11x9 11 9;
+#X obj 372 126 OUT/BUS/helper/matrix_fromgui \$0GUI_12x9 12 9;
+#X obj 403 126 OUT/BUS/helper/matrix_fromgui \$0GUI_13x9 13 9;
+#X obj 434 126 OUT/BUS/helper/matrix_fromgui \$0GUI_14x9 14 9;
+#X obj 465 126 OUT/BUS/helper/matrix_fromgui \$0GUI_15x9 15 9;
+#X obj 496 126 OUT/BUS/helper/matrix_fromgui \$0GUI_16x9 16 9;
+#X obj 31 140 OUT/BUS/helper/matrix_fromgui \$0GUI_1x10 1 10;
+#X obj 62 140 OUT/BUS/helper/matrix_fromgui \$0GUI_2x10 2 10;
+#X obj 93 140 OUT/BUS/helper/matrix_fromgui \$0GUI_3x10 3 10;
+#X obj 124 140 OUT/BUS/helper/matrix_fromgui \$0GUI_4x10 4 10;
+#X obj 155 140 OUT/BUS/helper/matrix_fromgui \$0GUI_5x10 5 10;
+#X obj 186 140 OUT/BUS/helper/matrix_fromgui \$0GUI_6x10 6 10;
+#X obj 217 140 OUT/BUS/helper/matrix_fromgui \$0GUI_7x10 7 10;
+#X obj 248 140 OUT/BUS/helper/matrix_fromgui \$0GUI_8x10 8 10;
+#X obj 279 140 OUT/BUS/helper/matrix_fromgui \$0GUI_9x10 9 10;
+#X obj 310 140 OUT/BUS/helper/matrix_fromgui \$0GUI_10x10 10 10;
+#X obj 341 140 OUT/BUS/helper/matrix_fromgui \$0GUI_11x10 11 10;
+#X obj 372 140 OUT/BUS/helper/matrix_fromgui \$0GUI_12x10 12 10;
+#X obj 403 140 OUT/BUS/helper/matrix_fromgui \$0GUI_13x10 13 10;
+#X obj 434 140 OUT/BUS/helper/matrix_fromgui \$0GUI_14x10 14 10;
+#X obj 465 140 OUT/BUS/helper/matrix_fromgui \$0GUI_15x10 15 10;
+#X obj 496 140 OUT/BUS/helper/matrix_fromgui \$0GUI_16x10 16 10;
+#X obj 31 154 OUT/BUS/helper/matrix_fromgui \$0GUI_1x11 1 11;
+#X obj 62 154 OUT/BUS/helper/matrix_fromgui \$0GUI_2x11 2 11;
+#X obj 93 154 OUT/BUS/helper/matrix_fromgui \$0GUI_3x11 3 11;
+#X obj 124 154 OUT/BUS/helper/matrix_fromgui \$0GUI_4x11 4 11;
+#X obj 155 154 OUT/BUS/helper/matrix_fromgui \$0GUI_5x11 5 11;
+#X obj 186 154 OUT/BUS/helper/matrix_fromgui \$0GUI_6x11 6 11;
+#X obj 217 154 OUT/BUS/helper/matrix_fromgui \$0GUI_7x11 7 11;
+#X obj 248 154 OUT/BUS/helper/matrix_fromgui \$0GUI_8x11 8 11;
+#X obj 279 154 OUT/BUS/helper/matrix_fromgui \$0GUI_9x11 9 11;
+#X obj 310 154 OUT/BUS/helper/matrix_fromgui \$0GUI_10x11 10 11;
+#X obj 341 154 OUT/BUS/helper/matrix_fromgui \$0GUI_11x11 11 11;
+#X obj 372 154 OUT/BUS/helper/matrix_fromgui \$0GUI_12x11 12 11;
+#X obj 403 154 OUT/BUS/helper/matrix_fromgui \$0GUI_13x11 13 11;
+#X obj 434 154 OUT/BUS/helper/matrix_fromgui \$0GUI_14x11 14 11;
+#X obj 465 154 OUT/BUS/helper/matrix_fromgui \$0GUI_15x11 15 11;
+#X obj 496 154 OUT/BUS/helper/matrix_fromgui \$0GUI_16x11 16 11;
+#X obj 31 168 OUT/BUS/helper/matrix_fromgui \$0GUI_1x12 1 12;
+#X obj 62 168 OUT/BUS/helper/matrix_fromgui \$0GUI_2x12 2 12;
+#X obj 93 168 OUT/BUS/helper/matrix_fromgui \$0GUI_3x12 3 12;
+#X obj 124 168 OUT/BUS/helper/matrix_fromgui \$0GUI_4x12 4 12;
+#X obj 155 168 OUT/BUS/helper/matrix_fromgui \$0GUI_5x12 5 12;
+#X obj 186 168 OUT/BUS/helper/matrix_fromgui \$0GUI_6x12 6 12;
+#X obj 217 168 OUT/BUS/helper/matrix_fromgui \$0GUI_7x12 7 12;
+#X obj 248 168 OUT/BUS/helper/matrix_fromgui \$0GUI_8x12 8 12;
+#X obj 279 168 OUT/BUS/helper/matrix_fromgui \$0GUI_9x12 9 12;
+#X obj 310 168 OUT/BUS/helper/matrix_fromgui \$0GUI_10x12 10 12;
+#X obj 341 168 OUT/BUS/helper/matrix_fromgui \$0GUI_11x12 11 12;
+#X obj 372 168 OUT/BUS/helper/matrix_fromgui \$0GUI_12x12 12 12;
+#X obj 403 168 OUT/BUS/helper/matrix_fromgui \$0GUI_13x12 13 12;
+#X obj 434 168 OUT/BUS/helper/matrix_fromgui \$0GUI_14x12 14 12;
+#X obj 465 168 OUT/BUS/helper/matrix_fromgui \$0GUI_15x12 15 12;
+#X obj 496 168 OUT/BUS/helper/matrix_fromgui \$0GUI_16x12 16 12;
+#X obj 31 182 OUT/BUS/helper/matrix_fromgui \$0GUI_1x13 1 13;
+#X obj 62 182 OUT/BUS/helper/matrix_fromgui \$0GUI_2x13 2 13;
+#X obj 93 182 OUT/BUS/helper/matrix_fromgui \$0GUI_3x13 3 13;
+#X obj 124 182 OUT/BUS/helper/matrix_fromgui \$0GUI_4x13 4 13;
+#X obj 155 182 OUT/BUS/helper/matrix_fromgui \$0GUI_5x13 5 13;
+#X obj 186 182 OUT/BUS/helper/matrix_fromgui \$0GUI_6x13 6 13;
+#X obj 217 182 OUT/BUS/helper/matrix_fromgui \$0GUI_7x13 7 13;
+#X obj 248 182 OUT/BUS/helper/matrix_fromgui \$0GUI_8x13 8 13;
+#X obj 279 182 OUT/BUS/helper/matrix_fromgui \$0GUI_9x13 9 13;
+#X obj 310 182 OUT/BUS/helper/matrix_fromgui \$0GUI_10x13 10 13;
+#X obj 341 182 OUT/BUS/helper/matrix_fromgui \$0GUI_11x13 11 13;
+#X obj 372 182 OUT/BUS/helper/matrix_fromgui \$0GUI_12x13 12 13;
+#X obj 403 182 OUT/BUS/helper/matrix_fromgui \$0GUI_13x13 13 13;
+#X obj 434 182 OUT/BUS/helper/matrix_fromgui \$0GUI_14x13 14 13;
+#X obj 465 182 OUT/BUS/helper/matrix_fromgui \$0GUI_15x13 15 13;
+#X obj 496 182 OUT/BUS/helper/matrix_fromgui \$0GUI_16x13 16 13;
+#X obj 31 196 OUT/BUS/helper/matrix_fromgui \$0GUI_1x14 1 14;
+#X obj 62 196 OUT/BUS/helper/matrix_fromgui \$0GUI_2x14 2 14;
+#X obj 93 196 OUT/BUS/helper/matrix_fromgui \$0GUI_3x14 3 14;
+#X obj 124 196 OUT/BUS/helper/matrix_fromgui \$0GUI_4x14 4 14;
+#X obj 155 196 OUT/BUS/helper/matrix_fromgui \$0GUI_5x14 5 14;
+#X obj 186 196 OUT/BUS/helper/matrix_fromgui \$0GUI_6x14 6 14;
+#X obj 217 196 OUT/BUS/helper/matrix_fromgui \$0GUI_7x14 7 14;
+#X obj 248 196 OUT/BUS/helper/matrix_fromgui \$0GUI_8x14 8 14;
+#X obj 279 196 OUT/BUS/helper/matrix_fromgui \$0GUI_9x14 9 14;
+#X obj 310 196 OUT/BUS/helper/matrix_fromgui \$0GUI_10x14 10 14;
+#X obj 341 196 OUT/BUS/helper/matrix_fromgui \$0GUI_11x14 11 14;
+#X obj 372 196 OUT/BUS/helper/matrix_fromgui \$0GUI_12x14 12 14;
+#X obj 403 196 OUT/BUS/helper/matrix_fromgui \$0GUI_13x14 13 14;
+#X obj 434 196 OUT/BUS/helper/matrix_fromgui \$0GUI_14x14 14 14;
+#X obj 465 196 OUT/BUS/helper/matrix_fromgui \$0GUI_15x14 15 14;
+#X obj 496 196 OUT/BUS/helper/matrix_fromgui \$0GUI_16x14 16 14;
+#X obj 31 210 OUT/BUS/helper/matrix_fromgui \$0GUI_1x15 1 15;
+#X obj 62 210 OUT/BUS/helper/matrix_fromgui \$0GUI_2x15 2 15;
+#X obj 93 210 OUT/BUS/helper/matrix_fromgui \$0GUI_3x15 3 15;
+#X obj 124 210 OUT/BUS/helper/matrix_fromgui \$0GUI_4x15 4 15;
+#X obj 155 210 OUT/BUS/helper/matrix_fromgui \$0GUI_5x15 5 15;
+#X obj 186 210 OUT/BUS/helper/matrix_fromgui \$0GUI_6x15 6 15;
+#X obj 217 210 OUT/BUS/helper/matrix_fromgui \$0GUI_7x15 7 15;
+#X obj 248 210 OUT/BUS/helper/matrix_fromgui \$0GUI_8x15 8 15;
+#X obj 279 210 OUT/BUS/helper/matrix_fromgui \$0GUI_9x15 9 15;
+#X obj 310 210 OUT/BUS/helper/matrix_fromgui \$0GUI_10x15 10 15;
+#X obj 341 210 OUT/BUS/helper/matrix_fromgui \$0GUI_11x15 11 15;
+#X obj 372 210 OUT/BUS/helper/matrix_fromgui \$0GUI_12x15 12 15;
+#X obj 403 210 OUT/BUS/helper/matrix_fromgui \$0GUI_13x15 13 15;
+#X obj 434 210 OUT/BUS/helper/matrix_fromgui \$0GUI_14x15 14 15;
+#X obj 465 210 OUT/BUS/helper/matrix_fromgui \$0GUI_15x15 15 15;
+#X obj 496 210 OUT/BUS/helper/matrix_fromgui \$0GUI_16x15 16 15;
+#X obj 31 224 OUT/BUS/helper/matrix_fromgui \$0GUI_1x16 1 16;
+#X obj 62 224 OUT/BUS/helper/matrix_fromgui \$0GUI_2x16 2 16;
+#X obj 93 224 OUT/BUS/helper/matrix_fromgui \$0GUI_3x16 3 16;
+#X obj 124 224 OUT/BUS/helper/matrix_fromgui \$0GUI_4x16 4 16;
+#X obj 155 224 OUT/BUS/helper/matrix_fromgui \$0GUI_5x16 5 16;
+#X obj 186 224 OUT/BUS/helper/matrix_fromgui \$0GUI_6x16 6 16;
+#X obj 217 224 OUT/BUS/helper/matrix_fromgui \$0GUI_7x16 7 16;
+#X obj 248 224 OUT/BUS/helper/matrix_fromgui \$0GUI_8x16 8 16;
+#X obj 279 224 OUT/BUS/helper/matrix_fromgui \$0GUI_9x16 9 16;
+#X obj 310 224 OUT/BUS/helper/matrix_fromgui \$0GUI_10x16 10 16;
+#X obj 341 224 OUT/BUS/helper/matrix_fromgui \$0GUI_11x16 11 16;
+#X obj 372 224 OUT/BUS/helper/matrix_fromgui \$0GUI_12x16 12 16;
+#X obj 403 224 OUT/BUS/helper/matrix_fromgui \$0GUI_13x16 13 16;
+#X obj 434 224 OUT/BUS/helper/matrix_fromgui \$0GUI_14x16 14 16;
+#X obj 465 224 OUT/BUS/helper/matrix_fromgui \$0GUI_15x16 15 16;
+#X obj 496 224 OUT/BUS/helper/matrix_fromgui \$0GUI_16x16 16 16;
+#X obj 31 238 OUT/BUS/helper/matrix_fromgui \$0GUI_1x17 1 17;
+#X obj 62 238 OUT/BUS/helper/matrix_fromgui \$0GUI_2x17 2 17;
+#X obj 93 238 OUT/BUS/helper/matrix_fromgui \$0GUI_3x17 3 17;
+#X obj 124 238 OUT/BUS/helper/matrix_fromgui \$0GUI_4x17 4 17;
+#X obj 155 238 OUT/BUS/helper/matrix_fromgui \$0GUI_5x17 5 17;
+#X obj 186 238 OUT/BUS/helper/matrix_fromgui \$0GUI_6x17 6 17;
+#X obj 217 238 OUT/BUS/helper/matrix_fromgui \$0GUI_7x17 7 17;
+#X obj 248 238 OUT/BUS/helper/matrix_fromgui \$0GUI_8x17 8 17;
+#X obj 279 238 OUT/BUS/helper/matrix_fromgui \$0GUI_9x17 9 17;
+#X obj 310 238 OUT/BUS/helper/matrix_fromgui \$0GUI_10x17 10 17;
+#X obj 341 238 OUT/BUS/helper/matrix_fromgui \$0GUI_11x17 11 17;
+#X obj 372 238 OUT/BUS/helper/matrix_fromgui \$0GUI_12x17 12 17;
+#X obj 403 238 OUT/BUS/helper/matrix_fromgui \$0GUI_13x17 13 17;
+#X obj 434 238 OUT/BUS/helper/matrix_fromgui \$0GUI_14x17 14 17;
+#X obj 465 238 OUT/BUS/helper/matrix_fromgui \$0GUI_15x17 15 17;
+#X obj 496 238 OUT/BUS/helper/matrix_fromgui \$0GUI_16x17 16 17;
+#X obj 31 252 OUT/BUS/helper/matrix_fromgui \$0GUI_1x18 1 18;
+#X obj 62 252 OUT/BUS/helper/matrix_fromgui \$0GUI_2x18 2 18;
+#X obj 93 252 OUT/BUS/helper/matrix_fromgui \$0GUI_3x18 3 18;
+#X obj 124 252 OUT/BUS/helper/matrix_fromgui \$0GUI_4x18 4 18;
+#X obj 155 252 OUT/BUS/helper/matrix_fromgui \$0GUI_5x18 5 18;
+#X obj 186 252 OUT/BUS/helper/matrix_fromgui \$0GUI_6x18 6 18;
+#X obj 217 252 OUT/BUS/helper/matrix_fromgui \$0GUI_7x18 7 18;
+#X obj 248 252 OUT/BUS/helper/matrix_fromgui \$0GUI_8x18 8 18;
+#X obj 279 252 OUT/BUS/helper/matrix_fromgui \$0GUI_9x18 9 18;
+#X obj 310 252 OUT/BUS/helper/matrix_fromgui \$0GUI_10x18 10 18;
+#X obj 341 252 OUT/BUS/helper/matrix_fromgui \$0GUI_11x18 11 18;
+#X obj 372 252 OUT/BUS/helper/matrix_fromgui \$0GUI_12x18 12 18;
+#X obj 403 252 OUT/BUS/helper/matrix_fromgui \$0GUI_13x18 13 18;
+#X obj 434 252 OUT/BUS/helper/matrix_fromgui \$0GUI_14x18 14 18;
+#X obj 465 252 OUT/BUS/helper/matrix_fromgui \$0GUI_15x18 15 18;
+#X obj 496 252 OUT/BUS/helper/matrix_fromgui \$0GUI_16x18 16 18;
+#X obj 31 266 OUT/BUS/helper/matrix_fromgui \$0GUI_1x19 1 19;
+#X obj 62 266 OUT/BUS/helper/matrix_fromgui \$0GUI_2x19 2 19;
+#X obj 93 266 OUT/BUS/helper/matrix_fromgui \$0GUI_3x19 3 19;
+#X obj 124 266 OUT/BUS/helper/matrix_fromgui \$0GUI_4x19 4 19;
+#X obj 155 266 OUT/BUS/helper/matrix_fromgui \$0GUI_5x19 5 19;
+#X obj 186 266 OUT/BUS/helper/matrix_fromgui \$0GUI_6x19 6 19;
+#X obj 217 266 OUT/BUS/helper/matrix_fromgui \$0GUI_7x19 7 19;
+#X obj 248 266 OUT/BUS/helper/matrix_fromgui \$0GUI_8x19 8 19;
+#X obj 279 266 OUT/BUS/helper/matrix_fromgui \$0GUI_9x19 9 19;
+#X obj 310 266 OUT/BUS/helper/matrix_fromgui \$0GUI_10x19 10 19;
+#X obj 341 266 OUT/BUS/helper/matrix_fromgui \$0GUI_11x19 11 19;
+#X obj 372 266 OUT/BUS/helper/matrix_fromgui \$0GUI_12x19 12 19;
+#X obj 403 266 OUT/BUS/helper/matrix_fromgui \$0GUI_13x19 13 19;
+#X obj 434 266 OUT/BUS/helper/matrix_fromgui \$0GUI_14x19 14 19;
+#X obj 465 266 OUT/BUS/helper/matrix_fromgui \$0GUI_15x19 15 19;
+#X obj 496 266 OUT/BUS/helper/matrix_fromgui \$0GUI_16x19 16 19;
+#X obj 31 280 OUT/BUS/helper/matrix_fromgui \$0GUI_1x20 1 20;
+#X obj 62 280 OUT/BUS/helper/matrix_fromgui \$0GUI_2x20 2 20;
+#X obj 93 280 OUT/BUS/helper/matrix_fromgui \$0GUI_3x20 3 20;
+#X obj 124 280 OUT/BUS/helper/matrix_fromgui \$0GUI_4x20 4 20;
+#X obj 155 280 OUT/BUS/helper/matrix_fromgui \$0GUI_5x20 5 20;
+#X obj 186 280 OUT/BUS/helper/matrix_fromgui \$0GUI_6x20 6 20;
+#X obj 217 280 OUT/BUS/helper/matrix_fromgui \$0GUI_7x20 7 20;
+#X obj 248 280 OUT/BUS/helper/matrix_fromgui \$0GUI_8x20 8 20;
+#X obj 279 280 OUT/BUS/helper/matrix_fromgui \$0GUI_9x20 9 20;
+#X obj 310 280 OUT/BUS/helper/matrix_fromgui \$0GUI_10x20 10 20;
+#X obj 341 280 OUT/BUS/helper/matrix_fromgui \$0GUI_11x20 11 20;
+#X obj 372 280 OUT/BUS/helper/matrix_fromgui \$0GUI_12x20 12 20;
+#X obj 403 280 OUT/BUS/helper/matrix_fromgui \$0GUI_13x20 13 20;
+#X obj 434 280 OUT/BUS/helper/matrix_fromgui \$0GUI_14x20 14 20;
+#X obj 465 280 OUT/BUS/helper/matrix_fromgui \$0GUI_15x20 15 20;
+#X obj 496 280 OUT/BUS/helper/matrix_fromgui \$0GUI_16x20 16 20;
+#X obj 31 294 OUT/BUS/helper/matrix_fromgui \$0GUI_1x21 1 21;
+#X obj 62 294 OUT/BUS/helper/matrix_fromgui \$0GUI_2x21 2 21;
+#X obj 93 294 OUT/BUS/helper/matrix_fromgui \$0GUI_3x21 3 21;
+#X obj 124 294 OUT/BUS/helper/matrix_fromgui \$0GUI_4x21 4 21;
+#X obj 155 294 OUT/BUS/helper/matrix_fromgui \$0GUI_5x21 5 21;
+#X obj 186 294 OUT/BUS/helper/matrix_fromgui \$0GUI_6x21 6 21;
+#X obj 217 294 OUT/BUS/helper/matrix_fromgui \$0GUI_7x21 7 21;
+#X obj 248 294 OUT/BUS/helper/matrix_fromgui \$0GUI_8x21 8 21;
+#X obj 279 294 OUT/BUS/helper/matrix_fromgui \$0GUI_9x21 9 21;
+#X obj 310 294 OUT/BUS/helper/matrix_fromgui \$0GUI_10x21 10 21;
+#X obj 341 294 OUT/BUS/helper/matrix_fromgui \$0GUI_11x21 11 21;
+#X obj 372 294 OUT/BUS/helper/matrix_fromgui \$0GUI_12x21 12 21;
+#X obj 403 294 OUT/BUS/helper/matrix_fromgui \$0GUI_13x21 13 21;
+#X obj 434 294 OUT/BUS/helper/matrix_fromgui \$0GUI_14x21 14 21;
+#X obj 465 294 OUT/BUS/helper/matrix_fromgui \$0GUI_15x21 15 21;
+#X obj 496 294 OUT/BUS/helper/matrix_fromgui \$0GUI_16x21 16 21;
+#X obj 31 308 OUT/BUS/helper/matrix_fromgui \$0GUI_1x22 1 22;
+#X obj 62 308 OUT/BUS/helper/matrix_fromgui \$0GUI_2x22 2 22;
+#X obj 93 308 OUT/BUS/helper/matrix_fromgui \$0GUI_3x22 3 22;
+#X obj 124 308 OUT/BUS/helper/matrix_fromgui \$0GUI_4x22 4 22;
+#X obj 155 308 OUT/BUS/helper/matrix_fromgui \$0GUI_5x22 5 22;
+#X obj 186 308 OUT/BUS/helper/matrix_fromgui \$0GUI_6x22 6 22;
+#X obj 217 308 OUT/BUS/helper/matrix_fromgui \$0GUI_7x22 7 22;
+#X obj 248 308 OUT/BUS/helper/matrix_fromgui \$0GUI_8x22 8 22;
+#X obj 279 308 OUT/BUS/helper/matrix_fromgui \$0GUI_9x22 9 22;
+#X obj 310 308 OUT/BUS/helper/matrix_fromgui \$0GUI_10x22 10 22;
+#X obj 341 308 OUT/BUS/helper/matrix_fromgui \$0GUI_11x22 11 22;
+#X obj 372 308 OUT/BUS/helper/matrix_fromgui \$0GUI_12x22 12 22;
+#X obj 403 308 OUT/BUS/helper/matrix_fromgui \$0GUI_13x22 13 22;
+#X obj 434 308 OUT/BUS/helper/matrix_fromgui \$0GUI_14x22 14 22;
+#X obj 465 308 OUT/BUS/helper/matrix_fromgui \$0GUI_15x22 15 22;
+#X obj 496 308 OUT/BUS/helper/matrix_fromgui \$0GUI_16x22 16 22;
+#X obj 31 322 OUT/BUS/helper/matrix_fromgui \$0GUI_1x23 1 23;
+#X obj 62 322 OUT/BUS/helper/matrix_fromgui \$0GUI_2x23 2 23;
+#X obj 93 322 OUT/BUS/helper/matrix_fromgui \$0GUI_3x23 3 23;
+#X obj 124 322 OUT/BUS/helper/matrix_fromgui \$0GUI_4x23 4 23;
+#X obj 155 322 OUT/BUS/helper/matrix_fromgui \$0GUI_5x23 5 23;
+#X obj 186 322 OUT/BUS/helper/matrix_fromgui \$0GUI_6x23 6 23;
+#X obj 217 322 OUT/BUS/helper/matrix_fromgui \$0GUI_7x23 7 23;
+#X obj 248 322 OUT/BUS/helper/matrix_fromgui \$0GUI_8x23 8 23;
+#X obj 279 322 OUT/BUS/helper/matrix_fromgui \$0GUI_9x23 9 23;
+#X obj 310 322 OUT/BUS/helper/matrix_fromgui \$0GUI_10x23 10 23;
+#X obj 341 322 OUT/BUS/helper/matrix_fromgui \$0GUI_11x23 11 23;
+#X obj 372 322 OUT/BUS/helper/matrix_fromgui \$0GUI_12x23 12 23;
+#X obj 403 322 OUT/BUS/helper/matrix_fromgui \$0GUI_13x23 13 23;
+#X obj 434 322 OUT/BUS/helper/matrix_fromgui \$0GUI_14x23 14 23;
+#X obj 465 322 OUT/BUS/helper/matrix_fromgui \$0GUI_15x23 15 23;
+#X obj 496 322 OUT/BUS/helper/matrix_fromgui \$0GUI_16x23 16 23;
+#X obj 31 336 OUT/BUS/helper/matrix_fromgui \$0GUI_1x24 1 24;
+#X obj 62 336 OUT/BUS/helper/matrix_fromgui \$0GUI_2x24 2 24;
+#X obj 93 336 OUT/BUS/helper/matrix_fromgui \$0GUI_3x24 3 24;
+#X obj 124 336 OUT/BUS/helper/matrix_fromgui \$0GUI_4x24 4 24;
+#X obj 155 336 OUT/BUS/helper/matrix_fromgui \$0GUI_5x24 5 24;
+#X obj 186 336 OUT/BUS/helper/matrix_fromgui \$0GUI_6x24 6 24;
+#X obj 217 336 OUT/BUS/helper/matrix_fromgui \$0GUI_7x24 7 24;
+#X obj 248 336 OUT/BUS/helper/matrix_fromgui \$0GUI_8x24 8 24;
+#X obj 279 336 OUT/BUS/helper/matrix_fromgui \$0GUI_9x24 9 24;
+#X obj 310 336 OUT/BUS/helper/matrix_fromgui \$0GUI_10x24 10 24;
+#X obj 341 336 OUT/BUS/helper/matrix_fromgui \$0GUI_11x24 11 24;
+#X obj 372 336 OUT/BUS/helper/matrix_fromgui \$0GUI_12x24 12 24;
+#X obj 403 336 OUT/BUS/helper/matrix_fromgui \$0GUI_13x24 13 24;
+#X obj 434 336 OUT/BUS/helper/matrix_fromgui \$0GUI_14x24 14 24;
+#X obj 465 336 OUT/BUS/helper/matrix_fromgui \$0GUI_15x24 15 24;
+#X obj 496 336 OUT/BUS/helper/matrix_fromgui \$0GUI_16x24 16 24;
+#X obj 31 350 OUT/BUS/helper/matrix_fromgui \$0GUI_1x25 1 25;
+#X obj 62 350 OUT/BUS/helper/matrix_fromgui \$0GUI_2x25 2 25;
+#X obj 93 350 OUT/BUS/helper/matrix_fromgui \$0GUI_3x25 3 25;
+#X obj 124 350 OUT/BUS/helper/matrix_fromgui \$0GUI_4x25 4 25;
+#X obj 155 350 OUT/BUS/helper/matrix_fromgui \$0GUI_5x25 5 25;
+#X obj 186 350 OUT/BUS/helper/matrix_fromgui \$0GUI_6x25 6 25;
+#X obj 217 350 OUT/BUS/helper/matrix_fromgui \$0GUI_7x25 7 25;
+#X obj 248 350 OUT/BUS/helper/matrix_fromgui \$0GUI_8x25 8 25;
+#X obj 279 350 OUT/BUS/helper/matrix_fromgui \$0GUI_9x25 9 25;
+#X obj 310 350 OUT/BUS/helper/matrix_fromgui \$0GUI_10x25 10 25;
+#X obj 341 350 OUT/BUS/helper/matrix_fromgui \$0GUI_11x25 11 25;
+#X obj 372 350 OUT/BUS/helper/matrix_fromgui \$0GUI_12x25 12 25;
+#X obj 403 350 OUT/BUS/helper/matrix_fromgui \$0GUI_13x25 13 25;
+#X obj 434 350 OUT/BUS/helper/matrix_fromgui \$0GUI_14x25 14 25;
+#X obj 465 350 OUT/BUS/helper/matrix_fromgui \$0GUI_15x25 15 25;
+#X obj 496 350 OUT/BUS/helper/matrix_fromgui \$0GUI_16x25 16 25;
+#X obj 31 364 OUT/BUS/helper/matrix_fromgui \$0GUI_1x26 1 26;
+#X obj 62 364 OUT/BUS/helper/matrix_fromgui \$0GUI_2x26 2 26;
+#X obj 93 364 OUT/BUS/helper/matrix_fromgui \$0GUI_3x26 3 26;
+#X obj 124 364 OUT/BUS/helper/matrix_fromgui \$0GUI_4x26 4 26;
+#X obj 155 364 OUT/BUS/helper/matrix_fromgui \$0GUI_5x26 5 26;
+#X obj 186 364 OUT/BUS/helper/matrix_fromgui \$0GUI_6x26 6 26;
+#X obj 217 364 OUT/BUS/helper/matrix_fromgui \$0GUI_7x26 7 26;
+#X obj 248 364 OUT/BUS/helper/matrix_fromgui \$0GUI_8x26 8 26;
+#X obj 279 364 OUT/BUS/helper/matrix_fromgui \$0GUI_9x26 9 26;
+#X obj 310 364 OUT/BUS/helper/matrix_fromgui \$0GUI_10x26 10 26;
+#X obj 341 364 OUT/BUS/helper/matrix_fromgui \$0GUI_11x26 11 26;
+#X obj 372 364 OUT/BUS/helper/matrix_fromgui \$0GUI_12x26 12 26;
+#X obj 403 364 OUT/BUS/helper/matrix_fromgui \$0GUI_13x26 13 26;
+#X obj 434 364 OUT/BUS/helper/matrix_fromgui \$0GUI_14x26 14 26;
+#X obj 465 364 OUT/BUS/helper/matrix_fromgui \$0GUI_15x26 15 26;
+#X obj 496 364 OUT/BUS/helper/matrix_fromgui \$0GUI_16x26 16 26;
+#X obj 31 378 OUT/BUS/helper/matrix_fromgui \$0GUI_1x27 1 27;
+#X obj 62 378 OUT/BUS/helper/matrix_fromgui \$0GUI_2x27 2 27;
+#X obj 93 378 OUT/BUS/helper/matrix_fromgui \$0GUI_3x27 3 27;
+#X obj 124 378 OUT/BUS/helper/matrix_fromgui \$0GUI_4x27 4 27;
+#X obj 155 378 OUT/BUS/helper/matrix_fromgui \$0GUI_5x27 5 27;
+#X obj 186 378 OUT/BUS/helper/matrix_fromgui \$0GUI_6x27 6 27;
+#X obj 217 378 OUT/BUS/helper/matrix_fromgui \$0GUI_7x27 7 27;
+#X obj 248 378 OUT/BUS/helper/matrix_fromgui \$0GUI_8x27 8 27;
+#X obj 279 378 OUT/BUS/helper/matrix_fromgui \$0GUI_9x27 9 27;
+#X obj 310 378 OUT/BUS/helper/matrix_fromgui \$0GUI_10x27 10 27;
+#X obj 341 378 OUT/BUS/helper/matrix_fromgui \$0GUI_11x27 11 27;
+#X obj 372 378 OUT/BUS/helper/matrix_fromgui \$0GUI_12x27 12 27;
+#X obj 403 378 OUT/BUS/helper/matrix_fromgui \$0GUI_13x27 13 27;
+#X obj 434 378 OUT/BUS/helper/matrix_fromgui \$0GUI_14x27 14 27;
+#X obj 465 378 OUT/BUS/helper/matrix_fromgui \$0GUI_15x27 15 27;
+#X obj 496 378 OUT/BUS/helper/matrix_fromgui \$0GUI_16x27 16 27;
+#X obj 31 392 OUT/BUS/helper/matrix_fromgui \$0GUI_1x28 1 28;
+#X obj 62 392 OUT/BUS/helper/matrix_fromgui \$0GUI_2x28 2 28;
+#X obj 93 392 OUT/BUS/helper/matrix_fromgui \$0GUI_3x28 3 28;
+#X obj 124 392 OUT/BUS/helper/matrix_fromgui \$0GUI_4x28 4 28;
+#X obj 155 392 OUT/BUS/helper/matrix_fromgui \$0GUI_5x28 5 28;
+#X obj 186 392 OUT/BUS/helper/matrix_fromgui \$0GUI_6x28 6 28;
+#X obj 217 392 OUT/BUS/helper/matrix_fromgui \$0GUI_7x28 7 28;
+#X obj 248 392 OUT/BUS/helper/matrix_fromgui \$0GUI_8x28 8 28;
+#X obj 279 392 OUT/BUS/helper/matrix_fromgui \$0GUI_9x28 9 28;
+#X obj 310 392 OUT/BUS/helper/matrix_fromgui \$0GUI_10x28 10 28;
+#X obj 341 392 OUT/BUS/helper/matrix_fromgui \$0GUI_11x28 11 28;
+#X obj 372 392 OUT/BUS/helper/matrix_fromgui \$0GUI_12x28 12 28;
+#X obj 403 392 OUT/BUS/helper/matrix_fromgui \$0GUI_13x28 13 28;
+#X obj 434 392 OUT/BUS/helper/matrix_fromgui \$0GUI_14x28 14 28;
+#X obj 465 392 OUT/BUS/helper/matrix_fromgui \$0GUI_15x28 15 28;
+#X obj 496 392 OUT/BUS/helper/matrix_fromgui \$0GUI_16x28 16 28;
+#X obj 31 406 OUT/BUS/helper/matrix_fromgui \$0GUI_1x29 1 29;
+#X obj 62 406 OUT/BUS/helper/matrix_fromgui \$0GUI_2x29 2 29;
+#X obj 93 406 OUT/BUS/helper/matrix_fromgui \$0GUI_3x29 3 29;
+#X obj 124 406 OUT/BUS/helper/matrix_fromgui \$0GUI_4x29 4 29;
+#X obj 155 406 OUT/BUS/helper/matrix_fromgui \$0GUI_5x29 5 29;
+#X obj 186 406 OUT/BUS/helper/matrix_fromgui \$0GUI_6x29 6 29;
+#X obj 217 406 OUT/BUS/helper/matrix_fromgui \$0GUI_7x29 7 29;
+#X obj 248 406 OUT/BUS/helper/matrix_fromgui \$0GUI_8x29 8 29;
+#X obj 279 406 OUT/BUS/helper/matrix_fromgui \$0GUI_9x29 9 29;
+#X obj 310 406 OUT/BUS/helper/matrix_fromgui \$0GUI_10x29 10 29;
+#X obj 341 406 OUT/BUS/helper/matrix_fromgui \$0GUI_11x29 11 29;
+#X obj 372 406 OUT/BUS/helper/matrix_fromgui \$0GUI_12x29 12 29;
+#X obj 403 406 OUT/BUS/helper/matrix_fromgui \$0GUI_13x29 13 29;
+#X obj 434 406 OUT/BUS/helper/matrix_fromgui \$0GUI_14x29 14 29;
+#X obj 465 406 OUT/BUS/helper/matrix_fromgui \$0GUI_15x29 15 29;
+#X obj 496 406 OUT/BUS/helper/matrix_fromgui \$0GUI_16x29 16 29;
+#X obj 31 420 OUT/BUS/helper/matrix_fromgui \$0GUI_1x30 1 30;
+#X obj 62 420 OUT/BUS/helper/matrix_fromgui \$0GUI_2x30 2 30;
+#X obj 93 420 OUT/BUS/helper/matrix_fromgui \$0GUI_3x30 3 30;
+#X obj 124 420 OUT/BUS/helper/matrix_fromgui \$0GUI_4x30 4 30;
+#X obj 155 420 OUT/BUS/helper/matrix_fromgui \$0GUI_5x30 5 30;
+#X obj 186 420 OUT/BUS/helper/matrix_fromgui \$0GUI_6x30 6 30;
+#X obj 217 420 OUT/BUS/helper/matrix_fromgui \$0GUI_7x30 7 30;
+#X obj 248 420 OUT/BUS/helper/matrix_fromgui \$0GUI_8x30 8 30;
+#X obj 279 420 OUT/BUS/helper/matrix_fromgui \$0GUI_9x30 9 30;
+#X obj 310 420 OUT/BUS/helper/matrix_fromgui \$0GUI_10x30 10 30;
+#X obj 341 420 OUT/BUS/helper/matrix_fromgui \$0GUI_11x30 11 30;
+#X obj 372 420 OUT/BUS/helper/matrix_fromgui \$0GUI_12x30 12 30;
+#X obj 403 420 OUT/BUS/helper/matrix_fromgui \$0GUI_13x30 13 30;
+#X obj 434 420 OUT/BUS/helper/matrix_fromgui \$0GUI_14x30 14 30;
+#X obj 465 420 OUT/BUS/helper/matrix_fromgui \$0GUI_15x30 15 30;
+#X obj 496 420 OUT/BUS/helper/matrix_fromgui \$0GUI_16x30 16 30;
+#X obj 31 434 OUT/BUS/helper/matrix_fromgui \$0GUI_1x31 1 31;
+#X obj 62 434 OUT/BUS/helper/matrix_fromgui \$0GUI_2x31 2 31;
+#X obj 93 434 OUT/BUS/helper/matrix_fromgui \$0GUI_3x31 3 31;
+#X obj 124 434 OUT/BUS/helper/matrix_fromgui \$0GUI_4x31 4 31;
+#X obj 155 434 OUT/BUS/helper/matrix_fromgui \$0GUI_5x31 5 31;
+#X obj 186 434 OUT/BUS/helper/matrix_fromgui \$0GUI_6x31 6 31;
+#X obj 217 434 OUT/BUS/helper/matrix_fromgui \$0GUI_7x31 7 31;
+#X obj 248 434 OUT/BUS/helper/matrix_fromgui \$0GUI_8x31 8 31;
+#X obj 279 434 OUT/BUS/helper/matrix_fromgui \$0GUI_9x31 9 31;
+#X obj 310 434 OUT/BUS/helper/matrix_fromgui \$0GUI_10x31 10 31;
+#X obj 341 434 OUT/BUS/helper/matrix_fromgui \$0GUI_11x31 11 31;
+#X obj 372 434 OUT/BUS/helper/matrix_fromgui \$0GUI_12x31 12 31;
+#X obj 403 434 OUT/BUS/helper/matrix_fromgui \$0GUI_13x31 13 31;
+#X obj 434 434 OUT/BUS/helper/matrix_fromgui \$0GUI_14x31 14 31;
+#X obj 465 434 OUT/BUS/helper/matrix_fromgui \$0GUI_15x31 15 31;
+#X obj 496 434 OUT/BUS/helper/matrix_fromgui \$0GUI_16x31 16 31;
+#X obj 31 448 OUT/BUS/helper/matrix_fromgui \$0GUI_1x32 1 32;
+#X obj 62 448 OUT/BUS/helper/matrix_fromgui \$0GUI_2x32 2 32;
+#X obj 93 448 OUT/BUS/helper/matrix_fromgui \$0GUI_3x32 3 32;
+#X obj 124 448 OUT/BUS/helper/matrix_fromgui \$0GUI_4x32 4 32;
+#X obj 155 448 OUT/BUS/helper/matrix_fromgui \$0GUI_5x32 5 32;
+#X obj 186 448 OUT/BUS/helper/matrix_fromgui \$0GUI_6x32 6 32;
+#X obj 217 448 OUT/BUS/helper/matrix_fromgui \$0GUI_7x32 7 32;
+#X obj 248 448 OUT/BUS/helper/matrix_fromgui \$0GUI_8x32 8 32;
+#X obj 279 448 OUT/BUS/helper/matrix_fromgui \$0GUI_9x32 9 32;
+#X obj 310 448 OUT/BUS/helper/matrix_fromgui \$0GUI_10x32 10 32;
+#X obj 341 448 OUT/BUS/helper/matrix_fromgui \$0GUI_11x32 11 32;
+#X obj 372 448 OUT/BUS/helper/matrix_fromgui \$0GUI_12x32 12 32;
+#X obj 403 448 OUT/BUS/helper/matrix_fromgui \$0GUI_13x32 13 32;
+#X obj 434 448 OUT/BUS/helper/matrix_fromgui \$0GUI_14x32 14 32;
+#X obj 465 448 OUT/BUS/helper/matrix_fromgui \$0GUI_15x32 15 32;
+#X obj 496 448 OUT/BUS/helper/matrix_fromgui \$0GUI_16x32 16 32;
+#X obj 31 462 OUT/BUS/helper/matrix_fromgui \$0GUI_1x33 1 33;
+#X obj 62 462 OUT/BUS/helper/matrix_fromgui \$0GUI_2x33 2 33;
+#X obj 93 462 OUT/BUS/helper/matrix_fromgui \$0GUI_3x33 3 33;
+#X obj 124 462 OUT/BUS/helper/matrix_fromgui \$0GUI_4x33 4 33;
+#X obj 155 462 OUT/BUS/helper/matrix_fromgui \$0GUI_5x33 5 33;
+#X obj 186 462 OUT/BUS/helper/matrix_fromgui \$0GUI_6x33 6 33;
+#X obj 217 462 OUT/BUS/helper/matrix_fromgui \$0GUI_7x33 7 33;
+#X obj 248 462 OUT/BUS/helper/matrix_fromgui \$0GUI_8x33 8 33;
+#X obj 279 462 OUT/BUS/helper/matrix_fromgui \$0GUI_9x33 9 33;
+#X obj 310 462 OUT/BUS/helper/matrix_fromgui \$0GUI_10x33 10 33;
+#X obj 341 462 OUT/BUS/helper/matrix_fromgui \$0GUI_11x33 11 33;
+#X obj 372 462 OUT/BUS/helper/matrix_fromgui \$0GUI_12x33 12 33;
+#X obj 403 462 OUT/BUS/helper/matrix_fromgui \$0GUI_13x33 13 33;
+#X obj 434 462 OUT/BUS/helper/matrix_fromgui \$0GUI_14x33 14 33;
+#X obj 465 462 OUT/BUS/helper/matrix_fromgui \$0GUI_15x33 15 33;
+#X obj 496 462 OUT/BUS/helper/matrix_fromgui \$0GUI_16x33 16 33;
+#X obj 31 476 OUT/BUS/helper/matrix_fromgui \$0GUI_1x34 1 34;
+#X obj 62 476 OUT/BUS/helper/matrix_fromgui \$0GUI_2x34 2 34;
+#X obj 93 476 OUT/BUS/helper/matrix_fromgui \$0GUI_3x34 3 34;
+#X obj 124 476 OUT/BUS/helper/matrix_fromgui \$0GUI_4x34 4 34;
+#X obj 155 476 OUT/BUS/helper/matrix_fromgui \$0GUI_5x34 5 34;
+#X obj 186 476 OUT/BUS/helper/matrix_fromgui \$0GUI_6x34 6 34;
+#X obj 217 476 OUT/BUS/helper/matrix_fromgui \$0GUI_7x34 7 34;
+#X obj 248 476 OUT/BUS/helper/matrix_fromgui \$0GUI_8x34 8 34;
+#X obj 279 476 OUT/BUS/helper/matrix_fromgui \$0GUI_9x34 9 34;
+#X obj 310 476 OUT/BUS/helper/matrix_fromgui \$0GUI_10x34 10 34;
+#X obj 341 476 OUT/BUS/helper/matrix_fromgui \$0GUI_11x34 11 34;
+#X obj 372 476 OUT/BUS/helper/matrix_fromgui \$0GUI_12x34 12 34;
+#X obj 403 476 OUT/BUS/helper/matrix_fromgui \$0GUI_13x34 13 34;
+#X obj 434 476 OUT/BUS/helper/matrix_fromgui \$0GUI_14x34 14 34;
+#X obj 465 476 OUT/BUS/helper/matrix_fromgui \$0GUI_15x34 15 34;
+#X obj 496 476 OUT/BUS/helper/matrix_fromgui \$0GUI_16x34 16 34;
+#X obj 31 490 OUT/BUS/helper/matrix_fromgui \$0GUI_1x35 1 35;
+#X obj 62 490 OUT/BUS/helper/matrix_fromgui \$0GUI_2x35 2 35;
+#X obj 93 490 OUT/BUS/helper/matrix_fromgui \$0GUI_3x35 3 35;
+#X obj 124 490 OUT/BUS/helper/matrix_fromgui \$0GUI_4x35 4 35;
+#X obj 155 490 OUT/BUS/helper/matrix_fromgui \$0GUI_5x35 5 35;
+#X obj 186 490 OUT/BUS/helper/matrix_fromgui \$0GUI_6x35 6 35;
+#X obj 217 490 OUT/BUS/helper/matrix_fromgui \$0GUI_7x35 7 35;
+#X obj 248 490 OUT/BUS/helper/matrix_fromgui \$0GUI_8x35 8 35;
+#X obj 279 490 OUT/BUS/helper/matrix_fromgui \$0GUI_9x35 9 35;
+#X obj 310 490 OUT/BUS/helper/matrix_fromgui \$0GUI_10x35 10 35;
+#X obj 341 490 OUT/BUS/helper/matrix_fromgui \$0GUI_11x35 11 35;
+#X obj 372 490 OUT/BUS/helper/matrix_fromgui \$0GUI_12x35 12 35;
+#X obj 403 490 OUT/BUS/helper/matrix_fromgui \$0GUI_13x35 13 35;
+#X obj 434 490 OUT/BUS/helper/matrix_fromgui \$0GUI_14x35 14 35;
+#X obj 465 490 OUT/BUS/helper/matrix_fromgui \$0GUI_15x35 15 35;
+#X obj 496 490 OUT/BUS/helper/matrix_fromgui \$0GUI_16x35 16 35;
+#X obj 31 504 OUT/BUS/helper/matrix_fromgui \$0GUI_1x36 1 36;
+#X obj 62 504 OUT/BUS/helper/matrix_fromgui \$0GUI_2x36 2 36;
+#X obj 93 504 OUT/BUS/helper/matrix_fromgui \$0GUI_3x36 3 36;
+#X obj 124 504 OUT/BUS/helper/matrix_fromgui \$0GUI_4x36 4 36;
+#X obj 155 504 OUT/BUS/helper/matrix_fromgui \$0GUI_5x36 5 36;
+#X obj 186 504 OUT/BUS/helper/matrix_fromgui \$0GUI_6x36 6 36;
+#X obj 217 504 OUT/BUS/helper/matrix_fromgui \$0GUI_7x36 7 36;
+#X obj 248 504 OUT/BUS/helper/matrix_fromgui \$0GUI_8x36 8 36;
+#X obj 279 504 OUT/BUS/helper/matrix_fromgui \$0GUI_9x36 9 36;
+#X obj 310 504 OUT/BUS/helper/matrix_fromgui \$0GUI_10x36 10 36;
+#X obj 341 504 OUT/BUS/helper/matrix_fromgui \$0GUI_11x36 11 36;
+#X obj 372 504 OUT/BUS/helper/matrix_fromgui \$0GUI_12x36 12 36;
+#X obj 403 504 OUT/BUS/helper/matrix_fromgui \$0GUI_13x36 13 36;
+#X obj 434 504 OUT/BUS/helper/matrix_fromgui \$0GUI_14x36 14 36;
+#X obj 465 504 OUT/BUS/helper/matrix_fromgui \$0GUI_15x36 15 36;
+#X obj 496 504 OUT/BUS/helper/matrix_fromgui \$0GUI_16x36 16 36;
+#X obj 31 518 OUT/BUS/helper/matrix_fromgui \$0GUI_1x37 1 37;
+#X obj 62 518 OUT/BUS/helper/matrix_fromgui \$0GUI_2x37 2 37;
+#X obj 93 518 OUT/BUS/helper/matrix_fromgui \$0GUI_3x37 3 37;
+#X obj 124 518 OUT/BUS/helper/matrix_fromgui \$0GUI_4x37 4 37;
+#X obj 155 518 OUT/BUS/helper/matrix_fromgui \$0GUI_5x37 5 37;
+#X obj 186 518 OUT/BUS/helper/matrix_fromgui \$0GUI_6x37 6 37;
+#X obj 217 518 OUT/BUS/helper/matrix_fromgui \$0GUI_7x37 7 37;
+#X obj 248 518 OUT/BUS/helper/matrix_fromgui \$0GUI_8x37 8 37;
+#X obj 279 518 OUT/BUS/helper/matrix_fromgui \$0GUI_9x37 9 37;
+#X obj 310 518 OUT/BUS/helper/matrix_fromgui \$0GUI_10x37 10 37;
+#X obj 341 518 OUT/BUS/helper/matrix_fromgui \$0GUI_11x37 11 37;
+#X obj 372 518 OUT/BUS/helper/matrix_fromgui \$0GUI_12x37 12 37;
+#X obj 403 518 OUT/BUS/helper/matrix_fromgui \$0GUI_13x37 13 37;
+#X obj 434 518 OUT/BUS/helper/matrix_fromgui \$0GUI_14x37 14 37;
+#X obj 465 518 OUT/BUS/helper/matrix_fromgui \$0GUI_15x37 15 37;
+#X obj 496 518 OUT/BUS/helper/matrix_fromgui \$0GUI_16x37 16 37;
+#X obj 31 532 OUT/BUS/helper/matrix_fromgui \$0GUI_1x38 1 38;
+#X obj 62 532 OUT/BUS/helper/matrix_fromgui \$0GUI_2x38 2 38;
+#X obj 93 532 OUT/BUS/helper/matrix_fromgui \$0GUI_3x38 3 38;
+#X obj 124 532 OUT/BUS/helper/matrix_fromgui \$0GUI_4x38 4 38;
+#X obj 155 532 OUT/BUS/helper/matrix_fromgui \$0GUI_5x38 5 38;
+#X obj 186 532 OUT/BUS/helper/matrix_fromgui \$0GUI_6x38 6 38;
+#X obj 217 532 OUT/BUS/helper/matrix_fromgui \$0GUI_7x38 7 38;
+#X obj 248 532 OUT/BUS/helper/matrix_fromgui \$0GUI_8x38 8 38;
+#X obj 279 532 OUT/BUS/helper/matrix_fromgui \$0GUI_9x38 9 38;
+#X obj 310 532 OUT/BUS/helper/matrix_fromgui \$0GUI_10x38 10 38;
+#X obj 341 532 OUT/BUS/helper/matrix_fromgui \$0GUI_11x38 11 38;
+#X obj 372 532 OUT/BUS/helper/matrix_fromgui \$0GUI_12x38 12 38;
+#X obj 403 532 OUT/BUS/helper/matrix_fromgui \$0GUI_13x38 13 38;
+#X obj 434 532 OUT/BUS/helper/matrix_fromgui \$0GUI_14x38 14 38;
+#X obj 465 532 OUT/BUS/helper/matrix_fromgui \$0GUI_15x38 15 38;
+#X obj 496 532 OUT/BUS/helper/matrix_fromgui \$0GUI_16x38 16 38;
+#X obj 31 546 OUT/BUS/helper/matrix_fromgui \$0GUI_1x39 1 39;
+#X obj 62 546 OUT/BUS/helper/matrix_fromgui \$0GUI_2x39 2 39;
+#X obj 93 546 OUT/BUS/helper/matrix_fromgui \$0GUI_3x39 3 39;
+#X obj 124 546 OUT/BUS/helper/matrix_fromgui \$0GUI_4x39 4 39;
+#X obj 155 546 OUT/BUS/helper/matrix_fromgui \$0GUI_5x39 5 39;
+#X obj 186 546 OUT/BUS/helper/matrix_fromgui \$0GUI_6x39 6 39;
+#X obj 217 546 OUT/BUS/helper/matrix_fromgui \$0GUI_7x39 7 39;
+#X obj 248 546 OUT/BUS/helper/matrix_fromgui \$0GUI_8x39 8 39;
+#X obj 279 546 OUT/BUS/helper/matrix_fromgui \$0GUI_9x39 9 39;
+#X obj 310 546 OUT/BUS/helper/matrix_fromgui \$0GUI_10x39 10 39;
+#X obj 341 546 OUT/BUS/helper/matrix_fromgui \$0GUI_11x39 11 39;
+#X obj 372 546 OUT/BUS/helper/matrix_fromgui \$0GUI_12x39 12 39;
+#X obj 403 546 OUT/BUS/helper/matrix_fromgui \$0GUI_13x39 13 39;
+#X obj 434 546 OUT/BUS/helper/matrix_fromgui \$0GUI_14x39 14 39;
+#X obj 465 546 OUT/BUS/helper/matrix_fromgui \$0GUI_15x39 15 39;
+#X obj 496 546 OUT/BUS/helper/matrix_fromgui \$0GUI_16x39 16 39;
+#X obj 31 560 OUT/BUS/helper/matrix_fromgui \$0GUI_1x40 1 40;
+#X obj 62 560 OUT/BUS/helper/matrix_fromgui \$0GUI_2x40 2 40;
+#X obj 93 560 OUT/BUS/helper/matrix_fromgui \$0GUI_3x40 3 40;
+#X obj 124 560 OUT/BUS/helper/matrix_fromgui \$0GUI_4x40 4 40;
+#X obj 155 560 OUT/BUS/helper/matrix_fromgui \$0GUI_5x40 5 40;
+#X obj 186 560 OUT/BUS/helper/matrix_fromgui \$0GUI_6x40 6 40;
+#X obj 217 560 OUT/BUS/helper/matrix_fromgui \$0GUI_7x40 7 40;
+#X obj 248 560 OUT/BUS/helper/matrix_fromgui \$0GUI_8x40 8 40;
+#X obj 279 560 OUT/BUS/helper/matrix_fromgui \$0GUI_9x40 9 40;
+#X obj 310 560 OUT/BUS/helper/matrix_fromgui \$0GUI_10x40 10 40;
+#X obj 341 560 OUT/BUS/helper/matrix_fromgui \$0GUI_11x40 11 40;
+#X obj 372 560 OUT/BUS/helper/matrix_fromgui \$0GUI_12x40 12 40;
+#X obj 403 560 OUT/BUS/helper/matrix_fromgui \$0GUI_13x40 13 40;
+#X obj 434 560 OUT/BUS/helper/matrix_fromgui \$0GUI_14x40 14 40;
+#X obj 465 560 OUT/BUS/helper/matrix_fromgui \$0GUI_15x40 15 40;
+#X obj 496 560 OUT/BUS/helper/matrix_fromgui \$0GUI_16x40 16 40;
+#X obj 31 574 OUT/BUS/helper/matrix_fromgui \$0GUI_1x41 1 41;
+#X obj 62 574 OUT/BUS/helper/matrix_fromgui \$0GUI_2x41 2 41;
+#X obj 93 574 OUT/BUS/helper/matrix_fromgui \$0GUI_3x41 3 41;
+#X obj 124 574 OUT/BUS/helper/matrix_fromgui \$0GUI_4x41 4 41;
+#X obj 155 574 OUT/BUS/helper/matrix_fromgui \$0GUI_5x41 5 41;
+#X obj 186 574 OUT/BUS/helper/matrix_fromgui \$0GUI_6x41 6 41;
+#X obj 217 574 OUT/BUS/helper/matrix_fromgui \$0GUI_7x41 7 41;
+#X obj 248 574 OUT/BUS/helper/matrix_fromgui \$0GUI_8x41 8 41;
+#X obj 279 574 OUT/BUS/helper/matrix_fromgui \$0GUI_9x41 9 41;
+#X obj 310 574 OUT/BUS/helper/matrix_fromgui \$0GUI_10x41 10 41;
+#X obj 341 574 OUT/BUS/helper/matrix_fromgui \$0GUI_11x41 11 41;
+#X obj 372 574 OUT/BUS/helper/matrix_fromgui \$0GUI_12x41 12 41;
+#X obj 403 574 OUT/BUS/helper/matrix_fromgui \$0GUI_13x41 13 41;
+#X obj 434 574 OUT/BUS/helper/matrix_fromgui \$0GUI_14x41 14 41;
+#X obj 465 574 OUT/BUS/helper/matrix_fromgui \$0GUI_15x41 15 41;
+#X obj 496 574 OUT/BUS/helper/matrix_fromgui \$0GUI_16x41 16 41;
+#X obj 31 588 OUT/BUS/helper/matrix_fromgui \$0GUI_1x42 1 42;
+#X obj 62 588 OUT/BUS/helper/matrix_fromgui \$0GUI_2x42 2 42;
+#X obj 93 588 OUT/BUS/helper/matrix_fromgui \$0GUI_3x42 3 42;
+#X obj 124 588 OUT/BUS/helper/matrix_fromgui \$0GUI_4x42 4 42;
+#X obj 155 588 OUT/BUS/helper/matrix_fromgui \$0GUI_5x42 5 42;
+#X obj 186 588 OUT/BUS/helper/matrix_fromgui \$0GUI_6x42 6 42;
+#X obj 217 588 OUT/BUS/helper/matrix_fromgui \$0GUI_7x42 7 42;
+#X obj 248 588 OUT/BUS/helper/matrix_fromgui \$0GUI_8x42 8 42;
+#X obj 279 588 OUT/BUS/helper/matrix_fromgui \$0GUI_9x42 9 42;
+#X obj 310 588 OUT/BUS/helper/matrix_fromgui \$0GUI_10x42 10 42;
+#X obj 341 588 OUT/BUS/helper/matrix_fromgui \$0GUI_11x42 11 42;
+#X obj 372 588 OUT/BUS/helper/matrix_fromgui \$0GUI_12x42 12 42;
+#X obj 403 588 OUT/BUS/helper/matrix_fromgui \$0GUI_13x42 13 42;
+#X obj 434 588 OUT/BUS/helper/matrix_fromgui \$0GUI_14x42 14 42;
+#X obj 465 588 OUT/BUS/helper/matrix_fromgui \$0GUI_15x42 15 42;
+#X obj 496 588 OUT/BUS/helper/matrix_fromgui \$0GUI_16x42 16 42;
+#X obj 31 602 OUT/BUS/helper/matrix_fromgui \$0GUI_1x43 1 43;
+#X obj 62 602 OUT/BUS/helper/matrix_fromgui \$0GUI_2x43 2 43;
+#X obj 93 602 OUT/BUS/helper/matrix_fromgui \$0GUI_3x43 3 43;
+#X obj 124 602 OUT/BUS/helper/matrix_fromgui \$0GUI_4x43 4 43;
+#X obj 155 602 OUT/BUS/helper/matrix_fromgui \$0GUI_5x43 5 43;
+#X obj 186 602 OUT/BUS/helper/matrix_fromgui \$0GUI_6x43 6 43;
+#X obj 217 602 OUT/BUS/helper/matrix_fromgui \$0GUI_7x43 7 43;
+#X obj 248 602 OUT/BUS/helper/matrix_fromgui \$0GUI_8x43 8 43;
+#X obj 279 602 OUT/BUS/helper/matrix_fromgui \$0GUI_9x43 9 43;
+#X obj 310 602 OUT/BUS/helper/matrix_fromgui \$0GUI_10x43 10 43;
+#X obj 341 602 OUT/BUS/helper/matrix_fromgui \$0GUI_11x43 11 43;
+#X obj 372 602 OUT/BUS/helper/matrix_fromgui \$0GUI_12x43 12 43;
+#X obj 403 602 OUT/BUS/helper/matrix_fromgui \$0GUI_13x43 13 43;
+#X obj 434 602 OUT/BUS/helper/matrix_fromgui \$0GUI_14x43 14 43;
+#X obj 465 602 OUT/BUS/helper/matrix_fromgui \$0GUI_15x43 15 43;
+#X obj 496 602 OUT/BUS/helper/matrix_fromgui \$0GUI_16x43 16 43;
+#X obj 31 616 OUT/BUS/helper/matrix_fromgui \$0GUI_1x44 1 44;
+#X obj 62 616 OUT/BUS/helper/matrix_fromgui \$0GUI_2x44 2 44;
+#X obj 93 616 OUT/BUS/helper/matrix_fromgui \$0GUI_3x44 3 44;
+#X obj 124 616 OUT/BUS/helper/matrix_fromgui \$0GUI_4x44 4 44;
+#X obj 155 616 OUT/BUS/helper/matrix_fromgui \$0GUI_5x44 5 44;
+#X obj 186 616 OUT/BUS/helper/matrix_fromgui \$0GUI_6x44 6 44;
+#X obj 217 616 OUT/BUS/helper/matrix_fromgui \$0GUI_7x44 7 44;
+#X obj 248 616 OUT/BUS/helper/matrix_fromgui \$0GUI_8x44 8 44;
+#X obj 279 616 OUT/BUS/helper/matrix_fromgui \$0GUI_9x44 9 44;
+#X obj 310 616 OUT/BUS/helper/matrix_fromgui \$0GUI_10x44 10 44;
+#X obj 341 616 OUT/BUS/helper/matrix_fromgui \$0GUI_11x44 11 44;
+#X obj 372 616 OUT/BUS/helper/matrix_fromgui \$0GUI_12x44 12 44;
+#X obj 403 616 OUT/BUS/helper/matrix_fromgui \$0GUI_13x44 13 44;
+#X obj 434 616 OUT/BUS/helper/matrix_fromgui \$0GUI_14x44 14 44;
+#X obj 465 616 OUT/BUS/helper/matrix_fromgui \$0GUI_15x44 15 44;
+#X obj 496 616 OUT/BUS/helper/matrix_fromgui \$0GUI_16x44 16 44;
+#X obj 31 630 OUT/BUS/helper/matrix_fromgui \$0GUI_1x45 1 45;
+#X obj 62 630 OUT/BUS/helper/matrix_fromgui \$0GUI_2x45 2 45;
+#X obj 93 630 OUT/BUS/helper/matrix_fromgui \$0GUI_3x45 3 45;
+#X obj 124 630 OUT/BUS/helper/matrix_fromgui \$0GUI_4x45 4 45;
+#X obj 155 630 OUT/BUS/helper/matrix_fromgui \$0GUI_5x45 5 45;
+#X obj 186 630 OUT/BUS/helper/matrix_fromgui \$0GUI_6x45 6 45;
+#X obj 217 630 OUT/BUS/helper/matrix_fromgui \$0GUI_7x45 7 45;
+#X obj 248 630 OUT/BUS/helper/matrix_fromgui \$0GUI_8x45 8 45;
+#X obj 279 630 OUT/BUS/helper/matrix_fromgui \$0GUI_9x45 9 45;
+#X obj 310 630 OUT/BUS/helper/matrix_fromgui \$0GUI_10x45 10 45;
+#X obj 341 630 OUT/BUS/helper/matrix_fromgui \$0GUI_11x45 11 45;
+#X obj 372 630 OUT/BUS/helper/matrix_fromgui \$0GUI_12x45 12 45;
+#X obj 403 630 OUT/BUS/helper/matrix_fromgui \$0GUI_13x45 13 45;
+#X obj 434 630 OUT/BUS/helper/matrix_fromgui \$0GUI_14x45 14 45;
+#X obj 465 630 OUT/BUS/helper/matrix_fromgui \$0GUI_15x45 15 45;
+#X obj 496 630 OUT/BUS/helper/matrix_fromgui \$0GUI_16x45 16 45;
+#X obj 31 644 OUT/BUS/helper/matrix_fromgui \$0GUI_1x46 1 46;
+#X obj 62 644 OUT/BUS/helper/matrix_fromgui \$0GUI_2x46 2 46;
+#X obj 93 644 OUT/BUS/helper/matrix_fromgui \$0GUI_3x46 3 46;
+#X obj 124 644 OUT/BUS/helper/matrix_fromgui \$0GUI_4x46 4 46;
+#X obj 155 644 OUT/BUS/helper/matrix_fromgui \$0GUI_5x46 5 46;
+#X obj 186 644 OUT/BUS/helper/matrix_fromgui \$0GUI_6x46 6 46;
+#X obj 217 644 OUT/BUS/helper/matrix_fromgui \$0GUI_7x46 7 46;
+#X obj 248 644 OUT/BUS/helper/matrix_fromgui \$0GUI_8x46 8 46;
+#X obj 279 644 OUT/BUS/helper/matrix_fromgui \$0GUI_9x46 9 46;
+#X obj 310 644 OUT/BUS/helper/matrix_fromgui \$0GUI_10x46 10 46;
+#X obj 341 644 OUT/BUS/helper/matrix_fromgui \$0GUI_11x46 11 46;
+#X obj 372 644 OUT/BUS/helper/matrix_fromgui \$0GUI_12x46 12 46;
+#X obj 403 644 OUT/BUS/helper/matrix_fromgui \$0GUI_13x46 13 46;
+#X obj 434 644 OUT/BUS/helper/matrix_fromgui \$0GUI_14x46 14 46;
+#X obj 465 644 OUT/BUS/helper/matrix_fromgui \$0GUI_15x46 15 46;
+#X obj 496 644 OUT/BUS/helper/matrix_fromgui \$0GUI_16x46 16 46;
+#X obj 31 658 OUT/BUS/helper/matrix_fromgui \$0GUI_1x47 1 47;
+#X obj 62 658 OUT/BUS/helper/matrix_fromgui \$0GUI_2x47 2 47;
+#X obj 93 658 OUT/BUS/helper/matrix_fromgui \$0GUI_3x47 3 47;
+#X obj 124 658 OUT/BUS/helper/matrix_fromgui \$0GUI_4x47 4 47;
+#X obj 155 658 OUT/BUS/helper/matrix_fromgui \$0GUI_5x47 5 47;
+#X obj 186 658 OUT/BUS/helper/matrix_fromgui \$0GUI_6x47 6 47;
+#X obj 217 658 OUT/BUS/helper/matrix_fromgui \$0GUI_7x47 7 47;
+#X obj 248 658 OUT/BUS/helper/matrix_fromgui \$0GUI_8x47 8 47;
+#X obj 279 658 OUT/BUS/helper/matrix_fromgui \$0GUI_9x47 9 47;
+#X obj 310 658 OUT/BUS/helper/matrix_fromgui \$0GUI_10x47 10 47;
+#X obj 341 658 OUT/BUS/helper/matrix_fromgui \$0GUI_11x47 11 47;
+#X obj 372 658 OUT/BUS/helper/matrix_fromgui \$0GUI_12x47 12 47;
+#X obj 403 658 OUT/BUS/helper/matrix_fromgui \$0GUI_13x47 13 47;
+#X obj 434 658 OUT/BUS/helper/matrix_fromgui \$0GUI_14x47 14 47;
+#X obj 465 658 OUT/BUS/helper/matrix_fromgui \$0GUI_15x47 15 47;
+#X obj 496 658 OUT/BUS/helper/matrix_fromgui \$0GUI_16x47 16 47;
+#X obj 31 672 OUT/BUS/helper/matrix_fromgui \$0GUI_1x48 1 48;
+#X obj 62 672 OUT/BUS/helper/matrix_fromgui \$0GUI_2x48 2 48;
+#X obj 93 672 OUT/BUS/helper/matrix_fromgui \$0GUI_3x48 3 48;
+#X obj 124 672 OUT/BUS/helper/matrix_fromgui \$0GUI_4x48 4 48;
+#X obj 155 672 OUT/BUS/helper/matrix_fromgui \$0GUI_5x48 5 48;
+#X obj 186 672 OUT/BUS/helper/matrix_fromgui \$0GUI_6x48 6 48;
+#X obj 217 672 OUT/BUS/helper/matrix_fromgui \$0GUI_7x48 7 48;
+#X obj 248 672 OUT/BUS/helper/matrix_fromgui \$0GUI_8x48 8 48;
+#X obj 279 672 OUT/BUS/helper/matrix_fromgui \$0GUI_9x48 9 48;
+#X obj 310 672 OUT/BUS/helper/matrix_fromgui \$0GUI_10x48 10 48;
+#X obj 341 672 OUT/BUS/helper/matrix_fromgui \$0GUI_11x48 11 48;
+#X obj 372 672 OUT/BUS/helper/matrix_fromgui \$0GUI_12x48 12 48;
+#X obj 403 672 OUT/BUS/helper/matrix_fromgui \$0GUI_13x48 13 48;
+#X obj 434 672 OUT/BUS/helper/matrix_fromgui \$0GUI_14x48 14 48;
+#X obj 465 672 OUT/BUS/helper/matrix_fromgui \$0GUI_15x48 15 48;
+#X obj 496 672 OUT/BUS/helper/matrix_fromgui \$0GUI_16x48 16 48;
+#X obj 31 686 OUT/BUS/helper/matrix_fromgui \$0GUI_1x49 1 49;
+#X obj 62 686 OUT/BUS/helper/matrix_fromgui \$0GUI_2x49 2 49;
+#X obj 93 686 OUT/BUS/helper/matrix_fromgui \$0GUI_3x49 3 49;
+#X obj 124 686 OUT/BUS/helper/matrix_fromgui \$0GUI_4x49 4 49;
+#X obj 155 686 OUT/BUS/helper/matrix_fromgui \$0GUI_5x49 5 49;
+#X obj 186 686 OUT/BUS/helper/matrix_fromgui \$0GUI_6x49 6 49;
+#X obj 217 686 OUT/BUS/helper/matrix_fromgui \$0GUI_7x49 7 49;
+#X obj 248 686 OUT/BUS/helper/matrix_fromgui \$0GUI_8x49 8 49;
+#X obj 279 686 OUT/BUS/helper/matrix_fromgui \$0GUI_9x49 9 49;
+#X obj 310 686 OUT/BUS/helper/matrix_fromgui \$0GUI_10x49 10 49;
+#X obj 341 686 OUT/BUS/helper/matrix_fromgui \$0GUI_11x49 11 49;
+#X obj 372 686 OUT/BUS/helper/matrix_fromgui \$0GUI_12x49 12 49;
+#X obj 403 686 OUT/BUS/helper/matrix_fromgui \$0GUI_13x49 13 49;
+#X obj 434 686 OUT/BUS/helper/matrix_fromgui \$0GUI_14x49 14 49;
+#X obj 465 686 OUT/BUS/helper/matrix_fromgui \$0GUI_15x49 15 49;
+#X obj 496 686 OUT/BUS/helper/matrix_fromgui \$0GUI_16x49 16 49;
+#X obj 31 700 OUT/BUS/helper/matrix_fromgui \$0GUI_1x50 1 50;
+#X obj 62 700 OUT/BUS/helper/matrix_fromgui \$0GUI_2x50 2 50;
+#X obj 93 700 OUT/BUS/helper/matrix_fromgui \$0GUI_3x50 3 50;
+#X obj 124 700 OUT/BUS/helper/matrix_fromgui \$0GUI_4x50 4 50;
+#X obj 155 700 OUT/BUS/helper/matrix_fromgui \$0GUI_5x50 5 50;
+#X obj 186 700 OUT/BUS/helper/matrix_fromgui \$0GUI_6x50 6 50;
+#X obj 217 700 OUT/BUS/helper/matrix_fromgui \$0GUI_7x50 7 50;
+#X obj 248 700 OUT/BUS/helper/matrix_fromgui \$0GUI_8x50 8 50;
+#X obj 279 700 OUT/BUS/helper/matrix_fromgui \$0GUI_9x50 9 50;
+#X obj 310 700 OUT/BUS/helper/matrix_fromgui \$0GUI_10x50 10 50;
+#X obj 341 700 OUT/BUS/helper/matrix_fromgui \$0GUI_11x50 11 50;
+#X obj 372 700 OUT/BUS/helper/matrix_fromgui \$0GUI_12x50 12 50;
+#X obj 403 700 OUT/BUS/helper/matrix_fromgui \$0GUI_13x50 13 50;
+#X obj 434 700 OUT/BUS/helper/matrix_fromgui \$0GUI_14x50 14 50;
+#X obj 465 700 OUT/BUS/helper/matrix_fromgui \$0GUI_15x50 15 50;
+#X obj 496 700 OUT/BUS/helper/matrix_fromgui \$0GUI_16x50 16 50;
+#X obj 31 714 OUT/BUS/helper/matrix_fromgui \$0GUI_1x51 1 51;
+#X obj 62 714 OUT/BUS/helper/matrix_fromgui \$0GUI_2x51 2 51;
+#X obj 93 714 OUT/BUS/helper/matrix_fromgui \$0GUI_3x51 3 51;
+#X obj 124 714 OUT/BUS/helper/matrix_fromgui \$0GUI_4x51 4 51;
+#X obj 155 714 OUT/BUS/helper/matrix_fromgui \$0GUI_5x51 5 51;
+#X obj 186 714 OUT/BUS/helper/matrix_fromgui \$0GUI_6x51 6 51;
+#X obj 217 714 OUT/BUS/helper/matrix_fromgui \$0GUI_7x51 7 51;
+#X obj 248 714 OUT/BUS/helper/matrix_fromgui \$0GUI_8x51 8 51;
+#X obj 279 714 OUT/BUS/helper/matrix_fromgui \$0GUI_9x51 9 51;
+#X obj 310 714 OUT/BUS/helper/matrix_fromgui \$0GUI_10x51 10 51;
+#X obj 341 714 OUT/BUS/helper/matrix_fromgui \$0GUI_11x51 11 51;
+#X obj 372 714 OUT/BUS/helper/matrix_fromgui \$0GUI_12x51 12 51;
+#X obj 403 714 OUT/BUS/helper/matrix_fromgui \$0GUI_13x51 13 51;
+#X obj 434 714 OUT/BUS/helper/matrix_fromgui \$0GUI_14x51 14 51;
+#X obj 465 714 OUT/BUS/helper/matrix_fromgui \$0GUI_15x51 15 51;
+#X obj 496 714 OUT/BUS/helper/matrix_fromgui \$0GUI_16x51 16 51;
+#X obj 31 728 OUT/BUS/helper/matrix_fromgui \$0GUI_1x52 1 52;
+#X obj 62 728 OUT/BUS/helper/matrix_fromgui \$0GUI_2x52 2 52;
+#X obj 93 728 OUT/BUS/helper/matrix_fromgui \$0GUI_3x52 3 52;
+#X obj 124 728 OUT/BUS/helper/matrix_fromgui \$0GUI_4x52 4 52;
+#X obj 155 728 OUT/BUS/helper/matrix_fromgui \$0GUI_5x52 5 52;
+#X obj 186 728 OUT/BUS/helper/matrix_fromgui \$0GUI_6x52 6 52;
+#X obj 217 728 OUT/BUS/helper/matrix_fromgui \$0GUI_7x52 7 52;
+#X obj 248 728 OUT/BUS/helper/matrix_fromgui \$0GUI_8x52 8 52;
+#X obj 279 728 OUT/BUS/helper/matrix_fromgui \$0GUI_9x52 9 52;
+#X obj 310 728 OUT/BUS/helper/matrix_fromgui \$0GUI_10x52 10 52;
+#X obj 341 728 OUT/BUS/helper/matrix_fromgui \$0GUI_11x52 11 52;
+#X obj 372 728 OUT/BUS/helper/matrix_fromgui \$0GUI_12x52 12 52;
+#X obj 403 728 OUT/BUS/helper/matrix_fromgui \$0GUI_13x52 13 52;
+#X obj 434 728 OUT/BUS/helper/matrix_fromgui \$0GUI_14x52 14 52;
+#X obj 465 728 OUT/BUS/helper/matrix_fromgui \$0GUI_15x52 15 52;
+#X obj 496 728 OUT/BUS/helper/matrix_fromgui \$0GUI_16x52 16 52;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
+#X connect 12 0 0 0;
+#X connect 13 0 0 0;
+#X connect 14 0 0 0;
+#X connect 15 0 0 0;
+#X connect 16 0 0 0;
+#X connect 17 0 0 0;
+#X connect 18 0 0 0;
+#X connect 19 0 0 0;
+#X connect 20 0 0 0;
+#X connect 21 0 0 0;
+#X connect 22 0 0 0;
+#X connect 23 0 0 0;
+#X connect 24 0 0 0;
+#X connect 25 0 0 0;
+#X connect 26 0 0 0;
+#X connect 27 0 0 0;
+#X connect 28 0 0 0;
+#X connect 29 0 0 0;
+#X connect 30 0 0 0;
+#X connect 31 0 0 0;
+#X connect 32 0 0 0;
+#X connect 33 0 0 0;
+#X connect 34 0 0 0;
+#X connect 35 0 0 0;
+#X connect 36 0 0 0;
+#X connect 37 0 0 0;
+#X connect 38 0 0 0;
+#X connect 39 0 0 0;
+#X connect 40 0 0 0;
+#X connect 41 0 0 0;
+#X connect 42 0 0 0;
+#X connect 43 0 0 0;
+#X connect 44 0 0 0;
+#X connect 45 0 0 0;
+#X connect 46 0 0 0;
+#X connect 47 0 0 0;
+#X connect 48 0 0 0;
+#X connect 49 0 0 0;
+#X connect 50 0 0 0;
+#X connect 51 0 0 0;
+#X connect 52 0 0 0;
+#X connect 53 0 0 0;
+#X connect 54 0 0 0;
+#X connect 55 0 0 0;
+#X connect 56 0 0 0;
+#X connect 57 0 0 0;
+#X connect 58 0 0 0;
+#X connect 59 0 0 0;
+#X connect 60 0 0 0;
+#X connect 61 0 0 0;
+#X connect 62 0 0 0;
+#X connect 63 0 0 0;
+#X connect 64 0 0 0;
+#X connect 65 0 0 0;
+#X connect 66 0 0 0;
+#X connect 67 0 0 0;
+#X connect 68 0 0 0;
+#X connect 69 0 0 0;
+#X connect 70 0 0 0;
+#X connect 71 0 0 0;
+#X connect 72 0 0 0;
+#X connect 73 0 0 0;
+#X connect 74 0 0 0;
+#X connect 75 0 0 0;
+#X connect 76 0 0 0;
+#X connect 77 0 0 0;
+#X connect 78 0 0 0;
+#X connect 79 0 0 0;
+#X connect 80 0 0 0;
+#X connect 81 0 0 0;
+#X connect 82 0 0 0;
+#X connect 83 0 0 0;
+#X connect 84 0 0 0;
+#X connect 85 0 0 0;
+#X connect 86 0 0 0;
+#X connect 87 0 0 0;
+#X connect 88 0 0 0;
+#X connect 89 0 0 0;
+#X connect 90 0 0 0;
+#X connect 91 0 0 0;
+#X connect 92 0 0 0;
+#X connect 93 0 0 0;
+#X connect 94 0 0 0;
+#X connect 95 0 0 0;
+#X connect 96 0 0 0;
+#X connect 97 0 0 0;
+#X connect 98 0 0 0;
+#X connect 99 0 0 0;
+#X connect 100 0 0 0;
+#X connect 101 0 0 0;
+#X connect 102 0 0 0;
+#X connect 103 0 0 0;
+#X connect 104 0 0 0;
+#X connect 105 0 0 0;
+#X connect 106 0 0 0;
+#X connect 107 0 0 0;
+#X connect 108 0 0 0;
+#X connect 109 0 0 0;
+#X connect 110 0 0 0;
+#X connect 111 0 0 0;
+#X connect 112 0 0 0;
+#X connect 113 0 0 0;
+#X connect 114 0 0 0;
+#X connect 115 0 0 0;
+#X connect 116 0 0 0;
+#X connect 117 0 0 0;
+#X connect 118 0 0 0;
+#X connect 119 0 0 0;
+#X connect 120 0 0 0;
+#X connect 121 0 0 0;
+#X connect 122 0 0 0;
+#X connect 123 0 0 0;
+#X connect 124 0 0 0;
+#X connect 125 0 0 0;
+#X connect 126 0 0 0;
+#X connect 127 0 0 0;
+#X connect 128 0 0 0;
+#X connect 129 0 0 0;
+#X connect 130 0 0 0;
+#X connect 131 0 0 0;
+#X connect 132 0 0 0;
+#X connect 133 0 0 0;
+#X connect 134 0 0 0;
+#X connect 135 0 0 0;
+#X connect 136 0 0 0;
+#X connect 137 0 0 0;
+#X connect 138 0 0 0;
+#X connect 139 0 0 0;
+#X connect 140 0 0 0;
+#X connect 141 0 0 0;
+#X connect 142 0 0 0;
+#X connect 143 0 0 0;
+#X connect 144 0 0 0;
+#X connect 145 0 0 0;
+#X connect 146 0 0 0;
+#X connect 147 0 0 0;
+#X connect 148 0 0 0;
+#X connect 149 0 0 0;
+#X connect 150 0 0 0;
+#X connect 151 0 0 0;
+#X connect 152 0 0 0;
+#X connect 153 0 0 0;
+#X connect 154 0 0 0;
+#X connect 155 0 0 0;
+#X connect 156 0 0 0;
+#X connect 157 0 0 0;
+#X connect 158 0 0 0;
+#X connect 159 0 0 0;
+#X connect 160 0 0 0;
+#X connect 161 0 0 0;
+#X connect 162 0 0 0;
+#X connect 163 0 0 0;
+#X connect 164 0 0 0;
+#X connect 165 0 0 0;
+#X connect 166 0 0 0;
+#X connect 167 0 0 0;
+#X connect 168 0 0 0;
+#X connect 169 0 0 0;
+#X connect 170 0 0 0;
+#X connect 171 0 0 0;
+#X connect 172 0 0 0;
+#X connect 173 0 0 0;
+#X connect 174 0 0 0;
+#X connect 175 0 0 0;
+#X connect 176 0 0 0;
+#X connect 177 0 0 0;
+#X connect 178 0 0 0;
+#X connect 179 0 0 0;
+#X connect 180 0 0 0;
+#X connect 181 0 0 0;
+#X connect 182 0 0 0;
+#X connect 183 0 0 0;
+#X connect 184 0 0 0;
+#X connect 185 0 0 0;
+#X connect 186 0 0 0;
+#X connect 187 0 0 0;
+#X connect 188 0 0 0;
+#X connect 189 0 0 0;
+#X connect 190 0 0 0;
+#X connect 191 0 0 0;
+#X connect 192 0 0 0;
+#X connect 193 0 0 0;
+#X connect 194 0 0 0;
+#X connect 195 0 0 0;
+#X connect 196 0 0 0;
+#X connect 197 0 0 0;
+#X connect 198 0 0 0;
+#X connect 199 0 0 0;
+#X connect 200 0 0 0;
+#X connect 201 0 0 0;
+#X connect 202 0 0 0;
+#X connect 203 0 0 0;
+#X connect 204 0 0 0;
+#X connect 205 0 0 0;
+#X connect 206 0 0 0;
+#X connect 207 0 0 0;
+#X connect 208 0 0 0;
+#X connect 209 0 0 0;
+#X connect 210 0 0 0;
+#X connect 211 0 0 0;
+#X connect 212 0 0 0;
+#X connect 213 0 0 0;
+#X connect 214 0 0 0;
+#X connect 215 0 0 0;
+#X connect 216 0 0 0;
+#X connect 217 0 0 0;
+#X connect 218 0 0 0;
+#X connect 219 0 0 0;
+#X connect 220 0 0 0;
+#X connect 221 0 0 0;
+#X connect 222 0 0 0;
+#X connect 223 0 0 0;
+#X connect 224 0 0 0;
+#X connect 225 0 0 0;
+#X connect 226 0 0 0;
+#X connect 227 0 0 0;
+#X connect 228 0 0 0;
+#X connect 229 0 0 0;
+#X connect 230 0 0 0;
+#X connect 231 0 0 0;
+#X connect 232 0 0 0;
+#X connect 233 0 0 0;
+#X connect 234 0 0 0;
+#X connect 235 0 0 0;
+#X connect 236 0 0 0;
+#X connect 237 0 0 0;
+#X connect 238 0 0 0;
+#X connect 239 0 0 0;
+#X connect 240 0 0 0;
+#X connect 241 0 0 0;
+#X connect 242 0 0 0;
+#X connect 243 0 0 0;
+#X connect 244 0 0 0;
+#X connect 245 0 0 0;
+#X connect 246 0 0 0;
+#X connect 247 0 0 0;
+#X connect 248 0 0 0;
+#X connect 249 0 0 0;
+#X connect 250 0 0 0;
+#X connect 251 0 0 0;
+#X connect 252 0 0 0;
+#X connect 253 0 0 0;
+#X connect 254 0 0 0;
+#X connect 255 0 0 0;
+#X connect 256 0 0 0;
+#X connect 257 0 0 0;
+#X connect 258 0 0 0;
+#X connect 259 0 0 0;
+#X connect 260 0 0 0;
+#X connect 261 0 0 0;
+#X connect 262 0 0 0;
+#X connect 263 0 0 0;
+#X connect 264 0 0 0;
+#X connect 265 0 0 0;
+#X connect 266 0 0 0;
+#X connect 267 0 0 0;
+#X connect 268 0 0 0;
+#X connect 269 0 0 0;
+#X connect 270 0 0 0;
+#X connect 271 0 0 0;
+#X connect 272 0 0 0;
+#X connect 273 0 0 0;
+#X connect 274 0 0 0;
+#X connect 275 0 0 0;
+#X connect 276 0 0 0;
+#X connect 277 0 0 0;
+#X connect 278 0 0 0;
+#X connect 279 0 0 0;
+#X connect 280 0 0 0;
+#X connect 281 0 0 0;
+#X connect 282 0 0 0;
+#X connect 283 0 0 0;
+#X connect 284 0 0 0;
+#X connect 285 0 0 0;
+#X connect 286 0 0 0;
+#X connect 287 0 0 0;
+#X connect 288 0 0 0;
+#X connect 289 0 0 0;
+#X connect 290 0 0 0;
+#X connect 291 0 0 0;
+#X connect 292 0 0 0;
+#X connect 293 0 0 0;
+#X connect 294 0 0 0;
+#X connect 295 0 0 0;
+#X connect 296 0 0 0;
+#X connect 297 0 0 0;
+#X connect 298 0 0 0;
+#X connect 299 0 0 0;
+#X connect 300 0 0 0;
+#X connect 301 0 0 0;
+#X connect 302 0 0 0;
+#X connect 303 0 0 0;
+#X connect 304 0 0 0;
+#X connect 305 0 0 0;
+#X connect 306 0 0 0;
+#X connect 307 0 0 0;
+#X connect 308 0 0 0;
+#X connect 309 0 0 0;
+#X connect 310 0 0 0;
+#X connect 311 0 0 0;
+#X connect 312 0 0 0;
+#X connect 313 0 0 0;
+#X connect 314 0 0 0;
+#X connect 315 0 0 0;
+#X connect 316 0 0 0;
+#X connect 317 0 0 0;
+#X connect 318 0 0 0;
+#X connect 319 0 0 0;
+#X connect 320 0 0 0;
+#X connect 321 0 0 0;
+#X connect 322 0 0 0;
+#X connect 323 0 0 0;
+#X connect 324 0 0 0;
+#X connect 325 0 0 0;
+#X connect 326 0 0 0;
+#X connect 327 0 0 0;
+#X connect 328 0 0 0;
+#X connect 329 0 0 0;
+#X connect 330 0 0 0;
+#X connect 331 0 0 0;
+#X connect 332 0 0 0;
+#X connect 333 0 0 0;
+#X connect 334 0 0 0;
+#X connect 335 0 0 0;
+#X connect 336 0 0 0;
+#X connect 337 0 0 0;
+#X connect 338 0 0 0;
+#X connect 339 0 0 0;
+#X connect 340 0 0 0;
+#X connect 341 0 0 0;
+#X connect 342 0 0 0;
+#X connect 343 0 0 0;
+#X connect 344 0 0 0;
+#X connect 345 0 0 0;
+#X connect 346 0 0 0;
+#X connect 347 0 0 0;
+#X connect 348 0 0 0;
+#X connect 349 0 0 0;
+#X connect 350 0 0 0;
+#X connect 351 0 0 0;
+#X connect 352 0 0 0;
+#X connect 353 0 0 0;
+#X connect 354 0 0 0;
+#X connect 355 0 0 0;
+#X connect 356 0 0 0;
+#X connect 357 0 0 0;
+#X connect 358 0 0 0;
+#X connect 359 0 0 0;
+#X connect 360 0 0 0;
+#X connect 361 0 0 0;
+#X connect 362 0 0 0;
+#X connect 363 0 0 0;
+#X connect 364 0 0 0;
+#X connect 365 0 0 0;
+#X connect 366 0 0 0;
+#X connect 367 0 0 0;
+#X connect 368 0 0 0;
+#X connect 369 0 0 0;
+#X connect 370 0 0 0;
+#X connect 371 0 0 0;
+#X connect 372 0 0 0;
+#X connect 373 0 0 0;
+#X connect 374 0 0 0;
+#X connect 375 0 0 0;
+#X connect 376 0 0 0;
+#X connect 377 0 0 0;
+#X connect 378 0 0 0;
+#X connect 379 0 0 0;
+#X connect 380 0 0 0;
+#X connect 381 0 0 0;
+#X connect 382 0 0 0;
+#X connect 383 0 0 0;
+#X connect 384 0 0 0;
+#X connect 385 0 0 0;
+#X connect 386 0 0 0;
+#X connect 387 0 0 0;
+#X connect 388 0 0 0;
+#X connect 389 0 0 0;
+#X connect 390 0 0 0;
+#X connect 391 0 0 0;
+#X connect 392 0 0 0;
+#X connect 393 0 0 0;
+#X connect 394 0 0 0;
+#X connect 395 0 0 0;
+#X connect 396 0 0 0;
+#X connect 397 0 0 0;
+#X connect 398 0 0 0;
+#X connect 399 0 0 0;
+#X connect 400 0 0 0;
+#X connect 401 0 0 0;
+#X connect 402 0 0 0;
+#X connect 403 0 0 0;
+#X connect 404 0 0 0;
+#X connect 405 0 0 0;
+#X connect 406 0 0 0;
+#X connect 407 0 0 0;
+#X connect 408 0 0 0;
+#X connect 409 0 0 0;
+#X connect 410 0 0 0;
+#X connect 411 0 0 0;
+#X connect 412 0 0 0;
+#X connect 413 0 0 0;
+#X connect 414 0 0 0;
+#X connect 415 0 0 0;
+#X connect 416 0 0 0;
+#X connect 417 0 0 0;
+#X connect 418 0 0 0;
+#X connect 419 0 0 0;
+#X connect 420 0 0 0;
+#X connect 421 0 0 0;
+#X connect 422 0 0 0;
+#X connect 423 0 0 0;
+#X connect 424 0 0 0;
+#X connect 425 0 0 0;
+#X connect 426 0 0 0;
+#X connect 427 0 0 0;
+#X connect 428 0 0 0;
+#X connect 429 0 0 0;
+#X connect 430 0 0 0;
+#X connect 431 0 0 0;
+#X connect 432 0 0 0;
+#X connect 433 0 0 0;
+#X connect 434 0 0 0;
+#X connect 435 0 0 0;
+#X connect 436 0 0 0;
+#X connect 437 0 0 0;
+#X connect 438 0 0 0;
+#X connect 439 0 0 0;
+#X connect 440 0 0 0;
+#X connect 441 0 0 0;
+#X connect 442 0 0 0;
+#X connect 443 0 0 0;
+#X connect 444 0 0 0;
+#X connect 445 0 0 0;
+#X connect 446 0 0 0;
+#X connect 447 0 0 0;
+#X connect 448 0 0 0;
+#X connect 449 0 0 0;
+#X connect 450 0 0 0;
+#X connect 451 0 0 0;
+#X connect 452 0 0 0;
+#X connect 453 0 0 0;
+#X connect 454 0 0 0;
+#X connect 455 0 0 0;
+#X connect 456 0 0 0;
+#X connect 457 0 0 0;
+#X connect 458 0 0 0;
+#X connect 459 0 0 0;
+#X connect 460 0 0 0;
+#X connect 461 0 0 0;
+#X connect 462 0 0 0;
+#X connect 463 0 0 0;
+#X connect 464 0 0 0;
+#X connect 465 0 0 0;
+#X connect 466 0 0 0;
+#X connect 467 0 0 0;
+#X connect 468 0 0 0;
+#X connect 469 0 0 0;
+#X connect 470 0 0 0;
+#X connect 471 0 0 0;
+#X connect 472 0 0 0;
+#X connect 473 0 0 0;
+#X connect 474 0 0 0;
+#X connect 475 0 0 0;
+#X connect 476 0 0 0;
+#X connect 477 0 0 0;
+#X connect 478 0 0 0;
+#X connect 479 0 0 0;
+#X connect 480 0 0 0;
+#X connect 481 0 0 0;
+#X connect 482 0 0 0;
+#X connect 483 0 0 0;
+#X connect 484 0 0 0;
+#X connect 485 0 0 0;
+#X connect 486 0 0 0;
+#X connect 487 0 0 0;
+#X connect 488 0 0 0;
+#X connect 489 0 0 0;
+#X connect 490 0 0 0;
+#X connect 491 0 0 0;
+#X connect 492 0 0 0;
+#X connect 493 0 0 0;
+#X connect 494 0 0 0;
+#X connect 495 0 0 0;
+#X connect 496 0 0 0;
+#X connect 497 0 0 0;
+#X connect 498 0 0 0;
+#X connect 499 0 0 0;
+#X connect 500 0 0 0;
+#X connect 501 0 0 0;
+#X connect 502 0 0 0;
+#X connect 503 0 0 0;
+#X connect 504 0 0 0;
+#X connect 505 0 0 0;
+#X connect 506 0 0 0;
+#X connect 507 0 0 0;
+#X connect 508 0 0 0;
+#X connect 509 0 0 0;
+#X connect 510 0 0 0;
+#X connect 511 0 0 0;
+#X connect 512 0 0 0;
+#X connect 513 0 0 0;
+#X connect 514 0 0 0;
+#X connect 515 0 0 0;
+#X connect 516 0 0 0;
+#X connect 517 0 0 0;
+#X connect 518 0 0 0;
+#X connect 519 0 0 0;
+#X connect 520 0 0 0;
+#X connect 521 0 0 0;
+#X connect 522 0 0 0;
+#X connect 523 0 0 0;
+#X connect 524 0 0 0;
+#X connect 525 0 0 0;
+#X connect 526 0 0 0;
+#X connect 527 0 0 0;
+#X connect 528 0 0 0;
+#X connect 529 0 0 0;
+#X connect 530 0 0 0;
+#X connect 531 0 0 0;
+#X connect 532 0 0 0;
+#X connect 533 0 0 0;
+#X connect 534 0 0 0;
+#X connect 535 0 0 0;
+#X connect 536 0 0 0;
+#X connect 537 0 0 0;
+#X connect 538 0 0 0;
+#X connect 539 0 0 0;
+#X connect 540 0 0 0;
+#X connect 541 0 0 0;
+#X connect 542 0 0 0;
+#X connect 543 0 0 0;
+#X connect 544 0 0 0;
+#X connect 545 0 0 0;
+#X connect 546 0 0 0;
+#X connect 547 0 0 0;
+#X connect 548 0 0 0;
+#X connect 549 0 0 0;
+#X connect 550 0 0 0;
+#X connect 551 0 0 0;
+#X connect 552 0 0 0;
+#X connect 553 0 0 0;
+#X connect 554 0 0 0;
+#X connect 555 0 0 0;
+#X connect 556 0 0 0;
+#X connect 557 0 0 0;
+#X connect 558 0 0 0;
+#X connect 559 0 0 0;
+#X connect 560 0 0 0;
+#X connect 561 0 0 0;
+#X connect 562 0 0 0;
+#X connect 563 0 0 0;
+#X connect 564 0 0 0;
+#X connect 565 0 0 0;
+#X connect 566 0 0 0;
+#X connect 567 0 0 0;
+#X connect 568 0 0 0;
+#X connect 569 0 0 0;
+#X connect 570 0 0 0;
+#X connect 571 0 0 0;
+#X connect 572 0 0 0;
+#X connect 573 0 0 0;
+#X connect 574 0 0 0;
+#X connect 575 0 0 0;
+#X connect 576 0 0 0;
+#X connect 577 0 0 0;
+#X connect 578 0 0 0;
+#X connect 579 0 0 0;
+#X connect 580 0 0 0;
+#X connect 581 0 0 0;
+#X connect 582 0 0 0;
+#X connect 583 0 0 0;
+#X connect 584 0 0 0;
+#X connect 585 0 0 0;
+#X connect 586 0 0 0;
+#X connect 587 0 0 0;
+#X connect 588 0 0 0;
+#X connect 589 0 0 0;
+#X connect 590 0 0 0;
+#X connect 591 0 0 0;
+#X connect 592 0 0 0;
+#X connect 593 0 0 0;
+#X connect 594 0 0 0;
+#X connect 595 0 0 0;
+#X connect 596 0 0 0;
+#X connect 597 0 0 0;
+#X connect 598 0 0 0;
+#X connect 599 0 0 0;
+#X connect 600 0 0 0;
+#X connect 601 0 0 0;
+#X connect 602 0 0 0;
+#X connect 603 0 0 0;
+#X connect 604 0 0 0;
+#X connect 605 0 0 0;
+#X connect 606 0 0 0;
+#X connect 607 0 0 0;
+#X connect 608 0 0 0;
+#X connect 609 0 0 0;
+#X connect 610 0 0 0;
+#X connect 611 0 0 0;
+#X connect 612 0 0 0;
+#X connect 613 0 0 0;
+#X connect 614 0 0 0;
+#X connect 615 0 0 0;
+#X connect 616 0 0 0;
+#X connect 617 0 0 0;
+#X connect 618 0 0 0;
+#X connect 619 0 0 0;
+#X connect 620 0 0 0;
+#X connect 621 0 0 0;
+#X connect 622 0 0 0;
+#X connect 623 0 0 0;
+#X connect 624 0 0 0;
+#X connect 625 0 0 0;
+#X connect 626 0 0 0;
+#X connect 627 0 0 0;
+#X connect 628 0 0 0;
+#X connect 629 0 0 0;
+#X connect 630 0 0 0;
+#X connect 631 0 0 0;
+#X connect 632 0 0 0;
+#X connect 633 0 0 0;
+#X connect 634 0 0 0;
+#X connect 635 0 0 0;
+#X connect 636 0 0 0;
+#X connect 637 0 0 0;
+#X connect 638 0 0 0;
+#X connect 639 0 0 0;
+#X connect 640 0 0 0;
+#X connect 641 0 0 0;
+#X connect 642 0 0 0;
+#X connect 643 0 0 0;
+#X connect 644 0 0 0;
+#X connect 645 0 0 0;
+#X connect 646 0 0 0;
+#X connect 647 0 0 0;
+#X connect 648 0 0 0;
+#X connect 649 0 0 0;
+#X connect 650 0 0 0;
+#X connect 651 0 0 0;
+#X connect 652 0 0 0;
+#X connect 653 0 0 0;
+#X connect 654 0 0 0;
+#X connect 655 0 0 0;
+#X connect 656 0 0 0;
+#X connect 657 0 0 0;
+#X connect 658 0 0 0;
+#X connect 659 0 0 0;
+#X connect 660 0 0 0;
+#X connect 661 0 0 0;
+#X connect 662 0 0 0;
+#X connect 663 0 0 0;
+#X connect 664 0 0 0;
+#X connect 665 0 0 0;
+#X connect 666 0 0 0;
+#X connect 667 0 0 0;
+#X connect 668 0 0 0;
+#X connect 669 0 0 0;
+#X connect 670 0 0 0;
+#X connect 671 0 0 0;
+#X connect 672 0 0 0;
+#X connect 673 0 0 0;
+#X connect 674 0 0 0;
+#X connect 675 0 0 0;
+#X connect 676 0 0 0;
+#X connect 677 0 0 0;
+#X connect 678 0 0 0;
+#X connect 679 0 0 0;
+#X connect 680 0 0 0;
+#X connect 681 0 0 0;
+#X connect 682 0 0 0;
+#X connect 683 0 0 0;
+#X connect 684 0 0 0;
+#X connect 685 0 0 0;
+#X connect 686 0 0 0;
+#X connect 687 0 0 0;
+#X connect 688 0 0 0;
+#X connect 689 0 0 0;
+#X connect 690 0 0 0;
+#X connect 691 0 0 0;
+#X connect 692 0 0 0;
+#X connect 693 0 0 0;
+#X connect 694 0 0 0;
+#X connect 695 0 0 0;
+#X connect 696 0 0 0;
+#X connect 697 0 0 0;
+#X connect 698 0 0 0;
+#X connect 699 0 0 0;
+#X connect 700 0 0 0;
+#X connect 701 0 0 0;
+#X connect 702 0 0 0;
+#X connect 703 0 0 0;
+#X connect 704 0 0 0;
+#X connect 705 0 0 0;
+#X connect 706 0 0 0;
+#X connect 707 0 0 0;
+#X connect 708 0 0 0;
+#X connect 709 0 0 0;
+#X connect 710 0 0 0;
+#X connect 711 0 0 0;
+#X connect 712 0 0 0;
+#X connect 713 0 0 0;
+#X connect 714 0 0 0;
+#X connect 715 0 0 0;
+#X connect 716 0 0 0;
+#X connect 717 0 0 0;
+#X connect 718 0 0 0;
+#X connect 719 0 0 0;
+#X connect 720 0 0 0;
+#X connect 721 0 0 0;
+#X connect 722 0 0 0;
+#X connect 723 0 0 0;
+#X connect 724 0 0 0;
+#X connect 725 0 0 0;
+#X connect 726 0 0 0;
+#X connect 727 0 0 0;
+#X connect 728 0 0 0;
+#X connect 729 0 0 0;
+#X connect 730 0 0 0;
+#X connect 731 0 0 0;
+#X connect 732 0 0 0;
+#X connect 733 0 0 0;
+#X connect 734 0 0 0;
+#X connect 735 0 0 0;
+#X connect 736 0 0 0;
+#X connect 737 0 0 0;
+#X connect 738 0 0 0;
+#X connect 739 0 0 0;
+#X connect 740 0 0 0;
+#X connect 741 0 0 0;
+#X connect 742 0 0 0;
+#X connect 743 0 0 0;
+#X connect 744 0 0 0;
+#X connect 745 0 0 0;
+#X connect 746 0 0 0;
+#X connect 747 0 0 0;
+#X connect 748 0 0 0;
+#X connect 749 0 0 0;
+#X connect 750 0 0 0;
+#X connect 751 0 0 0;
+#X connect 752 0 0 0;
+#X connect 753 0 0 0;
+#X connect 754 0 0 0;
+#X connect 755 0 0 0;
+#X connect 756 0 0 0;
+#X connect 757 0 0 0;
+#X connect 758 0 0 0;
+#X connect 759 0 0 0;
+#X connect 760 0 0 0;
+#X connect 761 0 0 0;
+#X connect 762 0 0 0;
+#X connect 763 0 0 0;
+#X connect 764 0 0 0;
+#X connect 765 0 0 0;
+#X connect 766 0 0 0;
+#X connect 767 0 0 0;
+#X connect 768 0 0 0;
+#X connect 769 0 0 0;
+#X connect 770 0 0 0;
+#X connect 771 0 0 0;
+#X connect 772 0 0 0;
+#X connect 773 0 0 0;
+#X connect 774 0 0 0;
+#X connect 775 0 0 0;
+#X connect 776 0 0 0;
+#X connect 777 0 0 0;
+#X connect 778 0 0 0;
+#X connect 779 0 0 0;
+#X connect 780 0 0 0;
+#X connect 781 0 0 0;
+#X connect 782 0 0 0;
+#X connect 783 0 0 0;
+#X connect 784 0 0 0;
+#X connect 785 0 0 0;
+#X connect 786 0 0 0;
+#X connect 787 0 0 0;
+#X connect 788 0 0 0;
+#X connect 789 0 0 0;
+#X connect 790 0 0 0;
+#X connect 791 0 0 0;
+#X connect 792 0 0 0;
+#X connect 793 0 0 0;
+#X connect 794 0 0 0;
+#X connect 795 0 0 0;
+#X connect 796 0 0 0;
+#X connect 797 0 0 0;
+#X connect 798 0 0 0;
+#X connect 799 0 0 0;
+#X connect 800 0 0 0;
+#X connect 801 0 0 0;
+#X connect 802 0 0 0;
+#X connect 803 0 0 0;
+#X connect 804 0 0 0;
+#X connect 805 0 0 0;
+#X connect 806 0 0 0;
+#X connect 807 0 0 0;
+#X connect 808 0 0 0;
+#X connect 809 0 0 0;
+#X connect 810 0 0 0;
+#X connect 811 0 0 0;
+#X connect 812 0 0 0;
+#X connect 813 0 0 0;
+#X connect 814 0 0 0;
+#X connect 815 0 0 0;
+#X connect 816 0 0 0;
+#X connect 817 0 0 0;
+#X connect 818 0 0 0;
+#X connect 819 0 0 0;
+#X connect 820 0 0 0;
+#X connect 821 0 0 0;
+#X connect 822 0 0 0;
+#X connect 823 0 0 0;
+#X connect 824 0 0 0;
+#X connect 825 0 0 0;
+#X connect 826 0 0 0;
+#X connect 827 0 0 0;
+#X connect 828 0 0 0;
+#X connect 829 0 0 0;
+#X connect 830 0 0 0;
+#X connect 831 0 0 0;
+#X connect 832 0 0 0;
+#X restore 35 86 pd nbxreceivers;
+#N canvas 451 92 711 448 bus_sendreceive 0;
+#X obj 73 28 inlet;
+#X obj 73 237 t l l;
+#X msg 73 273 \$3;
+#X obj 113 274 makesymbol \$0GUI_%sx%s_togui;
+#X msg 113 294 set \$1;
+#X obj 73 107 route element;
+#X msg 73 48 element \$1 \$2 \$3;
+#X obj 73 323 iem_s;
+#X obj 73 78 sendreceive BUS_ROUTE;
+#X obj 73 295 - 100;
+#N canvas 142 228 514 462 matrix 0;
+#X obj 155 40 inlet;
+#X obj 155 219 matrix;
+#X msg 155 196 row;
+#X obj 155 176 t b b;
+#X obj 155 351 pack 0 0 0;
+#X obj 155 262 repack 1;
+#X obj 155 283 t f b;
+#X obj 187 326 i;
+#X obj 213 325 + 1;
+#X msg 201 306 1;
+#X obj 241 325 i;
+#X obj 267 324 + 1;
+#X msg 255 305 1;
+#X obj 155 242 t l b b;
+#X obj 155 140 t b a;
+#X msg 155 374 \$3 \$2 \$1;
+#X obj 155 397 outlet;
+#X obj 155 120 mtx_resize 16 52;
+#X connect 0 0 17 0;
+#X connect 1 0 13 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 3 1 12 0;
+#X connect 4 0 15 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 6 1 7 0;
+#X connect 7 0 8 0;
+#X connect 7 0 4 1;
+#X connect 8 0 7 1;
+#X connect 9 0 7 1;
+#X connect 10 0 11 0;
+#X connect 10 0 4 2;
+#X connect 11 0 10 1;
+#X connect 12 0 10 1;
+#X connect 13 0 5 0;
+#X connect 13 1 9 0;
+#X connect 13 2 10 0;
+#X connect 14 0 3 0;
+#X connect 14 1 1 1;
+#X connect 15 0 16 0;
+#X connect 17 0 14 0;
+#X restore 159 160 pd matrix;
+#X text 169 142 lets hope this is matrix;
+#X obj 279 48 loadbang;
+#X obj 279 70 mtx_zeros 16 52;
+#X obj 279 92 mtx_+ 100;
+#X msg 349 43 bang;
+#X connect 0 0 6 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 2 0 9 0;
+#X connect 3 0 4 0;
+#X connect 4 0 7 1;
+#X connect 5 0 1 0;
+#X connect 5 1 10 0;
+#X connect 6 0 8 0;
+#X connect 8 0 5 0;
+#X connect 9 0 7 0;
+#X connect 10 0 1 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 10 0;
+#X connect 15 0 13 0;
+#X restore 35 118 pd bus_sendreceive;
+#X text 52 104 connect us!;
+#X obj 201 138 s \$0BUSmatrix;
+#X msg 201 118 vis 1;
+#X obj 201 99 t b;
+#X obj 201 79 r GUI_OUT_BUS_showmatrix;
+#X connect 1 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X coords 0 0 1 1 400 20 1;
+#X restore 74 8 pd;
