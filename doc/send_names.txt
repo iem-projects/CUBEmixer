@@ -55,10 +55,10 @@ $1_IN_LFC_GAIN : Gain of subwoofer(0 or 150 MIDI-dB)
 Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine Knackser.
   (fuer MAIN-OUT-Gain)
 
-OUT_BUS_1_GAIN:  Direct-Output-Level fuer BUS1(1..16) (0 ... 150 MIDI-dB)
+$1_OUT_BUS_GAIN:  Direct-Output-Level fuer BUS1(1..16) (0 ... 150 MIDI-dB)
+$1_OUT_LFC_GAIN:  gesamt-lautstaerke fuer subwoofer-kanal 1(1..2)
+$1_OUT_LFC_HIGHCUT_FREQ:  cutoff frequency fuer subwoofer-kanal 1(1..2)
 OUT_AMBI_GAIN:   gesamt-lautstaerke fuer ambisonic-decoder
-OUT_LFC_1_GAIN:  gesamt-lautstaerke fuer subwoofer-kanal 1(1..2)
-LFC_1_HIGHCUT_FREQ:  cutoff frequency fuer subwoofer-kanal 1(1..2)
 
 OUT_MASTER_GAIN: master-gain (alles!)
 
@@ -67,7 +67,7 @@ OUT_MASTER_GAIN: master-gain (alles!)
 AMBI_ORDER_WEIGHT :  1 1 1 1 1 ...
 
 bus-routing-matrix:: 
-BUS_ROUTE: matrix 18 52 .... (werte in MIDI-db)
+BUS_ROUTE: matrix 16 52 .... (werte in MIDI-db)
            element n m gain
 
 
