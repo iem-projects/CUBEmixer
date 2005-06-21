@@ -38,7 +38,7 @@ BUS16 0 -6 0 8 -233017 -233017 -195568 -100 256;
 #X obj 235 325 cnv 15 150 150 empty \$0GUI_input_ambi_cnv_togui ambisonic
 20 12 0 14 -233017 -1 0;
 #X obj 248 401 hsl 128 15 -181 180 0 0 \$0GUI_input_ambi_phi_fromgui
-\$0GUI_input_ambi_phi_togui ° 128 0 0 8 -262144 -1 -1 6368 1;
+\$0GUI_input_ambi_phi_togui ° 128 0 0 8 -262144 -1 -1 0 1;
 #X obj 288 372 nbx 5 14 1 999 1 0 \$0GUI_input_ambi_r_fromgui \$0GUI_input_ambi_r_togui
 [m] 50 7 0 8 -262144 -1 -1 1 256;
 #X obj 87 123 cnv 15 161 144 empty empty EQ 20 12 0 14 -233017 -66577
@@ -53,7 +53,7 @@ channel:04 channel:05;
 #X obj 419 7 cnv 15 120 90 empty empty empty 20 12 0 14 -195568 -66577
 0;
 #X obj 460 47 nbx 3 14 -100 50 0 0 \$0GUI_input_ingain_fromgui \$0GUI_input_ingain_togui
-gain -30 7 0 8 -228992 -1 -1 -100 256;
+gain -30 7 0 8 -228992 -1 -1 0 256;
 #X obj 501 46 tgl 15 0 \$0GUI_input_invert_fromgui \$0GUI_input_invert_togui
 inv 17 7 0 8 -262144 -1 -1 0 1;
 #X obj 427 68 nbx 3 14 0 999 0 0 \$0GUI_input_delay_fromgui \$0GUI_input_delay_togui
@@ -122,19 +122,19 @@ empty 0 -6 0 8 -262144 -1 -1;
 #X obj 96 295 cnv 15 120 180 empty empty AUX 20 12 0 14 -233017 -66577
 0;
 #X obj 103 355 nbx 3 14 -100 50 0 0 \$0GUI_aux1_gain_fromgui \$0GUI_aux1_gain_togui
-AUX1 0 -6 0 8 -228992 -1 -1 -100 256;
+AUX1 0 -6 0 8 -228992 -1 -1 0 256;
 #X obj 140 354 tgl 15 0 \$0GUI_aux1_pre_fromgui \$0GUI_aux1_pre_togui
 pre 18 7 0 8 -262144 -1 -1 0 1;
 #X obj 103 385 nbx 3 14 -100 50 0 0 \$0GUI_aux2_gain_fromgui \$0GUI_aux2_gain_togui
-AUX2 0 -6 0 8 -228992 -1 -1 -100 256;
+AUX2 0 -6 0 8 -228992 -1 -1 0 256;
 #X obj 140 384 tgl 15 0 \$0GUI_aux2_pre_fromgui \$0GUI_aux2_pre_togui
 pre 18 7 0 8 -262144 -1 -1 0 1;
 #X obj 103 415 nbx 3 14 -100 50 0 0 \$0GUI_aux3_gain_fromgui \$0GUI_aux3_gain_togui
-AUX3 0 -6 0 8 -228992 -1 -1 -100 256;
+AUX3 0 -6 0 8 -228992 -1 -1 0 256;
 #X obj 140 414 tgl 15 0 \$0GUI_aux3_pre_fromgui \$0GUI_aux3_pre_togui
 pre 18 7 0 8 -262144 -1 -1 0 1;
 #X obj 103 445 nbx 3 14 -100 50 0 0 \$0GUI_aux4_gain_fromgui \$0GUI_aux4_gain_togui
-AUX4 0 -6 0 8 -228992 -1 -1 -100 256;
+AUX4 0 -6 0 8 -228992 -1 -1 0 256;
 #X obj 140 444 tgl 15 0 \$0GUI_aux4_pre_fromgui \$0GUI_aux4_pre_togui
 pre 18 7 0 8 -262144 -1 -1 0 1;
 #X obj 94 318 r \$0GUI_aux1_togui;
@@ -153,7 +153,7 @@ pre 18 7 0 8 -262144 -1 -1 0 1;
 empty 0 -6 0 8 -262144 -1 -1 0 1;
 #X obj 521 249 bng 15 250 50 0 \$0GUI_plugin4_settings_fromgui \$0GUI_plugin4_settings_togui
 empty 0 -6 0 8 -262144 -1 -1;
-#X obj 13 36 cnv 15 15 15 empty \$0GUI_inchannel_numcnv 01 10 25 0
+#X obj 13 36 cnv 15 15 15 empty \$0GUI_inchannel_numcnv -- 10 25 0
 72 -233017 -66577 0;
 #X msg 286 351 label m;
 #X msg 391 94 options none;
@@ -164,16 +164,16 @@ empty 0 -6 0 8 -262144 -1 -1;
 10 4 0 8 -195568 -166441 0;
 #X obj 142 180 nbx 3 14 -100 20 0 0 \$0GUI_input_EQ_hi_gain_fromgui
 \$0GUI_input_EQ_hi_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
--100 256;
+0 256;
 #X obj 142 197 nbx 3 14 -100 20 0 0 \$0GUI_input_EQ_mid1_gain_fromgui
 \$0GUI_input_EQ_mid1_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
--100 256;
+0 256;
 #X obj 142 214 nbx 3 14 -100 20 0 0 \$0GUI_input_EQ_mid2_gain_fromgui
 \$0GUI_input_EQ_mid2_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
--100 256;
+0 256;
 #X obj 142 231 nbx 3 14 -100 20 0 0 \$0GUI_input_EQ_lo_gain_fromgui
 \$0GUI_input_EQ_lo_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
--100 256;
+0 256;
 #X obj 175 163 nbx 4 14 20 9999 1 0 \$0GUI_input_EQ_hicut_f_fromgui
 \$0GUI_input_EQ_hicut_f_togui HiCut -70 7 0 8 -187584 -166441 -166441
 20 256;
