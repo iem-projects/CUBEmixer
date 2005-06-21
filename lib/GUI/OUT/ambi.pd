@@ -1,4 +1,4 @@
-#N canvas 657 145 114 194 10;
+#N canvas 768 130 114 194 10;
 #X obj 2 1 cnv 15 63 198 empty empty AMBIS. 1 12 0 14 -233017 -66577
 0;
 #X obj 10 91 cnv 2 38 2 empty empty empty 20 12 0 14 -33289 -66577
@@ -7,7 +7,7 @@
 set 20 7 0 8 -62784 -1 -1;
 #X obj 16 46 vsl 30 131 0 130 0 0 \$0GUIambiout_fader \$0GUIambiout_fader
 -inf 1 140 0 8 -228992 -1 -1 0 1;
-#N canvas 67 126 695 544 code 0;
+#N canvas 43 289 695 544 code 0;
 #X obj 52 141 route float;
 #X obj 131 403 - 100;
 #X msg 52 464 label \$1;
@@ -27,6 +27,59 @@ set 20 7 0 8 -62784 -1 -1;
 #X msg 455 485 \; \$1-ambisonic.settings vis 1;
 #X obj 455 461 makefilename pd-%d;
 #X obj 455 436 i \$0;
+#X obj 235 100 gui_sr_wrap \$0GUI_ambisonic_rotZ OUT_AMBI_ROT_Z -180
+180;
+#N canvas 32 90 436 428 weights 0;
+#X obj 37 47 OUT/ambisonic/helper/sr_weight \$0GUI_0;
+#X obj 37 296 pack 0 0 0 0 0;
+#X obj 37 228 f;
+#X obj 37 203 del 0;
+#X obj 144 175 t b f;
+#X obj 117 155 t b f;
+#X obj 90 175 t b f;
+#X obj 63 145 t b f;
+#X obj 37 175 t b f;
+#X obj 213 332 sendreceive AMBI_ORDER_WEIGHT;
+#X obj 37 22 unpack 0 0 0 0 0;
+#X obj 191 306 t b l b;
+#X obj 213 376 spigot 1;
+#X msg 178 354 1;
+#X msg 260 355 0;
+#X obj 63 67 OUT/ambisonic/helper/sr_weight \$0GUI_1;
+#X obj 90 87 OUT/ambisonic/helper/sr_weight \$0GUI_2;
+#X obj 117 107 OUT/ambisonic/helper/sr_weight \$0GUI_3;
+#X obj 144 127 OUT/ambisonic/helper/sr_weight \$0GUI_4;
+#X connect 0 0 8 0;
+#X connect 1 0 11 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 4 1 1 4;
+#X connect 5 0 3 0;
+#X connect 5 1 1 3;
+#X connect 6 0 3 0;
+#X connect 6 1 1 2;
+#X connect 7 0 3 0;
+#X connect 7 1 1 1;
+#X connect 8 0 3 0;
+#X connect 8 1 2 1;
+#X connect 9 0 12 0;
+#X connect 10 0 0 0;
+#X connect 10 1 15 0;
+#X connect 10 2 16 0;
+#X connect 10 3 17 0;
+#X connect 10 4 18 0;
+#X connect 11 0 13 0;
+#X connect 11 1 9 0;
+#X connect 11 2 14 0;
+#X connect 12 0 10 0;
+#X connect 13 0 12 1;
+#X connect 14 0 12 1;
+#X connect 15 0 7 0;
+#X connect 16 0 6 0;
+#X connect 17 0 5 0;
+#X connect 18 0 4 0;
+#X restore 359 200 pd weights;
 #X connect 0 0 10 0;
 #X connect 1 0 8 0;
 #X connect 2 0 14 0;
@@ -48,7 +101,39 @@ set 20 7 0 8 -62784 -1 -1;
 #X connect 17 0 16 0;
 #X connect 18 0 17 0;
 #X restore 9 61 pd code;
-#N canvas 0 0 450 300 2762-ambisonic.settings 0;
-#X text 176 95 comment;
+#N canvas 322 13 559 219 2762-ambisonic.settings 0;
+#X obj 330 20 cnv 15 210 190 empty empty weights 10 12 0 14 -195568
+-66577 0;
+#X obj 346 56 vsl 15 128 0 127 0 0 \$0GUI_0_ambiweight \$0GUI_0_ambiweight
+X 5 -8 0 8 -245568 -1 -1 4800 1;
+#X obj 336 189 nbx 3 14 -100 22 0 0 \$0GUI_0_ambiweight_nbx \$0GUI_0_ambiweight_nbx
+empty 0 -6 0 10 -245568 -1 -1 -12 256;
+#X obj 386 56 vsl 15 128 0 127 0 0 \$0GUI_1_ambiweight \$0GUI_1_ambiweight
+X 5 -8 0 8 -245568 -1 -1 10300 1;
+#X obj 376 189 nbx 3 14 -100 22 0 0 \$0GUI_1_ambiweight_nbx \$0GUI_1_ambiweight_nbx
+empty 0 -6 0 10 -245568 -1 -1 4.33334 256;
+#X obj 426 56 vsl 15 128 0 127 0 0 \$0GUI_2_ambiweight \$0GUI_2_ambiweight
+X 5 -8 0 8 -245568 -1 -1 12700 1;
+#X obj 416 189 nbx 3 14 0 127 0 0 \$0GUI_2_ambiweight_nbx \$0GUI_2_ambiweight_nbx
+empty 0 -6 0 10 -245568 -1 -1 22 256;
+#X obj 466 56 vsl 15 128 0 127 0 0 \$0GUI_3_ambiweight \$0GUI_3_ambiweight
+X 5 -8 0 8 -245568 -1 -1 12700 1;
+#X obj 456 189 nbx 3 14 0 127 0 0 \$0GUI_3_ambiweight_nbx \$0GUI_3_ambiweight_nbx
+empty 0 -6 0 10 -245568 -1 -1 22 256;
+#X obj 506 56 vsl 15 128 0 127 0 0 \$0GUI_4_ambiweight \$0GUI_4_ambiweight
+X 5 -8 0 8 -245568 -1 -1 0 1;
+#X obj 496 189 nbx 3 14 0 127 0 0 \$0GUI_4_ambiweight_nbx \$0GUI_4_ambiweight_nbx
+empty 0 -6 0 10 -245568 -1 -1 0 256;
+#X obj 20 20 cnv 15 80 190 empty empty gain 10 12 0 14 -195568 -66577
+0;
+#X obj 110 20 cnv 15 210 190 empty empty orientation 10 12 0 14 -195568
+-66577 0;
+#X obj 144 113 hsl 128 15 -181 180 0 0 \$0GUI_ambisonic_rotZ_fromgui
+\$0GUI_ambisonic_rotZ_togui empty -2 -6 0 8 -262144 -1 -1 0 1;
+#X obj 32 102 cnv 2 38 2 empty empty empty 20 12 0 14 -33289 -66577
+0;
+#X obj 36 56 vsl 30 131 0 130 0 0 \$0GUIambiout_fader \$0GUIambiout_fader
+-inf 1 140 0 8 -228992 -1 -1 0 1;
 #X restore -21 122 pd \$0-ambisonic.settings;
+#X obj 81 54 vfad_scale -1;
 #X coords 0 0 1 1 65 200 1;
