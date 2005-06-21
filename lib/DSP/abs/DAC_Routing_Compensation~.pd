@@ -83,6 +83,7 @@
 #X obj 50 1060 catch_out_2_dac~ 50;
 #X obj 50 1080 catch_out_2_dac~ 51;
 #X obj 50 1100 catch_out_2_dac~ 52;
+#X obj 766 233 print compensation;
 #X connect 1 0 7 0;
 #X connect 2 0 22 0;
 #X connect 3 0 2 0;
@@ -102,6 +103,7 @@
 #X connect 17 1 12 0;
 #X connect 22 0 4 0;
 #X connect 22 0 1 0;
+#X connect 22 0 78 0;
 #X connect 24 0 7 0;
 #X connect 25 0 8 0;
 #X connect 26 0 24 0;

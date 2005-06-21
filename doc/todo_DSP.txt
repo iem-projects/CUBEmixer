@@ -1,0 +1,10 @@
+spatialisierung als plugin
+
+IN_SRC soll von allen moeglichen Einheiten mit ihren S~-namen 
+beschickt werden (ADC, AUX_RET, PLAY).
+
+VU-Meter-Bridge soll von allen moeglichen Einheiten mit ihren S~-namen 
+beschickt werden (ADC, ....).
+
+Aus ON_OFF der Kanalzuege soll Mute und SOLO werden.
+

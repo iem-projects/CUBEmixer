@@ -79,13 +79,13 @@ $1_IN_VU_SRC: 0=input("adc in"), 1=pre, 2=post
 
 VU_BRIDGE_SRC : <symbol>
       Nach VU kann folgen:
-        IN   : routet VU-Meter zum Eingang nach Input-Gain;
-        IN_PRE  : routet VU-Meter vor dem Fader, nach dem Effekt;
-        IN_POST  : routet VU-Meter nach dem Fader;
-        AUX_POST  : routet VU-Meter nach dem Aux-Sum-Fader;
-        AMBI_SUM  : routet VU-Meter nach dem Ambi-Gain und Decoder;
-        BUS_SUM  : routet VU-Meter nach Main-Out-Gain;
-        DAC_OUT  : routet VU-Meter unmittelbar vor dac~;
+        0=IN_ADC   : routet VU-Meter zum Eingang nach Input-Gain;
+        1=IN_PRE  : routet VU-Meter vor dem Fader, nach dem Effekt;
+        2=IN_POST  : routet VU-Meter nach dem Fader;
+        3=AUX_SUM  : routet VU-Meter nach dem Aux-Sum-Fader;
+        4=AMBI_SUM  : routet VU-Meter nach dem Ambi-Gain und Decoder;
+        5=BUS_SUM  : routet VU-Meter nach Main-Out-Gain;
+        6=OUT_DAC  : routet VU-Meter unmittelbar vor dac~;
       dem VU-Meter-Werte-Paerchen wird noch der Kanal-Index vorgehaengt.
 
 
