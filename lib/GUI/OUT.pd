@@ -1,15 +1,5 @@
-#N canvas 129 2 574 402 10;
+#N canvas 21 17 574 402 10;
 #X obj 13 3 OUT/BUS/16;
-#X obj 14 193 OUT/ambi;
-#X obj 86 193 OUT/LFC;
-#X obj 297 220 vsl 30 131 0 130 0 0 \$0GUIambiout_fader \$0GUIambiout_fader
--inf 1 140 0 8 -228992 -1 -1 8500 1;
-#X obj 283 228 vfad_scale -1;
-#X obj 484 222 cnv 15 60 60 empty empty empty 20 12 0 14 -258699 -66577
-0;
-#X obj 489 227 bng 50 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 484 302 cnv 15 60 60 empty empty empty 20 12 0 14 -24198 -66577
-0;
-#X obj 489 307 bng 50 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
+#X obj 13 193 OUT/ambi;
+#X obj 85 193 OUT/LFC;
+#X obj 165 193 OUT/main;
