@@ -17,10 +17,10 @@
 #X msg 514 159 symbol \$1_PLAY;
 #X obj 514 136 for++ 1 \$1;
 #X obj 514 113 del 2;
-#X obj 157 181 DSP_label 1_PLAY IN;
-#X obj 157 203 DSP_label 2_PLAY IN;
-#X obj 157 224 DSP_label 3_PLAY IN;
-#X obj 157 246 DSP_label 4_PLAY IN;
+#X obj 157 181 DSP_label IN 1_PLAY;
+#X obj 157 203 DSP_label IN 2_PLAY;
+#X obj 157 224 DSP_label IN 3_PLAY;
+#X obj 157 246 DSP_label IN 4_PLAY;
 #X connect 0 0 1 0;
 #X connect 2 0 6 0;
 #X connect 3 0 5 0;

@@ -3,5 +3,5 @@
 #X obj 23 13 inlet~;
 #X obj 22 154 outlet~;
 #X obj 40 62 catch~ \$1_AUX_SUM;
-#X obj 271 106 DSP_label IN \$1_AUX;
+#X obj 271 106 DSP_label AUX \$1_AUX;
 #X connect 3 0 0 0;

@@ -3,7 +3,7 @@
 #N canvas 0 0 478 328 null~ 0;
 #X obj 46 38 sig~ 0;
 #X obj 45 75 s~ 0_ADC;
-#X obj 201 71 DSP_label none IN;
+#X obj 201 71 DSP_label IN none;
 #X connect 0 0 1 0;
 #X restore 49 54 pd null~;
 #X obj 185 424 outlet~;

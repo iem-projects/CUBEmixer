@@ -19,17 +19,13 @@
 #X obj 480 284 s~ 8_AUX_RET;
 #X obj 36 65 inlet~;
 #X obj 40 419 outlet~;
-#X obj 656 119 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
--1;
-#X obj 656 99 r DSP_get_in_sel;
-#X obj 656 229 s DSP_in_sel_src;
-#X obj 656 158 del 1;
 #X text 207 450 2.arg: <float> n_aux_return;
 #X text 207 441 1.arg: <float> n_aux_send;
-#X obj 656 181 for++ 1 \$2;
-#X msg 656 204 symbol \$1_AUX;
-#X connect 20 0 23 0;
-#X connect 21 0 20 0;
-#X connect 23 0 26 0;
-#X connect 26 0 27 0;
-#X connect 27 0 22 0;
+#X obj 626 316 DSP_label IN 1_AUX;
+#X obj 626 336 DSP_label IN 2_AUX;
+#X obj 626 356 DSP_label IN 3_AUX;
+#X obj 626 376 DSP_label IN 4_AUX;
+#X obj 626 396 DSP_label IN 5_AUX;
+#X obj 626 416 DSP_label IN 6_AUX;
+#X obj 626 436 DSP_label IN 7_AUX;
+#X obj 626 456 DSP_label IN 8_AUX;
