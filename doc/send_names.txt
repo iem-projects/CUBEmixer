@@ -6,7 +6,7 @@ Routing Parameter werden nur am Anfang geladen und eingestellt, und duerfen im S
 Knackser verursachen.
   (fuer IN-MIX-CH)
 
-$1_IN_SEL : selected INPUT or AUX-RET (1_ADC ... 52_ADC, 1_AUX ... 8_AUX)
+$1_IN_SRC : selected INPUT or AUX-RET (1_ADC ... 52_ADC, 1_AUX ... 8_AUX)
 $1_IN_DEL : Delay (0 ... 1000 ms)
 $1_IN_INV : Signal-Inverter (+1 or -1)
 $1_IN_AUX_1_DST : selected Destination of 1. AUX-SND (1_AUX ... 8_AUX) (--> audio-engine: [throw~ 1_AUX_SND])
@@ -14,7 +14,8 @@ $1_IN_AUX_1_DST : selected Destination of 1. AUX-SND (1_AUX ... 8_AUX) (--> audi
 Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine Knackser.
   (fuer IN-MIX-CH)
 
-$1_IN_CH_ON:
+$1_IN_ON: on/off (!mute)
+$1_IN_SOLO: solo
 
 $1_IN_ADJ_GAIN : adjust the INPUT-Level (0 ... 150 MIDI-dB)
 
