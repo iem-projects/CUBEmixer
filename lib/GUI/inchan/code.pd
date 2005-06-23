@@ -1,4 +1,4 @@
-#N canvas 84 1 740 509 10;
+#N canvas 66 280 740 509 10;
 #N canvas 163 378 469 423 ambi 0;
 #X obj 91 277 pack s s;
 #X obj 142 255 makefilename pd-%d-pd;
@@ -60,15 +60,15 @@
 #X restore 63 138 pd select;
 #N canvas 0 0 481 202 aux 0;
 #X obj 27 17 inlet \$0GUI-prepend;
-#X obj 26 69 inchan/helper/auxiliary \$1GUIinchan_aux1 \$2_IN_AUX_1 aux1
-;
+#X obj 26 69 inchan/helper/auxiliary \$1GUIinchan_aux1 \$2_IN_AUX_1
+aux1;
 #X obj 26 41 t s s s s;
-#X obj 36 89 inchan/helper/auxiliary \$1GUIinchan_aux2 \$2_IN_AUX_2 aux2
-;
-#X obj 56 109 inchan/helper/auxiliary \$1GUIinchan_aux3 \$2_IN_AUX_3 aux3
-;
-#X obj 76 129 inchan/helper/auxiliary \$1GUIinchan_aux4 \$2_IN_AUX_4 aux4
-;
+#X obj 36 89 inchan/helper/auxiliary \$1GUIinchan_aux2 \$2_IN_AUX_2
+aux2;
+#X obj 56 109 inchan/helper/auxiliary \$1GUIinchan_aux3 \$2_IN_AUX_3
+aux3;
+#X obj 76 129 inchan/helper/auxiliary \$1GUIinchan_aux4 \$2_IN_AUX_4
+aux4;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 2 1 3 0;
@@ -431,7 +431,6 @@ just slaves to this object.;
 #X msg 515 251 symbol \$1_input_vuselect_togui;
 #X text 164 463 bg lbl;
 #X msg 85 462 color \$1 -1;
-#X obj 85 275 r vu;
 #X obj 85 304 t f;
 #X obj 143 348 moses -12;
 #X obj 201 368 moses 0;
@@ -445,22 +444,23 @@ just slaves to this object.;
 #X msg 242 409 13;
 #X msg 139 386 16;
 #X msg 196 406 15;
+#X obj 85 275 r \$2_IN_VU_LEVEL;
 #X connect 1 0 3 0;
 #X connect 3 0 2 1;
 #X connect 5 0 0 0;
-#X connect 6 0 7 0;
-#X connect 7 0 10 0;
+#X connect 6 0 9 0;
+#X connect 7 0 17 0;
+#X connect 7 1 8 0;
 #X connect 8 0 18 0;
-#X connect 8 1 9 0;
-#X connect 9 0 19 0;
-#X connect 9 1 17 0;
-#X connect 10 0 16 0;
-#X connect 10 1 8 0;
-#X connect 15 0 5 0;
-#X connect 16 0 15 0;
-#X connect 17 0 15 0;
-#X connect 18 0 15 0;
-#X connect 19 0 15 0;
+#X connect 8 1 16 0;
+#X connect 9 0 15 0;
+#X connect 9 1 7 0;
+#X connect 14 0 5 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 0;
+#X connect 17 0 14 0;
+#X connect 18 0 14 0;
+#X connect 19 0 6 0;
 #X restore 180 335 pd meter;
 #N canvas 15 219 647 591 fader 0;
 #X obj 52 120 r \$1GUIinchan_fader;
