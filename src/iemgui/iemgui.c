@@ -91,7 +91,6 @@ void hfadl_scale_setup(void);
 void hfadr_scale_setup(void);
 void vfad_scale_setup(void);
 void numberbox_matrix_setup(void);
-void popup_setup(void);
 void iem_event_setup(void);
 //void toggle_matrix_setup(void);
 
@@ -112,7 +111,6 @@ void iemgui_setup(void)
 	hfadr_scale_setup();
 	vfad_scale_setup();
   numberbox_matrix_setup();
-  popup_setup();
   iem_event_setup();
 //	toggle_matrix_setup();
 
