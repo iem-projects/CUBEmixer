@@ -1,4 +1,4 @@
-#N canvas 191 153 535 784 10;
+#N canvas 542 2 535 784 10;
 #X obj 36 101 cnv 3 1 1 empty empty DAC01 0 0 0 8 -262144 -1 0;
 #X obj 36 112 cnv 3 1 1 empty empty DAC02 0 0 0 8 -262144 -1 0;
 #X obj 36 123 cnv 3 1 1 empty empty DAC03 0 0 0 8 -262144 -1 0;
@@ -293,6 +293,10 @@
 #X connect 4 0 1 0;
 #X restore 197 260 pd tech2mid;
 #X obj 287 238 route element;
+#X obj 432 284 mtx_- 100;
+#X obj 432 218 loadbang;
+#X obj 432 261 mtx_zeros 52 16;
+#X msg 455 242 bang;
 #X connect 0 0 9 0;
 #X connect 1 0 4 0;
 #X connect 3 0 0 0;
@@ -309,6 +313,10 @@
 #X connect 10 0 2 0;
 #X connect 11 0 10 0;
 #X connect 11 1 2 0;
+#X connect 12 0 2 0;
+#X connect 13 0 14 0;
+#X connect 14 0 12 0;
+#X connect 15 0 14 0;
 #X restore 35 118 pd bus_sendreceive;
 #X obj 201 138 s \$0BUSmatrix;
 #X msg 201 118 vis 1;
