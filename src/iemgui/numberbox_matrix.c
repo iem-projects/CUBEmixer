@@ -826,93 +826,119 @@ static void numberbox_matrix_element(t_numberbox_matrix *x, t_symbol *s, int ac,
 
 static void numberbox_matrix_row(t_numberbox_matrix *x, t_symbol *s, int ac, t_atom *av)
 {
-  t_int i, ir, c=x->x_n_column, ok=1;
+  t_int i, ir, c=x->x_n_column;
   
-  if(ac > c)
-  {
-    for(i=0; i<=c; i++)
-    {
-      if(!IS_A_FLOAT(av, i))
-        ok = 0;
-    }
-    if(ok)
-    {
-      ir = atom_getintarg(0, ac, av);
-      if(ir < 1)
-        ir = 1;
-      if(ir > x->x_n_row)
-        ir = x->x_n_row;
-      ir--;
-      x->x_sel_row = ir;
-      ir *= c;
-      ir += 3;
-      for(i=1; i<=c; i++)
-        x->x_matrix[ir++] = av[i];
-      
-      x->x_update_mode = IEM_GUI_NBXM_DRAW_MODE_UPDATE_ROW;
-      (*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_UPDATE);
-    }
+  if(ac <= c){
+    pd_error(x, "numberbox_matrix: bad row (too short)");
+    return;
   }
+  for(i=0; i<=c; i++)
+    {
+      if(!IS_A_FLOAT(av, i)){
+        pd_error(x, "numberbox_matrix: bad row (not all numbers)");
+        return;
+      }
+    }
+  ir = atom_getintarg(0, ac, av);
+  i=ir;
+  if(ir < 1)
+    ir = 1;
+  if(ir > x->x_n_row)
+    ir = x->x_n_row;
+  if(i!=ir)post("numberbox_matrix: index %d out of range (using %d)", i, ir);
+
+  ir--;
+  x->x_sel_row = ir;
+  ir *= c;
+  ir += 3;
+  for(i=1; i<=c; i++)
+    x->x_matrix[ir++] = av[i];
+  
+  x->x_update_mode = IEM_GUI_NBXM_DRAW_MODE_UPDATE_ROW;
+  (*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_UPDATE);
 }
 
 static void numberbox_matrix_col(t_numberbox_matrix *x, t_symbol *s, int ac, t_atom *av)
 {
-  t_int i, ic, r=x->x_n_row, c=x->x_n_column, ok=1;
+  t_int i, ic, r=x->x_n_row, c=x->x_n_column;
   
-  if(ac > r)
-  {
-    for(i=0; i<=r; i++)
-    {
-      if(!IS_A_FLOAT(av, i))
-        ok = 0;
-    }
-    if(ok)
-    {
-      ic = atom_getintarg(0, ac, av);
-      if(ic < 1)
-        ic = 1;
-      if(ic > c)
-        ic = c;
-      ic--;
-      x->x_sel_column = ic;
-      ic += 3;
-      for(i=1; i<=r; i++)
-      {
-        x->x_matrix[ic] = av[i];
-        ic += c;
-      }
-      
-      x->x_update_mode = IEM_GUI_NBXM_DRAW_MODE_UPDATE_COLUMN;
-      (*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_UPDATE);
-    }
+  if(ac <= r){
+    pd_error(x, "numberbox_matrix: bad column (too short)");
+    return;
   }
+  for(i=0; i<=r; i++)
+    {
+      if(!IS_A_FLOAT(av, i)){
+        pd_error(x, "numberbox_matrix: bad row (not all numbers)");
+        return;
+      }
+    }
+
+  ic = atom_getintarg(0, ac, av);
+  i=ic;
+  if(ic < 1)
+    ic = 1;
+  if(ic > c)
+    ic = c;
+  if(i!=ic)post("numberbox_matrix: index %d out of range (using %d)", i, ic);
+
+  ic--;
+  x->x_sel_column = ic;
+  ic += 3;
+  for(i=1; i<=r; i++)
+    {
+      x->x_matrix[ic] = av[i];
+      ic += c;
+    }
+  
+  x->x_update_mode = IEM_GUI_NBXM_DRAW_MODE_UPDATE_COLUMN;
+  (*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_UPDATE);
 }
 
 static void numberbox_matrix_matrix(t_numberbox_matrix *x, t_symbol *s, int ac, t_atom *av)
 {
-  t_int i, k, c=x->x_n_column, r=x->x_n_row, ok=1;
-  
-  k = c*r + 2;
-  if(ac >= k)
-  {
-    for(i=0; i<k; i++)
-    {
-      if(!IS_A_FLOAT(av, i))
-        ok = 0;
-    }
-    if(atom_getintarg(0, ac, av) != r)
-      ok = 0;
-    if(atom_getintarg(1, ac, av) != c)
-      ok = 0;
-    if(ok)
-    {
-      for(i=2; i<k; i++)
-        x->x_matrix[i+1] = av[i];
-      
-      x->x_update_mode = IEM_GUI_NBXM_DRAW_MODE_UPDATE_MATRIX;
-      (*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_UPDATE);
-    }
+  t_int i, k, c=0, r=0, C=0;
+  if(ac<3){
+    pd_error(x, "numberbox_matrix: invalid input matrix!");
+    return;
   }
+  r=atom_getintarg(0, ac, av);
+  c=atom_getintarg(1, ac, av);
+  C=c;
+
+  if(ac != ((c*r)+2))
+  {
+    pd_error(x, "numberbox_matrix: invalid input matrix (incosistent #elements)!");
+    return;
+  }
+  for(i=0; i<ac; i++)
+    {
+      if(!IS_A_FLOAT(av, i)){
+        pd_error(x, "numberbox_matrix: invalid input matrix (not all floats)!");
+        return;
+      }
+    }
+
+  if(r != x->x_n_row)
+    post("numberbox_matrix: #rows do not match %d!=%d", r, x->x_n_row);
+  if(c != x->x_n_column)
+    post("numberbox_matrix: #columns do not match %d!=%d", c, x->x_n_column);
+
+  if(r>x->x_n_row)
+    r=x->x_n_row;
+  if(c>x->x_n_column)
+    c=x->x_n_column;
+
+  for(i=0; i<r; i++)
+    for(k=0; k<c; k++){
+      int out_index=i*(x->x_n_column)+k;
+      int in_index =i*(C)+k;
+      post("%d,%d -> %d %d", i, k, in_index, out_index);
+      x->x_matrix[3+out_index]=av[2+in_index];
+    }
+
+  x->x_update_mode = IEM_GUI_NBXM_DRAW_MODE_UPDATE_MATRIX;
+  (*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_UPDATE);
 }
 
 static void numberbox_matrix_dim(t_numberbox_matrix *x, t_symbol *s, int ac, t_atom *av)
