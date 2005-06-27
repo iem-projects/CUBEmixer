@@ -933,7 +933,6 @@ static void numberbox_matrix_matrix(t_numberbox_matrix *x, t_symbol *s, int ac, 
     for(k=0; k<c; k++){
       int out_index=i*(x->x_n_column)+k;
       int in_index =i*(C)+k;
-      post("%d,%d -> %d %d", i, k, in_index, out_index);
       x->x_matrix[3+out_index]=av[2+in_index];
     }
 
