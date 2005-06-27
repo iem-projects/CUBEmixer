@@ -4,11 +4,13 @@
 #X obj 85 193 OUT/LFC;
 #X obj 165 193 OUT/main;
 #X obj 418 314 s GUI_dspNames;
-#X obj 418 276 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+#X obj 418 296 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X obj 416 245 s BUS_ROUTE;
+#X obj 416 265 s BUS_ROUTE;
 #X msg 416 200 bang;
-#X obj 416 222 mtx_ones 52 18;
+#X obj 416 222 mtx_rand 52 16;
+#X obj 416 243 mtx_* 127;
 #X connect 5 0 4 0;
 #X connect 7 0 8 0;
-#X connect 8 0 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 6 0;
