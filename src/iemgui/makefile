@@ -49,7 +49,6 @@ all: $(OBJ)
 	strip --strip-unneeded $(TARGET)
 
 $(OBJ) : %.o : %.c
-	touch $*.c
 	cc $(CFLAGS) $(INCLUDE) -c -o $*.o $*.c
 
 
