@@ -7,7 +7,7 @@
 set 20 7 0 8 -62784 -1 -1;
 #X obj 16 46 vsl 30 131 0 130 0 0 \$0GUIambiout_fader \$0GUIambiout_fader
 -inf 1 140 0 8 -228992 -1 -1 0 1;
-#N canvas 30 161 695 544 code 0;
+#N canvas 4 281 695 544 code 0;
 #X obj 52 141 route float;
 #X obj 131 403 - 100;
 #X msg 52 464 label \$1;
@@ -27,8 +27,6 @@ set 20 7 0 8 -62784 -1 -1;
 #X msg 455 485 \; \$1-ambisonic.settings vis 1;
 #X obj 455 461 makefilename pd-%d;
 #X obj 455 436 i \$0;
-#X obj 235 100 gui_sr_wrap \$0GUI_ambisonic_rotZ OUT_AMBI_ROT_Z -180
-180;
 #N canvas 32 90 436 428 weights 0;
 #X obj 37 47 OUT/ambisonic/helper/sr_weight \$0GUI_0;
 #X obj 37 296 pack 0 0 0 0 0;
@@ -86,6 +84,17 @@ set 20 7 0 8 -62784 -1 -1;
 #X msg 488 189 100 100 100 100 100;
 #X obj 450 164 t b b;
 #X obj 450 142 loadbang;
+#N canvas 551 146 450 300 rotation 0;
+#X obj 126 169 r \$0GUI_ambisonic_rotZ_fromgui;
+#X obj 126 244 s \$0GUI_ambisonic_rotZ_label;
+#X obj 126 191 makefilename %03d;
+#X msg 126 219 label \$1;
+#X obj 41 38 gui_sr_wrap \$0GUI_ambisonic_rotZ OUT_AMBI_ROT_Z -180
+180;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X restore 232 53 pd rotation;
 #X connect 0 0 10 0;
 #X connect 1 0 8 0;
 #X connect 2 0 14 0;
@@ -106,13 +115,13 @@ set 20 7 0 8 -62784 -1 -1;
 #X connect 15 0 18 0;
 #X connect 17 0 16 0;
 #X connect 18 0 17 0;
-#X connect 22 0 21 0;
-#X connect 24 0 23 0;
-#X connect 25 0 22 0;
-#X connect 25 1 24 0;
-#X connect 26 0 25 0;
+#X connect 21 0 20 0;
+#X connect 23 0 22 0;
+#X connect 24 0 21 0;
+#X connect 24 1 23 0;
+#X connect 25 0 24 0;
 #X restore 9 61 pd code;
-#N canvas -191 -7 559 219 2762-ambisonic.settings 0;
+#N canvas 0 0 559 219 1069-ambisonic.settings 0;
 #X obj 330 20 cnv 15 210 190 empty empty weights 10 12 0 14 -195568
 -66577 0;
 #X obj 336 189 nbx 3 14 -100 22 0 0 \$0GUI_0_ambiweight_nbx_fromgui
@@ -145,10 +154,11 @@ set 20 7 0 8 -62784 -1 -1;
 3 5 -8 0 8 -245568 -1 -1 8400 1;
 #X obj 506 56 vsl 15 128 0 127 0 0 \$0GUI_4_ambiweight_fromgui \$0GUI_4_ambiweight_togui
 4 5 -8 0 8 -245568 -1 -1 8400 1;
-#X obj 207 102 cnv 2 2 38 empty empty empty 20 12 0 14 -99865 -66577
-0;
+#X obj 207 102 cnv 2 2 38 empty \$0GUI_ambisonic_rotZ_label 000° -7
+45 0 8 -99865 -66577 0;
 #X obj 144 113 hsl 128 15 -181 180 0 0 \$0GUI_ambisonic_rotZ_fromgui
 \$0GUI_ambisonic_rotZ_togui empty -2 -6 0 8 -262144 -1 -1 6368 1;
+#X obj 72 64 vfad_scale -1;
 #X restore -21 122 pd \$0-ambisonic.settings;
 #X obj 81 54 vfad_scale -1;
 #X coords 0 0 1 1 65 200 1;
