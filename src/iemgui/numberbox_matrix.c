@@ -917,20 +917,22 @@ static void numberbox_matrix_matrix(t_numberbox_matrix *x, t_symbol *s, int ac, 
 
 static void numberbox_matrix_dim(t_numberbox_matrix *x, t_symbol *s, int ac, t_atom *av)
 {
-  int r, c;
+  int r=0, c=0;
   
   if(ac > 0)
   {
     r = (int)atom_getintarg(0, ac, av);
-    if(r < 1)
-      r = 1;
   }
+  if(r < 1)
+    r = 1;
+
   if(ac > 1)
   {
     c = (int)atom_getintarg(1, ac, av);
-    if(c < 1)
-      c = 1;
   }
+  if(c < 1)
+    c = 1;
+
   (*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_ERASE);
   if(x->x_matrix)
   {
