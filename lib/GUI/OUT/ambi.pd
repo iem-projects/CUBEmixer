@@ -87,7 +87,7 @@ set 20 7 0 8 -62784 -1 -1;
 #N canvas 551 146 450 300 rotation 0;
 #X obj 126 169 r \$0GUI_ambisonic_rotZ_fromgui;
 #X obj 126 244 s \$0GUI_ambisonic_rotZ_label;
-#X obj 126 191 makefilename %03d;
+#X obj 126 191 makefilename %03d°;
 #X msg 126 219 label \$1;
 #X obj 41 38 gui_sr_wrap \$0GUI_ambisonic_rotZ OUT_AMBI_ROT_Z -180
 180;
