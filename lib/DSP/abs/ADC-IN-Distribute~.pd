@@ -35,6 +35,8 @@
 #N canvas 0 0 478 328 testtone~ 0;
 #X obj 46 38 osc~ 1000;
 #X obj 201 71 DSP_label IN testtone;
-#X obj 45 75 s~ testtone;
-#X connect 0 0 2 0;
+#X obj 45 135 s~ testtone;
+#X obj 47 92 *~ 0.05;
+#X connect 0 0 3 0;
+#X connect 3 0 2 0;
 #X restore 316 94 pd testtone~;
