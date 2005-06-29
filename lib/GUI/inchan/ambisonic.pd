@@ -1,12 +1,12 @@
 #N canvas 126 93 116 126 10;
-#X obj 3 2 cnv 15 64 98 empty empty ambisonic 5 8 0 8 -233017 -66577
+#X obj 3 2 cnv 15 66 98 empty empty ambisonic 5 8 0 8 -233017 -66577
 0;
-#X obj 11 32 nbx 4 14 0 999 0 0 1238GUIambisonic_r_fromgui 1238GUIambisonic_r_togui
+#X obj 11 32 nbx 4 14 0 999 0 0 7782GUIambisonic_r_fromgui 7782GUIambisonic_r_togui
 r 50 8 0 8 -262144 -1 -1 0 256;
-#X obj 11 56 nbx 4 14 -360 360 0 0 1238GUIambisonic_phi_fromgui 1238GUIambisonic_phi_togui
+#X obj 11 56 nbx 4 14 -360 360 0 0 7782GUIambisonic_phi_fromgui 7782GUIambisonic_phi_togui
 phi 40 8 0 8 -262144 -1 -1 0 256;
-#X obj 11 80 nbx 2 14 -1e+37 1e+37 0 0 1238GUIambisonic_theta_fromgui
-1238GUIambisonic_theta_togui theta 28 8 0 8 -262144 -1 -1 0 256;
+#X obj 11 80 nbx 2 14 -1e+37 1e+37 0 0 7782GUIambisonic_theta_fromgui
+7782GUIambisonic_theta_togui theta 28 8 0 8 -262144 -1 -1 0 256;
 #X obj 23 58 parent$0;
 #X obj 23 35 loadbang;
 #N canvas 0 369 964 309 code 0;
@@ -34,4 +34,4 @@ phi 40 8 0 8 -262144 -1 -1 0 256;
 #X connect 6 0 1 0;
 #X connect 6 1 2 0;
 #X connect 6 2 3 0;
-#X coords 0 0 1 1 67 100 1;
+#X coords 0 0 1 1 68 100 1;
