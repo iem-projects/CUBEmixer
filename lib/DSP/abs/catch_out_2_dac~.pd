@@ -1,4 +1,4 @@
-#N canvas 0 0 559 398 10;
+#N canvas 568 364 559 398 10;
 #X obj 45 327 dac~ \$1;
 #X obj 44 111 z~ 0;
 #X obj 135 59 unpack f f;
@@ -13,8 +13,9 @@
 #X obj 64 201 r lin_OUT_MASTER_GAIN;
 #X obj 75 224 t b f;
 #X obj 64 250 * 1;
-#X obj 45 272 *~ 0;
-#X connect 1 0 14 0;
+#X obj 129 240 r DSP_MIX_INTERPOL_TIME;
+#X obj 45 272 mull~ 0 50;
+#X connect 1 0 15 0;
 #X connect 2 0 1 0;
 #X connect 2 0 9 0;
 #X connect 2 1 8 2;
@@ -27,6 +28,7 @@
 #X connect 11 0 13 0;
 #X connect 12 0 13 0;
 #X connect 12 1 13 1;
-#X connect 13 0 14 1;
-#X connect 14 0 4 0;
-#X connect 14 0 0 0;
+#X connect 13 0 15 1;
+#X connect 14 0 15 2;
+#X connect 15 0 4 0;
+#X connect 15 0 0 0;
