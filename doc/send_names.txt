@@ -91,6 +91,12 @@ VU_BRIDGE_SRC : <symbol>
       dem VU-Meter-Werte-Paerchen wird noch der Kanal-Index vorgehaengt.
 
 
+=================================================================
+
+DSP: 1/0 audio-engine on/off (pd dsp $1)
+DSP_CPU <mean> <peak>: cputime auf dem dsp
+
+
 
 Es wurde bis auf weiteres auf die Reduzierung der Verzoegerungszeiten zwischen
 s~ und r~ bzw. zwischen throw~ und catch~ verzichtet.
