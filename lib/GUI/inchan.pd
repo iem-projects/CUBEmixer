@@ -1,14 +1,14 @@
-#N canvas 308 198 70 462 10;
+#N canvas 308 198 77 462 10;
 #X obj 2 1 cnv 10 67 478 empty empty empty 5 12 0 14 -195568 -66577
 0;
 #X obj 4 46 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux1_gain_fromgui \$0GUIinchan_aux1_gain_togui
 aux1 0 -4 0 8 -228992 -1 -1 -100 256;
 #X obj 0 367 cnv 2 35 2 empty empty empty 20 12 0 14 -1 -66577 0;
 #X obj 4 323 vsl 30 131 0 130 0 0 \$0GUIinchan_fader \$0GUIinchan_fader
-0 1 140 0 8 -228992 -1 -1 0 1;
-#N canvas 0 0 450 300 4475-pd 0;
+-inf 1 140 0 8 -228992 -1 -1 0 1;
+#N canvas 0 0 450 300 1130-pd 0;
 #X obj 0 0 inchan/S0;
-#X coords 0 0 1 1 66 100 1;
+#X coords 0 0 1 1 67 100 1;
 #X restore 1 219 pd \$0-pd;
 #X obj 39 344 vsl 8 109 0 108 0 0 \$0GUIinchan_subfader_fromgui \$0GUIinchan_subfader_togui
 empty 0 -8 0 8 -245568 -1 -1 0 1;
