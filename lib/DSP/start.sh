@@ -5,7 +5,7 @@ then
   PD=pd
 fi
 
-PDPATHS="-path .:..:../abs/:../libs/:../plugins/:abs"
+PDPATHS="-path .:..:../abs/:../libs/iemabs:../libs/zexyabs:../libs/:../plugins/:abs"
 PDLIBS="-lib zexy:iemlib1:iemlib2:iemgui:iemmatrix:iem_ambi"
 
 ${PD} $PDPATHS $PDLIBS $@
