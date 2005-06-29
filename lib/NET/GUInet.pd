@@ -1,0 +1,13 @@
+#N canvas 41 651 611 289 10;
+#X obj 162 71 autonet localhost 6666 6667;
+#X obj 381 179 sendreceive DSP_setLabel;
+#X obj 381 155 sendreceive DSP_getLabels;
+#X msg 381 129 IN;
+#X msg 416 130 AUX;
+#X obj 381 45 r GUI_dspNames;
+#X obj 381 77 t b b;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 6 1 4 0;

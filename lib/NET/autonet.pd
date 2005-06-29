@@ -14,7 +14,413 @@
 #X obj 549 226 symbol \$0NET;
 #X msg 94 136 bang;
 #X msg 640 250 symbol _;
-#N canvas 388 99 450 300 1001-netsendreceive 0;
+#N canvas 0 0 1249 900 1130-netsendreceive 0;
+#X obj 50 0 NET/helper/sendreceive2net 5_IN_SUB_GAIN 1130;
+#X obj 50 20 NET/helper/sendreceive2net 5_IN_FADER_GAIN 1130;
+#X obj 50 40 NET/helper/sendreceive2net 5_IN_VU_LEVEL 1130;
+#X obj 50 60 NET/helper/sendreceive2net 5_IN_VU_SRC 1130;
+#X obj 50 80 NET/helper/sendreceive2net 5_IN_SOLO 1130;
+#X obj 50 100 NET/helper/sendreceive2net 5_IN_ON 1130;
+#X obj 50 120 NET/helper/sendreceive2net 5_IN_SRC 1130;
+#X obj 50 140 NET/helper/sendreceive2net 5_IN_PLUGIN4_ON 1130;
+#X obj 50 160 NET/helper/sendreceive2net 5_IN_PLUGIN4_NAME 1130;
+#X obj 50 180 NET/helper/sendreceive2net 5_IN_PLUGIN4_PARAMETERS 1130
+;
+#X obj 50 200 NET/helper/sendreceive2net 5_IN_PLUGIN3_ON 1130;
+#X obj 50 220 NET/helper/sendreceive2net 5_IN_PLUGIN3_NAME 1130;
+#X obj 50 240 NET/helper/sendreceive2net 5_IN_PLUGIN3_PARAMETERS 1130
+;
+#X obj 50 260 NET/helper/sendreceive2net 5_IN_PLUGIN2_ON 1130;
+#X obj 50 280 NET/helper/sendreceive2net 5_IN_PLUGIN2_NAME 1130;
+#X obj 50 300 NET/helper/sendreceive2net 5_IN_PLUGIN2_PARAMETERS 1130
+;
+#X obj 50 320 NET/helper/sendreceive2net 5_IN_PLUGIN1_ON 1130;
+#X obj 50 340 NET/helper/sendreceive2net 5_IN_PLUGIN1_NAME 1130;
+#X obj 50 360 NET/helper/sendreceive2net 5_IN_PLUGIN1_PARAMETERS 1130
+;
+#X obj 50 380 NET/helper/sendreceive2net 5_IN_BUS_16_GAIN 1130;
+#X obj 50 400 NET/helper/sendreceive2net 5_IN_BUS_15_GAIN 1130;
+#X obj 50 420 NET/helper/sendreceive2net 5_IN_BUS_14_GAIN 1130;
+#X obj 50 440 NET/helper/sendreceive2net 5_IN_BUS_13_GAIN 1130;
+#X obj 50 460 NET/helper/sendreceive2net 5_IN_BUS_12_GAIN 1130;
+#X obj 50 480 NET/helper/sendreceive2net 5_IN_BUS_11_GAIN 1130;
+#X obj 50 500 NET/helper/sendreceive2net 5_IN_BUS_10_GAIN 1130;
+#X obj 50 520 NET/helper/sendreceive2net 5_IN_BUS_9_GAIN 1130;
+#X obj 50 540 NET/helper/sendreceive2net 5_IN_BUS_8_GAIN 1130;
+#X obj 50 560 NET/helper/sendreceive2net 5_IN_BUS_7_GAIN 1130;
+#X obj 50 580 NET/helper/sendreceive2net 5_IN_BUS_6_GAIN 1130;
+#X obj 50 600 NET/helper/sendreceive2net 5_IN_BUS_5_GAIN 1130;
+#X obj 50 620 NET/helper/sendreceive2net 5_IN_BUS_4_GAIN 1130;
+#X obj 50 640 NET/helper/sendreceive2net 5_IN_BUS_3_GAIN 1130;
+#X obj 50 660 NET/helper/sendreceive2net 5_IN_BUS_2_GAIN 1130;
+#X obj 50 680 NET/helper/sendreceive2net 5_IN_BUS_1_GAIN 1130;
+#X obj 50 700 NET/helper/sendreceive2net 5_IN_AMBI_RAD 1130;
+#X obj 50 720 NET/helper/sendreceive2net 5_IN_AMBI_AZM 1130;
+#X obj 50 740 NET/helper/sendreceive2net 5_IN_AMBI_ELV 1130;
+#X obj 50 760 NET/helper/sendreceive2net 5_IN_EQ_MID2_Q 1130;
+#X obj 50 780 NET/helper/sendreceive2net 5_IN_EQ_LOW_TRANS_FREQ 1130
+;
+#X obj 50 800 NET/helper/sendreceive2net 5_IN_EQ_LOW_GAIN 1130;
+#X obj 50 820 NET/helper/sendreceive2net 5_IN_EQ_HIGH_TRANS_FREQ 1130
+;
+#X obj 50 840 NET/helper/sendreceive2net 5_IN_EQ_LOWCUT_FREQ 1130;
+#X obj 50 860 NET/helper/sendreceive2net 5_IN_EQ_HIGH_GAIN 1130;
+#X obj 50 880 NET/helper/sendreceive2net 5_IN_EQ_HIGHCUT_FREQ 1130
+;
+#X obj 50 900 NET/helper/sendreceive2net 5_IN_EQ_MID1_Q 1130;
+#X obj 50 920 NET/helper/sendreceive2net 5_IN_EQ_HIGHCUT_ON 1130;
+#X obj 50 940 NET/helper/sendreceive2net 5_IN_EQ_LOWCUT_ON 1130;
+#X obj 50 960 NET/helper/sendreceive2net 5_IN_EQ_MID2_FREQ 1130;
+#X obj 50 980 NET/helper/sendreceive2net 5_IN_EQ_MID2_GAIN 1130;
+#X obj 50 1000 NET/helper/sendreceive2net 5_IN_EQ_MID1_FREQ 1130;
+#X obj 50 1020 NET/helper/sendreceive2net 5_IN_EQ_MID1_GAIN 1130;
+#X obj 50 1040 NET/helper/sendreceive2net 5_IN_EQ_ON 1130;
+#X obj 50 1060 NET/helper/sendreceive2net 5_IN_AUX_4_DST 1130;
+#X obj 50 1080 NET/helper/sendreceive2net 5_IN_AUX_4_PRE 1130;
+#X obj 50 1100 NET/helper/sendreceive2net 5_IN_AUX_4_GAIN 1130;
+#X obj 50 1120 NET/helper/sendreceive2net 5_IN_AUX_3_DST 1130;
+#X obj 50 1140 NET/helper/sendreceive2net 5_IN_AUX_3_PRE 1130;
+#X obj 50 1160 NET/helper/sendreceive2net 5_IN_AUX_3_GAIN 1130;
+#X obj 50 1180 NET/helper/sendreceive2net 5_IN_AUX_2_DST 1130;
+#X obj 50 1200 NET/helper/sendreceive2net 5_IN_AUX_2_PRE 1130;
+#X obj 50 1220 NET/helper/sendreceive2net 5_IN_AUX_2_GAIN 1130;
+#X obj 50 1240 NET/helper/sendreceive2net 5_IN_AUX_1_DST 1130;
+#X obj 50 1260 NET/helper/sendreceive2net 5_IN_AUX_1_PRE 1130;
+#X obj 50 1280 NET/helper/sendreceive2net 5_IN_AUX_1_GAIN 1130;
+#X obj 50 1300 NET/helper/sendreceive2net 4_IN_SUB_GAIN 1130;
+#X obj 50 1320 NET/helper/sendreceive2net 4_IN_FADER_GAIN 1130;
+#X obj 50 1340 NET/helper/sendreceive2net 4_IN_VU_LEVEL 1130;
+#X obj 50 1360 NET/helper/sendreceive2net 4_IN_VU_SRC 1130;
+#X obj 50 1380 NET/helper/sendreceive2net 4_IN_SOLO 1130;
+#X obj 50 1400 NET/helper/sendreceive2net 4_IN_ON 1130;
+#X obj 50 1420 NET/helper/sendreceive2net 4_IN_SRC 1130;
+#X obj 50 1440 NET/helper/sendreceive2net 4_IN_PLUGIN4_ON 1130;
+#X obj 50 1460 NET/helper/sendreceive2net 4_IN_PLUGIN4_NAME 1130;
+#X obj 50 1480 NET/helper/sendreceive2net 4_IN_PLUGIN4_PARAMETERS 1130
+;
+#X obj 50 1500 NET/helper/sendreceive2net 4_IN_PLUGIN3_ON 1130;
+#X obj 50 1520 NET/helper/sendreceive2net 4_IN_PLUGIN3_NAME 1130;
+#X obj 50 1540 NET/helper/sendreceive2net 4_IN_PLUGIN3_PARAMETERS 1130
+;
+#X obj 50 1560 NET/helper/sendreceive2net 4_IN_PLUGIN2_ON 1130;
+#X obj 50 1580 NET/helper/sendreceive2net 4_IN_PLUGIN2_NAME 1130;
+#X obj 50 1600 NET/helper/sendreceive2net 4_IN_PLUGIN2_PARAMETERS 1130
+;
+#X obj 50 1620 NET/helper/sendreceive2net 4_IN_PLUGIN1_ON 1130;
+#X obj 50 1640 NET/helper/sendreceive2net 4_IN_PLUGIN1_NAME 1130;
+#X obj 50 1660 NET/helper/sendreceive2net 4_IN_PLUGIN1_PARAMETERS 1130
+;
+#X obj 50 1680 NET/helper/sendreceive2net 4_IN_BUS_16_GAIN 1130;
+#X obj 50 1700 NET/helper/sendreceive2net 4_IN_BUS_15_GAIN 1130;
+#X obj 50 1720 NET/helper/sendreceive2net 4_IN_BUS_14_GAIN 1130;
+#X obj 50 1740 NET/helper/sendreceive2net 4_IN_BUS_13_GAIN 1130;
+#X obj 50 1760 NET/helper/sendreceive2net 4_IN_BUS_12_GAIN 1130;
+#X obj 50 1780 NET/helper/sendreceive2net 4_IN_BUS_11_GAIN 1130;
+#X obj 50 1800 NET/helper/sendreceive2net 4_IN_BUS_10_GAIN 1130;
+#X obj 50 1820 NET/helper/sendreceive2net 4_IN_BUS_9_GAIN 1130;
+#X obj 50 1840 NET/helper/sendreceive2net 4_IN_BUS_8_GAIN 1130;
+#X obj 50 1860 NET/helper/sendreceive2net 4_IN_BUS_7_GAIN 1130;
+#X obj 50 1880 NET/helper/sendreceive2net 4_IN_BUS_6_GAIN 1130;
+#X obj 50 1900 NET/helper/sendreceive2net 4_IN_BUS_5_GAIN 1130;
+#X obj 50 1920 NET/helper/sendreceive2net 4_IN_BUS_4_GAIN 1130;
+#X obj 50 1940 NET/helper/sendreceive2net 4_IN_BUS_3_GAIN 1130;
+#X obj 50 1960 NET/helper/sendreceive2net 4_IN_BUS_2_GAIN 1130;
+#X obj 50 1980 NET/helper/sendreceive2net 4_IN_BUS_1_GAIN 1130;
+#X obj 50 2000 NET/helper/sendreceive2net 4_IN_AMBI_RAD 1130;
+#X obj 50 2020 NET/helper/sendreceive2net 4_IN_AMBI_AZM 1130;
+#X obj 50 2040 NET/helper/sendreceive2net 4_IN_AMBI_ELV 1130;
+#X obj 50 2060 NET/helper/sendreceive2net 4_IN_EQ_MID2_Q 1130;
+#X obj 50 2080 NET/helper/sendreceive2net 4_IN_EQ_LOW_TRANS_FREQ 1130
+;
+#X obj 50 2100 NET/helper/sendreceive2net 4_IN_EQ_LOW_GAIN 1130;
+#X obj 50 2120 NET/helper/sendreceive2net 4_IN_EQ_HIGH_TRANS_FREQ 1130
+;
+#X obj 50 2140 NET/helper/sendreceive2net 4_IN_EQ_LOWCUT_FREQ 1130
+;
+#X obj 50 2160 NET/helper/sendreceive2net 4_IN_EQ_HIGH_GAIN 1130;
+#X obj 50 2180 NET/helper/sendreceive2net 4_IN_EQ_HIGHCUT_FREQ 1130
+;
+#X obj 50 2200 NET/helper/sendreceive2net 4_IN_EQ_MID1_Q 1130;
+#X obj 50 2220 NET/helper/sendreceive2net 4_IN_EQ_HIGHCUT_ON 1130;
+#X obj 50 2240 NET/helper/sendreceive2net 4_IN_EQ_LOWCUT_ON 1130;
+#X obj 50 2260 NET/helper/sendreceive2net 4_IN_EQ_MID2_FREQ 1130;
+#X obj 50 2280 NET/helper/sendreceive2net 4_IN_EQ_MID2_GAIN 1130;
+#X obj 50 2300 NET/helper/sendreceive2net 4_IN_EQ_MID1_FREQ 1130;
+#X obj 50 2320 NET/helper/sendreceive2net 4_IN_EQ_MID1_GAIN 1130;
+#X obj 50 2340 NET/helper/sendreceive2net 4_IN_EQ_ON 1130;
+#X obj 50 2360 NET/helper/sendreceive2net 4_IN_AUX_4_DST 1130;
+#X obj 50 2380 NET/helper/sendreceive2net 4_IN_AUX_4_PRE 1130;
+#X obj 50 2400 NET/helper/sendreceive2net 4_IN_AUX_4_GAIN 1130;
+#X obj 50 2420 NET/helper/sendreceive2net 4_IN_AUX_3_DST 1130;
+#X obj 50 2440 NET/helper/sendreceive2net 4_IN_AUX_3_PRE 1130;
+#X obj 50 2460 NET/helper/sendreceive2net 4_IN_AUX_3_GAIN 1130;
+#X obj 50 2480 NET/helper/sendreceive2net 4_IN_AUX_2_DST 1130;
+#X obj 50 2500 NET/helper/sendreceive2net 4_IN_AUX_2_PRE 1130;
+#X obj 50 2520 NET/helper/sendreceive2net 4_IN_AUX_2_GAIN 1130;
+#X obj 50 2540 NET/helper/sendreceive2net 4_IN_AUX_1_DST 1130;
+#X obj 50 2560 NET/helper/sendreceive2net 4_IN_AUX_1_PRE 1130;
+#X obj 50 2580 NET/helper/sendreceive2net 4_IN_AUX_1_GAIN 1130;
+#X obj 50 2600 NET/helper/sendreceive2net 3_IN_SUB_GAIN 1130;
+#X obj 50 2620 NET/helper/sendreceive2net 3_IN_FADER_GAIN 1130;
+#X obj 50 2640 NET/helper/sendreceive2net 3_IN_VU_LEVEL 1130;
+#X obj 50 2660 NET/helper/sendreceive2net 3_IN_VU_SRC 1130;
+#X obj 50 2680 NET/helper/sendreceive2net 3_IN_SOLO 1130;
+#X obj 50 2700 NET/helper/sendreceive2net 3_IN_ON 1130;
+#X obj 50 2720 NET/helper/sendreceive2net 3_IN_SRC 1130;
+#X obj 50 2740 NET/helper/sendreceive2net 3_IN_PLUGIN4_ON 1130;
+#X obj 50 2760 NET/helper/sendreceive2net 3_IN_PLUGIN4_NAME 1130;
+#X obj 50 2780 NET/helper/sendreceive2net 3_IN_PLUGIN4_PARAMETERS 1130
+;
+#X obj 50 2800 NET/helper/sendreceive2net 3_IN_PLUGIN3_ON 1130;
+#X obj 50 2820 NET/helper/sendreceive2net 3_IN_PLUGIN3_NAME 1130;
+#X obj 50 2840 NET/helper/sendreceive2net 3_IN_PLUGIN3_PARAMETERS 1130
+;
+#X obj 50 2860 NET/helper/sendreceive2net 3_IN_PLUGIN2_ON 1130;
+#X obj 50 2880 NET/helper/sendreceive2net 3_IN_PLUGIN2_NAME 1130;
+#X obj 50 2900 NET/helper/sendreceive2net 3_IN_PLUGIN2_PARAMETERS 1130
+;
+#X obj 50 2920 NET/helper/sendreceive2net 3_IN_PLUGIN1_ON 1130;
+#X obj 50 2940 NET/helper/sendreceive2net 3_IN_PLUGIN1_NAME 1130;
+#X obj 50 2960 NET/helper/sendreceive2net 3_IN_PLUGIN1_PARAMETERS 1130
+;
+#X obj 50 2980 NET/helper/sendreceive2net 3_IN_BUS_16_GAIN 1130;
+#X obj 50 3000 NET/helper/sendreceive2net 3_IN_BUS_15_GAIN 1130;
+#X obj 50 3020 NET/helper/sendreceive2net 3_IN_BUS_14_GAIN 1130;
+#X obj 50 3040 NET/helper/sendreceive2net 3_IN_BUS_13_GAIN 1130;
+#X obj 50 3060 NET/helper/sendreceive2net 3_IN_BUS_12_GAIN 1130;
+#X obj 50 3080 NET/helper/sendreceive2net 3_IN_BUS_11_GAIN 1130;
+#X obj 50 3100 NET/helper/sendreceive2net 3_IN_BUS_10_GAIN 1130;
+#X obj 50 3120 NET/helper/sendreceive2net 3_IN_BUS_9_GAIN 1130;
+#X obj 50 3140 NET/helper/sendreceive2net 3_IN_BUS_8_GAIN 1130;
+#X obj 50 3160 NET/helper/sendreceive2net 3_IN_BUS_7_GAIN 1130;
+#X obj 50 3180 NET/helper/sendreceive2net 3_IN_BUS_6_GAIN 1130;
+#X obj 50 3200 NET/helper/sendreceive2net 3_IN_BUS_5_GAIN 1130;
+#X obj 50 3220 NET/helper/sendreceive2net 3_IN_BUS_4_GAIN 1130;
+#X obj 50 3240 NET/helper/sendreceive2net 3_IN_BUS_3_GAIN 1130;
+#X obj 50 3260 NET/helper/sendreceive2net 3_IN_BUS_2_GAIN 1130;
+#X obj 50 3280 NET/helper/sendreceive2net 3_IN_BUS_1_GAIN 1130;
+#X obj 50 3300 NET/helper/sendreceive2net 3_IN_AMBI_RAD 1130;
+#X obj 50 3320 NET/helper/sendreceive2net 3_IN_AMBI_AZM 1130;
+#X obj 50 3340 NET/helper/sendreceive2net 3_IN_AMBI_ELV 1130;
+#X obj 50 3360 NET/helper/sendreceive2net 3_IN_EQ_MID2_Q 1130;
+#X obj 50 3380 NET/helper/sendreceive2net 3_IN_EQ_LOW_TRANS_FREQ 1130
+;
+#X obj 50 3400 NET/helper/sendreceive2net 3_IN_EQ_LOW_GAIN 1130;
+#X obj 50 3420 NET/helper/sendreceive2net 3_IN_EQ_HIGH_TRANS_FREQ 1130
+;
+#X obj 50 3440 NET/helper/sendreceive2net 3_IN_EQ_LOWCUT_FREQ 1130
+;
+#X obj 50 3460 NET/helper/sendreceive2net 3_IN_EQ_HIGH_GAIN 1130;
+#X obj 50 3480 NET/helper/sendreceive2net 3_IN_EQ_HIGHCUT_FREQ 1130
+;
+#X obj 50 3500 NET/helper/sendreceive2net 3_IN_EQ_MID1_Q 1130;
+#X obj 50 3520 NET/helper/sendreceive2net 3_IN_EQ_HIGHCUT_ON 1130;
+#X obj 50 3540 NET/helper/sendreceive2net 3_IN_EQ_LOWCUT_ON 1130;
+#X obj 50 3560 NET/helper/sendreceive2net 3_IN_EQ_MID2_FREQ 1130;
+#X obj 50 3580 NET/helper/sendreceive2net 3_IN_EQ_MID2_GAIN 1130;
+#X obj 50 3600 NET/helper/sendreceive2net 3_IN_EQ_MID1_FREQ 1130;
+#X obj 50 3620 NET/helper/sendreceive2net 3_IN_EQ_MID1_GAIN 1130;
+#X obj 50 3640 NET/helper/sendreceive2net 3_IN_EQ_ON 1130;
+#X obj 50 3660 NET/helper/sendreceive2net 3_IN_AUX_4_DST 1130;
+#X obj 50 3680 NET/helper/sendreceive2net 3_IN_AUX_4_PRE 1130;
+#X obj 50 3700 NET/helper/sendreceive2net 3_IN_AUX_4_GAIN 1130;
+#X obj 50 3720 NET/helper/sendreceive2net 3_IN_AUX_3_DST 1130;
+#X obj 50 3740 NET/helper/sendreceive2net 3_IN_AUX_3_PRE 1130;
+#X obj 50 3760 NET/helper/sendreceive2net 3_IN_AUX_3_GAIN 1130;
+#X obj 50 3780 NET/helper/sendreceive2net 3_IN_AUX_2_DST 1130;
+#X obj 50 3800 NET/helper/sendreceive2net 3_IN_AUX_2_PRE 1130;
+#X obj 50 3820 NET/helper/sendreceive2net 3_IN_AUX_2_GAIN 1130;
+#X obj 50 3840 NET/helper/sendreceive2net 3_IN_AUX_1_DST 1130;
+#X obj 50 3860 NET/helper/sendreceive2net 3_IN_AUX_1_PRE 1130;
+#X obj 50 3880 NET/helper/sendreceive2net 3_IN_AUX_1_GAIN 1130;
+#X obj 50 3900 NET/helper/sendreceive2net 2_IN_SUB_GAIN 1130;
+#X obj 50 3920 NET/helper/sendreceive2net 2_IN_FADER_GAIN 1130;
+#X obj 50 3940 NET/helper/sendreceive2net 2_IN_VU_LEVEL 1130;
+#X obj 50 3960 NET/helper/sendreceive2net 2_IN_VU_SRC 1130;
+#X obj 50 3980 NET/helper/sendreceive2net 2_IN_SOLO 1130;
+#X obj 50 4000 NET/helper/sendreceive2net 2_IN_ON 1130;
+#X obj 50 4020 NET/helper/sendreceive2net 2_IN_SRC 1130;
+#X obj 50 4040 NET/helper/sendreceive2net 2_IN_PLUGIN4_ON 1130;
+#X obj 50 4060 NET/helper/sendreceive2net 2_IN_PLUGIN4_NAME 1130;
+#X obj 50 4080 NET/helper/sendreceive2net 2_IN_PLUGIN4_PARAMETERS 1130
+;
+#X obj 50 4100 NET/helper/sendreceive2net 2_IN_PLUGIN3_ON 1130;
+#X obj 50 4120 NET/helper/sendreceive2net 2_IN_PLUGIN3_NAME 1130;
+#X obj 50 4140 NET/helper/sendreceive2net 2_IN_PLUGIN3_PARAMETERS 1130
+;
+#X obj 50 4160 NET/helper/sendreceive2net 2_IN_PLUGIN2_ON 1130;
+#X obj 50 4180 NET/helper/sendreceive2net 2_IN_PLUGIN2_NAME 1130;
+#X obj 50 4200 NET/helper/sendreceive2net 2_IN_PLUGIN2_PARAMETERS 1130
+;
+#X obj 50 4220 NET/helper/sendreceive2net 2_IN_PLUGIN1_ON 1130;
+#X obj 50 4240 NET/helper/sendreceive2net 2_IN_PLUGIN1_NAME 1130;
+#X obj 50 4260 NET/helper/sendreceive2net 2_IN_PLUGIN1_PARAMETERS 1130
+;
+#X obj 50 4280 NET/helper/sendreceive2net 2_IN_BUS_16_GAIN 1130;
+#X obj 50 4300 NET/helper/sendreceive2net 2_IN_BUS_15_GAIN 1130;
+#X obj 50 4320 NET/helper/sendreceive2net 2_IN_BUS_14_GAIN 1130;
+#X obj 50 4340 NET/helper/sendreceive2net 2_IN_BUS_13_GAIN 1130;
+#X obj 50 4360 NET/helper/sendreceive2net 2_IN_BUS_12_GAIN 1130;
+#X obj 50 4380 NET/helper/sendreceive2net 2_IN_BUS_11_GAIN 1130;
+#X obj 50 4400 NET/helper/sendreceive2net 2_IN_BUS_10_GAIN 1130;
+#X obj 50 4420 NET/helper/sendreceive2net 2_IN_BUS_9_GAIN 1130;
+#X obj 50 4440 NET/helper/sendreceive2net 2_IN_BUS_8_GAIN 1130;
+#X obj 50 4460 NET/helper/sendreceive2net 2_IN_BUS_7_GAIN 1130;
+#X obj 50 4480 NET/helper/sendreceive2net 2_IN_BUS_6_GAIN 1130;
+#X obj 50 4500 NET/helper/sendreceive2net 2_IN_BUS_5_GAIN 1130;
+#X obj 50 4520 NET/helper/sendreceive2net 2_IN_BUS_4_GAIN 1130;
+#X obj 50 4540 NET/helper/sendreceive2net 2_IN_BUS_3_GAIN 1130;
+#X obj 50 4560 NET/helper/sendreceive2net 2_IN_BUS_2_GAIN 1130;
+#X obj 50 4580 NET/helper/sendreceive2net 2_IN_BUS_1_GAIN 1130;
+#X obj 50 4600 NET/helper/sendreceive2net 2_IN_AMBI_RAD 1130;
+#X obj 50 4620 NET/helper/sendreceive2net 2_IN_AMBI_AZM 1130;
+#X obj 50 4640 NET/helper/sendreceive2net 2_IN_AMBI_ELV 1130;
+#X obj 50 4660 NET/helper/sendreceive2net 2_IN_EQ_MID2_Q 1130;
+#X obj 50 4680 NET/helper/sendreceive2net 2_IN_EQ_LOW_TRANS_FREQ 1130
+;
+#X obj 50 4700 NET/helper/sendreceive2net 2_IN_EQ_LOW_GAIN 1130;
+#X obj 50 4720 NET/helper/sendreceive2net 2_IN_EQ_HIGH_TRANS_FREQ 1130
+;
+#X obj 50 4740 NET/helper/sendreceive2net 2_IN_EQ_LOWCUT_FREQ 1130
+;
+#X obj 50 4760 NET/helper/sendreceive2net 2_IN_EQ_HIGH_GAIN 1130;
+#X obj 50 4780 NET/helper/sendreceive2net 2_IN_EQ_HIGHCUT_FREQ 1130
+;
+#X obj 50 4800 NET/helper/sendreceive2net 2_IN_EQ_MID1_Q 1130;
+#X obj 50 4820 NET/helper/sendreceive2net 2_IN_EQ_HIGHCUT_ON 1130;
+#X obj 50 4840 NET/helper/sendreceive2net 2_IN_EQ_LOWCUT_ON 1130;
+#X obj 50 4860 NET/helper/sendreceive2net 2_IN_EQ_MID2_FREQ 1130;
+#X obj 50 4880 NET/helper/sendreceive2net 2_IN_EQ_MID2_GAIN 1130;
+#X obj 50 4900 NET/helper/sendreceive2net 2_IN_EQ_MID1_FREQ 1130;
+#X obj 50 4920 NET/helper/sendreceive2net 2_IN_EQ_MID1_GAIN 1130;
+#X obj 50 4940 NET/helper/sendreceive2net 2_IN_EQ_ON 1130;
+#X obj 50 4960 NET/helper/sendreceive2net 2_IN_AUX_4_DST 1130;
+#X obj 50 4980 NET/helper/sendreceive2net 2_IN_AUX_4_PRE 1130;
+#X obj 50 5000 NET/helper/sendreceive2net 2_IN_AUX_4_GAIN 1130;
+#X obj 50 5020 NET/helper/sendreceive2net 2_IN_AUX_3_DST 1130;
+#X obj 50 5040 NET/helper/sendreceive2net 2_IN_AUX_3_PRE 1130;
+#X obj 50 5060 NET/helper/sendreceive2net 2_IN_AUX_3_GAIN 1130;
+#X obj 50 5080 NET/helper/sendreceive2net 2_IN_AUX_2_DST 1130;
+#X obj 50 5100 NET/helper/sendreceive2net 2_IN_AUX_2_PRE 1130;
+#X obj 50 5120 NET/helper/sendreceive2net 2_IN_AUX_2_GAIN 1130;
+#X obj 50 5140 NET/helper/sendreceive2net 2_IN_AUX_1_DST 1130;
+#X obj 50 5160 NET/helper/sendreceive2net 2_IN_AUX_1_PRE 1130;
+#X obj 50 5180 NET/helper/sendreceive2net 2_IN_AUX_1_GAIN 1130;
+#X obj 50 5200 NET/helper/sendreceive2net 1_IN_SUB_GAIN 1130;
+#X obj 50 5220 NET/helper/sendreceive2net 1_IN_FADER_GAIN 1130;
+#X obj 50 5240 NET/helper/sendreceive2net 1_IN_VU_LEVEL 1130;
+#X obj 50 5260 NET/helper/sendreceive2net 1_IN_VU_SRC 1130;
+#X obj 50 5280 NET/helper/sendreceive2net 1_IN_SOLO 1130;
+#X obj 50 5300 NET/helper/sendreceive2net 1_IN_ON 1130;
+#X obj 50 5320 NET/helper/sendreceive2net 1_IN_SRC 1130;
+#X obj 50 5340 NET/helper/sendreceive2net 1_IN_PLUGIN4_ON 1130;
+#X obj 50 5360 NET/helper/sendreceive2net 1_IN_PLUGIN4_NAME 1130;
+#X obj 50 5380 NET/helper/sendreceive2net 1_IN_PLUGIN4_PARAMETERS 1130
+;
+#X obj 50 5400 NET/helper/sendreceive2net 1_IN_PLUGIN3_ON 1130;
+#X obj 50 5420 NET/helper/sendreceive2net 1_IN_PLUGIN3_NAME 1130;
+#X obj 50 5440 NET/helper/sendreceive2net 1_IN_PLUGIN3_PARAMETERS 1130
+;
+#X obj 50 5460 NET/helper/sendreceive2net 1_IN_PLUGIN2_ON 1130;
+#X obj 50 5480 NET/helper/sendreceive2net 1_IN_PLUGIN2_NAME 1130;
+#X obj 50 5500 NET/helper/sendreceive2net 1_IN_PLUGIN2_PARAMETERS 1130
+;
+#X obj 50 5520 NET/helper/sendreceive2net 1_IN_PLUGIN1_ON 1130;
+#X obj 50 5540 NET/helper/sendreceive2net 1_IN_PLUGIN1_NAME 1130;
+#X obj 50 5560 NET/helper/sendreceive2net 1_IN_PLUGIN1_PARAMETERS 1130
+;
+#X obj 50 5580 NET/helper/sendreceive2net 1_IN_BUS_16_GAIN 1130;
+#X obj 50 5600 NET/helper/sendreceive2net 1_IN_BUS_15_GAIN 1130;
+#X obj 50 5620 NET/helper/sendreceive2net 1_IN_BUS_14_GAIN 1130;
+#X obj 50 5640 NET/helper/sendreceive2net 1_IN_BUS_13_GAIN 1130;
+#X obj 50 5660 NET/helper/sendreceive2net 1_IN_BUS_12_GAIN 1130;
+#X obj 50 5680 NET/helper/sendreceive2net 1_IN_BUS_11_GAIN 1130;
+#X obj 50 5700 NET/helper/sendreceive2net 1_IN_BUS_10_GAIN 1130;
+#X obj 50 5720 NET/helper/sendreceive2net 1_IN_BUS_9_GAIN 1130;
+#X obj 50 5740 NET/helper/sendreceive2net 1_IN_BUS_8_GAIN 1130;
+#X obj 50 5760 NET/helper/sendreceive2net 1_IN_BUS_7_GAIN 1130;
+#X obj 50 5780 NET/helper/sendreceive2net 1_IN_BUS_6_GAIN 1130;
+#X obj 50 5800 NET/helper/sendreceive2net 1_IN_BUS_5_GAIN 1130;
+#X obj 50 5820 NET/helper/sendreceive2net 1_IN_BUS_4_GAIN 1130;
+#X obj 50 5840 NET/helper/sendreceive2net 1_IN_BUS_3_GAIN 1130;
+#X obj 50 5860 NET/helper/sendreceive2net 1_IN_BUS_2_GAIN 1130;
+#X obj 50 5880 NET/helper/sendreceive2net 1_IN_BUS_1_GAIN 1130;
+#X obj 50 5900 NET/helper/sendreceive2net 1_IN_AMBI_RAD 1130;
+#X obj 50 5920 NET/helper/sendreceive2net 1_IN_AMBI_AZM 1130;
+#X obj 50 5940 NET/helper/sendreceive2net 1_IN_AMBI_ELV 1130;
+#X obj 50 5960 NET/helper/sendreceive2net 1_IN_EQ_MID2_Q 1130;
+#X obj 50 5980 NET/helper/sendreceive2net 1_IN_EQ_LOW_TRANS_FREQ 1130
+;
+#X obj 50 6000 NET/helper/sendreceive2net 1_IN_EQ_LOW_GAIN 1130;
+#X obj 50 6020 NET/helper/sendreceive2net 1_IN_EQ_HIGH_TRANS_FREQ 1130
+;
+#X obj 50 6040 NET/helper/sendreceive2net 1_IN_EQ_LOWCUT_FREQ 1130
+;
+#X obj 50 6060 NET/helper/sendreceive2net 1_IN_EQ_HIGH_GAIN 1130;
+#X obj 50 6080 NET/helper/sendreceive2net 1_IN_EQ_HIGHCUT_FREQ 1130
+;
+#X obj 50 6100 NET/helper/sendreceive2net 1_IN_EQ_MID1_Q 1130;
+#X obj 50 6120 NET/helper/sendreceive2net 1_IN_EQ_HIGHCUT_ON 1130;
+#X obj 50 6140 NET/helper/sendreceive2net 1_IN_EQ_LOWCUT_ON 1130;
+#X obj 50 6160 NET/helper/sendreceive2net 1_IN_EQ_MID2_FREQ 1130;
+#X obj 50 6180 NET/helper/sendreceive2net 1_IN_EQ_MID2_GAIN 1130;
+#X obj 50 6200 NET/helper/sendreceive2net 1_IN_EQ_MID1_FREQ 1130;
+#X obj 50 6220 NET/helper/sendreceive2net 1_IN_EQ_MID1_GAIN 1130;
+#X obj 50 6240 NET/helper/sendreceive2net 1_IN_EQ_ON 1130;
+#X obj 50 6260 NET/helper/sendreceive2net 1_IN_AUX_4_DST 1130;
+#X obj 50 6280 NET/helper/sendreceive2net 1_IN_AUX_4_PRE 1130;
+#X obj 50 6300 NET/helper/sendreceive2net 1_IN_AUX_4_GAIN 1130;
+#X obj 50 6320 NET/helper/sendreceive2net 1_IN_AUX_3_DST 1130;
+#X obj 50 6340 NET/helper/sendreceive2net 1_IN_AUX_3_PRE 1130;
+#X obj 50 6360 NET/helper/sendreceive2net 1_IN_AUX_3_GAIN 1130;
+#X obj 50 6380 NET/helper/sendreceive2net 1_IN_AUX_2_DST 1130;
+#X obj 50 6400 NET/helper/sendreceive2net 1_IN_AUX_2_PRE 1130;
+#X obj 50 6420 NET/helper/sendreceive2net 1_IN_AUX_2_GAIN 1130;
+#X obj 50 6440 NET/helper/sendreceive2net 1_IN_AUX_1_DST 1130;
+#X obj 50 6460 NET/helper/sendreceive2net 1_IN_AUX_1_PRE 1130;
+#X obj 50 6480 NET/helper/sendreceive2net 1_IN_AUX_1_GAIN 1130;
+#X obj 50 6500 NET/helper/sendreceive2net 1_IN_PLUGIN1 1130;
+#X obj 50 6520 NET/helper/sendreceive2net DSP_getLabels 1130;
+#X obj 50 6540 NET/helper/sendreceive2net DSP_setLabel 1130;
+#X obj 50 6560 NET/helper/sendreceive2net DSP_CPU 1130;
+#X obj 50 6580 NET/helper/sendreceive2net DSP 1130;
+#X obj 50 6600 NET/helper/sendreceive2net OUT_MASTER_GAIN 1130;
+#X obj 50 6620 NET/helper/sendreceive2net 2_OUT_LFC_HIGHCUT_FREQ 1130
+;
+#X obj 50 6640 NET/helper/sendreceive2net 2_OUT_LFC_GAIN 1130;
+#X obj 50 6660 NET/helper/sendreceive2net 1_OUT_LFC_HIGHCUT_FREQ 1130
+;
+#X obj 50 6680 NET/helper/sendreceive2net 1_OUT_LFC_GAIN 1130;
+#X obj 50 6700 NET/helper/sendreceive2net OUT_AMBI_ROT_Z 1130;
+#X obj 50 6720 NET/helper/sendreceive2net 1068GUI_4_AMBIWEIGHT 1130
+;
+#X obj 50 6740 NET/helper/sendreceive2net 1068GUI_3_AMBIWEIGHT 1130
+;
+#X obj 50 6760 NET/helper/sendreceive2net 1068GUI_2_AMBIWEIGHT 1130
+;
+#X obj 50 6780 NET/helper/sendreceive2net 1068GUI_1_AMBIWEIGHT 1130
+;
+#X obj 50 6800 NET/helper/sendreceive2net AMBI_ORDER_WEIGHT 1130;
+#X obj 50 6820 NET/helper/sendreceive2net 1068GUI_0_AMBIWEIGHT 1130
+;
+#X obj 50 6840 NET/helper/sendreceive2net OUT_AMBI_GAIN 1130;
+#X obj 50 6860 NET/helper/sendreceive2net BUS_ROUTE 1130;
+#X obj 50 6880 NET/helper/sendreceive2net 16_OUT_BUS_GAIN 1130;
+#X obj 50 6900 NET/helper/sendreceive2net 15_OUT_BUS_GAIN 1130;
+#X obj 50 6920 NET/helper/sendreceive2net 14_OUT_BUS_GAIN 1130;
+#X obj 50 6940 NET/helper/sendreceive2net 13_OUT_BUS_GAIN 1130;
+#X obj 50 6960 NET/helper/sendreceive2net 12_OUT_BUS_GAIN 1130;
+#X obj 50 6980 NET/helper/sendreceive2net 11_OUT_BUS_GAIN 1130;
+#X obj 50 7000 NET/helper/sendreceive2net 10_OUT_BUS_GAIN 1130;
+#X obj 50 7020 NET/helper/sendreceive2net 9_OUT_BUS_GAIN 1130;
+#X obj 50 7040 NET/helper/sendreceive2net 8_OUT_BUS_GAIN 1130;
+#X obj 50 7060 NET/helper/sendreceive2net 7_OUT_BUS_GAIN 1130;
+#X obj 50 7080 NET/helper/sendreceive2net 6_OUT_BUS_GAIN 1130;
+#X obj 50 7100 NET/helper/sendreceive2net 5_OUT_BUS_GAIN 1130;
+#X obj 50 7120 NET/helper/sendreceive2net 4_OUT_BUS_GAIN 1130;
+#X obj 50 7140 NET/helper/sendreceive2net 3_OUT_BUS_GAIN 1130;
+#X obj 50 7160 NET/helper/sendreceive2net 2_OUT_BUS_GAIN 1130;
+#X obj 50 7180 NET/helper/sendreceive2net 1_OUT_BUS_GAIN 1130;
 #X restore 318 326 pd \$0-netsendreceive;
 #X text 373 24 [netsendreceive <sendhost> <sendport> <receiveport>]
 ;
@@ -36,7 +442,7 @@
 #X restore 74 256 pd repeat;
 #X obj 152 258 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
-#N canvas 0 0 637 585 createur 0;
+#N canvas 452 103 637 585 createur 0;
 #X obj 107 55 inlet;
 #X obj 159 132 makefilename pd-%d-netsendreceive;
 #X obj 129 461 iem_s;
@@ -84,27 +490,28 @@
 #X text 246 41 reset;
 #X text 114 52 doit;
 #X text 168 49 names;
-#X obj 168 139 index;
-#X msg 238 122 reset;
-#X obj 238 97 t b;
+#X obj 238 92 t b;
 #X msg 168 102 add \$1;
 #X msg 109 116 dump;
 #X obj 168 170 relay list;
 #X msg 168 190 symbol \$1;
 #X obj 109 92 t b;
-#X connect 0 0 14 0;
-#X connect 1 0 10 0;
-#X connect 2 0 9 0;
-#X connect 7 0 12 0;
-#X connect 8 0 7 0;
-#X connect 9 0 8 0;
-#X connect 10 0 7 0;
-#X connect 11 0 7 0;
-#X connect 12 0 13 0;
-#X connect 13 0 3 0;
-#X connect 14 0 11 0;
+#X msg 238 117 reset;
+#X obj 168 139 index 100 1;
+#X connect 0 0 12 0;
+#X connect 1 0 8 0;
+#X connect 2 0 7 0;
+#X connect 7 0 13 0;
+#X connect 8 0 14 0;
+#X connect 9 0 14 0;
+#X connect 10 0 11 0;
+#X connect 11 0 3 0;
+#X connect 12 0 9 0;
+#X connect 13 0 14 0;
+#X connect 14 0 10 0;
 #X restore 137 272 pd names;
-#X obj 107 173 t b b b b;
+#X msg 173 58 bang;
+#X obj 107 173 t b b b b b;
 #X connect 0 0 13 0;
 #X connect 1 0 3 0;
 #X connect 3 0 2 1;
@@ -117,7 +524,7 @@
 #X connect 10 0 6 1;
 #X connect 11 0 6 0;
 #X connect 12 0 1 0;
-#X connect 13 0 18 0;
+#X connect 13 0 19 0;
 #X connect 13 1 12 0;
 #X connect 14 0 15 0;
 #X connect 14 1 10 0;
@@ -125,14 +532,17 @@
 #X connect 16 0 14 0;
 #X connect 16 1 17 0;
 #X connect 17 0 11 0;
-#X connect 18 0 16 0;
-#X connect 18 1 4 0;
-#X connect 18 2 8 0;
-#X connect 18 3 17 2;
+#X connect 18 0 13 0;
+#X connect 19 0 16 0;
+#X connect 19 1 4 0;
+#X connect 19 2 8 0;
+#X connect 19 3 17 2;
+#X connect 19 4 11 1;
 #X restore 318 292 pd createur;
 #X obj 280 33 loadbang;
 #X obj 280 61 t b b b b;
 #X msg 350 266 bang;
+#X obj 128 301 print netsend;
 #X connect 0 1 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
@@ -147,6 +557,7 @@
 #X connect 10 1 12 0;
 #X connect 10 2 9 1;
 #X connect 11 0 6 0;
+#X connect 11 0 26 0;
 #X connect 12 0 9 0;
 #X connect 13 0 17 0;
 #X connect 14 0 8 1;
