@@ -6,8 +6,10 @@
 #X msg 416 130 AUX;
 #X obj 381 45 r GUI_dspNames;
 #X obj 381 77 t b b;
+#X obj 162 30 r GUInet_init;
 #X connect 3 0 2 0;
 #X connect 4 0 2 0;
 #X connect 5 0 6 0;
 #X connect 6 0 3 0;
 #X connect 6 1 4 0;
+#X connect 7 0 0 0;
