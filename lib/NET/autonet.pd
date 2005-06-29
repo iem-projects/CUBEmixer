@@ -539,10 +539,10 @@
 #X connect 19 3 17 2;
 #X connect 19 4 11 1;
 #X restore 318 292 pd createur;
-#X obj 280 33 loadbang;
 #X obj 280 61 t b b b b;
 #X msg 350 266 bang;
 #X obj 128 301 print netsend;
+#X obj 280 33 inlet;
 #X connect 0 1 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
@@ -557,7 +557,7 @@
 #X connect 10 1 12 0;
 #X connect 10 2 9 1;
 #X connect 11 0 6 0;
-#X connect 11 0 26 0;
+#X connect 11 0 25 0;
 #X connect 12 0 9 0;
 #X connect 13 0 17 0;
 #X connect 14 0 8 1;
@@ -566,8 +566,8 @@
 #X connect 19 0 0 0;
 #X connect 20 0 17 0;
 #X connect 21 0 20 1;
-#X connect 23 0 24 0;
-#X connect 24 0 13 0;
-#X connect 24 2 22 0;
-#X connect 24 3 14 0;
-#X connect 25 0 22 0;
+#X connect 23 0 13 0;
+#X connect 23 2 22 0;
+#X connect 23 3 14 0;
+#X connect 24 0 22 0;
+#X connect 26 0 23 0;
