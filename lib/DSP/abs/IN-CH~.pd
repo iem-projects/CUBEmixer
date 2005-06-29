@@ -1,5 +1,5 @@
-#N canvas 96 22 813 706 10;
-#N canvas 6 3 785 715 ambi_enc 0;
+#N canvas 344 19 821 714 10;
+#N canvas 6 3 793 718 ambi_enc 0;
 #X obj 43 76 inlet~;
 #X obj 63 268 ambi_encode 4;
 #X obj 63 289 pp col 1;
@@ -1758,9 +1758,9 @@
 #X restore 46 513 pd 8_aux_sends_post;
 #X obj 60 22 inlet~;
 #X obj 47 615 outlet~;
-#N canvas 126 54 735 718 16_bus_sends_post 0;
+#N canvas 126 54 743 718 16_bus_sends_post 0;
 #X obj 34 25 inlet~;
-#N canvas 0 0 354 380 bus_send_post 0;
+#N canvas 0 0 358 384 bus_send_post 0;
 #X obj 30 48 inlet~;
 #X obj 86 131 t f f;
 #X obj 111 153 > 0;
@@ -2369,7 +2369,7 @@
 #X connect 20 0 17 1;
 #X connect 20 0 18 0;
 #X restore 83 380 pd bus_send_post 15;
-#N canvas 0 0 354 380 bus_send_post 0;
+#N canvas 0 0 358 384 bus_send_post 0;
 #X obj 30 48 inlet~;
 #X obj 86 131 t f f;
 #X obj 111 153 > 0;
@@ -2479,7 +2479,7 @@
 #X connect 15 0 13 1;
 #X connect 15 0 14 0;
 #X restore 342 586 pd low_freq_ch;
-#N canvas 0 0 629 431 spat_mode 0;
+#N canvas 0 0 637 439 spat_mode 0;
 #X obj 63 246 outlet;
 #X obj 159 247 outlet;
 #X msg 58 216 0;
@@ -2496,6 +2496,8 @@
 #X text 152 274 1:direct;
 #X text 256 272 2:pan;
 #X obj 62 138 sel 0 1 2;
+#X obj 29 42 loadbang;
+#X msg 29 63 0;
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;
 #X connect 4 0 1 0;
@@ -2515,6 +2517,8 @@
 #X connect 15 2 8 0;
 #X connect 15 2 2 0;
 #X connect 15 2 4 0;
+#X connect 16 0 17 0;
+#X connect 17 0 15 0;
 #X restore 307 485 pd spat_mode AMBI DIRECT PAN;
 #X text 157 105 52_ADC \, 1_AUX_RET \, 8_AUX_RET;
 #X obj 538 366 prvu~;
