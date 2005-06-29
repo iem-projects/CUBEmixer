@@ -1,0 +1,36 @@
+#N canvas 285 42 720 419 10;
+#X msg 94 158 set \$1;
+#X obj 94 139 l2s;
+#X obj 94 248 pp send \$1;
+#X obj 94 99 t b b;
+#X obj 173 119 symbol _;
+#X obj 190 79 loadbang;
+#X obj 94 119 l \$2NET \$1;
+#X obj 94 227 sendreceive \$1;
+#X obj 94 195 iem_r \$2NET_$1;
+#X text 28 10 [sendreceive2netsend]:: [receive] -> [netsend];
+#X text 336 92 create like: [sendreceive2netsend MAIN_GAIN \$0];
+#X text 287 131 this will receive things at "MAIN_GAIN" \,;
+#X text 288 148 and send a string "send MAIN_GAIN <args>" to "$0NET_tonetsend"
+(where it can be fed directly into a [netsend]);
+#X text 289 204 additionally it will receive things on "$0NET_MAIN_GAIN"
+and forward it to "MAIN_GAIN" \; useful in combination with [netreceive]
+;
+#X text 288 258 note: to use this abstraction with dynamic patching
+\, send a "bang" to "$0NET_init" \, in order to initialize the additional
+receiver;
+#X text 53 344 (c) IOhannes m zmoelnig \, IEM 2005;
+#X text 95 362 published under GnuGPLv2.0;
+#X obj 94 269 s \$2NET_tonetsend;
+#X obj 94 78 r \$2NET_init;
+#X connect 0 0 8 0;
+#X connect 1 0 0 0;
+#X connect 2 0 17 0;
+#X connect 3 0 6 0;
+#X connect 3 1 4 0;
+#X connect 4 0 1 1;
+#X connect 5 0 3 0;
+#X connect 6 0 1 0;
+#X connect 7 0 2 0;
+#X connect 8 0 7 0;
+#X connect 18 0 3 0;
