@@ -33,9 +33,9 @@
 #X obj 741 560 makefilename %d_compensation_del_gain;
 #X obj 586 244 t b f;
 #X obj 766 233 print compensation;
-#X obj 306 197 r OUT_MASTER_GAIN;
 #X obj 306 219 dbtorms;
 #X obj 306 242 s lin_OUT_MASTER_GAIN;
+#X obj 306 197 sendreceive OUT_MASTER_GAIN;
 #X obj 50 100 catch_out_2_dac~ 2;
 #X obj 50 120 catch_out_2_dac~ 3;
 #X obj 50 140 catch_out_2_dac~ 4;
@@ -112,4 +112,4 @@
 #X connect 26 0 24 0;
 #X connect 26 1 25 0;
 #X connect 28 0 29 0;
-#X connect 29 0 30 0;
+#X connect 30 0 28 0;
