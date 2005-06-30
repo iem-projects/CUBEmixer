@@ -1,4 +1,4 @@
-#N canvas 105 0 932 714 10;
+#N canvas 105 0 936 718 10;
 #N canvas 0 0 490 340 null~ 0;
 #X obj 68 54 catch~ 0_BUS;
 #X obj 68 88 throw~ 0_OUT;
