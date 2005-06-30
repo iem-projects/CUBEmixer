@@ -5,7 +5,7 @@
 #X obj 262 182 dsp;
 #X obj 262 207 pack;
 #X obj 262 236 sendreceive DSP_CPU;
-#X obj 162 71 autonet localhost 6667 6666;
+#X obj 165 60 autonet localhost 6667 6666;
 #X floatatom 172 185 5 0 0 0 - - -;
 #X obj 436 60 sendreceive DSP_getLabels;
 #X obj 458 165 s DSP_getLabel;
