@@ -71,6 +71,9 @@ bus-routing-matrix::
 BUS_ROUTE: matrix 16 52 .... (werte in MIDI-db)
            element n m gain
 
+$1_OUT_LFC_BUS_DST:  OUT-Destination fuer subwoofer-kanal 1(1..2)
+    (1_OUT .. 52_OUT)
+
 
 Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine Knackser.
   (fuer mehrere Module)
