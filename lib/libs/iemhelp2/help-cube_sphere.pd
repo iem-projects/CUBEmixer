@@ -1156,6 +1156,8 @@
 #X text 763 289 source 5;
 #X text 760 336 azimuth;
 #X text 696 329 elevation;
+#X floatatom 368 20 5 2 30 0 - - -;
+#X msg 368 40 \; to_GUI nr_src \$1;
 #X connect 0 0 21 0;
 #X connect 1 0 23 0;
 #X connect 2 0 3 0;
@@ -1202,3 +1204,4 @@
 #X connect 58 1 57 0;
 #X connect 62 0 60 0;
 #X connect 62 1 61 0;
+#X connect 70 0 71 0;

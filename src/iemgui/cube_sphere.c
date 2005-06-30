@@ -28,6 +28,8 @@ iemgui written by Thomas Musil, Copyright (c) IEM KUG Graz Austria 2000 - 2005 *
 #include "iemlib.h"
 #include "iemgui.h"
 
+#define IEMGUI_CUBE_SPHERE_MAX 100
+
 /* ---------- cube_sphere	my gui-canvas for a window ---------------- */
 
 t_widgetbehavior cube_sphere_widgetbehavior;
@@ -38,9 +40,9 @@ typedef struct _cube_sphere
 	t_iemgui	x_gui;
 	int				x_fontsize;
 	int				x_n_src;
-	int				x_pix_src_x[300];
-	int				x_pix_src_y[300];
-	int				x_col_src[300];
+	int				x_pix_src_x[IEMGUI_CUBE_SPHERE_MAX];
+	int				x_pix_src_y[IEMGUI_CUBE_SPHERE_MAX];
+	int				x_col_src[IEMGUI_CUBE_SPHERE_MAX];
 	int				x_pos_x;
 	int				x_pos_y;
 	float			x_pos_dx;
@@ -537,6 +539,30 @@ static void cube_sphere_src_col(t_cube_sphere *x, t_symbol *s, int argc, t_atom 
 	}
 }
 
+static void cube_sphere_nr_src(t_cube_sphere *x, t_floatarg fnr_src)
+{
+	int n=(int)fnr_src;
+	int i, j, k;
+
+	if(n < 1)
+		n = 1;
+	if(n > IEMGUI_CUBE_SPHERE_MAX)
+		n = IEMGUI_CUBE_SPHERE_MAX;
+	if(n != x->x_n_src)
+	{
+		(*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_ERASE);
+		j = x->x_n_src;
+		x->x_n_src = n;
+		for(i=j+1; i<=n; i++)
+		{
+			x->x_col_src[i] = x->x_col_src[j];
+			x->x_pix_src_x[i] = x->x_pix_src_x[j];
+			x->x_pix_src_y[i] = x->x_pix_src_y[j];
+		}
+		(*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_NEW);
+	}
+}
+
 static void *cube_sphere_new(t_symbol *s, int argc, t_atom *argv)
 {
 	t_cube_sphere *x = (t_cube_sphere *)pd_new(cube_sphere_class);
@@ -547,8 +573,8 @@ static void *cube_sphere_new(t_symbol *s, int argc, t_atom *argv)
 		n = (int)atom_getintarg(0, argc, argv);
 		if(n < 1)
 			n = 1;
-		if(n > 300)
-			n = 300;
+		if(n > IEMGUI_CUBE_SPHERE_MAX)
+			n = IEMGUI_CUBE_SPHERE_MAX;
 		x->x_n_src = n;
 	}
 	if(argc == (3*n + 5))
@@ -617,6 +643,7 @@ void cube_sphere_setup(void)
 	class_addmethod(cube_sphere_class, (t_method)cube_sphere_src_dp, gensym("src_dp"), A_GIMME, 0);
 	class_addmethod(cube_sphere_class, (t_method)cube_sphere_size, gensym("size"), A_DEFFLOAT, 0);
 	class_addmethod(cube_sphere_class, (t_method)cube_sphere_src_font, gensym("src_font"), A_DEFFLOAT, 0);
+	class_addmethod(cube_sphere_class, (t_method)cube_sphere_nr_src, gensym("nr_src"), A_DEFFLOAT, 0);
 
 /*	if(!iemgui_key_sym2)
 			iemgui_key_sym2 = gensym("#keyname");*/
