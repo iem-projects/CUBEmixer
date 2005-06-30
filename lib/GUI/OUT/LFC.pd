@@ -6,16 +6,17 @@
 #N canvas 0 48 734 558 code 0;
 #X obj 67 73 OUT/LFC/helper/sr \$0GUIout_sub1 1;
 #X obj 67 93 OUT/LFC/helper/sr \$0GUIout_sub2 2;
+#X obj 232 119 1_OUT_LFC_BUS_DEST;
 #X restore 37 5 pd code;
 #X obj 16 46 vsl 15 131 0 130 0 0 \$0GUIout_sub1_gain \$0GUIout_sub1_gain
 -inf -5 140 0 8 -245568 -1 -1 0 1;
 #X obj 3 25 nbx 3 14 20 999 1 0 \$0GUIout_sub1_freq_fromgui \$0GUIout_sub1_freq_togui
-empty 0 0 0 8 -187584 -166441 -166441 999 256;
+empty 0 0 0 8 -187584 -166441 -166441 23.66 256;
 #X obj 46 54 vfad_scale -1;
 #X obj 70 91 cnv 2 18 2 empty empty empty 20 12 0 14 -33289 -66577
 0;
 #X obj 69 46 vsl 15 131 0 130 0 0 \$0GUIout_sub2_gain \$0GUIout_sub2_gain
 -inf -5 140 0 8 -245568 -1 -1 0 1;
 #X obj 58 25 nbx 3 14 20 999 1 0 \$0GUIout_sub2_freq_fromgui \$0GUIout_sub2_freq_togui
-empty 0 0 0 8 -187584 -166441 -166441 91 256;
+empty 0 0 0 8 -187584 -166441 -166441 20 256;
 #X coords 0 0 1 1 65 200 1;
