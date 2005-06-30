@@ -15,6 +15,7 @@
 #X obj 431 234 sendreceive DSP_setLabel;
 #X obj 428 198 send DSP_setLabel;
 #X msg 428 141 \$1 bang;
+#X obj 165 32 inlet;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 2 0 7 0;
@@ -28,3 +29,4 @@
 #X connect 12 1 9 0;
 #X connect 12 2 11 0;
 #X connect 15 0 14 0;
+#X connect 16 0 6 0;
