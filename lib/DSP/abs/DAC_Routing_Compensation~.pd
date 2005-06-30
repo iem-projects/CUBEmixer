@@ -33,7 +33,6 @@
 #X obj 586 244 t b f;
 #X obj 766 233 print compensation;
 #X obj 306 219 dbtorms;
-#X obj 306 197 sendreceive OUT_MASTER_GAIN;
 #X obj 50 80 catch_out_2_dac~ 1 \$0;
 #X obj 50 100 catch_out_2_dac~ 2 \$0;
 #X obj 50 120 catch_out_2_dac~ 3 \$0;
@@ -87,6 +86,7 @@
 #X obj 50 1080 catch_out_2_dac~ 51 \$0;
 #X obj 50 1100 catch_out_2_dac~ 52 \$0;
 #X obj 306 240 s \$0lin_OUT_MASTER_GAIN;
+#X obj 306 197 receive_regname OUT_MASTER_GAIN;
 #X connect 1 0 7 0;
 #X connect 2 0 21 0;
 #X connect 3 0 2 0;
@@ -111,5 +111,5 @@
 #X connect 24 0 8 0;
 #X connect 25 0 23 0;
 #X connect 25 1 24 0;
-#X connect 27 0 81 0;
-#X connect 28 0 27 0;
+#X connect 27 0 80 0;
+#X connect 81 0 27 0;
