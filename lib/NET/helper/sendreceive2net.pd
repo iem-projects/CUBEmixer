@@ -30,7 +30,7 @@ receiver;
 #X obj 146 334 s \$1;
 #X obj 94 242 route bang;
 #X obj 94 265 t b b b;
-#X obj 87 377 spigot 1;
+#X obj 87 377 spigot38 1;
 #X connect 0 0 7 0;
 #X connect 1 0 0 0;
 #X connect 2 0 16 0;

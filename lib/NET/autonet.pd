@@ -26,7 +26,7 @@
 #X obj 113 262 outlet;
 #X obj 114 68 == 0;
 #X obj 280 36 inlet;
-#X obj 113 228 spigot 1;
+#X obj 113 228 spigot38 1;
 #X obj 113 89 change;
 #X obj 113 115 t b f;
 #X obj 113 149 del 10000;
