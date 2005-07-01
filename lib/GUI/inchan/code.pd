@@ -364,7 +364,7 @@ just slaves to this object.;
 #X connect 2 2 3 0;
 #X connect 2 3 1 0;
 #X restore 280 231 pd inputsection;
-#N canvas 454 242 833 478 mutesolo 0;
+#N canvas 148 244 833 478 mutesolo 0;
 #X obj 492 251 s \$1GUIinchan_mute_togui;
 #X obj 492 205 loadbang;
 #X obj 373 67 inlet \$0GUI-prepend;
