@@ -165,7 +165,7 @@ void cube_sphere_draw_new(t_cube_sphere *x, t_glist *glist)
 	     canvas, x2-2, y2-2, x2+2, y2+2, x);
   if(x->x_null)
   {
-    sys_vgui(".x%x.c create text %d %d -text {0} -anchor c \
+    sys_vgui(".x%x.c create text %d %d -text {+} -anchor c \
 			-font {times %d bold} -fill #%6.6x -tags %xSRC0\n",
 			canvas, xpos+x->x_pix_src_x[0], ypos+x->x_pix_src_y[0], x->x_fontsize,
 			x->x_col_src[0], x);
@@ -389,10 +389,10 @@ static void cube_sphere_src_font(t_cube_sphere *x, t_floatarg ff)
 	int i, n=x->x_n_src;
 	t_canvas *canvas=glist_getcanvas(x->x_gui.x_glist);
 
-	if(fs < 8)
-		fs = 8;
-	if(fs > 50)
-		fs = 50;
+	if(fs < 5)
+		fs = 5;
+	if(fs > 150)
+		fs = 150;
 	x->x_fontsize = fs;
 
 	for(i=0; i<n; i++)
@@ -434,34 +434,34 @@ static void cube_sphere_src_dp(t_cube_sphere *x, t_symbol *s, int argc, t_atom *
 	}
 }
 
-static void cube_sphere_size(t_cube_sphere *x, t_floatarg size)
+/*static void cube_sphere_size(t_cube_sphere *x, t_floatarg size)
 {
-	float rad=x->x_radius;
+	float oldrad=x->x_radius;
 	float xr, yr;
-	int i, diffr, diffx, diffy, xx, yy, sz, n=x->x_n_src;
+	int i, diffr, diffx, diffy, xx, yy, newrad, n=x->x_n_src;
 	int xpos=text_xpix(&x->x_gui.x_obj, x->x_gui.x_glist);
 	int ypos=text_ypix(&x->x_gui.x_obj, x->x_gui.x_glist);
 
 	size /= 6.0f;
-	sz = (int)(size + 0.4999f);
-	sz *= 3;
-	if(sz < 30)
-		sz = 30;
-	if(sz > 1800)
-		sz = 1800;
+	newrad = (int)(size + 0.4999f);
+	newrad *= 3;
+	if(newrad < 10)
+		newrad = 10;
+	if(newrad > 1800)
+		newrad = 1800;
 
 	for(i=0; i<n; i++)
 	{
-		diffx = x->x_pix_src_x[i] - rad;
-		diffy = x->x_pix_src_y[i] - rad;
+		diffx = x->x_pix_src_x[i] - oldrad;
+		diffy = x->x_pix_src_y[i] - oldrad;
 		diffr = (int)(sqrt(diffx * diffx + diffy * diffy)+0.49999f);
-		if(diffr > sz)
+		if(diffr > newrad)
 		{
 			if(diffr)
 			{
-				xx = sz * diffx;
+				xx = newrad * diffx;
 				xx /= diffr;
-				yy = sz * diffy;
+				yy = newrad * diffy;
 				yy /= diffr;
 			}
 			else
@@ -469,15 +469,51 @@ static void cube_sphere_size(t_cube_sphere *x, t_floatarg size)
 				xx = 0;
 				yy = 0;
 			}
-			x->x_pix_src_x[i] = sz + xx;
-			x->x_pix_src_y[i] = sz + yy;
+			x->x_pix_src_x[i] = newrad + xx;
+			x->x_pix_src_y[i] = newrad + yy;
 		}
 	}
 
-	x->x_90overradius = 90.0f / (float)sz;
-	x->x_radius = sz;
-	x->x_gui.x_h = 2*sz;
-	x->x_gui.x_w = 2*sz;
+	x->x_90overradius = 90.0f / (float)newrad;
+	x->x_radius = newrad;
+	x->x_gui.x_h = 2*newrad;
+	x->x_gui.x_w = 2*newrad;
+
+	cube_sphere_out_all(x);
+	(*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_MOVE);
+	canvas_fixlinesfor(glist_getcanvas(x->x_gui.x_glist), (t_text*)x);
+}*/
+
+static void cube_sphere_size(t_cube_sphere *x, t_floatarg size)
+{
+	t_float ratio, xx;
+	int i, newrad, n=x->x_n_src;
+	int xpos=text_xpix(&x->x_gui.x_obj, x->x_gui.x_glist);
+	int ypos=text_ypix(&x->x_gui.x_obj, x->x_gui.x_glist);
+
+	size /= 6.0f;
+	newrad = (int)(size + 0.4999f);
+	newrad *= 3;
+	if(newrad < 9)
+		newrad = 9;
+	if(newrad > 1800)
+		newrad = 1800;
+
+  ratio = (t_float)newrad / (t_float)x->x_radius;
+
+	for(i=0; i<n; i++)
+	{
+		xx = (t_float)x->x_pix_src_x[i] * ratio;
+    x->x_pix_src_x[i] = (t_int)xx;
+
+    xx = (t_float)x->x_pix_src_y[i] * ratio;
+    x->x_pix_src_y[i] = (t_int)xx;
+	}
+
+	x->x_90overradius = 90.0f / (float)newrad;
+	x->x_radius = newrad;
+	x->x_gui.x_h = 2*newrad;
+	x->x_gui.x_w = 2*newrad;
 
 	cube_sphere_out_all(x);
 	(*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_MOVE);
@@ -586,8 +622,16 @@ static void *cube_sphere_new(t_symbol *s, int argc, t_atom *argv)
 {
 	t_cube_sphere *x = (t_cube_sphere *)pd_new(cube_sphere_class);
 	int i, j, n=1, c;
+  t_float xx;
 
   x->x_null = 1;
+  x->x_radius = 180;
+  if(argc <= 0)
+	{
+		n = 1;
+    x->x_null = 1;
+		x->x_n_src = n;
+	}
 	if((argc >= 1)&&IS_A_FLOAT(argv,0))
 	{
 		n = (int)atom_getintarg(0, argc, argv);
@@ -600,6 +644,17 @@ static void *cube_sphere_new(t_symbol *s, int argc, t_atom *argv)
 		if(n > IEMGUI_CUBE_SPHERE_MAX)
 			n = IEMGUI_CUBE_SPHERE_MAX;
 		x->x_n_src = n;
+	}
+  if((argc >= 2)&&IS_A_FLOAT(argv,1))
+	{
+    x->x_radius = atom_getintarg(1, argc, argv);
+    xx = x->x_radius / 6.0f;
+	  x->x_radius = (int)(xx + 0.4999f);
+	  x->x_radius *= 3;
+	  if(x->x_radius < 9)
+		  x->x_radius = 9;
+	  if(x->x_radius > 1800)
+		  x->x_radius = 1800;
 	}
 	if(argc == (3*n + 5))
 	{
@@ -619,7 +674,6 @@ static void *cube_sphere_new(t_symbol *s, int argc, t_atom *argv)
 	}
 	else
 	{
-		x->x_radius = 180;
 		x->x_fontsize = 12;
 		x->x_gui.x_bcol = my_iemgui_color_hex[IEM_GUI_COLNR_GREEN];
 		x->x_gui.x_fcol = my_iemgui_color_hex[IEM_GUI_COLNR_L_GREY];
