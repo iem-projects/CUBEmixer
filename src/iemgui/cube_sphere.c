@@ -40,6 +40,7 @@ typedef struct _cube_sphere
 	t_iemgui	x_gui;
 	int				x_fontsize;
 	int				x_n_src;
+  int       x_null;
 	int				x_pix_src_x[IEMGUI_CUBE_SPHERE_MAX];
 	int				x_pix_src_y[IEMGUI_CUBE_SPHERE_MAX];
 	int				x_col_src[IEMGUI_CUBE_SPHERE_MAX];
@@ -162,13 +163,23 @@ void cube_sphere_draw_new(t_cube_sphere *x, t_glist *glist)
 	     canvas, x2-r3, y2-r3, x2+r3, y2+r3, x);
 	sys_vgui(".x%x.c create oval %d %d %d %d -tags %xCIRC_NP\n",
 	     canvas, x2-2, y2-2, x2+2, y2+2, x);
-	for(i=0; i<n; i++)
-	{
-		sys_vgui(".x%x.c create text %d %d -text {%d} -anchor c \
-			-font {times %d bold} -fill #%6.6x -tags %xSRC%d\n",
-			canvas, xpos+x->x_pix_src_x[i], ypos+x->x_pix_src_y[i], i+1, x->x_fontsize,
-			x->x_col_src[i], x, i);
-	}
+  if(x->x_null)
+  {
+    sys_vgui(".x%x.c create text %d %d -text {0} -anchor c \
+			-font {times %d bold} -fill #%6.6x -tags %xSRC0\n",
+			canvas, xpos+x->x_pix_src_x[0], ypos+x->x_pix_src_y[0], x->x_fontsize,
+			x->x_col_src[0], x);
+  }
+  else
+  {
+    for(i=0; i<n; i++)
+    {
+      sys_vgui(".x%x.c create text %d %d -text {%d} -anchor c \
+        -font {times %d bold} -fill #%6.6x -tags %xSRC%d\n",
+        canvas, xpos+x->x_pix_src_x[i], ypos+x->x_pix_src_y[i], i+1, x->x_fontsize,
+        x->x_col_src[i], x, i);
+    }
+  }
 }
 
 void cube_sphere_draw_move(t_cube_sphere *x, t_glist *glist)
@@ -254,7 +265,10 @@ static void cube_sphere_save(t_gobj *z, t_binbuf *b)
 	
 	binbuf_addv(b, "ssiis", gensym("#X"),gensym("obj"),
 		(t_int)x->x_gui.x_obj.te_xpix, (t_int)x->x_gui.x_obj.te_ypix, gensym("cube_sphere"));
-	binbuf_addv(b, "iii", x->x_n_src, x->x_radius, x->x_fontsize);
+  if(x->x_null)
+	  binbuf_addv(b, "iii", 0, x->x_radius, x->x_fontsize);
+  else
+    binbuf_addv(b, "iii", x->x_n_src, x->x_radius, x->x_fontsize);
 	c = x->x_gui.x_bcol;
 	j = (((0xfc0000 & c) >> 6)|((0xfc00 & c) >> 4)|((0xfc & c) >> 2));
 	binbuf_addv(b, "i", j);
@@ -542,22 +556,27 @@ static void cube_sphere_src_col(t_cube_sphere *x, t_symbol *s, int argc, t_atom 
 static void cube_sphere_nr_src(t_cube_sphere *x, t_floatarg fnr_src)
 {
 	int n=(int)fnr_src;
-	int i, j, k;
+	int i, j, old_null;
 
+  old_null = x->x_null;
+  if(n <= 0)
+    x->x_null = 1;
+  else
+    x->x_null = 0;
 	if(n < 1)
 		n = 1;
 	if(n > IEMGUI_CUBE_SPHERE_MAX)
 		n = IEMGUI_CUBE_SPHERE_MAX;
-	if(n != x->x_n_src)
+	if((n != x->x_n_src) || (old_null != x->x_null))
 	{
 		(*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_ERASE);
 		j = x->x_n_src;
 		x->x_n_src = n;
-		for(i=j+1; i<=n; i++)
+		for(i=j; i<n; i++)
 		{
 			x->x_col_src[i] = x->x_col_src[j];
-			x->x_pix_src_x[i] = x->x_pix_src_x[j];
-			x->x_pix_src_y[i] = x->x_pix_src_y[j];
+			x->x_pix_src_x[i] = x->x_radius;
+			x->x_pix_src_y[i] = x->x_radius;
 		}
 		(*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_NEW);
 	}
@@ -568,9 +587,14 @@ static void *cube_sphere_new(t_symbol *s, int argc, t_atom *argv)
 	t_cube_sphere *x = (t_cube_sphere *)pd_new(cube_sphere_class);
 	int i, j, n=1, c;
 
+  x->x_null = 1;
 	if((argc >= 1)&&IS_A_FLOAT(argv,0))
 	{
 		n = (int)atom_getintarg(0, argc, argv);
+    if(n <= 0)
+      x->x_null = 1;
+    else
+      x->x_null = 0;
 		if(n < 1)
 			n = 1;
 		if(n > IEMGUI_CUBE_SPHERE_MAX)
