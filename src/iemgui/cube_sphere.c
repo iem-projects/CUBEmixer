@@ -486,7 +486,8 @@ static void cube_sphere_src_dp(t_cube_sphere *x, t_symbol *s, int argc, t_atom *
 
 static void cube_sphere_size(t_cube_sphere *x, t_floatarg size)
 {
-	t_float ratio, xx;
+	t_float ratio, xx, yy;
+ // t_float ratio, rr;
 	int i, newrad, n=x->x_n_src;
 	int xpos=text_xpix(&x->x_gui.x_obj, x->x_gui.x_glist);
 	int ypos=text_ypix(&x->x_gui.x_obj, x->x_gui.x_glist);
@@ -504,10 +505,18 @@ static void cube_sphere_size(t_cube_sphere *x, t_floatarg size)
 	for(i=0; i<n; i++)
 	{
 		xx = (t_float)x->x_pix_src_x[i] * ratio;
-    x->x_pix_src_x[i] = (t_int)xx;
+    x->x_pix_src_x[i] = (t_int)(xx + 0.4999f);
 
-    xx = (t_float)x->x_pix_src_y[i] * ratio;
-    x->x_pix_src_y[i] = (t_int)xx;
+    yy = (t_float)x->x_pix_src_y[i] * ratio;
+    x->x_pix_src_y[i] = (t_int)(yy + 0.4999f);
+
+    /*xx -= (t_float)newrad;
+    yy -= (t_float)newrad;
+    rr = sqrt(xx*xx + yy*yy);
+    if(rr > (t_float)newrad)
+    {
+
+    }*/
 	}
 
 	x->x_90overradius = 90.0f / (float)newrad;
