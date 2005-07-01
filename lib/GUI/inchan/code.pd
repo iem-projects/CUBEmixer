@@ -182,7 +182,7 @@ aux4;
 #X obj 392 85 symbol;
 #X obj 42 214 gui_sr_wrap \$1GUIambisonic_phi \$2_IN_AMBI_AZM -180
 180;
-#X obj 43 184 gui_sr_offset \$1GUIambisonic_r \$2_IN_AMBI_RAD;
+#X obj 43 184 gui_sr_clip \$1GUIambisonic_r \$2_IN_AMBI_RAD 0 100;
 #X connect 0 0 9 0;
 #X connect 2 0 4 0;
 #X connect 2 1 5 0;
