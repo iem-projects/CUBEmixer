@@ -37,8 +37,8 @@ BUS15 0 -6 0 8 -233017 -233017 -195568 -100 256;
 BUS16 0 -6 0 8 -233017 -233017 -195568 -100 256;
 #X obj 235 325 cnv 15 150 150 empty \$0GUI_input_ambi_cnv_togui ambisonic
 20 12 0 14 -233017 -1 0;
-#X obj 274 348 nbx 5 14 1 999 1 0 \$0GUI_input_ambi_r_fromgui \$0GUI_input_ambi_r_togui
-[m] 50 7 0 8 -262144 -1 -1 1 256;
+#X obj 274 348 nbx 5 14 1 100 1 0 \$0GUI_input_ambi_r_fromgui \$0GUI_input_ambi_r_togui
+[m] 50 7 0 8 -262144 -1 -1 1.42011 256;
 #X obj 87 123 cnv 15 161 144 empty empty EQ 20 12 0 14 -233017 -66577
 0;
 #X obj 221 125 tgl 25 0 \$0GUI_input_EQ_fromgui \$0GUI_input_EQ_togui
@@ -205,7 +205,7 @@ empty 0 -6 0 8 -262144 -166441 -166441 0 1;
 S 3 6 0 12 -262144 -1 -1 0 1;
 #X obj 21 303 tgl 13 0 \$0GUI_input_mute_fromgui \$0GUI_input_mute_togui
 M 3 6 0 12 -262144 -1 -1 0 1;
-#X obj 256 365 cube_sphere 1 54 18 62783 262143 262143 56 56;
+#X obj 256 365 cube_sphere 0 54 18 62783 262143 262143 55 53;
 #X obj 343 347 s \$0inchannel_ambisphere_fromgui;
 #X obj 343 327 r \$0inchannel_ambisphere_togui;
 #X connect 22 0 87 0;
