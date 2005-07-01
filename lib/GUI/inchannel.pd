@@ -37,7 +37,7 @@ BUS15 0 -6 0 8 -233017 -233017 -195568 -100 256;
 BUS16 0 -6 0 8 -233017 -233017 -195568 -100 256;
 #X obj 235 325 cnv 15 150 150 empty \$0GUI_input_ambi_cnv_togui ambisonic
 20 12 0 14 -233017 -1 0;
-#X obj 274 348 nbx 5 14 1 100 1 0 \$0GUI_input_ambi_r_fromgui \$0GUI_input_ambi_r_togui
+#X obj 274 348 nbx 5 14 0 100 0 0 \$0GUI_input_ambi_r_fromgui \$0GUI_input_ambi_r_togui
 [m] 50 7 0 8 -262144 -1 -1 1.42011 256;
 #X obj 87 123 cnv 15 161 144 empty empty EQ 20 12 0 14 -233017 -66577
 0;
