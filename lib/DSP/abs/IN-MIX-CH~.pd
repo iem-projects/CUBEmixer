@@ -1,4 +1,4 @@
-#N canvas 153 36 669 711 10;
+#N canvas 153 36 677 718 10;
 #X text 291 198 2.arg: <float> n_mix_ch;
 #X text 291 189 1.arg: <float> n_in;
 #X text 291 216 4.arg: <float> n_bus;
@@ -22,3 +22,9 @@
 #X obj 50 160 IN-CH~ 5 52 4 12 0;
 #X obj 50 200 IN-CH~ 7 52 4 12 0;
 #X obj 50 240 IN-CH~ 9 52 4 12 0;
+#X obj 234 80 r DSP_get_settings;
+#X obj 234 103 f 0;
+#X obj 234 124 sendreceive IN_SOLO;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 25 0 24 1;
