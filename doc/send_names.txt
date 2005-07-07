@@ -15,7 +15,7 @@ Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine
   (fuer IN-MIX-CH)
 
 $1_IN_ON: on/off (!mute)
-$1_IN_SOLO: solo
+IN_SOLO: (1 - N) ch-number of exclusive ON;     0: all channels in prev. ON-state
 
 $1_IN_ADJ_GAIN : adjust the INPUT-Level (0 ... 150 MIDI-dB)
 
