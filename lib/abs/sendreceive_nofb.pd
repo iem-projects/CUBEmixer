@@ -1,0 +1,53 @@
+#N canvas 19 0 739 596 10;
+#X obj 131 191 inlet;
+#X obj 153 520 outlet;
+#X obj 131 412 route bang;
+#X msg 240 466 0;
+#X obj 131 364 iem_s \$1;
+#X obj 131 386 iem_r \$1;
+#X obj 296 169 inlet;
+#X msg 296 244 set \$1;
+#X obj 296 199 symbol;
+#X text 131 171 message in;
+#X text 151 542 message out;
+#X text 294 153 <symbol> send/receive-name in;
+#X text 126 14 convert a "message in" to a "send message" and;
+#X text 136 27 a "receives message" to a "message out" with equal;
+#X text 151 40 send- receive- names and suppress the feedback-loop
+;
+#X text 206 374 1.arg: <symbol> send- / receive- name;
+#X text 376 540 published under the Gnu GPL;
+#X obj 296 222 t s s;
+#X text 46 105 when a "bang" is received at the global-receiver [sendreceive_getName]
+\, the current s/r-name is sent to [sendreceive_setName];
+#X text 336 514 (c) IOhannes m zmoelnig & Thomas Musil \, IEM 2005
+;
+#X obj 383 287 sr_registername \$1;
+#X text 108 70 this version differs from the [sendreceive] in that
+it needs NO external feedback to work correctly;
+#X text 11 4 [sendreceive_nofb];
+#X obj 196 433 t b a b;
+#X obj 131 434 t b b b;
+#X msg 196 466 1;
+#X obj 196 489 i;
+#X obj 131 345 spigot38 1;
+#X connect 0 0 27 0;
+#X connect 2 0 24 0;
+#X connect 2 1 23 0;
+#X connect 3 0 26 1;
+#X connect 5 0 2 0;
+#X connect 6 0 8 0;
+#X connect 7 0 4 1;
+#X connect 7 0 5 0;
+#X connect 8 0 17 0;
+#X connect 17 0 7 0;
+#X connect 17 1 20 0;
+#X connect 23 0 25 0;
+#X connect 23 1 1 0;
+#X connect 23 2 3 0;
+#X connect 24 0 25 0;
+#X connect 24 1 1 0;
+#X connect 24 2 3 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 1;
+#X connect 27 0 4 0;
