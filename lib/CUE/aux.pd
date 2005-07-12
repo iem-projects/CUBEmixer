@@ -3,9 +3,9 @@
 #X obj 255 28 inlet params;
 #X obj 122 248 outlet settings;
 #X obj 255 248 outlet params;
-#X obj 98 86 sr_prepend \$1_DST;
-#X obj 255 138 sr_prepend \$1_GAIN;
-#X obj 122 106 sr_prepend \$1_PRE;
+#X obj 98 86 receive_prepend \$1_DST;
+#X obj 255 138 receive_prepend \$1_GAIN;
+#X obj 122 106 receive_prepend \$1_PRE;
 #X connect 0 0 4 0;
 #X connect 0 0 6 0;
 #X connect 1 0 5 0;
