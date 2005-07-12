@@ -1,0 +1,10 @@
+#N canvas 170 149 693 485 10;
+#X obj 174 60 sr_prepend DSP_MIX_INTERPOL_TIME;
+#X obj 174 80 sr_prepend IN_SOLO;
+#X obj 174 110 sr_prepend AMBI_ORDER_WEIGHT;
+#X obj 174 130 sr_prepend OUT_AMBI_GAIN;
+#X text 322 155 oops!;
+#X obj 156 227 CUE/inchannel 1;
+#X obj 274 284 CUE/lfc 1;
+#X obj 274 304 CUE/lfc 2;
+#X obj 143 154 receive_prepend BUS_ROUTE;

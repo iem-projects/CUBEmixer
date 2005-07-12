@@ -1,0 +1,14 @@
+#N canvas 0 0 433 292 10;
+#X obj 223 158 sr_prepend \$1_OUT_LFC_GAIN;
+#X obj 129 136 sr_prepend \$1_OUT_LFC_HIGHCUT_FREQ;
+#X obj 112 114 sr_prepend \$1_OUT_LFC_BUS_DST;
+#X obj 243 34 inlet params;
+#X obj 228 219 outlet params;
+#X obj 64 217 outlet settings;
+#X obj 119 34 inlet settings;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 5 0;
+#X connect 3 0 0 0;
+#X connect 6 0 2 0;
+#X connect 6 0 1 0;
