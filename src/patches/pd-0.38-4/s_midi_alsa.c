@@ -145,7 +145,7 @@ void sys_putmidimess(int portno, int a, int b, int c)
         }
         snd_seq_ev_set_direct(&ev);
         snd_seq_ev_set_subs(&ev);
-        snd_seq_ev_set_source(&ev,alsa_midioutfd[0]);
+        snd_seq_ev_set_source(&ev,alsa_midioutfd[portno]);
         snd_seq_event_output_direct(midi_handle,&ev);
     }
     //post("%d %d %d\n",a,b,c);
@@ -153,21 +153,21 @@ void sys_putmidimess(int portno, int a, int b, int c)
 
 void sys_putmidibyte(int portno, int byte)
 {
-
-    post("putmidibyte not implemented, please report as a bug");
-/*    snd_midi_event_t *dev;
     snd_seq_event_t ev;
     snd_seq_ev_clear(&ev);
-    dev = (snd_midi_event_t*)malloc(4);
     if (portno >= 0 && portno < alsa_nmidiout)
     {
-        //alsa_midiout(alsa_midioutfd[portno], byte);       
-        snd_midi_event_encode_byte(dev, byte,&ev);
+        // repack into 1 byte char and put somewhere to point at
+        unsigned char data = (unsigned char)byte;
+        unsigned char *dataptr = malloc(1);
+        memcpy(dataptr,&byte,1);
+
+        snd_seq_ev_set_sysex(&ev,1,dataptr); //...set_variable *should* have worked but didn't
         snd_seq_ev_set_direct(&ev);
         snd_seq_ev_set_subs(&ev);
-        snd_seq_ev_set_source(&ev,alsa_port);
+        snd_seq_ev_set_source(&ev,alsa_midioutfd[portno]);
         snd_seq_event_output_direct(midi_handle,&ev);
-    }*/
+    }
 }
 
 
