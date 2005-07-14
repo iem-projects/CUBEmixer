@@ -16,6 +16,8 @@ Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine
 
 $1_IN_ON: on/off (!mute)
 IN_SOLO: (1 - N) ch-number of exclusive ON;     0: all channels in prev. ON-state
+IN_SELECT: (1 - N) ch-number of exclusive SELECT;     0: all channels in prev. ON-state
+
 
 $1_IN_ADJ_GAIN : adjust the INPUT-Level (0 ... 150 MIDI-dB)
 
