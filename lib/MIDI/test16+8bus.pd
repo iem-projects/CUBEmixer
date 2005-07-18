@@ -1,4 +1,4 @@
-#N canvas 0 0 941 547 10;
+#N canvas 308 47 941 547 10;
 #X obj 90 101 MIDI/inchannel 1;
 #X obj 86 58 MIDI/inchannel/sr_xtoggle 33 16 IN_SELECT;
 #X obj 86 38 MIDI/inchannel/sr_solo 65 16 IN_SOLO;
@@ -48,7 +48,7 @@ connect 128 1 104 0 \;;
 #X connect 9 0 5 0;
 #X restore 517 164 pd aconnect;
 #X msg 517 137 bang;
-#X obj 516 106 inlet;
+#X obj 517 106 inlet;
 #X text 553 140 reset MIDI connections;
 #X obj 90 121 MIDI/inchannel 2;
 #X obj 90 141 MIDI/inchannel 3;
