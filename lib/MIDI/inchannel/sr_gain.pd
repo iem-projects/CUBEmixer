@@ -1,7 +1,7 @@
 #N canvas 321 122 412 370 10;
 #X obj 117 260 f;
 #X obj 224 237 inlet;
-#X obj 117 305 ctlout;
+#X obj 117 345 ctlout;
 #X obj 117 104 ctlin;
 #X obj 132 127 ==;
 #X obj 152 152 == 1;
@@ -13,8 +13,9 @@
 #X obj 117 237 sendreceive \$3;
 #X obj 174 105 MIDI/inchannel/ch2ctl \$2 \$1;
 #X obj 117 217 MIDI/abs/miditodb;
-#X obj 117 283 MIDI/abs/dbtomidi;
-#X connect 0 0 14 0;
+#X obj 117 313 MIDI/abs/dbtomidi;
+#X obj 117 287 speedlim 10;
+#X connect 0 0 15 0;
 #X connect 1 0 11 1;
 #X connect 3 0 7 0;
 #X connect 3 1 4 0;
@@ -32,3 +33,4 @@
 #X connect 12 0 10 0;
 #X connect 13 0 11 0;
 #X connect 14 0 2 0;
+#X connect 15 0 14 0;
