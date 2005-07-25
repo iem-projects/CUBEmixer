@@ -36,5 +36,7 @@ query the DSP-names;
 #X obj 961 682 bng 15 250 50 0 empty empty NET_init 20 7 0 10 -24198
 -1 -1;
 #X obj 571 467 OUT/BUS/12;
+#X obj 924 793 cue PARAMETERS;
+#X obj 924 733 cue SETTINGS;
 #X connect 20 0 21 1;
 #X connect 22 0 21 0;
