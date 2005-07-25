@@ -1,4 +1,4 @@
-#N canvas 41 651 611 289 10;
+#N canvas 41 651 694 290 10;
 #X obj 381 179 sendreceive DSP_setLabel;
 #X obj 381 155 sendreceive DSP_getLabels;
 #X msg 381 129 IN;
@@ -10,7 +10,7 @@
 #X obj 162 116 spigot;
 #X obj 208 115 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
-#X obj 252 116 spigot;
+#X obj 253 115 spigot;
 #X obj 298 115 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
 #X obj 253 136 print receive;
@@ -18,6 +18,13 @@
 #X obj 132 49 t b b;
 #X obj 132 198 del 1000;
 #X msg 132 220 NET connect localhost:6667;
+#X obj 364 239 once;
+#X obj 253 93 t a b;
+#X obj 364 266 outlet reconnection established;
+#X obj 154 240 once;
+#X obj 154 267 outlet connection established;
+#X obj 233 192 route disconnect;
+#X obj 162 94 t a b;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 4 0 5 0;
@@ -28,9 +35,15 @@
 #X connect 9 0 8 1;
 #X connect 10 0 12 0;
 #X connect 11 0 10 1;
-#X connect 13 0 8 0;
-#X connect 13 1 10 0;
+#X connect 13 0 23 0;
+#X connect 13 1 18 0;
 #X connect 14 0 15 0;
 #X connect 14 1 13 0;
 #X connect 15 0 16 0;
 #X connect 16 0 13 1;
+#X connect 17 0 19 0;
+#X connect 18 0 10 0;
+#X connect 18 1 17 0;
+#X connect 20 0 21 0;
+#X connect 23 0 8 0;
+#X connect 23 1 20 0;
