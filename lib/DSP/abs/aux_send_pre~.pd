@@ -9,7 +9,7 @@
 #X msg 189 388 0;
 #X msg 240 387 1;
 #X obj 41 384 mull~ 0 50;
-#X obj 108 297 r DSP_MIX_INTERPOL_TIME;
+#X obj 106 297 r DSP_MIX_INTERPOL_TIME;
 #X obj 113 163 dbtorms;
 #X msg 296 282 set \$1_SND;
 #X obj 296 262 symbol;

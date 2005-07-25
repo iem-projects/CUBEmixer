@@ -22,9 +22,4 @@
 #X obj 50 160 IN-CH~ 5 52 4 12 0;
 #X obj 50 200 IN-CH~ 7 52 4 12 0;
 #X obj 50 240 IN-CH~ 9 52 4 12 0;
-#X obj 234 80 r DSP_get_settings;
-#X obj 234 103 f 0;
-#X obj 234 124 sendreceive IN_SOLO;
-#X connect 23 0 24 0;
-#X connect 24 0 25 0;
-#X connect 25 0 24 1;
+#X obj 234 124 receive_parameter IN_SOLO;
