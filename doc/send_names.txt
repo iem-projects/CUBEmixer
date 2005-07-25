@@ -103,5 +103,11 @@ DSP_CPU <mean> <peak>: cputime auf dem dsp
 
 
 
-Es wurde bis auf weiteres auf die Reduzierung der Verzoegerungszeiten zwischen
-s~ und r~ bzw. zwischen throw~ und catch~ verzichtet.
+CUE_PARAMETERS_LOAD: filename (symbol) das geladen werden soll
+CUE_PARAMETERS_SAVE: filename (symbol) in das "parameter" gespeichert werden
+CUE_PARAMETERS_RESET: setzt den CUE-speicher jedes parameters auf ""; wenn direkt danach die parameter gespeichert werden, ist das file leer! um "default"-werte zu laden sollte ein eigener "defaults"-CUE existieren!
+CUE_SETTINGS_LOAD: filename (symbol) das geladen werden soll
+CUE_SETTINGS_SAVE: filename (symbol) in das "setting" gespeichert werden
+CUE_SETTINGS_RESET: setzt den CUE-speicher jedes settings auf ""; wenn direkt danach die setting gespeichert werden, ist das file leer! um "default"-werte zu laden sollte ein eigener "defaults"-CUE existieren!
+
+note: beim laden wird nicht zwischen "parameter" und "setting" unterschieden !
