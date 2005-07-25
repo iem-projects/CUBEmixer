@@ -14,15 +14,11 @@
 #X obj 99 384 MIDI/out/sr_gain 122 1 1_OUT_LFC_GAIN;
 #X obj 99 403 MIDI/out/sr_gain 122 2 2_OUT_LFC_GAIN;
 #X obj 100 364 MIDI/out/sr_gain 121 1 OUT_AMBI_GAIN;
-#N canvas 0 467 764 449 aconnect 0;
-#X obj 212 201 aconnect;
-#X obj 212 143 t b b;
+#N canvas 231 242 764 449 aconnect 0;
+#X obj 221 201 aconnect;
 #X obj 280 88 inlet;
-#X msg 212 117 reset;
-#X obj 323 143 r MIDIconnections;
-#X msg 104 256 add MIDIconnections connect \$1 \$2 \$3 \$4;
-#X msg 242 166 set \, add;
-#X obj 333 197 print;
+#X msg 199 117 reset;
+#X obj 403 65 r MIDIconnections;
 #X msg 177 171 bang;
 #X obj 104 233 route list;
 #X msg 482 165 \; MIDIconnections connect 64 0 128 0 \; MIDIconnections
@@ -30,22 +26,31 @@ connect 72 0 128 0 \; MIDIconnections connect 96 0 128 0 \; MIDIconnections
 connect 104 0 128 0 \; MIDIconnections connect 128 1 64 0 \; MIDIconnections
 connect 128 1 72 0 \; MIDIconnections connect 128 1 96 0 \; MIDIconnections
 connect 128 1 104 0 \;;
-#X msg 242 297 \; MIDIconnections connect 64 0 128 0 \; MIDIconnections
-connect 72 0 128 0 \; MIDIconnections connect 96 0 128 0 \; MIDIconnections
-connect 104 0 128 0 \; MIDIconnections connect 128 1 64 0 \; MIDIconnections
-connect 128 1 72 0 \; MIDIconnections connect 128 1 96 0 \; MIDIconnections
-connect 128 1 104 0 \;;
-#X connect 0 0 7 0;
-#X connect 0 0 9 0;
-#X connect 1 0 0 0;
-#X connect 1 1 6 0;
-#X connect 2 0 11 0;
-#X connect 3 0 1 0;
+#X msg 104 256 add2 \$1 \$2 \$3 \$4;
+#X msg 242 166 set;
+#X obj 403 110 repack 4;
+#X obj 199 143 t b b b;
+#X msg 403 131 connect \$1 \$2 \$3 \$4;
+#X obj 403 88 route list;
+#X obj 242 348 s MIDIconnections;
+#X msg 242 315 64 0 128 0 72 0 128 0 96 0 128 0 104 0 128 0 128 1 64
+0 128 1 72 0 128 1 96 0 128 1 104 0;
+#X msg 235 406 64 0 128 0 72 0 128 0 96 0 128 0 104 0 128 0 128 1 64
+0 128 1 72 0 128 1 96 0 128 1 104 0;
+#X connect 0 0 5 0;
+#X connect 1 0 14 0;
+#X connect 2 0 10 0;
+#X connect 3 0 12 0;
 #X connect 4 0 0 0;
-#X connect 5 0 11 0;
-#X connect 6 0 11 0;
-#X connect 8 0 0 0;
-#X connect 9 0 5 0;
+#X connect 5 0 7 0;
+#X connect 7 0 14 0;
+#X connect 8 0 14 0;
+#X connect 9 0 11 0;
+#X connect 10 1 0 0;
+#X connect 10 2 8 0;
+#X connect 11 0 0 0;
+#X connect 12 0 9 0;
+#X connect 14 0 13 0;
 #X restore 517 164 pd aconnect;
 #X msg 517 137 bang;
 #X obj 517 106 inlet;
