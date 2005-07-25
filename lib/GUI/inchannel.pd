@@ -43,16 +43,12 @@ BUS16 0 -6 0 8 -233017 -233017 -195568 -100 256;
 0;
 #X obj 221 125 tgl 25 0 \$0GUI_input_EQ_fromgui \$0GUI_input_EQ_togui
 empty 0 -6 0 8 -262144 -1 -1 0 1;
-#X obj 13 11 popup 124 25 #ffffff ---;
+#X obj 13 11 popup 124 25 #ffffff --- channel:01 channel:02 channel:03
+channel:04 channel:05 channel:06 channel:07 channel:08 channel:09 channel:10
+channel:11 channel:12 channel:13 channel:14 channel:15 channel:16;
 #X obj 5 7 cnv 15 140 90 empty empty channel 5 10 0 24 -233017 -233017
 0;
-#X obj 422 21 popup 115 20 #ffffff input ADC float ADC float ADC float
-ADC float ADC float ADC float ADC float ADC float ADC float ADC float
-ADC float ADC float ADC float ADC float ADC float ADC float ADC float
-ADC float ADC float ADC float ADC float ADC float ADC float ADC float
-AUX float AUX float AUX float AUX float AUX float AUX float AUX float
-AUX float PLAY float PLAY float PLAY float PLAY float none pink testtone
-;
+#X obj 422 21 popup 115 20 #ffffff input none;
 #X obj 419 7 cnv 15 120 90 empty empty empty 20 12 0 14 -195568 -66577
 0;
 #X obj 460 47 nbx 3 14 -100 50 0 0 \$0GUI_input_ingain_fromgui \$0GUI_input_ingain_togui
@@ -81,7 +77,7 @@ InPrePost 0 -6 0 8 -262144 -1 -1 0;
 #X obj 64 334 vfad_scale -1;
 #X obj 7 334 vfad_scale -1;
 #X obj 374 63 tgl 15 0 \$0GUI_input_lock_fromgui \$0GUI_input_lock_togui
-lock 0 -6 0 8 -262144 -1 -1 1 1;
+lock 0 -6 0 8 -262144 -1 -1 0 1;
 #X obj 336 12 r \$0GUI_input_select_togui;
 #X obj 337 32 s \$0GUI_input_select_fromgui;
 #X obj 256 158 popup 115 20 #ffffff plugin none;
@@ -116,14 +112,10 @@ empty 0 -6 0 8 -262144 -1 -1;
 -66577 0;
 #X obj 395 200 r \$0GUI_plugin4_togui;
 #X obj 398 245 s \$0GUI_plugin4_fromgui;
-#X obj 171 350 popup 45 20 #ffffff AUX AUX float AUX float AUX float
-AUX float AUX float AUX float AUX float AUX float;
-#X obj 171 380 popup 45 20 #ffffff AUX AUX float AUX float AUX float
-AUX float AUX float AUX float AUX float AUX float;
-#X obj 171 410 popup 45 20 #ffffff AUX AUX float AUX float AUX float
-AUX float AUX float AUX float AUX float AUX float;
-#X obj 171 440 popup 45 20 #ffffff AUX AUX float AUX float AUX float
-AUX float AUX float AUX float AUX float AUX float;
+#X obj 171 350 popup 45 20 #ffffff AUX none;
+#X obj 171 380 popup 45 20 #ffffff AUX none;
+#X obj 171 410 popup 45 20 #ffffff AUX none;
+#X obj 171 440 popup 45 20 #ffffff AUX none;
 #X obj 96 295 cnv 15 120 180 empty empty AUX 20 12 0 14 -233017 -66577
 0;
 #X obj 98 355 nbx 3 14 -100 50 0 0 \$0GUI_aux1_gain_fromgui \$0GUI_aux1_gain_togui
