@@ -1,0 +1,37 @@
+#N canvas 0 0 450 300 10;
+#X obj 32 92 bng 25 250 50 0 \$0_load \$0_load LOAD 0 30 0 10 -24198
+-1 -1;
+#X obj 312 92 bng 25 250 50 0 \$0_save \$0_save SAVE 2 30 0 10 -258699
+-1 -1;
+#X obj 172 92 bng 25 250 50 0 \$0_load \$0_load RESET -1 30 0 10 -241291
+-1 -1;
+#X obj 30 193 openpanel;
+#X obj 30 246 send_regname \$1_LOAD;
+#X obj 270 246 send_regname \$1_SAVE;
+#X obj 270 193 savepanel;
+#X obj 150 216 send_regname \$1_RESET;
+#X obj 144 20 loadbang;
+#X obj 144 40 symbol \$1;
+#X obj 144 60 makefilename CUE_%s;
+#X msg 43 223 \$1_LOAD;
+#X msg 172 194 \$1_RESET;
+#X msg 341 222 \$1_SAVE;
+#X obj 144 137 t s s s;
+#X obj 270 169 r \$0_save;
+#X obj 150 169 r \$0_reset;
+#X obj 30 169 r \$0_load;
+#X connect 3 0 4 0;
+#X connect 6 0 5 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 14 0;
+#X connect 11 0 4 1;
+#X connect 12 0 7 1;
+#X connect 13 0 5 1;
+#X connect 14 0 11 0;
+#X connect 14 1 12 0;
+#X connect 14 2 13 0;
+#X connect 15 0 6 0;
+#X connect 16 0 7 0;
+#X connect 17 0 3 0;
+#X coords 0 0 1 1 100 50 1;
