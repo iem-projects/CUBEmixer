@@ -35,7 +35,6 @@ aux3 0 -4 0 8 -228992 -1 -1 -100 256;
 #X obj 106 192 pack 0 0;
 #X obj 207 140 colorschemes/gain;
 #X obj 277 185 colorschemes/freq;
-#X obj 207 112 t b b;
 #X msg 224 235 color \$2 \$1 \$1;
 #X obj 224 212 pack 0 0;
 #X msg 207 78 bang;
@@ -44,27 +43,29 @@ aux3 0 -4 0 8 -228992 -1 -1 -100 256;
 #X msg 457 241 color \$2 \$1 \$1;
 #X obj 459 218 pack 0 0;
 #X obj 106 167 t f f f;
+#X obj 207 112 t b b b;
 #X connect 1 0 6 0;
 #X connect 2 0 3 0;
 #X connect 2 1 4 0;
-#X connect 3 0 20 0;
-#X connect 4 0 20 0;
+#X connect 3 0 19 0;
+#X connect 4 0 19 0;
 #X connect 6 0 2 0;
 #X connect 8 0 0 0;
 #X connect 9 0 8 0;
 #X connect 10 0 9 1;
-#X connect 11 0 14 1;
-#X connect 12 0 10 0;
-#X connect 12 1 11 0;
-#X connect 13 0 7 0;
-#X connect 14 0 13 0;
-#X connect 15 0 12 0;
-#X connect 16 0 12 0;
+#X connect 11 0 13 1;
+#X connect 12 0 7 0;
+#X connect 13 0 12 0;
+#X connect 14 0 20 0;
+#X connect 15 0 20 0;
+#X connect 17 0 16 0;
 #X connect 18 0 17 0;
-#X connect 19 0 18 0;
-#X connect 20 0 9 0;
-#X connect 20 1 14 0;
-#X connect 20 2 19 0;
+#X connect 19 0 9 0;
+#X connect 19 1 13 0;
+#X connect 19 2 18 0;
+#X connect 20 0 3 0;
+#X connect 20 1 10 0;
+#X connect 20 2 11 0;
 #X restore 10 84 pd code;
 #X obj 47 151 tgl 15 0 \$0GUIinchan_eq_lowcut_tgl_fromgui \$0GUIinchan_eq_lowcut_tgl_togui
 L 6 8 0 8 -262144 -166441 -166441 0 1;
@@ -78,7 +79,7 @@ H 6 8 0 8 -262144 -166441 -166441 0 1;
 0 256;
 #X obj 34 137 nbx 4 12 100 9999 1 0 \$0GUIinchan_eq_mid2_freq_fromgui
 \$0GUIinchan_eq_mid2_freq_togui empty 0 -6 0 8 -187584 -166441 -166441
-100 256;
+440 256;
 #X obj 3 123 nbx 3 12 -100 20 0 0 \$0GUIinchan_eq_mid1_gain_fromgui
 \$0GUIinchan_eq_mid1_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
 0 256;
@@ -86,7 +87,7 @@ H 6 8 0 8 -262144 -166441 -166441 0 1;
 empty 0 -6 0 8 -228992 -166441 -166441 0 256;
 #X obj 34 123 nbx 4 12 100 9999 1 0 \$0GUIinchan_eq_mid1_freq_fromgui
 \$0GUIinchan_eq_mid1_freq_togui empty 0 -6 0 8 -187584 -166441 -166441
-100 256;
+1200 256;
 #X obj 8 85 tgl 20 0 \$0GUIinchan_eq_tgl_fromgui \$0GUIinchan_eq_tgl_togui
 empty 0 -6 0 8 -262144 -1 -1 0 1;
 #X obj 2 1 cnv 15 67 15 empty \$0GUIinchan_name ch:-- 3 9 0 14 -83187
