@@ -13,11 +13,7 @@
 #X obj 578 226 symbol \$0NET;
 #X msg 68 107 bang;
 #X msg 669 250 symbol _;
-#N canvas 0 0 1249 898 4892-netsendreceive 0;
-#X obj 50 0 NET/helper/sendreceive2net DSP_setLabel 4899;
-#X obj 50 20 NET/helper/sendreceive2net DSP_getLabels 4899;
-#X obj 50 40 NET/helper/sendreceive2net DSP_CPU 4899;
-#X obj 50 60 NET/helper/sendreceive2net DSP 4899;
+#N canvas 0 0 1249 898 4833-netsendreceive 0;
 #X restore 318 416 pd \$0-netsendreceive;
 #X msg 94 318 disconnect \, connect \$1 \$2;
 #N canvas 0 0 450 300 repeat 0;
@@ -165,6 +161,7 @@
 #X obj 700 52 inlet send;
 #X obj 700 74 pp send;
 #X obj 700 94 s \$0NET_tonetsend;
+#X msg 209 431 disconnect;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 1 0 9 0;
@@ -210,3 +207,4 @@
 #X connect 37 0 35 0;
 #X connect 39 0 40 0;
 #X connect 40 0 41 0;
+#X connect 42 0 5 0;
