@@ -12,7 +12,7 @@ PDLIBS="-lib zexy:iemlib1:iemlib2:iemgui:iemmatrix:iem_ambi"
 PDDSPFLAGS="-32bit -rt -channels 24 -blocksize 16 -audiobuf 150"
 PDGUIFLAGS="-nosound -nomidi"
 
-${PD} ${PDPATHS} ${PDLIBS} ${PDDSPFLAGS} DSP/test_DSP+NET+MIDI+CUE.pd &
+${PD} ${PDPATHS} ${PDLIBS} ${PDDSPFLAGS} DSP/DSP+NET+MIDI+CUE.pd &
 
 
-${PD} ${PDPATHS} ${PDLIBS} ${PDGUIFLAGS} GUI/test16+OUT.pd
+${PD} ${PDPATHS} ${PDLIBS} ${PDGUIFLAGS} GUI/GUI16+OUT.pd
