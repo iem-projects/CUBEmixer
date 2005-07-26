@@ -59,7 +59,7 @@
 #X connect 23 0 22 1;
 #X connect 24 0 23 0;
 #X restore 107 69 pd fader;
-#N canvas 0 0 718 409 DSP 0;
+#N canvas -15 217 718 409 DSP 0;
 #X obj 69 45 r pd;
 #X obj 69 69 route dsp;
 #X obj 69 95 route float;
@@ -82,9 +82,13 @@
 #X msg 368 252 16;
 #X obj 303 205 t f b;
 #X obj 303 228 select 0 1;
-#X obj 303 107 sendreceive DSP;
+#X obj 303 147 sendreceive DSP;
 #X obj 69 199 unpack;
 #X obj 69 177 receive_regname DSP_CPU;
+#X obj 303 117 spigot;
+#X obj 489 66 t b b;
+#X msg 351 101 1;
+#X obj 489 38 r GUI_NET_initialized;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 5 0;
@@ -94,7 +98,7 @@
 #X connect 9 0 10 0;
 #X connect 10 0 12 0;
 #X connect 11 0 12 0;
-#X connect 12 0 22 0;
+#X connect 12 0 25 0;
 #X connect 15 0 13 0;
 #X connect 16 0 15 0;
 #X connect 16 0 18 0;
@@ -109,6 +113,11 @@
 #X connect 23 0 3 0;
 #X connect 23 1 4 0;
 #X connect 24 0 23 0;
+#X connect 25 0 22 0;
+#X connect 26 0 27 0;
+#X connect 26 1 17 0;
+#X connect 27 0 25 1;
+#X connect 28 0 26 0;
 #X restore 318 67 pd DSP;
 #X restore 50 21 pd code;
 #X obj 21 42 vsl 40 131 0 130 0 0 \$0GUImainout_fader \$0GUImainout_fader
@@ -119,7 +128,7 @@
 #X obj 116 90 cnv 15 60 60 empty empty ON/OFF 4 -11 0 12 -24198 -66577
 0;
 #X obj 121 15 bng 50 250 50 0 \$0GUI_panic \$0GUI_panic empty 0 -6
-0 8 -258699 -262144 -1;
+0 8 -233017 -262144 -1;
 #X obj 121 95 bng 50 250 50 0 \$0GUI_unpanic \$0GUI_unpanic empty 0
 -6 0 8 -233017 -262144 -1;
 #X obj 90 159 cnv 15 100 30 empty empty empty 20 12 0 14 -195568 -66577
