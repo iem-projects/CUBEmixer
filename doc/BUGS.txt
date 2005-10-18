@@ -6,4 +6,4 @@ pd:
 faderboxen:	channel-select
 
 application:
-	feedback bei umschalten ambisonic/direct
+	GUI-feedback bei umschalten ambisonic/direct
