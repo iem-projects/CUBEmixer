@@ -2,3 +2,8 @@ pd:
 	0.39-1test1:
 		alsamidi :	meldet beim starten (mit -alsamidi) kein device an (erst wenn man auf Media->MIDI_settings... geht und auf OK clickt werden sie aktiviert)
 				sollte sich gleich mit allen vorhandenen devices verbinden
+
+faderboxen:	channel-select
+
+application:
+	feedback bei umschalten ambisonic/direct
