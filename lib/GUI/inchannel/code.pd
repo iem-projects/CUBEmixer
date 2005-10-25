@@ -389,7 +389,7 @@
 #X connect 5 0 6 0;
 #X connect 6 0 0 0;
 #X restore 36 148 pd vu;
-#N canvas 433 158 745 371 spat 0;
+#N canvas 1443 0 745 371 spat 1;
 #X obj 190 201 r \$1GUI_input_spat_fromgui;
 #N canvas 178 210 934 541 ambi 0;
 #N canvas 740 380 781 491 enable-disable 0;
@@ -847,7 +847,7 @@
 #X restore 230 286 pd direct;
 #X obj 162 19 inlet ID#;
 #X obj 190 264 == 0;
-#X obj 280 264 == 1;
+#X obj 288 264 == 1;
 #X obj 190 237 t f f;
 #X obj 442 120 s \$1GUI_input_spat_togui;
 #X msg 442 95 set \$1;
