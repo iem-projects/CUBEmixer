@@ -149,4 +149,4 @@
 #X connect 23 1 8 0;
 #X connect 23 2 18 0;
 #X connect 23 3 19 0;
-#X coords 0 0 1 1 68 100 1;
+#X coords 0 0 1 1 66 100 1;
