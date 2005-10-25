@@ -6,7 +6,8 @@
 #N canvas 0 48 734 558 code 0;
 #X obj 67 73 OUT/LFC/helper/sr \$0GUIout_sub1 1;
 #X obj 67 93 OUT/LFC/helper/sr \$0GUIout_sub2 2;
-#X obj 232 119 sendreceive 1_OUT_LFC_BUS_DEST;
+#X obj 72 119 sendreceive 1_OUT_LFC_BUS_DEST;
+#X text 289 117 ??? what is this for ??? (JMZ);
 #X restore 37 5 pd code;
 #X obj 16 46 vsl 15 131 0 130 0 0 \$0GUIout_sub1_gain \$0GUIout_sub1_gain
 -inf -5 140 0 8 -245568 -1 -1 0 1;
