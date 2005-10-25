@@ -11,10 +11,15 @@ behringer-controller:
 	FIXED
 
 application:
+  GUI:
         BUG: GUI-feedback bei umschalten ambisonic/direct
 	FIX: popup hat durchgeschliffen: "set" verwenden
 
-	BUG: aux-funcktioniert nicht (gui-seitig)
+	BUG: spat-umschaltung wird in [inchan] nicht dargestellt
 
-	BUG: aux-funcktioniert nicht (dsp-seiting)
+	BUG: aux-funktioniert nicht 
+
+
+   DSP:
+	BUG: aux-funktioniert nicht (dsp-seiting)
 	
