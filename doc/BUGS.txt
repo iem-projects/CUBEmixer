@@ -1,9 +1,20 @@
-pd:
-	0.39-1test1:
-		alsamidi :	meldet beim starten (mit -alsamidi) kein device an (erst wenn man auf Media->MIDI_settings... geht und auf OK clickt werden sie aktiviert)
-				sollte sich gleich mit allen vorhandenen devices verbinden
+pd-0.39-1test1:
+  alsamidi :	
+  	BUG: meldet beim starten (mit -alsamidi) kein device an (erst wenn man auf Media->MIDI_settings... geht und auf OK clickt werden sie aktiviert) 
+	FIX: mit "-mididev 1" werden die devices tatsächlich erzeugt
+	BUG: pd sollte sich gleich mit allen vorhandenen devices verbinden
+	FIX: siehe patch amidi_connect.diff
+	BUG2: nicht so gut wenn z.b. seq-dummy geladen ist: macht ein device "MIDIthrough" wodurch dann feedbackloops entstehen
 
-faderboxen:	channel-select
+behringer-controller:
+	BUG: channel-select-5 gibt controller für channel-select-4 aus! (13 selectiert 12!!)
+	FIXED
 
 application:
-	GUI-feedback bei umschalten ambisonic/direct
+        BUG: GUI-feedback bei umschalten ambisonic/direct
+	FIX: popup hat durchgeschliffen: "set" verwenden
+
+	BUG: aux-funcktioniert nicht (gui-seitig)
+
+	BUG: aux-funcktioniert nicht (dsp-seiting)
+	
