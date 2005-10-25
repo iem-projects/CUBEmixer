@@ -1,27 +1,27 @@
-#N canvas 819 214 77 462 10;
-#X obj 2 1 cnv 10 66 459 empty empty empty 5 12 0 14 -195568 -66577
+#N canvas 819 214 393 502 10;
+#X obj 21 21 cnv 10 66 459 empty empty empty 5 12 0 14 -195568 -66577
 0;
-#X obj 4 42 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux1_gain_fromgui \$0GUIinchan_aux1_gain_togui
+#X obj 23 62 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux1_gain_fromgui \$0GUIinchan_aux1_gain_togui
 aux1 0 -4 0 8 -228992 -1 -1 -100 256;
-#X obj 0 359 cnv 2 35 2 empty empty empty 20 12 0 14 -1 -66577 0;
-#X obj 4 313 vsl 30 131 0 130 0 0 \$0GUIinchan_fader \$0GUIinchan_fader
+#X obj 20 379 cnv 2 35 2 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 23 333 vsl 30 131 0 130 0 0 \$0GUIinchan_fader \$0GUIinchan_fader
 -inf 1 140 0 8 -228992 -1 -1 0 1;
-#N canvas 0 0 450 300 1001-pd 0;
+#N canvas 0 0 450 300 1224-pd 0;
 #X obj 0 0 inchan/S0;
-#X coords 0 0 1 1 67 100 1;
-#X restore 1 207 pd \$0-pd;
-#X obj 39 335 vsl 8 109 0 108 0 0 \$0GUIinchan_subfader_fromgui \$0GUIinchan_subfader_togui
+#X coords 0 0 1 1 67 100 1 0 0;
+#X restore 20 227 pd \$0-pd;
+#X obj 58 355 vsl 8 109 0 108 0 0 \$0GUIinchan_subfader_fromgui \$0GUIinchan_subfader_togui
 empty 0 -8 0 8 -245568 -1 -1 0 1;
-#X obj 13 1 hradio 15 1 0 3 \$0GUIinchan_select \$0GUIinchan_select
+#X obj 32 21 hradio 15 1 0 3 \$0GUIinchan_select \$0GUIinchan_select
 empty 0 -6 0 8 -262144 -1 -1 0;
-#X obj 36 42 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux2_gain_fromgui \$0GUIinchan_aux2_gain_togui
+#X obj 55 62 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux2_gain_fromgui \$0GUIinchan_aux2_gain_togui
 aux2 0 -4 0 8 -228992 -1 -1 -100 256;
-#X obj 36 65 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux4_gain_fromgui \$0GUIinchan_aux4_gain_togui
+#X obj 55 85 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux4_gain_fromgui \$0GUIinchan_aux4_gain_togui
 aux4 0 -4 0 8 -228992 -1 -1 -100 256;
-#X obj 4 65 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux3_gain_fromgui \$0GUIinchan_aux3_gain_togui
+#X obj 23 85 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux3_gain_fromgui \$0GUIinchan_aux3_gain_togui
 aux3 0 -4 0 8 -228992 -1 -1 -100 256;
-#X obj 3 83 cnv 20 64 88 empty empty EQ 40 8 0 12 -233017 -66577 0
-;
+#X obj 22 103 cnv 20 64 88 empty empty EQ 40 8 0 12 -233017 -66577
+0;
 #N canvas 500 0 450 300 code 0;
 #X obj 106 253 outlet;
 #X obj 106 52 inlet;
@@ -66,50 +66,51 @@ aux3 0 -4 0 8 -228992 -1 -1 -100 256;
 #X connect 20 0 3 0;
 #X connect 20 1 10 0;
 #X connect 20 2 11 0;
-#X restore 10 84 pd code;
-#X obj 47 151 tgl 15 0 \$0GUIinchan_eq_lowcut_tgl_fromgui \$0GUIinchan_eq_lowcut_tgl_togui
+#X restore 94 138 pd code;
+#X obj 65 171 tgl 15 0 \$0GUIinchan_eq_lowcut_tgl_fromgui \$0GUIinchan_eq_lowcut_tgl_togui
 L 6 8 0 8 -262144 -166441 -166441 0 1;
-#X obj 47 106 tgl 15 0 \$0GUIinchan_eq_hicut_tgl_fromgui \$0GUIinchan_eq_hicut_tgl_togui
+#X obj 64 126 tgl 15 0 \$0GUIinchan_eq_hicut_tgl_fromgui \$0GUIinchan_eq_hicut_tgl_togui
 H 6 8 0 8 -262144 -166441 -166441 0 1;
-#X obj 3 151 nbx 3 12 -100 20 0 0 \$0GUIinchan_eq_low_gain_fromgui
+#X obj 20 171 nbx 3 12 -100 20 0 0 \$0GUIinchan_eq_low_gain_fromgui
 \$0GUIinchan_eq_low_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
 0 256;
-#X obj 3 137 nbx 3 12 -100 20 0 0 \$0GUIinchan_eq_mid2_gain_fromgui
+#X obj 20 157 nbx 3 12 -100 20 0 0 \$0GUIinchan_eq_mid2_gain_fromgui
 \$0GUIinchan_eq_mid2_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
 0 256;
-#X obj 34 137 nbx 4 12 100 9999 1 0 \$0GUIinchan_eq_mid2_freq_fromgui
+#X obj 50 157 nbx 4 12 100 9999 1 0 \$0GUIinchan_eq_mid2_freq_fromgui
 \$0GUIinchan_eq_mid2_freq_togui empty 0 -6 0 8 -187584 -166441 -166441
 440 256;
-#X obj 3 123 nbx 3 12 -100 20 0 0 \$0GUIinchan_eq_mid1_gain_fromgui
+#X obj 20 143 nbx 3 12 -100 20 0 0 \$0GUIinchan_eq_mid1_gain_fromgui
 \$0GUIinchan_eq_mid1_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
 0 256;
-#X obj 3 109 nbx 3 12 -100 20 0 0 \$0GUIinchan_eq_hi_gain_fromgui \$0GUIinchan_eq_hi_gain_togui
-empty 0 -6 0 8 -228992 -166441 -166441 0 256;
-#X obj 34 123 nbx 4 12 100 9999 1 0 \$0GUIinchan_eq_mid1_freq_fromgui
+#X obj 20 129 nbx 3 12 -100 20 0 0 \$0GUIinchan_eq_hi_gain_fromgui
+\$0GUIinchan_eq_hi_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
+0 256;
+#X obj 50 143 nbx 4 12 100 9999 1 0 \$0GUIinchan_eq_mid1_freq_fromgui
 \$0GUIinchan_eq_mid1_freq_togui empty 0 -6 0 8 -187584 -166441 -166441
 1200 256;
-#X obj 8 85 tgl 20 0 \$0GUIinchan_eq_tgl_fromgui \$0GUIinchan_eq_tgl_togui
+#X obj 26 105 tgl 20 0 \$0GUIinchan_eq_tgl_fromgui \$0GUIinchan_eq_tgl_togui
 empty 0 -6 0 8 -262144 -1 -1 0 1;
-#X obj 2 1 cnv 15 67 15 empty \$0GUIinchan_name ch:-- 3 9 0 14 -83187
+#X obj 21 21 cnv 15 67 15 empty \$0GUIinchan_name ch:01 3 9 0 14 -83187
 -195568 0;
-#X obj 2 19 cnv 15 66 15 empty \$0GUIinchan_inputselectname empty 15
-8 0 8 -233017 -66577 0;
-#X obj 1 28 inchan/code \$0 \$1;
-#X obj 3 173 tgl 15 0 \$0GUIinchan_plugin1_tgl_fromgui \$0GUIinchan_plugin1_tgl_togui
+#X obj 21 39 cnv 15 66 15 empty \$0GUIinchan_inputselectname empty
+15 8 0 8 -233017 -66577 0;
+#X obj 111 -2 inchan/code \$0 \$1;
+#X obj 22 193 tgl 15 0 \$0GUIinchan_plugin1_tgl_fromgui \$0GUIinchan_plugin1_tgl_togui
 plugin1 20 7 0 8 -262144 -1 -1 0 1;
-#X obj 3 190 tgl 15 0 \$0GUIinchan_plugin2_tgl_fromgui \$0GUIinchan_plugin2_tgl_togui
+#X obj 22 210 tgl 15 0 \$0GUIinchan_plugin2_tgl_fromgui \$0GUIinchan_plugin2_tgl_togui
 plugin2 20 7 0 8 -262144 -1 -1 0 1;
-#X obj 42 311 cnv 19 19 19 empty empty empty 20 12 0 14 -66577 -66577
+#X obj 61 331 cnv 19 19 19 empty empty empty 20 12 0 14 -66577 -66577
 0;
-#X obj 45 313 cnv 15 15 15 empty \$0GUIinchan_level empty 20 12 0 14
+#X obj 64 333 cnv 15 15 15 empty \$0GUIinchan_level empty 20 12 0 14
 -66577 -1 0;
-#X obj 53 368 cnv 15 15 15 empty empty empty 20 12 0 14 -258699 -1
+#X obj 72 388 cnv 15 15 15 empty empty empty 20 12 0 14 -258699 -1
 0;
-#X obj 55 370 tgl 11 0 \$0GUIinchan_mute_fromgui \$0GUIinchan_mute_togui
+#X obj 74 390 tgl 11 0 \$0GUIinchan_mute_fromgui \$0GUIinchan_mute_togui
 on 1 5 0 8 -262144 -262144 -1 0 1;
-#X obj 53 398 cnv 15 15 15 empty empty empty 20 12 0 14 -24198 -1 0
+#X obj 72 418 cnv 15 15 15 empty empty empty 20 12 0 14 -24198 -1 0
 ;
-#X obj 55 400 tgl 11 0 \$0GUIinchan_solo_fromgui \$0GUIinchan_solo_togui
+#X obj 74 420 tgl 11 0 \$0GUIinchan_solo_fromgui \$0GUIinchan_solo_togui
 S 2 5 0 12 -262144 -262144 -1 0 1;
 #X connect 11 0 14 0;
 #X connect 11 0 15 0;
@@ -120,4 +121,4 @@ S 2 5 0 12 -262144 -262144 -1 0 1;
 #X connect 11 2 13 0;
 #X connect 11 2 12 0;
 #X connect 20 0 11 0;
-#X coords 0 0 1 1 66 460 1;
+#X coords 0 0 1 1 68 460 1 20 20;
