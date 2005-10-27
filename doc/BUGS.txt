@@ -8,7 +8,7 @@ pd-0.39-1test1:
 
 behringer-controller:
 	BUG: channel-select-5 gibt controller für channel-select-4 aus! (13 selectiert 12!!)
-	FIXED
+	FIX: am controller geändert (die setting-files im hw-folder sind ebenfalls geändert (aber nicht getestet)
 
 application:
   GUI:
@@ -16,6 +16,7 @@ application:
 	FIX: popup hat durchgeschliffen: "set" verwenden
 
 	BUG: spat-umschaltung wird in [inchan] nicht dargestellt
+	FIX: gop waren zu groß
 
 	BUG: aux-funktioniert nicht 
 
