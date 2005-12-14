@@ -43,7 +43,7 @@
 #X connect 10 1 9 1;
 #X connect 12 0 10 0;
 #X restore 510 192 pd color_pre;
-#X obj 84 319 gui_sr_symbol \$1_dst \$2_DST \$3;
+#X obj 84 319 gui_sr_symbol \$1_dst \$2_DST \$4_AUX;
 #X connect 0 0 1 0;
 #X connect 1 0 6 0;
 #X connect 2 0 3 0;
