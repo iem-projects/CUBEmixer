@@ -20,6 +20,8 @@ do
 done
 }
 
+cd $(dirname $0)
+
 PD=$(test_pd $PD /usr/local/src/pd-0.37-4.patched/bin/pd)
 
 if [ "x$PD" = "x" ]
@@ -35,10 +37,12 @@ fi
 PDPATHS="-path .:abs/:libs/:plugins/:GUI/:DSP/:GUI/abs:DSP/abs:libs/iemabs:libs/zexyabs"
 PDLIBS="-lib zexy:iemlib1:iemlib2:iemgui:iemmatrix:iem_ambi"
 
-PDDSPFLAGS="-32bit -rt -channels 24 -blocksize 16 -audiobuf 50 -alsamidi -mididev 1"
-PDGUIFLAGS="-nosound -nomidi"
+#PDDSPFLAGS="-32bit -rt -channels 24 -blocksize 16 -audiobuf 50 -alsamidi -mididev 1"
+PDDSPFLAGS="-alsa -rt -channels 26 -r 44100 -audiobuf 23 -alsamidi -mididev 1"
 
-${PD} ${PDPATHS} ${PDLIBS} ${PDDSPFLAGS} DSP/DSP+NET+MIDI+CUE.pd &
+PDGUIFLAGS="-nosound -nomidi -nrt"
+
+${PD} ${PDPATHS} ${PDLIBS} ${PDDSPFLAGS} -open DSP/DSP+NET+MIDI+CUE.pd ${CUBEMIXER_DSP_FLAGS} &
 
 
-${PD} ${PDPATHS} ${PDLIBS} ${PDGUIFLAGS} GUI/GUI16+OUT.pd
+${PD} ${PDPATHS} ${PDLIBS} ${PDGUIFLAGS} -open GUI/GUI16+OUT.pd  ${CUBEMIXER_GUI_FLAGS}
