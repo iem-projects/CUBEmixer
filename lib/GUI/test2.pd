@@ -1,4 +1,4 @@
-#N canvas 205 189 1007 517 10;
+#N canvas 205 189 1007 615 10;
 #N canvas 0 0 450 300 layout 0;
 #X text 52 16 (66+2)x480;
 #X text 40 101 8inchannels;
@@ -54,6 +54,10 @@
 #X obj 895 464 s 1_IN_SRC;
 #X symbolatom 895 436 10 0 0 0 - - -;
 #X obj 896 411 print;
+#X obj 815 576 s 1_IN_SPATIALIZATION;
+#X floatatom 815 543 5 0 0 0 - - -;
+#X obj 812 516 hradio 15 1 0 8 empty empty empty 0 -6 0 8 -262144 -1
+-1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
 #X connect 9 0 10 0;
@@ -62,3 +66,5 @@
 #X connect 13 0 14 0;
 #X connect 13 0 17 0;
 #X connect 16 0 15 0;
+#X connect 19 0 18 0;
+#X connect 20 0 19 0;

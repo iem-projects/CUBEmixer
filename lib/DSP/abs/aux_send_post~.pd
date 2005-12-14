@@ -11,7 +11,7 @@
 #X obj 37 327 mull~ 0 50;
 #X obj 102 291 r DSP_MIX_INTERPOL_TIME;
 #X obj 69 138 dbtorms;
-#X msg 349 258 set \$1_SND;
+#X msg 349 258 set \$1_SUM;
 #X obj 200 258 && 1;
 #X obj 327 140 == 0;
 #X obj 305 25 pack \$1 \$2;

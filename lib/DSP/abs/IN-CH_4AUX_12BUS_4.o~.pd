@@ -1080,7 +1080,7 @@
 #X text 368 164 v;
 #X text 382 150 Edit this;
 #X obj 113 103 dbtorms;
-#X msg 296 222 set \$1_SND;
+#X msg 296 222 set \$1_SUM;
 #X obj 296 202 symbol;
 #X obj 222 207 && 0;
 #X obj 42 353 throw~ 1_AUX_SUM;
@@ -1129,7 +1129,7 @@
 #X text 368 164 v;
 #X text 382 150 Edit this;
 #X obj 113 103 dbtorms;
-#X msg 296 222 set \$1_SND;
+#X msg 296 222 set \$1_SUM;
 #X obj 296 202 symbol;
 #X obj 113 77 receive_regname \$1_IN_AUX_2_GAIN;
 #X obj 212 129 receive_regname \$1_IN_AUX_2_PRE;
@@ -1177,7 +1177,7 @@
 #X text 368 164 v;
 #X text 382 150 Edit this;
 #X obj 113 103 dbtorms;
-#X msg 296 222 set \$1_SND;
+#X msg 296 222 set \$1_SUM;
 #X obj 296 202 symbol;
 #X obj 113 77 receive_regname \$1_IN_AUX_3_GAIN;
 #X obj 212 129 receive_regname \$1_IN_AUX_3_PRE;
@@ -1225,7 +1225,7 @@
 #X text 368 164 v;
 #X text 382 150 Edit this;
 #X obj 113 103 dbtorms;
-#X msg 296 222 set \$1_SND;
+#X msg 296 222 set \$1_SUM;
 #X obj 296 202 symbol;
 #X obj 113 77 receive_regname \$1_IN_AUX_4_GAIN;
 #X obj 212 129 receive_regname \$1_IN_AUX_4_PRE;
@@ -1285,7 +1285,7 @@
 #X obj 278 247 r DSP_get_settings;
 #X obj 278 269 symbol 1_AUX;
 #X obj 278 290 sendreceive \$1_IN_AUX_1_DST;
-#X msg 278 312 set \$1_SND;
+#X msg 278 312 set \$1_SUM;
 #X obj 263 95 f 0;
 #X obj 263 116 sendreceive \$1_IN_AUX_1_PRE;
 #X obj 200 258 && 1;
