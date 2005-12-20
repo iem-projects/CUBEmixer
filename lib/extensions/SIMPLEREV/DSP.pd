@@ -1,0 +1,17 @@
+#N canvas 380 176 450 538 10;
+#X obj 23 30 r~ 1_AUX_SUM;
+#X floatatom 22 346 5 0 0 0 - - -;
+#X obj 23 314 env~;
+#X obj 36 202 throw~ 1_AMBI_BUS;
+#X obj 153 348 throw~ 2_AMBI_BUS;
+#X obj 237 237 throw~ 3_AMBI_BUS;
+#X obj 268 181 throw~ 4_AMBI_BUS;
+#X obj 137 108 musilrev/REV_1_2_2~;
+#X obj 257 48 r EXT_SIMPLEREV;
+#X connect 0 0 7 0;
+#X connect 2 0 1 0;
+#X connect 7 0 3 0;
+#X connect 7 1 4 0;
+#X connect 7 2 5 0;
+#X connect 7 3 6 0;
+#X connect 8 0 7 1;
