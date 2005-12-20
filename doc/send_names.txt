@@ -1,7 +1,7 @@
 1. Spalte = send/receive-name
 
 
-======================================================================================
+===CHANNEL===================================================================================
 Routing Parameter werden nur am Anfang geladen und eingestellt, und duerfen im Sound einen
 Knackser verursachen.
   (fuer IN-MIX-CH)
@@ -53,7 +53,7 @@ $1_IN_BUS_1_GAIN : Gain of 1.(1..16) BUS-SND (0 or 150 MIDI-dB)
 $1_IN_LFC_GAIN : Gain of subwoofer(0 or 150 MIDI-dB)
 
 
-============================================================================================
+====OUTPUT========================================================================================
 
 Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine Knackser.
   (fuer MAIN-OUT-Gain)
@@ -66,7 +66,7 @@ OUT_AMBI_GAIN:   gesamt-lautstaerke fuer ambisonic-decoder
 OUT_MASTER_GAIN: master-gain (alles!)
 
 
-============================================================================================
+===SUBOUT=========================================================================================
 AMBI_ORDER_WEIGHT :  1 1 1 1 1 ...
 
 bus-routing-matrix:: 
@@ -79,6 +79,9 @@ $1_OUT_LFC_BUS_DST:  OUT-Destination fuer subwoofer-kanal 1(1..2)
 
 Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine Knackser.
   (fuer mehrere Module)
+
+
+===TALKBACK==============================================================
 
 $1_IN_VU_SRC: 0=input("adc in"), 1=pre, 2=post
 $1_IN_VU_LEVEL: dsp->gui talkback
@@ -96,12 +99,13 @@ VU_BRIDGE_SRC : <symbol>
       dem VU-Meter-Werte-Paerchen wird noch der Kanal-Index vorgehaengt.
 
 
-=================================================================
+===GENERAL==============================================================
 
 DSP: 1/0 audio-engine on/off (pd dsp $1)
 DSP_CPU <mean> <peak>: cputime auf dem dsp
 
 
+===CUE==============================================================
 
 CUE_PARAMETERS_LOAD: filename (symbol) das geladen werden soll
 CUE_PARAMETERS_SAVE: filename (symbol) in das "parameter" gespeichert werden
@@ -111,3 +115,13 @@ CUE_SETTINGS_SAVE: filename (symbol) in das "setting" gespeichert werden
 CUE_SETTINGS_RESET: setzt den CUE-speicher jedes settings auf ""; wenn direkt danach die setting gespeichert werden, ist das file leer! um "default"-werte zu laden sollte ein eigener "defaults"-CUE existieren!
 
 note: beim laden wird nicht zwischen "parameter" und "setting" unterschieden !
+
+
+===EXTENSIONS==========================================================
+
+---SIMPLE_REV----------------------------------------------------------
+
+EXT_SIMPLEREV_ON: 0=off, 1=on
+EXT_SIMPLEREV_PARAM: parameterliste... (see patch simplerevedit)
+EXT_SIMPLEREV_SRC: AUX SUM Source eg: 1_AUX
+
