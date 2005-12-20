@@ -1,4 +1,4 @@
-#N canvas 75 0 1148 938 10;
+#N canvas 75 0 1148 889 10;
 #X obj 4 -4 inchan 1;
 #X obj 75 -4 inchan 2;
 #X obj 146 -4 inchan 3;
@@ -69,5 +69,6 @@ query the DSP-names;
 #X obj 924 792 cue PARAMETERS;
 #X obj 924 733 cue SETTINGS;
 #X obj 645 655 OUT/LFC;
+#X obj 575 872 simplerev/GUI;
 #X connect 19 0 20 1;
 #X connect 21 0 20 0;
