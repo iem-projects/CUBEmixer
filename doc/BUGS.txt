@@ -31,11 +31,15 @@ pd/DSP/ambisonic:
     Bitte irgendwie linearisieren
 
   - stellt man die ambisonic-gewichte um, wird es laut (0dBmidi <-> 0dBrms)
+  + problem war rms<->dB; fixed
+
+  - ambisonic-orientation funktioniert nicht
 
 
 pd/GUI:
   - SPLAYER als Eingang zwar im Patch aber keine Bedienung in der 
     Mastersektion. Eventuell konzept dazu.
+    PLAY, PAUSE, STOP, LOAD, timeline(?)
 	
   - GUI-feedback bei umschalten ambisonic/direct
   + popup hat durchgeschliffen: "set" verwenden
@@ -69,6 +73,7 @@ pd/extensions:
 pd/CUE:
   - Die Matrix Bus zu DAC~ wird nicht in den Settings oder parameter 
   gespeichert.
+  + fixed saving/resotirng mechanism
 
 
 hardware/bc{f,r}2000:
