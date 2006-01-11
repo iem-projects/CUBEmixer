@@ -42,7 +42,8 @@ pd/GUI:
 pd/MIDI:
   - MIDIconnect zu einen Behringer funktionier standardmässig nicht.
 
-  - MIDI in/out sollte schaltbar sein (z.b. keine positionsdaten an midi-out schicken)
+  - MIDI in/out sollte schaltbar sein (z.b. keine positionsdaten 
+    an midi-out schicken)
 
   - Konzept für MIDI-anbindung von extensions/plugins
 
@@ -60,19 +61,24 @@ pd/CUE:
 
 
 hardware/bc{f,r}2000:
-  - channel-select-5 gibt controller für channel-select-4 aus! (13 selectiert 12!!)
-  + am controller geändert (die setting-files im hw-folder sind ebenfalls geändert (aber nicht getestet)
+  - channel-select-5 gibt controller für channel-select-4 aus! 
+    (13 selectiert 12!!)
+  + am controller geändert (die setting-files im hw-folder sind
+    ebenfalls geändert (aber nicht getestet)
 
   - Beschriftung der Controller (evt. von Gernot mit Beschrifter)
 
 
 
 pd-0.39-1test1/alsamidi:
-  - meldet beim starten (mit -alsamidi) kein device an (erst wenn man auf Media->MIDI_settings... geht und auf OK clickt werden sie aktiviert) 
+  - meldet beim starten (mit -alsamidi) kein device an 
+    (erst wenn man auf Media->MIDI_settings... geht und 
+    auf OK clickt werden sie aktiviert) 
   + mit "-mididev 1" werden die devices tatsächlich erzeugt
   - pd sollte sich gleich mit allen vorhandenen devices verbinden
   + siehe patch amidi_connect.diff
-  - nicht so gut wenn z.b. seq-dummy geladen ist: macht ein device "MIDIthrough" wodurch dann feedbackloops entstehen
+  - nicht so gut wenn z.b. seq-dummy geladen ist: macht ein device 
+    "MIDIthrough" wodurch dann feedbackloops entstehen
 
 
 
