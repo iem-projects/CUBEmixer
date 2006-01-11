@@ -1,7 +1,7 @@
 #N canvas 202 193 849 686 10;
 #X obj 221 201 aconnect;
-#X obj 280 88 inlet;
-#X msg 199 117 reset;
+#X obj 287 88 inlet;
+#X msg 199 47 reset;
 #X msg 177 171 bang;
 #X obj 104 233 route list;
 #X msg 104 256 add2 \$1 \$2 \$3 \$4;
@@ -13,51 +13,55 @@
 #X msg 242 335 64 0 128 0 72 0 128 0 96 0 128 0 104 0 128 0 128 1 64
 0 128 1 72 0 128 1 96 0 128 1 104 0;
 #X msg 62 456 bang;
-#X obj 52 574 route bang;
+#X obj 52 594 route bang;
 #X obj 52 414 r CUE_SETTINGS_GET;
-#X obj 117 616 s CUE_SETTINGS_SET;
+#X obj 117 636 s CUE_SETTINGS_SET;
 #X obj 62 480 aconnect;
 #X obj 62 499 route list;
 #X msg 62 518 add2 \$1 \$2 \$3 \$4;
-#X msg 52 541 72 0 128 0 80 0 128 0 88 0 128 0 128 1 72 0 128 1 80
-0 128 1 88 0;
 #X obj 52 435 t b b b;
 #X msg 96 456 set;
-#X obj 117 596 pp MIDI_ACONNECTOR;
+#X obj 117 616 pp MIDI_ACONNECTOR;
 #X obj 242 367 sendreceive MIDI_ACONNECTOR;
 #X msg 390 291 64 0 128 0 72 0 128 0 96 0 128 0 104 0 128 0 128 1 64
 0 128 1 72 0 128 1 96 0 128 1 104 0;
 #X msg 155 437 bang;
-#X msg 277 231 72 0 128 0 80 0 128 0 88 0 128 0 128 1 72 0 128 1 80
-0 128 1 88 0;
-#X obj 344 175 t a;
+#X msg 287 231 72 0 128 0 80 0 128 0 88 0 128 0 96 0 128 0 128 1 72
+0 128 1 80 0 128 1 88 0 128 1 96 0;
+#X obj 287 185 t a;
+#X obj 62 538 t a;
+#X msg 52 561 72 0 128 0 80 0 128 0 88 0 128 0 96 0 128 0 128 1 72
+0 128 1 80 0 128 1 88 0 128 1 96 0;
+#X text 57 16 click me to query and store the current MIDI-connection
+\, so it will be loaded automatically the next time.;
 #X connect 0 0 4 0;
-#X connect 1 0 27 0;
+#X connect 1 0 26 0;
 #X connect 2 0 8 0;
 #X connect 3 0 0 0;
 #X connect 4 0 5 0;
-#X connect 5 0 27 0;
-#X connect 6 0 27 0;
+#X connect 5 0 26 0;
+#X connect 6 0 26 0;
 #X connect 7 0 9 0;
 #X connect 8 1 0 0;
 #X connect 8 2 6 0;
 #X connect 9 0 0 0;
 #X connect 10 0 7 0;
-#X connect 11 0 23 0;
+#X connect 11 0 22 0;
 #X connect 12 0 16 0;
-#X connect 13 1 22 0;
-#X connect 14 0 20 0;
+#X connect 13 1 21 0;
+#X connect 14 0 19 0;
 #X connect 16 0 17 0;
 #X connect 17 0 18 0;
-#X connect 18 0 19 0;
-#X connect 19 0 13 0;
-#X connect 20 0 19 0;
-#X connect 20 1 12 0;
-#X connect 20 2 21 0;
-#X connect 21 0 19 0;
-#X connect 22 0 15 0;
-#X connect 23 0 10 0;
-#X connect 24 0 23 0;
-#X connect 25 0 20 0;
-#X connect 26 0 23 0;
-#X connect 27 0 26 0;
+#X connect 18 0 27 0;
+#X connect 19 0 28 0;
+#X connect 19 1 12 0;
+#X connect 19 2 20 0;
+#X connect 20 0 27 0;
+#X connect 21 0 15 0;
+#X connect 22 0 10 0;
+#X connect 23 0 22 0;
+#X connect 24 0 19 0;
+#X connect 25 0 22 0;
+#X connect 26 0 25 0;
+#X connect 27 0 28 0;
+#X connect 28 0 13 0;
