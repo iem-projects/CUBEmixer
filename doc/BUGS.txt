@@ -1,26 +1,56 @@
-pd-0.39-1test1:
-  alsamidi :	
-  	BUG: meldet beim starten (mit -alsamidi) kein device an (erst wenn man auf Media->MIDI_settings... geht und auf OK clickt werden sie aktiviert) 
-	FIX: mit "-mididev 1" werden die devices tatsächlich erzeugt
-	BUG: pd sollte sich gleich mit allen vorhandenen devices verbinden
-	FIX: siehe patch amidi_connect.diff
-	BUG2: nicht so gut wenn z.b. seq-dummy geladen ist: macht ein device "MIDIthrough" wodurch dann feedbackloops entstehen
+pd/DSP:
+  - Distanzregler wird leiser wenn Entfrenung nach Null geht ????
+     Bitte irgendwie linearisieren
 
-behringer-controller:
-	BUG: channel-select-5 gibt controller für channel-select-4 aus! (13 selectiert 12!!)
-	FIX: am controller geändert (die setting-files im hw-folder sind ebenfalls geändert (aber nicht getestet)
+  - aux-funktioniert nicht (dsp-seiting)
 
-application:
-  GUI:
-        BUG: GUI-feedback bei umschalten ambisonic/direct
-	FIX: popup hat durchgeschliffen: "set" verwenden
-
-	BUG: spat-umschaltung wird in [inchan] nicht dargestellt
-	FIX: gop waren zu groß
-
-	BUG: aux-funktioniert nicht 
-
-
-   DSP:
-	BUG: aux-funktioniert nicht (dsp-seiting)
+pd/GUI:
+  - SPLAYER als Eingang zwar im Patch aber keine Bedienung in der 
+    Mastersektion. Eventuell konzept dazu.
 	
+  - GUI-feedback bei umschalten ambisonic/direct
+  + popup hat durchgeschliffen: "set" verwenden
+
+  - spat-umschaltung wird in [inchan] nicht dargestellt
+  + gop waren zu groß
+
+  - aux-funktioniert nicht 
+
+
+pd/MIDI:
+  - MIDIconnect zu einen Behringer funktionier standardmässig nicht.
+
+  - MIDI in/out sollte schaltbar sein (z.b. keine positionsdaten an midi-out schicken)
+
+  - Konzept für MIDI-anbindung von extensions/plugins
+
+pd/NET:
+
+pd/plugins:
+  - plugin-creator script, das automatisch die plugins einbindet.
+
+pd/extensions:
+  -  tm's superhall einbinden
+
+pd/CUE:
+  - Die Matrix Bus zu DAC~ wird nicht in den Settings oder parameter 
+  gespeichert.
+
+
+hardware/bc{f,r}2000:
+  - channel-select-5 gibt controller für channel-select-4 aus! (13 selectiert 12!!)
+  + am controller geändert (die setting-files im hw-folder sind ebenfalls geändert (aber nicht getestet)
+
+  - Beschriftung der Controller (evt. von Gernot mit Beschrifter)
+
+
+
+pd-0.39-1test1/alsamidi:
+  - meldet beim starten (mit -alsamidi) kein device an (erst wenn man auf Media->MIDI_settings... geht und auf OK clickt werden sie aktiviert) 
+  + mit "-mididev 1" werden die devices tatsächlich erzeugt
+  - pd sollte sich gleich mit allen vorhandenen devices verbinden
+  + siehe patch amidi_connect.diff
+  - nicht so gut wenn z.b. seq-dummy geladen ist: macht ein device "MIDIthrough" wodurch dann feedbackloops entstehen
+
+
+
