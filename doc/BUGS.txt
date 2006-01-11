@@ -1,3 +1,25 @@
+==============================================================================
+=                                 OUTLINE                                    =
+==============================================================================
+section/subsection:
+  - mit "-" beginnende zeilen sind BUGS/TODO
+  + mit "+" beginnended zeilen beschreiben die lösung des vorangegehenden
+    BUG/TODO-items
+  + mehrere getrennte lösungen erhalten einzelne "+"-punkte
+    
+  - was ist section/subsection?
+  + orientiert sich nach funktionalen einheiten, wie sie 
+    schon die verzeichnisstruktur vorgiebt
+  
+  - layout
+  + die zeilenlänge soll 80 zeichen nicht überschreiten
+  + zwischen jedem item (also gruppe von - und dazugehörigen +) ist aus
+    übersichtsgründen ein leerzeichen einzuführen
+
+==============================================================================
+=                                   TODO                                     =
+==============================================================================
+
 pd/DSP:
   - Distanzregler wird leiser wenn Entfrenung nach Null geht ????
      Bitte irgendwie linearisieren
