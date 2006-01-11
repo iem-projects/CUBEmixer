@@ -1,18 +1,32 @@
 1. Spalte = send/receive-name
 
+===INPUT=====================================================================================
+
+soundfile-player: 
+--------------------------------------------------------
+jeder soundfile-player (egal wieviele kanäle er hat) hat einen uniq-name <ID>
+ausgabe des sfplayers  sollte auf <ID>:<channel>_PLAY erfolgen
+
+der <ID> wird immer prefixed
+$1_SFPLAY_FILE <soundfile>: lädt <soundfile>
+$1_SFPLAY_CTRL start|pause|stop: start/pause/stop
+$1_SFPLAY_CTRL jump <time> : springt zur zeit <time> in [ms]
 
 ===CHANNEL===================================================================================
 Routing Parameter werden nur am Anfang geladen und eingestellt, und duerfen im Sound einen
 Knackser verursachen.
   (fuer IN-MIX-CH)
+--------------------------------------------------------
 
 $1_IN_SRC : selected INPUT or AUX-RET (1_ADC ... 52_ADC, 1_AUX ... 8_AUX)
 $1_IN_DEL : Delay (0 ... 1000 ms)
 $1_IN_INV : Signal-Inverter (+1 or -1)
 $1_IN_AUX_1_DST : selected Destination of 1. AUX-SND (1_AUX ... 8_AUX) (--> audio-engine: [throw~ 1_AUX_SND])
 
+
 Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine Knackser.
   (fuer IN-MIX-CH)
+--------------------------------------------------------
 
 $1_IN_ON: on/off (!mute)
 IN_SOLO: (1 - N) ch-number of exclusive ON;     0: all channels in prev. ON-state
@@ -57,6 +71,7 @@ $1_IN_LFC_GAIN : Gain of subwoofer(0 or 150 MIDI-dB)
 
 Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine Knackser.
   (fuer MAIN-OUT-Gain)
+--------------------------------------------------------
 
 $1_OUT_BUS_GAIN:  Direct-Output-Level fuer BUS1(1..16) (0 ... 150 MIDI-dB)
 $1_OUT_LFC_GAIN:  gesamt-lautstaerke fuer subwoofer-kanal 1(1..2)
