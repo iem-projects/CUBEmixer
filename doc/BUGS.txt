@@ -21,10 +21,14 @@ section/subsection:
 ==============================================================================
 
 pd/DSP:
-  - Distanzregler wird leiser wenn Entfrenung nach Null geht ????
-     Bitte irgendwie linearisieren
-
   - aux-funktioniert nicht (dsp-seiting)
+
+pd/DSP/ambisonic:
+  - Distanzregler wird leiser wenn Entfernung nach Null geht ????
+    Bitte irgendwie linearisieren
+
+  - stellt man die ambisonic-gewichte um, wird es laut (0dBmidi <-> 0dBrms)
+
 
 pd/GUI:
   - SPLAYER als Eingang zwar im Patch aber keine Bedienung in der 
@@ -40,7 +44,9 @@ pd/GUI:
 
 
 pd/MIDI:
-  - MIDIconnect zu einen Behringer funktionier standardmässig nicht.
+  - MIDIconnect zu einen Behringer funktioniert standardmässig nicht.
+  + settings waren falsch gespeichert; korrigiert (über reset 
+    in [MIDI/aconnector] und anschließendem speichern dieses patches
 
   - MIDI in/out sollte schaltbar sein (z.b. keine positionsdaten 
     an midi-out schicken)
