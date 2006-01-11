@@ -22,6 +22,9 @@ section/subsection:
 
 pd/DSP:
   - aux-funktioniert nicht (dsp-seiting)
+  + funktioniert
+
+  - SFPLAYER nur dummym‰ﬂig implementiert
 
 pd/DSP/ambisonic:
   - Distanzregler wird leiser wenn Entfernung nach Null geht ????
@@ -41,6 +44,7 @@ pd/GUI:
   + gop waren zu groﬂ
 
   - aux-funktioniert nicht 
+  + funktioniert
 
 
 pd/MIDI:
@@ -59,7 +63,8 @@ pd/plugins:
   - plugin-creator script, das automatisch die plugins einbindet.
 
 pd/extensions:
-  -  tm's superhall einbinden
+  - tm's superhall einbinden
+  + eingebunden (ist beinahe identisch mit simplerev)
 
 pd/CUE:
   - Die Matrix Bus zu DAC~ wird nicht in den Settings oder parameter 

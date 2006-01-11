@@ -1,5 +1,5 @@
 pd/DSP:
-  - aux-funktioniert nicht (dsp-seiting)
+  - SFPLAYER nur dummy-m‰ﬂig implementiert
 
 pd/DSP/ambisonic:
   - Distanzregler wird leiser wenn Entfernung nach Null geht ????
@@ -7,7 +7,6 @@ pd/DSP/ambisonic:
 
 pd/GUI:
   - SPLAYER als Eingang zwar im Patch aber keine Bedienung in der 
-  - aux-funktioniert nicht 
 
 pd/MIDI:
   - MIDI in/out sollte schaltbar sein (z.b. keine positionsdaten)
