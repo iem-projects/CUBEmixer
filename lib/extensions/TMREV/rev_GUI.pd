@@ -1,0 +1,13 @@
+#N canvas 0 0 450 300 10;
+#X obj 257 79 inlet;
+#X text 257 62 open_close_EDIT;
+#X obj 291 110 inlet;
+#X text 289 91 preset filename;
+#X obj 341 273 outlet;
+#X obj 224 48 inlet;
+#X text 224 31 recall store;
+#X obj 227 147 room_EDIT \$1;
+#X connect 0 0 7 1;
+#X connect 2 0 7 2;
+#X connect 5 0 7 0;
+#X connect 7 1 4 0;
