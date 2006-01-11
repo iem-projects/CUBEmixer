@@ -1,4 +1,4 @@
-#N canvas 51 26 867 572 10;
+#N canvas 1592 182 867 572 10;
 #X obj 486 271 init 50;
 #X obj 279 308 AMBI_Order_Weight_Morphing;
 #X obj 486 293 s DSP_MIX_INTERPOL_TIME;
@@ -75,8 +75,8 @@
 #X text 248 95 1.arg: <float> n_aux_send;
 #X text 282 426 1.arg: <float> n_sf_rec;
 #X obj 283 409 #SF_RECORDER_TOOL~ \$10;
-#X obj 475 173 #VU_METER_BRIDGE~;
 #X msg 382 450 ON_OFF 1;
+#X obj 475 173 #VU_METER_BRIDGE~;
 #X connect 0 0 2 0;
 #X connect 6 0 64 0;
 #X connect 9 0 63 0;
@@ -85,4 +85,4 @@
 #X connect 64 0 66 0;
 #X connect 68 0 63 0;
 #X connect 69 0 63 0;
-#X connect 76 0 66 1;
+#X connect 75 0 66 1;
