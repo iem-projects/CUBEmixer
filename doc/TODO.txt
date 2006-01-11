@@ -1,25 +1,16 @@
-==============================================================================
-=                                   TODO                                     =
-==============================================================================
-
 pd/DSP:
-  - Distanzregler wird leiser wenn Entfrenung nach Null geht ????
-     Bitte irgendwie linearisieren
-
   - aux-funktioniert nicht (dsp-seiting)
+
+pd/DSP/ambisonic:
+  - Distanzregler wird leiser wenn Entfernung nach Null geht ????
+  - stellt man die ambisonic-gewichte um, wird es laut (0dBmidi <-> 0dBrms)
 
 pd/GUI:
   - SPLAYER als Eingang zwar im Patch aber keine Bedienung in der 
-    Mastersektion. Eventuell konzept dazu.
-	
   - aux-funktioniert nicht 
 
 pd/MIDI:
-  - MIDIconnect zu einen Behringer funktionier standardmässig nicht.
-
-  - MIDI in/out sollte schaltbar sein (z.b. keine 
-    positionsdaten an midi-out schicken)
-
+  - MIDI in/out sollte schaltbar sein (z.b. keine positionsdaten)
   - Konzept für MIDI-anbindung von extensions/plugins
 
 pd/NET:
@@ -28,19 +19,11 @@ pd/plugins:
   - plugin-creator script, das automatisch die plugins einbindet.
 
 pd/extensions:
-  -  tm's superhall einbinden
 
 pd/CUE:
-  - Die Matrix Bus zu DAC~ wird nicht in den Settings oder parameter 
-  gespeichert.
-
 
 hardware/bc{f,r}2000:
   - Beschriftung der Controller (evt. von Gernot mit Beschrifter)
 
 pd-0.39-1test1/alsamidi:
-  - autoconnect nicht so gut wenn z.b. seq-dummy geladen ist: 
-    device "MIDIthrough" wodurch dann feedbackloops entstehen
-
-
-
+  - nicht so gut wenn z.b. seq-dummy geladen ist: macht ein device 
