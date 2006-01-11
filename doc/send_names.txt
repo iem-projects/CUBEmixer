@@ -9,7 +9,7 @@ ausgabe des sfplayers  sollte auf <ID>:<channel>_PLAY erfolgen
 
 der <ID> wird immer prefixed
 $1_SFPLAY_FILE <soundfile>: lädt <soundfile>
-$1_SFPLAY_CTRL start|pause|stop: start/pause/stop
+$1_SFPLAY_CTRL play|pause|stop: start/pause/stop
 $1_SFPLAY_CTRL jump <time> : springt zur zeit <time> in [ms]
 
 ===CHANNEL===================================================================================
