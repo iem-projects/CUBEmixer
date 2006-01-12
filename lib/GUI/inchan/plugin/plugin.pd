@@ -1,0 +1,7 @@
+#N canvas 74 77 450 300 10;
+#X obj 111 59 inlet;
+#X msg 165 132 bang;
+#X obj 111 176 \$1/gui \$2 \$3 \$1;
+#X obj 201 59 r GUI/inchan/plugin/edit;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
