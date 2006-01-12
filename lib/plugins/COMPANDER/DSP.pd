@@ -123,16 +123,16 @@
 #X obj 574 149 loadbang;
 #X msg 628 237 0 0 88 88 94 91 100 94 127 94;
 #X obj 32 537 mull~ 0 50;
-#X obj 64 495 receive_pluginparam \$1 \$2 COMPANDER_OUT_GAIN;
-#X obj 118 427 receive_pluginparam \$1 \$2 COMPANDER_DEL_TIME;
+#X obj 64 495 receive_pluginparam \$1 \$2 \$3_OUT_GAIN;
+#X obj 118 427 receive_pluginparam \$1 \$2 \$3_DEL_TIME;
 #X obj 118 447 clip 0 1000;
-#X obj 179 169 receive_pluginparam \$1 \$2 COMPANDER_REL_TIME;
+#X obj 179 169 receive_pluginparam \$1 \$2 \$3_REL_TIME;
 #X obj 179 189 clip 0 50000;
-#X obj 143 126 receive_pluginparam \$1 \$2 COMPANDER_ATT_TIME;
+#X obj 143 126 receive_pluginparam \$1 \$2 \$3_ATT_TIME;
 #X obj 143 146 clip 0 1000;
 #X obj 133 55 clip 0 1;
-#X obj 133 35 receive_pluginparam \$1 \$2 COMPANDER_PEAK_RATIO;
-#X obj 554 106 receive_pluginparam \$1 \$2 COMPANDER_CHARACTERISTIC
+#X obj 133 35 receive_pluginparam \$1 \$2 \$3_PEAK_RATIO;
+#X obj 554 106 receive_pluginparam \$1 \$2 \$3_CHARACTERISTIC
 ;
 #X obj 554 127 unsymbol;
 #X msg 640 169 COMP_1_4;
