@@ -40,7 +40,10 @@
 #X connect 17 0 12 0;
 #X connect 18 0 13 0;
 #X restore 44 135 pd no-plugin;
+#X obj 327 134 plugin~ \$0 distance \$1 \$2;
 #X connect 0 0 2 0;
 #X connect 0 0 3 0;
+#X connect 0 0 4 0;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
+#X connect 4 0 1 0;
