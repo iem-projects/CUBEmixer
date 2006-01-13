@@ -34,7 +34,7 @@ then
 fi
   
 
-PDPATHS="-path .:abs/:libs/:plugins/:GUI/:DSP/:GUI/abs:DSP/abs:libs/iemabs:libs/zexyabs"
+PDPATHS="-path .:abs/:libs/:plugins/:extensions/:GUI/:DSP/:GUI/abs:DSP/abs:libs/iemabs:libs/zexyabs"
 PDLIBS="-lib zexy:iemlib1:iemlib2:iemgui:iemmatrix:iem_ambi"
 
 #PDDSPFLAGS="-32bit -rt -channels 24 -blocksize 16 -audiobuf 50 -alsamidi -mididev 1"

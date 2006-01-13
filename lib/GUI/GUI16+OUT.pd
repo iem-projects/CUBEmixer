@@ -1,4 +1,4 @@
-#N canvas 0 0 993 637 10;
+#N canvas 0 0 1151 940 10;
 #X obj 6 -35 inchan 1;
 #X obj 77 -35 inchan 2;
 #X obj 148 -35 inchan 3;
@@ -27,7 +27,7 @@
 #X obj 204 252 s GUI_dspNames;
 #X text 55 224 as soon as we have a working 2-side connection \, we
 query the DSP-names;
-#X obj 254 126 inlet;
+#X obj 234 126 inlet;
 #X obj 173 308 s GUI_NET_initialized;
 #X obj 173 196 t b b;
 #X obj 484 213 sendreceive DSP_setLabel;

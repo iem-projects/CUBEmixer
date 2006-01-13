@@ -1,4 +1,4 @@
-#N canvas 43 118 370 239 10;
+#N canvas 1457 189 370 239 10;
 #X obj 147 16 namecanvas \$0-gui;
 #N canvas 241 86 752 532 viscode 0;
 #X msg 253 391 vis 1;
@@ -103,19 +103,19 @@
 #X connect 27 0 7 0;
 #X restore 74 160 pd code;
 #X obj 188 102 nbx 5 14 0 1000 0 0 \$0attack_fromgui \$0attack_togui
-ATTACK 0 -6 0 12 -262144 -1 -1 0 256;
+ATTACK 0 -6 0 12 -262144 -1 -1 24 256;
 #X obj 188 132 nbx 5 14 0 1000 0 0 \$0delay_fromgui \$0delay_togui
-DELAY 0 -6 0 12 -262144 -1 -1 0 256;
-#X obj 188 162 nbx 5 14 0 1000 0 0 \$0release_fromgui \$0release_togui
-RELEASE 0 -6 0 12 -262144 -1 -1 0 256;
+DELAY 0 -6 0 12 -262144 -1 -1 5 256;
+#X obj 188 162 nbx 5 14 0 50000 0 0 \$0release_fromgui \$0release_togui
+RELEASE 0 -6 0 12 -262144 -1 -1 1000 256;
 #X obj 258 63 vsl 30 128 0 127 0 0 \$0gain_fromgui \$0gain_togui GAIN
-3 -8 0 12 -262144 -1 -1 0 1;
+3 -8 0 12 -262144 -1 -1 9500 1;
 #X obj 46 92 hsl 128 15 0 1 0 0 \$0ratio_fromgui \$0ratio_togui PeakRatio
 -2 -6 0 12 -262144 -1 -1 0 1;
 #X obj 25 14 cnv 15 250 20 empty \$0-name COMPANDER 25 10 0 16 -233017
 -66577 0;
 #X obj 24 14 tgl 20 0 \$0on_fromgui \$0on_togui empty 0 -6 0 8 -262144
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 155 14 cnv 15 100 20 empty \$0-channel channel:01 0 10 0 16
 -233017 -62784 0;
 #X obj 265 14 cnv 15 70 20 empty \$0-slot slot:01 0 10 0 16 -233017
