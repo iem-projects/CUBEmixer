@@ -6,9 +6,23 @@
 ## pd-binary (if any)
 ## usage:
 ##  test_pd /path/to/my/preferred/pd /path/to/my/second/choice/pd
+function test_pd() {
+local i
+local ARGS
+ARGS="$@ $(which pd)"
+for i in $ARGS
+do
+  if [ -x "$i" ]
+  then
+    echo $i
+    return
+  fi
+done
+}
+
 cd $(dirname $0)
 
-PD=/usr/local/bin/pd
+PD=$(test_pd $PD /usr/local/src/pd-0.37-4.patched/bin/pd)
 
 if [ "x$PD" = "x" ]
 then
@@ -24,10 +38,11 @@ PDPATHS="-path .:abs/:libs/:plugins/:extensions/:GUI/:DSP/:GUI/abs:DSP/abs:libs/
 PDLIBS="-lib zexy:iemlib1:iemlib2:iemgui:iemmatrix:iem_ambi"
 
 #PDDSPFLAGS="-32bit -rt -channels 24 -blocksize 16 -audiobuf 50 -alsamidi -mididev 1"
-PDDSPFLAGS="-alsa  -channels 8 -r 44100"
+PDDSPFLAGS="-alsa -rt -channels 26 -r 44100 -audiobuf 23 -alsamidi -mididev 1"
 
 PDGUIFLAGS="-nosound -nomidi -nrt"
 
-echo ${PD} ${PDPATHS} ${PDLIBS} ${PDDSPFLAGS} -open DSP/DSP+NET+MIDI+CUE.pd ${CUBEMIXER_DSP_FLAGS} 
+${PD} ${PDPATHS} ${PDLIBS} ${PDDSPFLAGS} -open DSP/DSP+NET+MIDI+CUE.pd ${CUBEMIXER_DSP_FLAGS} &
 
-echo ${PD} ${PDPATHS} ${PDLIBS} ${PDGUIFLAGS} -open GUI/GUI16+OUT.pd  ${CUBEMIXER_GUI_FLAGS}
+
+${PD} ${PDPATHS} ${PDLIBS} ${PDGUIFLAGS} -open GUI/GUI16+OUT.pd  ${CUBEMIXER_GUI_FLAGS}
