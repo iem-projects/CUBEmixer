@@ -58,8 +58,8 @@
 #X obj 286 81 CUE/main;
 #X obj 135 73 loadbang;
 #X obj 135 99 del 1000;
-#X obj 21 223 simplerev/DSP;
-#X obj 126 223 tmrev/DSP;
+#X obj 21 223 SIMPLEREV/DSP;
+#X obj 126 223 TMREV/DSP;
 #X text 95 175 ---------- EXTENSIONS ------;
 #X text 120 19 ---- Interfaces ----;
 #X text 95 272 The_MIXIER~ Initial Arguments;
