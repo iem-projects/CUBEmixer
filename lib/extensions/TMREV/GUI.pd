@@ -1,7 +1,7 @@
 #N canvas 198 0 733 513 10;
 #X text 286 170 open_close_EDIT;
 #X text 215 192 recall store;
-#X obj 233 254 tmrev/REV/room_EDIT \$1;
+#X obj 233 254 TMREV/REV/room_EDIT \$1;
 #X msg 321 194 1;
 #X obj 233 123 gui_sr_offset \$0_ON EXT_TMREV_ON 0;
 #X msg 614 154 read;

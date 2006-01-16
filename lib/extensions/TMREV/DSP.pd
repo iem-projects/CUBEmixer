@@ -15,7 +15,7 @@
 #X obj 124 53 symbol;
 #X msg 124 75 set \$1_SUM;
 #X obj 416 200 del 60;
-#X obj 125 128 tmrev/REV_2_4_4~;
+#X obj 125 128 TMREV/REV_2_4_4~;
 #X obj 124 19 sendreceive EXT_TMREV_SRC;
 #X obj 272 38 sendreceive EXT_TMREV_PARAM;
 #X obj 416 87 sendreceive EXT_TMREV_ON;
