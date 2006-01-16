@@ -4,7 +4,7 @@
 #X obj 173 378 throw~ 2_AMBI_BUS;
 #X obj 224 267 throw~ 3_AMBI_BUS;
 #X obj 267 211 throw~ 4_AMBI_BUS;
-#X obj 125 108 simplerev/REV_1_2_2~;
+#X obj 125 108 SIMPLEREV/REV_1_2_2~;
 #X obj 272 18 sendreceive EXT_SIMPLEREV_PARAM;
 #X obj 416 228 switch~;
 #X obj 124 167 multiline~ 0 0 0 0 50;
