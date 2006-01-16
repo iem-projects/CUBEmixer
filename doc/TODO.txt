@@ -1,9 +1,12 @@
 pd/DSP:
   - SFPLAYER nur dummy-m‰ﬂig implementiert
+  + 8 Kanal Player implementiert
 
 pd/DSP/ambisonic:
   - Distanzregler wird leiser wenn Entfernung nach Null geht ????
+
   - stellt man die ambisonic-gewichte um, wird es laut (0dBmidi <-> 0dBrms)
+
 
 pd/GUI:
   - SPLAYER als Eingang zwar im Patch aber keine Bedienung in der 

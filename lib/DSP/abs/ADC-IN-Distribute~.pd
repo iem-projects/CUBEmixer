@@ -48,3 +48,5 @@
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X restore 316 114 pd noise~;
+#X obj 49 561 adc_2_in~ 25;
+#X obj 49 581 adc_2_in~ 26;

@@ -95,6 +95,3 @@ pd-0.39-1test1/alsamidi:
   + siehe patch amidi_connect.diff
   - nicht so gut wenn z.b. seq-dummy geladen ist: macht ein device 
     "MIDIthrough" wodurch dann feedbackloops entstehen
-
-
-

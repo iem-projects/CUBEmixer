@@ -25,7 +25,7 @@
 #X obj 732 93 sel 0 1;
 #X text 391 79 2.arg: <symbol> name of compensation file;
 #X obj 52 32 inlet~;
-#X obj 189 569 outlet~;
+#X obj 47 625 outlet~;
 #X msg 756 193 read \$1;
 #X text 633 621 del + gain;
 #X msg 586 270 0 1;
