@@ -1,0 +1,20 @@
+#N canvas 500 130 450 300 10;
+#X obj 101 101 cnv 15 83 58 empty empty SYSTEM 10 12 0 14 -233017 -66577
+0;
+#X obj 122 131 bng 15 250 50 0 \$0_open \$0_open open 20 7 0 12 -62784
+-1 -1;
+#X text 99 64 system-settings go in here;
+#X obj 230 135 r \$0_open;
+#X obj 230 159 f \$0;
+#X msg 230 213 \; \$1 vis 1;
+#N canvas 336 54 406 239 6640-system-settings 0;
+#X obj 51 100 extensions/TESTTONE/GUI;
+#X obj 140 23 cue PARAMETERS;
+#X obj 33 23 cue SETTINGS;
+#X obj 253 23 GUI/net;
+#X restore 47 233 pd \$0-system-settings;
+#X obj 230 185 makefilename pd-%d-system-settings;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 7 0 5 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
