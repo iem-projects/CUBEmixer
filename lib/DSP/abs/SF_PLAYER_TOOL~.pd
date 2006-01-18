@@ -1,5 +1,0 @@
-#N canvas 1355 293 335 324 10;
-#X obj 43 27 inlet~;
-#X obj 44 254 outlet~;
-#X obj 74 131 SFPLAYER8~ 8;
-#X connect 0 0 1 0;

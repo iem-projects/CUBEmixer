@@ -69,9 +69,7 @@
 ;
 #X text 96 363 5.arg: <float> effect_plug_in_index;
 #X obj 238 154 \$8_AUX_PLUG_IN~ \$3 \$4;
-#X obj 480 70 SF_PLAYER_TOOL~ \$9;
 #X text 80 97 1.arg: <float> n_in;
-#X text 486 91 1.arg: <float> n_sf_play;
 #X text 248 95 1.arg: <float> n_aux_send;
 #X text 282 426 1.arg: <float> n_sf_rec;
 #X obj 283 409 #SF_RECORDER_TOOL~ \$10;
@@ -84,5 +82,4 @@
 #X connect 63 0 6 0;
 #X connect 64 0 66 0;
 #X connect 68 0 63 0;
-#X connect 69 0 63 0;
-#X connect 75 0 66 1;
+#X connect 73 0 66 1;
