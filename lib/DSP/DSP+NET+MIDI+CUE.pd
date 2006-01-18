@@ -70,11 +70,7 @@
 #X text 435 245 --- Helper ---;
 #X text 8 2 DSP-ENGINE Main Patch;
 #X obj 49 434 The_MIXER~ 26 16 4 4 12 26 4 0 0 0;
-#N canvas 1491 278 450 300 extensions 0;
-#X obj 56 95 SIMPLEREV/DSP;
-#X obj 161 95 TMREV/DSP;
-#X obj 60 136 TESTTONE/DSP;
-#X restore 164 213 pd extensions;
+#X obj 164 213 DSP/extensions;
 #X connect 0 0 2 0;
 #X connect 0 1 3 0;
 #X connect 1 0 0 0;
