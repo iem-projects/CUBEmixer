@@ -25,6 +25,7 @@ pd/DSP:
   + funktioniert
 
   - SFPLAYER nur dummym‰ﬂig implementiert
+  + SFPLAYER implementiert (als extension)
 
 pd/DSP/ambisonic:
   - Distanzregler wird leiser wenn Entfernung nach Null geht ????
@@ -40,6 +41,7 @@ pd/GUI:
   - SPLAYER als Eingang zwar im Patch aber keine Bedienung in der 
     Mastersektion. Eventuell konzept dazu.
     PLAY, PAUSE, STOP, LOAD, timeline(?)
+  + SFPLAYER (als extension) implementiert
 	
   - GUI-feedback bei umschalten ambisonic/direct
   + popup hat durchgeschliffen: "set" verwenden
@@ -83,7 +85,7 @@ hardware/bc{f,r}2000:
     ebenfalls ge‰ndert (aber nicht getestet)
 
   - Beschriftung der Controller (evt. von Gernot mit Beschrifter)
-
+  + beschriftet (mehr schlecht als recht)
 
 
 pd-0.39-1test1/alsamidi:
@@ -95,3 +97,4 @@ pd-0.39-1test1/alsamidi:
   + siehe patch amidi_connect.diff
   - nicht so gut wenn z.b. seq-dummy geladen ist: macht ein device 
     "MIDIthrough" wodurch dann feedbackloops entstehen
+  + patch wird nicht appliziert; stattdessen werden die midi-devices explizit mit [aconnect] eingebunden
