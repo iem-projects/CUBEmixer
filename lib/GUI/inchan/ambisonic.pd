@@ -1,4 +1,4 @@
-#N canvas 126 93 404 269 10;
+#N canvas 603 218 404 269 10;
 #X obj 1 1 cnv 15 66 98 empty empty ambisonic 5 8 0 8 -233017 -66577
 0;
 #X obj 8 31 nbx 4 14 0 999 0 0 1002GUIambisonic_r_fromgui 1002GUIambisonic_r_togui
@@ -9,11 +9,8 @@ phi 40 8 0 8 -262144 -1 -1 0 256;
 1002GUIambisonic_theta_togui theta 28 8 0 8 -262144 -1 -1 0 256;
 #X obj 140 57 parent$0;
 #X obj 140 34 loadbang;
-#N canvas 0 369 964 309 code 0;
+#N canvas 269 490 964 309 code 0;
 #X obj 194 11 inlet;
-#X obj 151 244 outlet;
-#X obj 197 244 outlet;
-#X obj 243 244 outlet;
 #X msg 151 67 send \$1GUIambisonic_r_fromgui \, receive \$1GUIambisonic_r_togui
 ;
 #X msg 197 104 send \$1GUIambisonic_phi_fromgui \, receive \$1GUIambisonic_phi_togui
@@ -21,17 +18,24 @@ phi 40 8 0 8 -262144 -1 -1 0 256;
 #X msg 243 140 send \$1GUIambisonic_theta_fromgui \, receive \$1GUIambisonic_theta_togui
 ;
 #X obj 189 33 t s s s;
-#X connect 0 0 7 0;
+#X obj 614 49 loadbang;
+#X obj 151 244 outlet r;
+#X msg 614 82 set 1;
+#X obj 323 244 outlet elevation;
+#X obj 217 244 outlet azimuth;
+#X connect 0 0 4 0;
+#X connect 1 0 6 0;
+#X connect 2 0 9 0;
+#X connect 3 0 8 0;
 #X connect 4 0 1 0;
-#X connect 5 0 2 0;
-#X connect 6 0 3 0;
-#X connect 7 0 4 0;
-#X connect 7 1 5 0;
-#X connect 7 2 6 0;
+#X connect 4 1 2 0;
+#X connect 4 2 3 0;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;
 #X restore 123 11 pd code . . .;
 #X connect 4 0 6 0;
 #X connect 5 0 4 0;
 #X connect 6 0 1 0;
-#X connect 6 1 2 0;
-#X connect 6 2 3 0;
+#X connect 6 1 3 0;
+#X connect 6 2 2 0;
 #X coords 0 0 1 1 66 100 1 0 0;
