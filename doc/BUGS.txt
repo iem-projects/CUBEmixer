@@ -28,13 +28,13 @@ pd/DSP:
   + SFPLAYER implementiert (als extension)
 
 pd/DSP/ambisonic:
-  - Distanzregler wird leiser wenn Entfernung nach Null geht ????
+  - Distanzregler wird leiser wenn Entfernung 0..1
     Bitte irgendwie linearisieren
 
   - stellt man die ambisonic-gewichte um, wird es laut (0dBmidi <-> 0dBrms)
   + problem war rms<->dB; fixed
 
-  - ambisonic-orientation funktioniert nicht
+  - ambisonic-orientation funktioniert nicht (nicht implementiert!)
 
 
 pd/GUI:
@@ -51,6 +51,8 @@ pd/GUI:
 
   - aux-funktioniert nicht 
   + funktioniert
+
+  - ambisonic/direct werden nicht korrekt initialisiert
 
 
 pd/MIDI:
@@ -74,7 +76,7 @@ pd/extensions:
 
 pd/CUE:
   - Die Matrix Bus zu DAC~ wird nicht in den Settings oder parameter 
-  gespeichert.
+    gespeichert.
   + fixed saving/resotirng mechanism
 
 
@@ -87,14 +89,3 @@ hardware/bc{f,r}2000:
   - Beschriftung der Controller (evt. von Gernot mit Beschrifter)
   + beschriftet (mehr schlecht als recht)
 
-
-pd-0.39-1test1/alsamidi:
-  - meldet beim starten (mit -alsamidi) kein device an 
-    (erst wenn man auf Media->MIDI_settings... geht und 
-    auf OK clickt werden sie aktiviert) 
-  + mit "-mididev 1" werden die devices tatsächlich erzeugt
-  - pd sollte sich gleich mit allen vorhandenen devices verbinden
-  + siehe patch amidi_connect.diff
-  - nicht so gut wenn z.b. seq-dummy geladen ist: macht ein device 
-    "MIDIthrough" wodurch dann feedbackloops entstehen
-  + patch wird nicht appliziert; stattdessen werden die midi-devices explizit mit [aconnect] eingebunden
