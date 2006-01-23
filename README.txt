@@ -4,27 +4,27 @@ Concept and Development: Musil, Ritsch, Zmoelnig
 Project Leader: Ritsch
 =================================================
 
-./pd	pure-data patches (and externals)
+./lib	pure-data patches (and externals)
 ./doc	documentation
 ./src	source-code (for externals)
-./data	data
+./tools	toolkits, helper-applications,...
 
 directory-layout:
  core modules:
-  ./pd/CUE			- cue-triggering machine
-  ./pd/DSP			- the audio-engine
-  ./pd/GUI			- the Graphical User Interface
-  ./pd/GUI/<name>/		- helper abstractions for the ./GUI/<name>.pd abs
-  ./pd/MIDI			- interface to MIDI-hw/sw
-  ./pd/MIDI/faderbox		- interface to MIDI-hw/faderboxes [THINK about the name]
-  ./pd/MIDI/extern		- interface to external MIDI-sequencer
-  ./pd/SEQUENCER		- cue-sequencer
+  ./lib/CUE			- cue-triggering machine
+  ./lib/DSP			- the audio-engine
+  ./lib/GUI			- the Graphical User Interface
+  ./lib/GUI/<name>/		- helper abstractions for the ./GUI/<name>.pd abs
+  ./lib/MIDI			- interface to MIDI-hw/sw
+  ./lib/MIDI/faderbox		- interface to MIDI-hw/faderboxes [THINK about the name]
+  ./lib/MIDI/extern		- interface to external MIDI-sequencer
+  ./lib/SEQUENCER		- cue-sequencer
  add-on modules: ???
-  ./pd/plugins/<pluginname>/	- DSP/GUI/MIDI/... part of plugins
+  ./lib/plugins/<pluginname>/	- DSP/GUI/MIDI/... part of plugins
  helpers:
-  ./pd/abs			- general abstractions
-  ./pd/libs			- libraries (binaries)
-  ./pd/tests			- sandbox for experimenting
+  ./lib/abs			- general abstractions
+  ./lib/libs			- libraries (binaries)
+  ./lib/tests			- sandbox for experimenting
 
 
 
