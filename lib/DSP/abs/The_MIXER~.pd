@@ -72,9 +72,9 @@
 #X text 80 97 1.arg: <float> n_in;
 #X text 248 95 1.arg: <float> n_aux_send;
 #X text 282 426 1.arg: <float> n_sf_rec;
-#X obj 283 409 #SF_RECORDER_TOOL~ \$10;
+#X obj 283 409 # SF_RECORDER_TOOL~ \$10;
 #X msg 382 450 ON_OFF 1;
-#X obj 475 173 #VU_METER_BRIDGE~;
+#X obj 475 173 # VU_METER_BRIDGE~;
 #X connect 0 0 2 0;
 #X connect 6 0 64 0;
 #X connect 9 0 63 0;
