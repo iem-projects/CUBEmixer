@@ -1,4 +1,7 @@
 3D-mixer: for the IEM CUBE and other environments
+iem -2005
+Concept and Development: Musil, Ritsch, Zmoelnig
+Project Leader: Ritsch
 =================================================
 
 ./pd	pure-data patches (and externals)
