@@ -22,5 +22,5 @@
 #X obj 653 611 OUT/LFC;
 #X obj 956 614 SIMPLEREV/GUI;
 #X obj 1054 614 TMREV/GUI;
-#X obj 1054 847 system;
+#X obj 1059 845 system;
 #X obj 996 679 SFPLAYER8/GUI 8;
