@@ -29,7 +29,7 @@
 #X text 118 493 100m: f_lo=0;
 #X obj 134 384 -;
 #X obj 134 341 t f b;
-#X obj 98 59 #receive_pluginparam \$1 \$2 \$3_PEAK_RATIO;
+#X obj 98 59 # receive_pluginparam \$1 \$2 \$3_PEAK_RATIO;
 #X floatatom 193 127 5 0 0 0 - - -;
 #X obj 134 297 * 1.36;
 #X msg 134 360 136 \$1;
