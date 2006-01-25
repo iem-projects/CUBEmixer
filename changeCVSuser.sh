@@ -7,10 +7,8 @@ if [ "x$1" = "x" ]; then
 fi
 
 
-for i in `find . -name Root`
+find . -name Root | while read i
 do
  echo $i
- TEMPFILE=`tempfile`
- sed -e "s/ext:.*@cvs/ext:$1@cvs/g" $i > $TEMPFILE
- mv $TEMPFILE $i
+ sed -i -e "s/ext:.*@cvs/ext:$1@cvs/g" "$i"
 done
