@@ -1,18 +1,28 @@
-ACHTUNG: bitte in diesem file nichts editieren!
-ACHTUNG: statt dessen das file BUGS.txt editieren!
-ACHTUNG:
-ACHTUNG: (dieses file ist nur ein "view" auf BUGS.txt)
+
+section/subsection:
+  - mit "-" beginnende zeilen sind BUGS/TODO
+  - was ist section/subsection?
+  - layout
 
 pd/DSP:
+  - aux-funktioniert nicht (dsp-seiting)
+  - SFPLAYER nur dummymäßig implementiert
 
 pd/DSP/ambisonic:
-  - Distanzregler wird leiser wenn Entfernung nach Null geht ????
-
+  - Distanzregler wird leiser wenn Entfernung 0..1
+  - stellt man die ambisonic-gewichte um, wird es laut (0dBmidi <-> 0dBrms)
+  - ambisonic-orientation funktioniert nicht (nicht implementiert!)
 
 pd/GUI:
+  - SPLAYER als Eingang zwar im Patch aber keine Bedienung in der 
+  - GUI-feedback bei umschalten ambisonic/direct
+  - spat-umschaltung wird in [inchan] nicht dargestellt
+  - aux-funktioniert nicht 
+  - ambisonic/direct werden nicht korrekt initialisiert
 
 pd/MIDI:
-  - MIDI in/out sollte schaltbar sein (z.b. keine positionsdaten)
+  - MIDIconnect zu einen Behringer funktioniert standardmässig nicht.
+  - MIDI in/out sollte schaltbar sein (z.b. keine positionsdaten 
   - Konzept für MIDI-anbindung von extensions/plugins
 
 pd/NET:
@@ -21,9 +31,11 @@ pd/plugins:
   - plugin-creator script, das automatisch die plugins einbindet.
 
 pd/extensions:
+  - tm's superhall einbinden
 
 pd/CUE:
+  - Die Matrix Bus zu DAC~ wird nicht in den Settings oder parameter 
 
 hardware/bc{f,r}2000:
-
-pd-0.39-1test1/alsamidi:
+  - channel-select-5 gibt controller für channel-select-4 aus! 
+  - Beschriftung der Controller 
