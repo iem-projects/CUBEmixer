@@ -86,6 +86,6 @@ hardware/bc{f,r}2000:
   + am controller geändert (die setting-files im hw-folder sind
     ebenfalls geändert (aber nicht getestet)
 
-  - Beschriftung der Controller (evt. von Gernot mit Beschrifter)
-  + beschriftet (mehr schlecht als recht)
+  - Beschriftung der Controller 
+  + beschriftet 
 
