@@ -1,15 +1,21 @@
 3D-mixer: for the IEM CUBE and other environments
-iem -2005
-Concept and Development: Musil, Ritsch, Zmoelnig
-Project Leader: Ritsch
+Institut of Electronic Music and Acoustics Graz - 2005
+Programming-Concept and Development: Musil, Ritsch, Zmoelnig
+based on  various developments on IEM Graz 
 =================================================
+------------------------------------------------------------------------------------------------------
+Please start Mixer with skript located in the 'bin' folder and optional edit for system requirements:
+
+ linux: Cubemixer.sh
+ windows: first start 'CUBEmixerDSP.bat' and then 'CubemixerGUI.bat'
 
 ./lib	pure-data patches (and externals)
 ./doc	documentation
-./src	source-code (for externals)
+./src	source-code (for externals and pd)
 ./tools	toolkits, helper-applications,...
+------------------------------------------------------------------------------------------------------
+directory-layout for patch:
 
-directory-layout:
  core modules:
   ./lib/CUE			- cue-triggering machine
   ./lib/DSP			- the audio-engine
@@ -19,12 +25,10 @@ directory-layout:
   ./lib/MIDI/faderbox		- interface to MIDI-hw/faderboxes [THINK about the name]
   ./lib/MIDI/extern		- interface to external MIDI-sequencer
   ./lib/SEQUENCER		- cue-sequencer
+
  add-on modules: ???
   ./lib/plugins/<pluginname>/	- DSP/GUI/MIDI/... part of plugins
  helpers:
   ./lib/abs			- general abstractions
   ./lib/libs			- libraries (binaries)
   ./lib/tests			- sandbox for experimenting
-
-
-
