@@ -6,7 +6,7 @@
 #X floatatom 457 319 5 0 0 0 - - -;
 #X text 52 312 2.arg: <float> n_mix_ch;
 #X text 36 288 **********************************************;
-#X text 36 408 **********************************************;
+#X text 36 428 **********************************************;
 #X text 30 288 *;
 #X text 30 298 *;
 #X text 30 308 *;
@@ -38,7 +38,7 @@
 #X text 359 278 *;
 #X text 52 340 5.arg: <float> n_bus;
 #X text 30 408 *;
-#X text 359 408 *;
+#X text 359 428 *;
 #X text 52 303 1.arg: <float> n_in;
 #X text 52 321 3.arg: <float> n_aux_send;
 #X text 52 330 4.arg: <float> n_aux_return;
@@ -69,8 +69,13 @@
 #X text 94 242 ------------ MIXER ------------;
 #X text 435 245 --- Helper ---;
 #X text 8 2 DSP-ENGINE Main Patch;
-#X obj 49 434 The_MIXER~ 26 16 4 4 12 26 4 0 0 0;
 #X obj 164 213 DSP/extensions;
+#X text 359 408 *;
+#X text 359 418 *;
+#X text 30 428 *;
+#X text 30 418 *;
+#X text 47 400 11.arg: <float> n_ambisonic_order;
+#X obj 49 444 The_MIXER~ 26 16 4 4 12 26 4 0 0 0 4;
 #X connect 0 0 2 0;
 #X connect 0 1 3 0;
 #X connect 1 0 0 0;
