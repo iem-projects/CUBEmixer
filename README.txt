@@ -1,4 +1,4 @@
-3D-mixer: for the IEM CUBE and other environments
+CUBEmixer: for the IEM CUBE and other environments
 Institut of Electronic Music and Acoustics Graz - 2005
 Programming-Concept and Development: Musil, Ritsch, Zmoelnig
 based on  various developments on IEM Graz 
