@@ -3,6 +3,7 @@ Institut of Electronic Music and Acoustics Graz - 2005
 Programming-Concept and Development: Musil, Ritsch, Zmoelnig
 based on  various developments on IEM Graz 
 =================================================
+cms_labor version
 ------------------------------------------------------------------------------------------------------
 Please start Mixer with skript located in the 'bin' folder and optional edit for system requirements:
 
