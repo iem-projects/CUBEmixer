@@ -6,7 +6,7 @@ set PD_AUDIO=-r 44100 -audiobuf 80 -sleepgrain 10 -channels 26
 set PD_MIDI=
 set PD_OPTIONS=-font 10
 set PD_PATH=-path ..;../lib;../lib/abs/;../lib/libs/;../lib/plugins/;../lib/extensions/;../lib/GUI/;../lib/DSP/;../lib/GUI/abs;../lib/DSP/abs;../lib/libs/iemabs;../lib/libs/zexyabs
-set PD_LIB=-lib zexy -lib iemlib1 -lib iemlib2 -lib iemmatrix -lib iem_ambi -lib iemgui
+set PD_LIB=-lib zexy;iemlib1;iemlib2;iemmatrix;iem_ambi;iemgui
 
 REM ***** overwrites optionally the PD_INSTALL variable *********
 if exist LocalVars.bat (call LocalVars.bat)
