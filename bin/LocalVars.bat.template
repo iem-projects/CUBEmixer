@@ -1,0 +1,4 @@
+REM Here You can overwrite variables defined in CUBEmixer*.bat 
+REM you have to copy this template to LocalVars.bat
+
+set PD_INSTALL=C:\Programme\pd-0.39-2\bin
