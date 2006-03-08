@@ -4,10 +4,10 @@
 #X obj 375 28 inlet params;
 #X obj 122 248 outlet settings;
 #X obj 375 248 outlet params;
-#X obj 175 99 CUE/aux \$1_IN_AUX_1;
-#X obj 175 119 CUE/aux \$1_IN_AUX_2;
-#X obj 175 139 CUE/aux \$1_IN_AUX_3;
-#X obj 175 159 CUE/aux \$1_IN_AUX_4;
+#X obj 175 99 CUE/auxiliary \$1_IN_AUX_1;
+#X obj 175 119 CUE/auxiliary \$1_IN_AUX_2;
+#X obj 175 139 CUE/auxiliary \$1_IN_AUX_3;
+#X obj 175 159 CUE/auxiliary \$1_IN_AUX_4;
 #X connect 0 0 4 0;
 #X connect 0 0 5 0;
 #X connect 0 0 6 0;
