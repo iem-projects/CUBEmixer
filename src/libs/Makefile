@@ -97,6 +97,8 @@ build: sources aconnect-build iemgui-build iemlib-build iemmatrix-build popup-bu
 
 locinstall: build aconnect-locinstall iemgui-locinstall iemlib-locinstall iemmatrix-locinstall popup-locinstall zexy-locinstall
 
-distclean:
+clean: 
 	rm -rf aconnect iem_ambi iemlib iemmatrix popup zexy sf-login
+
+distclean: clean
 	rm -rf $(LOCINSTALL_DIR)/*
