@@ -21,7 +21,7 @@ Prerequistites:
 
 2) libraries if not in package from SVN
 
-   Fet the libraries from revision system, compile it (see instructions there)  and install on the system. If you cannot install it on the system then put the libraries in the lib/libs/ folder and correct the PATH in the startup script.
+   Fetch the libraries via revision system, compile (see instructions there)  and install them on the system. If you cannot install them on the system then put the libraries in the lib/libs/ folder and correct the PATH in the startup script.
    Also setup the path to the abstraction libnraries iemabs, zexyabs (iemhelp2)
 
 2.1) iemlib1, iemlib2 
@@ -31,15 +31,15 @@ Prerequistites:
 
 2.2) iemmatrix
 
-        sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P  externals/iem/iemmatrix/
+      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P  externals/iem/iemmatrix/
 
 2.3) iem_ambi
 
         ??????????????? 
 
-  2.4) zexy
+2.4) zexy
 
-    sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P externals/zexy
+      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P externals/zexy
 
 2.5) popup
 
@@ -51,7 +51,9 @@ Prerequistites:
 
      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P externals/iem/aconnect
 
-a) Download as Package from
+3.) Get this package (chances are high, you already have it...)
+
+3.a) Download as complete Package from
 
     IEM Project Page - http://sourceforge.net/projects/iem/
 
@@ -61,16 +63,13 @@ a) Download as Package from
 
    Unpack and follow instruction there.
 
-b) From Subversion
+3.b) Get the current development version via Subversion (SVN) from sourceforge;
+   the sourceforge-project is called "iem", and you need to get the sub-project "CUBEmixer".
+   To get the main development branch use something like
+     sh: svn co  https://svn.sourceforge.net/svnroot/iem/spatialization/CUBEmixer/trunk/ CUBEmixer
 
-
-3.) Download aus SVN aus IEM-Projekt CUBEmixer? mit branches/cms_labor:
-
-   sh: svn co  https://svn.sourceforge.net/svnroot/iem/spatialization/CUBEmixer/trunk/ CUBEmixer
-
- or any branch see 
-
+   You can also get a sub-branch; you can find a list of available sub-branches here:
     http://svn.sourceforge.net/viewcvs.cgi/iem/spatialization/CUBEmixer/branches/
 
 
-Put it in your favorite place and look at the bin folder for the startup script.
+4.) Put the CUBEmiser in your favorite place and look at the bin folder for the startup script.
