@@ -1,0 +1,31 @@
+pd-externals needed for CUBEmixer
+
+following pd-externals are needed for the CUBEmixer to run correctly:
+ aconnect (linux)
+ iemgui
+ iem_ambi
+ iemlib
+ iemmatrix
+ popup
+ zexy
+
+All of these externals (with the notable exception of iemgui) 
+are not included with this package!
+
+The missing externals are available from the pure-data CVS-repository 
+hosted by SourceForge.
+You can get them via:
+sh~> cvs -d:pserver:anonymous@cvs.sf.net/projects/pure-data login
+(when asked for a password, just hit return)
+sh~> cvs -d:pserver:anonymous@cvs.sf.net/projects/pure-data co externals
+
+
+Linux:
+
+To ease the installation, you can run "make" in this directory.
+This should download all needed externals, compile them and install them into
+a place where CUBEmixer will look for them.
+Since some externals rely on the full pd-sources, you will have to give the
+full path to your pd sources.
+Use something like
+sh~> make PDSOURCES=/path/to/sources/of/pd/src
