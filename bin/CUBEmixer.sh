@@ -25,7 +25,26 @@ done
 CUBEMIXERPATH=$(dirname $0)/..
 cd ${CUBEMIXERPATH}
 
-PD=$(test_pd src/pd/bin/pd $PD)
+LOCALVARSTEMPLATE="etc/CUBEmixer/LocalVars.template.sh"
+LOCALVARS="etc/CUBEmixer/LocalVars.sh"
+
+echo varst: ${LOCALVARSTEMPLATE}
+echo vars : ${LOCALVARS}
+read
+
+if [ -e ${LOCALVARSTEMPLATE} ]; then
+ . ${LOCALVARSTEMPLATE}
+fi
+echo included template
+if [ -e ${LOCALVARS} ]; then
+ . ${LOCALVARS}
+fi
+
+echo included everything...
+read
+
+
+PD=$(test_pd $PD ${PD_INSTALL}/pd)
 
 if [ "x$PD" = "x" ]
 then
@@ -35,18 +54,15 @@ then
   echo
   exit -1
 fi
-  
 
-PDPATHS="-path .:lib:lib/abs/:lib/libs/:lib/plugins/:lib/extensions/:lib/GUI/:lib/DSP/:lib/GUI/abs:lib/DSP/abs:lib/libs/iemabs:lib/libs/zexyabs"
-PDLIBS="-lib zexy:iemlib1:iemlib2:iemgui:iemmatrix:iem_ambi"
+if [ "x" != "x${GUI_PATCH}" ]; then
+ GUI_PATCH="-open ${GUI_PATCH}"
+fi
 
-#PDDSPFLAGS="-32bit -rt -channels 24 -blocksize 16 -audiobuf 50 -alsamidi -mididev 1"
-PDDSPFLAGS="-alsa -rt -channels 26 -r 44100 -audiobuf 23 -alsamidi -mididev 1"
+if [ "x" != "x${DSP_PATCH}" ]; then
+ DSP_PATCH="-open ${DSP_PATCH}"
+fi
 
-PDGUIFLAGS="-nosound -nomidi -nrt"
+${PD} ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${GUI_PATH} ${PD_PATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH} &
 
-${PD} ${PDPATHS} ${PDLIBS} ${PDDSPFLAGS} -open lib/DSP/DSP+NET+MIDI+CUE.pd ${CUBEMIXER_DSP_FLAGS} &
-
-
-${PD} ${PDPATHS} ${PDLIBS} ${PDGUIFLAGS} -open lib/GUI/GUI16+OUT.pd  ${CUBEMIXER_GUI_FLAGS}
-
+${PD} ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${DSP_PATH} ${PD_PATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH}
