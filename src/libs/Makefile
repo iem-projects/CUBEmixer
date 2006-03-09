@@ -7,7 +7,8 @@ LOCINSTALL_DIR=../../lib/libs/
 
 .PHONY: aconnect-src iem_ambi-src iemgui-src iemlib-src iemmatrix-src popup-src zexy-src
 
-default: locinstall
+install: locinstall
+
 
 sf-login:
 	cvs $(CVSROOT) login
@@ -21,8 +22,6 @@ aconnect-build: aconnect-src
 
 aconnect-locinstall:
 	cp aconnect/*.$(EXT) aconnect/aconnects.pd $(LOCINSTALL_DIR)
-
-
 
 iem_ambi-src: sf-login
 	cvs $(CVSROOT) checkout -r $(REVISION) -d iem_ambi externals/iem/iem_ambi/
@@ -42,9 +41,9 @@ iemgui-locinstall:
 
 iemlib-src: sf-login
 	cvs $(CVSROOT) checkout -r $(REVISION) -d iemlib externals/iemlib/
+	mkdir -p iemlib/lib
 
 iemlib-build: iemlib-src
-	mkdir -p iemlib/lib
 	make -C iemlib
 
 iemlib-locinstall: 
