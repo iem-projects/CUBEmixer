@@ -5,10 +5,16 @@ REVISION=HEAD
 
 LOCINSTALL_DIR=../../lib/libs/
 
-.PHONY: aconnect-src iem_ambi-src iemgui-src iemlib-src iemmatrix-src popup-src zexy-src
+.PHONY: install locinstall checkpddir aconnect-src iem_ambi-src iemgui-src iemlib-src iemmatrix-src popup-src zexy-src
 
-install: locinstall
+install: checkpddir locinstall
 
+ifeq (,$(findstring clean, $(MAKECMDGOALS)))
+checkpddir:
+	@if [ ! -d "$(PDSOURCE)" ]; then \
+	  echo "please give the path to your PD-Sources with: make PDSOURCE=/path/to/pd/src";\
+	exit -1; fi
+endif
 
 sf-login:
 	cvs $(CVSROOT) login
