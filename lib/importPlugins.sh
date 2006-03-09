@@ -91,11 +91,26 @@ function generateDSPpatch() {
   done
   if [ -r "${plugfile}" ]; then
     echo "#N canvas 0 0 450 300 10;"
+    echo "#X obj 0   0 inlet~;"
+    echo "#X obj 0 200 outlet~;"
+    echo "#X obj 0  50 plugin0~ \\\$0 \\\$1 \\\$2;"
+
     let connector=0
     for plugin in ${pluginlist}; do
-      echo "#X obj 60 $[100+25*${connector}] inchan/plugin/plugin ${plugin} \\\$1 \\\$2;"
+      echo "#X obj 60 $[100+25*${connector}] plugin~ \\\$0 ${plugin} \\\$1 \\\$2;"
       let connector++
     done
+
+    echo "#X connect 0 0 2 0;"
+    echo "#X connect 2 0 1 0;"
+
+    let connector=3
+    for plugin in ${pluginlist}; do
+      echo "#X connect 0 0 ${connector} 0;"
+      echo "#X connect ${connector} 0 1 0;"
+      let connector++
+    done
+
   fi
 }
 
