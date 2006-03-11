@@ -13,7 +13,7 @@ LIB = -ldl -lm -lpthread
 
 CFLAGS = -DPD -DUNIX -W -Werror -Wno-unused \
 	-Wno-parentheses -Wno-switch -O6 -funroll-loops -fomit-frame-pointer \
-        -DDL_OPEN
+        -DDL_OPEN -fPIC
 
 SYSTEM = $(shell uname -m)
 
@@ -42,8 +42,8 @@ OBJ = $(SRC:.c=.o)
 #
 
 clean:
-	rm $(TARGET)
-	rm *.o
+	-rm $(TARGET)
+	-rm *.o
 
 all: $(OBJ)
 	@echo :: $(OBJ)
