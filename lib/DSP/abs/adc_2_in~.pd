@@ -2,5 +2,13 @@
 #X obj 46 38 adc~ \$1;
 #X obj 45 75 s~ \$1_ADC;
 #X obj 44 113 outlet~;
-#X obj 173 67 DSP_label IN \$1_ADC;
+#X obj 94 202 DSP_label IN \$1_ADC;
+#X msg 222 171 symbol;
+#X obj 222 96 r MAX_INPUT_ADC;
+#X obj 222 149 select 1;
+#X obj 222 126 < \$1;
 #X connect 0 0 1 0;
+#X connect 4 0 3 1;
+#X connect 5 0 7 0;
+#X connect 6 0 4 0;
+#X connect 7 0 6 0;
