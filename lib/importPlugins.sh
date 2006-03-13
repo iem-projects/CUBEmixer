@@ -4,8 +4,8 @@ FORCE=
 PLUGINDIR=plugins
 PLUGINFILE=${PLUGINDIR}/plugins.txt
 
-GUIPATCH=gui.pd
-DSPPATCH=dsp.pd
+GUIPATCH=GUI.pd
+DSPPATCH=DSP.pd
 
 function usage() {
  echo "$0 [-f] [-h] [<plugindir>]"
@@ -63,20 +63,58 @@ function generateGUIpatch() {
   local plugin
   local plugfile
   local connector
+  local pluginlist
   plugfile=$1
+  pluginlist="";
+  for plugin in $(cat ${plugfile}); do
+      pluginlist="${pluginlist} ${plugin}"
+  done
   if [ -r "${plugfile}" ]; then
     echo "#N canvas 0 0 450 300 10;"
-    echo "#X obj 100 50 inlet;"
-    echo "#X obj 100 75 route $(cat ${plugfile});"
-    echo "#X connect 0 0 1 0;"
-    let connector=2
-    for plugin in $(cat ${plugfile}); do
-      echo "#X obj 100 $[100+25*${connector}] ${plugin}/gui;"
-      echo "#X connect 1 $[${connector}-2] ${connector} 0;"
+    let connector=0
+    for plugin in ${pluginlist}; do
+      echo "#X obj 60 $[100+25*${connector}] inchan/plugin/plugin ${plugin} \\\$1 \\\$2;"
       let connector++
     done
   fi
 }
+
+function generateDSPpatch() {
+  local plugin
+  local plugfile
+  local connector
+  local pluginlist
+  plugfile=$1
+  pluginlist="";
+  for plugin in $(cat ${plugfile}); do
+      pluginlist="${pluginlist} ${plugin}"
+  done
+  if [ -r "${plugfile}" ]; then
+    echo "#N canvas 0 0 450 300 10;"
+    echo "#X obj 0   0 inlet~;"
+    echo "#X obj 0 200 outlet~;"
+    echo "#X obj 0  50 plugin0~ \\\$0 \\\$1 \\\$2;"
+
+    let connector=0
+    for plugin in ${pluginlist}; do
+      echo "#X obj 60 $[100+25*${connector}] plugin~ \\\$0 ${plugin} \\\$1 \\\$2;"
+      let connector++
+    done
+
+    echo "#X connect 0 0 2 0;"
+    echo "#X connect 2 0 1 0;"
+
+    let connector=3
+    for plugin in ${pluginlist}; do
+      echo "#X connect 0 0 ${connector} 0;"
+      echo "#X connect ${connector} 0 1 0;"
+      let connector++
+    done
+
+  fi
+}
+
+
 
 
 parse_args $@
@@ -91,8 +129,9 @@ fi
 if [ "${PLUGINFILE}" ]; then
  list_plugins > ${PLUGINFILE}
 
- generateGUIpatch ${PLUGINFILE}
- 
+# generateGUIpatch ${PLUGINFILE}
+ generateDSPpatch ${PLUGINFILE}
+
 else 
  list_plugins
 fi

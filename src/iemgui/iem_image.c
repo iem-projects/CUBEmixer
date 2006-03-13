@@ -20,6 +20,8 @@ iemgui written by Thomas Musil, Copyright (c) IEM KUG Graz Austria 2000 - 2005 *
 #include <unistd.h>
 #endif
 
+#include <string.h>
+
 /* ------------------------ setup routine ------------------------- */
 
 t_widgetbehavior iem_image_widgetbehavior;

@@ -30,5 +30,5 @@ directory-layout for patch:
   ./lib/plugins/<pluginname>/	- DSP/GUI/MIDI/... part of plugins
  helpers:
   ./lib/abs			- general abstractions
-  ./lib/libs			- libraries (binaries)
+  ./lib/libs			- external libraries collector (binaries, if needed and not in system)
   ./lib/tests			- sandbox for experimenting

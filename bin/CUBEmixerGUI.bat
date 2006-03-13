@@ -1,15 +1,13 @@
 @echo off
 
-set PD_PATCH=../lib/GUI/GUI16+OUT.pd
-set PD_INSTALL=..\src\pd\bin
-set PD_AUDIO=-noaudio
-set PD_MIDI=-nomidi
-set PD_OPTIONS=-font 10
-set PD_PATH=-path ..;../lib;../lib/abs/;../lib/libs/;../lib/plugins/;../lib/extensions/;../lib/GUI/;../lib/DSP/;../lib/GUI/abs;../lib/DSP/abs;../lib/libs/iemabs;../lib/libs/zexyabs
-set PD_LIB=-lib zexy;iemlib1;iemlib2;iemmatrix;iem_ambi;iemgui
+set LOCALVARSTEMPLATE=../etc/CUBEmixer/LocalVars.template.bat
+set LOCALVARS=../etc/CUBEmixer/LocalVars.bat
 
-REM ***** overwrites optionally the PD_INSTALL variable *********
-if exist LocalVars.bat (call LocalVars.bat)
+REM default values
+if exist %LOCALVARSTEMPLATE% (call %LOCALVARSTEMPLATE%)
 
-@echo starting pd ...
-%PD_INSTALL%\pd %PD_AUDIO% %PD_MIDI% %PD_OPTIONS% %PD_PATH% %PD_LIB% %PD_PATCH%
+REM ***** optionally overrides the PD_INSTALL variable *********
+if exist %LOCALVARS% (call %LOCALVARS%)
+
+echo starting pd ...
+%PD_INSTALL%\pd %GUI_AUDIO% %GUI_MIDI% %GUI_OPTIONS% %PD_OPTIONS% %GUI_PATH% %PD_PATH% %GUI_LIB% %PD_LIB% %GUI_PATCH%

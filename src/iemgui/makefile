@@ -1,8 +1,10 @@
 current: all
 
+PDSOURCE=/usr/local/src/pd-0.37-1/src
+
 .SUFFIXES: .pd_linux
 
-INCLUDE = -I. -I/usr/local/src/pd-0.37-1/src
+INCLUDE = -I. -I$(PDSOURCE)
 
 LDFLAGS = -export-dynamic -shared
 LIB = -ldl -lm -lpthread
@@ -11,7 +13,7 @@ LIB = -ldl -lm -lpthread
 
 CFLAGS = -DPD -DUNIX -W -Werror -Wno-unused \
 	-Wno-parentheses -Wno-switch -O6 -funroll-loops -fomit-frame-pointer \
-        -DDL_OPEN
+        -DDL_OPEN -fPIC
 
 SYSTEM = $(shell uname -m)
 
@@ -40,8 +42,8 @@ OBJ = $(SRC:.c=.o)
 #
 
 clean:
-	rm $(TARGET)
-	rm *.o
+	-rm $(TARGET)
+	-rm *.o
 
 all: $(OBJ)
 	@echo :: $(OBJ)
