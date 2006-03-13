@@ -1,4 +1,4 @@
-#N canvas 106 238 647 365 10;
+#N canvas 1280 535 647 365 10;
 #X obj 55 271 inlet~;
 #X obj 57 333 outlet~;
 #X obj 56 298 mull~ 1 50;
@@ -17,7 +17,8 @@
 #X obj 374 110 receive_setting \$2_IN_PLUGIN_$3_ON;
 #X obj 374 160 s \$1_on;
 #X obj 177 185 r \$1_used;
-#X obj 105 128 s \$1_slot;
+#X obj 105 148 s \$1_slot;
+#X obj 105 127 t s b;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
@@ -28,10 +29,12 @@
 #X connect 8 0 13 0;
 #X connect 10 0 16 0;
 #X connect 10 1 6 0;
-#X connect 11 0 18 0;
+#X connect 11 0 19 0;
 #X connect 12 0 11 0;
 #X connect 13 0 12 0;
 #X connect 13 0 14 0;
 #X connect 14 0 15 0;
 #X connect 15 0 10 0;
 #X connect 17 0 3 0;
+#X connect 19 0 18 0;
+#X connect 19 1 6 0;
