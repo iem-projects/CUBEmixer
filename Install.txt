@@ -75,4 +75,5 @@ Prerequistites:
     http://svn.sourceforge.net/viewcvs.cgi/iem/spatialization/CUBEmixer/branches/
 
 
-4.) Put the CUBEmixer in your favorite place and look at the bin folder for the startup script.
+4.) Put the CUBEmixer in your favorite place and look at the bin folder for 
+    the startup script.
