@@ -7,6 +7,9 @@ PLUGINFILE=${PLUGINDIR}/plugins.txt
 GUIPATCH=GUI.pd
 DSPPATCH=DSP.pd
 
+MASTERGUIPATCH=GUI/inchan/plugin/EFF_PLUG_IN.pd
+MASTERDSPPATCH=DSP/abs/EFF_PLUG_IN~.pd
+
 function usage() {
  echo "$0 [-f] [-h] [<plugindir>]"
  exit 0
@@ -129,8 +132,12 @@ fi
 if [ "${PLUGINFILE}" ]; then
  list_plugins > ${PLUGINFILE}
 
-# generateGUIpatch ${PLUGINFILE}
- generateDSPpatch ${PLUGINFILE}
+ if [ "${MASTERGUIPATCH}" ]; then
+  generateGUIpatch ${PLUGINFILE} > ${MASTERGUIPATCH}
+ fi
+ if [ "${MASTERDSPPATCH}" ]; then
+  generateDSPpatch ${PLUGINFILE} > ${MASTERDSPPATCH}
+ fi
 
 else 
  list_plugins
