@@ -1,3 +1,5 @@
+PDSOURCE=../../../pd/src
+
 current:
 	echo make pd_darwin, pd_linux, pd_nt, pd_irix5, or pd_irix6
 
@@ -12,13 +14,13 @@ pd_nt: popup.dll
 PDNTCFLAGS = /W3 /WX /DNT /DPD /nologo
 VC="D:\Program Files\Microsoft Visual Studio\Vc98"
 
-PDNTINCLUDE = /I. /I\tcl\include /I..\..\src /I..\..\..\pd\src /I$(VC)\include
+PDNTINCLUDE = /I. /I\tcl\include /I..\..\src /I$(PDSOURCE) /I$(VC)\include
 
 PDNTLDIR = $(VC)\lib
 PDNTLIB = $(PDNTLDIR)\libc.lib \
 	$(PDNTLDIR)\oldnames.lib \
 	$(PDNTLDIR)\kernel32.lib \
-	..\..\bin\pd.lib 
+	$(PDSOURCE)\..\bin\pd.lib 
 
 .c.dll:
 	cl $(PDNTCFLAGS) $(PDNTINCLUDE) /c $*.c
@@ -38,7 +40,7 @@ pd_irix5: popup.pd_irix5
 SGICFLAGS5 = -o32 -DPD -DUNIX -DIRIX -O2
 
 
-SGIINCLUDE =  -I../../src/ -I../../../pd/src
+SGIINCLUDE =  -I../../src/ -I$(PDSOURCE)
 
 .c.pd_irix5:
 	cc $(SGICFLAGS5) $(SGIINCLUDE) -o $*.o -c $*.c
@@ -55,7 +57,7 @@ LINUXCFLAGS = -DPD -O2 -funroll-loops -fomit-frame-pointer \
     -Wall -W -Wshadow -Wstrict-prototypes -Werror \
     -Wno-unused -Wno-parentheses -Wno-switch -fPIC
 
-LINUXINCLUDE =  -I../../src -I../../../pd/src -I/usr/local/src/pd-0.38-4/src
+LINUXINCLUDE =  -I../../src -I$(PDSOURCE)
 
 .c.pd_linux:
 	cc $(LINUXCFLAGS) $(LINUXINCLUDE) -o $*.o -c $*.c
