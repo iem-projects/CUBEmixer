@@ -28,10 +28,6 @@ cd ${CUBEMIXERPATH}
 LOCALVARSTEMPLATE="etc/CUBEmixer/LocalVars.template.sh"
 LOCALVARS="etc/CUBEmixer/LocalVars.sh"
 
-echo varst: ${LOCALVARSTEMPLATE}
-echo vars : ${LOCALVARS}
-read
-
 if [ -e ${LOCALVARSTEMPLATE} ]; then
  . ${LOCALVARSTEMPLATE}
 fi
@@ -39,10 +35,6 @@ echo included template
 if [ -e ${LOCALVARS} ]; then
  . ${LOCALVARS}
 fi
-
-echo included everything...
-read
-
 
 PD=$(test_pd $PD ${PD_INSTALL}/pd)
 
