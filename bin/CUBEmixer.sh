@@ -31,7 +31,6 @@ LOCALVARS="etc/CUBEmixer/LocalVars.sh"
 if [ -e ${LOCALVARSTEMPLATE} ]; then
  . ${LOCALVARSTEMPLATE}
 fi
-echo included template
 if [ -e ${LOCALVARS} ]; then
  . ${LOCALVARS}
 fi
