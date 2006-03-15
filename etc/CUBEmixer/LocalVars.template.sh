@@ -14,6 +14,9 @@
 ## do NOT REMOVE the file LocalVars.template.sh
 ## 
 
+##  sending PD some specials initializer with the XX_MESSAGE vars see below.
+
+
 ##
 ## general settings regarding PD
 ##
@@ -21,6 +24,9 @@
 #PD_OPTIONS=
 PD_PATH="-path .:lib:lib/abs/:lib/libs/:lib/plugins/:lib/extensions/:lib/GUI/:lib/DSP/:lib/GUI/abs:lib/DSP/abs:lib/libs/iemabs:lib/libs/zexyabs"
 PD_LIB="-lib zexy:iemlib1:iemlib2:iemmatrix:iem_ambi:iemgui"
+#PD_MESSAGE=""
+
+
 
 ##
 ## settings regarding only the GUI-part of the CUBEmixer
@@ -31,6 +37,7 @@ GUI_MIDI="-nomidi"
 GUI_OPTIONS="-nrt"
 # GUI_PATH=
 # GUI_LIB=
+#GUI_MESSAGE=""
 
 ##
 ## settings regarding only the GUI-part of the CUBEmixer
@@ -41,4 +48,5 @@ DSP_MIDI="-alsamidi -mididev 1"
 DSP_OPTIONS="-rt"
 # DSP_PATH=
 # DSP_LIB=
+#DSP_MESSAGE=""
 
