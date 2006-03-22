@@ -19,6 +19,9 @@ section/subsection:
 ==============================================================================
 =                                   TODO                                     =
 ==============================================================================
+pd/DSP:
+  - unter Windows wird distanz nicht initialisiert ! 
+
 
 pd/DSP:
   - aux-funktioniert nicht (dsp-seiting)

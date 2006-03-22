@@ -36,8 +36,8 @@ REM
 REM settings regarding only the GUI-part of the CUBEmixer
 REM
 set DSP_PATCH=..\lib\DSP\DSP+NET+MIDI+CUE_WIN.pd
-set DSP_AUDIO=-r 44100 -audiobuf 80 -sleepgrain 10 -channels 26
+set DSP_AUDIO=-r 44100 -audiobuf 80 -sleepgrain 10 -channels 26 -asio
 set DSP_MIDI=
 REM set DSP_OPTIONS=
 REM set DSP_PATH=
-REM set DSP_LIB=
+set DSP_LIB=%PD_LIB%
