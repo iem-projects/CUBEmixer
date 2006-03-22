@@ -1,0 +1,6 @@
+#N canvas 0 0 600 550 10;
+#X obj 55 39 inlet~;
+#X obj 55 466 outlet~;
+#X obj 55 254 \$1_binambi~;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

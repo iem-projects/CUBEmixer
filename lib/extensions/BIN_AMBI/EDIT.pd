@@ -1,0 +1,20 @@
+#N canvas 67 205 140 173 10;
+#X obj 9 299 outlet;
+#X obj 116 318 namecanvas \$0-EDIT;
+#X obj 267 251 inlet;
+#X obj 772 361 inlet;
+#X obj 772 385 outlet;
+#X obj 9 277 inlet;
+#X obj 321 301 symbol \$0-EDIT;
+#X obj 270 322 pack f s;
+#X obj 267 278 t f b;
+#X msg 270 347 \; \$2 vis \$1;
+#X text 126 214 HALLO;
+#X obj 50 20 vsl 15 128 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X connect 2 0 8 0;
+#X connect 6 0 7 1;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 8 1 6 0;
+#X coords 0 0 1 1 85 60 0;
