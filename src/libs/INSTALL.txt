@@ -28,4 +28,4 @@ a place where CUBEmixer will look for them.
 Since some externals rely on the full pd-sources, you will have to give the
 full path to your pd sources.
 Use something like
-sh~> make PDSOURCES=/path/to/sources/of/pd/src
+sh~>make PDSOURCE=/path/to/sources/of/pd/src
