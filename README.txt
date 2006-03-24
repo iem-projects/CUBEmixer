@@ -1,20 +1,32 @@
 CUBEmixer: for the IEM CUBE and other environments
+==================================================
+
 Institut of Electronic Music and Acoustics Graz - 2005
 Programming-Concept and Development: Musil, Ritsch, Zmoelnig
 based on  various developments on IEM Graz 
-=================================================
-------------------------------------------------------------------------------------------------------
-Please start Mixer with skript located in the 'bin' folder and optional edit for system requirements:
+
+Quick Instruction:
+------------------
+
+ Please start Mixer with skript located in the 'bin' folder for your
 
  linux: Cubemixer.sh
  windows: first start 'CUBEmixerDSP.bat' and then 'CubemixerGUI.bat'
 
+
+Installation:
+-------------
+
+ see INSTALL.txt
+
+
+Content:
+--------
 ./lib	pure-data patches (and externals)
 ./doc	documentation
 ./src	source-code (for externals and pd)
 ./tools	toolkits, helper-applications,...
 ------------------------------------------------------------------------------------------------------
-directory-layout for patch:
 
  core modules:
   ./lib/CUE			- cue-triggering machine

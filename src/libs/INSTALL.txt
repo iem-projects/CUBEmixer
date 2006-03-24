@@ -1,6 +1,10 @@
-pd-externals needed for CUBEmixer
+Installtion of needed pd-externals for Cubemixer:
+=================================================
+(since version 1.0.1)
 
-following pd-externals are needed for the CUBEmixer to run correctly:
+A) Overview pd-externals needed for CUBEmixer:
+----------------------------------------------
+
  aconnect (linux)
  iemgui
  iem_ambi
@@ -8,6 +12,9 @@ following pd-externals are needed for the CUBEmixer to run correctly:
  iemmatrix
  popup
  zexy
+
+they will be installed in lib/libs/ 
+(just copy everything in it as without directories)
 
 All of these externals (with the notable exception of iemgui) 
 are not included with this package!
@@ -19,8 +26,11 @@ sh~> cvs -d:pserver:anonymous@cvs.sf.net/projects/pure-data login
 (when asked for a password, just hit return)
 sh~> cvs -d:pserver:anonymous@cvs.sf.net/projects/pure-data co externals
 
+B) QUICKINSTALL
+---------------
 
-Linux:
+Linux (and maybe Mac OS-X):
+...........................
 
 To ease the installation, you can run "make" in this directory.
 This should download all needed externals, compile them and install them into
@@ -29,3 +39,41 @@ Since some externals rely on the full pd-sources, you will have to give the
 full path to your pd sources.
 Use something like
 sh~>make PDSOURCE=/path/to/sources/of/pd/src
+
+WINDOWS:
+........
+
+get the compiled package from http://sourceforge.net/projects/iem/ (files) and copy the content of lib/libs to the lib/libs folder.
+
+
+
+B) Manual install
+-----------------
+
+ 1) iemlib1, iemlib2 
+
+      sh: cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data login
+      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P externals/iemlib
+
+ 2) iemmatrix
+
+      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P  externals/iem/iemmatrix/
+
+ 3) iem_ambi
+
+      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P  externals/iem/iemmatrix/
+
+ 4) zexy
+
+      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P externals/zexy
+
+ 5) popup
+
+      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P  externals/bbogart/popup/
+      (will change in future).
+
+ 6) MIDI-Library Under in Linux only if used with external MIDI-Controller      * only linux *
+
+     sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P externals/iem/aconnect
+
+iem, 23032006
