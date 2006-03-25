@@ -56,27 +56,20 @@ variable visible into first line of routine popup_set
 
 typedef struct _popup
 {
-  t_object x_obj;
-  
-  t_glist * x_glist;
-  t_outlet* out2;
-  int x_rect_width;
-  int x_rect_height;
-  t_symbol*  x_sym;
-  
-  int x_height;
-  int x_width;
-   
-  int current_selection;
-  int x_num_options;   
-  t_symbol* x_colour;
-  t_symbol* x_name;
-  
-  t_symbol** x_options;
-  int        x_maxoptions;
-  
-  int initialized; /* 1 when we are allowed to draw, 0 otherwise */
-  int x_disabled; /* when disabled, graphical chosing is prohibited */
+  t_object    x_obj;
+  t_glist    *x_glist;
+  t_symbol   *x_sym;
+  int         x_height;
+  int         x_width;
+  int         x_selected_option_index;
+  int         x_num_options;   
+  t_symbol   *x_bkgd_colour;
+  t_symbol   *x_top_entry_name;
+  t_symbol  **x_options;
+  int         x_max_options;
+  int         x_initialized; /* 1 when we are allowed to draw, 0 otherwise */
+  int         x_disabled; /* when disabled, graphical chosing is prohibited */
+  int         x_column_break_height; /*  */
 } t_popup;
 
 /* widget helper functions */
@@ -95,25 +88,25 @@ static void draw_inlets(t_popup *x, t_glist *glist, int firsttime, int nin, int 
   //post("DEBUG: draw inlet");
   for (i = 0; i < n; i++)
   {
-    int onset = text_xpix(&x->x_obj, glist) + (x->x_rect_width - IOWIDTH) * i / nplus;
+    int onset = text_xpix(&x->x_obj, glist) + (x->x_width - IOWIDTH) * i / nplus;
     if (firsttime)
       sys_vgui(".x%x.c create rectangle %d %d %d %d -tags {%xo%d %xo}\n",
       glist_getcanvas(glist),
-      onset, text_ypix(&x->x_obj, glist) + x->x_rect_height - 2,
-      onset + IOWIDTH, text_ypix(&x->x_obj, glist) + x->x_rect_height-1,
+      onset, text_ypix(&x->x_obj, glist) + x->x_height,
+      onset + IOWIDTH, text_ypix(&x->x_obj, glist) + x->x_height+1,
       x, i, x);
     else
       sys_vgui(".x%x.c coords %xo%d %d %d %d %d\n",
       glist_getcanvas(glist), x, i,
-      onset, text_ypix(&x->x_obj, glist) + x->x_rect_height - 2,
-      onset + IOWIDTH, text_ypix(&x->x_obj, glist) + x->x_rect_height-1);
+      onset, text_ypix(&x->x_obj, glist) + x->x_height,
+      onset + IOWIDTH, text_ypix(&x->x_obj, glist) + x->x_height+1);
   }
   /* inlets */
   n = nout; 
   nplus = (n == 1 ? 1 : n-1);
   for (i = 0; i < n; i++)
   {
-    int onset = text_xpix(&x->x_obj, glist) + (x->x_rect_width - IOWIDTH) * i / nplus;
+    int onset = text_xpix(&x->x_obj, glist) + (x->x_width - IOWIDTH) * i / nplus;
     if (firsttime)
       sys_vgui(".x%x.c create rectangle %d %d %d %d -tags {%xi%d %xi}\n",
       glist_getcanvas(glist),
@@ -136,34 +129,39 @@ static void create_widget(t_popup *x, t_glist *glist)
   //post("DEBUG: create_widget start");
   
   char text[MAXPDSTRING];
-  int len,i;
+  int len,i,j;
   t_symbol *temp_name;
   t_canvas *canvas=glist_getcanvas(glist);
-  x->x_rect_width = x->x_width;
-  x->x_rect_height =  x->x_height+2;
   
   /* Create menubutton and empty menu widget -- maybe the menu should be created elseware?*/
   
   /* draw using the last name if it was selected otherwise use default name. */
-  if(x->current_selection < 0)
+  if(x->x_selected_option_index < 0)
   {
-    temp_name = x->x_name;
+    temp_name = x->x_top_entry_name;
   } else {
-    temp_name = x->x_options[x->current_selection];
+    temp_name = x->x_options[x->x_selected_option_index];
   }
   
   /* Seems we have to delete the widget in case it already exists (Provided by Guenter)*/
-  if(x->initialized)
+  if(x->x_initialized)
   {
     sys_vgui("destroy .x%x.c.s%x\n",glist_getcanvas(glist),x);
     
     sys_vgui("set %xw .x%x.c.s%x ; menubutton $%xw -relief raised -background \"%s\" -text \"%s\" -direction flush -menu $%xw.menu ; menu $%xw.menu -tearoff 0\n",
-      x,canvas,x,x,x->x_colour->s_name,temp_name->s_name,x,x);
+      x, canvas, x, x, x->x_bkgd_colour->s_name, temp_name->s_name, x, x);
     
     for(i=0 ; i<x->x_num_options ; i++)
     {
-      sys_vgui(".x%x.c.s%x.menu add command -label \"%s\" -command {.x%x.c.s%x configure -text \"%s\" ; popup_sel%x \"%d\"} \n", 
-        canvas, x, x->x_options[i]->s_name, canvas, x, x->x_options[i]->s_name, x, i);
+      j = i % x->x_column_break_height;
+      if(j == 0)
+        j = 1;
+      else
+        j = 0;
+      if(i == 0)
+        j = 0;
+      sys_vgui(".x%x.c.s%x.menu add command -columnbreak %d -label \"%s\" -command {.x%x.c.s%x configure -text \"%s\" ; popup_sel%x \"%d\"} \n", 
+        canvas, x, j, x->x_options[i]->s_name, canvas, x, x->x_options[i]->s_name, x, i);
     }
   }
   
@@ -177,7 +175,7 @@ static void popup_drawme(t_popup *x, t_glist *glist, int firsttime)
   //post("DEBUG: drawme start");
   
   /* by drawing, we "initialize" the popup */
-  x->initialized=1;
+  x->x_initialized=1;
   
   //post("DEBUG: drawme %d",firsttime);
   if (firsttime) {
@@ -209,7 +207,7 @@ static void popup_erase(t_popup* x,t_glist* glist)
   int n;
   
   //post("DEBUG: erase start");
-  if(x->initialized){
+  if(x->x_initialized){
     sys_vgui("destroy .x%x.c.s%x\n",glist_getcanvas(glist),x);
     
     sys_vgui(".x%x.c delete %xS\n",glist_getcanvas(glist), x);
@@ -237,8 +235,8 @@ static void popup_getrect(t_gobj *z, t_glist *owner,
   int width, height;
   t_popup* s = (t_popup*)z;
   
-  width = s->x_rect_width;
-  height = s->x_rect_height;
+  width = s->x_width;
+  height = s->x_height+2;
   *xp1 = text_xpix(&s->x_obj, owner);
   *yp1 = text_ypix(&s->x_obj, owner) - 1;
   *xp2 = text_xpix(&s->x_obj, owner) + width;
@@ -256,10 +254,10 @@ static void popup_displace(t_gobj *z, t_glist *glist,
   x->x_obj.te_ypix += dy;
   if (glist_isvisible(glist))
   {
-    if(x->initialized)sys_vgui(".x%x.c coords %xSEL %d %d %d %d\n",
+    if(x->x_initialized)sys_vgui(".x%x.c coords %xSEL %d %d %d %d\n",
       glist_getcanvas(glist), x,
       text_xpix(&x->x_obj, glist), text_ypix(&x->x_obj, glist)-1,
-      text_xpix(&x->x_obj, glist) + x->x_rect_width, text_ypix(&x->x_obj, glist) + x->x_rect_height-2);
+      text_xpix(&x->x_obj, glist) + x->x_width, text_ypix(&x->x_obj, glist) + x->x_height);
     
     popup_drawme(x, glist, 0);
     canvas_fixlinesfor(glist_getcanvas(glist),(t_text*) x);
@@ -272,13 +270,13 @@ static void popup_select(t_gobj *z, t_glist *glist, int state)
   //post("DEBUG: select start");
   
   t_popup *x = (t_popup *)z;
-  if(x->initialized){
+  if(x->x_initialized){
     if (state) {
     sys_vgui(".x%x.c create rectangle \
       %d %d %d %d -tags %xSEL -outline blue\n",
       glist_getcanvas(glist),
       text_xpix(&x->x_obj, glist), text_ypix(&x->x_obj, glist)-1,
-      text_xpix(&x->x_obj, glist) + x->x_rect_width, text_ypix(&x->x_obj, glist) + x->x_rect_height-2,
+      text_xpix(&x->x_obj, glist) + x->x_width, text_ypix(&x->x_obj, glist) + x->x_height,
       x);
     }
     else {
@@ -344,11 +342,7 @@ static void popup_output(t_popup* x, t_floatarg popup_index)
   SETFLOAT (ap,  (t_float)popup_index);
   SETSYMBOL(ap+1,x->x_options[(int)popup_index]);
   
-  x->current_selection = popup_index;
-  /*
-  outlet_symbol(x->out2, x->x_options[(int)popup_index]);
-  outlet_float(x->x_obj.ob_outlet, popup_index); 
-  */
+  x->x_selected_option_index = popup_index;
   outlet_list(x->x_obj.ob_outlet, &s_list, 2, ap);
 }
 
@@ -362,7 +356,7 @@ static void popup_save(t_gobj *z, t_binbuf *b)
   
   binbuf_addv(b, "ssiisiiss", gensym("#X"),gensym("obj"),
     x->x_obj.te_xpix, x->x_obj.te_ypix ,  
-    gensym("popup"), x->x_width, x->x_height, x->x_colour, x->x_name);
+    gensym("popup"), x->x_width, x->x_height, x->x_bkgd_colour, x->x_top_entry_name);
   /* Loop for menu items */
   for(i=0 ; i<x->x_num_options ; i++)
   {
@@ -378,7 +372,7 @@ static void popup_options(t_popup* x, t_symbol *s, int argc, t_atom *argv)
 {
   //post("DEBUG: options start");
   
-  int i;
+  int i, j;
   int visible=(x->x_glist)?glist_isvisible(x->x_glist):0;
   
   x->x_num_options = argc;
@@ -386,21 +380,52 @@ static void popup_options(t_popup* x, t_symbol *s, int argc, t_atom *argv)
   /* delete old menu items */
   if(visible)sys_vgui(".x%x.c.s%x.menu delete 0 end \n", x->x_glist, x);
   
-  if(argc>x->x_maxoptions){
+  if(argc>x->x_max_options){
     /* resize the options-array */
-    if(x->x_options)freebytes(x->x_options, sizeof(t_symbol*)*x->x_maxoptions);
-    x->x_maxoptions=argc;
-    x->x_options=(t_symbol**)getbytes(sizeof(t_symbol*)*x->x_maxoptions);
+    if(x->x_options)freebytes(x->x_options, sizeof(t_symbol*)*x->x_max_options);
+    x->x_max_options=argc;
+    x->x_options=(t_symbol**)getbytes(sizeof(t_symbol*)*x->x_max_options);
   }
   
   for(i=0 ; i<argc ; i++)
   {
+    j = i % x->x_column_break_height;
+    if(j == 0)
+      j = 1;
+    else
+      j = 0;
+    if(i == 0)
+      j = 0;
     x->x_options[i] = atom_getsymbol(argv+i);
-    if(visible)sys_vgui(".x%x.c.s%x.menu add command -label \"%s\" -command {.x%x.c.s%x configure -text \"%s\" ; popup_sel%x \"%d\"} \n", 
-      x->x_glist, x, x->x_options[i]->s_name, x->x_glist, x, x->x_options[i]->s_name, x, i);
+    if(visible)sys_vgui(".x%x.c.s%x.menu add command -columnbreak %d -label \"%s\" -command {.x%x.c.s%x configure -text \"%s\" ; popup_sel%x \"%d\"} \n", 
+      x->x_glist, x, j, x->x_options[i]->s_name, x->x_glist, x, x->x_options[i]->s_name, x, i);
   }
   
   //post("DEBUG: options end");
+}
+
+static void popup_size(t_popup* x, t_symbol *s, int argc, t_atom *argv)
+{
+  int h, w;
+  
+  if((argc == 1)&&(argv[0].a_type == A_FLOAT))
+  {
+    w = (int)atom_getintarg(0, argc, argv);
+    h = 25;
+  }
+  else if((argc > 1)&&(argv[0].a_type == A_FLOAT)&&(argv[1].a_type == A_FLOAT))
+  {
+    w = (int)atom_getintarg(0, argc, argv);
+    h = (int)atom_getintarg(1, argc, argv);
+  }
+
+  if(w < 1)
+    w = 1;
+  if(h < 1)
+    h = 1;
+
+  x->x_width = w;
+  x->x_height = h;
 }
 
 /* function to change colour of popup background */
@@ -409,7 +434,7 @@ static void popup_bgcolour(t_popup* x, t_symbol* col)
   int visible=(x->x_glist)?glist_isvisible(x->x_glist):0;
   //post("DEBUG: bgcolour start");
   
-  x->x_colour = col;
+  x->x_bkgd_colour = col;
   if(visible)sys_vgui(".x%x.c.s%x configure -background \"%s\"\n", x->x_glist, x, col->s_name);
 }
 
@@ -419,9 +444,21 @@ static void popup_name(t_popup* x, t_symbol *name)
   int visible=(x->x_glist)?glist_isvisible(x->x_glist):0;
   //post("DEBUG: name start");
   
-  x->x_name = name;
+  x->x_top_entry_name = name;
   if(visible)sys_vgui(".x%x.c.s%x configure -text \"%s\"\n", x->x_glist, x, name->s_name);
 }
+
+
+
+static void popup_column_break_height(t_popup* x, t_floatarg cbh)
+{
+  int i=(int)cbh;
+
+  if(i < 1)
+    i = 1;
+  x->x_column_break_height = i;
+}
+
 
 /* Function to select a menu option by inlet */
 static void popup_iselect(t_popup* x, t_floatarg item)
@@ -482,7 +519,7 @@ static void popup_set(t_popup* x, t_symbol *S, int argc, t_atom*argv)
     int i=atom_getint(argv);
     if( i<x->x_num_options && i>=0)
     {
-      x->current_selection = i;
+      x->x_selected_option_index = i;
       if(visible)
         sys_vgui(".x%x.c.s%x configure -text \"%s\"\n",
         glist_getcanvas(x->x_glist), x, x->x_options[i]->s_name);
@@ -498,7 +535,7 @@ static void popup_set(t_popup* x, t_symbol *S, int argc, t_atom*argv)
     {
       if(x->x_options[i]->s_name == s->s_name)
       {
-        x->current_selection = i;
+        x->x_selected_option_index = i;
         if(visible)sys_vgui(".x%x.c.s%x configure -text \"%s\"\n",
           glist_getcanvas(x->x_glist), x, x->x_options[i]->s_name);
         return;
@@ -516,20 +553,20 @@ static void popup_append(t_popup* x, t_symbol *s, int argc, t_atom *argv)
 {
   //post("DEBUG: append start");
   
-  int i, new_limit;
+  int i, j, new_limit;
   int visible=(x->x_glist)?glist_isvisible(x->x_glist):0;
   
   new_limit = x->x_num_options + argc;
-  if(new_limit>x->x_maxoptions){
+  if(new_limit>x->x_max_options){
     t_symbol**dummy;
     int new_size=new_limit*2;
     //post("DEBUG: resizing options");
     dummy=(t_symbol**)getbytes(sizeof(t_symbol*)*new_size);
     if(dummy)
     {
-      memcpy(dummy, x->x_options, sizeof(t_symbol*)*x->x_maxoptions);
-      freebytes(x->x_options, sizeof(t_symbol*)*x->x_maxoptions);
-      x->x_maxoptions=new_size;
+      memcpy(dummy, x->x_options, sizeof(t_symbol*)*x->x_max_options);
+      freebytes(x->x_options, sizeof(t_symbol*)*x->x_max_options);
+      x->x_max_options=new_size;
       x->x_options=dummy;
     } else {
       error("popup: no memory for options");
@@ -539,9 +576,16 @@ static void popup_append(t_popup* x, t_symbol *s, int argc, t_atom *argv)
   
   for(i=x->x_num_options ; i<new_limit ; i++)
   {
+    j = i % x->x_column_break_height;
+    if(j == 0)
+      j = 1;
+    else
+      j = 0;
+    if(i == 0)
+      j = 0;
     x->x_options[i] = atom_getsymbol(argv+i-x->x_num_options);
-    if(visible)sys_vgui(".x%x.c.s%x.menu add command -label \"%s\" -command {.x%x.c.s%x configure -text \"%s\" ; popup_sel%x \"%d\"} \n",
-      x->x_glist, x, x->x_options[i]->s_name, x->x_glist, x, x->x_options[i]->s_name, x, i);
+    if(visible)sys_vgui(".x%x.c.s%x.menu add command -columnbreak %d -label \"%s\" -command {.x%x.c.s%x configure -text \"%s\" ; popup_sel%x \"%d\"} \n",
+      x->x_glist, x, j, x->x_options[i]->s_name, x->x_glist, x, x->x_options[i]->s_name, x, i);
   }
   
   x->x_num_options = new_limit;
@@ -563,7 +607,7 @@ static t_class *popup_class;
 
 static void popup_free(t_popup*x)
 {
-  if(x->x_options)freebytes(x->x_options, sizeof(t_symbol*)*x->x_maxoptions);
+  if(x->x_options)freebytes(x->x_options, sizeof(t_symbol*)*x->x_max_options);
 }
 
 
@@ -576,23 +620,19 @@ static void *popup_new(t_symbol *s, int argc, t_atom *argv)
   char buf[256];
   
   x->x_glist = (t_glist*)NULL;
-  
-  x->x_height = 25;
-  x->current_selection = -1;
-  
-  x->x_maxoptions=MAX_OPTIONS;
-  x->x_options=(t_symbol**)getbytes(sizeof(t_symbol*)*x->x_maxoptions);
-  
-  
+  x->x_selected_option_index = -1;
+  x->x_max_options=MAX_OPTIONS;
+  x->x_column_break_height = MAX_OPTIONS;
+  x->x_options=(t_symbol**)getbytes(sizeof(t_symbol*)*x->x_max_options);
   x->x_width = 124;
   x->x_height = 25;
   x->x_num_options = 1; 
-  x->x_colour = gensym("#ffffff");
-  x->x_name = gensym("popup");
+  x->x_bkgd_colour = gensym("#ffffff");
+  x->x_top_entry_name = gensym("popup");
   
   x->x_options[0] = gensym("option");
   
-  x->initialized=0;
+  x->x_initialized=0;
   
   x->x_disabled=0;
   
@@ -610,9 +650,9 @@ static void *popup_new(t_symbol *s, int argc, t_atom *argv)
       x->x_options[i] = atom_getsymbol( argv+(i+4) );
     }
   case 4:
-    x->x_name = atom_getsymbol(argv+3);
+    x->x_top_entry_name = atom_getsymbol(argv+3);
   case 3:
-    x->x_colour = atom_getsymbol(argv+2);
+    x->x_bkgd_colour = atom_getsymbol(argv+2);
   case 2:
     x->x_width =atom_getint(argv+0);
     x->x_height=atom_getint(argv+1);
@@ -620,71 +660,37 @@ static void *popup_new(t_symbol *s, int argc, t_atom *argv)
   }
   
   /* Bind the recieve "popup%p" to the widget outlet*/
-  sprintf(buf,"popup%p",x);
+  sprintf(buf, "popup%p", x);
   x->x_sym = gensym(buf);
   pd_bind(&x->x_obj.ob_pd, x->x_sym);
   
   /* define proc in tcl/tk where "popup%p" is the receive, "output" is the method, and "$index" is an argument. */
-  sys_vgui("proc popup_sel%x {index} {\n pd [concat popup%p output $index \\;]\n }\n",x,x); 
+  sys_vgui("proc popup_sel%x {index} {\n pd [concat popup%p output $index \\;]\n }\n", x, x);
   
   /* Add symbol inlet (hard to say how this actually works?? */
-  outlet_new(&x->x_obj, &s_float);
+  outlet_new(&x->x_obj, &s_list);
   
   //post("DEBUG: popup new end");
   
-  return (x);
+  return(x);
 }
 
-void popup_setup(void) {
-  
-  //post("DEBUG: setup start");
-  
+void popup_setup(void) {  
+//post("DEBUG: setup start");
   popup_class = class_new(gensym("popup"), (t_newmethod)popup_new, (t_method)popup_free,
         sizeof(t_popup),0,A_GIMME,0);
   
-  class_addmethod(popup_class, (t_method)popup_output,
-    gensym("output"),
-    A_DEFFLOAT,
-    0);
-  
-  class_addmethod(popup_class, (t_method)popup_name,
-    gensym("name"),
-    A_DEFSYMBOL,
-    0);
-  
-  class_addmethod(popup_class, (t_method)popup_options,
-    gensym("options"),
-    A_GIMME,
-    0);
-  
-  class_addmethod(popup_class, (t_method)popup_bgcolour,
-    gensym("bgcolour"),
-    A_DEFSYMBOL,
-    0);
-  
-  class_addmethod(popup_class, (t_method)popup_append,
-    gensym("append"),
-    A_GIMME,
-    0);
-  
-  class_addmethod(popup_class, (t_method)popup_symselect,
-    gensym(""),
-    A_DEFSYMBOL,
-    0);
-  
-  class_addmethod(popup_class, (t_method)popup_disable,
-    gensym("disable"),
-    A_FLOAT,
-    0);
-  
-  class_doaddfloat(popup_class, (t_method)popup_iselect);
-  
+  class_addfloat(popup_class,  (t_method)popup_iselect);
   class_addsymbol(popup_class, (t_method)popup_symselect);
-  
-  class_addmethod(popup_class, (t_method)popup_set,
-    gensym("set"),
-    A_GIMME,
-    0);
+  class_addmethod(popup_class, (t_method)popup_output, gensym("output"), A_DEFFLOAT, 0);
+  class_addmethod(popup_class, (t_method)popup_name, gensym("name"), A_DEFSYMBOL, 0);
+  class_addmethod(popup_class, (t_method)popup_options, gensym("options"), A_GIMME, 0);
+  class_addmethod(popup_class, (t_method)popup_bgcolour, gensym("bgcolour"), A_DEFSYMBOL, 0);
+  class_addmethod(popup_class, (t_method)popup_append, gensym("append"), A_GIMME, 0);
+  class_addmethod(popup_class, (t_method)popup_disable, gensym("disable"), A_FLOAT, 0);// jz
+  class_addmethod(popup_class, (t_method)popup_set, gensym("set"), A_GIMME, 0);
+  class_addmethod(popup_class, (t_method)popup_column_break_height, gensym("column_break_height"), A_DEFFLOAT, 0);
+  class_addmethod(popup_class, (t_method)popup_size, gensym("size"), A_GIMME, 0);
   
   popup_widgetbehavior.w_getrectfn    = popup_getrect;
   popup_widgetbehavior.w_displacefn   = popup_displace;
@@ -706,5 +712,5 @@ void popup_setup(void) {
   class_setsavefn(popup_class,&popup_save);
 #endif
   
-  post("Popup v0.1 Ben Bogart.\nCVS: $Revision$ $Date$");
+  post("Popup v0.2 Ben Bogart.\nCVS: $Revision$ $Date$");
 }
