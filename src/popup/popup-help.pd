@@ -1,7 +1,17 @@
-#N canvas 328 6 626 449 10;
+#N canvas 67 13 747 664 10;
 #X obj 106 340 popup 124 25 grey90 huhu one two three four five six
 seven eight nine ten eleven twelve thirteen i14 i15 i16 i17 i18 i19
-i20 i21 i22 i23 i24 i25 i26 i27 i28 i29 i30;
+i20 i21 i22 i23 i24 i25 i26 i27 i28 i29 i30 append-one append-two append-three
+append-one append-two append-three append-one append-two append-three
+append-one append-two append-three append-one append-two append-three
+append-one append-two append-three append-one append-two append-three
+append-one append-two append-three append-one append-two append-three
+append-one append-two append-three append-one append-two append-three
+append-one append-two append-three append-one append-two append-three
+append-one append-two append-three append-one append-two append-three
+append-one append-two append-three append-one append-two append-three
+append-one append-two append-three append-one append-two append-three
+append-one append-two append-three;
 #X obj 152 399 print index;
 #X msg 30 98 name popup;
 #X obj 239 399 print symbol;
@@ -60,6 +70,15 @@ output.;
 1;
 #X msg 351 422 set seven;
 #X msg 550 105 set nicki;
+#X msg 458 414 column_break_height \$1;
+#X floatatom 456 394 5 1 100 0 - - -;
+#X msg 649 377 size \$1 \$2;
+#X obj 648 348 pack 0 0;
+#X obj 673 320 t b f;
+#X floatatom 637 267 5 0 0 0 - - -;
+#X floatatom 683 266 5 0 0 0 - - -;
+#X text 631 244 witdh;
+#X text 691 244 height;
 #X connect 0 0 9 0;
 #X connect 2 0 0 0;
 #X connect 4 0 0 0;
@@ -94,3 +113,11 @@ output.;
 #X connect 39 0 38 0;
 #X connect 40 0 0 0;
 #X connect 41 0 29 0;
+#X connect 42 0 0 0;
+#X connect 43 0 42 0;
+#X connect 44 0 0 0;
+#X connect 45 0 44 0;
+#X connect 46 0 45 0;
+#X connect 46 1 45 1;
+#X connect 47 0 45 0;
+#X connect 48 0 46 0;
