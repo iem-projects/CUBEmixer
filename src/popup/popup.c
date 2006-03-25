@@ -406,7 +406,7 @@ static void popup_options(t_popup* x, t_symbol *s, int argc, t_atom *argv)
 
 static void popup_size(t_popup* x, t_symbol *s, int argc, t_atom *argv)
 {
-  int h, w;
+  int h=20, w=100;
   
   if((argc == 1)&&(argv[0].a_type == A_FLOAT))
   {
