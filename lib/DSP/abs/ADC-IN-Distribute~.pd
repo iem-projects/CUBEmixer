@@ -1,4 +1,4 @@
-#N canvas 391 0 567 681 10;
+#N canvas 1498 132 567 681 10;
 #X text 36 17 1.arg: <float> number of ADCs;
 #N canvas 0 0 478 328 null~ 0;
 #X obj 46 38 sig~ 0;
@@ -6,7 +6,7 @@
 #X obj 201 71 DSP_label IN none;
 #X connect 0 0 1 0;
 #X restore 49 54 pd null~;
-#X obj 185 424 outlet~;
+#X obj 154 624 outlet~;
 #X obj 179 48 inlet~;
 #X obj 50 80 adc_2_in~ 1;
 #X obj 50 100 adc_2_in~ 2;

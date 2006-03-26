@@ -1,4 +1,4 @@
-#N canvas 17 11 971 718 10;
+#N canvas 1326 0 1120 901 10;
 #N canvas 0 0 498 348 null~ 0;
 #X obj 45 38 catch~ 0_OUT;
 #X obj 45 62 s~ 0_DAC;
@@ -25,7 +25,7 @@
 #X obj 732 93 sel 0 1;
 #X text 391 79 2.arg: <symbol> name of compensation file;
 #X obj 52 32 inlet~;
-#X obj 189 569 outlet~;
+#X obj 243 620 outlet~;
 #X msg 756 193 read \$1;
 #X text 633 621 del + gain;
 #X msg 586 270 0 1;
