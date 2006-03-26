@@ -20,6 +20,22 @@ sf-login:
 	cvs $(CVSROOT) login
 	touch sf-login
 
+######## AMIXER ################
+
+#amixer-src: sf-login
+#	cvs $(CVSROOT) checkout -r $(REVISION) -d amixer externals/iem/amixer/
+
+#amixer-build: amixer-src
+#	make -C amixer
+
+#amixer-locinstall: amixer-build
+#	cp mixer/*.$(EXT) amixer/amixer.pd $(LOCINSTALL_DIR)
+
+#aconnect: amixer-locinstall
+
+
+######## ACONNECT ################
+
 aconnect-src: sf-login
 	cvs $(CVSROOT) checkout -r $(REVISION) -d aconnect externals/iem/aconnect/
 
@@ -30,6 +46,8 @@ aconnect-locinstall: aconnect-build
 	cp aconnect/*.$(EXT) aconnect/aconnects.pd $(LOCINSTALL_DIR)
 
 aconnect: aconnect-locinstall
+
+######### IEM AMBI ###############
 
 iem_ambi-src: sf-login
 	cvs $(CVSROOT) checkout -r $(REVISION) -d iem_ambi externals/iem/iem_ambi/
@@ -42,6 +60,8 @@ iem_ambi-locinstall: iem_ambi-build
 
 iem_ambi: iem_ambi-locinstall
 
+######## IEM GUI ##################
+
 iemgui-src: 
 
 iemgui-build: iemgui-src
@@ -51,6 +71,8 @@ iemgui-locinstall: iemgui-build
 	cp ../iemgui/iemgui.$(EXT) $(LOCINSTALL_DIR)
 
 iemgui: iemgui-locinstall
+
+######## IEM LIB ##################
 
 iemlib-src: sf-login
 	cvs $(CVSROOT) checkout -r $(REVISION) -d iemlib externals/iemlib/
@@ -65,6 +87,8 @@ iemlib-locinstall: iemlib-build
 
 iemlib: iemlib-locinstall
 
+####### IEM Matrix ###############
+
 iemmatrix-src: sf-login
 	cvs $(CVSROOT) checkout -r $(REVISION) -d iemmatrix externals/iem/iemmatrix/
 
@@ -78,6 +102,9 @@ iemmatrix-locinstall: iemmatrix-build
 
 iemmatrix: iemmatrix-locinstall
 
+######## IEM GUI ##################
+# maybe substituted by iem-gui in future
+
 popup-src_: sf-login
 	cvs $(CVSROOT) checkout -r $(REVISION) -d popup externals/bbogart/popup/
 
@@ -87,6 +114,7 @@ popup-build_: popup-src
 popup-locinstall_: popup-build_
 	cp popup/*.$(EXT) $(LOCINSTALL_DIR)
 
+# ---- local popup ------
 popup-src: 
 
 popup-build: popup-src
@@ -96,6 +124,9 @@ popup-locinstall: popup-build
 	cp ../popup/*.$(EXT) $(LOCINSTALL_DIR)
 
 popup: popup-locinstall
+
+
+######## ZEXY ##################
 
 zexy-src: sf-login
 	cvs $(CVSROOT) checkout -r $(REVISION) -d zexy externals/zexy 
@@ -108,6 +139,8 @@ zexy-locinstall: zexy-build
 	cp zexy/abs/*.pd $(LOCINSTALL_DIR)
 
 zexy: zexy-locinstall
+
+######## doit #################################
 
 sources: aconnect-src iem_ambi-src iemgui-src iemlib-src iemmatrix-src popup-src zexy-src
 
