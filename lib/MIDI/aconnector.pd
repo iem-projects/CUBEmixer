@@ -1,4 +1,4 @@
-#N canvas 288 102 696 696 10;
+#N canvas 288 102 719 696 10;
 #X obj 221 201 aconnect;
 #X obj 287 88 inlet;
 #X msg 199 47 reset;
@@ -24,16 +24,14 @@
 #X msg 202 341 bang;
 #X obj 287 185 t a;
 #X obj 109 442 t a;
-#X msg 103 485 72 0 128 0 80 0 128 0 88 0 128 0 96 0 128 0 128 1 72
-0 128 1 80 0 128 1 88 0 128 1 96 0 72 0 128 0 80 0 128 0 88 0 128 0
-96 0 128 0 128 1 72 0 128 1 80 0 128 1 88 0 128 1 96 0 72 0 128 0 80
-0 128 0 88 0 128 0 96 0 128 0 128 1 72 0 128 1 80 0 128 1 88 0 128
-1 96 0;
 #X text 57 16 click me to query and store the current MIDI-connection
 \, so it will be loaded automatically the next time.;
 #X msg 284 390 list;
-#X msg 287 231 72 0 128 0 80 0 128 0 88 0 128 0 96 0 128 0 104 0 128
+#X msg 246 469 72 0 128 0 80 0 128 0 88 0 128 0 96 0 128 0 104 0 128
 0 128 1 72 0 128 1 80 0 128 1 88 0 128 1 96 0 128 1 104 0;
+#X msg 287 231 72 0 128 0 80 0 128 0 88 0 128 0 96 0 128 0 104 0 128
+0 128 1 72 0 128 1 80 0 128 1 88 0 128 1 96 0 128 1 104 0 64 0 128
+0 64 32 128 0 128 1 64 0 128 1 64 32;
 #X connect 0 0 4 0;
 #X connect 1 0 23 0;
 #X connect 2 0 8 0;
@@ -52,7 +50,7 @@
 #X connect 15 0 16 0;
 #X connect 16 0 17 0;
 #X connect 17 0 24 0;
-#X connect 18 0 25 0;
+#X connect 18 0 27 0;
 #X connect 18 1 11 0;
 #X connect 18 2 19 0;
 #X connect 19 0 24 0;
@@ -60,7 +58,7 @@
 #X connect 21 0 10 0;
 #X connect 22 0 18 0;
 #X connect 23 0 28 0;
-#X connect 24 0 25 0;
-#X connect 25 0 12 0;
-#X connect 27 0 15 0;
+#X connect 24 0 27 0;
+#X connect 26 0 15 0;
+#X connect 27 0 12 0;
 #X connect 28 0 21 0;
