@@ -1,4 +1,4 @@
-#N canvas 1332 296 561 238 10;
+#N canvas 719 296 561 238 10;
 #X obj 42 168 dac~ \$1;
 #X obj 43 44 catch~ \$1_OUT;
 #X obj 138 165 s~ \$1_DAC;
@@ -9,6 +9,7 @@
 #X obj 42 113 *~;
 #X obj 79 80 r~ lin_out_master_gain~;
 #X text 208 43 only DAC~ without compensation;
+#X obj 201 14 DSP_label OUT \$1_DAC;
 #X connect 1 0 6 0;
 #X connect 6 0 2 0;
 #X connect 6 0 0 0;
