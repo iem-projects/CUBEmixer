@@ -21,17 +21,22 @@ sf-login:
 	touch sf-login
 
 ######## AMIXER ################
-
 #amixer-src: sf-login
 #	cvs $(CVSROOT) checkout -r $(REVISION) -d amixer externals/iem/amixer/
-
 #amixer-build: amixer-src
 #	make -C amixer
-
 #amixer-locinstall: amixer-build
 #	cp mixer/*.$(EXT) amixer/amixer.pd $(LOCINSTALL_DIR)
+#amixer: amixer-locinstall
 
-#aconnect: amixer-locinstall
+######## HDSPMMIXER ################
+hdspm_mixer-src: sf-login
+	cvs $(CVSROOT) checkout -r $(REVISION) -d hdspm_mixer externals/iem/hdspm_mixer/
+hdspm_mixer-build: hdspm_mixer-src
+	make -C hdspm_mixer
+hdspm_mixer-locinstall: hdspm_mixer-build
+	cp hdspm_mixer/*.$(EXT) hdspm_mixer/hdspmmixer-help.pd $(LOCINSTALL_DIR)
+hdspm_mixer: hdspm_mixer-locinstall
 
 
 ######## ACONNECT ################
