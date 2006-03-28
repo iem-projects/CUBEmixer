@@ -380,11 +380,12 @@ static void popup_options(t_popup* x, t_symbol *s, int argc, t_atom *argv)
   /* delete old menu items */
   if(visible)sys_vgui(".x%x.c.s%x.menu delete 0 end \n", x->x_glist, x);
   
-  if(argc>x->x_max_options){
-    /* resize the options-array */
-    if(x->x_options)freebytes(x->x_options, sizeof(t_symbol*)*x->x_max_options);
-    x->x_max_options=argc;
-    x->x_options=(t_symbol**)getbytes(sizeof(t_symbol*)*x->x_max_options);
+  if(argc > x->x_max_options)
+  {/* resize the options-array */
+    if(x->x_options)
+      freebytes(x->x_options, sizeof(t_symbol*)*x->x_max_options);
+    x->x_max_options = argc;
+    x->x_options = (t_symbol**)getbytes(sizeof(t_symbol*)*x->x_max_options);
   }
   
   for(i=0 ; i<argc ; i++)
@@ -553,28 +554,31 @@ static void popup_append(t_popup* x, t_symbol *s, int argc, t_atom *argv)
 {
   //post("DEBUG: append start");
   
-  int i, j, new_limit;
+  int i, j, new_mum_options;
   int visible=(x->x_glist)?glist_isvisible(x->x_glist):0;
   
-  new_limit = x->x_num_options + argc;
-  if(new_limit>x->x_max_options){
-    t_symbol**dummy;
-    int new_size=new_limit*2;
+  new_mum_options = x->x_num_options + argc;
+  if(new_mum_options > x->x_max_options)
+  {
+    t_symbol **mem_beg_options;
+    int new_max_options = 2 * new_mum_options;
     //post("DEBUG: resizing options");
-    dummy=(t_symbol**)getbytes(sizeof(t_symbol*)*new_size);
-    if(dummy)
+    mem_beg_options = (t_symbol **)getbytes(sizeof(t_symbol*)*new_max_options);
+    if(mem_beg_options)
     {
-      memcpy(dummy, x->x_options, sizeof(t_symbol*)*x->x_max_options);
+      memcpy(mem_beg_options, x->x_options, sizeof(t_symbol*)*x->x_max_options);
       freebytes(x->x_options, sizeof(t_symbol*)*x->x_max_options);
-      x->x_max_options=new_size;
-      x->x_options=dummy;
-    } else {
+      x->x_max_options = new_max_options;
+      x->x_options = mem_beg_options;
+    }
+    else
+    {
       error("popup: no memory for options");
       return;
     }
   }
   
-  for(i=x->x_num_options ; i<new_limit ; i++)
+  for(i=x->x_num_options ; i<new_mum_options ; i++)
   {
     j = i % x->x_column_break_height;
     if(j == 0)
@@ -588,7 +592,7 @@ static void popup_append(t_popup* x, t_symbol *s, int argc, t_atom *argv)
       x->x_glist, x, j, x->x_options[i]->s_name, x->x_glist, x, x->x_options[i]->s_name, x, i);
   }
   
-  x->x_num_options = new_limit;
+  x->x_num_options = new_mum_options;
   
   //post("DEBUG: append end");
 }
@@ -623,19 +627,21 @@ static void *popup_new(t_symbol *s, int argc, t_atom *argv)
   x->x_selected_option_index = -1;
   x->x_max_options=MAX_OPTIONS;
   x->x_column_break_height = MAX_OPTIONS;
-  x->x_options=(t_symbol**)getbytes(sizeof(t_symbol*)*x->x_max_options);
   x->x_width = 124;
   x->x_height = 25;
   x->x_num_options = 1; 
   x->x_bkgd_colour = gensym("#ffffff");
   x->x_top_entry_name = gensym("popup");
-  
-  x->x_options[0] = gensym("option");
-  
   x->x_initialized=0;
-  
   x->x_disabled=0;
-  
+  x->x_num_options = argc-4;
+  if(x->x_num_options > x->x_max_options)
+  {
+    x->x_max_options = x->x_num_options + 20;
+  }
+  x->x_options = (t_symbol **)getbytes(sizeof(t_symbol*)*x->x_max_options);
+  x->x_options[0] = gensym("option");
+
   switch(argc){
   case 0: break; /* just use default values */
   case 1:
@@ -643,8 +649,6 @@ static void *popup_new(t_symbol *s, int argc, t_atom *argv)
     break;
   default:
     /* Copy args into structure */    
-    x->x_num_options = argc-4;
-    
     for(i=0 ; i<x->x_num_options ; i++)
     {
       x->x_options[i] = atom_getsymbol( argv+(i+4) );
