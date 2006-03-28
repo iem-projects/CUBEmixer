@@ -1,4 +1,4 @@
-#N canvas 177 170 798 475 10;
+#N canvas 173 143 798 475 10;
 #X obj 43 61 r \$1_fromgui;
 #X obj 43 282 s \$1_togui;
 #X obj 129 39 inlet;
@@ -10,7 +10,7 @@ inlet.;
 #X obj 129 150 makefilename \$2;
 #X obj 43 152 + \$3;
 #X obj 43 262 - \$3;
-#X text 94 436 arg3 is an offset between the gui-send/receivers and
+#X text 97 406 arg3 is an offset between the gui-send/receivers and
 the master sendreceiver;
 #X text 98 318 will receive value on "bus1_gain_fromgui" and forward
 it to "1_BUS1_GAIN";
@@ -30,6 +30,9 @@ it to "1_BUS1_GAIN";
 #X obj 108 115 t f;
 #X obj 43 172 sendreceive \$2;
 #X msg 176 59 0;
+#X text 323 48 1.arg: locale send/receive name;
+#X text 322 66 2.arg: global send/receivename;
+#X text 322 85 3.arg: value offset (additive term for value);
 #X connect 0 0 23 0;
 #X connect 2 0 7 0;
 #X connect 5 0 26 0;

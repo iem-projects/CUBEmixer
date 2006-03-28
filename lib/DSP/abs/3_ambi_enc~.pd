@@ -1,4 +1,4 @@
-#N canvas 1318 118 802 582 10;
+#N canvas 478 118 802 582 10;
 #X obj 43 226 inlet~;
 #X obj 43 329 pp col 1;
 #N canvas 18 6 564 404 ambi_weight 0;
