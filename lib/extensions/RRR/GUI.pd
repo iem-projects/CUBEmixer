@@ -1,0 +1,37 @@
+#N canvas 299 455 775 361 10;
+#X text 337 127 open_close_EDIT;
+#X msg 346 146 1;
+#X msg 295 85 read;
+#X obj 270 62 t b b;
+#X msg 270 113 recall 0;
+#X obj 101 101 cnv 15 83 58 empty empty RRREV 2 10 0 12 -228992 -66577
+0;
+#X obj 101 126 tgl 15 0 \$0_ON_fromgui \$0_ON_togui ON 0 -6 0 8 -233017
+-1 -1 1 1;
+#X obj 118 126 bng 15 250 50 0 \$0sEDIT \$0rEDIT EDIT 0 -6 0 8 -195568
+-1 -1;
+#X obj 254 13 r GUI_NET_initialized;
+#X obj 254 34 del 1000;
+#X obj 44 196 sendreceive EXT_RRR_PARAM;
+#X obj 349 168 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X text 430 171 preset filename;
+#X text 283 178 recall;
+#X obj 15 11 gui_sr_offset \$0_ON EXT_RRR_ON 0;
+#X text 41 216 should load send PBANK File;
+#X msg 477 195 ../rrr_default.pbank;
+#X obj 270 196 abs/room_EDIT+12_earlies 12;
+#X connect 1 0 11 0;
+#X connect 2 0 17 0;
+#X connect 3 0 4 0;
+#X connect 3 1 2 0;
+#X connect 4 0 17 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 3 0;
+#X connect 10 0 17 0;
+#X connect 11 0 17 1;
+#X connect 16 0 17 2;
+#X connect 17 0 10 0;
+#X connect 17 1 16 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
