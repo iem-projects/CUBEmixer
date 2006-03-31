@@ -1,4 +1,4 @@
-#N canvas 243 119 588 482 10;
+#N canvas 243 119 387 492 10;
 #X obj 79 42 inlet;
 #X text 122 40 max min;
 #X obj 79 148 t f f;
@@ -24,6 +24,7 @@
 #X obj 160 138 loadbang;
 #X obj 160 161 f \$1;
 #X obj 177 184 - 1;
+#X text 188 21 musil \, iem;
 #X connect 0 0 13 0;
 #X connect 2 0 14 0;
 #X connect 2 1 20 0;

@@ -1,4 +1,4 @@
-#N canvas 380 176 629 346 10;
+#N canvas 219 426 629 346 10;
 #X obj 124 80 r~ 1_AUX_SUM;
 #X obj 123 232 throw~ 1_AMBI_BUS;
 #X obj 171 293 throw~ 2_AMBI_BUS;
@@ -17,9 +17,10 @@
 #X obj 124 33 symbol;
 #X msg 124 55 set \$1_SUM;
 #X obj 416 180 del 60;
-#X obj 30 8 sr_setting EXT_SIMPLEREV_SRC;
-#X obj 272 18 sr_parameter EXT_SIMPLEREV_PARAM;
 #X obj 416 67 sr_setting EXT_SIMPLEREV_ON;
+#X text 277 1 Reverb mono to quad Thomas Musil;
+#X obj 30 8 sr_setting EXT_REV_SRC;
+#X obj 272 19 sr_parameter EXT_REV_PARAM;
 #X connect 0 0 5 0;
 #X connect 5 0 7 0;
 #X connect 5 1 7 1;
@@ -41,6 +42,6 @@
 #X connect 15 0 16 0;
 #X connect 16 0 0 0;
 #X connect 17 0 10 0;
-#X connect 18 0 15 0;
-#X connect 19 0 13 0;
-#X connect 20 0 11 0;
+#X connect 18 0 11 0;
+#X connect 20 0 15 0;
+#X connect 21 0 13 0;
