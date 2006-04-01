@@ -1,5 +1,4 @@
-#N canvas 388 170 450 300 10;
-#X obj 56 95 SIMPLEREV/DSP;
+#N canvas 388 170 333 185 10;
 #X obj 60 136 TESTTONE/DSP;
 #X obj 184 140 SFPLAYER8/DSP 8;
 #X obj 45 25 inlet~;
@@ -7,3 +6,4 @@
 #X text 48 46 after inchannels;
 #X text 210 49 after MASTER;
 #X obj 183 97 RRR/DSP;
+#X obj 56 95 REV/DSP;
