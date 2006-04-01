@@ -6,4 +6,4 @@
 #X text 48 46 after inchannels;
 #X text 210 49 after MASTER;
 #X obj 183 97 RRR/DSP;
-#X obj 56 95 REV/DSP;
+#X obj 60 96 REV/DSP;
