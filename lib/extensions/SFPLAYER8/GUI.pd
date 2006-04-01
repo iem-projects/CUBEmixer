@@ -1,7 +1,7 @@
 #N canvas 110 142 1143 633 10;
 #X obj 537 264 openpanel;
 #X obj 537 288 t b s;
-#X msg 537 333 /tmp/poeme.wav;
+#X msg 537 333 /home/cubemixer/sounds/voegel_S.wav;
 #X msg 565 308 set \$1;
 #X msg 537 243 bang;
 #X msg 314 243 play;
@@ -33,16 +33,14 @@
 -1;
 #X obj 216 118 bng 20 250 50 0 \$0load \$0load empty 0 -6 0 8 -228992
 -1 -1;
-#X obj 107 142 hsl 128 15 0 19548.2 0 0 \$0pos \$0pos empty -2 -6 0
-8 -262144 -1 -1 2143 1;
+#X obj 107 142 hsl 128 15 0 73291.9 0 0 \$0pos \$0pos empty -2 -6 0
+8 -262144 -1 -1 4280 1;
 #X msg 800 439 range 0 \$1;
 #X obj 800 419 sendreceive \$1_SFPLAY_LENGTH;
 #X msg 803 346 set \$1;
 #X msg 104 258 play \$1;
 #X obj 803 283 select -1;
 #X obj 803 317 i;
-#X obj 903 366 print a;
-#X obj 901 389 print b;
 #X msg 473 213 stop;
 #X obj 766 286 i;
 #X obj 104 229 t f f f;
@@ -58,10 +56,9 @@
 #X connect 7 0 11 0;
 #X connect 8 0 7 0;
 #X connect 9 0 33 0;
-#X connect 9 0 35 0;
 #X connect 12 0 18 0;
 #X connect 13 0 17 0;
-#X connect 14 0 40 0;
+#X connect 14 0 38 0;
 #X connect 15 0 0 0;
 #X connect 16 0 5 0;
 #X connect 16 1 6 0;
@@ -73,21 +70,20 @@
 #X connect 21 1 17 1;
 #X connect 22 0 16 0;
 #X connect 22 1 17 1;
-#X connect 28 0 39 0;
+#X connect 28 0 37 0;
 #X connect 29 0 28 0;
 #X connect 30 0 29 0;
 #X connect 31 0 28 0;
-#X connect 31 0 36 0;
 #X connect 32 0 11 0;
 #X connect 33 0 34 0;
 #X connect 33 1 31 0;
 #X connect 34 0 31 0;
-#X connect 37 0 11 0;
-#X connect 38 0 31 0;
-#X connect 39 0 32 0;
-#X connect 39 1 34 1;
-#X connect 39 2 38 1;
-#X connect 40 0 37 0;
-#X connect 40 1 19 0;
-#X connect 40 2 38 0;
+#X connect 35 0 11 0;
+#X connect 36 0 31 0;
+#X connect 37 0 32 0;
+#X connect 37 1 34 1;
+#X connect 37 2 36 1;
+#X connect 38 0 35 0;
+#X connect 38 1 19 0;
+#X connect 38 2 36 0;
 #X coords 0 -1 1 1 143 60 1 100 100;
