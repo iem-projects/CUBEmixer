@@ -7,7 +7,7 @@
 #X obj 230 135 r \$0_open;
 #X obj 230 159 f \$0;
 #X msg 230 213 \; \$1 vis 1;
-#N canvas 336 54 406 239 6640-system-settings 0;
+#N canvas 2059 256 406 239 6595-system-settings 1;
 #X obj 51 100 extensions/TESTTONE/GUI;
 #X obj 140 23 cue PARAMETERS;
 #X obj 33 23 cue SETTINGS;

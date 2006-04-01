@@ -1,4 +1,4 @@
-#N canvas 0 0 1151 888 10;
+#N canvas 56 19 1151 888 10;
 #X obj 6 -35 inchan 1;
 #X obj 77 -35 inchan 2;
 #X obj 148 -35 inchan 3;
@@ -20,7 +20,7 @@
 #X obj 718 611 OUT/main;
 #X obj 588 428 OUT/BUS/12;
 #X obj 653 611 OUT/LFC;
-#X obj 1059 845 system;
+#X obj 587 815 system;
 #X obj 996 679 SFPLAYER8/GUI 8;
 #X obj 1054 614 RRR/GUI;
 #X obj 955 615 REV/GUI;
