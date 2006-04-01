@@ -21,6 +21,7 @@
 #X obj 30 8 sr_setting EXT_REV_SRC;
 #X obj 272 19 sr_parameter EXT_REV_PARAM;
 #X obj 127 109 REVERB~;
+#X obj 384 285 sr_setting EXT_RRR_PBANKFILE;
 #X connect 0 0 21 0;
 #X connect 6 0 1 0;
 #X connect 6 1 2 0;
