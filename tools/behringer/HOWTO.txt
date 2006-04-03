@@ -20,6 +20,11 @@ I think i remember that i once managed to dump the config-files
 from the PC to the BC[FR]; alas!, i cannot remember how i did it...
 (once i remember, i'll put it in here)
 
+and i found this in the net:
+http://www.synthforum.nl/forums/showthread.php?s=d2c1ff84d22f2bf03df963d5b4a73cf4&postid=514420#post514420
+if i only could speak dutch... but i thik the solution was to use
+an older java-version (not verified)
+
 
 2. using sysex dumps
 ====================
