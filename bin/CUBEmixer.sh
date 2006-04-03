@@ -6,6 +6,9 @@
 ## pd-binary (if any)
 ## usage:
 ##  test_pd /path/to/my/preferred/pd /path/to/my/second/choice/pd
+
+#ECHO=echo
+
 function test_pd() {
 local i
 local ARGS
@@ -65,8 +68,8 @@ if [ "x" != "x${1}" ]; then
  fi
 fi
 
-${PD} ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${GUI_PATH} ${PD_PATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH} ${GUI_EXTPATCH}\
+${ECHO} ${PD} ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${GUI_PATH} ${PD_PATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH} ${GUI_EXTPATCH}\
       -send "${GUI_MESSAGE}" -send "${PD_MESSAGE}" &
 
-${PD} ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${DSP_PATH} ${PD_PATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH} ${DSP_EXTPATCH} \
+${ECHO} ${PD} ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${DSP_PATH} ${PD_PATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH} ${DSP_EXTPATCH} \
       -send "${DSP_MESSAGE}" -send "${PD_MESSAGE}"

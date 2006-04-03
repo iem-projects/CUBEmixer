@@ -19,6 +19,8 @@ OUT_AMBI_GAIN	: 121
 $1_OUT_LFC_GAIN	: 122-123
 OUT_MASTER_GAIN	: 124
 
+EXT_REV_MASTER_VOL: 125
+EXT_RRR_MASTER_VOL: 126
 
 die BC{F,r}2000 sind eigens für den CUBE-mixer umprogrammiert
 (standard-programm all_controller; fader allerdings auf ctl 105-112)
