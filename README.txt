@@ -3,7 +3,9 @@ CUBEmixer: for the IEM CUBE and other environments
 
 Institut of Electronic Music and Acoustics Graz - 2005
 Programming-Concept and Development: Musil, Ritsch, Zmoelnig
-based on  various developments on IEM Graz 
+Binaural Extension adapted from Markus Noisterning
+based on  various developments on IEM Graz not extra named here
+see in the doc folder the IEM_Report.pdf (german only).
 
 Quick Instruction:
 ------------------
@@ -14,8 +16,8 @@ Quick Instruction:
  windows: first start 'CUBEmixerDSP.bat' and then 'CubemixerGUI.bat'
 
 
-Installation:
--------------
+installation and configuration:
+-------------------------------
 
  see INSTALL.txt
 

@@ -64,6 +64,9 @@ A) What you need:
 
     and edit etc/CUBEmixer/LocalVars.bat  with an text editor (read instructions in comments).
 
+  linux only:
+    If you want to use your extensions there are two arguments used in the script
+    the DSP-Patch and the GUI patch (for projects and developments) 
 
 4.) Put the CUBEmixer in your favorite place and look at the bin/ folder for the startup script.
 
