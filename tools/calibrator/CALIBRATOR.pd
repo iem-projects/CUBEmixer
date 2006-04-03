@@ -1,4 +1,4 @@
-#N canvas 53 148 1126 504 10;
+#N canvas 72 270 1126 504 10;
 #X floatatom 416 201 4 0 0 0 - - -;
 #N canvas 441 514 686 382 IN~OUT 0;
 #X obj 23 29 noise~;
@@ -47,9 +47,9 @@
 #X connect 34 0 31 0;
 #X restore 602 422 pd IN~OUT;
 #X msg 416 156 START;
-#X obj 59 393 r~ IN;
-#X obj 59 412 env~;
-#X floatatom 59 432 4 0 0 0 - - -;
+#X obj 76 239 r~ IN;
+#X obj 76 258 env~;
+#X floatatom 76 278 4 0 0 0 - - -;
 #X obj 229 176 s outgain;
 #X floatatom 229 135 4 0 0 0 - - -;
 #X obj 229 155 dbtorms;
@@ -313,9 +313,18 @@ way.;
 #X text 46 93 0 run "LATENCY";
 #X text 809 125 copy the matrix to CUBEmixer/lib/DSP/presets/compensation.mtx
 ;
+#X obj 76 325 vsl 15 128 0 100 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 4859 1;
+#X obj 97 324 > 99;
+#X obj 96 374 bng 30 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 96 346 sel 1;
+#X text 96 404 CLIP;
 #X connect 2 0 40 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
+#X connect 5 0 51 0;
+#X connect 5 0 52 0;
 #X connect 7 0 8 0;
 #X connect 8 0 6 0;
 #X connect 9 0 10 0;
@@ -335,3 +344,5 @@ way.;
 #X connect 37 0 20 0;
 #X connect 38 0 20 0;
 #X connect 40 0 0 0;
+#X connect 52 0 54 0;
+#X connect 54 0 53 0;
