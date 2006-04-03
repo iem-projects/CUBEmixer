@@ -158,8 +158,8 @@ EXT_REV_ON: 0=off, 1=on
 EXT_REV_SRC: AUX SUM Source eg: 1_AUX
 
    Parameter
-EXT_RRR_VOL        MAIN Volume in MIDI-dB
-EXT_RRR_PBANKFILE  <pbankfile> <preset>, list of  pbankfile of 10 presets and index 
+EXT_REV_VOL        MAIN Volume in MIDI-dB
+EXT_REV_PBANKFILE  <pbankfile> <preset>, list of  pbankfile of 10 presets and index 
 
    not stored
 EXT_REV_PARAM: parameterliste... (see patch simplerevedit)
