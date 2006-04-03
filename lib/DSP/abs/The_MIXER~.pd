@@ -60,7 +60,7 @@
 #X text 488 423 7.arg: <float> effect_plug_in_index;
 #X text 488 433 8.arg: <float> auxillary_plug_in_index;
 #X text 110 501 2.arg: <symbol> name of compensation file;
-#X obj 74 474 DAC_Routing_Compensation~ \$6 presets/compensation.txt
+#X obj 74 474 DAC_Routing_Compensation~ \$6 presets/compensation.mtx
 ;
 #X text 96 363 5.arg: <float> effect_plug_in_index;
 #X obj 238 154 \$8_AUX_PLUG_IN~ \$3 \$4;
@@ -68,7 +68,6 @@
 #X text 248 95 1.arg: <float> n_aux_send;
 #X text 487 229 1.arg: <float> n_sf_rec;
 #X obj 488 212 # SF_RECORDER_TOOL~ \$10;
-#X msg 382 450 ON_OFF 1;
 #X obj 475 173 # VU_METER_BRIDGE~;
 #X obj 74 222 IN-MIX-CH~ \$1 \$2 \$3 \$5 \$7 \$11;
 #X text 483 466 11.arg: <float> n_ambisonic_order;
@@ -83,14 +82,13 @@
 #X text 92 25 force vbefore inchannels;
 #X obj 73 417 BUS-Gain-Matrix-OUT_bus16_OUT52~ \$5 \$6;
 #X connect 0 0 2 0;
-#X connect 6 0 70 0;
+#X connect 6 0 69 0;
 #X connect 52 0 63 0;
-#X connect 63 0 70 0;
-#X connect 68 0 61 1;
-#X connect 70 0 74 0;
-#X connect 70 0 75 0;
-#X connect 73 0 81 0;
-#X connect 74 0 73 0;
-#X connect 79 0 70 0;
-#X connect 81 0 76 0;
-#X connect 81 0 61 0;
+#X connect 63 0 69 0;
+#X connect 69 0 73 0;
+#X connect 69 0 74 0;
+#X connect 72 0 80 0;
+#X connect 73 0 72 0;
+#X connect 78 0 69 0;
+#X connect 80 0 75 0;
+#X connect 80 0 61 0;

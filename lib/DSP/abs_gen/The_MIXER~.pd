@@ -73,7 +73,7 @@
 #X obj 71 116 IN-MIX-CH~ \$1 \$2 \$3 \$5 \$7;
 #X obj 73 417 BUS-Gain-Matrix-OUT~ \$5 \$6;
 #X text 110 501 2.arg: <symbol> name of compensation file;
-#X obj 74 474 DAC_Routing_Compensation~ \$6 presets/compensation.txt
+#X obj 74 474 DAC_Routing_Compensation~ \$6 presets/compensation.mtx
 ;
 #X text 95 169 5.arg: <float> effect_plug_in_index;
 #X obj 72 230 \$8_AUX_PLUG_IN~ \$3 \$4;
