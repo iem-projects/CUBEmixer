@@ -177,7 +177,7 @@ you have to run the "LATENCY"-patch on your own.;
 can be found in this directory;
 #X restore 49 158 pd getlatency;
 #X obj 416 176 calibrator_main;
-#N canvas 156 72 1274 835 readme 0;
+#N canvas 156 72 1251 835 readme 0;
 #X text 60 70 this is the calibration-patch !!;
 #X text 62 86 you will need this for calibrating your audio-setup.
 ;
@@ -186,43 +186,6 @@ can be found in this directory;
 #X text 81 157 you should have set up a functioning pure-data.;
 #X text 80 172 i suppose \, that you are using a multi-channel soundcard
 (like the RME-Hammerfall);
-#N canvas 399 257 600 552 angles.txt 0;
-#X text 69 33 the "angles.mtx" file is normally used to calculate the
-ambisonic decoder-behaviour.;
-#X text 68 84 however \, since it gives a fairly good description of
-your speaker-setup \, we use it here to acquire information of your
-speaker-setup too \, meaning we get the number of speakers from this
-file. (sure \, this could be done more simple \, but since we need
-the "angles.mtx" later anyhow \, why shouldn't we use it here too ?)
-;
-#X text 70 184 this file looks something like;
-#X text 147 204 #matrix 8 2;
-#X text 150 229 -90 -22.5;
-#X text 150 240 180 -22.5;
-#X text 150 217 0 -22.5;
-#X text 149 251 90 -22.5;
-#X text 150 274 comment;
-#X text 150 273 -90 22.5;
-#X text 151 262 0 22.5;
-#X text 150 285 180 22.5;
-#X text 150 296 90 22.5;
-#X text 78 352 the following <num_of_spk> lines consists of pairs describing
-the azimuth phi and the elevation theta [in degree] of each single
-speaker with respect to the calibration-position (which is normally
-placed in the middle of the room);
-#X text 79 324 the header-line is "#matrix <num_of_spk> 2" \, <num_of_spk>
-obviously meaning the number of total speakers.;
-#X text 77 427 if there are more lines than <num_of_spk> (not counting
-\, of course \, the header line) \, the remaining ones will be skipped.
-;
-#X text 78 468 there should not be fewer lines than defined with <num_of_spk>
-!!;
-#X restore 189 256 pd angles.txt;
-#X text 39 315 for the calibration-patch the only interesting information
-in the "angles.mtx"-file is the number of speakers. from this file
-\, the calibrator reads how many speakers you are using. if you actually
-have 24 speakers and your "angles.mtx" file knows only of 5 \, the
-remaining 19 will not be calibrated!;
 #X text 43 476 the latency is stored in a file called "latenz.samples"
 ;
 #N canvas 542 226 490 215 latenz.samples 0;
@@ -255,9 +218,6 @@ the middle of the auditory and connect it to your soundcard \, so that
 the microphone channel is present at the soundcard-channel 1 in the
 lower-left corner of the calibrator-patch you can see a level-display
 \, so you can make sure that everything is working fine.;
-#X text 82 201 first of all you should set up your speakers in a proper
-way. then you should create a matrix-file \, that describes your settings.
-for more information on this \, read;
 #X text 50 684 you should really use a high quality microphone with
 a spheric characteristic ("omnidirectional") to make a good measurement.
 ;
@@ -340,6 +300,8 @@ distinguishable from the rest);
 #X text 42 420 0.) after you have checked your speaker-setting \, you
 maybe want to test the latency of your PC+soundcard. there is a "LATENCY.pd"
 file around somewhere in this directory \, which you can use.;
+#X text 82 201 first of all you should set up your speakers in a proper
+way.;
 #X restore 768 20 pd readme;
 #X text 215 93 1 set the ouput level;
 #X text 413 92 2 start measurement;
