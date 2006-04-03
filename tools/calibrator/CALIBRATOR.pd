@@ -121,7 +121,7 @@
 #X floatatom 289 443 4 0 0 0 - - -;
 #X obj 223 382 r values;
 #X text 288 465 amp[dB];
-#N canvas 197 83 320 295 write 0;
+#N canvas 197 83 368 287 write 0;
 #X obj 54 48 route write writeas...;
 #X obj 128 75 bang;
 #X obj 54 185 s writecalibrat;
@@ -131,7 +131,7 @@
 #X obj 158 161 s cal_file;
 #X obj 128 97 savepanel;
 #X obj 128 118 t b s;
-#X obj 158 141 symbol calibrate.mtx;
+#X obj 158 141 symbol compensation.mtx;
 #X connect 0 0 3 0;
 #X connect 0 1 1 0;
 #X connect 1 0 7 0;
@@ -286,7 +286,7 @@ is quiet again) \, the calibration-values should be stored in a file
 #X text 695 596 this can be done with the buttons;
 #X msg 936 599 write;
 #X msg 988 599 writeas...;
-#X text 697 619 the default filename will be "calibrate.mtx";
+#X text 697 619 the default filename will be "compensation.mtx";
 #X text 695 652 4.) even after saving the values to a file \, they
 are not automatically applied to other patches that would like to use
 them. this is \, because it might prove dangerous to overwrite an existing

@@ -179,7 +179,7 @@ outlet;
 #X msg 239 134 write \$1;
 #X obj 374 64 r cal_file;
 #X obj 91 160 matrix 24 2;
-#X obj 239 113 symbol calibrate.mtx;
+#X obj 239 113 symbol compensation.mtx;
 #X obj 214 197 matrix;
 #X obj 214 84 t b b;
 #X obj 214 226 s calibration_matrix;
