@@ -1,5 +1,6 @@
 1. Spalte = send/receive-name
 
+
 ===INPUT=====================================================================================
 
 soundfile-player: 
@@ -9,8 +10,13 @@ ausgabe des sfplayers  sollte auf <ID>:<channel>_PLAY erfolgen
 
 der <ID> wird immer prefixed
 $1_SFPLAY_FILE <soundfile>: lädt <soundfile>
-$1_SFPLAY_CTRL play|pause|stop: start/pause/stop
+$1_SFPLAY_CTRL play | pause | stop | loop <1|0}>: start/pause/stop/loop on|off
 $1_SFPLAY_CTRL jump <time> : springt zur zeit <time> in [ms]
+
+  not stored for GUI
+$1_SFPLAY_LENGTH   length of loaded file
+$1_SFPLAY_POS      position of playing file
+
 
 ===CHANNEL===================================================================================
 Routing Parameter werden nur am Anfang geladen und eingestellt, und duerfen im Sound einen
@@ -146,9 +152,34 @@ note: beim laden wird nicht zwischen "parameter" und "setting" unterschieden !
 
 ===EXTENSIONS==========================================================
 
----SIMPLE_REV----------------------------------------------------------
+---REV----------------------------------------------------------------
+   Settings
+EXT_REV_ON: 0=off, 1=on
+EXT_REV_SRC: AUX SUM Source eg: 1_AUX
 
-EXT_SIMPLEREV_ON: 0=off, 1=on
-EXT_SIMPLEREV_PARAM: parameterliste... (see patch simplerevedit)
-EXT_SIMPLEREV_SRC: AUX SUM Source eg: 1_AUX
+   Parameter
+EXT_RRR_VOL        MAIN Volume in MIDI-dB
+EXT_RRR_PBANKFILE  <pbankfile> <preset>, list of  pbankfile of 10 presets and index 
 
+   not stored
+EXT_REV_PARAM: parameterliste... (see patch simplerevedit)
+
+---Room in Room Reverbaration: ----------------------------------------
+
+  Settings:
+
+EXT_RRR_ON         On/off Switch {0,1}
+
+   Parameter
+EXT_RRR_VOL        MAIN Volume in MIDI-dB
+EXT_RRR_PBANKFILE  <pbankfile> <preset>, list of  pbankfile of 10 presets and index 
+
+$1_EXT_RRR_SRC     Quelle für input Nr $1, 1-6 zB: 1_EXT_RRR_SRC
+
+$1_RRR_IN_AMBI_RAD : 0...1 spread, 1...100 lowpassed
+$1_RRR_IN_AMBI_AZM : in degree
+$1_RRR_IN_AMBI_ELV : in degree
+
+   Not Stored
+
+EXT_RRR_PARAM      send Parameter to DSP
