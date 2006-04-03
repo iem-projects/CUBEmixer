@@ -1,9 +1,4 @@
 #N canvas 0 0 1040 405 10;
-#X obj 38 40 cube_sphere 9 150 33 52 195567 258048 282 79 258048 149
-49 258048 98 101 262080 201 99 262080 9 162 262080 203 204 4032 102
-261 4032 165 256 4032 50 52;
-#X obj 179 5 bng 15 250 50 0 empty empty empty 0 -6 0 8 -260818 -1
--1;
 #N canvas 549 138 542 590 config 0;
 #X floatatom 54 146 5 8 50 0 - - -;
 #X floatatom 182 47 3 0 100 0 - - -;
@@ -212,7 +207,6 @@
 #X connect 43 0 51 0;
 #X restore 242 3 pd config;
 #X obj 38 356 s \$0_sphere_fromgui;
-#X obj 33 4 r \$0_sphere_togui;
 #X obj 444 27 r \$0_sphere_fromgui;
 #X obj 439 314 sendreceive 1_RRR_IN_AMBI_ELV;
 #X obj 479 342 sendreceive 1_RRR_IN_AMBI_AZM;
@@ -242,35 +236,39 @@
 #X obj 809 296 sendreceive 8_RRR_IN_AMBI_AZM;
 #X obj 813 209 sendreceive 9_RRR_IN_AMBI_ELV;
 #X obj 853 237 sendreceive 9_RRR_IN_AMBI_AZM;
-#X connect 0 0 3 0;
-#X connect 1 0 0 0;
-#X connect 4 0 0 0;
-#X connect 5 0 8 0;
-#X connect 8 0 9 0;
-#X connect 8 1 10 0;
-#X connect 8 2 11 0;
-#X connect 8 3 12 0;
-#X connect 8 4 13 0;
-#X connect 8 5 14 0;
-#X connect 8 6 15 0;
-#X connect 8 7 16 0;
-#X connect 8 8 17 0;
-#X connect 9 0 6 0;
-#X connect 9 1 7 0;
-#X connect 10 0 18 0;
-#X connect 10 1 19 0;
-#X connect 11 0 20 0;
-#X connect 11 1 21 0;
-#X connect 12 0 22 0;
-#X connect 12 1 23 0;
-#X connect 13 0 24 0;
-#X connect 13 1 25 0;
-#X connect 14 0 26 0;
-#X connect 14 1 27 0;
-#X connect 15 0 28 0;
-#X connect 15 1 29 0;
-#X connect 16 0 30 0;
-#X connect 16 1 31 0;
-#X connect 17 0 32 0;
-#X connect 17 1 33 0;
+#X obj 31 31 cnv 15 318 318 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 38 40 cube_sphere 9 150 33 52 195567 258048 282 79 258048 149
+49 258048 98 101 262080 201 99 262080 9 162 262080 203 204 4032 102
+261 4032 165 256 4032 50 52;
+#X obj 33 4 r \$0_sphere_togui;
+#X connect 2 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 5 2 8 0;
+#X connect 5 3 9 0;
+#X connect 5 4 10 0;
+#X connect 5 5 11 0;
+#X connect 5 6 12 0;
+#X connect 5 7 13 0;
+#X connect 5 8 14 0;
+#X connect 6 0 3 0;
+#X connect 6 1 4 0;
+#X connect 7 0 15 0;
+#X connect 7 1 16 0;
+#X connect 8 0 17 0;
+#X connect 8 1 18 0;
+#X connect 9 0 19 0;
+#X connect 9 1 20 0;
+#X connect 10 0 21 0;
+#X connect 10 1 22 0;
+#X connect 11 0 23 0;
+#X connect 11 1 24 0;
+#X connect 12 0 25 0;
+#X connect 12 1 26 0;
+#X connect 13 0 27 0;
+#X connect 13 1 28 0;
+#X connect 14 0 29 0;
+#X connect 14 1 30 0;
+#X connect 33 0 32 0;
 #X coords 0 -1 1 1 320 320 1 30 30;
