@@ -27,8 +27,6 @@
 #X msg 286 243 symbol ../default.set;
 #X msg 263 217 symbol ../default.par;
 #X msg 259 134 \$1;
-#X obj 238 412 print \$1_reset;
-#X msg 379 384 bang;
 #X obj 249 302 t b;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
@@ -49,16 +47,14 @@
 #X connect 14 0 13 0;
 #X connect 17 0 18 0;
 #X connect 18 0 9 0;
-#X connect 19 0 30 0;
+#X connect 19 0 28 0;
 #X connect 20 0 22 0;
 #X connect 21 0 22 0;
 #X connect 22 0 27 0;
 #X connect 23 0 26 0;
 #X connect 23 1 25 0;
 #X connect 24 0 9 0;
-#X connect 24 0 28 0;
 #X connect 25 0 24 1;
 #X connect 26 0 24 1;
 #X connect 27 0 23 0;
-#X connect 29 0 24 0;
-#X connect 30 0 24 0;
+#X connect 28 0 24 0;
