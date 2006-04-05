@@ -1,0 +1,11 @@
+Index: Makefile.common
+===================================================================
+RCS file: /cvsroot/pure-data/externals/miXed/Makefile.common,v
+retrieving revision 1.31
+diff -r1.31 Makefile.common
+2,3c2,3
+< PD_DIR = $(ROOT_DIR)/../../pd/src
+< 
+---
+> #PD_DIR = $(ROOT_DIR)/../../pd/src
+> PD_DIR = $(PDSOURCE) 
