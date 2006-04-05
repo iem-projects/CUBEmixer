@@ -107,6 +107,27 @@ iemmatrix-locinstall: iemmatrix-build
 
 iemmatrix: iemmatrix-locinstall
 
+
+########### miXed needed for the seq external in cyclone ##########################
+# maybe substituted by xeq in future
+
+miXed-src: sf-login
+	cvs $(CVSROOT) checkout -r $(REVISION) -d miXed externals/miXed/
+
+miXed-patched:
+	-patch -N miXed/Makefile.common < miXed_makefile.common.diff
+
+miXed-build: miXed-src miXed-patched 
+	make -C miXed 
+
+mixed_objects=seq midiflush midiformat midiparse
+mixed_externals=$(mixed_objects:=.pd_linux)
+
+
+miXed-locinstall: miXed-build
+	for i in $(mixed_externals); do cp -v miXed/bin/$$i $(LOCINSTALL_DIR); done
+	for i in $(mixed_objects); do cp -v miXed/test/cyclone/$$i-test.pd $(LOCINSTALL_DIR)/$$i-help.pd; done
+
 ######## IEM GUI ##################
 # maybe substituted by iem-gui in future
 
@@ -119,7 +140,7 @@ popup-build_: popup-src
 popup-locinstall_: popup-build_
 	cp popup/*.$(EXT) $(LOCINSTALL_DIR)
 
-# ---- local popup ------
+# ############  local popup ###############
 popup-src: 
 
 popup-build: popup-src
