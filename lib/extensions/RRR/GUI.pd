@@ -1,7 +1,7 @@
-#N canvas 759 234 521 666 10;
+#N canvas 759 234 376 583 10;
 #X text 109 18 open_close_EDIT;
 #X msg 118 37 1;
-#X obj 11 11 cnv 15 83 198 empty empty RRR 2 10 0 12 -228992 -66577
+#X obj 11 11 cnv 15 88 198 empty empty RRR 2 10 0 12 -228992 -66577
 0;
 #X obj 11 36 tgl 15 0 \$0_ON_fromgui \$0_ON_togui ON 0 -6 0 8 -233017
 -1 -1 0 1;
@@ -11,7 +11,7 @@
 #X obj 121 59 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
 #X obj 11 -17 gui_sr_offset \$0_ON EXT_RRR_ON 0;
-#X text 151 294 should load send PBANK File;
+#X text 133 294 should load send PBANK File;
 #X obj 114 88 abs/room_EDIT+12_earlies 12;
 #X obj 59 37 nbx 2 14 -1e+37 1e+37 0 0 \$0_preset_gui \$0_preset_gui
 preset 0 -6 0 10 -262144 -195568 -195568 0 256;
@@ -60,4 +60,4 @@ preset 0 -6 0 10 -262144 -195568 -195568 0 256;
 #X connect 27 0 29 0;
 #X connect 28 0 16 0;
 #X connect 30 0 27 0;
-#X coords 0 -1 1 1 85 200 1 10 10;
+#X coords 0 -1 1 1 90 200 1 10 10;

@@ -1,4 +1,4 @@
-#N canvas 0 0 1234 870 10;
+#N canvas 0 0 1140 938 10;
 #X obj 6 -35 inchan 1;
 #X obj 77 -35 inchan 2;
 #X obj 148 -35 inchan 3;
@@ -23,5 +23,5 @@
 #X obj 587 815 system;
 #X obj 678 815 SFPLAYER8/GUI 8;
 #X obj 1049 609 RRR/GUI;
-#X obj 1049 809 REV/GUI;
-#X obj 939 610 AMBIVIS/GUI;
+#X obj 1049 810 REV/GUI;
+#X obj 940 611 AMBIVIS/GUI;
