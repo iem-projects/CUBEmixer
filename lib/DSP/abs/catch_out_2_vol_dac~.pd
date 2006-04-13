@@ -9,7 +9,7 @@
 #X obj 42 113 *~;
 #X obj 79 80 r~ lin_out_master_gain~;
 #X text 208 43 only DAC~ without compensation;
-#X obj 201 14 DSP_label OUT \$1_DAC;
+#X obj 207 13 DSP_label OUT \$1_OUT;
 #X connect 1 0 6 0;
 #X connect 6 0 2 0;
 #X connect 6 0 0 0;

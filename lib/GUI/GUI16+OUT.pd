@@ -1,4 +1,4 @@
-#N canvas 0 0 1140 938 10;
+#N canvas 0 0 1140 936 10;
 #X obj 6 -35 inchan 1;
 #X obj 77 -35 inchan 2;
 #X obj 148 -35 inchan 3;
@@ -15,8 +15,7 @@
 #X obj 929 -35 inchan 14;
 #X obj 1000 -35 inchan 15;
 #X obj 1071 -35 inchan 16;
-#X obj 6 426 inchannel;
-#X obj 588 609 OUT/ambi;
+#X obj 9 426 inchannel;
 #X obj 720 609 OUT/main;
 #X obj 588 428 OUT/BUS/12;
 #X obj 654 609 OUT/LFC;
@@ -25,3 +24,4 @@
 #X obj 1049 609 RRR/GUI;
 #X obj 1049 810 REV/GUI;
 #X obj 940 611 AMBIVIS/GUI;
+#X obj 588 609 OUT/ambi;

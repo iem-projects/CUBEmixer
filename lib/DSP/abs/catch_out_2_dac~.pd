@@ -18,7 +18,7 @@
 #X text 161 282 2.arg: <float> dollar-0 unique number of parent patch
 ;
 #X obj 64 197 r \$2lin_OUT_MASTER_GAIN;
-#X obj 305 118 DSP_label OUT \$1_DAC;
+#X obj 305 118 DSP_label OUT \$1_OUT;
 #X connect 1 0 14 0;
 #X connect 2 0 1 0;
 #X connect 2 0 9 0;

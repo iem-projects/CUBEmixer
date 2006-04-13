@@ -1,23 +1,80 @@
-#N canvas 657 145 114 194 10;
-#X obj 2 1 cnv 15 63 198 empty empty LFC 15 12 0 14 -233017 -66577
-0;
-#X obj 10 91 cnv 2 18 2 empty empty empty 20 12 0 14 -33289 -66577
-0;
-#N canvas 0 48 734 558 code 0;
+#N canvas 1411 109 90 234 10;
+#X obj 2 1 cnv 15 63 198 empty empty LFC 0 7 0 14 -233017 -66577 0
+;
+#X obj 1 91 cnv 2 18 2 empty empty empty 20 12 0 14 -33289 -66577 0
+;
+#N canvas 1612 299 615 401 code 0;
 #X obj 67 73 OUT/LFC/helper/sr \$0GUIout_sub1 1;
 #X obj 67 93 OUT/LFC/helper/sr \$0GUIout_sub2 2;
-#X obj 72 119 sendreceive 1_OUT_LFC_BUS_DEST;
 #X text 289 117 ??? what is this for ??? (JMZ);
-#X restore 37 5 pd code;
-#X obj 16 46 vsl 15 131 0 130 0 0 \$0GUIout_sub1_gain \$0GUIout_sub1_gain
--inf -5 140 0 8 -245568 -1 -1 0 1;
+#X obj 65 273 makefilename pd-%d;
+#X obj 65 248 i \$0;
+#X obj 65 228 r \$0GUIlfc_showsettings;
+#X msg 65 297 \; \$1-lfc.settings vis 1;
+#X obj 276 229 DSPnamesGUI OUT;
+#X obj 294 257 s \$0GUI_1_out_select_togui;
+#X obj 265 291 s \$0GUI_2_out_select_togui;
+#X obj 503 217 loadbang;
+#X msg 514 255 name LFC_1;
+#X msg 495 293 name LFC_2;
+#X obj 79 145 gui_sr_beautify-uglify \$0GUI_1_out_select 1_OUT_LFC_BUS_DST
+;
+#X obj 77 176 gui_sr_beautify-uglify \$0GUI_2_out_select 2_OUT_LFC_BUS_DST
+;
+#X connect 3 0 6 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 7 0 8 0;
+#X connect 7 0 9 0;
+#X connect 10 0 11 0;
+#X connect 10 0 12 0;
+#X connect 11 0 8 0;
+#X connect 12 0 9 0;
+#X restore 5 207 pd code;
+#X obj 7 46 vsl 15 131 0 130 0 0 \$0GUIout_sub1_gain \$0GUIout_sub1_gain
++02 -5 140 0 8 -245568 -1 -1 9750 1;
 #X obj 3 25 nbx 3 14 20 999 1 0 \$0GUIout_sub1_freq_fromgui \$0GUIout_sub1_freq_togui
 empty 0 0 0 8 -187584 -166441 -166441 75 256;
-#X obj 46 54 vfad_scale -1;
-#X obj 70 91 cnv 2 18 2 empty empty empty 20 12 0 14 -33289 -66577
+#X obj 25 53 vfad_scale -1;
+#X obj 45 91 cnv 2 18 2 empty empty empty 20 12 0 14 -33289 -66577
 0;
-#X obj 69 46 vsl 15 131 0 130 0 0 \$0GUIout_sub2_gain \$0GUIout_sub2_gain
--inf -5 140 0 8 -245568 -1 -1 0 1;
-#X obj 58 25 nbx 3 14 20 999 1 0 \$0GUIout_sub2_freq_fromgui \$0GUIout_sub2_freq_togui
+#X obj 44 46 vsl 15 131 0 130 0 0 \$0GUIout_sub2_gain \$0GUIout_sub2_gain
++02 -5 140 0 8 -245568 -1 -1 9825 1;
+#X obj 33 25 nbx 3 14 20 999 1 0 \$0GUIout_sub2_freq_fromgui \$0GUIout_sub2_freq_togui
 empty 0 0 0 8 -187584 -166441 -166441 75 256;
-#X coords 0 0 1 1 65 200 1;
+#X obj 45 6 bng 15 250 50 0 \$0GUIlfc_showsettings \$0GUIlfc_showsettings
+set -15 10 0 8 -62784 -1 -1;
+#N canvas 1428 705 159 113 6520-lfc.settings 0;
+#N canvas 0 0 450 300 showit 0;
+#X obj 11 11 cnv 15 118 88 empty empty LFC 0 10 0 14 -195568 -66577
+0;
+#X obj 13 38 popup 115 20 #ffffff LFC_1 DAC 01 DAC 02 DAC 03 DAC 04
+DAC 05 DAC 06 DAC 07 DAC 08 DAC 09 DAC 10 DAC 11 DAC 12 DAC 13 DAC 14
+DAC 15 DAC 16 DAC 17 DAC 18 DAC 19 DAC 20 DAC 21 DAC 22 DAC 23 DAC 24
+DAC 25 DAC 26 DAC 27 DAC 28 DAC 29 DAC 30 DAC 31 DAC 32 DAC 33 DAC 34
+DAC 35 DAC 36 DAC 37 DAC 38 DAC 39 DAC 40 DAC 41 DAC 42 DAC 43 DAC 44
+DAC 45 DAC 46 DAC 47 DAC 48 DAC 49 DAC 50 DAC 51 DAC 52 DAC 53 DAC 54
+DAC 55 DAC 56 DAC 57 DAC 58 DAC 59 DAC 60 DAC 61 DAC 62 DAC 63 DAC 64
+;
+#X obj 13 77 popup 115 20 #ffffff LFC_2 DAC 01 DAC 02 DAC 03 DAC 04
+DAC 05 DAC 06 DAC 07 DAC 08 DAC 09 DAC 10 DAC 11 DAC 12 DAC 13 DAC 14
+DAC 15 DAC 16 DAC 17 DAC 18 DAC 19 DAC 20 DAC 21 DAC 22 DAC 23 DAC 24
+DAC 25 DAC 26 DAC 27 DAC 28 DAC 29 DAC 30 DAC 31 DAC 32 DAC 33 DAC 34
+DAC 35 DAC 36 DAC 37 DAC 38 DAC 39 DAC 40 DAC 41 DAC 42 DAC 43 DAC 44
+DAC 45 DAC 46 DAC 47 DAC 48 DAC 49 DAC 50 DAC 51 DAC 52 DAC 53 DAC 54
+DAC 55 DAC 56 DAC 57 DAC 58 DAC 59 DAC 60 DAC 61 DAC 62 DAC 63 DAC 64
+;
+#X obj 152 17 r \$0GUI_1_out_select_togui;
+#X obj 154 101 s \$0GUI_2_out_select_fromgui;
+#X obj 152 45 s \$0GUI_1_out_select_fromgui;
+#X obj 154 73 r \$0GUI_2_out_select_togui;
+#X text 54 17 DEST LFC 1;
+#X text 53 60 DEST LFC 2;
+#X connect 1 0 5 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 6 0 2 0;
+#X coords 0 -1 1 1 120 90 1 10 10;
+#X restore 10 6 pd showit;
+#X restore 11 243 pd \$0-lfc.settings;
+#X coords 0 0 1 1 65 200 1 0 0;

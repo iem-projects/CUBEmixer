@@ -52,8 +52,6 @@
 #X obj 340 214 s~ 17_AMBI_BUS;
 #X obj 18 14 inlet~;
 #X obj 25 378 outlet~;
-#X obj 25 152 env~;
-#X floatatom 20 186 5 0 0 0 - - -;
 #X connect 1 0 25 0;
 #X connect 2 0 26 0;
 #X connect 3 0 27 0;
@@ -79,4 +77,3 @@
 #X connect 39 0 44 0;
 #X connect 40 0 43 0;
 #X connect 41 0 42 0;
-#X connect 53 0 54 0;
