@@ -429,8 +429,9 @@ static void cube_sphere_src_dp(t_cube_sphere *x, t_symbol *s, int argc, t_atom *
 
 		x->x_pix_src_x[i] = x->x_radius - (int)(delta*sin(phi) + 0.49999f);
 		x->x_pix_src_y[i] = x->x_radius - (int)(delta*cos(phi) + 0.49999f);
-		sys_vgui(".x%x.c coords %xSRC%d %d %d\n",
-			canvas, x, i, xpos+x->x_pix_src_x[i], ypos+x->x_pix_src_y[i]);
+    if(glist_isvisible(x->x_gui.x_glist))
+		  sys_vgui(".x%x.c coords %xSRC%d %d %d\n",
+			  canvas, x, i, xpos+x->x_pix_src_x[i], ypos+x->x_pix_src_y[i]);
 	}
 }
 
