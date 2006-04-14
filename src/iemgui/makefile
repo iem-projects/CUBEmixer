@@ -1,6 +1,6 @@
 current: all
 
-PDSOURCE=/usr/local/src/pd-0.37-1/src
+PDSOURCE=/usr/local/src/pd/src
 
 .SUFFIXES: .pd_linux
 
