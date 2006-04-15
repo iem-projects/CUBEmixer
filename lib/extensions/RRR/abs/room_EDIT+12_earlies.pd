@@ -172,7 +172,7 @@
 #X obj 499 68 cnv 8 1 1 empty empty delay 0 4 0 10 -262144 -1 0;
 #X obj 628 13 cnv 8 1 1 empty empty store 0 4 0 10 -262144 -1 0;
 #X obj 628 32 vradio 10 1 0 10 empty empty empty 0 -6 0 8 -258699 -1
--1 0;
+-1 3;
 #X obj 629 21 cnv 8 1 1 empty empty preset 0 4 0 10 -262144 -1 0;
 #X obj 628 163 t b f;
 #X msg 625 215 store;
@@ -692,7 +692,7 @@ PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 #X obj 174 29 t a;
 #X obj 49 -7 DSPnamesGUI IN;
 #X obj 40 168 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_1_togui 1 10 -6
-0 10 -24198 -1 -1 0 256;
+0 10 -24198 -1 -1 -57.275 256;
 #X text 10 134 SRC;
 #X text 13 167 VU;
 #X obj 467 20 gui_sr_beautify-uglify \$0_SRC_2 2_EXT_RRR_SRC;
@@ -711,7 +711,7 @@ AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 8:1 PLAY 8:2
 PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 ;
 #X obj 101 168 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_2_togui 2 10
--6 0 10 -24198 -1 -1 0 256;
+-6 0 10 -24198 -1 -1 -55.9265 256;
 #X obj 162 129 popup 45 20 #ffffff SRC ADC 01 ADC 02 ADC 03 ADC 04
 ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
 ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
@@ -723,7 +723,7 @@ AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 8:1 PLAY 8:2
 PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 ;
 #X obj 162 168 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_3_togui 3 10
--6 0 10 -24198 -1 -1 0 256;
+-6 0 10 -24198 -1 -1 -65.742 256;
 #X obj 218 130 popup 45 20 #ffffff SRC ADC 01 ADC 02 ADC 03 ADC 04
 ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
 ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
@@ -735,7 +735,7 @@ AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 8:1 PLAY 8:2
 PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 ;
 #X obj 224 167 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_4_togui 4 10
--6 0 10 -24198 -1 -1 0 256;
+-6 0 10 -24198 -1 -1 -68.5352 256;
 #X obj 281 130 popup 45 20 #ffffff SRC ADC 01 ADC 02 ADC 03 ADC 04
 ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
 ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
@@ -747,7 +747,7 @@ AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 8:1 PLAY 8:2
 PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 ;
 #X obj 281 169 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_5_togui 5 10
--6 0 10 -24198 -1 -1 0 256;
+-6 0 10 -24198 -1 -1 -61.332 256;
 #X obj 340 130 popup 45 20 #ffffff SRC ADC 01 ADC 02 ADC 03 ADC 04
 ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
 ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
@@ -759,7 +759,7 @@ AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 8:1 PLAY 8:2
 PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 ;
 #X obj 340 169 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_6_togui 6 10
--6 0 10 -24198 -1 -1 0 256;
+-6 0 10 -24198 -1 -1 -55.9285 256;
 #X msg 159 10 options none \, name SRC;
 #X obj 39 197 s \$0_SRC_1_fromgui;
 #X obj 103 221 s \$0_SRC_2_fromgui;
@@ -805,7 +805,7 @@ PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 #X coords 0 -1 1 1 400 90 1 10 100;
 #X restore -12 9 pd inputs;
 #X obj 770 10 sphere;
-#N canvas 1629 63 421 437 filename 0;
+#N canvas 1629 63 421 437 filename 1;
 #X symbolatom 14 82 52 0 0 2 filename_bank #0_filename_togui #0_filename_fromgui
 ;
 #X obj 269 241 s \$0_filename_togui;
@@ -862,7 +862,6 @@ PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 #X connect 3 0 15 0;
 #X connect 5 0 8 0;
 #X connect 7 0 4 0;
-#X connect 7 0 8 0;
 #X connect 8 0 21 0;
 #X connect 8 1 9 0;
 #X connect 8 1 22 0;
@@ -899,25 +898,25 @@ PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 #X obj 11 11 cnv 15 108 228 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X obj 13 41 nbx 5 14 0 100 0 0 \$0_1_rad_togui \$0_1_rad_fromgui 1_front
-60 8 0 10 -261689 -1 -258699 0 256;
+60 8 0 10 -261689 -1 -258699 1 256;
 #X obj 13 59 nbx 5 14 0 100 0 0 \$0_2_rad_togui \$0_2_rad_fromgui 2_side
 60 8 0 10 -261689 -1 -258699 1 256;
 #X obj 13 78 nbx 5 14 0 100 0 0 \$0_3_rad_togui \$0_3_rad_fromgui 3_rear
-60 8 0 10 -261689 -1 -258699 0 256;
+60 8 0 10 -261689 -1 -258699 1 256;
 #X obj 13 112 nbx 5 14 0 100 0 0 \$0_4_rad_togui \$0_4_rad_fromgui
-4_front 60 8 0 10 -261681 -1 -260818 0 256;
+4_front 60 8 0 10 -261681 -1 -260818 1 256;
 #X obj 13 130 nbx 5 14 0 100 0 0 \$0_5_rad_togui \$0_5_rad_fromgui
-5_side 60 8 0 10 -261681 -1 -260818 0 256;
+5_side 60 8 0 10 -261681 -1 -260818 1 256;
 #X obj 13 149 nbx 5 14 0 100 0 0 \$0_6_rad_togui \$0_6_rad_fromgui
 6_rear 60 8 0 10 -261681 -1 -260818 1 256;
 #X text 9 24 1st reflections;
 #X text 10 94 2nd refelections;
 #X obj 13 182 nbx 5 14 0 100 0 0 \$0_7_rad_togui \$0_7_rad_fromgui
-7_front 60 8 0 10 -225271 -1 -24198 7 256;
+7_front 60 8 0 10 -225271 -1 -24198 0.26 256;
 #X obj 13 200 nbx 5 14 0 100 0 0 \$0_8_rad_togui \$0_8_rad_fromgui
-8_side 60 8 0 10 -225271 -1 -24198 0 256;
+8_side 60 8 0 10 -225271 -1 -24198 0.71 256;
 #X obj 13 219 nbx 5 14 0 100 0 0 \$0_9_rad_togui \$0_9_rad_fromgui
-9_rear 60 8 0 10 -225271 -1 -24198 3 256;
+9_rear 60 8 0 10 -225271 -1 -24198 0.91 256;
 #X text 11 165 late reverb;
 #X text 36 11 Radius 0..1;
 #X obj 150 14 gui_sr_clip \$0_1_rad 1_RRR_IN_AMBI_RAD 0 100;
@@ -930,7 +929,7 @@ PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 #X obj 154 199 gui_sr_clip \$0_8_rad 8_RRR_IN_AMBI_RAD 0 100;
 #X obj 154 222 gui_sr_clip \$0_9_rad 9_RRR_IN_AMBI_RAD 0 100;
 #X obj 15 254 nbx 5 14 0 100 0 0 \$0_jitter_togui \$0_jitter_fromgui
-jitter 60 6 0 10 -241291 -1 -1 0 256;
+jitter 60 6 0 10 -241291 -1 -1 18.18 256;
 #X obj 156 260 gui_sr_clip \$0_jitter RRR_IN_AMBI_JITTER 0 100;
 #X coords 0 -1 1 1 110 270 1 10 10;
 #X restore 659 99 pd radiuses;

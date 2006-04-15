@@ -22,6 +22,6 @@
 #X obj 587 815 system;
 #X obj 678 815 SFPLAYER8/GUI 8;
 #X obj 1049 609 RRR/GUI;
-#X obj 1049 810 REV/GUI;
-#X obj 940 611 AMBIVIS/GUI;
+#X obj 959 609 REV/GUI;
+#X obj 843 813 AMBIVIS/GUI;
 #X obj 588 609 OUT/ambi;
