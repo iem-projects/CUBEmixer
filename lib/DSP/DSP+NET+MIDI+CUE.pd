@@ -1,7 +1,7 @@
 #N canvas 721 128 559 542 10;
 #X obj 444 295 dsp;
 #X obj 444 278 tgl 15 0 empty dsp_tgl empty 0 -6 0 8 -262144 -1 -1
-1 1;
+0 1;
 #X floatatom 444 337 5 0 0 0 - - -;
 #X floatatom 457 319 5 0 0 0 - - -;
 #X text 45 247 2.arg: <float> n_mix_ch;
