@@ -7,7 +7,7 @@
 #X obj 122 59 makefilename pd-%d-ambi_visuals;
 #X obj 15 29 bng 15 250 50 0 \$0_open \$0_open open 20 7 0 12 -62784
 -1 -1;
-#N canvas 619 411 344 343 6824-ambi_visuals 0;
+#N canvas 1333 52 344 343 6785-ambi_visuals 1;
 #X obj 11 10 sphere;
 #X coords 0 0 1 1 320 320 0;
 #X restore 21 128 pd \$0-ambi_visuals;

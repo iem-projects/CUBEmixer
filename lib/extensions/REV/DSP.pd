@@ -26,6 +26,7 @@
 #X text 276 16 adapted by winfried ritsch;
 #X obj 185 105 sr_parameter EXT_REV_VOL;
 #X obj 43 365 sr_setting EXT_REV_PBANKFILE;
+#X obj 56 399 sr_parameter EXT_REV_PRESET;
 #X connect 0 0 19 0;
 #X connect 6 0 1 0;
 #X connect 6 1 2 0;

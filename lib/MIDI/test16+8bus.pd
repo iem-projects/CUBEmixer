@@ -35,6 +35,6 @@
 #X obj 517 164 MIDI/aconnector;
 #X obj 98 463 MIDI/out/sr_gain 125 1 EXT_REV_VOL;
 #X obj 97 485 MIDI/out/sr_gain 126 1 EXT_RRR_VOL;
-#X obj 98 505 # MIDI/out/sr_gain 127 1 EXT_WWW_VOL;
+#X obj 98 505 MIDI/out/sr_gain 127 1 EXT_CTL;
 #X connect 15 0 33 0;
 #X connect 16 0 15 0;
