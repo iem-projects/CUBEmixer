@@ -18,7 +18,7 @@ and forward it to "MAIN_GAIN" \; useful in combination with [netreceive]
 #X text 288 258 note: to use this abstraction with dynamic patching
 \, send a "bang" to "$0NET_init" \, in order to initialize the additional
 receiver;
-#X text 53 444 (c) IOhannes m zmoelnig \, IEM 2005;
+#X text 53 444 (c) IOhannes m zmoelnig \, IEM 2005-2006;
 #X text 95 462 published under GnuGPLv2.0;
 #X obj 87 419 s \$2NET_tonetsend;
 #X obj 94 78 r \$2NET_init;
@@ -30,7 +30,7 @@ receiver;
 #X obj 146 334 s \$1;
 #X obj 94 242 route bang;
 #X obj 94 265 t b b b;
-#X obj 87 377 spigot38 1;
+#X obj 87 377 spigot 1;
 #X connect 0 0 7 0;
 #X connect 1 0 0 0;
 #X connect 2 0 16 0;

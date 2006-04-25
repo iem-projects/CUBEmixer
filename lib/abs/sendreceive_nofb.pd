@@ -20,8 +20,6 @@
 #X obj 296 222 t s s;
 #X text 46 105 when a "bang" is received at the global-receiver [sendreceive_getName]
 \, the current s/r-name is sent to [sendreceive_setName];
-#X text 336 514 (c) IOhannes m zmoelnig & Thomas Musil \, IEM 2005
-;
 #X obj 383 287 sr_registername \$1;
 #X text 108 70 this version differs from the [sendreceive] in that
 it needs NO external feedback to work correctly;
@@ -30,24 +28,26 @@ it needs NO external feedback to work correctly;
 #X obj 131 434 t b b b;
 #X msg 196 466 1;
 #X obj 196 489 i;
-#X obj 131 345 spigot38 1;
-#X connect 0 0 27 0;
-#X connect 2 0 24 0;
-#X connect 2 1 23 0;
-#X connect 3 0 26 1;
+#X obj 131 345 spigot 1;
+#X text 336 514 (c) IOhannes m zmoelnig & Thomas Musil \, IEM 2005-2006
+;
+#X connect 0 0 26 0;
+#X connect 2 0 23 0;
+#X connect 2 1 22 0;
+#X connect 3 0 25 1;
 #X connect 5 0 2 0;
 #X connect 6 0 8 0;
 #X connect 7 0 4 1;
 #X connect 7 0 5 0;
 #X connect 8 0 17 0;
 #X connect 17 0 7 0;
-#X connect 17 1 20 0;
-#X connect 23 0 25 0;
+#X connect 17 1 19 0;
+#X connect 22 0 24 0;
+#X connect 22 1 1 0;
+#X connect 22 2 3 0;
+#X connect 23 0 24 0;
 #X connect 23 1 1 0;
 #X connect 23 2 3 0;
 #X connect 24 0 25 0;
-#X connect 24 1 1 0;
-#X connect 24 2 3 0;
-#X connect 25 0 26 0;
-#X connect 26 0 27 1;
-#X connect 27 0 4 0;
+#X connect 25 0 26 1;
+#X connect 26 0 4 0;
