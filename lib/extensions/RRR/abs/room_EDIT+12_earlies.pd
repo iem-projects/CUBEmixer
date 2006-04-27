@@ -1,12 +1,12 @@
-#N canvas 1323 139 1133 379 10;
+#N canvas 563 66 1133 379 10;
 #N canvas 1279 27 1036 746 EDIT_early_reverb 0;
-#X obj 26 45 vsl 15 121 0 120 0 0 empty empty empty 0 -8 0 8 -6177
--1 -1 8100 1;
-#X obj 26 440 fadtodb;
+#X obj 19 46 vsl 15 121 0 120 0 0 empty empty empty 0 -8 0 8 -6177
+-1 -1 4700 1;
+#X obj 22 444 fadtodb;
 #X obj 26 468 - 100;
-#X floatatom 26 172 4 0 0 0 - - -;
+#X floatatom 27 175 4 0 0 0 - - -;
 #X obj 76 45 vsl 15 121 0.16 16 1 0 empty empty empty 0 -8 0 8 -14404
--1 -1 10838 1;
+-1 -1 8938 1;
 #X floatatom 76 172 4 0 0 0 - - -;
 #X obj 27 16 cnv 8 1 1 empty empty early 0 4 0 10 -262144 -1 0;
 #X obj 27 24 cnv 8 1 1 empty empty echoes 0 4 0 10 -262144 -1 0;
@@ -17,7 +17,7 @@
 #X obj 77 24 cnv 8 1 1 empty empty cutoff 0 4 0 10 -262144 -1 0;
 #X obj 77 32 cnv 8 1 1 empty empty freq 0 4 0 10 -262144 -1 0;
 #X obj 124 45 vsl 15 121 0 120 0 0 empty empty empty 0 -8 0 8 -11118
--1 -1 5400 1;
+-1 -1 3600 1;
 #X obj 126 441 fadtodb;
 #X obj 126 473 - 100;
 #X floatatom 126 172 4 0 0 0 - - -;
@@ -25,14 +25,14 @@
 #X obj 127 32 cnv 8 1 1 empty empty gain 0 4 0 10 -262144 -1 0;
 #X obj 158 176 cnv 8 1 1 empty empty dB 0 4 0 10 -262144 -1 0;
 #X obj 176 45 vsl 15 121 0.16 16 1 0 empty empty empty 0 -8 0 8 -15044
--1 -1 9438 1;
+-1 -1 8138 1;
 #X floatatom 176 172 4 0 0 0 - - -;
 #X obj 208 176 cnv 8 1 1 empty empty kHz 0 4 0 10 -262144 -1 0;
 #X obj 177 16 cnv 8 1 1 empty empty reverb 0 4 0 10 -262144 -1 0;
 #X obj 177 24 cnv 8 1 1 empty empty cutoff 0 4 0 10 -262144 -1 0;
 #X obj 177 32 cnv 8 1 1 empty empty freq 0 4 0 10 -262144 -1 0;
 #X obj 226 45 vsl 15 121 0.1 60 1 0 empty empty empty 0 -8 0 8 -200880
--1 -1 8100 1;
+-1 -1 7800 1;
 #X floatatom 226 172 4 0 0 0 - - -;
 #X obj 258 176 cnv 8 1 1 empty empty sec 0 4 0 10 -262144 -1 0;
 #X obj 227 8 cnv 8 1 1 empty empty reverb 0 4 0 10 -262144 -1 0;
@@ -40,7 +40,7 @@
 #X obj 227 24 cnv 8 1 1 empty empty decay 0 4 0 10 -262144 -1 0;
 #X obj 227 32 cnv 8 1 1 empty empty time 0 4 0 10 -262144 -1 0;
 #X obj 326 45 vsl 15 121 0.1 60 1 0 empty empty empty 0 -8 0 8 -250685
--1 -1 4893 1;
+-1 -1 6793 1;
 #X floatatom 326 172 4 0 0 0 - - -;
 #X obj 358 176 cnv 8 1 1 empty empty sec 0 4 0 10 -262144 -1 0;
 #X obj 327 8 cnv 8 1 1 empty empty reverb 0 4 0 10 -262144 -1 0;
@@ -48,7 +48,7 @@
 #X obj 327 24 cnv 8 1 1 empty empty decay 0 4 0 10 -262144 -1 0;
 #X obj 327 32 cnv 8 1 1 empty empty time 0 4 0 10 -262144 -1 0;
 #X obj 426 45 vsl 15 121 0.1 60 1 0 empty empty empty 0 -8 0 8 -255806
--1 -1 4701 1;
+-1 -1 6201 1;
 #X floatatom 426 172 4 0 0 0 - - -;
 #X obj 458 176 cnv 8 1 1 empty empty sec 0 4 0 10 -262144 -1 0;
 #X obj 427 8 cnv 8 1 1 empty empty reverb 0 4 0 10 -262144 -1 0;
@@ -64,7 +64,7 @@
 #X obj 277 24 cnv 8 1 1 empty empty decay 0 4 0 10 -262144 -1 0;
 #X obj 277 32 cnv 8 1 1 empty empty freq 0 4 0 10 -262144 -1 0;
 #X obj 376 45 vsl 15 121 1 16 1 0 empty empty empty 0 -8 0 8 -110363
--1 -1 5400 1;
+-1 -1 5700 1;
 #X floatatom 376 172 4 0 0 0 - - -;
 #X obj 408 176 cnv 8 1 1 empty empty kHz 0 4 0 10 -262144 -1 0;
 #X obj 377 8 cnv 8 1 1 empty empty reverb 0 4 0 10 -262144 -1 0;
@@ -78,19 +78,19 @@
 #X obj 126 536 pp gain;
 #X obj 76 632 pp cutoff;
 #X obj 26 535 pp gain;
-#X obj 76 704 pp early;
+#X obj 76 703 pp early;
 #X obj 276 590 pp dec_lm_freq;
 #X obj 376 589 pp dec_mh_freq;
 #X obj 226 612 pp dec_l_time;
 #X obj 326 613 pp dec_m_time;
-#X obj 38 610 dbtofad;
+#X obj 31 615 dbtofad;
 #X obj 126 613 dbtofad;
 #X obj 426 611 pp dec_h_time;
 #X obj 582 13 cnv 8 1 1 empty empty recall 0 4 0 10 -262144 -1 0;
 #X obj 499 137 cnv 8 1 1 empty empty delay 0 4 0 10 -262144 -1 0;
 #X obj 52 202 cnv 8 1 1 empty empty early_echo 0 4 0 10 -262144 -1
 0;
-#X obj 26 507 pp 0;
+#X obj 27 502 pp 0;
 #X obj 76 499 pp 1;
 #X msg 582 200 recall;
 #X obj 26 565 f;
@@ -107,7 +107,7 @@
 #X obj 89 326 f;
 #X obj 89 348 f;
 #X obj 582 32 vradio 10 1 0 10 empty empty empty 0 -6 0 8 -257989 -1
--1 3;
+-1 0;
 #X obj 582 164 t b f;
 #X obj 583 21 cnv 8 1 1 empty empty preset 0 4 0 10 -262144 -1 0;
 #X obj 763 134 symbol;
@@ -172,7 +172,7 @@
 #X obj 499 68 cnv 8 1 1 empty empty delay 0 4 0 10 -262144 -1 0;
 #X obj 628 13 cnv 8 1 1 empty empty store 0 4 0 10 -262144 -1 0;
 #X obj 627 33 vradio 10 1 0 10 empty empty empty 0 -6 0 8 -258699 -1
--1 3;
+-1 6;
 #X obj 629 21 cnv 8 1 1 empty empty preset 0 4 0 10 -262144 -1 0;
 #X obj 628 163 t b f;
 #X msg 625 215 store;
@@ -346,9 +346,9 @@
 #X obj 828 108 symbol;
 #X obj 848 270 outlet preset_nr;
 #X obj 583 137 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--233017 -195568 -1 3 256;
+-233017 -195568 -1 0 256;
 #X obj 628 139 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--233017 -195568 -1 3 256;
+-233017 -195568 -1 6 256;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 0 67 0;
@@ -698,7 +698,7 @@ PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 #X obj 174 29 t a;
 #X obj 49 -7 DSPnamesGUI IN;
 #X obj 40 168 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_1_togui 1 10 -6
-0 10 -24198 -1 -1 -58.7995 256;
+0 10 -24198 -1 -1 -56.0781 256;
 #X text 10 134 SRC;
 #X text 13 167 VU;
 #X obj 467 20 gui_sr_beautify-uglify \$0_SRC_2 2_EXT_RRR_SRC;
@@ -717,7 +717,7 @@ AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 8:1 PLAY 8:2
 PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 ;
 #X obj 101 168 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_2_togui 2 10
--6 0 10 -24198 -1 -1 -58.7716 256;
+-6 0 10 -24198 -1 -1 -55.9349 256;
 #X obj 162 129 popup 45 20 #ffffff SRC ADC 01 ADC 02 ADC 03 ADC 04
 ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
 ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
@@ -729,7 +729,7 @@ AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 8:1 PLAY 8:2
 PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 ;
 #X obj 162 168 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_3_togui 3 10
--6 0 10 -24198 -1 -1 -59.0177 256;
+-6 0 10 -24198 -1 -1 -61.2455 256;
 #X obj 218 130 popup 45 20 #ffffff SRC ADC 01 ADC 02 ADC 03 ADC 04
 ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
 ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
@@ -741,7 +741,7 @@ AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 8:1 PLAY 8:2
 PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 ;
 #X obj 224 167 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_4_togui 4 10
--6 0 10 -24198 -1 -1 -63.2352 256;
+-6 0 10 -24198 -1 -1 -63.0612 256;
 #X obj 281 130 popup 45 20 #ffffff SRC ADC 01 ADC 02 ADC 03 ADC 04
 ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
 ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
@@ -753,7 +753,7 @@ AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 8:1 PLAY 8:2
 PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 ;
 #X obj 281 169 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_5_togui 5 10
--6 0 10 -24198 -1 -1 -62.4636 256;
+-6 0 10 -24198 -1 -1 -60.3979 256;
 #X obj 340 130 popup 45 20 #ffffff SRC ADC 01 ADC 02 ADC 03 ADC 04
 ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
 ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
@@ -765,7 +765,7 @@ AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 8:1 PLAY 8:2
 PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 ;
 #X obj 340 169 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_6_togui 6 10
--6 0 10 -24198 -1 -1 -54.6632 256;
+-6 0 10 -24198 -1 -1 -58.3522 256;
 #X msg 159 10 options none \, name SRC;
 #X obj 39 197 s \$0_SRC_1_fromgui;
 #X obj 103 221 s \$0_SRC_2_fromgui;
@@ -811,13 +811,13 @@ PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 #X coords 0 -1 1 1 400 90 1 10 100;
 #X restore -34 9 pd inputs;
 #X obj 748 10 sphere;
-#N canvas 1649 468 421 437 filename 1;
+#N canvas 1649 468 421 437 filename 0;
 #X symbolatom 14 83 52 0 0 2 filename_bank #0_filename_togui #0_filename_fromgui
 ;
 #X obj 11 112 r \$0_filename_fromgui;
 #X obj 45 247 sendreceive EXT_RRR_PBANKFILE;
 #X obj 36 411 outlet;
-#N canvas 245 133 360 216 files 1;
+#N canvas 245 133 360 216 files 0;
 #X obj 30 105 openpanel;
 #X obj 222 35 savepanel;
 #X obj 222 11 r \$0_save;
@@ -926,7 +926,7 @@ PLAY 8:3 PLAY 8:4 PLAY 8:5 PLAY 8:6 PLAY 8:7 PLAY 8:8 TESTTONE none
 #X obj 154 199 gui_sr_clip \$0_8_rad 8_RRR_IN_AMBI_RAD 0 100;
 #X obj 154 222 gui_sr_clip \$0_9_rad 9_RRR_IN_AMBI_RAD 0 100;
 #X obj 15 254 nbx 5 14 0 100 0 0 \$0_jitter_fromgui \$0_jitter_togui
-jitter 60 6 0 10 -241291 -1 -1 0 256;
+jitter 60 6 0 10 -241291 -1 -1 3 256;
 #X obj 277 365 r GUI_NET_initialized;
 #X obj 276 384 del 1000;
 #X obj 275 410 t b b;

@@ -7,11 +7,12 @@
 #X obj 230 135 r \$0_open;
 #X obj 230 159 f \$0;
 #X msg 230 213 \; \$1 vis 1;
-#N canvas 2059 256 406 239 6550-system-settings 0;
-#X obj 51 100 extensions/TESTTONE/GUI;
+#N canvas 2059 256 406 239 6550-system-settings 1;
+#X obj 222 109 extensions/TESTTONE/GUI;
 #X obj 162 23 cue PARAMETERS;
 #X obj 33 23 cue SETTINGS;
 #X obj 300 21 GUI/net;
+#X obj 32 85 SFPLAYER8/GUI 8;
 #X restore 242 99 pd \$0-system-settings;
 #X obj 230 185 makefilename pd-%d-system-settings;
 #X obj 105 147 tgl 15 0 empty empty really 20 7 0 12 -258699 -1 -1
