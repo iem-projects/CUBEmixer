@@ -1,5 +1,5 @@
 #N canvas 1537 314 601 439 10;
-#X obj 101 101 cnv 15 83 88 empty empty SYSTEM 10 12 0 14 -233017 -66577
+#X obj 101 101 cnv 15 83 88 empty empty SYSTEM 10 12 0 14 -195568 -66577
 0;
 #X obj 154 121 bng 15 250 50 0 \$0_open \$0_open open -40 7 0 12 -62784
 -1 -1;
@@ -7,7 +7,7 @@
 #X obj 230 135 r \$0_open;
 #X obj 230 159 f \$0;
 #X msg 230 213 \; \$1 vis 1;
-#N canvas 2059 256 406 239 6550-system-settings 1;
+#N canvas 2059 256 406 239 6532-system-settings 0;
 #X obj 222 109 extensions/TESTTONE/GUI;
 #X obj 162 23 cue PARAMETERS;
 #X obj 33 23 cue SETTINGS;
