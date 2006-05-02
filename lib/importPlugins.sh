@@ -1,11 +1,15 @@
 #!/bin/sh
 
 FORCE=
+
 PLUGINDIR=plugins
 PLUGINFILE=${PLUGINDIR}/plugins.txt
 
 GUIPATCH=GUI.pd
 DSPPATCH=DSP.pd
+
+OUT_GUIPATCH=GUI/inchan/plugin/EFF_PLUG_IN.pd
+OUT_DSPPATCH=DSP/abs/EFF_PLUG_IN~.pd
 
 function usage() {
  echo "$0 [-f] [-h] [<plugindir>]"
@@ -93,11 +97,11 @@ function generateDSPpatch() {
     echo "#N canvas 0 0 450 300 10;"
     echo "#X obj 0   0 inlet~;"
     echo "#X obj 0 200 outlet~;"
-    echo "#X obj 0  50 plugin0~ \\\$0 \\\$1 \\\$2;"
+    echo "#X obj 0  50 CUBEmixer_plugin0~ \\\$0 \\\$1 \\\$2;"
 
     let connector=0
     for plugin in ${pluginlist}; do
-      echo "#X obj 60 $[100+25*${connector}] plugin~ \\\$0 ${plugin} \\\$1 \\\$2;"
+      echo "#X obj 60 $[100+25*${connector}] CUBEmixer_plugin~ \\\$0 ${plugin} \\\$1 \\\$2;"
       let connector++
     done
 
@@ -129,8 +133,8 @@ fi
 if [ "${PLUGINFILE}" ]; then
  list_plugins > ${PLUGINFILE}
 
-# generateGUIpatch ${PLUGINFILE}
- generateDSPpatch ${PLUGINFILE}
+generateGUIpatch ${PLUGINFILE} > ${OUT_GUIPATCH} 
+generateDSPpatch ${PLUGINFILE} > ${OUT_DSPPATCH} 
 
 else 
  list_plugins
