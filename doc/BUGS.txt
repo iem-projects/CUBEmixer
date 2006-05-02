@@ -74,6 +74,11 @@ pd/NET:
 
 pd/plugins:
   - plugin-creator script, das automatisch die plugins einbindet.
+  + importPlugins.sh implementiert.
+
+  - [plugin~] (in pd/DSP/) collidiert mit dem external [plugin~]
+    für VST-plugins
+  + [plugin~] in [CUBEmixer_plugin~] umbenannt
 
 pd/extensions:
   - tm's superhall einbinden
@@ -83,12 +88,16 @@ pd/extensions:
 pd/CUE:
   - Die Matrix Bus zu DAC~ wird nicht in den Settings oder parameter 
     gespeichert.
-  + fixed saving/resotirng mechanism
+  + fixed saving/restoring mechanism
 
   - beim Laden der Settings ist die Bus-Zuordnung nur in der Detailansicht 
     der Channels sichtbar, jedoch nicht oben bei den Channels. Erst beim 
     Laden der Parameter ist die Bus-Zuordnung auch oben sichtbar.
     (tutner, 25.04.06)
+
+  - "setting"-Kategorie ist ohne "parameter" sinnlos (uninitialisierte werte)
+    evtl. "save-setting" in eine "save-all" (param+set) kategorie umwandeln
+    und nur einen einzigen "load" button anbieten (nachteil bei reload!)
 
 
 hardware/bc{f,r}2000:
