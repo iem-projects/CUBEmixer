@@ -9,7 +9,7 @@ section/subsection:
     
   - was ist section/subsection?
   + orientiert sich nach funktionalen einheiten, wie sie 
-    schon die verzeichnisstruktur vorgiebt
+    schon die verzeichnisstruktur vorgibt
   
   - layout
   + die zeilenlänge soll 80 zeichen nicht überschreiten
@@ -54,7 +54,10 @@ pd/GUI:
 
   - ambisonic/direct werden nicht korrekt initialisiert
 
-  - bus-matrix reagiert auf tastatur-eingabe erst, wenn zuvor mit maus eine änderung gemacht wurde (tutner, 25.04.06)
+  - bus-matrix reagiert auf tastatur-eingabe erst, wenn zuvor mit maus eine 
+    änderung gemacht wurde (tutner, 25.04.06)
+  + [numberbox_matrix] verhält sich immer passiv (ausser bei [bang(), 
+    daher [sendreceive_nofb] verwenden
 
 
 pd/MIDI:
@@ -75,13 +78,17 @@ pd/plugins:
 pd/extensions:
   - tm's superhall einbinden
   + eingebunden (ist beinahe identisch mit simplerev)
+  + ersetzt durch ARRR
 
 pd/CUE:
   - Die Matrix Bus zu DAC~ wird nicht in den Settings oder parameter 
     gespeichert.
   + fixed saving/resotirng mechanism
 
-  - beim Laden der Settings ist die Bus-Zuordnung nur in der Detailansicht der Channels sichtbar, jedoch nicht oben bei den Channels. Erst beim Laden der Parameter ist die Bus-Zuordnung auch oben sichtbar. (tutner, 25.04.06)
+  - beim Laden der Settings ist die Bus-Zuordnung nur in der Detailansicht 
+    der Channels sichtbar, jedoch nicht oben bei den Channels. Erst beim 
+    Laden der Parameter ist die Bus-Zuordnung auch oben sichtbar.
+    (tutner, 25.04.06)
 
 
 hardware/bc{f,r}2000:
