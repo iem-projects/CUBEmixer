@@ -59,6 +59,10 @@ pd/GUI:
   + [numberbox_matrix] verhält sich immer passiv (ausser bei [bang(), 
     daher [sendreceive_nofb] verwenden
 
+  - bus zuordnung in channel-detail-view und inchan wird nicht immer korrekt upgedated
+
+  - 
+
 
 pd/MIDI:
   - MIDIconnect zu einen Behringer funktioniert standardmässig nicht.
