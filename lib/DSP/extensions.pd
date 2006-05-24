@@ -1,9 +1,9 @@
 #N canvas 388 170 333 185 10;
 #X obj 60 136 TESTTONE/DSP;
-#X obj 184 140 SFPLAYER8/DSP 8;
 #X obj 45 25 inlet~;
 #X obj 195 26 inlet~;
 #X text 48 46 after inchannels;
 #X text 210 49 after MASTER;
 #X obj 183 97 RRR/DSP;
 #X obj 60 96 REV/DSP;
+#X obj 184 140 SFPLAYER16/DSP 16;
