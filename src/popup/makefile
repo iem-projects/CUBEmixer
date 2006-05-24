@@ -3,7 +3,7 @@ current:
 
 clean: ; rm -f popup.pd_{linux,nt,irix?,darwin} *.o
 
-PDSOURCE=../../../pd/src
+PDSOURCE=/usr/local/src/pd/src
 # ----------------------- NT -----------------------
 
 pd_nt: popup.dll
