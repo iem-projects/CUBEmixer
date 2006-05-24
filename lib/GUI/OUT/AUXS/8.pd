@@ -19,14 +19,14 @@
 #X obj 153 36 vsl 15 131 0 130 0 0 \$0GUIbusout_8_fader_fromgui \$0GUIbusout_8_fader_togui
 +00 1 140 0 8 -228992 -1 -1 0 1;
 #N canvas 435 371 292 244 code 0;
-#X obj 46 27 OUT/AUX/sr \$0GUIbusout 1;
-#X obj 47 51 OUT/AUX/sr \$0GUIbusout 2;
-#X obj 47 75 OUT/AUX/sr \$0GUIbusout 3;
-#X obj 46 97 OUT/AUX/sr \$0GUIbusout 4;
-#X obj 44 123 OUT/AUX/sr \$0GUIbusout 5;
-#X obj 45 147 OUT/AUX/sr \$0GUIbusout 6;
-#X obj 45 171 OUT/AUX/sr \$0GUIbusout 7;
-#X obj 44 193 OUT/AUX/sr \$0GUIbusout 8;
+#X obj 46 27 OUT/AUXS/sr \$0GUIbusout 1;
+#X obj 47 51 OUT/AUXS/sr \$0GUIbusout 2;
+#X obj 47 75 OUT/AUXS/sr \$0GUIbusout 3;
+#X obj 46 97 OUT/AUXS/sr \$0GUIbusout 4;
+#X obj 44 123 OUT/AUXS/sr \$0GUIbusout 5;
+#X obj 45 147 OUT/AUXS/sr \$0GUIbusout 6;
+#X obj 45 171 OUT/AUXS/sr \$0GUIbusout 7;
+#X obj 44 193 OUT/AUXS/sr \$0GUIbusout 8;
 #X restore 194 7 pd code;
 #X obj 2 44 vfad_scale -1;
 #X obj 171 44 vfad_scale -1;

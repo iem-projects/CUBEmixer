@@ -22,6 +22,6 @@
 #X obj 1049 610 RRR/GUI;
 #X obj 959 610 REV/GUI;
 #X obj 555 610 OUT/ambi;
-#X obj 953 428 OUT/AUX/8;
+#X obj 953 428 OUT/AUXS/8;
 #X obj 687 610 OUT/main;
 #X obj 555 812 AVIS/GUI;
