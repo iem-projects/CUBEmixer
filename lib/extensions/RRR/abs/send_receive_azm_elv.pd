@@ -9,8 +9,12 @@
 #X obj 30 195 pack \$2 0 0;
 #X obj 93 169 t b f;
 #X msg 28 256 src_dp \$1 \$2 \$3;
+#X floatatom 180 197 5 0 0 0 - - -;
+#X floatatom 235 198 5 0 0 0 - - -;
 #X connect 0 0 5 0;
+#X connect 0 0 10 0;
 #X connect 0 1 6 0;
+#X connect 0 1 11 0;
 #X connect 1 0 7 0;
 #X connect 1 1 7 1;
 #X connect 2 0 0 0;

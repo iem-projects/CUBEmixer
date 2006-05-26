@@ -1,4 +1,4 @@
-#N canvas 421 245 602 462 10;
+#N canvas 884 123 1127 652 10;
 #N canvas 911 219 542 590 config 0;
 #X floatatom 54 146 5 8 50 0 - - -;
 #X floatatom 182 47 3 0 100 0 - - -;
@@ -65,7 +65,7 @@
 #X connect 27 0 17 0;
 #X connect 28 0 18 0;
 #X restore 182 68 pd rgb->float;
-#X floatatom 286 48 5 1 13 0 - - -;
+#X floatatom 286 48 5 1 18 0 - - -;
 #X obj 182 180 pp src_col;
 #X msg 182 149 \$2 \$1;
 #X obj 182 99 pack 0 1;
@@ -205,27 +205,79 @@
 #X connect 41 1 42 1;
 #X connect 42 0 43 0;
 #X connect 43 0 51 0;
-#X restore 242 3 pd config;
-#X obj 70 374 s \$0_sphere_fromgui;
-#X obj 31 31 cnv 15 318 318 empty empty empty 20 12 0 14 -233017 -66577
+#X restore 265 -12 pd config;
+#X obj 45 587 s \$0_sphere_fromgui;
+#X obj 31 31 cnv 15 318 358 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#X obj 36 42 cube_sphere 12 150 33 52 195567 262080 236 240 262080
-233 75 262080 27 177 262080 153 229 262080 281 164 262080 49 99 4032
-98 265 4032 247 208 4032 164 276 4032 147 0 4032 207 127 4032 102 139
-;
-#X obj 37 -23 r \$0_sphere_togui;
-#X obj 389 20 send_receive_azm_elv \$0 1;
-#X obj 390 44 send_receive_azm_elv \$0 2;
-#X obj 391 65 send_receive_azm_elv \$0 3;
-#X obj 390 98 send_receive_azm_elv \$0 4;
-#X obj 389 120 send_receive_azm_elv \$0 5;
-#X obj 389 141 send_receive_azm_elv \$0 6;
-#X obj 386 176 send_receive_azm_elv \$0 7;
-#X obj 384 200 send_receive_azm_elv \$0 8;
-#X obj 386 223 send_receive_azm_elv \$0 9;
-#X obj 384 273 send_receive_azm_elv \$0 10;
-#X obj 382 297 send_receive_azm_elv \$0 11;
-#X obj 384 320 send_receive_azm_elv \$0 12;
+#X obj 40 81 cube_sphere 18 150 33 52 195567 4032 256 224 4032 207
+284 4032 37 224 4032 149 274 4032 229 156 4032 91 255 4032 152 117
+4032 81 159 4032 139 299 4032 227 270 4032 117 281 4032 139 251 262080
+187 214 262080 152 290 262080 101 284 262080 229 253 262080 115 211
+262080 187 279;
+#X obj 40 -18 r \$0_sphere_togui;
+#X obj 421 18 send_receive_azm_elv \$0 1;
+#X obj 655 443 s \$0_sphere_togui;
+#X msg 669 227 1 1.22977 -68.7948 \, 2 13.5462 -100.911 \, 3 9.12002
+74.0986 \, 4 0 123.611 \, 5 7.90402 -17.6365 \, 6 23.4041 -68.4876
+\, 7 27.8258 10.9013 \, 8 9.09854 56.3988 \, 9 0 -160.75 \, 10 7.24524
+-114.884 \, 11 0 145.432 \, 12 25.5532 175.17 \, 13 51.1075 90 \, 14
+51.5597 -90 \, 15 16.7694 134.75 \, 16 16.4503 -135 \, 17 23.8741 40.0063
+\, 18 24.1639 -39.7048;
+#X msg 707 317 1 12.572 -125.113 \, 2 2.96077 -156.894 \, 3 9.70373
+123.653 \, 4 15.6002 179.662 \, 5 42.0862 -94.71 \, 6 18.2663 150.936
+\, 7 70.0194 -5.19443 \, 8 48.5812 98.608 \, 9 0 175.75 \, 10 4.70411
+-147.1 \, 11 9.15923 165.961 \, 12 29.1827 173.586 \, 13 44.946 -149.605
+\, 14 6.04298 -178.815 \, 15 4.54601 160.229 \, 16 12.2925 -142.504
+\, 17 47.7453 150.472 \, 18 9.4545 -163.783;
+#X obj 655 422 pp src_dp;
+#X obj 788 443 s \$0_sphere_fromgui;
+#X obj 156 36 cnv 8 1 1 empty empty kirche_mitte 0 6 0 12 -233017 -1
+0;
+#X obj 276 36 cnv 8 1 1 empty empty kirche_süd 0 6 0 12 -233017 -1
+0;
+#X obj 36 36 cnv 8 1 1 empty empty schlachthaus 0 6 0 12 -233017 -1
+0;
+#X obj 286 581 outlet;
+#X obj 73 52 bng 15 250 50 0 empty empty empty 0 -6 0 8 -260818 -1
+-1;
+#X obj 185 52 bng 15 250 50 0 empty empty empty 0 -6 0 8 -260818 -1
+-1;
+#X obj 297 52 bng 15 250 50 0 empty empty empty 0 -6 0 8 -260818 -1
+-1;
+#X obj 422 42 send_receive_azm_elv \$0 2;
+#X obj 423 63 send_receive_azm_elv \$0 3;
+#X obj 422 85 send_receive_azm_elv \$0 4;
+#X obj 421 107 send_receive_azm_elv \$0 5;
+#X obj 421 128 send_receive_azm_elv \$0 6;
+#X obj 421 149 send_receive_azm_elv \$0 7;
+#X obj 419 173 send_receive_azm_elv \$0 8;
+#X obj 421 196 send_receive_azm_elv \$0 9;
+#X obj 421 219 send_receive_azm_elv \$0 10;
+#X obj 419 243 send_receive_azm_elv \$0 11;
+#X obj 421 266 send_receive_azm_elv \$0 12;
+#X obj 422 289 send_receive_azm_elv \$0 13;
+#X obj 420 313 send_receive_azm_elv \$0 14;
+#X obj 422 336 send_receive_azm_elv \$0 15;
+#X obj 422 359 send_receive_azm_elv \$0 16;
+#X obj 420 383 send_receive_azm_elv \$0 17;
+#X obj 422 406 send_receive_azm_elv \$0 18;
+#X msg 84 523 recall 2;
+#X msg 152 523 recall 0;
+#X msg 221 524 recall 1;
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
-#X coords 0 -1 1 1 320 320 1 30 30;
+#X connect 7 0 9 0;
+#X connect 7 0 10 0;
+#X connect 8 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 6 0;
+#X connect 15 0 35 0;
+#X connect 15 0 7 0;
+#X connect 16 0 36 0;
+#X connect 16 0 7 0;
+#X connect 17 0 37 0;
+#X connect 17 0 8 0;
+#X connect 35 0 14 0;
+#X connect 36 0 14 0;
+#X connect 37 0 14 0;
+#X coords 0 -1 1 1 320 360 1 30 30;
