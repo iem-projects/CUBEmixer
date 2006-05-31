@@ -15,7 +15,7 @@
 #X msg 71 68 start;
 #X msg 19 69 stop;
 #X obj 23 322 del 3;
-#X msg 266 160 open /home/pd/projects/weltraum/audio/mlite/mlite_kurz.wav
+#X msg 266 160 open /home/cubemixer/projects/sonenvir_290506/sonif_sounds/flatterecho1_dehn_20_RIR.wav
 ;
 #X obj 19 124 t b b;
 #X obj 16 -28 inlet~;
@@ -28,7 +28,7 @@
 #X obj 114 346 s~ \$0_fade~;
 #X obj 114 318 line~;
 #X obj 603 311 s \$0_ditit;
-#X obj 78 -17 r \$0_ditit;
+#X obj 197 -24 r \$0_ditit;
 #X obj 23 164 del 10;
 #X msg 82 242 10;
 #X msg 128 241 10;
@@ -59,6 +59,9 @@
 #X obj 622 415 send_to_out 32 \$0;
 #X obj 634 393 send_to_out 33 \$0;
 #X obj 288 279 readsf~ 24 1e+06 _________________________;
+#X msg 86 -7 0;
+#X obj 210 2 del 10;
+#X text 7 450 To be changed also for ambisonic playback;
 #X connect 0 0 7 0;
 #X connect 1 0 7 0;
 #X connect 2 0 31 0;
@@ -88,7 +91,8 @@
 #X connect 22 0 16 0;
 #X connect 22 1 2 0;
 #X connect 25 0 24 0;
-#X connect 27 0 19 0;
+#X connect 27 0 59 0;
+#X connect 27 0 58 0;
 #X connect 28 0 0 0;
 #X connect 28 0 6 0;
 #X connect 29 0 10 0;
@@ -120,3 +124,5 @@
 #X connect 57 22 53 0;
 #X connect 57 23 54 0;
 #X connect 57 24 26 0;
+#X connect 58 0 19 0;
+#X connect 59 0 58 0;

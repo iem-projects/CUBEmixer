@@ -10,7 +10,7 @@
 #X obj 55 65 vfad_scale -1;
 #X obj 13 104 cnv 2 40 2 empty empty empty 20 12 0 14 -1 -66577 0;
 #X obj 19 61 vsl 30 131 0 130 0 0 \$0_sfpo_vol_gui \$0_sfpo_vol_gui
--inf 1 140 0 8 -233017 -1 -1 0 1;
++00 1 140 0 8 -233017 -1 -1 8700 1;
 #X obj 48 237 route float;
 #X obj 128 444 - 100;
 #X msg 49 505 label \$1;
@@ -30,8 +30,8 @@
 #X obj 138 80 openpanel;
 #X obj 138 57 r \$0_open;
 #X obj 138 106 send_regname SFPO_OPEN;
-#X obj 150 136 r \$0_play_fromgui;
-#X obj 148 181 s \$0_play_togui;
+#X obj 150 136 r \$0_PLAY_fromgui;
+#X obj 148 181 s \$0_PLAY_togui;
 #X connect 8 0 18 0;
 #X connect 9 0 16 0;
 #X connect 10 0 22 0;
