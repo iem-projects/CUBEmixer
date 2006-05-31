@@ -9,7 +9,7 @@ d.h. alter zustand (IN-ON);
 anderen OFF \, wird von 3.) erledigt);
 #X obj 202 283 t f;
 #X obj 202 307 outlet;
-#X obj 202 262 spigot38 1;
+#X obj 202 262 spigot 1;
 #X obj 107 216 t b b;
 #X msg 204 184 0;
 #X msg 137 238 1;

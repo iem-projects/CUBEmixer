@@ -16,7 +16,7 @@
 #X msg 161 269 0;
 #X msg 117 269 1;
 #X obj 204 325 t f;
-#X obj 139 346 spigot38 1;
+#X obj 139 346 spigot 1;
 #X obj 251 230 MIDI/abs/miditodb;
 #X obj 273 403 MIDI/abs/dbtomidi;
 #X obj 117 229 fadtodb;

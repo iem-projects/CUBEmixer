@@ -40,7 +40,7 @@ set 20 7 0 8 -62784 -1 -1;
 #X obj 59 372 sendreceive AMBI_ORDER_WEIGHT;
 #X obj 37 22 unpack 0 0 0 0 0;
 #X obj 37 346 t b l b;
-#X obj 59 416 spigot38 1;
+#X obj 59 416 spigot 1;
 #X msg 24 394 1;
 #X msg 106 395 0;
 #X obj 63 67 OUT/ambisonic/helper/sr_weight \$0GUI_1;
