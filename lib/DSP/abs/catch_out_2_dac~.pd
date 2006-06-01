@@ -7,9 +7,9 @@
 #X obj 42 18 inlet~;
 #X text 205 59 del + gain;
 #X obj 135 38 r \$1_compensation_del_gain;
-#X obj 162 124 pack \$1 f f;
-#X obj 168 96 t b f;
-#X obj 162 156 print del_amp;
+#X obj 129 121 pack \$1 f f;
+#X obj 135 93 t b f;
+#X obj 129 153 print del_amp;
 #X obj 75 224 t b f;
 #X obj 64 250 * 1;
 #X obj 129 240 r DSP_MIX_INTERPOL_TIME;
@@ -21,7 +21,6 @@
 #X obj 305 118 DSP_label OUT \$1_OUT;
 #X connect 1 0 14 0;
 #X connect 2 0 1 0;
-#X connect 2 0 9 0;
 #X connect 2 1 8 2;
 #X connect 2 1 11 0;
 #X connect 3 0 1 0;
