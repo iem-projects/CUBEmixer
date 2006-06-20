@@ -8,4 +8,5 @@
 #X obj 42 128 REV/DSP;
 #X obj 42 95 SFPLAYER16/DSP 16;
 #X obj 43 72 SFPO/DSP;
+#X obj 71 255 BIN/DSP;
 #X connect 1 0 8 0;
