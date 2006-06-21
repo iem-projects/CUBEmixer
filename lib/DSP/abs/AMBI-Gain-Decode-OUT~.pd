@@ -1,4 +1,4 @@
-#N canvas 1393 277 816 328 10;
+#N canvas 464 277 816 328 10;
 #N canvas 0 0 510 360 null~ 0;
 #X obj 38 52 catch~ 0_AMBI_BUS;
 #X obj 37 79 s~ 0_AMBI_SUM;
@@ -22,7 +22,9 @@
 #X obj 133 178 receive_parameter OUT_AMBI_GAIN;
 #X obj 84 143 receive_parameter AMBI_ORDER_WEIGHT;
 #X obj 54 201 \$1_ambi_dec~;
+#X obj 149 197 receive_setting OUT_AMBI_24;
 #X connect 13 0 18 0;
 #X connect 16 0 18 2;
 #X connect 17 0 18 1;
 #X connect 18 0 14 0;
+#X connect 19 0 18 3;
