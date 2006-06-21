@@ -57,10 +57,10 @@
 #X obj 330 560 f 0;
 #X obj 776 123 del 2;
 #X msg 776 145 0;
-#X obj 118 363 outlet;
+#X obj 114 354 outlet;
 #X obj 359 370 outlet;
 #X obj 469 371 outlet;
-#X obj 39 364 outlet;
+#X obj 28 360 outlet;
 #X text 42 63 ambi_weight;
 #X text 275 67 HRIR_onset;
 #X text 416 64 HRIR_pathname;
@@ -71,7 +71,7 @@
 #X obj 172 82 inlet;
 #X text 168 65 mirror_weight;
 #X obj 228 271 gate 0;
-#X obj 241 368 outlet;
+#X obj 219 367 outlet;
 #X obj 175 273 f 50;
 #X obj 17 200 any 1 1 1 1 1 1;
 #X obj 419 105 symbol;
@@ -135,8 +135,8 @@
 #X obj 802 146 r \$0-table_init_ready;
 #X obj 287 498 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X obj 453 216 clip 0 100;
-#X obj 453 238 * 0.01;
+#X obj 468 219 clip 0 100;
+#X obj 468 241 * 0.01;
 #X floatatom 464 196 5 0 100 0 - - -;
 #X obj 287 544 init_fft_HRIR_fadeout_win \$0 HRIR_fadeout_win \$1;
 #X obj 287 588 create_HRTF_tables \$0 HRTF_re HRTF_im 25 \$1;
@@ -229,6 +229,7 @@ HRTF_im HRIR_fadeout_win Kemar_HRIR 20 4 3 32 0 \$1 2;
 #X connect 43 0 42 5;
 #X connect 44 0 40 0;
 #X connect 45 0 46 0;
+#X connect 46 0 85 1;
 #X connect 47 0 45 0;
 #X connect 48 0 56 0;
 #X connect 48 1 54 0;
