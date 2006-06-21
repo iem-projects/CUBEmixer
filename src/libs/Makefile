@@ -197,7 +197,7 @@ sources: aconnect-src iem_ambi-src iemgui-src iemlib-src iemmatrix-src popup-src
 
 build: aconnect-build iem_ambi-build iemgui-build iemlib-build iemmatrix-build popup-build zexy-build
 
-locinstall: aconnect-locinstall iem_ambi-locinstall iemgui-locinstall iemlib-locinstall iemmatrix-locinstall popup-locinstall zexy-locinstall iem_ambi-locinstall iem_spec2-locinstall
+locinstall: aconnect-locinstall iem_ambi-locinstall iem_bin_ambi-locinstall iemgui-locinstall iemlib-locinstall iemmatrix-locinstall popup-locinstall zexy-locinstall iem_ambi-locinstall iem_spec2-locinstall
 
 clean: 
 	rm -rf aconnect iem_ambi iemlib iemmatrix popup zexy sf-login
