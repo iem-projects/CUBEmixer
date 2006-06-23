@@ -50,6 +50,7 @@
 #X obj 582 93 receive_parameter AMBI_ORDER_WEIGHT;
 #X obj 93 306 sendreceive OUT_AMBI_GAIN;
 #X floatatom 88 375 5 0 0 0 - - -;
+#X obj 37 10 inlet~;
 #X connect 0 0 7 0;
 #X connect 0 1 7 1;
 #X connect 2 0 6 0;

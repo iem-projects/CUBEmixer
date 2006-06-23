@@ -258,8 +258,6 @@
 #X obj 121 490 sIN~ \$1:07_PLAY;
 #X obj 141 468 sIN~ \$1:08_PLAY;
 #X obj 161 620 sIN~ \$1:09_PLAY;
-#X obj 403 619 env~;
-#X floatatom 406 647 5 0 0 0 - - -;
 #X connect 0 0 10 1;
 #X connect 1 0 10 0;
 #X connect 2 0 3 0;
@@ -298,7 +296,6 @@
 #X connect 15 16 2 0;
 #X connect 15 17 11 0;
 #X connect 16 0 24 0;
-#X connect 16 0 33 0;
 #X connect 16 1 25 0;
 #X connect 16 2 26 0;
 #X connect 16 3 27 0;
@@ -314,4 +311,3 @@
 #X connect 16 13 21 0;
 #X connect 16 14 22 0;
 #X connect 16 15 23 0;
-#X connect 33 0 34 0;
