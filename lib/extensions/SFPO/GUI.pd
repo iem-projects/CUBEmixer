@@ -8,7 +8,7 @@
 #X obj 55 65 vfad_scale -1;
 #X obj 13 104 cnv 2 40 2 empty empty empty 20 12 0 14 -1 -66577 0;
 #X obj 19 61 vsl 30 131 0 130 0 0 \$0_sfpo_vol_gui \$0_sfpo_vol_gui
-+00 1 140 0 8 -233017 -1 -1 8600 1;
+-inf 1 140 0 8 -233017 -1 -1 0 1;
 #X obj 312 74 route float;
 #X obj 392 242 - 100;
 #X msg 313 303 label \$1;
@@ -30,8 +30,8 @@
 #X obj 111 291 i \$0;
 #X msg 109 340 \; \$1-edit vis 1;
 #X obj 109 270 r \$0_sfpo_edit;
-#N canvas 1568 592 312 210 6969-edit 0;
-#N canvas 1491 409 661 439 gui 0;
+#N canvas 1568 592 312 210 6983-edit 1;
+#N canvas 1491 409 661 439 gui 1;
 #X obj 11 11 cnv 15 298 198 empty empty SF_OUT 2 10 0 12 -225271 -66577
 0;
 #X obj 86 76 tgl 15 0 \$0_PLAY_gui \$0_PLAY_gui PLAY 0 -6 0 8 -233017
@@ -40,7 +40,7 @@
 0 8 -24198 -1 -1;
 #X obj 55 69 vfad_scale -1;
 #X obj 19 65 vsl 30 131 0 130 0 0 \$0_sfpo_vol_gui \$0_sfpo_vol_gui
-+00 1 140 0 8 -233017 -1 -1 8600 1;
+-inf 1 140 0 8 -233017 -1 -1 0 1;
 #X symbolatom 14 41 40 0 0 2 soundfile #0_filename_togui #0_filename_fromgui
 ;
 #X obj 225 93 popup 80 20 #ffffff ------------ DACOUTS AMBIBUS;
@@ -76,40 +76,7 @@
 #X connect 10 0 1 0;
 #X connect 11 0 1 0;
 #X restore 321 84 pd outrouting_1-24;
-#X obj 226 135 popup 60 20 #ffffff BUS 13 BUS 01 BUS 02 BUS 03 BUS 04
-BUS 05 BUS 06 BUS 07 BUS 08 BUS 09 BUS 10 BUS 11 BUS 12 BUS 13 BUS 14
-BUS 15 BUS 16 BUS LF OUT 01 OUT 02 OUT 03 OUT 04 OUT 05 OUT 06 OUT 07
-OUT 08 OUT 09 OUT 10 OUT 11 OUT 12 OUT 13 OUT 14 OUT 15 OUT 16 OUT 17
-OUT 18 OUT 19 OUT 20 OUT 21 OUT 22 OUT 23 OUT 24 OUT 25 OUT 26 OUT 27
-OUT 28 OUT 29 OUT 30 OUT 31 OUT 32 OUT 33 OUT 34 OUT 35 OUT 36 OUT 37
-OUT 38 OUT 39 OUT 40 OUT 41 OUT 42 OUT 43 OUT 44 OUT 45 OUT 46 OUT 47
-OUT 48 OUT 49 OUT 50 OUT 51 OUT 52 OUT 53 OUT 54 OUT 55 OUT 56 OUT 57
-OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64;
-#N canvas 1437 411 551 231 outrouting_25 0;
-#X obj 11 47 route bang;
-#X obj 11 181 outlet;
-#X obj 11 12 inlet;
-#X obj 113 119 t a;
-#X obj 113 98 DSPnamesGUI OUT;
-#X obj 205 44 unpack 0 s;
-#X obj 270 68 uglifysymbol;
-#X obj 270 112 beautifysymbol;
-#X msg 270 133 name \$1;
-#X obj 270 90 sendreceive_nofb EXT_SFPO_OUT_25;
-#X msg 10 74 options \, size 60 20 \, name ---;
-#X connect 0 0 10 0;
-#X connect 0 1 5 0;
-#X connect 2 0 0 0;
-#X connect 3 0 1 0;
-#X connect 4 0 3 0;
-#X connect 5 1 6 0;
-#X connect 6 0 9 0;
-#X connect 7 0 8 0;
-#X connect 8 0 1 0;
-#X connect 9 0 7 0;
-#X connect 10 0 1 0;
-#X restore 316 136 pd outrouting_25;
-#X obj 226 175 popup 60 20 #ffffff BUS LF BUS 01 BUS 02 BUS 03 BUS 04
+#X obj 226 175 popup 60 20 #ffffff BUS BUS 01 BUS 02 BUS 03 BUS 04
 BUS 05 BUS 06 BUS 07 BUS 08 BUS 09 BUS 10 BUS 11 BUS 12 BUS 13 BUS 14
 BUS 15 BUS 16 BUS LF OUT 01 OUT 02 OUT 03 OUT 04 OUT 05 OUT 06 OUT 07
 OUT 08 OUT 09 OUT 10 OUT 11 OUT 12 OUT 13 OUT 14 OUT 15 OUT 16 OUT 17
@@ -123,24 +90,24 @@ OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64;
 #X obj 11 181 outlet;
 #X obj 11 12 inlet;
 #X obj 117 117 t a;
-#X obj 117 95 DSPnamesGUI OUT;
 #X obj 205 44 unpack 0 s;
 #X obj 270 68 uglifysymbol;
 #X obj 270 112 beautifysymbol;
 #X msg 270 133 name \$1;
 #X obj 270 90 sendreceive_nofb EXT_SFPO_OUT_26;
 #X msg 13 70 options \, size 60 20 \, name ---;
-#X connect 0 0 10 0;
-#X connect 0 1 5 0;
+#X obj 117 95 DSPnamesGUI OUT;
+#X connect 0 0 9 0;
+#X connect 0 1 4 0;
 #X connect 2 0 0 0;
 #X connect 3 0 1 0;
-#X connect 4 0 3 0;
-#X connect 5 1 6 0;
-#X connect 6 0 9 0;
-#X connect 7 0 8 0;
-#X connect 8 0 1 0;
-#X connect 9 0 7 0;
-#X connect 10 0 1 0;
+#X connect 4 1 5 0;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 7 0 1 0;
+#X connect 8 0 6 0;
+#X connect 9 0 1 0;
+#X connect 10 0 3 0;
 #X restore 316 176 pd outrouting_26;
 #X text 141 21 play 24/25/26 channels;
 #X text 146 62 --- play file to ---;
@@ -154,21 +121,56 @@ OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64;
 #X obj 413 269 openpanel;
 #X obj 417 236 r \$0_sfpo_open;
 #X obj 86 353 sendreceive EXT_SFPO_FILENAME;
+#X obj 226 135 popup 60 20 #ffffff OUT ADC 01 ADC 02 ADC 03 ADC 04
+ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
+ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
+ADC 25 ADC 26 ADC 27 ADC 28 ADC 29 ADC 30 ADC 31 ADC 32 ADC 33 ADC 34
+ADC 35 ADC 36 ADC 37 ADC 38 ADC 39 ADC 40 ADC 41 ADC 42 ADC 43 ADC 44
+ADC 45 ADC 46 ADC 47 ADC 48 ADC 49 ADC 50 ADC 51 ADC 52 ADC 53 ADC 54
+ADC 55 ADC 56 ADC 57 ADC 58 ADC 59 ADC 60 ADC 61 ADC 62 ADC 63 ADC 64
+AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 16:01
+PLAY 16:02 PLAY 16:03 PLAY 16:04 PLAY 16:05 PLAY 16:06 PLAY 16:07 PLAY 16:08
+PLAY 16:09 PLAY 16:10 PLAY 16:11 PLAY 16:12 PLAY 16:13 PLAY 16:14 PLAY 16:15
+PLAY 16:16 TESTTONE none;
+#N canvas 1437 411 551 231 outrouting_25 1;
+#X obj 11 47 route bang;
+#X obj 11 181 outlet;
+#X obj 11 12 inlet;
+#X obj 31 123 t a;
+#X obj 205 44 unpack 0 s;
+#X obj 270 68 uglifysymbol;
+#X obj 270 112 beautifysymbol;
+#X msg 270 133 name \$1;
+#X obj 270 90 sendreceive_nofb EXT_SFPO_OUT_25;
+#X msg 10 74 options \, size 60 20 \, name ---;
+#X obj 31 102 DSPnamesGUI OUT;
+#X connect 0 0 9 0;
+#X connect 0 1 4 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 1 5 0;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 7 0 1 0;
+#X connect 8 0 6 0;
+#X connect 9 0 1 0;
+#X connect 10 0 3 0;
+#X restore 316 136 pd outrouting_25;
 #X connect 6 0 10 0;
 #X connect 10 0 6 0;
 #X connect 11 0 12 0;
 #X connect 12 0 11 0;
-#X connect 13 0 14 0;
-#X connect 14 0 13 0;
-#X connect 17 0 20 0;
-#X connect 18 0 19 0;
-#X connect 19 0 21 0;
-#X connect 20 0 26 0;
-#X connect 21 1 23 0;
-#X connect 23 0 20 0;
+#X connect 15 0 18 0;
+#X connect 16 0 17 0;
+#X connect 17 0 19 0;
+#X connect 18 0 24 0;
+#X connect 19 1 21 0;
+#X connect 21 0 18 0;
+#X connect 22 0 18 0;
+#X connect 23 0 22 0;
 #X connect 24 0 20 0;
-#X connect 25 0 24 0;
-#X connect 26 0 22 0;
+#X connect 25 0 26 0;
+#X connect 26 0 25 0;
 #X coords 0 -1 1 1 300 200 1 10 10;
 #X restore 4 3 pd gui;
 #X restore 13 217 pd \$0-edit;
