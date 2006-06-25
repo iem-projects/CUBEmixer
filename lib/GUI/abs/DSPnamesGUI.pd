@@ -1,4 +1,4 @@
-#N canvas 536 77 509 474 10;
+#N canvas 1354 335 509 474 10;
 #X obj 138 386 outlet;
 #X msg 138 191 compact \, sort \, bang \, dump;
 #X msg 245 217 add \$1;
@@ -19,6 +19,7 @@
 #X msg 232 380 options none;
 #X obj 226 307 t b b;
 #X msg 319 345 column_break_height 24;
+#X obj 306 129 print LABELs:;
 #X connect 1 0 12 0;
 #X connect 2 0 12 0;
 #X connect 3 0 4 0;
