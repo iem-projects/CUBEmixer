@@ -234,7 +234,7 @@ on 1 7 0 10 -258699 -258699 -1 1 1;
 #X obj 274 608 inchannel/helper/aux_popup_sr \$0GUI_aux3;
 #X obj 268 575 inchannel/helper/aux_popup_sr \$0GUI_aux2;
 #X obj 266 549 inchannel/helper/aux_popup_sr \$0GUI_aux1;
-#X obj 156 13 iem_image inchannel/IEM.gif 0 0 empty empty;
+#X obj 156 13 iem_image PICS/IEM.gif 0 0 empty empty;
 #X connect 22 0 79 0;
 #X connect 24 0 42 0;
 #X connect 36 0 110 0;
