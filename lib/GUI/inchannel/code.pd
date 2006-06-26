@@ -1,4 +1,4 @@
-#N canvas 497 525 450 300 10;
+#N canvas 497 468 450 300 10;
 #N canvas 345 249 679 490 selector 0;
 #X obj 244 324 s \$1GUI_channel_togui;
 #X obj 13 36 r \$1GUI_channel_fromgui;
@@ -57,7 +57,8 @@
 from outside!;
 #X msg 345 288 name \$1;
 #X obj 320 237 t f f;
-#X msg 141 396 label;
+#X msg 148 394 label;
+#X msg 199 393 label;
 #X connect 1 0 10 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
@@ -84,10 +85,11 @@ from outside!;
 #X connect 26 0 13 0;
 #X connect 26 1 16 0;
 #X connect 27 0 21 0;
+#X connect 28 0 21 0;
 #X restore 36 33 pd selector;
-#N canvas 0 0 450 300 locker 0;
-#X obj 125 58 r \$1GUI_input_lock_fromgui;
-#X obj 127 249 s \$1GUI_input_lock_togui;
+#N canvas 230 263 518 315 locker 0;
+#X obj 131 58 r \$1GUI_input_lock_fromgui;
+#X obj 129 249 s \$1GUI_input_lock_togui;
 #N canvas 196 210 688 496 locked 0;
 #X obj 265 113 s \$1GUI_input_select_togui;
 #X obj 76 49 inlet;
@@ -119,14 +121,27 @@ from outside!;
 #X connect 13 2 6 0;
 #X connect 13 3 0 0;
 #X restore 131 142 pd locked popups;
-#X obj 149 114 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+#X obj 149 114 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
 1;
 #X obj 129 183 loadbang;
 #X msg 129 212 1;
+#X obj 217 82 select 0;
+#X msg 336 189 open \$1;
+#X obj 336 169 symbol;
+#X obj 335 209 s \$1lockimg;
+#X msg 321 121 PICS/unlocked.gif;
+#X msg 374 142 PICS/locked.gif;
 #X connect 0 0 2 0;
+#X connect 0 0 6 0;
 #X connect 3 0 2 0;
 #X connect 4 0 5 0;
 #X connect 5 0 1 0;
+#X connect 6 0 10 0;
+#X connect 6 1 11 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 10 0 8 0;
+#X connect 11 0 8 0;
 #X restore 181 35 pd locker;
 #N canvas 650 189 439 461 EQ 0;
 #X obj 92 87 inlet ID#;
@@ -892,7 +907,7 @@ from outside!;
 #X obj 190 204 beautifysymbol;
 #X obj 190 249 s \$1GUI_input_select_togui;
 #X obj 190 182 sendreceive_nofb 0_IN_SRC;
-#X text 241 220 just in case \, an "unselectable" input is selcted
+#X text 257 217 just in case \, an "unselectable" input is selcted
 from outside!;
 #X msg 125 227 name \$1;
 #X msg 190 225 name \$1;
