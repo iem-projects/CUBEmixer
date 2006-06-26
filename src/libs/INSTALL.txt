@@ -14,7 +14,7 @@ A) Overview pd-externals needed for CUBEmixer:
  zexy
 
 they will be installed in lib/libs/ 
-(just copy everything in it as without directories)
+(just copy everything in it without directory-hierarchy to this path)
 
 All of these externals (with the notable exception of iemgui) 
 are not included with this package!
@@ -77,3 +77,4 @@ B) Manual install
      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P externals/iem/aconnect
 
 iem, 23032006
+
