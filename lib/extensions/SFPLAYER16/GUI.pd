@@ -1,27 +1,26 @@
-#N canvas 110 142 1143 633 10;
+#N canvas 0 135 993 436 10;
 #X obj 537 264 openpanel;
 #X obj 537 288 t b s;
-#X msg 537 333 /home/cubemixer/projects/weltraum/weiss_weisslich27/sounds/stereoforte.wav
-;
+#X msg 537 333;
 #X msg 565 308 set \$1;
 #X msg 537 243 bang;
 #X msg 314 243 play;
 #X msg 390 243 pause;
-#X msg 220 288 loop \$1;
+#X msg 155 278 loop \$1;
 #X obj 584 98 sendreceive \$1_SFPLAY_POS;
 #X obj 537 355 sendreceive \$1_SFPLAY_FILE;
 #X obj 314 331 sendreceive \$1_SFPLAY_CTRL;
-#X obj 314 32 r \$0play;
-#X obj 384 32 r \$0pause;
+#X obj 314 42 r \$0play;
+#X obj 385 42 r \$0pause;
 #X obj 473 82 r \$0stop;
 #X obj 642 247 r \$0load;
 #X obj 314 215 select 1 0;
 #X obj 385 63 i;
-#X msg 314 54 1;
-#X msg 490 134 0;
+#X msg 314 64 1;
+#X msg 498 127 0;
 #X obj 385 90 == 0;
 #X obj 385 115 t f f;
-#X obj 320 87 t f f;
+#X obj 314 87 t f f;
 #X obj 101 101 cnv 15 158 88 empty empty soundfileplayer 4 8 0 14 -233017
 -66577 0;
 #X obj 105 118 bng 20 250 50 0 \$0play \$0play > 7 10 0 16 -262144
@@ -30,13 +29,13 @@
 -260818 -1;
 #X obj 165 118 bng 20 250 50 0 \$0stop \$0stop x 5 9 0 16 -262144 -258699
 -1;
-#X obj 234 119 bng 20 250 50 0 \$0load \$0load empty 0 -6 0 8 -228992
+#X obj 234 118 bng 20 250 50 0 \$0load \$0load empty 0 -6 0 8 -228992
 -1 -1;
 #X obj 107 142 hsl 128 15 0 722000 0 0 \$0pos \$0pos empty -2 -6 0
-8 -262144 -1 -1 9103 1;
-#X msg 25 39 range 0 \$1;
-#X obj 25 19 sendreceive \$1_SFPLAY_LENGTH;
-#X msg 587 216 set \$1;
+8 -262144 -1 -1 0 1;
+#X msg 45 49 range 0 \$1;
+#X obj 28 19 sendreceive \$1_SFPLAY_LENGTH;
+#X msg 584 206 set \$1;
 #X msg 250 245 play \$1;
 #X obj 584 120 select -1;
 #X obj 584 154 i;
@@ -44,10 +43,11 @@
 #X obj 547 123 i;
 #X obj 250 216 t f f f;
 #X obj 473 106 t b b b;
-#X obj 194 120 tgl 15 0 empty empty L 5 7 0 10 -262144 -1 -1 0 1;
+#X obj 194 120 tgl 15 0 \$0-loop \$0-loop L 5 7 0 10 -262144 -1 -1
+0 1;
 #X obj 584 180 t f;
-#X obj 207 52 samplerate~;
-#X obj 255 16 loadbang;
+#X obj 207 72 samplerate~;
+#X obj 207 47 loadbang;
 #N canvas 258 230 228 256 time 0;
 #X obj 26 54 * 0.001;
 #X obj 74 149 % 60;
@@ -97,17 +97,23 @@
 #X connect 6 0 1 0;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
-#X restore 272 144 pd time;
-#X obj 145 162 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 0 256;
-#X obj 107 161 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 0 256;
-#X obj 224 164 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 37 256;
-#X obj 186 163 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -6 0 10
--262144 -1 -1 8 256;
-#X text 110 176 length;
-#X text 188 177 position;
+#X restore 726 203 pd time;
+#X obj 145 161 nbx 2 14 -1e+37 1e+37 0 0 \$0-length-s \$0-length-s
+empty 0 -6 0 10 -262144 -1 -1 0 256;
+#X obj 107 161 nbx 3 14 -1e+37 1e+37 0 0 \$0-length-m \$0-length-m
+empty 0 -6 0 10 -262144 -1 -1 0 256;
+#X text 110 172 length;
+#X text 188 172 position;
+#X obj 155 255 r \$0-loop;
+#X obj 28 226 s \$0-length-m;
+#X obj 53 207 s \$0-length-s;
+#X obj 751 227 s \$0-curr-s;
+#X obj 726 246 s \$0-curr-m;
+#X obj 225 161 nbx 2 14 -1e+37 1e+37 0 0 \$0-curr-s \$0-curr-s empty
+0 -6 0 10 -262144 -1 -1 0 256;
+#X obj 187 161 nbx 3 14 -1e+37 1e+37 0 0 \$0-curr-m \$0-curr-m empty
+0 -6 0 10 -262144 -1 -1 0 256;
+#X msg 577 333 set;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
@@ -149,12 +155,13 @@
 #X connect 37 0 34 0;
 #X connect 37 1 18 0;
 #X connect 37 2 35 0;
-#X connect 38 0 7 0;
 #X connect 39 0 30 0;
 #X connect 39 0 43 0;
 #X connect 41 0 40 0;
-#X connect 42 0 45 0;
-#X connect 42 1 44 0;
-#X connect 43 0 47 0;
-#X connect 43 1 46 0;
+#X connect 42 0 49 0;
+#X connect 42 1 50 0;
+#X connect 43 0 52 0;
+#X connect 43 1 51 0;
+#X connect 48 0 7 0;
+#X connect 55 0 2 0;
 #X coords 0 -1 1 1 160 90 1 100 100;
