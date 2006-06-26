@@ -6,7 +6,7 @@
 #X obj 45 5 bng 15 250 50 0 \$0GUIambi_showsettings \$0GUIambi_showsettings
 set 0 20 0 8 -62784 -1 -1;
 #X obj 10 54 vsl 30 131 0 130 0 0 \$0GUIambiout_fader \$0GUIambiout_fader
-+00 1 140 0 8 -228992 -1 -1 8475 1;
++00 1 140 0 8 -228992 -1 -1 8300 1;
 #N canvas 349 298 695 544 code 0;
 #X obj 52 141 route float;
 #X obj 131 403 - 100;
@@ -142,69 +142,58 @@ set 0 20 0 8 -62784 -1 -1;
 #X connect 36 0 34 0;
 #X connect 36 0 35 0;
 #X restore 78 9 pd code;
-#N canvas 1821 16 438 533 6768-ambisonic.settings 1;
-#X obj 72 10 cnv 15 210 190 empty empty weights 10 12 0 14 -195568
+#N canvas 1821 16 356 557 6768-ambisonic.settings 1;
+#X obj 58 10 cnv 15 185 190 empty empty weights 10 12 0 14 -195568
 -66577 0;
-#X obj 78 179 nbx 3 14 -100 22 0 0 \$0GUI_0_ambiweight_nbx_fromgui
+#X obj 60 179 nbx 3 14 -100 22 0 0 \$0GUI_0_ambiweight_nbx_fromgui
 \$0GUI_0_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 0 256;
-#X obj 118 179 nbx 3 14 -100 22 0 0 \$0GUI_1_ambiweight_nbx_fromgui
+#X obj 96 179 nbx 3 14 -100 22 0 0 \$0GUI_1_ambiweight_nbx_fromgui
 \$0GUI_1_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 0 256;
-#X obj 158 179 nbx 3 14 -100 22 0 0 \$0GUI_2_ambiweight_nbx_fromgui
+#X obj 132 179 nbx 3 14 -100 22 0 0 \$0GUI_2_ambiweight_nbx_fromgui
 \$0GUI_2_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 0 256;
-#X obj 198 179 nbx 3 14 -100 22 0 0 \$0GUI_3_ambiweight_nbx_fromgui
+#X obj 168 179 nbx 3 14 -100 22 0 0 \$0GUI_3_ambiweight_nbx_fromgui
 \$0GUI_3_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 0 256;
-#X obj 238 179 nbx 3 14 -100 22 0 0 \$0GUI_4_ambiweight_nbx_fromgui
+#X obj 204 179 nbx 3 14 -100 22 0 0 \$0GUI_4_ambiweight_nbx_fromgui
 \$0GUI_4_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 0 256;
-#X obj 9 10 cnv 15 60 190 empty empty gain 10 12 0 14 -195568 -66577
+#X obj 10 10 cnv 15 44 190 empty empty gain 1 12 0 14 -195568 -66577
 0;
-#X obj 13 92 cnv 2 38 2 empty empty empty 20 12 0 14 -99865 -66577
+#X obj 14 92 cnv 2 22 2 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 79 89 cnv 2 190 2 empty empty empty 20 12 0 14 -99865 -66577
+#X obj 61 89 cnv 2 174 2 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 88 46 vsl 15 128 0 127 0 0 \$0GUI_0_ambiweight_fromgui \$0GUI_0_ambiweight_togui
+#X obj 70 46 vsl 15 128 0 127 0 0 \$0GUI_0_ambiweight_fromgui \$0GUI_0_ambiweight_togui
 0 5 -8 0 8 -245568 -1 -1 8400 1;
-#X obj 128 46 vsl 15 128 0 127 0 0 \$0GUI_1_ambiweight_fromgui \$0GUI_1_ambiweight_togui
+#X obj 106 46 vsl 15 128 0 127 0 0 \$0GUI_1_ambiweight_fromgui \$0GUI_1_ambiweight_togui
 1 5 -8 0 8 -245568 -1 -1 8400 1;
-#X obj 168 46 vsl 15 128 0 127 0 0 \$0GUI_2_ambiweight_fromgui \$0GUI_2_ambiweight_togui
+#X obj 142 46 vsl 15 128 0 127 0 0 \$0GUI_2_ambiweight_fromgui \$0GUI_2_ambiweight_togui
 2 5 -8 0 8 -245568 -1 -1 8400 1;
-#X obj 208 46 vsl 15 128 0 127 0 0 \$0GUI_3_ambiweight_fromgui \$0GUI_3_ambiweight_togui
+#X obj 178 46 vsl 15 128 0 127 0 0 \$0GUI_3_ambiweight_fromgui \$0GUI_3_ambiweight_togui
 3 5 -8 0 8 -245568 -1 -1 8400 1;
-#X obj 248 46 vsl 15 128 0 127 0 0 \$0GUI_4_ambiweight_fromgui \$0GUI_4_ambiweight_togui
+#X obj 214 46 vsl 15 128 0 127 0 0 \$0GUI_4_ambiweight_fromgui \$0GUI_4_ambiweight_togui
 4 5 -8 0 8 -245568 -1 -1 8400 1;
-#X obj 53 54 vfad_scale -1;
-#X obj 7 206 ambisonic/sphere;
-#X obj 285 10 cnv 15 40 190 empty empty BIN 0 12 0 14 -195568 -66577
-0;
-#X obj 17 46 vsl 30 131 0 130 0 0 \$0GUIambiout_fader \$0GUIambiout_fader
-+00 1 140 0 8 -228992 -1 -1 8475 1;
-#X obj 296 47 vsl 15 128 0 100 0 0 \$0_mirrorweight_fromgui \$0_mirrorweight_togui
-mirror -5 -8 0 8 -245568 -1 -1 8500 1;
-#X obj 287 180 nbx 3 14 0 100 0 0 \$0_mirrorweight_nbx_fromgui \$0_mirrorweight_nbx_togui
-empty 0 -6 0 10 -245568 -1 -1 66.9291 256;
-#X obj 291 89 cnv 2 25 2 empty empty empty 20 12 0 14 -99865 -66577
-0;
+#X obj 38 54 vfad_scale -1;
+#X obj 8 206 ambisonic/sphere;
+#X obj 17 46 vsl 15 131 0 130 0 0 \$0GUIambiout_fader \$0GUIambiout_fader
++00 1 140 0 8 -228992 -1 -1 8300 1;
 #N canvas 1911 538 450 300 BIN 0;
 #X obj 11 11 cnv 15 98 188 empty empty BIN 0 12 0 14 -195568 -66577
 0;
-#X obj 29 110 popup 60 20 #ffffff OUT 01 OUT 01 OUT 02 OUT 03 OUT 04
-OUT 05 OUT 06 OUT 07 OUT 08 OUT 09 OUT 10 OUT 11 OUT 12 OUT 13 OUT 14
-OUT 15 OUT 16 OUT 17 OUT 18 OUT 19 OUT 20 OUT 21 OUT 22 OUT 23 OUT 24
-OUT 25 OUT 26 OUT 27 OUT 28 OUT 29 OUT 30 OUT 31 OUT 32 OUT 33 OUT 34
-OUT 35 OUT 36 OUT 37 OUT 38 OUT 39 OUT 40 OUT 41 OUT 42 OUT 43 OUT 44
-OUT 45 OUT 46 OUT 47 OUT 48 OUT 49 OUT 50 OUT 51 OUT 52 OUT 53 OUT 54
-OUT 55 OUT 56 OUT 57 OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64
-;
-#X obj 29 150 popup 60 20 #ffffff OUT 02 OUT 01 OUT 02 OUT 03 OUT 04
-OUT 05 OUT 06 OUT 07 OUT 08 OUT 09 OUT 10 OUT 11 OUT 12 OUT 13 OUT 14
-OUT 15 OUT 16 OUT 17 OUT 18 OUT 19 OUT 20 OUT 21 OUT 22 OUT 23 OUT 24
-OUT 25 OUT 26 OUT 27 OUT 28 OUT 29 OUT 30 OUT 31 OUT 32 OUT 33 OUT 34
-OUT 35 OUT 36 OUT 37 OUT 38 OUT 39 OUT 40 OUT 41 OUT 42 OUT 43 OUT 44
-OUT 45 OUT 46 OUT 47 OUT 48 OUT 49 OUT 50 OUT 51 OUT 52 OUT 53 OUT 54
-OUT 55 OUT 56 OUT 57 OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64
-;
-#X text 30 87 Left;
-#X text 27 134 Right;
-#X text 15 72 --- OUTS ---;
+#X obj 48 115 popup 60 20 #ffffff OUT OUT 01 OUT 02 OUT 03 OUT 04 OUT 05
+OUT 06 OUT 07 OUT 08 OUT 09 OUT 10 OUT 11 OUT 12 OUT 13 OUT 14 OUT 15
+OUT 16 OUT 17 OUT 18 OUT 19 OUT 20 OUT 21 OUT 22 OUT 23 OUT 24 OUT 25
+OUT 26 OUT 27 OUT 28 OUT 29 OUT 30 OUT 31 OUT 32 OUT 33 OUT 34 OUT 35
+OUT 36 OUT 37 OUT 38 OUT 39 OUT 40 OUT 41 OUT 42 OUT 43 OUT 44 OUT 45
+OUT 46 OUT 47 OUT 48 OUT 49 OUT 50 OUT 51 OUT 52 OUT 53 OUT 54 OUT 55
+OUT 56 OUT 57 OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64;
+#X obj 48 155 popup 60 20 #ffffff OUT OUT 01 OUT 02 OUT 03 OUT 04 OUT 05
+OUT 06 OUT 07 OUT 08 OUT 09 OUT 10 OUT 11 OUT 12 OUT 13 OUT 14 OUT 15
+OUT 16 OUT 17 OUT 18 OUT 19 OUT 20 OUT 21 OUT 22 OUT 23 OUT 24 OUT 25
+OUT 26 OUT 27 OUT 28 OUT 29 OUT 30 OUT 31 OUT 32 OUT 33 OUT 34 OUT 35
+OUT 36 OUT 37 OUT 38 OUT 39 OUT 40 OUT 41 OUT 42 OUT 43 OUT 44 OUT 45
+OUT 46 OUT 47 OUT 48 OUT 49 OUT 50 OUT 51 OUT 52 OUT 53 OUT 54 OUT 55
+OUT 56 OUT 57 OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64;
+#X text 77 97 Left;
+#X text 69 138 Right;
 #N canvas 1437 411 551 231 outrouting_1 0;
 #X obj 11 47 route bang;
 #X obj 11 181 outlet;
@@ -253,16 +242,23 @@ OUT 55 OUT 56 OUT 57 OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64
 #X connect 9 0 3 0;
 #X connect 10 0 6 0;
 #X restore 119 151 pd outrouting_2;
-#X connect 1 0 6 0;
-#X connect 2 0 7 0;
-#X connect 6 0 1 0;
-#X connect 7 0 2 0;
+#X obj 20 47 vsl 15 128 0 100 0 0 \$0_mirrorweight_fromgui \$0_mirrorweight_togui
+mirror -5 -8 0 8 -245568 -1 -1 0 1;
+#X obj 11 180 nbx 3 14 0 100 0 0 \$0_mirrorweight_nbx_fromgui \$0_mirrorweight_nbx_togui
+empty 0 -6 0 10 -245568 -1 -1 0 256;
+#X obj 15 89 cnv 2 25 2 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X text 54 84 -OUTS -;
+#X connect 1 0 5 0;
+#X connect 2 0 6 0;
+#X connect 5 0 1 0;
+#X connect 6 0 2 0;
 #X coords 0 -1 1 1 100 190 1 10 10;
-#X restore 330 10 pd BIN;
+#X restore 248 10 pd BIN;
 #X restore 1 205 pd \$0-ambisonic.settings;
 #X obj 44 61 vfad_scale -1;
 #X obj 3 31 tgl 15 0 \$0_24_fromgui \$0_24_togui 24 3 -6 0 8 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 26 31 tgl 15 0 \$0_BIN_fromgui \$0_BIN_togui BIN 0 -6 0 8 -262144
 -1 -1 0 1;
 #X coords 0 -1 1 1 65 200 1 0 0;

@@ -1,5 +1,5 @@
 #N canvas 422 306 602 462 10;
-#N canvas 72 60 542 590 config 0;
+#N canvas 72 60 542 590 config 1;
 #X floatatom 54 146 5 8 50 0 - - -;
 #X floatatom 182 47 3 0 100 0 - - -;
 #X floatatom 218 46 3 0 100 0 - - -;
@@ -208,13 +208,13 @@
 #X connect 43 0 51 0;
 #X connect 55 1 11 1;
 #X restore 236 -12 pd config;
-#X obj 31 354 s \$0_sphere_fromgui;
-#X obj 31 31 cnv 15 318 318 empty empty empty 20 12 0 14 -195568 -66577
+#X obj 30 370 s \$0_sphere_fromgui;
+#X obj 31 31 cnv 15 338 338 empty empty empty 20 12 0 14 -195568 -66577
 0;
-#X obj 31 31 cube_sphere 16 159 24 52 195567 262080 80 21 261440 238
-21 260864 159 0 260288 21 238 259712 296 238 259136 159 317 258560
-21 80 258048 296 80 4032 97 51 4040 220 51 4049 51 220 4058 266 220
-4067 159 105 4076 212 159 4085 159 212 4095 105 159;
+#X obj 42 42 cube_sphere 16 159 24 52 195567 262080 159 0 261440 159
+0 260864 159 0 260288 0 159 259712 317 159 259136 159 317 258560 12
+98 258048 174 1 4032 103 10 4040 159 0 4049 0 159 4058 317 159 4067
+159 0 4076 159 159 4085 159 159 4095 0 159;
 #X obj 31 7 r \$0_sphere_togui;
 #X obj 389 20 OUT/ambisonic/helper/send_receive_azm_elv \$0 1;
 #X obj 390 44 OUT/ambisonic/helper/send_receive_azm_elv \$0 2;
@@ -234,4 +234,4 @@
 #X obj 387 391 OUT/ambisonic/helper/send_receive_azm_elv \$0 16;
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
-#X coords 0 -1 1 1 320 320 1 30 30;
+#X coords 0 -1 1 1 340 340 1 30 30;
