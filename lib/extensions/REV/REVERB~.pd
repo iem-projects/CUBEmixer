@@ -1,4 +1,4 @@
-#N canvas 1307 0 461 348 10;
+#N canvas 88 472 478 328 10;
 #X obj 158 101 inlet~;
 #X obj 158 164 REV/REV_1_2_2~ 12 ++ stat;
 #X obj 159 286 outlet~;

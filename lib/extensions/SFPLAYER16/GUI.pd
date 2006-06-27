@@ -1,7 +1,8 @@
 #N canvas 0 135 993 483 10;
 #X obj 537 264 openpanel;
 #X obj 537 288 t b s;
-#X msg 537 333;
+#X msg 537 333 /Net/iem/Benutzer/ritsch/usr/projekte/CUBEmixer/svn/trunk/sounds/schritte.wav
+;
 #X msg 565 308 set \$1;
 #X msg 537 243 bang;
 #X msg 314 243 play;
@@ -25,7 +26,7 @@
 -66577 0;
 #X obj 135 118 bng 20 250 50 0 \$0pause \$0pause empty 3 10 0 12 -262144
 -260818 -1;
-#X obj 165 118 bng 20 250 50 0 \$0stop \$0stop empty 5 9 0 16 -262144
+#X obj 165 118 bng 22 250 50 0 \$0stop \$0stop empty 5 9 0 16 -262144
 -258699 -1;
 #X obj 234 118 bng 20 250 50 0 \$0load \$0load empty 0 -6 0 8 -228992
 -1 -1;
@@ -42,7 +43,7 @@
 #X obj 250 216 t f f f;
 #X obj 473 106 t b b b;
 #X obj 194 120 tgl 15 0 \$0-loop \$0-loop empty 5 7 0 10 -262144 -1
--1 0 1;
+-1 1 1;
 #X obj 584 180 t f;
 #X obj 207 72 samplerate~;
 #X obj 207 47 loadbang;
@@ -116,14 +117,14 @@ empty 0 -6 0 10 -262144 -1 -1 0 256;
 -24198 -1;
 #X obj 106 118 iem_image PICS/play.gif 0 0 empty empty;
 #X obj 135 118 iem_image PICS/pause.gif 0 0 empty empty;
-#X obj 165 118 iem_image PICS/stop.gif 0 0 empty empty;
+#X obj 166 119 iem_image PICS/stop.gif 0 0 empty empty;
 #X obj 155 274 t f f;
 #X msg 125 387 open \$1;
-#X msg 249 381 PICS/noloop_bg.gif;
-#X msg 190 361 PICS/loop_bg.gif;
-#X obj 199 400 symbol;
-#X obj 190 341 select 0;
-#X obj 194 120 iem_image PICS/loop_bg.gif 0 0 empty empty;
+#X msg 186 386 PICS/noloop_bg.gif;
+#X msg 235 361 PICS/loop_bg.gif;
+#X obj 203 445 symbol;
+#X obj 188 334 select 0;
+#X obj 194 120 iem_image PICS/noloop_bg.gif 0 0 empty empty;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
@@ -180,6 +181,6 @@ empty 0 -6 0 10 -262144 -1 -1 0 256;
 #X connect 61 0 63 0;
 #X connect 62 0 63 0;
 #X connect 63 0 60 0;
-#X connect 64 0 62 0;
-#X connect 64 1 61 0;
+#X connect 64 0 61 0;
+#X connect 64 1 62 0;
 #X coords 0 -1 1 1 160 90 1 100 100;
