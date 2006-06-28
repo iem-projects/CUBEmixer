@@ -1,9 +1,9 @@
 #N canvas 0 0 450 300 10;
-#X obj 101 101 cnv 15 88 68 empty empty NET 0 7 0 14 -233017 -66577
+#X obj 101 101 cnv 15 163 68 empty empty NET 0 7 0 14 -233017 -66577
 0;
 #X obj 103 152 bng 15 250 50 0 empty empty popup_init 20 7 0 10 -241291
 -1 -1;
-#N canvas 1310 458 909 371 net 1;
+#N canvas 1310 458 909 371 net 0;
 #X obj 108 169 NET/GUInet;
 #X obj 118 20 inlet;
 #X obj 118 137 s GUInet_init;
@@ -94,4 +94,4 @@ query the DSP-names;
 -1;
 #X connect 1 0 2 1;
 #X connect 3 0 2 0;
-#X coords 0 -1 1 1 90 70 1 100 100;
+#X coords 0 -1 1 1 165 70 1 100 100;

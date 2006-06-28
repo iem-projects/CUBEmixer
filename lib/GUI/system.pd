@@ -7,11 +7,10 @@
 #X obj 230 135 r \$0_open;
 #X obj 230 159 f \$0;
 #X msg 230 213 \; \$1 vis 1;
-#N canvas 2059 256 315 180 6527-system-settings 0;
-#X obj 14 89 extensions/TESTTONE/GUI;
-#X obj 163 16 cue PARAMETERS;
-#X obj 21 17 cue SETTINGS;
-#X obj 193 87 GUI/net;
+#N canvas 224 180 315 379 6207-system-settings 0;
+#X obj 23 142 extensions/TESTTONE/GUI;
+#X obj 23 212 GUI/net;
+#X obj 23 17 CUEstorage;
 #X restore 242 99 pd \$0-system-settings;
 #X obj 230 185 makefilename pd-%d-system-settings;
 #X obj 102 147 tgl 15 0 \$0-really \$0-really really 16 7 0 12 -258699
