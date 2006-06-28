@@ -1,8 +1,7 @@
 #N canvas 0 135 993 483 10;
 #X obj 537 264 openpanel;
 #X obj 537 288 t b s;
-#X msg 537 333 /Net/iem/Benutzer/ritsch/usr/projekte/CUBEmixer/svn/trunk/sounds/schritte.wav
-;
+#X msg 537 333;
 #X msg 565 308 set \$1;
 #X msg 537 243 bang;
 #X msg 314 243 play;
@@ -26,7 +25,7 @@
 -66577 0;
 #X obj 135 118 bng 20 250 50 0 \$0pause \$0pause empty 3 10 0 12 -262144
 -260818 -1;
-#X obj 165 118 bng 22 250 50 0 \$0stop \$0stop empty 5 9 0 16 -262144
+#X obj 165 118 bng 20 250 50 0 \$0stop \$0stop empty 5 9 0 16 -262144
 -258699 -1;
 #X obj 234 118 bng 20 250 50 0 \$0load \$0load empty 0 -6 0 8 -228992
 -1 -1;
@@ -43,10 +42,8 @@
 #X obj 250 216 t f f f;
 #X obj 473 106 t b b b;
 #X obj 194 120 tgl 15 0 \$0-loop \$0-loop empty 5 7 0 10 -262144 -1
--1 1 1;
+-1 0 1;
 #X obj 584 180 t f;
-#X obj 207 72 samplerate~;
-#X obj 207 47 loadbang;
 #N canvas 258 230 228 256 time 0;
 #X obj 26 54 * 0.001;
 #X obj 74 149 % 60;
@@ -98,7 +95,7 @@
 #X connect 8 0 9 0;
 #X restore 726 203 pd time;
 #X obj 145 161 nbx 2 14 -1e+37 1e+37 0 0 \$0-length-s \$0-length-s
-empty 0 -6 0 10 -262144 -1 -1 12 256;
+empty 0 -6 0 10 -262144 -1 -1 0 256;
 #X obj 107 161 nbx 3 14 -1e+37 1e+37 0 0 \$0-length-m \$0-length-m
 empty 0 -6 0 10 -262144 -1 -1 0 256;
 #X text 110 172 length;
@@ -117,14 +114,17 @@ empty 0 -6 0 10 -262144 -1 -1 0 256;
 -24198 -1;
 #X obj 106 118 iem_image PICS/play.gif 0 0 empty empty;
 #X obj 135 118 iem_image PICS/pause.gif 0 0 empty empty;
-#X obj 166 119 iem_image PICS/stop.gif 0 0 empty empty;
+#X obj 165 118 iem_image PICS/stop.gif 0 0 empty empty;
 #X obj 155 274 t f f;
-#X msg 125 387 open \$1;
-#X msg 186 386 PICS/noloop_bg.gif;
-#X msg 235 361 PICS/loop_bg.gif;
-#X obj 203 445 symbol;
-#X obj 188 334 select 0;
+#X msg 199 423 open \$1;
+#X msg 199 380 PICS/noloop_bg.gif;
+#X msg 249 361 PICS/loop_bg.gif;
+#X obj 199 400 symbol;
+#X obj 190 331 select 0;
 #X obj 194 120 iem_image PICS/noloop_bg.gif 0 0 empty empty;
+#X obj 91 358 del 100;
+#X obj 91 336 loadbang;
+#X msg 91 450 open PICS/stop.gif;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
@@ -152,7 +152,7 @@ empty 0 -6 0 10 -262144 -1 -1 0 256;
 #X connect 26 0 35 0;
 #X connect 27 0 26 0;
 #X connect 28 0 27 0;
-#X connect 28 0 41 0;
+#X connect 28 0 39 0;
 #X connect 29 0 26 0;
 #X connect 30 0 10 0;
 #X connect 31 0 32 0;
@@ -167,20 +167,23 @@ empty 0 -6 0 10 -262144 -1 -1 0 256;
 #X connect 36 1 18 0;
 #X connect 36 2 34 0;
 #X connect 38 0 29 0;
-#X connect 38 0 42 0;
-#X connect 40 0 39 0;
-#X connect 41 0 48 0;
-#X connect 41 1 49 0;
-#X connect 42 0 51 0;
-#X connect 42 1 50 0;
-#X connect 47 0 59 0;
-#X connect 54 0 2 0;
-#X connect 59 0 7 0;
-#X connect 59 1 64 0;
-#X connect 60 0 65 0;
-#X connect 61 0 63 0;
-#X connect 62 0 63 0;
-#X connect 63 0 60 0;
-#X connect 64 0 61 0;
-#X connect 64 1 62 0;
+#X connect 38 0 40 0;
+#X connect 39 0 46 0;
+#X connect 39 1 47 0;
+#X connect 40 0 49 0;
+#X connect 40 1 48 0;
+#X connect 45 0 57 0;
+#X connect 52 0 2 0;
+#X connect 57 0 7 0;
+#X connect 57 1 62 0;
+#X connect 58 0 63 0;
+#X connect 59 0 61 0;
+#X connect 60 0 61 0;
+#X connect 61 0 58 0;
+#X connect 62 0 59 0;
+#X connect 62 1 60 0;
+#X connect 64 0 59 0;
+#X connect 64 0 66 0;
+#X connect 65 0 64 0;
+#X connect 66 0 56 0;
 #X coords 0 -1 1 1 160 90 1 100 100;
