@@ -36,6 +36,13 @@ pd/DSP/ambisonic:
 
   - ambisonic-orientation funktioniert nicht (nicht implementiert!)
 
+  - early reflections über auxiliary channels + plugin implementieren
+    draft: 5 early reflections (von jeder wand genau eine, 0ter ordnung)
+    laufzeiten, gain und filter der einzelnen quellen werden im kanalzug gerechnet und dann
+    auf den jeweiligen aux-kanal aufaddiert
+
+  - ambisonic gewichtung pro kanal (?)
+
 
 pd/GUI:
   - SPLAYER als Eingang zwar im Patch aber keine Bedienung in der 
@@ -60,8 +67,6 @@ pd/GUI:
     daher [sendreceive_nofb] verwenden
 
   - bus zuordnung in channel-detail-view und inchan wird nicht immer korrekt upgedated
-
-  - 
 
 
 pd/MIDI:
@@ -102,6 +107,7 @@ pd/CUE:
   - "setting"-Kategorie ist ohne "parameter" sinnlos (uninitialisierte werte)
     evtl. "save-setting" in eine "save-all" (param+set) kategorie umwandeln
     und nur einen einzigen "load" button anbieten (nachteil bei reload!)
+  + neue CUE-struktur: nur ein "load" button, bei "save" kann man auswählen (auch filter)
 
 
 hardware/bc{f,r}2000:
