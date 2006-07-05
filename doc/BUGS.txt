@@ -21,6 +21,7 @@ section/subsection:
 ==============================================================================
 
 pd/DSP:
+
   - aux-funktioniert nicht (dsp-seiting)
   + funktioniert
 
@@ -28,6 +29,7 @@ pd/DSP:
   + SFPLAYER implementiert (als extension)
 
 pd/DSP/ambisonic:
+
   - Distanzregler wird leiser wenn Entfernung 0..1
     Bitte irgendwie linearisieren
 
@@ -46,6 +48,7 @@ pd/DSP/ambisonic:
 
 
 pd/GUI:
+
   - SPLAYER als Eingang zwar im Patch aber keine Bedienung in der 
     Mastersektion. Eventuell konzept dazu.
     PLAY, PAUSE, STOP, LOAD, timeline(?)
@@ -75,6 +78,7 @@ pd/GUI:
 
 
 pd/MIDI:
+
   - MIDIconnect zu einen Behringer funktioniert standardmässig nicht.
   + settings waren falsch gespeichert; korrigiert (über reset 
     in [MIDI/aconnector] und anschließendem speichern dieses patches
@@ -87,6 +91,7 @@ pd/MIDI:
 pd/NET:
 
 pd/plugins:
+
   - plugin-creator script, das automatisch die plugins einbindet.
   + importPlugins.sh implementiert.
   + importPlugins.tcl implementiert (sollte platformunabhängig sein)
@@ -99,11 +104,13 @@ pd/plugins:
   + [plugin~] in [CUBEmixer_plugin~] umbenannt
 
 pd/extensions:
+
   - tm's superhall einbinden
   + eingebunden (ist beinahe identisch mit simplerev)
   + ersetzt durch ARRR
 
 pd/CUE:
+
   - Die Matrix Bus zu DAC~ wird nicht in den Settings oder parameter 
     gespeichert.
   + fixed saving/restoring mechanism
@@ -120,6 +127,7 @@ pd/CUE:
 
 
 hardware/bc{f,r}2000:
+
   - channel-select-5 gibt controller für channel-select-4 aus! 
     (13 selectiert 12!!)
   + am controller geändert (die setting-files im hw-folder sind

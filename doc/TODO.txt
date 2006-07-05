@@ -1,41 +1,33 @@
+ACHTUNG: bitte in diesem file nichts editieren!
+ACHTUNG: statt dessen das file BUGS.txt editieren!
+ACHTUNG:
+ACHTUNG: (dieses file ist nur ein view auf BUGS.txt)
 
-section/subsection:
-  - mit "-" beginnende zeilen sind BUGS/TODO
-  - was ist section/subsection?
-  - layout
-
+==============================================================================
+=                                   TODO                                     =
+==============================================================================
 pd/DSP:
-  - aux-funktioniert nicht (dsp-seiting)
-  - SFPLAYER nur dummym‰ﬂig implementiert
-
 pd/DSP/ambisonic:
   - Distanzregler wird leiser wenn Entfernung 0..1
-  - stellt man die ambisonic-gewichte um, wird es laut (0dBmidi <-> 0dBrms)
+    Bitte irgendwie linearisieren
   - ambisonic-orientation funktioniert nicht (nicht implementiert!)
-
+  - ambisonic gewichtung pro kanal (?)
+    (bei r<1 werden die gewichte ja schon ver‰ndert!)
 pd/GUI:
-  - SPLAYER als Eingang zwar im Patch aber keine Bedienung in der 
-  - GUI-feedback bei umschalten ambisonic/direct
-  - spat-umschaltung wird in [inchan] nicht dargestellt
-  - aux-funktioniert nicht 
   - ambisonic/direct werden nicht korrekt initialisiert
-
+  - bus zuordnung in channel-detail-view und inchan wird nicht immer korrekt upgedated
+  - VU-Bank
+  - zoom-funktion f¸r die BUS-Matrix
 pd/MIDI:
-  - MIDIconnect zu einen Behringer funktioniert standardm‰ssig nicht.
   - MIDI in/out sollte schaltbar sein (z.b. keine positionsdaten 
+    an midi-out schicken)
   - Konzept f¸r MIDI-anbindung von extensions/plugins
-
 pd/NET:
-
 pd/plugins:
-  - plugin-creator script, das automatisch die plugins einbindet.
-
 pd/extensions:
-  - tm's superhall einbinden
-
 pd/CUE:
-  - Die Matrix Bus zu DAC~ wird nicht in den Settings oder parameter 
-
+  - beim Laden der Settings ist die Bus-Zuordnung nur in der Detailansicht 
+    der Channels sichtbar, jedoch nicht oben bei den Channels. Erst beim 
+    Laden der Parameter ist die Bus-Zuordnung auch oben sichtbar.
+    (tutner, 25.04.06)
 hardware/bc{f,r}2000:
-  - channel-select-5 gibt controller f¸r channel-select-4 aus! 
-  - Beschriftung der Controller 

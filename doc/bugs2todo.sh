@@ -14,7 +14,16 @@ echo
 
 print_header > ${TODO}
 
-cat ${BUGS} | \
- egrep "^([[:alnum:]]|([[:space:]]*\-))" | \
- sed "/^[[:alnum:]]/{x;p;x}" \
- > ${TODO}
+#cat ${BUGS} | \
+# sed -e '/./{H;$!d;}' -e 'x;/\+/d' \
+# > ${TODO}
+
+cat ${BUGS} \
+ | sed -e '/./{H;$!d;};x;/\+/d' \
+ | grep . \
+ >> ${TODO}
+
+#cat ${BUGS} | \
+# egrep "^([[:alnum:]]|([[:space:]]*\-))" | \
+# sed "/^[[:alnum:]]/{x;p;x}" \
+# > ${TODO}
