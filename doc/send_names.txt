@@ -5,11 +5,11 @@
 
 soundfile-player: 
 --------------------------------------------------------
-jeder soundfile-player (egal wieviele kan�e er hat) hat einen uniq-name <ID>
+jeder soundfile-player (egal wieviele kanaele er hat) hat einen uniq-name <ID>
 ausgabe des sfplayers  sollte auf <ID>:<channel>_PLAY erfolgen
 
-der <ID> wird immer prefixed
-$1_SFPLAY_FILE <soundfile>: l�t <soundfile>
+der <ID> wird immer prefixed (ist also hier $1)
+$1_SFPLAY_FILE <soundfile>: liest <soundfile>
 $1_SFPLAY_CTRL play | pause | stop | loop <1|0}>: start/pause/stop/loop on|off
 $1_SFPLAY_CTRL jump <time> : springt zur zeit <time> in [ms]
 
@@ -88,10 +88,10 @@ $1_IN_PLUGIN_$2_NAME <pluginname>: auswahl plugins <pluginname> im fx-slot $2 de
 $1_IN_PLUGIN_$2_ON: auswahl plugins #plugin im fx-slot $2 des kanals $1
 $1_IN_PLUGIN_$2_<pluginname>_<param>: plugin-parameter fr das plugin <pluginname> im fx-slot $2 im kanal $1
 		pE: 1_IN_PLUGIN_3_COMPANDER_ATT_TIME
-	muss vom plugin selbst gehandelt werden, dafr gibt es 
+	muss vom plugin selbst gehandelt werden, dafuer gibt es 
 		[receive_pluginparam $1 $2 <pluginname>_<param>]
 		[receive_pluginsetting $1 $2 <pluginname>_<param>]
-		pE: [receive_pluginparam 1 3 COMPANDER_ATT_TIME]
+		pE: [receive_pluginparam 1 3 COMPANDER_ATT_TIME] empfaengt auf "1_IN_PLUGIN_3_COMPANDER_ATT_TIME"
 
 
 ====OUTPUT========================================================================================

@@ -38,10 +38,11 @@ pd/DSP/ambisonic:
 
   - early reflections über auxiliary channels + plugin implementieren
     draft: 5 early reflections (von jeder wand genau eine, 0ter ordnung)
-    laufzeiten, gain und filter der einzelnen quellen werden im kanalzug gerechnet und dann
-    auf den jeweiligen aux-kanal aufaddiert
+    laufzeiten, gain und filter der einzelnen quellen werden im kanalzug
+    gerechnet und dann auf den jeweiligen aux-kanal aufaddiert
 
   - ambisonic gewichtung pro kanal (?)
+    (bei r<1 werden die gewichte ja schon verändert!)
 
 
 pd/GUI:
@@ -68,6 +69,10 @@ pd/GUI:
 
   - bus zuordnung in channel-detail-view und inchan wird nicht immer korrekt upgedated
 
+  - VU-Bank
+
+  - zoom-funktion für die BUS-Matrix
+
 
 pd/MIDI:
   - MIDIconnect zu einen Behringer funktioniert standardmässig nicht.
@@ -84,6 +89,10 @@ pd/NET:
 pd/plugins:
   - plugin-creator script, das automatisch die plugins einbindet.
   + importPlugins.sh implementiert.
+  + importPlugins.tcl implementiert (sollte platformunabhängig sein)
+    (allerdings keine tests auf w32 durchgeführt)
+  + in TOOLS/configurator/ ist ein pd-patch der plugins einbaut.
+    (theoretisch platform unabhängig, von externals abhängig)
 
   - [plugin~] (in pd/DSP/) collidiert mit dem external [plugin~]
     für VST-plugins
