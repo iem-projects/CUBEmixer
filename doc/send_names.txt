@@ -123,7 +123,7 @@ Operating Parameter werden im Betrieb staendig nachgeladen und verursachen keine
   (fuer mehrere Module)
 
 
-===TALKBACK==============================================================
+=== FROM DSP ==============================================================
 
 $1_IN_VU_SRC: 0=input("adc in"), 1=pre, 2=post
 $1_IN_VU_LEVEL: dsp->gui talkback
