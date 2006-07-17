@@ -28,7 +28,7 @@ iemgui written by Thomas Musil, Copyright (c) IEM KUG Graz Austria 2000 - 2005 *
 #include "iemlib.h"
 #include "iemgui.h"
 
-#define IEMGUI_CUBE_SPHERE_MAX 100
+#define IEMGUI_CUBE_SPHERE_MAX 200
 
 /* ---------- cube_sphere	my gui-canvas for a window ---------------- */
 
@@ -44,6 +44,7 @@ typedef struct _cube_sphere
 	int				x_pix_src_x[IEMGUI_CUBE_SPHERE_MAX];
 	int				x_pix_src_y[IEMGUI_CUBE_SPHERE_MAX];
 	int				x_col_src[IEMGUI_CUBE_SPHERE_MAX];
+  int				x_vis_src[IEMGUI_CUBE_SPHERE_MAX];
 	int				x_pos_x;
 	int				x_pos_y;
 	float			x_pos_dx;
@@ -174,10 +175,11 @@ void cube_sphere_draw_new(t_cube_sphere *x, t_glist *glist)
   {
     for(i=0; i<n; i++)
     {
-      sys_vgui(".x%x.c create text %d %d -text {%d} -anchor c \
-        -font {times %d bold} -fill #%6.6x -tags %xSRC%d\n",
-        canvas, xpos+x->x_pix_src_x[i], ypos+x->x_pix_src_y[i], i+1, x->x_fontsize,
-        x->x_col_src[i], x, i);
+      if(x->x_vis_src[i])
+        sys_vgui(".x%x.c create text %d %d -text {%d} -anchor c \
+          -font {times %d bold} -fill #%6.6x -tags %xSRC%d\n",
+          canvas, xpos+x->x_pix_src_x[i], ypos+x->x_pix_src_y[i], i+1, x->x_fontsize,
+          x->x_col_src[i], x, i);
     }
   }
 }
@@ -204,8 +206,9 @@ void cube_sphere_draw_move(t_cube_sphere *x, t_glist *glist)
 		canvas, x, x2-2, y2-2, x2+2, y2+2);
 	for(i=0; i<n; i++)
 	{
-		sys_vgui(".x%x.c coords %xSRC%d %d %d\n",
-			canvas, x, i, xpos+x->x_pix_src_x[i], ypos+x->x_pix_src_y[i]);
+    if(x->x_vis_src[i])
+		  sys_vgui(".x%x.c coords %xSRC%d %d %d\n",
+			  canvas, x, i, xpos+x->x_pix_src_x[i], ypos+x->x_pix_src_y[i]);
 	}
 }
 
@@ -222,7 +225,8 @@ void cube_sphere_draw_erase(t_cube_sphere* x, t_glist* glist)
 	n = x->x_n_src;
 	for(i=0; i<n; i++)
 	{
-		sys_vgui(".x%x.c delete %xSRC%d\n", canvas, x, i);
+    if(x->x_vis_src[i])
+		  sys_vgui(".x%x.c delete %xSRC%d\n", canvas, x, i);
 	}
 }
 
@@ -286,35 +290,39 @@ static void cube_sphere_save(t_gobj *z, t_binbuf *b)
 
 static void cube_sphere_motion(t_cube_sphere *x, t_floatarg dx, t_floatarg dy)
 {
-	int i, diffx, diffy, diffr, xx, yy;
-	int sel=x->x_sel_index;
-	int rad = x->x_radius;
-	int xpos=text_xpix(&x->x_gui.x_obj, x->x_gui.x_glist);
-	int ypos=text_ypix(&x->x_gui.x_obj, x->x_gui.x_glist);
-	t_canvas *canvas=glist_getcanvas(x->x_gui.x_glist);
+  int sel=x->x_sel_index;
 
-	x->x_pos_x += (int)dx;
-	x->x_pos_y += (int)dy;
-	x->x_pix_src_x[sel] = x->x_pos_x;
-	x->x_pix_src_y[sel] = x->x_pos_y;
-	diffx = x->x_pix_src_x[sel] - rad;
-	diffy = x->x_pix_src_y[sel] - rad;
-	x->x_pos_dx=(float)diffx;
-	x->x_pos_dy=(float)diffy;
-	x->x_pos_dr = sqrt(diffx * diffx + diffy * diffy);
-	diffr = (int)(x->x_pos_dr+0.49999f);
-	if(diffr > rad)
-	{
-		xx = rad * diffx;
-		xx /= diffr;
-		yy = rad * diffy;
-		yy /= diffr;
-		x->x_pix_src_y[sel] = rad + yy;
-		x->x_pix_src_x[sel] = rad + xx;
-	}
-	cube_sphere_out_sel(x);
-	sys_vgui(".x%x.c coords %xSRC%d %d %d\n",
-		canvas, x, sel, xpos+x->x_pix_src_x[sel], ypos+x->x_pix_src_y[sel]);
+  if(x->x_vis_src[sel])
+  {
+    int i, diffx, diffy, diffr, xx, yy;
+    int rad = x->x_radius;
+    int xpos=text_xpix(&x->x_gui.x_obj, x->x_gui.x_glist);
+    int ypos=text_ypix(&x->x_gui.x_obj, x->x_gui.x_glist);
+    t_canvas *canvas=glist_getcanvas(x->x_gui.x_glist);
+    
+    x->x_pos_x += (int)dx;
+    x->x_pos_y += (int)dy;
+    x->x_pix_src_x[sel] = x->x_pos_x;
+    x->x_pix_src_y[sel] = x->x_pos_y;
+    diffx = x->x_pix_src_x[sel] - rad;
+    diffy = x->x_pix_src_y[sel] - rad;
+    x->x_pos_dx=(float)diffx;
+    x->x_pos_dy=(float)diffy;
+    x->x_pos_dr = sqrt(diffx * diffx + diffy * diffy);
+    diffr = (int)(x->x_pos_dr+0.49999f);
+    if(diffr > rad)
+    {
+      xx = rad * diffx;
+      xx /= diffr;
+      yy = rad * diffy;
+      yy /= diffr;
+      x->x_pix_src_y[sel] = rad + yy;
+      x->x_pix_src_x[sel] = rad + xx;
+    }
+    cube_sphere_out_sel(x);
+    sys_vgui(".x%x.c coords %xSRC%d %d %d\n",
+      canvas, x, sel, xpos+x->x_pix_src_x[sel], ypos+x->x_pix_src_y[sel]);
+  }
 }
 
 static void cube_sphere_click(t_cube_sphere *x, t_floatarg xpos, t_floatarg ypos,
@@ -359,10 +367,13 @@ static void cube_sphere_click(t_cube_sphere *x, t_floatarg xpos, t_floatarg ypos
 		}
 		if(sel >= 0)
 		{
-			x->x_sel_index = sel;
-			x->x_pos_x = x->x_pix_src_x[sel];
-			x->x_pos_y = x->x_pix_src_y[sel];
-			glist_grab(x->x_gui.x_glist, &x->x_gui.x_obj.te_g, (t_glistmotionfn)cube_sphere_motion, 0, xpos, ypos);
+      if(x->x_vis_src[sel])
+      {
+        x->x_sel_index = sel;
+        x->x_pos_x = x->x_pix_src_x[sel];
+        x->x_pos_y = x->x_pix_src_y[sel];
+        glist_grab(x->x_gui.x_glist, &x->x_gui.x_obj.te_g, (t_glistmotionfn)cube_sphere_motion, 0, xpos, ypos);
+      }
 		}
 	}
 }
@@ -395,10 +406,14 @@ static void cube_sphere_src_font(t_cube_sphere *x, t_floatarg ff)
 		fs = 150;
 	x->x_fontsize = fs;
 
-	for(i=0; i<n; i++)
-	{
-		sys_vgui(".x%x.c itemconfigure %xSRC%d -font {times %d bold}\n", canvas, x, i, fs);
-	}
+  if(glist_isvisible(x->x_gui.x_glist))
+  {
+    for(i=0; i<n; i++)
+    {
+      if(x->x_vis_src[i])
+        sys_vgui(".x%x.c itemconfigure %xSRC%d -font {times %d bold}\n", canvas, x, i, fs);
+    }
+  }
 }
 
 static void cube_sphere_src_dp(t_cube_sphere *x, t_symbol *s, int argc, t_atom *argv)
@@ -429,61 +444,11 @@ static void cube_sphere_src_dp(t_cube_sphere *x, t_symbol *s, int argc, t_atom *
 
 		x->x_pix_src_x[i] = x->x_radius - (int)(delta*sin(phi) + 0.49999f);
 		x->x_pix_src_y[i] = x->x_radius - (int)(delta*cos(phi) + 0.49999f);
-    if(glist_isvisible(x->x_gui.x_glist))
+    if(glist_isvisible(x->x_gui.x_glist) && x->x_vis_src[i])
 		  sys_vgui(".x%x.c coords %xSRC%d %d %d\n",
 			  canvas, x, i, xpos+x->x_pix_src_x[i], ypos+x->x_pix_src_y[i]);
 	}
 }
-
-/*static void cube_sphere_size(t_cube_sphere *x, t_floatarg size)
-{
-	float oldrad=x->x_radius;
-	float xr, yr;
-	int i, diffr, diffx, diffy, xx, yy, newrad, n=x->x_n_src;
-	int xpos=text_xpix(&x->x_gui.x_obj, x->x_gui.x_glist);
-	int ypos=text_ypix(&x->x_gui.x_obj, x->x_gui.x_glist);
-
-	size /= 6.0f;
-	newrad = (int)(size + 0.4999f);
-	newrad *= 3;
-	if(newrad < 10)
-		newrad = 10;
-	if(newrad > 1800)
-		newrad = 1800;
-
-	for(i=0; i<n; i++)
-	{
-		diffx = x->x_pix_src_x[i] - oldrad;
-		diffy = x->x_pix_src_y[i] - oldrad;
-		diffr = (int)(sqrt(diffx * diffx + diffy * diffy)+0.49999f);
-		if(diffr > newrad)
-		{
-			if(diffr)
-			{
-				xx = newrad * diffx;
-				xx /= diffr;
-				yy = newrad * diffy;
-				yy /= diffr;
-			}
-			else
-			{
-				xx = 0;
-				yy = 0;
-			}
-			x->x_pix_src_x[i] = newrad + xx;
-			x->x_pix_src_y[i] = newrad + yy;
-		}
-	}
-
-	x->x_90overradius = 90.0f / (float)newrad;
-	x->x_radius = newrad;
-	x->x_gui.x_h = 2*newrad;
-	x->x_gui.x_w = 2*newrad;
-
-	cube_sphere_out_all(x);
-	(*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_MOVE);
-	canvas_fixlinesfor(glist_getcanvas(x->x_gui.x_glist), (t_text*)x);
-}*/
 
 static void cube_sphere_size(t_cube_sphere *x, t_floatarg size)
 {
@@ -526,8 +491,70 @@ static void cube_sphere_size(t_cube_sphere *x, t_floatarg size)
 	x->x_gui.x_w = 2*newrad;
 
 	cube_sphere_out_all(x);
-	(*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_MOVE);
-	canvas_fixlinesfor(glist_getcanvas(x->x_gui.x_glist), (t_text*)x);
+  if(glist_isvisible(x->x_gui.x_glist))
+  {
+	  (*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_MOVE);
+	  canvas_fixlinesfor(glist_getcanvas(x->x_gui.x_glist), (t_text*)x);
+  }
+}
+
+static void cube_sphere_vis(t_cube_sphere *x, t_symbol *s, int argc, t_atom *argv)
+{
+	int index, n=x->x_n_src;
+	int xpos=text_xpix(&x->x_gui.x_obj, x->x_gui.x_glist);
+	int ypos=text_ypix(&x->x_gui.x_obj, x->x_gui.x_glist);
+  int newstate, oldstate;
+	t_canvas *canvas=glist_getcanvas(x->x_gui.x_glist);
+
+	if(argc < 2)
+	{
+		post("cube_sphere ERROR: vis-input needs 1 index + 1 visual state");
+		return;
+	}
+	index = (int)atom_getint(argv++) - 1;
+  
+  if((index >= 0) && (index < n))
+	{
+    newstate = ((int)atom_getint(argv) ? 1 : 0);
+    oldstate = x->x_vis_src[index];
+
+    if(newstate && !oldstate)
+    {
+      if(glist_isvisible(x->x_gui.x_glist))
+        sys_vgui(".x%x.c create text %d %d -text {%d} -anchor c \
+          -font {times %d bold} -fill #%6.6x -tags %xSRC%d\n",
+          canvas, xpos+x->x_pix_src_x[index], ypos+x->x_pix_src_y[index], index+1, x->x_fontsize,
+          x->x_col_src[index], x, index);
+    }
+    else if(!newstate && oldstate)
+    {
+      if(glist_isvisible(x->x_gui.x_glist))
+        sys_vgui(".x%x.c delete %xSRC%d\n", canvas, x, index);
+    }
+    x->x_vis_src[index] = newstate;
+  }
+  else if(index < 0)
+  {// if index is -1 : all
+    newstate = ((int)atom_getint(argv) ? 1 : 0);
+    for(index=0; index<n; index++)
+    {
+      oldstate = x->x_vis_src[index];
+      if(newstate && !oldstate)
+      {
+        if(glist_isvisible(x->x_gui.x_glist))
+          sys_vgui(".x%x.c create text %d %d -text {%d} -anchor c \
+            -font {times %d bold} -fill #%6.6x -tags %xSRC%d\n",
+            canvas, xpos+x->x_pix_src_x[index], ypos+x->x_pix_src_y[index], index+1, x->x_fontsize,
+            x->x_col_src[index], x, index);
+      }
+      else if(!newstate && oldstate)
+      {
+        if(glist_isvisible(x->x_gui.x_glist))
+          sys_vgui(".x%x.c delete %xSRC%d\n", canvas, x, index);
+      }
+      x->x_vis_src[index] = newstate;
+    }
+  }
 }
 
 static void cube_sphere_sphere_col(t_cube_sphere *x, t_floatarg fcol)
@@ -547,7 +574,8 @@ static void cube_sphere_sphere_col(t_cube_sphere *x, t_floatarg fcol)
 			col = 29;
 		x->x_gui.x_bcol = my_iemgui_color_hex[col];
 	}
-	sys_vgui(".x%x.c itemconfigure %xCIRC_AQ -fill #%6.6x\n", canvas, x, x->x_gui.x_bcol);
+  if(glist_isvisible(x->x_gui.x_glist))
+	  sys_vgui(".x%x.c itemconfigure %xCIRC_AQ -fill #%6.6x\n", canvas, x, x->x_gui.x_bcol);
 }
 
 static void cube_sphere_frame_col(t_cube_sphere *x, t_floatarg fcol)
@@ -567,34 +595,36 @@ static void cube_sphere_frame_col(t_cube_sphere *x, t_floatarg fcol)
 			col = 29;
 		x->x_gui.x_fcol = my_iemgui_color_hex[col];
 	}
-	sys_vgui(".x%x.c itemconfigure %xBASE -outline #%6.6x\n",
-		canvas, x, x->x_gui.x_fsf.x_selected?IEM_GUI_COLOR_SELECTED:x->x_gui.x_fcol);
+  if(glist_isvisible(x->x_gui.x_glist))
+	  sys_vgui(".x%x.c itemconfigure %xBASE -outline #%6.6x\n",
+		  canvas, x, x->x_gui.x_fsf.x_selected?IEM_GUI_COLOR_SELECTED:x->x_gui.x_fcol);
 }
 
 static void cube_sphere_src_col(t_cube_sphere *x, t_symbol *s, int argc, t_atom *argv)
 {
 	int col;
-	int i, j, n=x->x_n_src;
+	int help_col, src_index, n=x->x_n_src;
 	t_canvas *canvas=glist_getcanvas(x->x_gui.x_glist);
 
 	if((argc >= 2)&&IS_A_FLOAT(argv,0)&&IS_A_FLOAT(argv,1))
 	{
-		j = (int)atom_getintarg(0, argc, argv)-1;
-		if((j >= 0)&&(j < n))
+		src_index = (int)atom_getintarg(0, argc, argv) - 1;
+		if((src_index >= 0) && (src_index < n))
 		{
 			col = (int)atom_getintarg(1, argc, argv);
 			if(col < 0)
 			{
-				i = -1 - col;
-				x->x_col_src[j] = ((i & 0x3f000) << 6)|((i & 0xfc0) << 4)|((i & 0x3f) << 2);
+				help_col = -1 - col;
+				x->x_col_src[src_index] = ((help_col & 0x3f000) << 6)|((help_col & 0xfc0) << 4)|((help_col & 0x3f) << 2);
 			}
 			else
 			{
 				if(col > 29)
 					col = 29;
-				x->x_col_src[j] = my_iemgui_color_hex[col];
+				x->x_col_src[src_index] = my_iemgui_color_hex[col];
 			}
-			sys_vgui(".x%x.c itemconfigure %xSRC%d -fill #%6.6x\n", canvas, x, j, x->x_col_src[j]);
+      if((x->x_vis_src[src_index]) && glist_isvisible(x->x_gui.x_glist))
+			  sys_vgui(".x%x.c itemconfigure %xSRC%d -fill #%6.6x\n", canvas, x, src_index, x->x_col_src[src_index]);
 		}
 	}
 }
@@ -614,18 +644,23 @@ static void cube_sphere_nr_src(t_cube_sphere *x, t_floatarg fnr_src)
 	if(n > IEMGUI_CUBE_SPHERE_MAX)
 		n = IEMGUI_CUBE_SPHERE_MAX;
 	if((n != x->x_n_src) || (old_null != x->x_null))
-	{
-		(*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_ERASE);
-		j = x->x_n_src;
-		x->x_n_src = n;
-		for(i=j; i<n; i++)
-		{
-			x->x_col_src[i] = x->x_col_src[j];
-			x->x_pix_src_x[i] = x->x_radius;
-			x->x_pix_src_y[i] = x->x_radius;
-		}
-		(*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_NEW);
-	}
+  {
+    if(glist_isvisible(x->x_gui.x_glist))
+      (*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_ERASE);
+
+    j = x->x_n_src;
+    x->x_n_src = n;
+    for(i=j; i<n; i++)
+    {
+      x->x_col_src[i] = x->x_col_src[j];
+      x->x_vis_src[i] = 1;
+      x->x_pix_src_x[i] = x->x_radius;
+      x->x_pix_src_y[i] = x->x_radius;
+    }
+
+    if(glist_isvisible(x->x_gui.x_glist))
+      (*x->x_gui.x_draw)(x, x->x_gui.x_glist, IEM_GUI_DRAW_MODE_NEW);
+  }
 }
 
 static void *cube_sphere_new(t_symbol *s, int argc, t_atom *argv)
@@ -698,6 +733,10 @@ static void *cube_sphere_new(t_symbol *s, int argc, t_atom *argv)
 		}
 	}
 
+  x->x_n_src = n;
+	for(i=0; i<n; i++)
+		x->x_vis_src[i] = 1;
+
 	x->x_90overradius = 90.0f / (float)x->x_radius;
 	x->x_gui.x_w = 2*x->x_radius;
 	x->x_gui.x_h = 2*x->x_radius;
@@ -730,6 +769,7 @@ void cube_sphere_setup(void)
 	class_addmethod(cube_sphere_class, (t_method)cube_sphere_src_col, gensym("src_col"), A_GIMME, 0);
 	class_addmethod(cube_sphere_class, (t_method)cube_sphere_src_dp, gensym("src_dp"), A_GIMME, 0);
 	class_addmethod(cube_sphere_class, (t_method)cube_sphere_size, gensym("size"), A_DEFFLOAT, 0);
+  class_addmethod(cube_sphere_class, (t_method)cube_sphere_vis, gensym("vis"), A_GIMME, 0);
 	class_addmethod(cube_sphere_class, (t_method)cube_sphere_src_font, gensym("src_font"), A_DEFFLOAT, 0);
 	class_addmethod(cube_sphere_class, (t_method)cube_sphere_nr_src, gensym("nr_src"), A_DEFFLOAT, 0);
 
