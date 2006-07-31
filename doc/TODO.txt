@@ -31,3 +31,5 @@ pd/CUE:
     Laden der Parameter ist die Bus-Zuordnung auch oben sichtbar.
     (tutner, 25.04.06)
 hardware/bc{f,r}2000:
+system/libraries:
+  - iem_spec2 library fehlt!! (bitte in pure-data CVS einchecken!)

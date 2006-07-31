@@ -136,3 +136,7 @@ hardware/bc{f,r}2000:
   - Beschriftung der Controller 
   + beschriftet 
 
+
+system/libraries:
+  - iem_spec2 library fehlt!! (bitte in pure-data CVS einchecken!)
+
