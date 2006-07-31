@@ -32,11 +32,17 @@ sf-login:
 ######## HDSPMMIXER ################
 hdspm_mixer-src: sf-login
 	cvs $(CVSROOT) checkout -r $(REVISION) -d hdspm_mixer externals/iem/hdspm_mixer/
+
 hdspm_mixer-build: hdspm_mixer-src
 	make -C hdspm_mixer
+
 hdspm_mixer-locinstall: hdspm_mixer-build
 	cp hdspm_mixer/*.$(EXT) hdspm_mixer/hdspmmixer-help.pd $(LOCINSTALL_DIR)
+
 hdspm_mixer: hdspm_mixer-locinstall
+
+hdspm_mixer-clean:
+	rm -rf hdspm_mixer
 
 
 ######## ACONNECT ################
@@ -52,6 +58,9 @@ aconnect-locinstall: aconnect-build
 
 aconnect: aconnect-locinstall
 
+aconnect-clean:
+	rm -rf aconnect
+
 ######### hcs's folder_list ###############
 
 folder_list-src: sf-login
@@ -64,6 +73,9 @@ folder_list-locinstall: folder_list-build
 	cp folder_list/folder_list.$(EXT) $(LOCINSTALL_DIR)
 
 folder_list: folder_list-locinstall
+
+folder_list-clean:
+	rm -rf folder_list
 
 ######### IEM AMBI ###############
 
@@ -78,6 +90,9 @@ iem_ambi-locinstall: iem_ambi-build
 
 iem_ambi: iem_ambi-locinstall
 
+iem_ambi-clean:
+	rm -rf iem_ambi
+
 ######### IEM BIN AMBI ###############
 
 iem_bin_ambi-src: sf-login
@@ -91,6 +106,9 @@ iem_bin_ambi-locinstall: iem_bin_ambi-build
 
 iem_bin_ambi: iem_bin_ambi-locinstall
 
+iem_bin_ambi-clean:
+	rm -rf iem_bin_ambi
+
 ######## IEM GUI ##################
 
 iemgui-src: 
@@ -103,6 +121,9 @@ iemgui-locinstall: iemgui-build
 
 iemgui: iemgui-locinstall
 
+iemgui-clean:
+	make -C ../iemgui clean
+
 ######## IEM SPEC2 ##################
 
 iem_spec2-src: 
@@ -114,6 +135,9 @@ iem_spec2-locinstall: iem_spec2-build
 	cp ../iem_spec2/iem_spec2.$(EXT) $(LOCINSTALL_DIR)
 
 iem_spec2: iem_spec2-locinstall
+
+iem_spec2-clean:
+	make -C ../iem_spec2 clean
 
 ######## IEM LIB ##################
 
@@ -130,6 +154,9 @@ iemlib-locinstall: iemlib-build
 
 iemlib: iemlib-locinstall
 
+iemlib-clean:
+	rm -rf iemlib
+
 ####### IEM Matrix ###############
 
 iemmatrix-src: sf-login
@@ -144,6 +171,9 @@ iemmatrix-locinstall: iemmatrix-build
 	cp iemmatrix/abs/*.pd $(LOCINSTALL_DIR)
 
 iemmatrix: iemmatrix-locinstall
+
+iemmatrix-clean:
+	rm -rf iemmatrix
 
 
 ########### miXed needed for the seq external in cyclone ##########################
@@ -164,6 +194,9 @@ miXed-locinstall: miXed-build
 
 miXed: miXed-locinstall
 
+miXed-clean:
+	rm -rf miXed
+
 ######## IEM GUI ##################
 # maybe substituted by iem-gui in future
 
@@ -176,6 +209,9 @@ popup-build_: popup-src
 popup-locinstall_: popup-build_
 	cp popup/*.$(EXT) $(LOCINSTALL_DIR)
 
+popup-clean_:
+	rm -rf popup
+
 # ############  local popup ###############
 popup-src: 
 
@@ -187,6 +223,8 @@ popup-locinstall: popup-build
 
 popup: popup-locinstall
 
+popup-clean:
+	make -C ../popup clean
 
 ######## ZEXY ##################
 
@@ -200,6 +238,9 @@ zexy-locinstall: zexy-build
 	cp zexy/*.$(EXT) $(LOCINSTALL_DIR)
 	cp zexy/abs/*.pd $(LOCINSTALL_DIR)
 
+zexy-clean:
+	rm -rf zexy
+
 zexy: zexy-locinstall
 
 ######## doit #################################
@@ -210,8 +251,7 @@ build: aconnect-build folder_list-build iem_ambi-build iem_bin_ambi-build iemgui
 
 locinstall: aconnect-locinstall folder_list-locinstall iem_ambi-locinstall iem_bin_ambi-locinstall iemgui-locinstall iemlib-locinstall iemmatrix-locinstall iem_spec2-locinstall miXed-locinstall popup-locinstall zexy-locinstall
 
-clean: 
-	rm -rf aconnect folder_list iem_ambi iem_bin_ambi iemlib iemmatrix miXed popup zexy
+clean: aconnect-clean folder_list-clean iem_ambi-clean iem_bin_ambi-clean iemgui-clean iemlib-clean iemmatrix-clean iem_spec2-clean miXed-clean popup-clean zexy-clean
 	rm -f sf-login
 
 distclean: clean
