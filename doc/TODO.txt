@@ -7,6 +7,7 @@ ACHTUNG: (dieses file ist nur ein view auf BUGS.txt)
 =                                   TODO                                     =
 ==============================================================================
 pd/DSP:
+  - der SFPLAYER ist gemutet und kann nicht aufgedreht werden
 pd/DSP/ambisonic:
   - Distanzregler wird leiser wenn Entfernung 0..1
     Bitte irgendwie linearisieren
@@ -23,6 +24,7 @@ pd/MIDI:
     an midi-out schicken)
   - Konzept für MIDI-anbindung von extensions/plugins
 pd/NET:
+  - OSC anbindung (lt. wini existiert irgendwo als studierenden-projekt)
 pd/plugins:
 pd/extensions:
 pd/CUE:
@@ -31,5 +33,3 @@ pd/CUE:
     Laden der Parameter ist die Bus-Zuordnung auch oben sichtbar.
     (tutner, 25.04.06)
 hardware/bc{f,r}2000:
-system/libraries:
-  - iem_spec2 library fehlt!! (bitte in pure-data CVS einchecken!)
