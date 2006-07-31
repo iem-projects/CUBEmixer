@@ -3,7 +3,6 @@ current: all
 .SUFFIXES: .pd_linux
 
 PDSOURCE=/usr/local/src/pd/src
-PDDEST=../../lib/libs/
 
 INCLUDE = -I. -I$(PDSOURCE)
 
@@ -45,21 +44,16 @@ OBJ = $(SRC:.c=.o)
 #
 
 clean:
-	rm ../../lib/$(TARGET)
-	rm *.o
+	rm -f *.o
+	rm -f $(TARGET)
 
 all: $(OBJ)
 	@echo :: $(OBJ)
 	ld $(LDFLAGS) -o $(TARGET) *.o $(LIB)
 	strip --strip-unneeded $(TARGET)
-	rm *.o
 	
-install:
-	mv $(TARGET) ../../lib
-
 $(OBJ) : %.o : %.c
-	touch $*.c
-	cc $(CFLAGS) $(INCLUDE) -c -o $*.o $*.c
+	$(CC) $(CFLAGS) $(INCLUDE) -c -o $*.o $*.c
 
 
 
