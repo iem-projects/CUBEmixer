@@ -23,8 +23,12 @@
 #X obj 84 143 receive_parameter AMBI_ORDER_WEIGHT;
 #X obj 54 201 \$1_ambi_dec~;
 #X obj 149 197 receive_setting OUT_AMBI_24;
+#X obj 155 235 loadbang;
+#X msg 155 257 1;
 #X connect 13 0 18 0;
 #X connect 16 0 18 2;
 #X connect 17 0 18 1;
 #X connect 18 0 14 0;
 #X connect 19 0 18 3;
+#X connect 20 0 21 0;
+#X connect 21 0 18 3;
