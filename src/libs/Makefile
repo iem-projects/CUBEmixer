@@ -52,6 +52,19 @@ aconnect-locinstall: aconnect-build
 
 aconnect: aconnect-locinstall
 
+######### hcs's folder_list ###############
+
+folder_list-src: sf-login
+	cvs $(CVSROOT) checkout -r $(REVISION) -d folder_list externals/hcs/folder_list.c
+
+folder_list-build: folder_list-src
+	$(CC) -DPD -O2 -funroll-loops -fomit-frame-pointer -fPIC -I$(PDSOURCE) -export_dynamic -shared -lc -lm -o folder_list/folder_list.$(EXT) folder_list/folder_list.c
+
+folder_list-locinstall: folder_list-build
+	cp folder_list/folder_list.$(EXT) $(LOCINSTALL_DIR)
+
+folder_list: folder_list-locinstall
+
 ######### IEM AMBI ###############
 
 iem_ambi-src: sf-login
@@ -95,10 +108,10 @@ iemgui: iemgui-locinstall
 iem_spec2-src: 
 
 iem_spec2-build: iem_spec2-src
-	make -C iem_spec2/src
+	make -C ../iem_spec2
 
 iem_spec2-locinstall: iem_spec2-build
-	cp iem_spec2/src/iem_spec2.$(EXT) $(LOCINSTALL_DIR)
+	cp ../iem_spec2/iem_spec2.$(EXT) $(LOCINSTALL_DIR)
 
 iem_spec2: iem_spec2-locinstall
 
@@ -142,12 +155,12 @@ miXed-src: sf-login
 miXed-build: miXed-src
 	make -C miXed PD_DIR=$(PDSOURCE)
 
-mixed_objects=seq midiflush midiformat midiparse
-mixed_externals=$(mixed_objects:=.pd_linux)
+miXed_objects=seq midiflush midiformat midiparse
+miXed_externals=$(miXed_objects:=.pd_linux)
 
 miXed-locinstall: miXed-build
-	for i in $(mixed_externals); do cp -v miXed/bin/$$i $(LOCINSTALL_DIR); done
-#	for i in $(mixed_objects); do cp -v miXed/test/cyclone/$$i-test.pd $(LOCINSTALL_DIR)/$$i-help.pd; done
+	for i in $(miXed_externals); do cp -v miXed/bin/$$i $(LOCINSTALL_DIR); done
+#	for i in $(miXed_objects); do cp -v miXed/test/cyclone/$$i-test.pd $(LOCINSTALL_DIR)/$$i-help.pd; done
 
 miXed: miXed-locinstall
 
@@ -191,14 +204,15 @@ zexy: zexy-locinstall
 
 ######## doit #################################
 
-sources: aconnect-src iem_ambi-src iemgui-src iemlib-src iemmatrix-src popup-src zexy-src
+sources: aconnect-src folder_list-build iem_ambi-src iem_bin_ambi-src iemgui-src iemlib-src iemmatrix-src iem_spec2-src miXed-src popup-src zexy-src
 
-build: aconnect-build iem_ambi-build iemgui-build iemlib-build iemmatrix-build popup-build zexy-build
+build: aconnect-build folder_list-build iem_ambi-build iem_bin_ambi-build iemgui-build iemlib-build iemmatrix-build iem_spec2-build miXed-build popup-build zexy-build
 
-locinstall: aconnect-locinstall iem_ambi-locinstall iem_bin_ambi-locinstall iemgui-locinstall iemlib-locinstall iemmatrix-locinstall popup-locinstall zexy-locinstall iem_ambi-locinstall iem_spec2-locinstall
+locinstall: aconnect-locinstall folder_list-locinstall iem_ambi-locinstall iem_bin_ambi-locinstall iemgui-locinstall iemlib-locinstall iemmatrix-locinstall iem_spec2-locinstall miXed-locinstall popup-locinstall zexy-locinstall
 
 clean: 
-	rm -rf aconnect iem_ambi iemlib iemmatrix popup zexy sf-login
+	rm -rf aconnect folder_list iem_ambi iem_bin_ambi iemlib iemmatrix miXed popup zexy
+	rm -f sf-login
 
 distclean: clean
 	rm -rf $(LOCINSTALL_DIR)/*
