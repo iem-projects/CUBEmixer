@@ -6,7 +6,7 @@
 #X obj 45 5 bng 15 250 50 0 \$0GUIambi_showsettings \$0GUIambi_showsettings
 set 0 20 0 8 -62784 -1 -1;
 #X obj 10 54 vsl 30 131 0 130 0 0 \$0GUIambiout_fader \$0GUIambiout_fader
-+00 1 140 0 8 -228992 -1 -1 8300 1;
++00 1 140 0 8 -228992 -1 -1 8500 1;
 #N canvas 349 298 695 544 code 0;
 #X obj 52 141 route float;
 #X obj 131 403 - 100;
@@ -85,7 +85,6 @@ set 0 20 0 8 -62784 -1 -1;
 #X obj 450 211 s OUT_AMBI_ROT_Z;
 #X msg 450 189 0;
 #X obj 488 232 s AMBI_ORDER_WEIGHT;
-#X obj 450 164 t b b;
 #X obj 450 142 loadbang;
 #N canvas 551 146 450 300 rotation 0;
 #X obj 126 169 r \$0GUI_ambisonic_rotZ_fromgui;
@@ -109,6 +108,8 @@ set 0 20 0 8 -62784 -1 -1;
 #X obj 152 215 s \$0_mirrorweight_togui;
 #X obj 140 236 s \$0_mirrorweight_nbx_togui;
 #X obj 152 192 sendreceive AMBI_MIRROR_WEIGHT;
+#X obj 450 164 t b b b;
+#X msg 563 188 1;
 #X connect 0 0 10 0;
 #X connect 1 0 8 0;
 #X connect 2 0 14 0;
@@ -130,19 +131,22 @@ set 0 20 0 8 -62784 -1 -1;
 #X connect 17 0 16 0;
 #X connect 18 0 17 0;
 #X connect 21 0 20 0;
-#X connect 23 0 21 0;
-#X connect 23 1 26 0;
-#X connect 24 0 23 0;
-#X connect 26 0 22 0;
-#X connect 27 0 29 0;
-#X connect 28 0 27 0;
-#X connect 30 0 32 0;
-#X connect 31 0 30 0;
-#X connect 33 0 36 0;
-#X connect 36 0 34 0;
-#X connect 36 0 35 0;
+#X connect 21 0 31 0;
+#X connect 23 0 36 0;
+#X connect 25 0 22 0;
+#X connect 26 0 28 0;
+#X connect 27 0 26 0;
+#X connect 29 0 31 0;
+#X connect 30 0 29 0;
+#X connect 32 0 35 0;
+#X connect 35 0 33 0;
+#X connect 35 0 34 0;
+#X connect 36 0 21 0;
+#X connect 36 1 25 0;
+#X connect 36 2 37 0;
+#X connect 37 0 28 0;
 #X restore 78 9 pd code;
-#N canvas 1821 16 356 557 6768-ambisonic.settings 1;
+#N canvas 1821 16 356 557 6812-ambisonic.settings 0;
 #X obj 58 10 cnv 15 185 190 empty empty weights 10 12 0 14 -195568
 -66577 0;
 #X obj 60 179 nbx 3 14 -100 22 0 0 \$0GUI_0_ambiweight_nbx_fromgui
@@ -174,7 +178,7 @@ set 0 20 0 8 -62784 -1 -1;
 #X obj 38 54 vfad_scale -1;
 #X obj 8 206 ambisonic/sphere;
 #X obj 17 46 vsl 15 131 0 130 0 0 \$0GUIambiout_fader \$0GUIambiout_fader
-+00 1 140 0 8 -228992 -1 -1 8300 1;
++00 1 140 0 8 -228992 -1 -1 8500 1;
 #N canvas 1911 538 450 300 BIN 0;
 #X obj 11 11 cnv 15 98 188 empty empty BIN 0 12 0 14 -195568 -66577
 0;
