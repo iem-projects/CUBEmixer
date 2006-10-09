@@ -8,7 +8,7 @@ AZI 40 8 0 8 -262144 -1 -1 -26.0753 256;
 #X obj 8 55 nbx 2 14 -1e+37 1e+37 0 0 1003GUIambisonic_theta_fromgui
 1003GUIambisonic_theta_togui ELV 28 8 0 8 -262144 -1 -1 1.91807 256
 ;
-#X obj 138 61 parent$0;
+#X obj 138 61 parentdollarzero;
 #X obj 135 37 loadbang;
 #N canvas 269 490 964 309 code 0;
 #X obj 194 11 inlet;

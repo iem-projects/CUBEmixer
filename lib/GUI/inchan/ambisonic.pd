@@ -7,7 +7,7 @@ r 50 8 0 8 -262144 -1 -1 0 256;
 phi 40 8 0 8 -262144 -1 -1 0 256;
 #X obj 8 55 nbx 2 14 -1e+37 1e+37 0 0 1002GUIambisonic_theta_fromgui
 1002GUIambisonic_theta_togui theta 28 8 0 8 -262144 -1 -1 0 256;
-#X obj 140 57 parent$0;
+#X obj 140 57 parentdollarzero;
 #X obj 140 34 loadbang;
 #N canvas 269 490 964 309 code 0;
 #X obj 194 11 inlet;
