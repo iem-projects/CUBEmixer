@@ -144,3 +144,5 @@ system/libraries:
   - iem_spec2 library fehlt!! (bitte in pure-data CVS einchecken!)
   + fehlt doch nicht; ist bereits in lib/ eingecheckt (nur makefile hat noch nicht funktioniert)
 
+  - [prvu~] und [rvu~] funktionieren nicht, wenn sie auf amd64 maschinen kompiliert wurden
+
