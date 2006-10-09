@@ -146,3 +146,7 @@ system/libraries:
 
   - [prvu~] und [rvu~] funktionieren nicht, wenn sie auf amd64 maschinen kompiliert wurden
 
+system/pd:
+  - pd>=0.40 hat $args grundlegend geändert: $args inder mitte werden nun geparsed und nicht mehr als "bla-$2-blu" sondern als "bla-\$2-blu" abgespeichert
+  + dadurch müssen alle objekte bei denen "$" vorkommt, geändert werden, am besten mit einem script wie diesem:
+     find . -name "*.pd" | while read f; do echo sed -i -e 's|\([^\\]\)\$|\1\\$|g' $f; done
