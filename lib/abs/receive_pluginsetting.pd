@@ -11,7 +11,7 @@
 <slot#> of channel <channel#>;
 #X text 33 98 parameters are stored when a parameter-CUEpoint is stored.
 ;
-#X obj 52 221 receive_setting \$1_IN_PLUGIN_$2_$3;
+#X obj 52 221 receive_setting \$1_IN_PLUGIN_\$2_\$3;
 #X connect 0 0 9 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;

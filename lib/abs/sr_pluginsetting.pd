@@ -4,7 +4,7 @@
 #X obj 254 189 symbol \$3;
 #X obj 254 160 loadbang;
 #X msg 315 160 bang;
-#X obj 56 255 sr_setting \$1_IN_PLUGIN_$2_$3;
+#X obj 56 255 sr_setting \$1_IN_PLUGIN_\$2_\$3;
 #X obj 56 234 inlet;
 #X obj 56 275 outlet;
 #X text 29 19 [sr_pluginparam <channel#> <slot#> <paramname>];

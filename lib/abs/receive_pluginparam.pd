@@ -1,5 +1,5 @@
 #N canvas 222 173 450 300 10;
-#X obj 52 221 receive_parameter \$1_IN_PLUGIN_$2_$3;
+#X obj 52 221 receive_parameter \$1_IN_PLUGIN_\$2_\$3;
 #X obj 52 201 makefilename \$1_IN_PLUGIN_%s;
 #X obj 52 181 makefilename \$2_%s;
 #X obj 52 162 symbol \$3;
