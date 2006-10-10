@@ -20,7 +20,7 @@
 #X obj 253 271 makefilename \$2_%s;
 #X obj 253 248 symbol \$3;
 #X obj 195 64 t b b b b;
-#X obj 253 339 iem_r \$1_IN_PLUGIN_$2_$3_EDIT;
+#X obj 253 339 iem_r \$1_IN_PLUGIN_\$2_\$3_EDIT;
 #X msg 253 319 set \$1;
 #X obj 253 362 t b;
 #X symbolatom 310 376 0 0 0 0 - - -;
