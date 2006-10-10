@@ -43,7 +43,7 @@ with "1";
 #X obj 281 60 t f f f;
 #X obj 309 480 makefilename %d_IN_PLUGIN_0_none_EDIT;
 #X obj 279 331 t b b;
-#X obj 279 542 iem_s <ID#>_IN_PLUGIN_$2_<name>_EDIT;
+#X obj 279 542 iem_s <ID#>_IN_PLUGIN_\$2_<name>_EDIT;
 #X connect 0 0 40 0;
 #X connect 1 0 2 0;
 #X connect 2 0 18 0;

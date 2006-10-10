@@ -1,6 +1,6 @@
 #N canvas 0 135 756 566 10;
 #X obj 245 27 inlet;
-#X obj 245 101 makefilename %s_$1;
+#X obj 245 101 makefilename %s_\$1;
 #X obj 325 56 makefilename %%s_%s;
 #X msg 325 79 set \$1;
 #X obj 326 10 loadbang;
