@@ -429,9 +429,9 @@
 #X obj 15 103 spigot 1;
 #X obj 367 91 spigot 1;
 #X obj 622 90 spigot 1;
-#X obj 33 79 receive_parameter \$1_AMBI_DIRECT;
-#X obj 640 63 receive_parameter \$1_AMBI_DIRECT;
-#X obj 382 65 receive_parameter \$1_AMBI_DIRECT;
+#X obj 33 79 receive_parameter \$1_IN_AMBI_DIRECT;
+#X obj 640 63 receive_parameter \$1_IN_AMBI_DIRECT;
+#X obj 382 65 receive_parameter \$1_IN_AMBI_DIRECT;
 #X obj 645 117 receive_parameter \$1_IN_AMBI_AZM_INT;
 #X obj 384 118 receive_parameter \$1_IN_AMBI_ELV_INT;
 #X obj 22 130 receive_parameter \$1_IN_AMBI_RAD_INT;
