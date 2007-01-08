@@ -5,7 +5,7 @@
 #X obj 14 36 vsl 20 131 0 130 0 0 \$0GUIbusout_1_fader_fromgui \$0GUIbusout_1_fader_togui
 +00 1 140 0 8 -228992 -1 -1 8200 1;
 #X obj 36 36 vsl 20 131 0 130 0 0 \$0GUIbusout_2_fader_fromgui \$0GUIbusout_2_fader_togui
-+00 1 140 0 8 -228992 -1 -1 8200 1;
+-inf 1 140 0 8 -228992 -1 -1 0 1;
 #X obj 58 36 vsl 20 131 0 130 0 0 \$0GUIbusout_3_fader_fromgui \$0GUIbusout_3_fader_togui
 +00 1 140 0 8 -228992 -1 -1 8200 1;
 #X obj 80 36 vsl 20 131 0 130 0 0 \$0GUIbusout_4_fader_fromgui \$0GUIbusout_4_fader_togui
@@ -38,7 +38,7 @@
 #X obj 316 206 OUT/BUS/helper/sr \$0GUIbusout 16;
 #X restore 403 158 pd code;
 #X obj 353 6 bng 15 250 50 0 GUI_OUT_BUS_showmatrix GUI_OUT_BUS_showmatrix
-matrix -40 7 0 8 -62784 -1 -1;
+ROUTING_MATRIX -88 13 0 9 -62784 -1 -1;
 #X obj 2 43 vfad_scale -1;
 #X obj 377 40 vfad_scale -1;
 #X obj 189 44 vfad_scale -1;
@@ -60,4 +60,6 @@ matrix -40 7 0 8 -62784 -1 -1;
 -inf 1 140 0 8 -228992 -1 -1 0 1;
 #X obj 356 36 vsl 20 131 0 130 0 0 \$0GUIbusout_16_fader_fromgui \$0GUIbusout_16_fader_togui
 -66 1 140 0 8 -228992 -1 -1 0 1;
+#X obj 260 5 cnv 8 8 8 empty empty BUS_to_OUTPUT 9 4 0 9 -233017 -1
+0;
 #X coords 0 0 1 1 390 180 1 0 0;
