@@ -126,18 +126,19 @@ iemgui-clean:
 
 ######## IEM SPEC2 ##################
 
-iem_spec2-src: 
+iem_spec2-src: sf-login
+	cvs $(CVSROOT) checkout -r $(REVISION) -d iem_spec2 externals/iem/iem_spec2
 
 iem_spec2-build: iem_spec2-src
-	make -C ../iem_spec2
+	make -C iem_spec2/src
 
 iem_spec2-locinstall: iem_spec2-build
-	cp ../iem_spec2/iem_spec2.$(EXT) $(LOCINSTALL_DIR)
+	cp iem_spec2/iem_spec2.$(EXT) $(LOCINSTALL_DIR)
 
 iem_spec2: iem_spec2-locinstall
 
 iem_spec2-clean:
-	make -C ../iem_spec2 clean
+	make -C iem_spec2/src clean
 
 ######## IEM LIB ##################
 

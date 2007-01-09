@@ -7,9 +7,10 @@ A) Overview pd-externals needed for CUBEmixer:
 
  aconnect (linux)
  iemgui
- iem_ambi
  iemlib
  iemmatrix
+ iem_ambi
+ iem_spec2
  popup
  zexy
 
@@ -50,31 +51,41 @@ get the compiled package from http://sourceforge.net/projects/iem/ (files) and c
 B) Manual install
 -----------------
 
- 1) iemlib1, iemlib2 
+ + iemlib1, iemlib2 
 
       sh: cvs -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data login
       sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P externals/iemlib
 
- 2) iemmatrix
+ + iemmatrix
 
+      sh: cvs -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data login
       sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P  externals/iem/iemmatrix
 
- 3) iem_ambi
+ + iem_ambi
 
+      sh: cvs -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data login
       sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P  externals/iem/iem_ambi
 
- 4) zexy
+ + iem_spec2
 
+      sh: cvs -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data login
+      sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P  externals/iem/iem_spec2
+
+ + zexy
+
+      sh: cvs -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data login
       sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P externals/zexy
 
- 5) popup
+ + popup
 
+      sh: cvs -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data login
       sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P  externals/bbogart/popup/
       (will change in future).
 
- 6) MIDI-Library Under in Linux only if used with external MIDI-Controller      * only linux *
+ + MIDI-Library only if used with external MIDI-Controller      * LINUX ONLY *
 
-     sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P externals/iem/aconnect
+      sh: cvs -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data login
+      sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P externals/iem/aconnect
 
 iem, 23032006
 
