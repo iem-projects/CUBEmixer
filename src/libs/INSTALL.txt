@@ -22,9 +22,9 @@ are not included with this package!
 The missing externals are available from the pure-data CVS-repository 
 hosted by SourceForge.
 You can get them via:
-sh~> cvs -d:pserver:anonymous@cvs.sf.net/projects/pure-data login
+sh~> cvs -d:pserver:anonymous@cvs.pd.iem.at/projects/pure-data login
 (when asked for a password, just hit return)
-sh~> cvs -d:pserver:anonymous@cvs.sf.net/projects/pure-data co externals
+sh~> cvs -d:pserver:anonymous@cvs.pd.iem.at/projects/pure-data co externals
 
 B) QUICKINSTALL
 ---------------
@@ -52,29 +52,29 @@ B) Manual install
 
  1) iemlib1, iemlib2 
 
-      sh: cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data login
-      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P externals/iemlib
+      sh: cvs -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data login
+      sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P externals/iemlib
 
  2) iemmatrix
 
-      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P  externals/iem/iemmatrix/
+      sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P  externals/iem/iemmatrix
 
  3) iem_ambi
 
-      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P  externals/iem/iemmatrix/
+      sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P  externals/iem/iem_ambi
 
  4) zexy
 
-      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P externals/zexy
+      sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P externals/zexy
 
  5) popup
 
-      sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P  externals/bbogart/popup/
+      sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P  externals/bbogart/popup/
       (will change in future).
 
  6) MIDI-Library Under in Linux only if used with external MIDI-Controller      * only linux *
 
-     sh: cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/pure-data co -P externals/iem/aconnect
+     sh: cvs -z3 -d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data co -P externals/iem/aconnect
 
 iem, 23032006
 
