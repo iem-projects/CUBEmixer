@@ -86,7 +86,7 @@ iem_ambi-build: iem_ambi-src
 	make -C iem_ambi/src
 
 iem_ambi-locinstall: iem_ambi-build
-	cp iem_ambi/src/iem_ambi.$(EXT) $(LOCINSTALL_DIR)
+	cp iem_ambi/iem_ambi.$(EXT) $(LOCINSTALL_DIR)
 
 iem_ambi: iem_ambi-locinstall
 
@@ -138,7 +138,7 @@ iem_spec2-locinstall: iem_spec2-build
 iem_spec2: iem_spec2-locinstall
 
 iem_spec2-clean:
-	make -C iem_spec2/src clean
+	rm -rf iem_spec2
 
 ######## IEM LIB ##################
 
@@ -164,7 +164,6 @@ iemmatrix-src: sf-login
 	cvs $(CVSROOT) checkout -r $(REVISION) -d iemmatrix externals/iem/iemmatrix/
 
 iemmatrix-build: iemmatrix-src
-	cd iemmatrix/src && autoconf && ./configure
 	make -C iemmatrix/src
 
 iemmatrix-locinstall: iemmatrix-build
