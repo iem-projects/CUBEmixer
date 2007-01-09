@@ -78,6 +78,7 @@ pd/GUI:
 
   - zoom-funktion für die BUS-Matrix
 
+  - statt edit bangs edit toggles zum auf/zumachen der subfenster
 
 pd/MIDI:
 
