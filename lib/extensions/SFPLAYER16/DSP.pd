@@ -81,6 +81,9 @@
 #X obj 92 9 inlet control;
 #X obj 415 13 inlet filename;
 #X obj 642 28 inlet loopme;
+#X msg 259 338 0;
+#X obj 172 163 del 60;
+#X msg 172 188 0;
 #X connect 0 0 1 1;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
@@ -94,11 +97,12 @@
 #X connect 7 1 30 0;
 #X connect 8 0 7 0;
 #X connect 9 0 7 0;
-#X connect 10 0 4 0;
 #X connect 10 0 23 0;
 #X connect 10 0 24 0;
 #X connect 11 0 10 0;
+#X connect 11 0 35 0;
 #X connect 11 1 8 0;
+#X connect 11 1 34 0;
 #X connect 12 0 9 0;
 #X connect 12 1 13 0;
 #X connect 13 0 24 0;
@@ -125,6 +129,9 @@
 #X connect 31 0 14 0;
 #X connect 32 0 0 0;
 #X connect 33 0 6 0;
+#X connect 34 0 30 0;
+#X connect 35 0 36 0;
+#X connect 36 0 4 0;
 #X restore 115 103 pd control;
 #X obj 427 356 send_regname \$1_SFPLAY_LENGTH;
 #X obj 351 401 demux;
