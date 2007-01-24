@@ -21,10 +21,13 @@
 #X obj 262 182 t b;
 #X obj 80 136 receive_regname CUE_LOAD;
 #X obj 262 162 receive_regname CUE_RESET;
+#X obj 178 291 send_regname CUE_LOAD_READY;
+#X msg 178 269 0;
 #X connect 0 0 2 0;
 #X connect 1 0 6 0;
 #X connect 1 1 0 0;
 #X connect 2 0 3 0;
+#X connect 2 1 22 0;
 #X connect 3 0 7 0;
 #X connect 3 1 4 0;
 #X connect 4 0 2 0;
@@ -43,6 +46,7 @@
 #X connect 18 0 14 0;
 #X connect 19 0 9 0;
 #X connect 20 0 18 0;
+#X connect 22 0 21 0;
 #X restore 54 66 pd loader;
 #N canvas 0 0 579 463 saver 0;
 #X obj 81 388 textfile;
@@ -73,6 +77,10 @@
 #X msg 211 52;
 #X obj 354 186 t b b s;
 #X obj 165 96 list trim;
+#X obj 268 306 t b;
+#X msg 268 351 0;
+#X obj 268 373 send_regname CUE_SAVE_READY;
+#X obj 268 328 del 50;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 13 0;
@@ -81,6 +89,7 @@
 #X connect 5 0 20 0;
 #X connect 5 1 22 0;
 #X connect 6 0 2 0;
+#X connect 6 0 28 0;
 #X connect 7 0 10 0;
 #X connect 8 0 9 0;
 #X connect 9 0 0 0;
@@ -108,4 +117,7 @@
 #X connect 26 1 15 0;
 #X connect 26 2 19 1;
 #X connect 27 0 18 0;
+#X connect 28 0 31 0;
+#X connect 29 0 30 0;
+#X connect 31 0 29 0;
 #X restore 55 43 pd saver;
