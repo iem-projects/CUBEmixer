@@ -6,12 +6,12 @@
 #X obj 412 224 loadbang;
 #X text 535 56 3.order ambisonic encoder;
 #X obj 95 294 outlet;
-#X obj 88 53 receive_parameter \$1_EXT_RRR_IN_AMBI_ELV;
-#X obj 153 93 receive_parameter \$1_EXT_RRR_IN_AMBI_AZM;
 #X obj 93 256 pp \$1;
-#X connect 0 0 9 0;
+#X obj 88 53 receive_parameter \$1_RRR_IN_AMBI_ELV;
+#X obj 153 93 receive_parameter \$1_EXT_IN_AMBI_AZM;
+#X connect 0 0 7 0;
 #X connect 3 0 0 0;
 #X connect 3 1 0 1;
-#X connect 7 0 0 0;
-#X connect 8 0 3 0;
-#X connect 9 0 6 0;
+#X connect 7 0 6 0;
+#X connect 8 0 0 0;
+#X connect 9 0 3 0;
