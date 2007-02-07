@@ -16,7 +16,6 @@
 #X obj 1000 -35 inchan 15;
 #X obj 1071 -35 inchan 16;
 #X obj 6 427 inchannel;
-#X obj 555 428 OUT/BUS/12;
 #X obj 621 610 OUT/LFC;
 #X obj 1066 812 system;
 #X obj 778 610 RRR/GUI;
@@ -27,3 +26,4 @@
 #X obj 555 814 SFPLAYER16/GUI 16;
 #X obj 871 610 SFPO/GUI;
 #X obj 755 818 REV2/GUI;
+#X obj 554 427 OUT/BUS/16;

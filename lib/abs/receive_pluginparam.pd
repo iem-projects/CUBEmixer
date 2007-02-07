@@ -1,10 +1,4 @@
 #N canvas 222 173 450 300 10;
-#X obj 52 221 receive_parameter \$1_IN_PLUGIN_\$2_\$3;
-#X obj 52 201 makefilename \$1_IN_PLUGIN_%s;
-#X obj 52 181 makefilename \$2_%s;
-#X obj 52 162 symbol \$3;
-#X obj 52 133 loadbang;
-#X msg 113 133 bang;
 #X obj 52 242 outlet;
 #X text 28 19 [receive_pluginparam <channel#> <slot#> <paramname>]
 ;
@@ -12,9 +6,5 @@
 <slot#> of channel <channel#>;
 #X text 33 98 parameters are stored when a parameter-CUEpoint is stored.
 ;
-#X connect 0 0 6 0;
-#X connect 1 0 0 0;
-#X connect 2 0 1 0;
-#X connect 3 0 2 0;
-#X connect 4 0 3 0;
-#X connect 5 0 3 0;
+#X obj 52 221 receive_parameter /IN/\$1/PLUGIN/\$2/\$3;
+#X connect 4 0 0 0;

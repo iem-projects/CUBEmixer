@@ -9,7 +9,7 @@
 #X obj 460 47 f 0;
 #X msg 410 119 start;
 #X msg 370 119 stop;
-#X obj 460 68 sendreceive VUMB_ON;
+#X obj 460 68 sendreceive VUMB/ON;
 #X text 584 67 VU-Meter-Bridge;
 #X obj 32 32 BRIDGE_ELEMENT~ 1;
 #X obj 370 149 any;

@@ -85,8 +85,8 @@
 #X obj 50 1060 catch_out_2_dac~ 50 \$0;
 #X obj 50 1080 catch_out_2_dac~ 51 \$0;
 #X obj 50 1100 catch_out_2_dac~ 52 \$0;
-#X obj 306 240 s \$0lin_OUT_MASTER_GAIN;
-#X obj 306 197 receive_regname OUT_MASTER_GAIN;
+#X obj 306 240 s \$0lin_OUT_MASTER/GAIN;
+#X obj 306 197 receive_regname OUT_MASTER/GAIN;
 #X connect 1 0 7 0;
 #X connect 2 0 21 0;
 #X connect 3 0 2 0;

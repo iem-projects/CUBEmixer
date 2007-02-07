@@ -1,8 +1,7 @@
 #N canvas 1415 461 796 402 10;
 #X text 130 144 open_close_EDIT;
 #X msg 121 119 1;
-#X obj 15 39 popup 45 20 #ffffff AUX AUX 01 AUX 02 AUX 03 AUX 04 AUX 05
-AUX 06 AUX 07 AUX 08;
+#X obj 15 39 popup 45 20 #ffffff AUX none;
 #X obj 172 115 s \$0_AUXSRC_fromgui;
 #X obj 113 2 r \$0_AUXSRC_togui;
 #X obj 112 25 DSPnamesGUI AUX;
@@ -23,9 +22,9 @@ AUX 06 AUX 07 AUX 08;
 #X obj 318 188 s \$0_AUXSRC_togui;
 #X msg 318 166 set \$1;
 #X text 266 1 Reverb from Thomas Musil \, IEM mono to quad;
-#X obj 318 121 sendreceive EXT_REV_SRC;
-#X obj 203 213 gui_sr_offset \$0_ON EXT_REV_ON 0;
-#X obj 121 236 sendreceive EXT_REV_PARAM;
+#X obj 318 121 sendreceive /EXT/REV/SRC;
+#X obj 203 213 gui_sr_offset \$0_ON /EXT/REV/ON 0;
+#X obj 121 236 sendreceive /EXT/REV/PARAM;
 #X obj 55 69 vfad_scale -1;
 #X obj 13 108 cnv 2 40 2 empty empty empty 20 12 0 14 -1 -66577 0;
 #X obj 19 65 vsl 30 131 0 130 0 0 \$0_rev_vol_gui \$0_rev_vol_gui -inf
@@ -44,7 +43,7 @@ AUX 06 AUX 07 AUX 08;
 #X obj 499 111 fadtodb;
 #X obj 590 216 dbtofad;
 #X obj 499 46 r \$0_rev_vol_gui;
-#X obj 590 195 sendreceive EXT_REV_VOL;
+#X obj 590 195 sendreceive /EXT/REV/GAIN;
 #X obj 500 358 s \$0_rev_vol_gui;
 #X obj 121 186 REV/REV/room_EDIT 12;
 #X connect 1 0 42 0;

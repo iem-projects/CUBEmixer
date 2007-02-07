@@ -1,7 +1,7 @@
-#N canvas 0 0 450 300 10;
-#X obj 89 85 MIDI/inchannel/sr_gain 105 \$1 \$1_IN_FADER_GAIN;
-#X obj 111 248 MIDI/inchannel/sr_deg90 89 \$1 \$1_IN_AMBI_ELV;
-#X obj 111 272 MIDI/inchannel/sr_radius 81 \$1 \$1_IN_AMBI_RAD;
-#X obj 86 38 MIDI/inchannel/sr_toggle 73 \$1 \$1_IN_ON;
-#X obj 110 225 MIDI/inchannel/sr_deg360 97 \$1 \$1_IN_AMBI_AZM;
-#X obj 89 106 MIDI/inchannel/sr_gain 1 \$1 \$1_IN_LFC_GAIN;
+#N canvas 426 228 450 300 10;
+#X obj 86 38 MIDI/inchannel/sr_toggle 73 \$1 /IN/\$1/ON;
+#X obj 89 106 MIDI/inchannel/sr_gain 1 \$1 /IN/\$1/LFC/GAIN;
+#X obj 72 155 MIDI/inchannel/sr_deg360 97 \$1 /IN/\$1/AMBI/AZM;
+#X obj 72 178 MIDI/inchannel/sr_deg90 89 \$1 /IN/\$1/AMBI/ELV;
+#X obj 71 202 MIDI/inchannel/sr_radius 81 \$1 /IN/\$1/AMBI/RAD;
+#X obj 89 85 MIDI/inchannel/sr_gain 105 \$1 /IN/\$1/FADER_GAIN;

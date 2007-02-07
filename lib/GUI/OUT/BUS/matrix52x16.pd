@@ -297,7 +297,7 @@
 #X obj 432 261 mtx_zeros 52 16;
 #X msg 455 242 bang;
 #X obj 152 211 list trim;
-#X obj 152 188 sendreceive_nofb BUS_ROUTE;
+#X obj 152 188 sendreceive_nofb /BUS/ROUTE;
 #X connect 0 0 3 0;
 #X connect 2 0 16 0;
 #X connect 3 0 4 0;

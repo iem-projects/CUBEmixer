@@ -339,7 +339,7 @@
 #X obj 35 467 outlet~;
 #X obj 119 185 r DSP_get_parameters;
 #X obj 119 207 f 0;
-#X obj 119 231 sendreceive OUT_AMBI_GAIN;
+#X obj 119 231 sendreceive OUT_AMBI/GAIN;
 #X obj 76 97 r DSP_get_parameters;
 #X text 441 166 (basic);
 #X text 603 195 (medium1);

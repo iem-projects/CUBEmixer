@@ -1,15 +1,15 @@
 #N canvas 313 309 563 402 10;
 #X obj 45 327 dac~ \$1;
 #X obj 44 111 z~ 0;
-#X obj 135 59 unpack f f;
+#X obj 145 69 unpack f f;
 #X obj 43 44 catch~ \$1_OUT;
 #X obj 141 324 s~ \$1_DAC;
 #X obj 42 18 inlet~;
-#X text 205 59 del + gain;
-#X obj 135 38 r \$1_compensation_del_gain;
-#X obj 129 121 pack \$1 f f;
-#X obj 135 93 t b f;
-#X obj 129 153 print del_amp;
+#X text 215 69 del + gain;
+#X obj 145 48 r \$1_compensation_del_gain;
+#X obj 139 131 pack \$1 f f;
+#X obj 145 103 t b f;
+#X obj 139 163 print del_amp;
 #X obj 75 224 t b f;
 #X obj 64 250 * 1;
 #X obj 129 240 r DSP_MIX_INTERPOL_TIME;
@@ -17,8 +17,8 @@
 #X text 159 270 1.arg: <float> dac index;
 #X text 161 282 2.arg: <float> dollar-0 unique number of parent patch
 ;
-#X obj 64 197 r \$2lin_OUT_MASTER_GAIN;
 #X obj 305 118 DSP_label OUT \$1_OUT;
+#X obj 65 197 r \$2lin_OUT_MASTER_GAIN;
 #X connect 1 0 14 0;
 #X connect 2 0 1 0;
 #X connect 2 1 8 2;
@@ -34,4 +34,4 @@
 #X connect 13 0 14 2;
 #X connect 14 0 4 0;
 #X connect 14 0 0 0;
-#X connect 17 0 12 0;
+#X connect 18 0 12 0;

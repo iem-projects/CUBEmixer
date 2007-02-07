@@ -1,19 +1,9 @@
 #N canvas 222 173 544 343 10;
-#X obj 261 228 makefilename \$1_IN_PLUGIN_%s;
-#X obj 261 208 makefilename \$2_%s;
-#X obj 261 189 symbol \$3;
-#X obj 261 160 loadbang;
-#X msg 322 160 bang;
 #X obj 56 234 inlet;
 #X obj 56 275 outlet;
 #X text 29 19 [sr_pluginparam <channel#> <slot#> <paramname>];
 #X text 34 60 send/receive parameters <paramname> for plugin in fx-flot
 <slot#> of channel <channel#>;
-#X obj 56 256 sendreceive \$1_IN_PLUGIN_\$2_\$3;
-#X connect 0 0 9 1;
-#X connect 1 0 0 0;
-#X connect 2 0 1 0;
-#X connect 3 0 2 0;
-#X connect 4 0 2 0;
-#X connect 5 0 9 0;
-#X connect 9 0 6 0;
+#X obj 56 256 sendreceive /IN/\$1/PLUGIN/\$2/\$3;
+#X connect 0 0 4 0;
+#X connect 4 0 1 0;

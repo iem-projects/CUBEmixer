@@ -184,35 +184,35 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 1074 344 pack 4 0 0;
 #X obj 984 294 pack 3 0 0;
 #X obj 894 244 pack 2 0 0;
-#X obj 882 122 sr_parameter EXT_REV2_ENCODER_1_AZIMUTH;
-#X obj 804 144 sr_parameter EXT_REV2_ENCODER_1_ELEVATION;
-#X obj 973 172 sr_parameter EXT_REV2_ENCODER_2_AZIMUTH;
-#X obj 894 194 sr_parameter EXT_REV2_ENCODER_2_ELEVATION;
-#X obj 1063 222 sr_parameter EXT_REV2_ENCODER_3_AZIMUTH;
-#X obj 984 244 sr_parameter EXT_REV2_ENCODER_3_ELEVATION;
-#X obj 1153 272 sr_parameter EXT_REV2_ENCODER_4_AZIMUTH;
-#X obj 1074 294 sr_parameter EXT_REV2_ENCODER_4_ELEVATION;
-#X obj 700 437 gui_sr \$0rev_dec_l_time EXT_REV2_REVERB_DEC_L_TIME
+#X obj 882 122 sr_parameter /EXT/REV2/OUT/1/AZM;
+#X obj 804 144 sr_parameter /EXT/REV2/OUT/1/ELV;
+#X obj 973 172 sr_parameter /EXT/REV2/OUT/2/AZM;
+#X obj 894 194 sr_parameter /EXT/REV2/OUT/2/ELV;
+#X obj 1063 222 sr_parameter /EXT/REV2/OUT/3/AZM;
+#X obj 984 244 sr_parameter /EXT/REV2/OUT/3/ELV;
+#X obj 1153 272 sr_parameter /EXT/REV2/OUT/4/AZM;
+#X obj 1074 294 sr_parameter /EXT/REV2/OUT/4/ELV;
+#X obj 700 437 gui_sr \$0rev_dec_l_time /EXT/REV2/REVERB/DEC/L_TIME
 ;
-#X obj 700 456 gui_sr \$0rev_dec_lm_freq EXT_REV2_REVERB_DEC_LM_FREQ
+#X obj 700 456 gui_sr \$0rev_dec_lm_freq /EXT/REV2/REVERB/DEC/LM_FREQ
 ;
-#X obj 700 475 gui_sr \$0rev_dec_m_time EXT_REV2_REVERB_DEC_M_TIME
+#X obj 700 475 gui_sr \$0rev_dec_m_time /EXT/REV2/REVERB/DEC/M_TIME
 ;
-#X obj 701 494 gui_sr \$0rev_dec_mh_freq EXT_REV2_REVERB_DEC_MH_FREQ
+#X obj 701 494 gui_sr \$0rev_dec_mh_freq /EXT/REV2/REVERB/DEC/MH_FREQ
 ;
-#X obj 700 513 gui_sr \$0rev_dec_h_time EXT_REV2_REVERB_DEC_H_TIME
+#X obj 700 513 gui_sr \$0rev_dec_h_time /EXT/REV2/REVERB/DEC/H_TIME
 ;
-#X obj 667 537 gui_sr \$0rev_mod_freq EXT_REV2_REVERB_MOD_FREQ;
-#X obj 667 556 gui_sr \$0rev_mod_amp EXT_REV2_REVERB_MOD_AMP;
-#X obj 675 584 gui_sr \$0rev_del_time EXT_REV2_REVERB_DEL_TIME;
-#X obj 689 603 gui_sr_fader \$0rev_gain EXT_REV2_REVERB_GAIN;
-#X obj 703 622 gui_sr \$0rev_cutoff EXT_REV2_REVERB_CUTOFF;
-#X obj 773 643 gui_sr \$0rev_q EXT_REV2_REVERB_Q;
-#X obj 708 680 gui_sr \$0early_damp EXT_REV2_EARLY_DAMP;
-#X obj 702 712 gui_sr \$0early_del_time EXT_REV2_EARLY_DEL_TIME;
-#X obj 702 731 gui_sr_fader \$0early_gain EXT_REV2_EARLY_GAIN;
-#X obj 702 750 gui_sr \$0early_cutoff EXT_REV2_EARLY_CUTOFF;
-#X obj 702 771 gui_sr \$0early_q EXT_REV2_EARLY_Q;
+#X obj 667 537 gui_sr \$0rev_mod_freq /EXT/REV2/REVERB/MOD/FREQ;
+#X obj 667 556 gui_sr \$0rev_mod_amp /EXT/REV2/REVERB/MOD/AMP;
+#X obj 675 584 gui_sr \$0rev_del_time /EXT/REV2/REVERB/DEL_TIME;
+#X obj 689 603 gui_sr_fader \$0rev_gain /EXT/REV2/REVERB/GAIN;
+#X obj 703 622 gui_sr \$0rev_cutoff /EXT/REV2/REVERB/CUTOFF;
+#X obj 773 643 gui_sr \$0rev_q /EXT/REV2/REVERB/Q;
+#X obj 708 680 gui_sr \$0early_damp /EXT/REV2/EARLY/DAMP;
+#X obj 702 712 gui_sr \$0early_del_time /EXT/REV2/EARLY/DEL_TIME;
+#X obj 702 731 gui_sr_fader \$0early_gain /EXT/REV2/EARLY/GAIN;
+#X obj 702 750 gui_sr \$0early_cutoff /EXT/REV2/EARLY/CUTOFF;
+#X obj 702 771 gui_sr \$0early_q /EXT/REV2/EARLY/Q;
 #X obj 793 17 route 1 2 3 4 5 6 7 8 9 10 11 12;
 #X obj 1107 391 unpack 0 0;
 #X obj 1107 436 t b f;
@@ -240,14 +240,14 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 1521 217 unpack 0 0;
 #X obj 1521 262 t b f;
 #X obj 1562 263 t b f;
-#X obj 1185 391 sr_parameter EXT_REV2_ENCODER_5_AZIMUTH;
-#X obj 1107 413 sr_parameter EXT_REV2_ENCODER_5_ELEVATION;
-#X obj 1276 441 sr_parameter EXT_REV2_ENCODER_6_AZIMUTH;
-#X obj 1197 463 sr_parameter EXT_REV2_ENCODER_6_ELEVATION;
-#X obj 1366 491 sr_parameter EXT_REV2_ENCODER_7_AZIMUTH;
-#X obj 1288 513 sr_parameter EXT_REV2_ENCODER_7_ELEVATION;
-#X obj 1456 543 sr_parameter EXT_REV2_ENCODER_8_AZIMUTH;
-#X obj 1377 563 sr_parameter EXT_REV2_ENCODER_8_ELEVATION;
+#X obj 1185 391 sr_parameter /EXT/REV2/OUT/5/AZM;
+#X obj 1107 413 sr_parameter /EXT/REV2/OUT/5/ELV;
+#X obj 1276 441 sr_parameter /EXT/REV2/OUT/6/AZM;
+#X obj 1197 463 sr_parameter /EXT/REV2/OUT/6/ELV;
+#X obj 1366 491 sr_parameter /EXT/REV2/OUT/7/AZM;
+#X obj 1288 513 sr_parameter /EXT/REV2/OUT/7/ELV;
+#X obj 1456 543 sr_parameter /EXT/REV2/OUT/8/AZM;
+#X obj 1377 563 sr_parameter /EXT/REV2/OUT/8/ELV;
 #X obj 1377 613 pack 8 0 0;
 #X obj 1287 563 pack 7 0 0;
 #X obj 1197 513 pack 6 0 0;
@@ -256,14 +256,14 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 1341 189 pack 10 0 0;
 #X obj 1431 239 pack 11 0 0;
 #X obj 1521 289 pack 12 0 0;
-#X obj 1329 67 sr_parameter EXT_REV2_ENCODER_9_AZIMUTH;
-#X obj 1251 89 sr_parameter EXT_REV2_ENCODER_9_ELEVATION;
-#X obj 1420 117 sr_parameter EXT_REV2_ENCODER_10_AZIMUTH;
-#X obj 1341 139 sr_parameter EXT_REV2_ENCODER_10_ELEVATION;
-#X obj 1510 167 sr_parameter EXT_REV2_ENCODER_11_AZIMUTH;
-#X obj 1431 189 sr_parameter EXT_REV2_ENCODER_11_ELEVATION;
-#X obj 1600 217 sr_parameter EXT_REV2_ENCODER_12_AZIMUTH;
-#X obj 1521 239 sr_parameter EXT_REV2_ENCODER_12_ELEVATION;
+#X obj 1329 67 sr_parameter /EXT/REV2/OUT/9/AZM;
+#X obj 1251 89 sr_parameter /EXT/REV2/OUT/9/ELV;
+#X obj 1420 117 sr_parameter /EXT/REV2/OUT/10/AZM;
+#X obj 1341 139 sr_parameter /EXT/REV2/OUT/10/ELV;
+#X obj 1510 167 sr_parameter /EXT/REV2/OUT/11/AZM;
+#X obj 1431 189 sr_parameter /EXT/REV2/OUT/11/ELV;
+#X obj 1600 217 sr_parameter /EXT/REV2/OUT/12/AZM;
+#X obj 1521 239 sr_parameter /EXT/REV2/OUT/12/ELV;
 #X msg 819 82 1 30 36 \, 2 30 108 \, 3 30 180 \, 4 30 252 \, 5 30 324
 \, 6 90 0 \, 7 50 0 \, 8 50 60 \, 9 50 120 \, 10 50 180 \, 11 50 240
 \, 12 50 300;

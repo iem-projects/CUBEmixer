@@ -20,8 +20,8 @@
 #X obj 144 222 + 1;
 #X text 245 176 2 point interpolation;
 #X obj 90 117 t f f f;
-#X obj 91 197 tabread AMBI_WEIGHT_GAIN;
-#X obj 30 176 tabread AMBI_WEIGHT_GAIN;
+#X obj 91 197 tabread AMBI_WEIGHT/GAIN;
+#X obj 30 176 tabread AMBI_WEIGHT/GAIN;
 #X obj 162 357 outlet;
 #X connect 0 0 10 0;
 #X connect 2 0 6 1;
@@ -323,9 +323,9 @@
 #X connect 34 0 12 0;
 #X restore 48 387 pd set_name_____________________________________
 ;
-#X obj 365 92 receive_parameter \$1_IN_AMBI_ELV;
-#X obj 602 93 receive_parameter \$1_IN_AMBI_AZM;
-#X obj 101 66 sr_parameter \$1_IN_AMBI_RAD;
+#X obj 365 92 receive_parameter /IN/\$1/AMBI_ELV;
+#X obj 602 93 receive_parameter /IN/\$1/AMBI_AZM;
+#X obj 101 66 sr_parameter /IN/\$1/AMBI_RAD;
 #X obj 212 336 mull~ 0 50;
 #X obj 244 186 f;
 #X text 535 56 3.order ambisonic encoder;

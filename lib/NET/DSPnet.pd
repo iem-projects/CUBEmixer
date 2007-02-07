@@ -27,8 +27,8 @@
 #X obj 432 279 s GLOBAL_NETSEND;
 #X obj 432 256 list prepend send DSP_setLabel;
 #X obj 262 260 s DSP_NET;
-#X msg 262 235 DSP_CPU \$1 \$2;
-#X obj 126 155 r DSP;
+#X msg 262 235 /CPU/DSP \$1 \$2;
+#X obj 126 155 r /DSP;
 #X connect 1 0 0 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;

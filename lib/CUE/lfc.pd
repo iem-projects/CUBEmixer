@@ -1,7 +1,7 @@
 #N canvas 0 0 433 292 10;
-#X obj 228 158 receive_prepend \$1_OUT_LFC_GAIN;
-#X obj 86 136 receive_prepend \$1_OUT_LFC_HIGHCUT_FREQ;
-#X obj 69 114 receive_prepend \$1_OUT_LFC_BUS_DST;
+#X obj 228 158 receive/prepend \$1/OUT/LFC/GAIN;
+#X obj 86 136 receive/prepend \$1/OUT/LFC/HIGHCUT/FREQ;
+#X obj 69 114 receive/prepend \$1/OUT/LFC/BUS/DST;
 #X obj 228 34 inlet params;
 #X obj 228 219 outlet params;
 #X obj 69 217 outlet settings;

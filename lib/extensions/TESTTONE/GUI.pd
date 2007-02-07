@@ -10,17 +10,17 @@
 0 12 -262144 -1 -1 200 256;
 #X obj 119 147 nbx 4 14 0 8000 0 0 \$0-f \$0-f f -8 7 0 12 -262144
 -1 -1 1000 256;
-#X obj 40 78 sendreceive EXT_TESTTONE_SRC;
+#X obj 40 78 sendreceive /EXT/TESTTONE/SRC;
 #X msg 40 120 set \$1;
 #X obj 40 99 symbol;
-#X obj 89 171 sendreceive EXT_TESTTONE_SINE;
+#X obj 89 171 sendreceive /EXT/TESTTONE/SINE;
 #X msg 89 194 set \$1;
 #X msg 318 102 set \$1;
-#X obj 318 67 sendreceive EXT_TESTTONE_PULSE;
+#X obj 318 67 sendreceive /EXT/TESTTONE/PULSE;
 #X msg 368 192 set \$1;
 #X msg 379 299 set \$1;
-#X obj 368 113 sendreceive EXT_TESTTONE_PULSE_PERIOD;
-#X obj 379 224 sendreceive EXT_TESTTONE_PULSE_LENGTH;
+#X obj 368 113 sendreceive /EXT/TESTTONE/PULSE/PERIOD;
+#X obj 379 224 sendreceive /EXT/TESTTONE/PULSE/LENGTH;
 #X obj 379 269 clip 0 5000;
 #X obj 368 173 t f f;
 #X obj 379 244 f 200;

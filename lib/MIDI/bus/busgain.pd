@@ -1,2 +1,2 @@
 #N canvas 308 151 472 169 10;
-#X obj 99 74 MIDI/out/sr_gain \$2 \$1 \$1_OUT_BUS_GAIN;
+#X obj 99 74 MIDI/out/sr_gain \$2 \$1 /OUT/BUS/\$1/GAIN;

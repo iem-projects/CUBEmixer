@@ -25,7 +25,7 @@
 #X obj 354 170 t s s;
 #X symbolatom 424 181 0 0 0 0 - - -;
 #X msg 354 118 list \$2 \$1 fader;
-#X obj 201 221 sendreceive \$2_AUX_SUM_GAIN;
+#X obj 201 221 sendreceive /AUX/\$2/SUM/GAIN;
 #X connect 0 0 10 0;
 #X connect 1 0 8 0;
 #X connect 2 0 20 0;

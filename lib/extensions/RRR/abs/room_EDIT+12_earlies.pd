@@ -201,22 +201,22 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 127 234 cnv 8 1 1 empty empty 2 0 4 0 9 -262144 -1 0;
 #X obj 207 234 cnv 8 1 1 empty empty 4 0 4 0 9 -262144 -1 0;
 #X obj 167 234 cnv 8 1 1 empty empty 3 0 4 0 9 -262144 -1 0;
-#X obj 686 539 gui_sr \$0rev_dec_l_time EXT_RRR_REVERB_DEC_L_TIME;
-#X obj 686 558 gui_sr \$0rev_dec_lm_freq EXT_RRR_REVERB_DEC_LM_FREQ
+#X obj 686 539 gui_sr \$0rev_dec_l_time /EXT/RRR/REVERB/DEC/L_TIME;
+#X obj 686 558 gui_sr \$0rev_dec_lm_freq /EXT/RRR/REVERB/DEC/LM_FREQ
 ;
-#X obj 686 577 gui_sr \$0rev_dec_m_time EXT_RRR_REVERB_DEC_M_TIME;
-#X obj 686 596 gui_sr \$0rev_dec_mh_freq EXT_RRR_REVERB_DEC_MH_FREQ
+#X obj 686 577 gui_sr \$0rev_dec_m_time /EXT/RRR/REVERB/DEC/M_TIME;
+#X obj 686 596 gui_sr \$0rev_dec_mh_freq /EXT/RRR/REVERB/DEC/MH_FREQ
 ;
-#X obj 686 615 gui_sr \$0rev_dec_h_time EXT_RRR_REVERB_DEC_H_TIME;
-#X obj 683 639 gui_sr \$0rev_mod_freq EXT_RRR_REVERB_MOD_FREQ;
-#X obj 683 658 gui_sr \$0rev_mod_amp EXT_RRR_REVERB_MOD_AMP;
-#X obj 682 684 gui_sr \$0rev_del_time EXT_RRR_REVERB_DEL_TIME;
-#X obj 696 703 gui_sr_fader \$0rev_gain EXT_RRR_REVERB_GAIN;
-#X obj 710 722 gui_sr \$0rev_cutoff EXT_RRR_REVERB_CUTOFF;
-#X obj 780 743 gui_sr \$0rev_q EXT_RRR_REVERB_Q;
-#X obj 699 773 gui_sr_fader \$0early_gain EXT_RRR_EARLY_GAIN;
-#X obj 700 792 gui_sr \$0early_cutoff EXT_RRR_EARLY_CUTOFF;
-#X obj 700 813 gui_sr \$0early_q EXT_RRR_EARLY_Q;
+#X obj 686 615 gui_sr \$0rev_dec_h_time /EXT/RRR/REVERB/DEC/H_TIME;
+#X obj 683 639 gui_sr \$0rev_mod_freq /EXT/RRR/REVERB/MOD/FREQ;
+#X obj 683 658 gui_sr \$0rev_mod_amp /EXT/RRR/REVERB/MOD/AMP;
+#X obj 682 684 gui_sr \$0rev_del_time /EXT/RRR/REVERB/DEL_TIME;
+#X obj 696 703 gui_sr_fader \$0rev_gain /EXT/RRR/REVERB/GAIN;
+#X obj 710 722 gui_sr \$0rev_cutoff /EXT/RRR/REVERB/CUTOFF;
+#X obj 780 743 gui_sr \$0rev_q /EXT/RRR/REVERB/Q;
+#X obj 699 773 gui_sr_fader \$0early_gain /EXT/RRR/EARLY/GAIN;
+#X obj 700 792 gui_sr \$0early_cutoff /EXT/RRR/EARLY/CUTOFF;
+#X obj 700 813 gui_sr \$0early_q /EXT/RRR/EARLY/Q;
 #X obj 30 437 unpack 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X msg 30 375 -3 5.76041 0.4 0 3.49773 0.4 3.95765 0.249818 3.02037
@@ -247,30 +247,30 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 477 541 s \$0early_damp_10_togui;
 #X obj 487 521 s \$0early_damp_11_togui;
 #X obj 497 501 s \$0early_damp_12_togui;
-#X obj 853 22 gui_sr \$0early_delay_1 EXT_RRR_EARLY_1_DEL_TIME;
-#X obj 776 280 gui_sr \$0early_damp_1 EXT_RRR_EARLY_1_DAMP;
-#X obj 853 42 gui_sr \$0early_delay_2 EXT_RRR_EARLY_2_DEL_TIME;
-#X obj 853 62 gui_sr \$0early_delay_3 EXT_RRR_EARLY_3_DEL_TIME;
-#X obj 853 82 gui_sr \$0early_delay_4 EXT_RRR_EARLY_4_DEL_TIME;
-#X obj 853 102 gui_sr \$0early_delay_5 EXT_RRR_EARLY_5_DEL_TIME;
-#X obj 853 122 gui_sr \$0early_delay_6 EXT_RRR_EARLY_6_DEL_TIME;
-#X obj 853 152 gui_sr \$0early_delay_7 EXT_RRR_EARLY_7_DEL_TIME;
-#X obj 853 172 gui_sr \$0early_delay_8 EXT_RRR_EARLY_8_DEL_TIME;
-#X obj 853 192 gui_sr \$0early_delay_9 EXT_RRR_EARLY_9_DEL_TIME;
-#X obj 853 212 gui_sr \$0early_delay_10 EXT_RRR_EARLY_10_DEL_TIME;
-#X obj 853 232 gui_sr \$0early_delay_11 EXT_RRR_EARLY_11_DEL_TIME;
-#X obj 853 252 gui_sr \$0early_delay_12 EXT_RRR_EARLY_12_DEL_TIME;
-#X obj 776 510 gui_sr \$0early_damp_12 EXT_RRR_EARLY_12_DAMP;
-#X obj 776 490 gui_sr \$0early_damp_11 EXT_RRR_EARLY_11_DAMP;
-#X obj 776 470 gui_sr \$0early_damp_10 EXT_RRR_EARLY_10_DAMP;
-#X obj 776 450 gui_sr \$0early_damp_9 EXT_RRR_EARLY_9_DAMP;
-#X obj 776 430 gui_sr \$0early_damp_8 EXT_RRR_EARLY_8_DAMP;
-#X obj 776 410 gui_sr \$0early_damp_7 EXT_RRR_EARLY_7_DAMP;
-#X obj 776 381 gui_sr \$0early_damp_6 EXT_RRR_EARLY_6_DAMP;
-#X obj 776 360 gui_sr \$0early_damp_5 EXT_RRR_EARLY_5_DAMP;
-#X obj 776 340 gui_sr \$0early_damp_4 EXT_RRR_EARLY_4_DAMP;
-#X obj 776 320 gui_sr \$0early_damp_3 EXT_RRR_EARLY_3_DAMP;
-#X obj 776 300 gui_sr \$0early_damp_2 EXT_RRR_EARLY_2_DAMP;
+#X obj 853 22 gui_sr \$0early_delay_1 /EXT/RRR/EARLY/1/DEL_TIME;
+#X obj 776 280 gui_sr \$0early_damp_1 /EXT/RRR/EARLY/1/DAMP;
+#X obj 853 42 gui_sr \$0early_delay_2 /EXT/RRR/EARLY/2/DEL_TIME;
+#X obj 853 62 gui_sr \$0early_delay_3 /EXT/RRR/EARLY/3/DEL_TIME;
+#X obj 853 82 gui_sr \$0early_delay_4 /EXT/RRR/EARLY/4/DEL_TIME;
+#X obj 853 102 gui_sr \$0early_delay_5 /EXT/RRR/EARLY/5/DEL_TIME;
+#X obj 853 122 gui_sr \$0early_delay_6 /EXT/RRR/EARLY/6/DEL_TIME;
+#X obj 853 152 gui_sr \$0early_delay_7 /EXT/RRR/EARLY/7/DEL_TIME;
+#X obj 853 172 gui_sr \$0early_delay_8 /EXT/RRR/EARLY/8/DEL_TIME;
+#X obj 853 192 gui_sr \$0early_delay_9 /EXT/RRR/EARLY/9/DEL_TIME;
+#X obj 853 212 gui_sr \$0early_delay_10 /EXT/RRR/EARLY/10/DEL_TIME;
+#X obj 853 232 gui_sr \$0early_delay_11 /EXT/RRR/EARLY/11/DEL_TIME;
+#X obj 853 252 gui_sr \$0early_delay_12 /EXT/RRR/EARLY/12/DEL_TIME;
+#X obj 776 510 gui_sr \$0early_damp_12 /EXT/RRR/EARLY/12/DAMP;
+#X obj 776 490 gui_sr \$0early_damp_11 /EXT/RRR/EARLY/11/DAMP;
+#X obj 776 470 gui_sr \$0early_damp_10 /EXT/RRR/EARLY/10/DAMP;
+#X obj 776 450 gui_sr \$0early_damp_9 /EXT/RRR/EARLY/9/DAMP;
+#X obj 776 430 gui_sr \$0early_damp_8 /EXT/RRR/EARLY/8/DAMP;
+#X obj 776 410 gui_sr \$0early_damp_7 /EXT/RRR/EARLY/7/DAMP;
+#X obj 776 381 gui_sr \$0early_damp_6 /EXT/RRR/EARLY/6/DAMP;
+#X obj 776 360 gui_sr \$0early_damp_5 /EXT/RRR/EARLY/5/DAMP;
+#X obj 776 340 gui_sr \$0early_damp_4 /EXT/RRR/EARLY/4/DAMP;
+#X obj 776 320 gui_sr \$0early_damp_3 /EXT/RRR/EARLY/3/DAMP;
+#X obj 776 300 gui_sr \$0early_damp_2 /EXT/RRR/EARLY/2/DAMP;
 #X connect 41 0 42 0;
 #X connect 42 0 43 0;
 #X connect 43 0 44 0;
@@ -353,7 +353,7 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 220 497 pack f s;
 #X msg 220 519 \; \$2 vis \$1;
 #N canvas 64 301 806 303 inputs 0;
-#X obj 466 0 gui_sr_beautify-uglify \$0_SRC_1 1_EXT_RRR_SRC;
+#X obj 466 0 gui_sr_beautify-uglify \$0_SRC_1 1_/EXT/RRR/SRC;
 #X obj 40 129 popup 45 20 #ffffff SRC none;
 #X obj 202 -16 loadbang;
 #X obj 174 29 t a;
@@ -362,11 +362,11 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 0 10 -24198 -1 -1 0 256;
 #X text 10 134 SRC;
 #X text 13 167 VU;
-#X obj 467 20 gui_sr_beautify-uglify \$0_SRC_2 2_EXT_RRR_SRC;
-#X obj 467 81 gui_sr_beautify-uglify \$0_SRC_5 5_EXT_RRR_SRC;
-#X obj 467 101 gui_sr_beautify-uglify \$0_SRC_6 6_EXT_RRR_SRC;
-#X obj 466 41 gui_sr_beautify-uglify \$0_SRC_3 3_EXT_RRR_SRC;
-#X obj 466 60 gui_sr_beautify-uglify \$0_SRC_4 4_EXT_RRR_SRC;
+#X obj 467 20 gui_sr_beautify-uglify \$0_SRC_2 2_/EXT/RRR/SRC;
+#X obj 467 81 gui_sr_beautify-uglify \$0_SRC_5 5_/EXT/RRR/SRC;
+#X obj 467 101 gui_sr_beautify-uglify \$0_SRC_6 6_/EXT/RRR/SRC;
+#X obj 466 41 gui_sr_beautify-uglify \$0_SRC_3 3_/EXT/RRR/SRC;
+#X obj 466 60 gui_sr_beautify-uglify \$0_SRC_4 4_/EXT/RRR/SRC;
 #X obj 103 129 popup 45 20 #ffffff SRC none;
 #X obj 101 168 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_2_togui 2 10
 -6 0 10 -24198 -1 -1 0 256;
@@ -395,13 +395,13 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 282 61 r \$0_SRC_5_togui;
 #X obj 341 79 r \$0_SRC_6_togui;
 #X obj 104 60 r \$0_SRC_2_togui;
-#X obj 479 139 gui_sr \$0_VU_1 1_EXT_RRR_SRC_VU_LEVEL;
+#X obj 479 139 gui_sr \$0_VU_1 /EXT/RRR/SRC/1/VU/LEVEL;
 #X msg 363 -3 options;
-#X obj 481 162 gui_sr \$0_VU_2 2_EXT_RRR_SRC_VU_LEVEL;
-#X obj 480 183 gui_sr \$0_VU_3 3_EXT_RRR_SRC_VU_LEVEL;
-#X obj 480 205 gui_sr \$0_VU_4 4_EXT_RRR_SRC_VU_LEVEL;
-#X obj 482 226 gui_sr \$0_VU_5 5_EXT_RRR_SRC_VU_LEVEL;
-#X obj 481 247 gui_sr \$0_VU_6 6_EXT_RRR_SRC_VU_LEVEL;
+#X obj 481 162 gui_sr \$0_VU_2 /EXT/RRR/SRC/2/VU/LEVEL;
+#X obj 480 183 gui_sr \$0_VU_3 /EXT/RRR/SRC/3/VU/LEVEL;
+#X obj 480 205 gui_sr \$0_VU_4 /EXT/RRR/SRC/4/VU/LEVEL;
+#X obj 482 226 gui_sr \$0_VU_5 /EXT/RRR/SRC/5/VU/LEVEL;
+#X obj 481 247 gui_sr \$0_VU_6 /EXT/RRR/SRC/6/VU/LEVEL;
 #X connect 1 0 24 0;
 #X connect 2 0 23 0;
 #X connect 3 0 1 0;
@@ -430,7 +430,7 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X symbolatom 14 83 52 0 0 2 filename_bank #0_filename_togui #0_filename_fromgui
 ;
 #X obj 11 112 r \$0_filename_fromgui;
-#X obj 45 247 sendreceive EXT_RRR_PBANKFILE;
+#X obj 45 247 sendreceive /EXT/RRR/PBANKFILE;
 #X obj 36 411 outlet;
 #N canvas 245 133 360 216 files 0;
 #X obj 30 105 openpanel;
@@ -468,7 +468,7 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 177 125 del 1000;
 #X obj 17 179 route bang;
 #X obj 95 291 pp write;
-#X obj 208 306 sendreceive EXT_RRR_PRESET;
+#X obj 208 306 sendreceive /EXT/RRR/PRESET;
 #X obj 38 291 pp read;
 #X obj 42 224 symbol;
 #X msg 180 168 ../default.rrr;
@@ -510,14 +510,14 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 208 68 r GUI_NET_initialized;
 #X obj 207 87 del 1000;
 #X obj 206 113 t b b;
-#X obj 142 24 gui_sr_clip \$0_jitter EXT_RRR_AMBI_JITTER 0 100;
-#X msg 27 90 \; 1_RRR_IN_AMBI_RAD 1 \; 2_RRR_IN_AMBI_RAD 1 \; 3_RRR_IN_AMBI_RAD
-1 \; 4_RRR_IN_AMBI_RAD 1 \; 5_RRR_IN_AMBI_RAD 1 \; 6_RRR_IN_AMBI_RAD
-1 \; 7_RRR_IN_AMBI_RAD 1 \; 8_RRR_IN_AMBI_RAD 1 \; 9_RRR_IN_AMBI_RAD
-1 \; 10_RRR_IN_AMBI_RAD 1 \; 11_RRR_IN_AMBI_RAD 1 \; 12_RRR_IN_AMBI_RAD
-1 \; 13_RRR_IN_AMBI_RAD 1 \; 14_RRR_IN_AMBI_RAD 1 \; 15_RRR_IN_AMBI_RAD
-1 \; 16_RRR_IN_AMBI_RAD 1 \; 17_RRR_IN_AMBI_RAD 1 \; 18_RRR_IN_AMBI_RAD
-1 \; RRR_IN_AMBI_JITTER 1;
+#X obj 142 24 gui_sr_clip \$0_jitter /EXT/RRR/AMBI/JITTER 0 100;
+#X msg 27 90 \; /EXT/RRR/OUT/1/RAD 1 \; /EXT/RRR/OUT/2/RAD 1 \; /EXT/RRR/OUT/3/RAD
+1 \; /EXT/RRR/OUT/4/RAD 1 \; /EXT/RRR/OUT/5/RAD 1 \; /EXT/RRR/OUT/6/RAD
+1 \; /EXT/RRR/OUT/7/RAD 1 \; /EXT/RRR/OUT/8/RAD 1 \; /EXT/RRR/OUT/9/RAD
+1 \; /EXT/RRR/OUT/10/RAD 1 \; /EXT/RRR/OUT/11/RAD 1 \; /EXT/RRR/OUT/12/RAD
+1 \; /EXT/RRR/OUT/13/RAD 1 \; /EXT/RRR/OUT/14/RAD 1 \; /EXT/RRR/OUT/15/RAD
+1 \; /EXT/RRR/OUT/16/RAD 1 \; /EXT/RRR/OUT/17/RAD 1 \; /EXT/RRR/OUT/18/RAD
+1 \; /EXT/RRR/AMBI/JITTER 1;
 #X obj 11 11 cnv 15 108 38 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X obj 15 24 nbx 5 14 0 100 0 0 \$0_jitter_fromgui \$0_jitter_togui
@@ -589,21 +589,21 @@ jitter 60 6 0 10 -241291 -1 -1 0 256;
 #X floatatom 217 139 5 -20 0 0 - #0param_EQ_5_gain_togui #0param_EQ_5_gain_fromgui
 ;
 #X obj 258 143 cnv 8 1 1 empty empty dB 0 4 0 9 -262144 -1 0;
-#X obj 501 212 gui_sr \$0param_EQ_1_freq EXT_RRR_PARAM_EQ_1_FREQ;
-#X obj 501 232 gui_sr \$0param_EQ_2_freq EXT_RRR_PARAM_EQ_2_FREQ;
-#X obj 501 252 gui_sr \$0param_EQ_3_freq EXT_RRR_PARAM_EQ_3_FREQ;
-#X obj 501 272 gui_sr \$0param_EQ_4_freq EXT_RRR_PARAM_EQ_4_FREQ;
-#X obj 501 292 gui_sr \$0param_EQ_5_freq EXT_RRR_PARAM_EQ_5_FREQ;
-#X obj 501 332 gui_sr \$0param_EQ_1_Q EXT_RRR_PARAM_EQ_1_Q;
-#X obj 501 352 gui_sr \$0param_EQ_2_Q EXT_RRR_PARAM_EQ_2_Q;
-#X obj 501 372 gui_sr \$0param_EQ_3_Q EXT_RRR_PARAM_EQ_3_Q;
-#X obj 501 392 gui_sr \$0param_EQ_4_Q EXT_RRR_PARAM_EQ_4_Q;
-#X obj 501 412 gui_sr \$0param_EQ_5_Q EXT_RRR_PARAM_EQ_5_Q;
-#X obj 501 452 gui_sr \$0param_EQ_1_gain EXT_RRR_PARAM_EQ_1_GAIN;
-#X obj 501 532 gui_sr \$0param_EQ_5_gain EXT_RRR_PARAM_EQ_5_GAIN;
-#X obj 501 512 gui_sr \$0param_EQ_4_gain EXT_RRR_PARAM_EQ_4_GAIN;
-#X obj 501 492 gui_sr \$0param_EQ_3_gain EXT_RRR_PARAM_EQ_3_GAIN;
-#X obj 501 472 gui_sr \$0param_EQ_2_gain EXT_RRR_PARAM_EQ_2_GAIN;
+#X obj 501 212 gui_sr \$0param_EQ_1_freq /EXT/RRR/EQ/1/FREQ;
+#X obj 501 232 gui_sr \$0param_EQ_2_freq /EXT/RRR/EQ/2/FREQ;
+#X obj 501 252 gui_sr \$0param_EQ_3_freq /EXT/RRR/EQ/3/FREQ;
+#X obj 501 272 gui_sr \$0param_EQ_4_freq /EXT/RRR/EQ/4/FREQ;
+#X obj 501 292 gui_sr \$0param_EQ_5_freq /EXT/RRR/EQ/5/FREQ;
+#X obj 501 332 gui_sr \$0param_EQ_1_Q /EXT/RRR/EQ/1/Q;
+#X obj 501 352 gui_sr \$0param_EQ_2_Q /EXT/RRR/EQ/2/Q;
+#X obj 501 372 gui_sr \$0param_EQ_3_Q /EXT/RRR/EQ/3/Q;
+#X obj 501 392 gui_sr \$0param_EQ_4_Q /EXT/RRR/EQ/4/Q;
+#X obj 501 412 gui_sr \$0param_EQ_5_Q /EXT/RRR/EQ/5/Q;
+#X obj 501 452 gui_sr \$0param_EQ_1_gain /EXT/RRR/EQ/1/GAIN;
+#X obj 501 532 gui_sr \$0param_EQ_5_gain /EXT/RRR/EQ/5/GAIN;
+#X obj 501 512 gui_sr \$0param_EQ_4_gain /EXT/RRR/EQ/4/GAIN;
+#X obj 501 492 gui_sr \$0param_EQ_3_gain /EXT/RRR/EQ/3/GAIN;
+#X obj 501 472 gui_sr \$0param_EQ_2_gain /EXT/RRR/EQ/2/GAIN;
 #X msg 34 267 1220 705 330 47 33 2 2 2 2 2 -4 -4 -4 -6 -6;
 #X obj 34 292 unpack 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X obj 34 395 s \$0param_EQ_1_freq_togui;

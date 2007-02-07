@@ -14,12 +14,12 @@
 #X obj 296 169 t s s;
 #X msg 421 335 \$1;
 #X text 347 522 (c) IOhannes m zmoelnig \, IEM 2005;
-#X obj 326 240 r CUE_PARAMETERS_GET;
-#X obj 391 378 s CUE_PARAMETERS_SET;
 #X text 16 12 [sr_parameter]: this is a [sendreceive] (with feedback-supression)
 that additionally listens on "CUE_PARAMETERS_GET" for a bang on which
 it sends its current value (if any) to the global receiver "CUE_PARAMETERS_SET"
 with its (current) name prepended.;
+#X obj 326 240 r /CUE/PARAMETERS/GET;
+#X obj 391 378 s /CUE/PARAMETERS/SET;
 #X connect 0 0 5 0;
 #X connect 2 0 11 0;
 #X connect 5 0 1 0;
@@ -28,9 +28,9 @@ with its (current) name prepended.;
 #X connect 7 0 6 0;
 #X connect 8 1 10 0;
 #X connect 9 0 7 0;
-#X connect 10 0 16 0;
+#X connect 10 0 17 0;
 #X connect 11 0 12 0;
 #X connect 12 0 5 1;
 #X connect 12 1 13 0;
 #X connect 13 0 10 1;
-#X connect 15 0 9 0;
+#X connect 16 0 9 0;
