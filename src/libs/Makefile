@@ -111,18 +111,19 @@ iem_bin_ambi-clean:
 
 ######## IEM GUI ##################
 
-iemgui-src: 
+iemgui-src: sf-login
+	cvs $(CVSROOT) checkout -r $(REVISION) -d iemgui externals/iem/iemgui
 
 iemgui-build: iemgui-src
-	make -C ../iemgui 
+	make -C iemgui/src
 
 iemgui-locinstall: iemgui-build
-	cp ../iemgui/iemgui.$(EXT) $(LOCINSTALL_DIR)
+	cp iemgui/iemgui.$(EXT) $(LOCINSTALL_DIR)
 
 iemgui: iemgui-locinstall
 
 iemgui-clean:
-	make -C ../iemgui clean
+	rm -rf iemgui
 
 ######## IEM SPEC2 ##################
 
