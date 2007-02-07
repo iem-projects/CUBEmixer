@@ -103,6 +103,8 @@ pd/MIDI:
 pd/NET:
   - OSC anbindung (lt. wini existiert irgendwo als studierenden-projekt)
 
+  - autoregistrierung abschaffen!
+
 pd/plugins:
 
   - plugin-creator script, das automatisch die plugins einbindet.
@@ -115,6 +117,10 @@ pd/plugins:
   - [plugin~] (in pd/DSP/) collidiert mit dem external [plugin~]
     für VST-plugins
   + [plugin~] in [CUBEmixer_plugin~] umbenannt
+
+
+  - die DIRECT/INTerruptible logik ist völlig unverständlich! (logik erlaubt doppeldeutigkeiten; namen "direkt" und "int" sind belegt)
+  = evtl. ein msg-plugin, das defaultmäßig die koordinaten durchroutet; auf jedenfall konsistentere namen
 
 pd/extensions:
 
