@@ -102,6 +102,8 @@
 #X connect 12 0 11 0;
 #X restore 285 121 pd QUIT;
 #X obj 42 379 The_MIXER~ 64 16 4 4 16 64 4 0 0 0 4;
+#X msg 389 420 DSP;
+#X obj 387 451 print -----------;
 #X connect 0 0 2 0;
 #X connect 0 1 3 0;
 #X connect 1 0 0 0;
@@ -111,3 +113,4 @@
 #X connect 55 0 52 0;
 #X connect 74 0 71 0;
 #X connect 74 1 71 1;
+#X connect 75 0 76 0;
