@@ -160,33 +160,113 @@ note: beim laden wird nicht zwischen "parameter" und "setting" unterschieden !
 ===EXTENSIONS==========================================================
 
 ---REV----------------------------------------------------------------
-   Settings
+   Settings:
 EXT_REV_ON: 0=off, 1=on
 EXT_REV_SRC: AUX SUM Source eg: 1_AUX
 
-   Parameter
-EXT_REV_VOL        MAIN Volume in MIDI-dB
-EXT_REV_PBANKFILE  <pbankfile> <preset>, list of  pbankfile of 10 presets and index 
+   Parameter:
+EXT_REV_VOL:                MAIN Volume in MIDI-dB
+EXT_REV_EARLY_GAIN:         Early Reflections Output Gain in MIDI-dB
+EXT_REV_EARLY_Q:            Early Reflections Output Filter Quality
+EXT_REV_EARLY_CUTOFF:       Early Reflections Output Filter Frequency in kHz
+EXT_REV_EARLY_DEL_TIME:     a pair of Maximum and Minimum Value of 
+                              Early Reflection Delay Time in ms
+EXT_REV_EARLY_DAMP:         a pair of Maximum and Minimum Value of 
+                              Early Reflection Dampening in techn. dB
+EXT_REV_REVERB_MOD_AMP:     a pair of Maximum and Minimum Value of FM-Modulation-Magnitude
+                              of the Reverberator Delay Network in cents
+EXT_REV_REVERB_MOD_FREQ:    a pair of Maximum and Minimum Value of FM-Modulation-Frequency
+                              of the Reverberator Delay Network in Hz
+EXT_REV_REVERB_DEL_TIME:    a pair of Maximum and Minimum Value of Reverberator Delay Time in ms
+EXT_REV_REVERB_DEC_H_TIME:  Reverberation Decay Time (@ -60 dB) for High Frequency Band in sec.
+EXT_REV_REVERB_DEC_M_TIME:  Reverberation Decay Time (@ -60 dB) for Middle Frequency Band in sec.
+EXT_REV_REVERB_DEC_L_TIME:  Reverberation Decay Time (@ -60 dB) for Low Frequency Band in sec.
+EXT_REV_REVERB_DEC_MH_FREQ: Reverberation Lower Cutoff Frequency of High Band in kHz.
+EXT_REV_REVERB_DEC_LM_FREQ: Reverberation Upper Cutoff Frequency of Low Band in kHz.
+EXT_REV_REVERB_Q:           Reverberation Output Filter Quality
+EXT_REV_REVERB_CUTOFF:      Reverberation Output Filter Frequency in kHz
+EXT_REV_REVERB_GAIN:        Reverberation Output Gain in MIDI-dB
+EXT_REV_ENCODER_$1_AZIMUTH: Azimuth (0 .. 360) of Reverb-Output 1..4
+EXT_REV_ENCODER_$1_ELEVATION: Elevation (-90 .. 90) of Reverb-Output 1..4
 
-   not stored
-EXT_REV_PARAM: parameterliste... (see patch simplerevedit)
+obsolete: {
+  EXT_REV_PBANKFILE:  <pbankfile> <preset>, (does not work anymore)
+    list of  pbankfile of 10 presets and index
+  EXT_REV_PARAM: parameterliste... (does not work anymore)
+    (see patch simplerevedit)  }
+
+---REV2----------------------------------------------------------------
+   Settings:
+EXT_REV2_ON: 0=off, 1=on
+EXT_REV2_$1_SRC: AUX SUM Source of Reverb-Input 1 .. 6 eg: 1_AUX
+  (doesnt work yet, it is fix connected to 1_AUX .. 6_AUX)
+
+   Parameter:
+EXT_REV2_VOL:                MAIN Volume in MIDI-dB
+EXT_REV2_EARLY_GAIN:         Early Reflections Output Gain in MIDI-dB
+EXT_REV2_EARLY_Q:            Early Reflections Output Filter Quality
+EXT_REV2_EARLY_CUTOFF:       Early Reflections Output Filter Frequency in kHz
+EXT_REV2_EARLY_DEL_TIME:     a pair of Maximum and Minimum Value of 
+                              Early Reflection Delay Time in ms
+EXT_REV2_EARLY_DAMP:         a pair of Maximum and Minimum Value of 
+                              Early Reflection Dampening in techn. dB
+EXT_REV2_REVERB_MOD_AMP:     a pair of Maximum and Minimum Value of FM-Modulation-Magnitude
+                              of the Reverberator Delay Network in cents
+EXT_REV2_REVERB_MOD_FREQ:    a pair of Maximum and Minimum Value of FM-Modulation-Frequency
+                              of the Reverberator Delay Network in Hz
+EXT_REV2_REVERB_DEL_TIME:    a pair of Maximum and Minimum Value of Reverberator Delay Time in ms
+EXT_REV2_REVERB_DEC_H_TIME:  Reverberation Decay Time (@ -60 dB) for High Frequency Band in sec.
+EXT_REV2_REVERB_DEC_M_TIME:  Reverberation Decay Time (@ -60 dB) for Middle Frequency Band in sec.
+EXT_REV2_REVERB_DEC_L_TIME:  Reverberation Decay Time (@ -60 dB) for Low Frequency Band in sec.
+EXT_REV2_REVERB_DEC_MH_FREQ: Reverberation Lower Cutoff Frequency of High Band in kHz.
+EXT_REV2_REVERB_DEC_LM_FREQ: Reverberation Upper Cutoff Frequency of Low Band in kHz.
+EXT_REV2_REVERB_Q:           Reverberation Output Filter Quality
+EXT_REV2_REVERB_CUTOFF:      Reverberation Output Filter Frequency in kHz
+EXT_REV2_REVERB_GAIN:        Reverberation Output Gain in MIDI-dB
+EXT_REV2_ENCODER_$1_AZIMUTH: Azimuth (0 .. 360) of Early-Reflections-Output-Output 1..6
+EXT_REV2_ENCODER_$1_AZIMUTH: Azimuth (0 .. 360) of Reverberator-Output 7..12
+EXT_REV2_ENCODER_$1_ELEVATION: Elevation (-90 .. 90) of Early-Reflections-Output 1..6
+EXT_REV2_ENCODER_$1_ELEVATION: Elevation (-90 .. 90) of Reverberator-Output 7..12
+
 
 ---Room in Room Reverbaration: ----------------------------------------
 
   Settings:
-
 EXT_RRR_ON         On/off Switch {0,1}
+$1_EXT_RRR_SRC     AUX SUM Source of RoomInRoomReverb-Input ($1 = 1 .. 6) eg: 17_ADC
 
-   Parameter
-EXT_RRR_VOL        MAIN Volume in MIDI-dB
-EXT_RRR_PBANKFILE  <pbankfile> <preset>, list of  pbankfile of 10 presets and index 
+   Parameter:
+EXT_RRR_VOL:                MAIN Volume in MIDI-dB
+EXT_RRR_EARLY_GAIN:         Early Reflections Output Gain in MIDI-dB
+EXT_RRR_EARLY_Q:            Early Reflections Output Filter Quality
+EXT_RRR_EARLY_CUTOFF:       Early Reflections Output Filter Frequency in kHz
+EXT_RRR_EARLY_$1_DEL_TIME:  Early Reflection Delay Time of Delay-Tap ($1=1 .. 12) in ms
+EXT_RRR_EARLY_$1_DAMP:      Early Reflection Dampening of Delay-Tap ($1=1 .. 12) in techn. dB
+EXT_RRR_REVERB_MOD_AMP:     a pair of Maximum and Minimum Value of FM-Modulation-Magnitude
+                              of the Reverberator Delay Network in cents
+EXT_RRR_REVERB_MOD_FREQ:    a pair of Maximum and Minimum Value of FM-Modulation-Frequency
+                              of the Reverberator Delay Network in Hz
+EXT_RRR_REVERB_DEL_TIME:    a pair of Maximum and Minimum Value of Reverberator Delay Time in ms
+EXT_RRR_REVERB_DEC_H_TIME:  Reverberation Decay Time (@ -60 dB) for High Frequency Band in sec.
+EXT_RRR_REVERB_DEC_M_TIME:  Reverberation Decay Time (@ -60 dB) for Middle Frequency Band in sec.
+EXT_RRR_REVERB_DEC_L_TIME:  Reverberation Decay Time (@ -60 dB) for Low Frequency Band in sec.
+EXT_RRR_REVERB_DEC_MH_FREQ: Reverberation Lower Cutoff Frequency of High Band in kHz.
+EXT_RRR_REVERB_DEC_LM_FREQ: Reverberation Upper Cutoff Frequency of Low Band in kHz.
+EXT_RRR_REVERB_Q:           Reverberation Output Filter Quality
+EXT_RRR_REVERB_CUTOFF:      Reverberation Output Filter Frequency in kHz
+EXT_RRR_REVERB_GAIN:        Reverberation Output Gain in MIDI-dB
+EXT_RRR_ENCODER_$1_AZIMUTH: Azimuth (0 .. 360) of Early-Reflections-Output-Output 1..12
+EXT_RRR_ENCODER_$1_AZIMUTH: Azimuth (0 .. 360) of Reverberator-Output 13..18
+EXT_RRR_ENCODER_$1_ELEVATION: Elevation (-90 .. 90) of Early-Reflections-Output 1..12
+EXT_RRR_ENCODER_$1_ELEVATION: Elevation (-90 .. 90) of Reverberator-Output 13..18
+EXT_RRR_PARAM_EQ_$1_FREQ: Parametric-EQ-Frequency at Input ($1 = 1 .. 6) of Reverb in Hz
+EXT_RRR_PARAM_EQ_$1_Q:    Parametric-EQ-Quality at Input ($1 = 1 .. 6) of Reverb
+EXT_RRR_PARAM_EQ_$1_GAIN: Parametric-EQ-Gain at Input ($1 = 1 .. 6) of Reverb in techn. dB
 
-$1_EXT_RRR_SRC     Quelle fr input Nr $1, 1-6 zB: 1_EXT_RRR_SRC
 
-$1_RRR_IN_AMBI_RAD : 0...1 spread, 1...100 lowpassed
-$1_RRR_IN_AMBI_AZM : in degree
-$1_RRR_IN_AMBI_ELV : in degree
-
-   Not Stored
-
-EXT_RRR_PARAM      send Parameter to DSP
+obsolete {
+  EXT_RRR_PBANKFILE  <pbankfile> <preset>, list of  pbankfile of 10 presets and index  }
+  $1_RRR_IN_AMBI_RAD : 0...1 spread, 1...100 lowpassed
+  $1_RRR_IN_AMBI_AZM : in degree
+  $1_RRR_IN_AMBI_ELV : in degree
+  EXT_RRR_PARAM      send Parameter to DSP }

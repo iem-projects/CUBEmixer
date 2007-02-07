@@ -30,6 +30,15 @@ pd/DSP:
 
   - der SFPLAYER ist gemutet und kann nicht aufgedreht werden
 
+  - der SFPLAYER16 knackst bei stop
+  + behoben
+
+  - der SFPLAYER16 kann keine pause
+
+  - AUX_SEND kann man vereinfachen, indem man nur von PRE_FADER abzapft und optional
+      mal 1 multipliziert (PRE_FADER) oder mal Fader_Gain multipliziert (POST_FADER)
+      und dann erst auf throw~ AUX_SUM geht.
+
 pd/DSP/ambisonic:
 
   - Distanzregler wird leiser wenn Entfernung 0..1
@@ -112,6 +121,7 @@ pd/extensions:
   - tm's superhall einbinden
   + eingebunden (ist beinahe identisch mit simplerev)
   + ersetzt durch ARRR
+  + ein zweiter hall mit 6 in und 6 out ist nun auch eingebunden
 
 pd/CUE:
 
