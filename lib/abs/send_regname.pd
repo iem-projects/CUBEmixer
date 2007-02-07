@@ -9,15 +9,22 @@
 #X text 206 334 1.arg: <symbol> send- / receive- name;
 #X text 159 412 (c) IOhannes m zmoelnig \, IEM 2005;
 #X text 201 430 published under the Gnu GPL;
-#X obj 296 182 t s s;
 #X text 16 12 [send_regname];
 #X text 105 34 like a normal [send] \, but the sendname can be queried
 via a "bang" to sendreceive_getName \; the current sendname will be
 sent to "sendreceive_setName";
-#X obj 383 247 sr_registername \$1;
-#X connect 0 0 1 0;
+#X obj 131 238 t a a;
+#X obj 231 300 s GLOBAL_NETSEND;
+#X obj 231 277 list prepend send \$1;
+#X msg 366 207 list send \$1;
+#X obj 296 182 t s s;
+#X connect 0 0 12 0;
 #X connect 2 0 4 0;
 #X connect 3 0 1 1;
-#X connect 4 0 10 0;
-#X connect 10 0 3 0;
-#X connect 10 1 13 0;
+#X connect 4 0 16 0;
+#X connect 12 0 1 0;
+#X connect 12 1 14 0;
+#X connect 14 0 13 0;
+#X connect 15 0 14 1;
+#X connect 16 0 3 0;
+#X connect 16 1 15 0;

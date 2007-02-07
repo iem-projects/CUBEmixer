@@ -4,7 +4,6 @@
 #X obj 296 159 symbol;
 #X text 159 412 (c) IOhannes m zmoelnig \, IEM 2005;
 #X text 201 430 published under the Gnu GPL;
-#X obj 296 182 t s s;
 #X text 16 12 [receive_regname];
 #X text 105 34 like a normal [receive] \, but the receivename can be
 queried via a "bang" to sendreceive_getName \; the current receivename
@@ -13,10 +12,7 @@ will be sent to "sendreceive_setName";
 #X obj 131 324 iem_r \$1;
 #X obj 131 351 outlet;
 #X text 206 334 1.arg: <symbol> receive- name;
-#X obj 383 247 sr_registername \$1;
 #X connect 0 0 2 0;
-#X connect 1 0 9 0;
-#X connect 2 0 5 0;
-#X connect 5 0 1 0;
-#X connect 5 1 12 0;
-#X connect 9 0 10 0;
+#X connect 1 0 8 0;
+#X connect 2 0 1 0;
+#X connect 8 0 9 0;
