@@ -227,6 +227,24 @@ popup: popup-locinstall
 popup-clean:
 	make -C ../popup clean
 
+######## OSC ##################
+
+osc-src: sf-login
+	cvs $(CVSROOT) checkout -r $(REVISION) -d OSCx externals/OSCx
+
+## this doesn't yet work! hit jdl when we meet him next time for this configure
+osc-build: osc-src
+	cd OSCx && ./configure --with-pd-dir=$(PDSOURCE) && cd -
+	make -C OSCx
+
+osc-locinstall: osc-build
+	cp OSCx/*.$(EXT) $(LOCINSTALL_DIR)
+
+osc-clean:
+	rm -rf OSCx
+
+osc: osc-locinstall
+
 ######## ZEXY ##################
 
 zexy-src: sf-login
