@@ -65,11 +65,11 @@
 #X obj 987 91 receive_parameter /EXT/REV2/REVERB/GAIN;
 #X obj 987 111 receive_parameter /EXT/REV2/REVERB/CUTOFF;
 #X obj 988 132 receive_parameter /EXT/REV2/REVERB/Q;
-#X obj 992 165 receive_parameter /EXT/REV2/REVERB/DEC/L_TIME;
-#X obj 991 187 receive_parameter /EXT/REV2/REVERB/DEC/LM_FREQ;
-#X obj 991 208 receive_parameter /EXT/REV2/REVERB/DEC/M_TIME;
-#X obj 990 230 receive_parameter /EXT/REV2/REVERB/DEC/MH_FREQ;
-#X obj 990 254 receive_parameter /EXT/REV2/REVERB/DEC/H_TIME;
+#X obj 992 165 receive_parameter /EXT/REV2/REVERB/DECAY/L_TIME;
+#X obj 991 187 receive_parameter /EXT/REV2/REVERB/DECAY/LM_FREQ;
+#X obj 991 208 receive_parameter /EXT/REV2/REVERB/DECAY/M_TIME;
+#X obj 990 230 receive_parameter /EXT/REV2/REVERB/DECAY/MH_FREQ;
+#X obj 990 254 receive_parameter /EXT/REV2/REVERB/DECAY/H_TIME;
 #X obj 982 295 receive_parameter /EXT/REV2/EARLY/DEL_TIME;
 #X obj 981 317 receive_parameter /EXT/REV2/EARLY/DAMP;
 #X obj 981 339 receive_parameter /EXT/REV2/REVERB/DEL_TIME;

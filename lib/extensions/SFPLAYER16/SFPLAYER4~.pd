@@ -95,15 +95,15 @@
 #X connect 30 1 25 0;
 #X connect 31 0 32 0;
 #X restore 92 377 pd readsf~4;
-#X obj 147 73 receive_setting \$1_SFPLAY_FILE;
-#X obj 115 49 receive_regname \$1_SFPLAY_CTRL;
+#X obj 147 73 receive_setting /EXT/SFPLAYER16/FILE;
+#X obj 115 49 receive_regname /EXT/SFPLAYER16/CTRL;
 #X obj 372 416 route bang;
 #X obj 372 440 t b b;
 #X msg 421 441 -1;
 #X obj 437 472 f;
 #X obj 421 527 i;
 #X text 453 531 current position [ms];
-#X obj 421 552 send_regname \$1_SFPLAY_POS;
+#X obj 421 552 send_regname /EXT/SFPLAYER16/POS;
 #X obj 523 501 metro 100;
 #N canvas 361 207 857 590 control 0;
 #X obj 415 34 symbol;
@@ -222,7 +222,7 @@
 #X connect 32 0 0 0;
 #X connect 33 0 6 0;
 #X restore 115 103 pd control;
-#X obj 448 417 send_regname \$1_SFPLAY_LENGTH;
+#X obj 448 417 send_regname /EXT/SFPLAYER16/LENGTH;
 #X obj 372 462 demux;
 #X floatatom 265 129 5 0 0 0 - - -;
 #X msg 372 484 symbol stop;

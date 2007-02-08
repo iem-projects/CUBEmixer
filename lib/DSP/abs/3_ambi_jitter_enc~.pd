@@ -8,7 +8,7 @@
 #X obj 62 127 * 7;
 #X text 135 62 radius is clipped between 0 and 1 (= ambisonic radius)
 ;
-#N canvas 379 48 627 614 /SUBPATCH/ 0;
+#N canvas 379 48 627 614 (subpatch) 0;
 #X obj 89 31 inlet;
 #X obj 54 357 outlet;
 #X obj 144 244 wrap;
@@ -20,8 +20,8 @@
 #X obj 144 222 + 1;
 #X text 245 176 2 point interpolation;
 #X obj 90 117 t f f f;
-#X obj 91 197 tabread AMBI_WEIGHT/GAIN;
-#X obj 30 176 tabread AMBI_WEIGHT/GAIN;
+#X obj 91 197 tabread AMBI_WEIGHT_GAIN;
+#X obj 30 176 tabread AMBI_WEIGHT_GAIN;
 #X obj 162 357 outlet;
 #X connect 0 0 10 0;
 #X connect 2 0 6 1;
@@ -323,9 +323,8 @@
 #X connect 34 0 12 0;
 #X restore 48 387 pd set_name_____________________________________
 ;
-#X obj 365 92 receive_parameter /IN/\$1/AMBI_ELV;
-#X obj 602 93 receive_parameter /IN/\$1/AMBI_AZM;
-#X obj 101 66 sr_parameter /IN/\$1/AMBI_RAD;
+#X obj 365 72 receive_parameter /IN/\$1/SPAT/AMBI/POS/ELV;
+#X obj 602 93 receive_parameter /IN/\$1/SPAT/AMBI/POS/AZM;
 #X obj 212 336 mull~ 0 50;
 #X obj 244 186 f;
 #X text 535 56 3.order ambisonic encoder;
@@ -375,7 +374,9 @@
 #X connect 17 0 11 0;
 #X connect 17 1 11 1;
 #X restore 364 188 pd jitter;
-#X connect 0 0 51 0;
+#X obj 101 65 s /IN/\$1/SPAT/AMBI/POS/RAD;
+#X obj 101 92 receive_parameter /IN/\$1/SPAT/AMBI/POS/RAD;
+#X connect 0 0 50 0;
 #X connect 1 0 46 0;
 #X connect 2 0 3 0;
 #X connect 3 0 44 0;
@@ -388,23 +389,23 @@
 #X connect 7 0 47 0;
 #X connect 8 0 4 0;
 #X connect 8 0 47 0;
-#X connect 10 0 52 0;
-#X connect 11 0 52 0;
+#X connect 10 0 51 0;
+#X connect 11 0 51 0;
 #X connect 12 0 6 1;
 #X connect 12 0 46 2;
-#X connect 12 0 51 2;
+#X connect 12 0 50 2;
 #X connect 13 0 45 0;
 #X connect 32 0 5 0;
 #X connect 35 0 38 0;
-#X connect 35 1 56 1;
+#X connect 35 1 55 1;
 #X connect 36 0 38 0;
 #X connect 36 1 37 1;
-#X connect 37 0 56 0;
+#X connect 37 0 55 0;
 #X connect 38 0 37 0;
 #X connect 40 0 41 0;
 #X connect 41 0 13 0;
 #X connect 42 0 43 0;
-#X connect 43 0 50 0;
+#X connect 43 0 56 0;
 #X connect 44 0 13 0;
 #X connect 44 1 45 0;
 #X connect 45 0 1 0;
@@ -442,9 +443,9 @@
 #X connect 47 15 31 0;
 #X connect 48 0 36 0;
 #X connect 49 0 35 0;
-#X connect 50 0 2 0;
-#X connect 51 0 46 1;
-#X connect 52 0 51 1;
-#X connect 54 0 56 2;
-#X connect 56 0 13 0;
-#X connect 56 1 13 1;
+#X connect 50 0 46 1;
+#X connect 51 0 50 1;
+#X connect 53 0 55 2;
+#X connect 55 0 13 0;
+#X connect 55 1 13 1;
+#X connect 57 0 2 0;

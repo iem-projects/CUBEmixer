@@ -201,13 +201,13 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 127 234 cnv 8 1 1 empty empty 2 0 4 0 9 -262144 -1 0;
 #X obj 207 234 cnv 8 1 1 empty empty 4 0 4 0 9 -262144 -1 0;
 #X obj 167 234 cnv 8 1 1 empty empty 3 0 4 0 9 -262144 -1 0;
-#X obj 686 539 gui_sr \$0rev_dec_l_time /EXT/RRR/REVERB/DEC/L_TIME;
-#X obj 686 558 gui_sr \$0rev_dec_lm_freq /EXT/RRR/REVERB/DEC/LM_FREQ
+#X obj 686 539 gui_sr \$0rev_dec_l_time /EXT/RRR/REVERB/DECAY/L_TIME;
+#X obj 686 558 gui_sr \$0rev_dec_lm_freq /EXT/RRR/REVERB/DECAY/LM_FREQ
 ;
-#X obj 686 577 gui_sr \$0rev_dec_m_time /EXT/RRR/REVERB/DEC/M_TIME;
-#X obj 686 596 gui_sr \$0rev_dec_mh_freq /EXT/RRR/REVERB/DEC/MH_FREQ
+#X obj 686 577 gui_sr \$0rev_dec_m_time /EXT/RRR/REVERB/DECAY/M_TIME;
+#X obj 686 596 gui_sr \$0rev_dec_mh_freq /EXT/RRR/REVERB/DECAY/MH_FREQ
 ;
-#X obj 686 615 gui_sr \$0rev_dec_h_time /EXT/RRR/REVERB/DEC/H_TIME;
+#X obj 686 615 gui_sr \$0rev_dec_h_time /EXT/RRR/REVERB/DECAY/H_TIME;
 #X obj 683 639 gui_sr \$0rev_mod_freq /EXT/RRR/REVERB/MOD/FREQ;
 #X obj 683 658 gui_sr \$0rev_mod_amp /EXT/RRR/REVERB/MOD/AMP;
 #X obj 682 684 gui_sr \$0rev_del_time /EXT/RRR/REVERB/DEL_TIME;
@@ -353,7 +353,7 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 220 497 pack f s;
 #X msg 220 519 \; \$2 vis \$1;
 #N canvas 64 301 806 303 inputs 0;
-#X obj 466 0 gui_sr_beautify-uglify \$0_SRC_1 1_/EXT/RRR/SRC;
+#X obj 466 0 gui_sr_beautify-uglify \$0_SRC_1 /EXT/RRR/IN/1/SRC;
 #X obj 40 129 popup 45 20 #ffffff SRC none;
 #X obj 202 -16 loadbang;
 #X obj 174 29 t a;
@@ -362,11 +362,11 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 0 10 -24198 -1 -1 0 256;
 #X text 10 134 SRC;
 #X text 13 167 VU;
-#X obj 467 20 gui_sr_beautify-uglify \$0_SRC_2 2_/EXT/RRR/SRC;
-#X obj 467 81 gui_sr_beautify-uglify \$0_SRC_5 5_/EXT/RRR/SRC;
-#X obj 467 101 gui_sr_beautify-uglify \$0_SRC_6 6_/EXT/RRR/SRC;
-#X obj 466 41 gui_sr_beautify-uglify \$0_SRC_3 3_/EXT/RRR/SRC;
-#X obj 466 60 gui_sr_beautify-uglify \$0_SRC_4 4_/EXT/RRR/SRC;
+#X obj 467 20 gui_sr_beautify-uglify \$0_SRC_2 /EXT/RRR/IN/2/SRC;
+#X obj 467 81 gui_sr_beautify-uglify \$0_SRC_5 /EXT/RRR/IN/5/SRC;
+#X obj 467 101 gui_sr_beautify-uglify \$0_SRC_6 /EXT/RRR/IN/6/SRC;
+#X obj 466 41 gui_sr_beautify-uglify \$0_SRC_3 /EXT/RRR/IN/3/SRC;
+#X obj 466 60 gui_sr_beautify-uglify \$0_SRC_4 /EXT/RRR/IN/4/SRC;
 #X obj 103 129 popup 45 20 #ffffff SRC none;
 #X obj 101 168 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_VU_2_togui 2 10
 -6 0 10 -24198 -1 -1 0 256;

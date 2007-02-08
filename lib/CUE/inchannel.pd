@@ -161,7 +161,7 @@
 #X obj 120 133 receive/prepend /IN/\$1/FADER/GAIN;
 #X obj 126 153 receive/prepend /IN/\$1/VU/SRC;
 #X obj 367 133 receive/prepend /IN/\$1/LFC/GAIN;
-#X obj 138 203 receive/prepend /IN/\$1/SPATIALIZATION;
+#X obj 138 203 receive/prepend /IN/\$1/SPAT;
 #X connect 0 0 4 0;
 #X connect 0 0 7 0;
 #X connect 0 0 9 0;

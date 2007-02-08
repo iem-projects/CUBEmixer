@@ -54,7 +54,7 @@
 #X obj 895 464 s 1_IN_SRC;
 #X symbolatom 895 436 10 0 0 0 - - -;
 #X obj 896 411 print;
-#X obj 815 576 s 1_IN_SPATIALIZATION;
+#X obj 815 576 s /IN/1/SPAT;
 #X floatatom 815 543 5 0 0 0 - - -;
 #X obj 812 516 hradio 15 1 0 8 empty empty empty 0 -6 0 8 -262144 -1
 -1 0;

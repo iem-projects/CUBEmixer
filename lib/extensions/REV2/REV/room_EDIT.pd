@@ -192,15 +192,15 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 984 244 sr_parameter /EXT/REV2/OUT/3/POS/ELV;
 #X obj 1153 272 sr_parameter /EXT/REV2/OUT/4/POS/AZM;
 #X obj 1074 294 sr_parameter /EXT/REV2/OUT/4/POS/ELV;
-#X obj 700 437 gui_sr \$0rev_dec_l_time /EXT/REV2/REVERB/DEC/L_TIME
+#X obj 700 437 gui_sr \$0rev_dec_l_time /EXT/REV2/REVERB/DECAY/L_TIME
 ;
-#X obj 700 456 gui_sr \$0rev_dec_lm_freq /EXT/REV2/REVERB/DEC/LM_FREQ
+#X obj 700 456 gui_sr \$0rev_dec_lm_freq /EXT/REV2/REVERB/DECAY/LM_FREQ
 ;
-#X obj 700 475 gui_sr \$0rev_dec_m_time /EXT/REV2/REVERB/DEC/M_TIME
+#X obj 700 475 gui_sr \$0rev_dec_m_time /EXT/REV2/REVERB/DECAY/M_TIME
 ;
-#X obj 701 494 gui_sr \$0rev_dec_mh_freq /EXT/REV2/REVERB/DEC/MH_FREQ
+#X obj 701 494 gui_sr \$0rev_dec_mh_freq /EXT/REV2/REVERB/DECAY/MH_FREQ
 ;
-#X obj 700 513 gui_sr \$0rev_dec_h_time /EXT/REV2/REVERB/DEC/H_TIME
+#X obj 700 513 gui_sr \$0rev_dec_h_time /EXT/REV2/REVERB/DECAY/H_TIME
 ;
 #X obj 667 537 gui_sr \$0rev_mod_freq /EXT/REV2/REVERB/MOD/FREQ;
 #X obj 667 556 gui_sr \$0rev_mod_amp /EXT/REV2/REVERB/MOD/AMP;

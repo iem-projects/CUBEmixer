@@ -135,13 +135,13 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 689 603 gui_sr_fader \$0rev_gain /EXT/REV/REVERB/GAIN;
 #X obj 703 622 gui_sr \$0rev_cutoff /EXT/REV/REVERB/CUTOFF;
 #X obj 773 643 gui_sr \$0rev_q /EXT/REV/REVERB/Q;
-#X obj 700 437 gui_sr \$0rev_dec_l_time /EXT/REV/REVERB/DEC/L_TIME;
-#X obj 700 456 gui_sr \$0rev_dec_lm_freq /EXT/REV/REVERB/DEC/LM_FREQ
+#X obj 700 437 gui_sr \$0rev_dec_l_time /EXT/REV/REVERB/DECAY/L_TIME;
+#X obj 700 456 gui_sr \$0rev_dec_lm_freq /EXT/REV/REVERB/DECAY/LM_FREQ
 ;
-#X obj 700 494 gui_sr \$0rev_dec_mh_freq /EXT/REV/REVERB/DEC/MH_FREQ
+#X obj 700 494 gui_sr \$0rev_dec_mh_freq /EXT/REV/REVERB/DECAY/MH_FREQ
 ;
-#X obj 700 475 gui_sr \$0rev_dec_m_time /EXT/REV/REVERB/DEC/M_TIME;
-#X obj 700 513 gui_sr \$0rev_dec_h_time /EXT/REV/REVERB/DEC/H_TIME;
+#X obj 700 475 gui_sr \$0rev_dec_m_time /EXT/REV/REVERB/DECAY/M_TIME;
+#X obj 700 513 gui_sr \$0rev_dec_h_time /EXT/REV/REVERB/DECAY/H_TIME;
 #X obj 708 680 gui_sr \$0early_damp /EXT/REV/EARLY/DAMP;
 #X obj 675 584 gui_sr \$0rev_del_time /EXT/REV/REVERB/DEL_TIME;
 #X obj 667 537 gui_sr \$0rev_mod_freq /EXT/REV/REVERB/MOD/FREQ;

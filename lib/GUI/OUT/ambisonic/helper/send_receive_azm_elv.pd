@@ -3,8 +3,8 @@
 #X obj 31 72 route \$2;
 #X obj 31 52 r \$1_sphere_fromgui;
 #X obj 31 234 s \$1_sphere_togui;
-#X obj 31 114 sendreceive \$2_IN_AMBI_ELV;
-#X obj 86 134 sendreceive \$2_IN_AMBI_AZM;
+#X obj 31 114 sendreceive /IN/\$2/SPAT/AMBI/POS/ELV;
+#X obj 86 134 sendreceive /IN/\$2/SPAT/AMBI/POS/AZM;
 #X msg 31 212 src_dp \$3 \$1 \$2;
 #X obj 36 168 t b f;
 #X obj 31 190 pack 0 0 \$2;

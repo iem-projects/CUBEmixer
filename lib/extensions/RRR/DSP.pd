@@ -225,11 +225,11 @@
 #X obj 933 560 abs/exp_uzi 12;
 #X obj 1167 672 abs/exp_uzi 12;
 #X obj 1047 612 abs/exp_uzi 12;
-#X obj 1083 416 receive_parameter /EXT/RRR/REVERB/DEC/H_TIME;
-#X obj 1083 394 receive_parameter /EXT/RRR/REVERB/DEC/MH/FREQ;
-#X obj 1083 372 receive_parameter /EXT/RRR/REVERB/DEC/M_TIME;
-#X obj 1084 351 receive_parameter /EXT/RRR/REVERB/DEC/LM/FREQ;
-#X obj 1085 329 receive_parameter /EXT/RRR/REVERB/DEC/L_TIME;
+#X obj 1083 416 receive_parameter /EXT/RRR/REVERB/DECAY/H_TIME;
+#X obj 1083 394 receive_parameter /EXT/RRR/REVERB/DECAY/MH_FREQ;
+#X obj 1083 372 receive_parameter /EXT/RRR/REVERB/DECAY/M_TIME;
+#X obj 1084 351 receive_parameter /EXT/RRR/REVERB/DECAY/LM_FREQ;
+#X obj 1085 329 receive_parameter /EXT/RRR/REVERB/DECAY/L_TIME;
 #X obj 1081 296 receive_parameter /EXT/RRR/REVERB/Q;
 #X obj 1080 275 receive_parameter /EXT/RRR/REVERB/CUTOFF;
 #X obj 1080 255 receive_parameter /EXT/RRR/REVERB/GAIN;

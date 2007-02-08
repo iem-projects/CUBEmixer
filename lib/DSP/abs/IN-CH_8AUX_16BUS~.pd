@@ -637,7 +637,7 @@
 #X obj 165 231 f 100;
 #X obj 165 252 sendreceive /IN/\$1/EQ/HIGH/GAIN;
 #X obj 137 187 f 4000;
-#X obj 137 208 sendreceive /IN/\$1/EQ/HIGH_TRANS/FREQ;
+#X obj 137 208 sendreceive /IN/\$1/EQ/HIGH/TRANS_FREQ;
 #X obj 426 122 sendreceive /IN/\$1/EQ/MID1/FREQ;
 #X obj 55 389 sendreceive /IN/\$1/EQ/MID2/FREQ;
 #X obj 55 366 f 440;
@@ -2501,7 +2501,7 @@
 #X msg 281 216 1;
 #X obj 63 69 r DSP_get_settings;
 #X obj 63 92 f 0;
-#X obj 63 113 sendreceive /IN/\$1/SPATIALIZATION;
+#X obj 63 113 sendreceive /IN/\$1/SPAT;
 #X text 64 271 0:ambi;
 #X text 152 274 1:direct;
 #X text 256 272 2:pan;

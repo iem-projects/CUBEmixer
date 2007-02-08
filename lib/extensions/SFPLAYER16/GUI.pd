@@ -7,9 +7,9 @@
 #X msg 314 243 play;
 #X msg 390 243 pause;
 #X msg 155 308 loop \$1;
-#X obj 584 98 sendreceive \$1_SFPLAY_POS;
-#X obj 537 355 sendreceive \$1_SFPLAY_FILE;
-#X obj 314 331 sendreceive \$1_SFPLAY_CTRL;
+#X obj 584 98 sendreceive /EXT/SFPLAYER16/POS;
+#X obj 537 355 sendreceive /EXT/SFPLAYER16/FILE;
+#X obj 314 331 sendreceive /EXT/SFPLAYER16/CTRL;
 #X obj 314 42 r \$0play;
 #X obj 385 42 r \$0pause;
 #X obj 473 82 r \$0stop;
@@ -32,7 +32,7 @@
 #X obj 107 142 hsl 128 15 0 12952.7 0 0 \$0pos \$0pos empty -2 -6 0
 8 -262144 -1 -1 0 1;
 #X msg 45 49 range 0 \$1;
-#X obj 28 19 sendreceive \$1_SFPLAY_LENGTH;
+#X obj 28 19 sendreceive /EXT/SFPLAYER16/LENGTH;
 #X msg 584 206 set \$1;
 #X msg 250 245 play \$1;
 #X obj 584 120 select -1;

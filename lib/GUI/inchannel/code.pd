@@ -151,7 +151,7 @@ from outside!;
 #X obj 97 122 gui_sr_offset \$1GUI_input_EQ_mid1_gain /IN/%d/EQ/MID1/GAIN
 100;
 #X obj 75 76 t f f f;
-#X obj 119 156 gui_sr \$1GUI_input_EQ_mid1_q /IN/%d/EQ/MID1_Q;
+#X obj 119 156 gui_sr \$1GUI_input_EQ_mid1_q /IN/%d/EQ/MID1/Q;
 #X obj 56 217 Rgui_Stogui_offset \$1GUI_input_EQ_mid1_gain 100;
 #X connect 0 0 3 0;
 #X connect 3 0 1 0;
@@ -164,7 +164,7 @@ from outside!;
 #X obj 75 102 gui_sr \$1GUI_input_EQ_mid2_f /IN/%d/EQ/MID2/FREQ;
 #X obj 97 122 gui_sr_offset \$1GUI_input_EQ_mid2_gain /IN/%d/EQ/MID2/GAIN
 100;
-#X obj 119 156 gui_sr \$1GUI_input_EQ_mid2_q /IN/%d/EQ/MID2_Q;
+#X obj 119 156 gui_sr \$1GUI_input_EQ_mid2_q /IN/%d/EQ/MID2/Q;
 #X obj 56 217 Rgui_Stogui_offset \$1GUI_input_EQ_mid2_gain 100;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;

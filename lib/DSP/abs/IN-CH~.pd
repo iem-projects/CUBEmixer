@@ -216,7 +216,7 @@
 #X obj 62 138 sel 0 1 2;
 #X obj 29 42 loadbang;
 #X msg 29 63 0;
-#X obj 62 113 receive_setting /IN/\$1/SPATIALIZATION;
+#X obj 62 113 receive_setting /IN/\$1/SPAT;
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;
 #X connect 4 0 1 0;
@@ -308,7 +308,7 @@
 #X text 453 118 4000;
 #X text 448 148 100;
 #X obj 91 93 receive_parameter /IN/\$1/EQ/LOW/TRANS/FREQ;
-#X obj 157 118 receive_parameter /IN/\$1/EQ/HIGH_TRANS/FREQ;
+#X obj 157 118 receive_parameter /IN/\$1/EQ/HIGH/TRANS_FREQ;
 #X obj 190 146 receive_parameter /IN/\$1/EQ/HIGH/GAIN;
 #X obj 60 229 receive_parameter /IN/\$1/EQ/MID2/FREQ;
 #X text 323 228 440;
