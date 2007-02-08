@@ -1,5 +1,5 @@
 #N canvas 1280 0 854 670 10;
-#X obj 116 521 netsend 1;
+#X obj 116 521 sendOSC;
 #X msg 68 107 bang;
 #X msg 94 318 disconnect \, connect \$1 \$2;
 #N canvas 0 0 450 300 repeat 0;
@@ -34,7 +34,7 @@
 #X obj 116 472 t a a;
 #X obj 620 586 outlet send;
 #X obj 722 586 outlet receive;
-#X obj 469 73 netreceive \$1 1;
+#X obj 469 73 dumpOSC \$1;
 #X obj 469 120 route pd NET;
 #X obj 392 159 route connect;
 #X text 492 10 [netsendreceive <receivport> <sendhost:sendport>];
