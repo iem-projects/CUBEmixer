@@ -20,7 +20,7 @@
 #X obj 104 266 line~;
 #X obj 104 244 pack 0 100;
 #X obj 169 220 r DSP_MIX_INTERPOL_TIME;
-#X obj 104 108 receive_regname \$1_IN_AMBI_RAD;
+#X obj 104 108 receive_regname /IN/\$1/SPAT/AMBI/POS/RAD;
 #X obj 104 201 / 0.34;
 #X text 155 201 c/1000;
 #X obj 104 164 t f f;
@@ -29,7 +29,7 @@
 #X text 118 493 100m: f_lo=0;
 #X obj 134 384 -;
 #X obj 134 341 t f b;
-#X obj 98 59 # receive_pluginparam \$1 \$2 \$3_PEAK_RATIO;
+#X obj 98 59 # receive_pluginparam \$1 \$2 \$3/PEAK_RATIO;
 #X floatatom 193 127 5 0 0 0 - - -;
 #X obj 134 297 * 1.36;
 #X msg 134 360 136 \$1;
