@@ -41,10 +41,10 @@
 #X obj 35 69 inlet~;
 #X obj 237 47 inlet;
 #X obj 63 240 f 1;
-#X obj 385 104 receive_setting /IN/\$1/INV;
-#X obj 306 295 receive_setting /IN/\$1/DEL;
+#X obj 385 104 receive_setting /IN/\$1/ADJ/INV;
+#X obj 306 295 receive_setting /IN/\$1/ADJ/DEL;
 #X text 70 133 ? parameter ?;
-#X obj 63 152 receive_parameter /IN/\$1/ADJ_GAIN;
+#X obj 63 152 receive_parameter /IN/\$1/ADJ/GAIN;
 #X connect 1 0 9 0;
 #X connect 2 0 6 0;
 #X connect 3 0 16 0;

@@ -88,9 +88,9 @@
 #X obj 255 28 inlet params;
 #X obj 122 248 outlet settings;
 #X obj 255 248 outlet params;
-#X obj 150 124 receive/prepend /IN/\$1/AMBI/RAD;
-#X obj 150 144 receive/prepend /IN/\$1/AMBI/ELV;
-#X obj 150 164 receive/prepend /IN/\$1/AMBI/AZM;
+#X obj 150 124 receive/prepend /IN/\$1/SPAT/AMBI/POS/RAD;
+#X obj 150 144 receive/prepend /IN/\$1/SPAT/AMBI/POS/ELV;
+#X obj 150 164 receive/prepend /IN/\$1/SPAT/AMBI/POS/AZM;
 #X connect 1 0 4 0;
 #X connect 1 0 5 0;
 #X connect 1 0 6 0;
@@ -179,8 +179,8 @@
 #X obj 122 248 outlet settings;
 #X obj 255 248 outlet params;
 #X obj 156 99 receive/prepend /IN/\$1/ADJ/GAIN;
-#X obj 156 119 receive/prepend /IN/\$1/INV;
-#X obj 156 139 receive/prepend /IN/\$1/DEL;
+#X obj 156 119 receive/prepend /IN/\$1/ADJ/INV;
+#X obj 156 139 receive/prepend /IN/\$1/ADJ/DEL;
 #X connect 0 0 4 0;
 #X connect 0 0 5 0;
 #X connect 0 0 6 0;

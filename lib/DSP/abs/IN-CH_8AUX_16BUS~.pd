@@ -560,8 +560,8 @@
 #X obj 63 108 r DSP_get_parameters;
 #X obj 35 69 inlet~;
 #X obj 360 57 t b b;
-#X obj 306 295 sendreceive /IN/\$1/DEL;
-#X obj 385 104 sendreceive /IN/\$1/INV;
+#X obj 306 295 sendreceive /IN/\$1/ADJ/DEL;
+#X obj 385 104 sendreceive /IN/\$1/ADJ/INV;
 #X obj 63 152 sendreceive /IN/\$1/ADJ/GAIN;
 #X obj 237 47 inlet;
 #X obj 63 240 f 1;
