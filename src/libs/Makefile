@@ -234,11 +234,12 @@ osc-src: sf-login
 
 ## this doesn't yet work! hit jdl when we meet him next time for this configure
 osc-build: osc-src
+	sed -i -e "s|^INCLUDES = @INCLUDES@|INCLUDES = -I$(PDSOURCE) @INCLUDES@|" OSCx/src/Makefile.in
 	cd OSCx && ./configure --with-pd-dir=$(PDSOURCE) && cd -
 	make -C OSCx
 
 osc-locinstall: osc-build
-	cp OSCx/*.$(EXT) $(LOCINSTALL_DIR)
+	cp OSCx/src/*.$(EXT) $(LOCINSTALL_DIR)
 
 osc-clean:
 	rm -rf OSCx
