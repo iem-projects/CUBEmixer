@@ -1,4 +1,4 @@
-#N canvas 405 138 903 635 10;
+#N canvas 377 138 903 635 10;
 #X obj 238 206 s2l;
 #X obj 213 164 t s s b;
 #X msg 264 183 symbol /;
@@ -21,25 +21,25 @@
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X restore 438 279 pd clear;
-#N canvas 75 58 450 413 \$0-gui 1;
+#N canvas 443 326 450 413 \$0-gui 0;
 #X obj 101 101 cnv 15 96 20 empty empty plugins 6 10 0 14 -233017 -66577
 0;
 #X coords 0 -1 1 1 98 260 1 100 100;
 #X restore 101 139 pd \$0-gui;
 #N canvas 435 354 744 494 generate 0;
-#X obj 75 40 inlet;
+#X obj 50 40 inlet;
 #X obj 132 206 i;
 #X obj 164 207 + 20;
 #X obj 132 229 t f f;
 #X msg 151 186 130;
-#X text 116 37 COMPANDER;
-#X obj 75 76 t s b;
+#X text 91 37 COMPANDER;
+#X obj 75 196 t s b;
 #X obj 238 43 inlet;
 #X obj 238 76 t b;
 #X obj 75 345 s pd-\$0-gui;
-#X obj 17 74 t s s;
-#X obj 17 95 pack s \$0;
-#X msg 17 116 \; \$2-\$1 1;
+#X obj 50 74 t s s;
+#X obj 50 95 pack s \$0;
+#X msg 50 116 \; \$2-\$1 1;
 #X obj 75 255 pack s 0;
 #X msg 75 279 list \$1 \$2 $ 0;
 #X text 228 286 COMPANDER y $ 0;
