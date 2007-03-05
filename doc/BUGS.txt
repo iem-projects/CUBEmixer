@@ -102,8 +102,12 @@ pd/MIDI:
 
 pd/NET:
   - OSC anbindung (lt. wini existiert irgendwo als studierenden-projekt)
+  + done
 
   - autoregistrierung abschaffen!
+  + existiert nur noch als zusatz-funktion (z.b. für pattern-matching)
+
+  - OSC-pattern-matching 
 
 pd/plugins:
 
@@ -121,6 +125,7 @@ pd/plugins:
 
   - die DIRECT/INTerruptible logik ist völlig unverständlich! (logik erlaubt doppeldeutigkeiten; namen "direkt" und "int" sind belegt)
   = evtl. ein msg-plugin, das defaultmäßig die koordinaten durchroutet; auf jedenfall konsistentere namen
+  + auf DSP-seite können nun "alle" parameter überbrückt werden
 
 pd/extensions:
 
@@ -162,8 +167,10 @@ system/libraries:
   + fehlt doch nicht; ist bereits in lib/ eingecheckt (nur makefile hat noch nicht funktioniert)
 
   - [prvu~] und [rvu~] funktionieren nicht, wenn sie auf amd64 maschinen kompiliert wurden
+  + fixed; problem war ein compiler-flag das nicht von pd übernommen worden ist
 
 system/pd:
   - pd>=0.40 hat $args grundlegend geändert: $args inder mitte werden nun geparsed und nicht mehr als "bla-$2-blu" sondern als "bla-\$2-blu" abgespeichert
   . dadurch müssen alle objekte bei denen "$" vorkommt, geändert werden, am besten mit einem script wie diesem:
      find . -name "*.pd" | while read f; do sed -i -e 's|\([^\\]\)\$|\1\\$|g' $f; done
+  + done
