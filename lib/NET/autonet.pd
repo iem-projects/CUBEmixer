@@ -1,4 +1,4 @@
-#N canvas 426 0 854 670 10;
+#N canvas 1318 22 854 670 10;
 #X obj 116 521 sendOSC;
 #X msg 68 107 bang;
 #X msg 94 318 disconnect \, connect \$1 \$2;
@@ -28,30 +28,30 @@
 1;
 #X obj 122 33 inlet;
 #X obj 116 453 spigot;
-#X obj 116 544 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+#X obj 116 544 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
 1;
 #X obj 116 562 t f f;
 #X obj 116 472 t a a;
 #X obj 267 586 outlet send;
 #X obj 369 586 outlet receive;
 #X obj 339 51 dumpOSC \$1;
-#X obj 262 159 route connect;
+#X obj 262 189 route connect;
 #X text 492 10 [netsendreceive <receivport> <sendhost:sendport>];
 #X obj 122 172 relay symbol;
 #X obj 122 193 t b s;
 #X obj 94 285 s2l :;
-#X obj 262 178 symbol;
+#X obj 262 208 symbol;
 #X obj 94 258 symbol \$2;
 #X text 165 32 <sendhost:sendport>;
 #X obj 700 112 inlet send;
 #X msg 209 521 disconnect;
 #X obj 512 114 r GLOBAL_NETSEND;
 #X obj 116 428 list trim;
-#X obj 418 149 sprinkler;
+#X obj 418 179 sprinkler;
 #X obj 201 231 t b;
 #X obj 339 95 t a a;
 #X obj 359 76 OSCroute /CUBEmixer;
-#X obj 339 115 route /NET;
+#X obj 339 135 route /NET;
 #N canvas 0 0 450 300 list 0;
 #X obj 103 83 inlet;
 #X obj 103 171 outlet;
@@ -63,9 +63,10 @@
 #X connect 2 1 3 1;
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
-#X restore 476 248 pd list prepend send /CUBEmixer\$1;
-#X obj 551 196 t a;
-#X obj 551 215 list prepend send;
+#X restore 516 198 pd list prepend send /CUBEmixer\$1;
+#X obj 512 146 t a;
+#X obj 512 165 list prepend send;
+#X obj 339 115 NET/helper/oscmatcher;
 #X connect 0 0 7 0;
 #X connect 1 0 19 0;
 #X connect 2 0 0 0;
@@ -92,7 +93,7 @@
 #X connect 23 0 31 0;
 #X connect 24 0 6 0;
 #X connect 26 0 19 0;
-#X connect 27 0 29 0;
+#X connect 27 0 33 0;
 #X connect 27 1 11 0;
 #X connect 28 0 27 0;
 #X connect 29 0 13 0;
@@ -100,3 +101,4 @@
 #X connect 30 0 24 0;
 #X connect 31 0 32 0;
 #X connect 32 0 24 0;
+#X connect 33 0 29 0;
