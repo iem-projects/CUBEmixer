@@ -18,7 +18,7 @@
 #X obj 154 267 outlet connection established;
 #X obj 233 192 route disconnect;
 #X obj 162 94 t a b;
-#X msg 132 220 /CUBEmixer/NET connect localhost:6667;
+#X msg 132 220 /NET connect localhost:6667;
 #X connect 0 0 8 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 1;
