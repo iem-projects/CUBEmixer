@@ -1,5 +1,5 @@
 #N canvas 182 17 263 192 10;
-#N canvas 0 0 637 414 loader 0;
+#N canvas 1632 471 637 414 loader 0;
 #X msg 110 209 read \$1 \, rewind;
 #X obj 80 188 t b s;
 #X obj 110 271 textfile;
@@ -7,7 +7,7 @@
 #X obj 145 318 del 1;
 #X msg 78 251 bang;
 #X obj 80 230 del 10;
-#X obj 110 346 sprinkler;
+#X obj 110 376 sprinkler;
 #X text 189 322 distribute load over time!;
 #X obj 80 165 symbol;
 #X obj 305 35 loadbang;
@@ -23,12 +23,14 @@
 #X obj 262 162 receive_regname /CUE/RESET;
 #X obj 178 291 send_regname /CUE/LOAD/READY;
 #X msg 178 269 0;
+#X obj 110 345 t a a;
+#X obj 179 376 s GLOBAL_NETSEND;
 #X connect 0 0 2 0;
 #X connect 1 0 6 0;
 #X connect 1 1 0 0;
 #X connect 2 0 3 0;
 #X connect 2 1 22 0;
-#X connect 3 0 7 0;
+#X connect 3 0 23 0;
 #X connect 3 1 4 0;
 #X connect 4 0 2 0;
 #X connect 5 0 2 0;
@@ -47,6 +49,8 @@
 #X connect 19 0 9 0;
 #X connect 20 0 18 0;
 #X connect 22 0 21 0;
+#X connect 23 0 7 0;
+#X connect 23 1 24 0;
 #X restore 54 66 pd loader;
 #N canvas 0 0 579 463 saver 0;
 #X obj 81 388 textfile;
