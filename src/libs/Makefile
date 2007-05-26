@@ -230,21 +230,34 @@ popup-clean:
 ######## OSC ##################
 
 osc-src: sf-login
-	cvs $(CVSROOT) checkout -r $(REVISION) -d OSCx externals/OSCx
+	cvs $(CVSROOT) checkout -r $(REVISION) -d osc externals/mrpeach/osc
 
-## this doesn't yet work! hit jdl when we meet him next time for this configure
 osc-build: osc-src
-	sed -i -e "s|^INCLUDES = @INCLUDES@|INCLUDES = -I$(PDSOURCE) @INCLUDES@|" OSCx/src/Makefile.in
-	cd OSCx && ./configure --with-pd-dir=$(PDSOURCE) && cd -
-	make -C OSCx
+	make -C osc -f ../Makefile.subdir $(EXT)
 
 osc-locinstall: osc-build
-	cp OSCx/src/*.$(EXT) $(LOCINSTALL_DIR)
+	cp osc/*.$(EXT) $(LOCINSTALL_DIR)
 
 osc-clean:
-	rm -rf OSCx
+	rm -rf osc
 
 osc: osc-locinstall
+
+######## NET ##################
+
+net-src: sf-login
+	cvs $(CVSROOT) checkout -r $(REVISION) -d net externals/mrpeach/net
+
+net-build: net-src
+	make -C net -f ../Makefile.subdir $(EXT)
+
+net-locinstall: net-build
+	cp net/*.$(EXT) $(LOCINSTALL_DIR)
+
+net-clean:
+	rm -rf net
+
+net: net-locinstall
 
 ######## ZEXY ##################
 
@@ -265,13 +278,13 @@ zexy: zexy-locinstall
 
 ######## doit #################################
 
-sources: aconnect-src folder_list-build iem_ambi-src iem_bin_ambi-src iemgui-src iemlib-src iemmatrix-src iem_spec2-src miXed-src popup-src zexy-src
+sources: aconnect-src folder_list-build iem_ambi-src iem_bin_ambi-src iemgui-src iemlib-src iemmatrix-src iem_spec2-src miXed-src net-src osc-src popup-src zexy-src
 
-build: aconnect-build folder_list-build iem_ambi-build iem_bin_ambi-build iemgui-build iemlib-build iemmatrix-build iem_spec2-build miXed-build popup-build zexy-build
+build: aconnect-build folder_list-build iem_ambi-build iem_bin_ambi-build iemgui-build iemlib-build iemmatrix-build iem_spec2-build miXed-build net-build osc-build popup-build zexy-build
 
-locinstall: aconnect-locinstall folder_list-locinstall iem_ambi-locinstall iem_bin_ambi-locinstall iemgui-locinstall iemlib-locinstall iemmatrix-locinstall iem_spec2-locinstall miXed-locinstall popup-locinstall zexy-locinstall
+locinstall: aconnect-locinstall folder_list-locinstall iem_ambi-locinstall iem_bin_ambi-locinstall iemgui-locinstall iemlib-locinstall iemmatrix-locinstall iem_spec2-locinstall miXed-locinstall net-locinstall osc-locinstall popup-locinstall zexy-locinstall
 
-clean: aconnect-clean folder_list-clean iem_ambi-clean iem_bin_ambi-clean iemgui-clean iemlib-clean iemmatrix-clean iem_spec2-clean miXed-clean popup-clean zexy-clean
+clean: aconnect-clean folder_list-clean iem_ambi-clean iem_bin_ambi-clean iemgui-clean iemlib-clean iemmatrix-clean iem_spec2-clean miXed-clean net-clean osc-clean popup-clean zexy-clean
 	rm -f sf-login
 
 distclean: clean
