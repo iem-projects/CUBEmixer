@@ -67,12 +67,20 @@ if [ "x" != "x${1}" ]; then
  fi
 fi
 
+if [ "x" != "x${3}" ]; then
+    DSP_EXTPATH="-path $3"
+fi
+
+if [ "x" != "x${4}" ]; then
+    GUI_EXTPATH="-path $4"
+fi
+
 if [ "x${NOGUI}" = "x" ]; then
-${ECHO} ${PD} ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${GUI_PATH} ${PD_PATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH} ${GUI_EXTPATCH}\
+${ECHO} ${PD} ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${GUI_PATH} ${PD_PATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH} ${GUI_EXTPATH} ${GUI_EXTPATCH}\
       -send "${GUI_MESSAGE}" -send "${PD_MESSAGE}" &
 fi
 
 if [ "x${NODSP}" = "x" ]; then
-${ECHO} ${PD} ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${DSP_PATH} ${PD_PATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH} ${DSP_EXTPATCH} \
+${ECHO} ${PD} ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${DSP_PATH} ${PD_PATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH}  ${DSP_EXTPATH} ${DSP_EXTPATCH} \
       -send "${DSP_MESSAGE}" -send "${PD_MESSAGE}"
 fi
