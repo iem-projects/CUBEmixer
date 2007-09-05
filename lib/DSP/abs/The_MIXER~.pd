@@ -1,6 +1,6 @@
 #N canvas 413 95 867 572 10;
 #X obj 486 271 init 50;
-#X obj 281 220 AMBI_Order_Weight_Morphing;
+#X obj 281 222 AMBI_Order_Weight_Morphing;
 #X obj 486 293 s DSP_MIX_INTERPOL_TIME;
 #X text 110 491 1.arg: <float> number of DACs;
 #X text 93 436 1.arg: <float> n_bus;
@@ -66,12 +66,12 @@
 #X text 248 95 1.arg: <float> n_aux_send;
 #X text 487 229 1.arg: <float> n_sf_rec;
 #X obj 488 212 # SF_RECORDER_TOOL~ \$10;
-#X obj 475 173 # VU_METER_BRIDGE~;
+#X obj 488 145 # VU_METER_BRIDGE~;
 #X obj 74 222 IN-MIX-CH~ \$1 \$2 \$3 \$5 \$7 \$11;
 #X text 483 466 11.arg: <float> n_ambisonic_order;
 #X text 164 288 6.arg: <float> n_ambisonic_order;
-#X obj 73 315 AMBI-BUS-OUT~;
-#X obj 59 522 outlet~;
+#X obj 73 325 AMBI-BUS-OUT~;
+#X obj 42 525 outlet~;
 #X obj 126 520 outlet~;
 #X text 65 542 force after inchannels;
 #X text 195 523 force after MATSER;
@@ -79,8 +79,12 @@
 #X text 92 25 force vbefore inchannels;
 #X text 164 277 5.arg: <float> #bus;
 #X obj 238 154 \$8_AUX_PLUG_IN~ \$3 \$4;
-#X obj 75 416 BUS-Gain-Matrix-OUT_bus\$5_OUT52~ \$5 \$6;
+#X obj 74 416 BUS-Gain-Matrix-OUT_bus$5_OUT52~ \$5 \$6;
 #X obj 73 371 AMBI-Gain-Decode-OUT~ \$11 24;
+#X msg 377 457 ON_OFF \$1;
+#X obj 377 439 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X text 490 163 not yet implemented....;
 #X connect 0 0 2 0;
 #X connect 6 0 67 0;
 #X connect 52 0 78 0;
@@ -92,3 +96,5 @@
 #X connect 79 0 72 0;
 #X connect 79 0 61 0;
 #X connect 80 0 79 0;
+#X connect 81 0 61 1;
+#X connect 82 0 81 0;
