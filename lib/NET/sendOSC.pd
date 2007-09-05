@@ -1,4 +1,4 @@
-#N canvas 270 165 638 309 10;
+#N canvas 567 445 638 309 10;
 #X obj 271 143 packOSC;
 #X obj 271 200 udpsend;
 #X obj 271 232 outlet;
@@ -6,8 +6,12 @@
 #X obj 271 65 relay send;
 #X text 55 17 this is a compatibility patch for [OSCx/sendOSC] \, based
 on the modular "net" and "osc" objects;
+#X msg 196 124 typetags 0;
+#X obj 196 105 loadbang;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 3 0 4 0;
 #X connect 4 0 0 0;
 #X connect 4 1 1 0;
+#X connect 6 0 0 0;
+#X connect 7 0 6 0;
