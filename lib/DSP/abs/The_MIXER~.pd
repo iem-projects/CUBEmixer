@@ -79,7 +79,7 @@
 #X text 92 25 force vbefore inchannels;
 #X text 164 277 5.arg: <float> #bus;
 #X obj 238 154 \$8_AUX_PLUG_IN~ \$3 \$4;
-#X obj 74 416 BUS-Gain-Matrix-OUT_bus$5_OUT52~ \$5 \$6;
+#X obj 74 416 BUS-Gain-Matrix-OUT_bus\$5_OUT52~ \$5 \$6;
 #X obj 73 371 AMBI-Gain-Decode-OUT~ \$11 24;
 #X msg 377 457 ON_OFF \$1;
 #X obj 377 439 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
