@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ##
-## configuration file for CUBEmixer on Windows(tm)
+## configuration template file for CUBEmixer 
 ## 
 ## (this file follows the convention for bash-scripts)
 ##
@@ -35,13 +35,12 @@ GUI_OPTIONS="-nrt"
 #GUI_MESSAGE=""
 
 ##
-## settings regarding only the GUI-part of the CUBEmixer
+## settings regarding only the DSP-part of the CUBEmixer
 ##
 DSP_PATCH="lib/DSP/DSP+NET+MIDI+CUE.pd"
 DSP_AUDIO="-alsa -channels 26 -r 44100 -audiobuf 23"
 DSP_MIDI="-alsamidi -mididev 1"
 DSP_OPTIONS="-rt"
-# DSP_PATH=
-# DSP_LIB=
+#DSP_PATH=
+#DSP_LIB=
 #DSP_MESSAGE=""
-
