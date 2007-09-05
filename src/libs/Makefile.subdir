@@ -69,7 +69,8 @@ pd_linux: $(LINUXOBJECTS)
 
 .SUFFIXES: .pd_linux
 
-LINUXCFLAGS = -DPD -O2 -funroll-loops -fomit-frame-pointer -fPIC \
+LINUXCFLAGS = -DPD -O2 \
+    -funroll-loops -fomit-frame-pointer -fPIC -fno-strict-aliasing \
     -Wall -W -Wshadow -Wstrict-prototypes \
     -Wno-unused -Wno-parentheses -Wno-switch $(CFLAGS)
 
