@@ -4,10 +4,29 @@ INFILE=speakerlayout.txt
 OUTFILE=output.mtx
 
 
-function parse_args() {
+function usage() {
+ echo "${0##*/}: calculate ambisonic decoding matrix for a given loudspeaker-layout"
+ echo "		this programm will read in the loudspeaker-setup from a given file"
+ echo "		and will then calculate the decoding matrix and write it into an output file"
+ echo
+ echo "	-h, --help"
+ echo "		print this help"
+ echo "	-i, --infile <infile>"
+ echo '		read the loudspeaker setup from <infile> instead of "'${INFILE}'"'
+ echo "	-o, --outfile <outfile>"
+ echo '		write the decoding matrix to <outfile> instead of "'${OUTFILE}'"'
+ echo
+ exit 0
 
+}
+
+
+function parse_args() {
  while [ "$#" -ge 1 ]; do 
   case "x$1" in
+  x--help|x-h)
+	usage
+	;;
   x--infile|x-i)
 	INFILE=$2
 	shift

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pd -path ~/src/cvs/CUBEmixer/trunk/lib/libs -lib iemmatrix:zexy:iem_ambi:iemlib1:iemlib2 $@
+pd -path ../../lib/libs:../../lib/DSP/abs -lib iemmatrix:zexy:iem_ambi:iemlib1:iemlib2 $@
