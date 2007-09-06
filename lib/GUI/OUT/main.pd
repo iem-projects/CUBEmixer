@@ -1,5 +1,5 @@
-#N canvas 463 162 201 201 10;
-#X obj 2 2 cnv 15 198 198 empty empty MAIN 15 12 0 14 -233017 -66577
+#N canvas 1460 75 231 249 10;
+#X obj 2 2 cnv 15 188 198 empty empty MAIN 15 12 0 14 -233017 -66577
 0;
 #X obj 19 88 cnv 2 45 2 empty empty empty 20 12 0 14 -33289 -66577
 0;
@@ -121,14 +121,14 @@
 #X obj 116 90 cnv 15 60 60 empty empty ON/OFF 4 -11 0 12 -24198 -66577
 0;
 #X obj 121 15 bng 50 250 50 0 \$0GUI_panic \$0GUI_panic empty 0 -6
-0 8 -233017 -262144 -1;
+0 8 -258699 -262144 -1;
 #X obj 121 95 bng 50 250 50 0 \$0GUI_unpanic \$0GUI_unpanic empty 0
 -6 0 8 -233017 -262144 -1;
-#X obj 90 159 cnv 15 100 30 empty empty empty 20 12 0 14 -195568 -66577
+#X obj 86 159 cnv 15 100 30 empty empty empty 20 12 0 14 -195568 -66577
 0;
-#X obj 104 171 nbx 3 14 0 999 0 0 \$0GUI_cpu_ \$0GUI_cpu CPU 0 -6 0
-8 -262144 -1 -1 8.56 256;
+#X obj 100 171 nbx 3 14 0 999 0 0 \$0GUI_cpu_ \$0GUI_cpu CPU 0 -6 0
+8 -262144 -1 -1 9 256;
 #X obj 145 171 nbx 3 14 0 999 0 0 \$0GUI_cpupeak_ \$0GUI_cpupeak peak
 0 -6 0 8 -262144 -1 -1 10 256;
 #X obj 66 50 vfad_scale -1;
-#X coords 0 0 1 1 200 200 1;
+#X coords 0 0 1 1 190 200 1 0 0;
