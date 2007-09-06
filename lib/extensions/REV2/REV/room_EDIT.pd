@@ -1,12 +1,12 @@
 #N canvas 1458 130 804 302 10;
 #N canvas 1332 42 1199 805 EDIT_early_reverb 0;
 #X obj 14 154 vsl 15 121 0 120 0 0 \$0early_gain_fromgui \$0early_gain_togui
-empty 0 -8 0 8 -6177 -1 -1 4700 1;
+empty 0 -8 0 8 -6177 -1 -1 6900 1;
 #X obj 14 328 fadtodb;
 #X obj 14 350 - 100;
 #X floatatom 14 281 4 0 0 0 - - -;
 #X obj 64 154 vsl 15 121 0.16 16 1 0 \$0early_cutoff_fromgui \$0early_cutoff_togui
-empty 0 -8 0 8 -14404 -1 -1 9238 1;
+empty 0 -8 0 8 -14404 -1 -1 9338 1;
 #X floatatom 64 281 4 0 0 0 - - -;
 #X obj 15 125 cnv 8 1 1 empty empty early 0 4 0 9 -262144 -1 0;
 #X obj 15 133 cnv 8 1 1 empty empty echoes 0 4 0 9 -262144 -1 0;
@@ -17,7 +17,7 @@ empty 0 -8 0 8 -14404 -1 -1 9238 1;
 #X obj 65 133 cnv 8 1 1 empty empty cutoff 0 4 0 9 -262144 -1 0;
 #X obj 65 141 cnv 8 1 1 empty empty freq 0 4 0 9 -262144 -1 0;
 #X obj 114 154 vsl 15 121 0 120 0 0 \$0rev_gain_fromgui \$0rev_gain_togui
-empty 0 -8 0 8 -11118 -1 -1 10200 1;
+empty 0 -8 0 8 -11118 -1 -1 8400 1;
 #X obj 114 325 fadtodb;
 #X obj 114 345 - 100;
 #X floatatom 114 281 4 0 0 0 - - -;
@@ -25,14 +25,14 @@ empty 0 -8 0 8 -11118 -1 -1 10200 1;
 #X obj 115 141 cnv 8 1 1 empty empty gain 0 4 0 9 -262144 -1 0;
 #X obj 146 285 cnv 8 1 1 empty empty dB 0 4 0 9 -262144 -1 0;
 #X obj 164 154 vsl 15 121 0.16 16 1 0 \$0rev_cutoff_fromgui \$0rev_cutoff_togui
-empty 0 -8 0 8 -15044 -1 -1 7938 1;
+empty 0 -8 0 8 -15044 -1 -1 8038 1;
 #X floatatom 164 281 4 0 0 0 - - -;
 #X obj 196 285 cnv 8 1 1 empty empty kHz 0 4 0 9 -262144 -1 0;
 #X obj 165 125 cnv 8 1 1 empty empty reverb 0 4 0 9 -262144 -1 0;
 #X obj 165 133 cnv 8 1 1 empty empty cutoff 0 4 0 9 -262144 -1 0;
 #X obj 165 141 cnv 8 1 1 empty empty freq 0 4 0 9 -262144 -1 0;
 #X obj 214 154 vsl 15 121 0.1 60 1 0 \$0rev_dec_l_time_fromgui \$0rev_dec_l_time_togui
-empty 0 -8 0 8 -200880 -1 -1 8300 1;
+empty 0 -8 0 8 -200880 -1 -1 6900 1;
 #X floatatom 214 281 4 0 0 0 - - -;
 #X obj 246 285 cnv 8 1 1 empty empty sec 0 4 0 9 -262144 -1 0;
 #X obj 215 117 cnv 8 1 1 empty empty reverb 0 4 0 9 -262144 -1 0;
@@ -40,7 +40,7 @@ empty 0 -8 0 8 -200880 -1 -1 8300 1;
 #X obj 215 133 cnv 8 1 1 empty empty decay 0 4 0 9 -262144 -1 0;
 #X obj 215 141 cnv 8 1 1 empty empty time 0 4 0 9 -262144 -1 0;
 #X obj 314 154 vsl 15 121 0.1 60 1 0 \$0rev_dec_m_time_fromgui \$0rev_dec_m_time_togui
-empty 0 -8 0 8 -250685 -1 -1 7293 1;
+empty 0 -8 0 8 -250685 -1 -1 6393 1;
 #X floatatom 314 281 4 0 0 0 - - -;
 #X obj 346 285 cnv 8 1 1 empty empty sec 0 4 0 9 -262144 -1 0;
 #X obj 315 117 cnv 8 1 1 empty empty reverb 0 4 0 9 -262144 -1 0;
@@ -48,7 +48,7 @@ empty 0 -8 0 8 -250685 -1 -1 7293 1;
 #X obj 315 133 cnv 8 1 1 empty empty decay 0 4 0 9 -262144 -1 0;
 #X obj 315 141 cnv 8 1 1 empty empty time 0 4 0 9 -262144 -1 0;
 #X obj 414 154 vsl 15 121 0.1 60 1 0 \$0rev_dec_h_time_fromgui \$0rev_dec_h_time_togui
-empty 0 -8 0 8 -255806 -1 -1 5801 1;
+empty 0 -8 0 8 -255806 -1 -1 5601 1;
 #X floatatom 414 281 4 0 0 0 - - -;
 #X obj 446 285 cnv 8 1 1 empty empty sec 0 4 0 9 -262144 -1 0;
 #X obj 416 117 cnv 8 1 1 empty empty reverb 0 4 0 9 -262144 -1 0;
@@ -159,13 +159,14 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X msg 104 517 -3 5.76041 0.4 0 3.49773 0.4 3.95765 0.249818 3.02037
 3.4822 1.98017 111 1.1 -1 -6 130 50 0.79 0.19 0.84 0.32;
 #X obj 104 495 loadbang;
-#X obj 649 156 cube_sphere 12 54 18 62783 262143 195567 33 12 258698
-0 54 260817 54 89 241290 88 54 24197 54 0 250684 54 54 195567 54 30
-258698 33 42 260817 33 54 241290 54 54 24197 54 54 250684 54 42;
+#X obj 648 175 cube_sphere 12 54 18 62783 262143 195567 33 25 258698
+19 64 260817 54 89 241290 88 64 24197 74 25 250684 54 54 195567 54
+30 258698 33 42 260817 33 65 241290 54 77 24197 74 65 250684 74 42
+;
 #X obj 820 60 loadbang;
-#X obj 660 134 cnv 8 1 1 empty empty spatialisation 0 4 0 9 -262144
+#X obj 662 151 cnv 8 1 1 empty empty spatialisation 0 4 0 9 -262144
 -1 0;
-#X obj 681 144 cnv 8 1 1 empty empty position 0 4 0 9 -262144 -1 0
+#X obj 680 163 cnv 8 1 1 empty empty position 0 4 0 9 -262144 -1 0
 ;
 #X obj 804 122 unpack 0 0;
 #X obj 804 194 pack 1 0 0;
@@ -267,12 +268,19 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X msg 819 82 1 30 36 \, 2 30 108 \, 3 30 180 \, 4 30 252 \, 5 30 324
 \, 6 90 0 \, 7 50 0 \, 8 50 60 \, 9 50 120 \, 10 50 180 \, 11 50 240
 \, 12 50 300;
-#X obj 634 108 bng 15 250 50 0 empty empty bang_out_position 18 8 0
+#X obj 636 135 bng 15 250 50 0 empty empty bang_out_position 18 8 0
 9 -62784 -1 -1;
 #X obj 697 336 unpack 0 0 0;
 #X floatatom 655 286 3 0 0 0 - - -;
 #X floatatom 680 286 5 0 0 0 - - -;
 #X floatatom 719 286 5 0 0 0 - - -;
+#X obj 677 107 popup 45 20 #ffffff AUX none;
+#X obj 273 75 s \$0_AUXSRC_fromgui;
+#X obj 413 3 r \$0_AUXSRC_togui;
+#X obj 412 26 DSPnamesGUI AUX;
+#X obj 452 47 loadbang;
+#X msg 704 75 options none \, name AUX;
+#X obj 412 47 t a;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -464,6 +472,12 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X connect 239 0 240 0;
 #X connect 239 1 241 0;
 #X connect 239 2 242 0;
+#X connect 243 0 244 0;
+#X connect 245 0 243 0;
+#X connect 246 0 249 0;
+#X connect 247 0 248 0;
+#X connect 248 0 249 0;
+#X connect 249 0 243 0;
 #X coords 0 0 1 1 762 206 1 0 100;
 #X restore 13 45 pd EDIT_early_reverb;
 #X obj 14 574 outlet;

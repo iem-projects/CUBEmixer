@@ -1,20 +1,13 @@
 #N canvas 1415 461 796 402 10;
 #X text 130 144 open_close_EDIT;
 #X msg 121 119 1;
-#X obj 15 39 popup 45 20 #ffffff AUX none;
-#X obj 172 115 s \$0_AUXSRC_fromgui;
-#X obj 113 2 r \$0_AUXSRC_togui;
-#X obj 112 25 DSPnamesGUI AUX;
-#X obj 152 46 loadbang;
-#X msg 152 68 options none \, name AUX;
-#X obj 11 11 cnv 15 88 198 empty empty REV2 2 10 0 12 -228992 -66577
+#X obj 11 11 cnv 15 63 198 empty empty REV2 2 10 0 12 -228992 -66577
 0;
-#X obj 53 20 tgl 15 0 \$0_ON_fromgui \$0_ON_togui ON 0 -6 0 8 -233017
+#X obj 17 40 tgl 15 0 \$0_ON_fromgui \$0_ON_togui ON 0 -6 0 8 -233017
 -1 -1 0 1;
-#X obj 78 20 bng 15 250 50 0 \$0sEDIT \$0rEDIT EDIT 0 -6 0 8 -62784
+#X obj 48 40 bng 15 250 50 0 \$0sEDIT \$0rEDIT EDIT 0 -6 0 8 -62784
 -1 -1;
 #X obj 317 29 r \$0_AUXSRC_fromgui;
-#X obj 112 46 t a;
 #X obj 317 48 route list;
 #X obj 317 72 unpack 0 s;
 #X obj 318 98 uglifysymbol;
@@ -45,36 +38,30 @@
 #X obj 121 186 REV2/REV/room_EDIT 12;
 #X obj 203 213 gui_sr_offset \$0_ON /EXT/REV2/ON 0;
 #X obj 590 195 sendreceive /EXT/REV2/GAIN;
-#X connect 1 0 39 0;
-#X connect 2 0 3 0;
-#X connect 4 0 2 0;
-#X connect 5 0 12 0;
+#X connect 1 0 32 0;
+#X connect 4 0 1 0;
+#X connect 5 0 6 0;
 #X connect 6 0 7 0;
-#X connect 7 0 12 0;
-#X connect 10 0 1 0;
-#X connect 11 0 13 0;
-#X connect 12 0 2 0;
-#X connect 13 0 14 0;
-#X connect 14 1 15 0;
-#X connect 15 0 38 0;
-#X connect 16 0 18 0;
-#X connect 18 0 17 0;
-#X connect 24 0 34 0;
-#X connect 25 0 32 0;
-#X connect 26 0 37 0;
+#X connect 7 1 8 0;
+#X connect 8 0 31 0;
+#X connect 9 0 11 0;
+#X connect 11 0 10 0;
+#X connect 17 0 27 0;
+#X connect 18 0 25 0;
+#X connect 19 0 30 0;
+#X connect 20 0 19 0;
+#X connect 21 0 22 0;
+#X connect 22 0 20 0;
+#X connect 22 1 24 0;
+#X connect 22 2 18 0;
+#X connect 23 0 19 0;
+#X connect 24 0 23 0;
+#X connect 25 0 19 0;
+#X connect 26 0 21 0;
+#X connect 26 1 34 0;
 #X connect 27 0 26 0;
-#X connect 28 0 29 0;
-#X connect 29 0 27 0;
-#X connect 29 1 31 0;
-#X connect 29 2 25 0;
-#X connect 30 0 26 0;
-#X connect 31 0 30 0;
-#X connect 32 0 26 0;
-#X connect 33 0 28 0;
-#X connect 33 1 41 0;
-#X connect 34 0 33 0;
-#X connect 35 0 37 0;
-#X connect 36 0 24 0;
-#X connect 38 0 16 0;
-#X connect 41 0 35 0;
-#X coords 0 -1 1 1 90 200 1 10 10;
+#X connect 28 0 30 0;
+#X connect 29 0 17 0;
+#X connect 31 0 9 0;
+#X connect 34 0 28 0;
+#X coords 0 -1 1 1 65 200 1 10 10;
