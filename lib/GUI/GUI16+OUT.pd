@@ -1,4 +1,4 @@
-#N canvas 0 0 1181 890 10;
+#N canvas 1323 47 1151 891 10;
 #X obj 6 -35 inchan 1;
 #X obj 77 -35 inchan 2;
 #X obj 148 -35 inchan 3;
@@ -17,7 +17,7 @@
 #X obj 1071 -35 inchan 16;
 #X obj 6 427 inchannel;
 #X obj 621 610 OUT/LFC;
-#X obj 1067 812 system;
+#X obj 1067 813 system;
 #X obj 819 610 RRR/GUI;
 #X obj 555 610 OUT/ambi;
 #X obj 949 428 OUT/AUXS/8;
@@ -27,3 +27,5 @@
 #X obj 554 427 OUT/BUS/16;
 #X obj 689 610 REV/GUI;
 #X obj 754 610 REV2/GUI;
+#X obj 718 814 extensions;
+#X obj 812 814 logo;
