@@ -1,5 +1,5 @@
 #N canvas 1458 130 804 302 10;
-#N canvas 1332 42 1199 805 EDIT_early_reverb 0;
+#N canvas 1290 110 1199 805 EDIT_early_reverb 1;
 #X obj 14 154 vsl 15 121 0 120 0 0 \$0early_gain_fromgui \$0early_gain_togui
 empty 0 -8 0 8 -6177 -1 -1 6900 1;
 #X obj 14 328 fadtodb;
@@ -135,13 +135,16 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 689 603 gui_sr_fader \$0rev_gain /EXT/REV/REVERB/GAIN;
 #X obj 703 622 gui_sr \$0rev_cutoff /EXT/REV/REVERB/CUTOFF;
 #X obj 773 643 gui_sr \$0rev_q /EXT/REV/REVERB/Q;
-#X obj 700 437 gui_sr \$0rev_dec_l_time /EXT/REV/REVERB/DECAY/L_TIME;
+#X obj 700 437 gui_sr \$0rev_dec_l_time /EXT/REV/REVERB/DECAY/L_TIME
+;
 #X obj 700 456 gui_sr \$0rev_dec_lm_freq /EXT/REV/REVERB/DECAY/LM_FREQ
 ;
 #X obj 700 494 gui_sr \$0rev_dec_mh_freq /EXT/REV/REVERB/DECAY/MH_FREQ
 ;
-#X obj 700 475 gui_sr \$0rev_dec_m_time /EXT/REV/REVERB/DECAY/M_TIME;
-#X obj 700 513 gui_sr \$0rev_dec_h_time /EXT/REV/REVERB/DECAY/H_TIME;
+#X obj 700 475 gui_sr \$0rev_dec_m_time /EXT/REV/REVERB/DECAY/M_TIME
+;
+#X obj 700 513 gui_sr \$0rev_dec_h_time /EXT/REV/REVERB/DECAY/H_TIME
+;
 #X obj 708 680 gui_sr \$0early_damp /EXT/REV/EARLY/DAMP;
 #X obj 675 584 gui_sr \$0rev_del_time /EXT/REV/REVERB/DEL_TIME;
 #X obj 667 537 gui_sr \$0rev_mod_freq /EXT/REV/REVERB/MOD/FREQ;
@@ -177,12 +180,12 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X msg 104 517 -3 5.76041 0.4 0 3.49773 0.4 3.95765 0.249818 3.02037
 3.4822 1.98017 111 1.1 -1 -6 130 50 0.79 0.19 0.84 0.32;
 #X obj 104 495 loadbang;
-#X obj 650 154 cube_sphere 4 54 18 62783 262143 0 7 27 258698 54 107
+#X obj 650 166 cube_sphere 4 54 18 62783 262143 0 7 27 258698 54 107
 260817 100 27 241290 54 54;
 #X obj 930 25 loadbang;
-#X obj 660 129 cnv 8 1 1 empty empty spatialisation 0 4 0 9 -262144
+#X obj 665 141 cnv 8 1 1 empty empty spatialisation 0 4 0 9 -262144
 -1 0;
-#X obj 681 139 cnv 8 1 1 empty empty position 0 4 0 9 -262144 -1 0
+#X obj 681 152 cnv 8 1 1 empty empty position 0 4 0 9 -262144 -1 0
 ;
 #X obj 804 18 route 1 2 3 4;
 #X msg 934 94 90 0;
@@ -214,6 +217,13 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X obj 973 172 sr_parameter /EXT/REV/OUT/2/POS/AZM;
 #X obj 894 194 sr_parameter /EXT/REV/OUT/2/POS/ELV;
 #X obj 894 244 pack 2 0 0;
+#X obj 680 108 popup 45 20 #ffffff AUX none;
+#X obj 243 68 s \$0_AUXSRC_fromgui;
+#X obj 182 9 r \$0_AUXSRC_togui;
+#X obj 191 34 DSPnamesGUI AUX;
+#X obj 321 9 loadbang;
+#X msg 321 31 options none \, name AUX;
+#X obj 193 60 t a;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -324,6 +334,12 @@ empty 0 -8 0 8 -110363 -1 -1 5400 1;
 #X connect 188 0 175 0;
 #X connect 189 0 174 0;
 #X connect 190 0 172 0;
+#X connect 191 0 192 0;
+#X connect 193 0 191 0;
+#X connect 194 0 197 0;
+#X connect 195 0 196 0;
+#X connect 196 0 197 0;
+#X connect 197 0 191 0;
 #X coords 0 0 1 1 762 206 1 0 100;
 #X restore 13 45 pd EDIT_early_reverb;
 #X obj 14 574 outlet;
