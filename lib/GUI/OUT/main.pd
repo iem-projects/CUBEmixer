@@ -85,6 +85,7 @@
 #X msg 351 101 1;
 #X obj 489 38 r GUI_NET_initialized;
 #X obj 303 147 sendreceive /DSP;
+#X obj 467 207 loadbang;
 #X connect 2 0 4 0;
 #X connect 3 0 5 0;
 #X connect 4 0 7 0;
@@ -111,6 +112,7 @@
 #X connect 22 0 20 1;
 #X connect 23 0 21 0;
 #X connect 24 0 16 0;
+#X connect 25 0 12 0;
 #X restore 318 67 pd DSP;
 #X restore 50 21 pd code;
 #X obj 21 54 vsl 40 131 0 130 0 0 \$0GUImainout_fader \$0GUImainout_fader
@@ -121,14 +123,14 @@
 #X obj 116 90 cnv 15 60 60 empty empty ON/OFF 4 -11 0 12 -24198 -66577
 0;
 #X obj 121 15 bng 50 250 50 0 \$0GUI_panic \$0GUI_panic empty 0 -6
-0 8 -258699 -262144 -1;
+0 8 -233017 -262144 -1;
 #X obj 121 95 bng 50 250 50 0 \$0GUI_unpanic \$0GUI_unpanic empty 0
 -6 0 8 -233017 -262144 -1;
 #X obj 86 159 cnv 15 100 30 empty empty empty 20 12 0 14 -195568 -66577
 0;
 #X obj 100 171 nbx 3 14 0 999 0 0 \$0GUI_cpu_ \$0GUI_cpu CPU 0 -6 0
-8 -262144 -1 -1 0.72 256;
+8 -262144 -1 -1 0 256;
 #X obj 145 171 nbx 3 14 0 999 0 0 \$0GUI_cpupeak_ \$0GUI_cpupeak peak
-0 -6 0 8 -262144 -1 -1 2 256;
+0 -6 0 8 -262144 -1 -1 0 256;
 #X obj 66 62 vfad_scale -1;
 #X coords 0 0 1 1 190 200 1 0 0;
