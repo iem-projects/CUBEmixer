@@ -28,7 +28,8 @@
 #X obj 457 272 t l;
 #X floatatom 259 248 5 0 0 0 - - -;
 #X obj 54 201 \$1_ambi_dec~ \$2;
-#X text 229 37 2.arg: <flaot> #speakers;
+#X text 229 37 2.arg: <float> #speakers;
+#X obj 462 49 loadbang;
 #X connect 4 0 22 0;
 #X connect 5 0 22 0;
 #X connect 6 0 22 0;
@@ -43,5 +44,7 @@
 #X connect 19 0 24 2;
 #X connect 20 0 24 3;
 #X connect 21 0 24 4;
+#X connect 22 0 24 1;
 #X connect 23 0 24 4;
 #X connect 24 0 14 0;
+#X connect 26 0 5 0;
