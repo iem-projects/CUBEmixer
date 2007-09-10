@@ -16,7 +16,7 @@
 #X obj 89 171 sendreceive /EXT/TESTTONE/SINE;
 #X msg 89 194 set \$1;
 #X msg 318 102 set \$1;
-#X obj 318 67 sendreceive /EXT/TESTTONE/PULSE;
+#X obj 318 67 sendreceive /EXT/TESTTONE/PULSE/ON;
 #X msg 368 192 set \$1;
 #X msg 379 299 set \$1;
 #X obj 368 113 sendreceive /EXT/TESTTONE/PULSE/PERIOD;
