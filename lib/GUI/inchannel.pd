@@ -43,10 +43,22 @@ BUS16 0 -6 0 8 -233017 -233017 -195568 -100 256;
 0;
 #X obj 221 125 tgl 25 0 \$0GUI_input_EQ_fromgui \$0GUI_input_EQ_togui
 empty 0 -6 0 8 -262144 -1 -1 0 1;
-#X obj 13 11 popup 124 25 #ffffff ---;
+#X obj 13 11 popup 124 25 #ffffff --- channel:01 channel:02 channel:03
+channel:04 channel:05 channel:06 channel:07 channel:08 channel:09 channel:10
+channel:11 channel:12 channel:13 channel:14 channel:15 channel:16;
 #X obj 5 7 cnv 15 140 90 empty empty channel 5 10 0 24 -233017 -233017
 0;
-#X obj 422 21 popup 115 20 #ffffff INPUT none;
+#X obj 422 21 popup 115 20 #ffffff INPUT ADC 01 ADC 02 ADC 03 ADC 04
+ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
+ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
+ADC 25 ADC 26 ADC 27 ADC 28 ADC 29 ADC 30 ADC 31 ADC 32 ADC 33 ADC 34
+ADC 35 ADC 36 ADC 37 ADC 38 ADC 39 ADC 40 ADC 41 ADC 42 ADC 43 ADC 44
+ADC 45 ADC 46 ADC 47 ADC 48 ADC 49 ADC 50 ADC 51 ADC 52 ADC 53 ADC 54
+ADC 55 ADC 56 ADC 57 ADC 58 ADC 59 ADC 60 ADC 61 ADC 62 ADC 63 ADC 64
+AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 16:01
+PLAY 16:02 PLAY 16:03 PLAY 16:04 PLAY 16:05 PLAY 16:06 PLAY 16:07 PLAY 16:08
+PLAY 16:09 PLAY 16:10 PLAY 16:11 PLAY 16:12 PLAY 16:13 PLAY 16:14 PLAY 16:15
+PLAY 16:16 TESTTONE none;
 #X obj 419 7 cnv 15 120 90 empty empty empty 20 12 0 14 -195568 -66577
 0;
 #X obj 460 47 nbx 3 14 -100 50 0 0 \$0GUI_input_ingain_fromgui \$0GUI_input_ingain_togui
@@ -75,45 +87,17 @@ InPrePost 0 -6 0 8 -262144 -1 -1 0;
 #X obj 64 334 vfad_scale -1;
 #X obj 7 334 vfad_scale -1;
 #X obj 388 71 tgl 22 0 \$0GUI_input_lock_fromgui \$0GUI_input_lock_togui
-lock 0 -6 0 8 -262144 -1 -1 0 1;
+lock 0 -6 0 8 -262144 -1 -1 1 1;
 #X obj 564 42 r \$0GUI_input_select_togui;
 #X obj 564 70 s \$0GUI_input_select_fromgui;
-#X obj 256 158 popup 115 20 #ffffff plugin none;
-#X obj 254 123 cnv 15 140 70 empty empty plugin1 20 12 0 14 -233017
--66577 0;
-#X obj 374 149 tgl 15 0 \$0GUI_plugin1_on_fromgui \$0GUI_plugin1_on_togui
-empty 0 -6 0 8 -262144 -1 -1 0 1;
-#X obj 375 175 bng 15 250 50 0 \$0GUI_plugin1_settings_fromgui \$0GUI_plugin1_settings_togui
-empty 0 -6 0 8 -62784 -1 -1;
-#X obj 559 108 r \$0GUI_plugin1_togui;
-#X obj 559 130 s \$0GUI_plugin1_fromgui;
-#X obj 256 232 popup 115 20 #ffffff plugin none;
-#X obj 254 197 cnv 15 140 70 empty empty plugin2 20 12 0 14 -233017
--66577 0;
-#X obj 374 223 tgl 15 0 \$0GUI_plugin2_on_fromgui \$0GUI_plugin2_on_togui
-empty 0 -6 0 8 -262144 -1 -1 0 1;
-#X obj 375 249 bng 15 250 50 0 \$0GUI_plugin2_settings_fromgui \$0GUI_plugin2_settings_togui
-empty 0 -6 0 8 -62784 -1 -1;
-#X obj 586 208 r \$0GUI_plugin2_togui;
-#X obj 583 229 s \$0GUI_plugin2_fromgui;
-#X obj 401 158 popup 115 20 #ffffff plugin none;
-#X obj 399 123 cnv 15 140 70 empty empty plugin3 20 12 0 14 -233017
--66577 0;
-#X obj 519 149 tgl 15 0 \$0GUI_plugin3_on_fromgui \$0GUI_plugin3_on_togui
-empty 0 -6 0 8 -262144 -1 -1 0 1;
-#X obj 520 175 bng 15 250 50 0 \$0GUI_plugin3_settings_fromgui \$0GUI_plugin3_settings_togui
-empty 0 -6 0 8 -62784 -1 -1;
-#X obj 554 165 r \$0GUI_plugin3_togui;
-#X obj 553 189 s \$0GUI_plugin3_fromgui;
-#X obj 401 232 popup 115 20 #ffffff plugin none;
-#X obj 399 197 cnv 15 140 70 empty empty plugin4 20 12 0 14 -233017
--66577 0;
-#X obj 581 248 r \$0GUI_plugin4_togui;
-#X obj 582 274 s \$0GUI_plugin4_fromgui;
-#X obj 171 350 popup 45 20 #ffffff AUX none;
-#X obj 171 380 popup 45 20 #ffffff AUX none;
-#X obj 171 410 popup 45 20 #ffffff AUX none;
-#X obj 171 440 popup 45 20 #ffffff AUX none;
+#X obj 171 350 popup 45 20 #ffffff AUX AUX 01 AUX 02 AUX 03 AUX 04
+AUX 05 AUX 06 AUX 07 AUX 08;
+#X obj 171 380 popup 45 20 #ffffff AUX AUX 01 AUX 02 AUX 03 AUX 04
+AUX 05 AUX 06 AUX 07 AUX 08;
+#X obj 171 410 popup 45 20 #ffffff AUX AUX 01 AUX 02 AUX 03 AUX 04
+AUX 05 AUX 06 AUX 07 AUX 08;
+#X obj 171 440 popup 45 20 #ffffff AUX AUX 01 AUX 02 AUX 03 AUX 04
+AUX 05 AUX 06 AUX 07 AUX 08;
 #X obj 96 295 cnv 15 120 180 empty empty AUX 20 12 0 14 -233017 -66577
 0;
 #X obj 98 355 nbx 3 14 -100 50 0 0 \$0GUI_aux1_gain_fromgui \$0GUI_aux1_gain_togui
@@ -134,10 +118,6 @@ AUX4 0 -6 0 8 -228992 -1 -1 0 256;
 pre 18 7 0 8 -262144 -1 -1 0 1;
 #X obj 63 513 r \$0GUI_channel_togui;
 #X obj 55 548 s \$0GUI_channel_fromgui;
-#X obj 520 223 tgl 15 0 \$0GUI_plugin4_on_fromgui \$0GUI_plugin4_on_togui
-empty 0 -6 0 8 -262144 -1 -1 0 1;
-#X obj 521 249 bng 15 250 50 0 \$0GUI_plugin4_settings_fromgui \$0GUI_plugin4_settings_togui
-empty 0 -6 0 8 -62784 -1 -1;
 #X obj 13 36 cnv 15 15 15 empty \$0GUI_inchannel_numcnv empty 10 25
 0 72 -233017 -66577 0;
 #X msg 576 395 label m;
@@ -193,7 +173,7 @@ empty 0 -6 0 8 -262144 -166441 -166441 0 1;
 S 3 6 0 12 -262144 -262144 -1 0 16;
 #X obj 21 303 tgl 13 0 \$0GUI_input_mute_fromgui \$0GUI_input_mute_togui
 on 1 7 0 10 -262144 -262144 -1 0 1;
-#X obj 256 365 cube_sphere 0 54 18 62783 233016 262143 84 28;
+#X obj 256 365 cube_sphere 0 54 18 62783 233016 262143 54 0;
 #X obj 267 525 s \$0inchannel_ambisphere_fromgui;
 #X obj 410 494 r \$0inchannel_ambisphere_togui;
 #N canvas 0 0 450 300 spat-popup 0;
@@ -216,33 +196,29 @@ on 1 7 0 10 -262144 -262144 -1 0 1;
 #X obj 268 575 inchannel/helper/aux_popup_sr \$0GUI_aux2;
 #X obj 266 549 inchannel/helper/aux_popup_sr \$0GUI_aux1;
 #X obj 156 13 iem_image PICS/IEM.gif 0 0 empty empty;
-#X obj 389 73 iem_image PICS/unlocked.gif 0 0 empty empty;
+#X obj 389 73 iem_image PICS/locked.gif 0 0 empty empty;
 #X obj 290 38 r \$0lockimg;
-#X connect 22 0 79 0;
+#X obj 254 123 inchannel/helper/plugin_gop \$0 1;
+#X obj 399 123 inchannel/helper/plugin_gop \$0 2;
+#X obj 254 197 inchannel/helper/plugin_gop \$0 3;
+#X obj 399 197 inchannel/helper/plugin_gop \$0 4;
+#X connect 22 0 57 0;
 #X connect 24 0 42 0;
-#X connect 36 0 110 0;
+#X connect 36 0 86 0;
 #X connect 41 0 24 0;
-#X connect 43 0 48 0;
-#X connect 47 0 43 0;
-#X connect 49 0 54 0;
-#X connect 53 0 49 0;
-#X connect 55 0 60 0;
-#X connect 59 0 55 0;
-#X connect 61 0 64 0;
-#X connect 63 0 61 0;
-#X connect 65 0 114 0;
-#X connect 66 0 113 0;
-#X connect 67 0 112 0;
-#X connect 68 0 111 0;
-#X connect 78 0 22 0;
-#X connect 83 0 19 0;
-#X connect 84 0 24 0;
-#X connect 107 0 108 0;
-#X connect 109 0 107 0;
-#X connect 110 0 36 0;
-#X connect 111 0 68 0;
-#X connect 112 0 67 0;
-#X connect 113 0 66 0;
-#X connect 114 0 65 0;
-#X connect 117 0 116 0;
+#X connect 43 0 90 0;
+#X connect 44 0 89 0;
+#X connect 45 0 88 0;
+#X connect 46 0 87 0;
+#X connect 56 0 22 0;
+#X connect 59 0 19 0;
+#X connect 60 0 24 0;
+#X connect 83 0 84 0;
+#X connect 85 0 83 0;
+#X connect 86 0 36 0;
+#X connect 87 0 46 0;
+#X connect 88 0 45 0;
+#X connect 89 0 44 0;
+#X connect 90 0 43 0;
+#X connect 93 0 92 0;
 #X coords 0 0 1 1 544 480 1 0 0;
