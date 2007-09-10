@@ -5,9 +5,9 @@
 -1 -1 0 1;
 #X obj 46 38 bng 15 250 50 0 \$0_sfpo_edit \$0_sfpo_edit EDIT 0 -6
 0 8 -62784 -1 -1;
-#X obj 55 65 vfad_scale -1;
-#X obj 13 104 cnv 2 40 2 empty empty empty 20 12 0 14 -1 -66577 0;
-#X obj 19 61 vsl 30 131 0 130 0 0 \$0_sfpo_vol_gui \$0_sfpo_vol_gui
+#X obj 55 68 vfad_scale -1;
+#X obj 13 107 cnv 2 40 2 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 19 64 vsl 30 131 0 130 0 0 \$0_sfpo_vol_gui \$0_sfpo_vol_gui
 -inf 1 140 0 8 -233017 -1 -1 0 1;
 #X obj 312 74 route float;
 #X obj 392 242 - 100;
@@ -61,14 +61,7 @@
 #X connect 10 0 1 0;
 #X connect 11 0 1 0;
 #X restore 321 84 pd outrouting_1-24;
-#X obj 226 175 popup 60 20 #ffffff BUS OUT 01 OUT 02 OUT 03 OUT 04
-OUT 05 OUT 06 OUT 07 OUT 08 OUT 09 OUT 10 OUT 11 OUT 12 OUT 13 OUT 14
-OUT 15 OUT 16 OUT 17 OUT 18 OUT 19 OUT 20 OUT 21 OUT 22 OUT 23 OUT 24
-OUT 25 OUT 26 OUT 27 OUT 28 OUT 29 OUT 30 OUT 31 OUT 32 OUT 33 OUT 34
-OUT 35 OUT 36 OUT 37 OUT 38 OUT 39 OUT 40 OUT 41 OUT 42 OUT 43 OUT 44
-OUT 45 OUT 46 OUT 47 OUT 48 OUT 49 OUT 50 OUT 51 OUT 52 OUT 53 OUT 54
-OUT 55 OUT 56 OUT 57 OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64
-;
+#X obj 226 175 popup 60 20 #ffffff ---;
 #N canvas 63 81 551 231 outrouting_26 0;
 #X obj 11 47 route bang;
 #X obj 11 181 outlet;
@@ -103,14 +96,7 @@ OUT 55 OUT 56 OUT 57 OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64
 #X obj 413 269 openpanel;
 #X obj 417 236 r \$0_sfpo_open;
 #X obj 86 353 sendreceive /EXT/SFPO/FILENAME;
-#X obj 226 135 popup 60 20 #ffffff OUT OUT 01 OUT 02 OUT 03 OUT 04
-OUT 05 OUT 06 OUT 07 OUT 08 OUT 09 OUT 10 OUT 11 OUT 12 OUT 13 OUT 14
-OUT 15 OUT 16 OUT 17 OUT 18 OUT 19 OUT 20 OUT 21 OUT 22 OUT 23 OUT 24
-OUT 25 OUT 26 OUT 27 OUT 28 OUT 29 OUT 30 OUT 31 OUT 32 OUT 33 OUT 34
-OUT 35 OUT 36 OUT 37 OUT 38 OUT 39 OUT 40 OUT 41 OUT 42 OUT 43 OUT 44
-OUT 45 OUT 46 OUT 47 OUT 48 OUT 49 OUT 50 OUT 51 OUT 52 OUT 53 OUT 54
-OUT 55 OUT 56 OUT 57 OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64
-;
+#X obj 226 135 popup 60 20 #ffffff ---;
 #N canvas 1437 411 551 231 outrouting_25 0;
 #X obj 11 47 route bang;
 #X obj 11 181 outlet;
