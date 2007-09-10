@@ -186,7 +186,7 @@ miXed-src: sf-login
 miXed-build: miXed-src
 	make -C miXed PD_DIR=$(PDSOURCE)
 
-miXed_objects=seq midiflush midiformat midiparse
+miXed_objects=seq midiflush midiformat midiparse tot
 miXed_externals=$(miXed_objects:=.pd_linux)
 
 miXed-locinstall: miXed-build
