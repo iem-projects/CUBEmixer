@@ -1,9 +1,9 @@
 #N canvas 230 267 700 447 10;
 #X obj 122 249 outlet;
 #X obj 67 23 inlet;
-#X obj 351 78 gui_sr_fader \$1_ambiweight \$1_AMBIWEIGHT;
-#X obj 122 197 r \$1_AMBIWEIGHT;
-#X obj 317 52 gui_sr_offset \$1_ambiweight_nbx \$1_AMBIWEIGHT 100;
-#X obj 67 54 s \$1_AMBIWEIGHT;
+#X obj 351 78 gui_sr_fader \$1_\$2_ambiweight \$1_\$2_AMBIWEIGHT;
+#X obj 122 197 r \$1_\$2_AMBIWEIGHT;
+#X obj 317 52 gui_sr_offset \$1_\$2_ambiweight_nbx \$1_\$2_AMBIWEIGHT 100;
+#X obj 67 54 s \$1_\$2_AMBIWEIGHT;
 #X connect 1 0 5 0;
 #X connect 3 0 0 0;
