@@ -1,4 +1,4 @@
-#N canvas 0 0 1141 953 10;
+#N canvas 0 0 1143 954 10;
 #X obj 6 5 inchan 1;
 #X obj 77 5 inchan 2;
 #X obj 148 5 inchan 3;
