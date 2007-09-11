@@ -1,0 +1,48 @@
+#N canvas 0 0 450 300 10;
+#X obj 100 100 cnv 15 161 170 empty empty EQ 20 12 0 14 -233017 -66577
+0;
+#X obj 234 102 tgl 25 0 \$1GUI_input_EQ_fromgui \$1GUI_input_EQ_togui
+empty 0 -6 0 8 -262144 -1 -1 0 1;
+#X obj 153 130 cnv 15 33 114 empty \$1GUIinchannel_EQ_gain_cnv gain
+6 4 0 8 -212212 -166441 0;
+#X obj 187 130 cnv 15 40 114 empty \$1GUIinchannel_EQ_freq_cnv freq
+10 4 0 8 -195568 -166441 0;
+#X obj 155 157 nbx 3 14 -100 20 0 0 \$1GUI_input_EQ_hi_gain_fromgui
+\$1GUI_input_EQ_hi_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
+0 256;
+#X obj 155 174 nbx 3 14 -100 20 0 0 \$1GUI_input_EQ_mid1_gain_fromgui
+\$1GUI_input_EQ_mid1_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
+0 256;
+#X obj 155 191 nbx 3 14 -100 20 0 0 \$1GUI_input_EQ_mid2_gain_fromgui
+\$1GUI_input_EQ_mid2_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
+0 256;
+#X obj 155 208 nbx 3 14 -100 20 0 0 \$1GUI_input_EQ_lo_gain_fromgui
+\$1GUI_input_EQ_lo_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
+0 256;
+#X obj 188 140 nbx 4 14 20 9999 1 0 \$1GUI_input_EQ_hicut_f_fromgui
+\$1GUI_input_EQ_hicut_f_togui HiCut -70 7 0 8 -187584 -166441 -166441
+20 256;
+#X obj 188 157 nbx 4 14 20 9999 1 0 \$1GUI_input_EQ_hi_f_fromgui \$1GUI_input_EQ_hi_f_togui
+High -70 7 0 8 -187584 -166441 -166441 20 256;
+#X obj 188 174 nbx 4 14 20 9999 1 0 \$1GUI_input_EQ_mid1_f_fromgui
+\$1GUI_input_EQ_mid1_f_togui Mid1 -70 7 0 8 -187584 -166441 -166441
+20 256;
+#X obj 188 191 nbx 4 14 20 9999 1 0 \$1GUI_input_EQ_mid2_f_fromgui
+\$1GUI_input_EQ_mid2_f_togui Mid2 -70 7 0 8 -187584 -166441 -166441
+20 256;
+#X obj 188 208 nbx 4 14 20 9999 1 0 \$1GUI_input_EQ_lo_f_fromgui \$1GUI_input_EQ_lo_f_togui
+Low -70 7 0 8 -187584 -166441 -166441 20 256;
+#X obj 188 225 nbx 4 14 20 9999 1 0 \$1GUI_input_EQ_locut_f_fromgui
+\$1GUI_input_EQ_locut_f_togui LoCut -70 7 0 8 -187584 -166441 -166441
+20 256;
+#X obj 227 162 cnv 15 34 50 empty \$1GUIinchannel_EQ_q_cnv q 10 4 0
+8 -212212 -166441 0;
+#X obj 228 174 nbx 3 14 0.1 10 1 0 \$1GUI_input_EQ_mid1_q_fromgui \$1GUI_input_EQ_mid1_q_togui
+empty 0 -6 0 8 -162485 -166441 -166441 0.1 256;
+#X obj 228 191 nbx 3 14 0.1 10 1 0 \$1GUI_input_EQ_mid2_q_fromgui \$1GUI_input_EQ_mid2_q_togui
+empty 0 -6 0 8 -162485 -166441 -166441 0.1 256;
+#X obj 236 140 tgl 14 0 \$1GUI_input_EQ_hicut_fromgui \$1GUI_input_EQ_hicut_togui
+empty 0 -6 0 8 -262144 -166441 -166441 0 1;
+#X obj 236 225 tgl 14 0 \$1GUI_input_EQ_locut_fromgui \$1GUI_input_EQ_locut_togui
+empty 0 -6 0 8 -262144 -166441 -166441 0 1;
+#X coords 0 -1 1 1 161 170 1 100 100;

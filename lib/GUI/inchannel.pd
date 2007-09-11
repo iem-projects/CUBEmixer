@@ -1,224 +1,44 @@
 #N canvas 19 0 806 635 10;
 #X obj 1 1 cnv 15 543 478 empty empty empty 20 12 0 14 -83187 -66577
 0;
-#X obj 389 325 cnv 15 150 150 empty \$0GUI_input_direct_cnv_togui direct
-20 12 0 14 -233017 -195568 0;
-#X obj 396 366 nbx 3 14 -100 50 0 0 \$0GUI_bus1_gain_fromgui \$0GUI_bus1_gain_togui
-BUS1 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 430 366 nbx 3 14 -100 50 0 0 \$0GUI_bus2_gain_fromgui \$0GUI_bus2_gain_togui
-BUS2 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 464 366 nbx 3 14 -100 50 0 0 \$0GUI_bus3_gain_fromgui \$0GUI_bus3_gain_togui
-BUS3 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 498 366 nbx 3 14 -100 50 0 0 \$0GUI_bus4_gain_fromgui \$0GUI_bus4_gain_togui
-BUS4 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 396 395 nbx 3 14 -100 50 0 0 \$0GUI_bus5_gain_fromgui \$0GUI_bus5_gain_togui
-BUS5 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 430 395 nbx 3 14 -100 50 0 0 \$0GUI_bus6_gain_fromgui \$0GUI_bus6_gain_togui
-BUS6 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 464 395 nbx 3 14 -100 50 0 0 \$0GUI_bus7_gain_fromgui \$0GUI_bus7_gain_togui
-BUS7 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 498 395 nbx 3 14 -100 50 0 0 \$0GUI_bus8_gain_fromgui \$0GUI_bus8_gain_togui
-BUS8 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 396 426 nbx 3 14 -100 50 0 0 \$0GUI_bus9_gain_fromgui \$0GUI_bus9_gain_togui
-BUS9 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 430 426 nbx 3 14 -100 50 0 0 \$0GUI_bus10_gain_fromgui \$0GUI_bus10_gain_togui
-BUS10 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 464 426 nbx 3 14 -100 50 0 0 \$0GUI_bus11_gain_fromgui \$0GUI_bus11_gain_togui
-BUS11 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 498 426 nbx 3 14 -100 50 0 0 \$0GUI_bus12_gain_fromgui \$0GUI_bus12_gain_togui
-BUS12 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 396 455 nbx 3 14 -100 50 0 0 \$0GUI_bus13_gain_fromgui \$0GUI_bus13_gain_togui
-BUS13 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 430 455 nbx 3 14 -100 50 0 0 \$0GUI_bus14_gain_fromgui \$0GUI_bus14_gain_togui
-BUS14 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 464 455 nbx 3 14 -100 50 0 0 \$0GUI_bus15_gain_fromgui \$0GUI_bus15_gain_togui
-BUS15 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 498 455 nbx 3 14 -100 50 0 0 \$0GUI_bus16_gain_fromgui \$0GUI_bus16_gain_togui
-BUS16 0 -6 0 8 -233017 -233017 -195568 -100 256;
-#X obj 235 325 cnv 15 150 150 empty \$0GUI_input_ambi_cnv_togui ambisonic
-20 12 0 14 -233017 -1 0;
-#X obj 274 348 nbx 5 14 0 100 0 0 \$0GUI_input_ambi_r_fromgui \$0GUI_input_ambi_r_togui
-[m] 50 7 0 8 -262144 -1 -1 0 256;
-#X obj 87 123 cnv 15 161 144 empty empty EQ 20 12 0 14 -233017 -66577
-0;
-#X obj 221 125 tgl 25 0 \$0GUI_input_EQ_fromgui \$0GUI_input_EQ_togui
-empty 0 -6 0 8 -262144 -1 -1 0 1;
-#X obj 13 11 popup 124 25 #ffffff --- channel:01 channel:02 channel:03
-channel:04 channel:05 channel:06 channel:07 channel:08 channel:09 channel:10
-channel:11 channel:12 channel:13 channel:14 channel:15 channel:16;
-#X obj 5 7 cnv 15 140 90 empty empty channel 5 10 0 24 -233017 -233017
-0;
-#X obj 422 21 popup 115 20 #ffffff INPUT ADC 01 ADC 02 ADC 03 ADC 04
-ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
-ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
-ADC 25 ADC 26 ADC 27 ADC 28 ADC 29 ADC 30 ADC 31 ADC 32 ADC 33 ADC 34
-ADC 35 ADC 36 ADC 37 ADC 38 ADC 39 ADC 40 ADC 41 ADC 42 ADC 43 ADC 44
-ADC 45 ADC 46 ADC 47 ADC 48 ADC 49 ADC 50 ADC 51 ADC 52 ADC 53 ADC 54
-ADC 55 ADC 56 ADC 57 ADC 58 ADC 59 ADC 60 ADC 61 ADC 62 ADC 63 ADC 64
-AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 16:01
-PLAY 16:02 PLAY 16:03 PLAY 16:04 PLAY 16:05 PLAY 16:06 PLAY 16:07 PLAY 16:08
-PLAY 16:09 PLAY 16:10 PLAY 16:11 PLAY 16:12 PLAY 16:13 PLAY 16:14 PLAY 16:15
-PLAY 16:16 TESTTONE none;
-#X obj 419 7 cnv 15 120 90 empty empty empty 20 12 0 14 -195568 -66577
-0;
-#X obj 460 47 nbx 3 14 -100 50 0 0 \$0GUI_input_ingain_fromgui \$0GUI_input_ingain_togui
-gain -30 7 0 8 -228992 -1 -1 0 256;
-#X obj 501 46 tgl 15 0 \$0GUI_input_invert_fromgui \$0GUI_input_invert_togui
-inv 17 7 0 8 -262144 -1 -1 0 1;
-#X obj 427 68 nbx 3 14 0 999 0 0 \$0GUI_input_delay_fromgui \$0GUI_input_delay_togui
-delay[ms] 40 7 0 8 -262144 -1 -1 0 256;
 #X obj 150 7 cnv 15 265 90 empty empty empty 20 40 0 80 -233017 -66577
 0;
-#X obj 5 118 cnv 15 75 357 empty empty empty 20 12 0 14 -195568 -66577
+#X obj 5 105 cnv 15 75 357 empty empty empty 20 12 0 14 -195568 -66577
 0;
-#X obj 19 329 vsl 25 128 0 127 0 0 \$0GUI_input_gain_fromgui \$0GUI_input_gain_togui
+#X obj 19 316 vsl 25 128 0 127 0 0 \$0GUI_input_gain_fromgui \$0GUI_input_gain_togui
 empty 0 -8 0 8 -228992 -1 -1 0 1;
-#X obj 47 329 vsl 15 128 0 127 0 0 \$0GUI_input_sub_fromgui \$0GUI_input_sub_togui
+#X obj 47 316 vsl 15 128 0 127 0 0 \$0GUI_input_sub_fromgui \$0GUI_input_sub_togui
 empty 0 -8 0 8 -245568 -1 -1 0 1;
-#X obj 12 128 cnv 15 59 165 empty empty empty 4 8 0 8 -233017 -66577
+#X obj 12 115 cnv 15 59 165 empty empty empty 4 8 0 8 -233017 -66577
 0;
-#X obj 16 166 vu 15 120 \$0GUI_input_vu_togui empty -1 -8 0 8 -66577
+#X obj 16 153 vu 15 120 \$0GUI_input_vu_togui empty -1 -8 0 8 -66577
 -1 1 0;
-#X obj 15 144 hradio 15 1 0 3 \$0GUI_input_vuselect_fromgui \$0GUI_input_vuselect_togui
+#X obj 15 131 hradio 15 1 0 3 \$0GUI_input_vuselect_fromgui \$0GUI_input_vuselect_togui
 InPrePost 0 -6 0 8 -262144 -1 -1 0;
-#X obj 421 297 popup 115 20 #ffffff ambisonic ambisonic direct;
-#X obj 235 294 cnv 15 304 25 empty empty Spatialization: 20 12 0 14
--233017 -66577 0;
-#X obj 64 334 vfad_scale -1;
-#X obj 7 334 vfad_scale -1;
-#X obj 388 71 tgl 22 0 \$0GUI_input_lock_fromgui \$0GUI_input_lock_togui
-lock 0 -6 0 8 -262144 -1 -1 1 1;
-#X obj 564 42 r \$0GUI_input_select_togui;
-#X obj 564 70 s \$0GUI_input_select_fromgui;
-#X obj 171 350 popup 45 20 #ffffff AUX AUX 01 AUX 02 AUX 03 AUX 04
-AUX 05 AUX 06 AUX 07 AUX 08;
-#X obj 171 380 popup 45 20 #ffffff AUX AUX 01 AUX 02 AUX 03 AUX 04
-AUX 05 AUX 06 AUX 07 AUX 08;
-#X obj 171 410 popup 45 20 #ffffff AUX AUX 01 AUX 02 AUX 03 AUX 04
-AUX 05 AUX 06 AUX 07 AUX 08;
-#X obj 171 440 popup 45 20 #ffffff AUX AUX 01 AUX 02 AUX 03 AUX 04
-AUX 05 AUX 06 AUX 07 AUX 08;
-#X obj 96 295 cnv 15 120 180 empty empty AUX 20 12 0 14 -233017 -66577
+#X obj 64 321 vfad_scale -1;
+#X obj 7 321 vfad_scale -1;
+#X obj 258 71 tgl 22 0 \$0GUI_input_lock_fromgui \$0GUI_input_lock_togui
+lock 0 -6 0 8 -262144 -1 -1 0 1;
+#X obj 77 499 inchannel/code \$0;
+#X obj 19 288 cnv 17 17 17 empty empty empty 20 12 0 14 -258699 -66577
 0;
-#X obj 98 355 nbx 3 14 -100 50 0 0 \$0GUI_aux1_gain_fromgui \$0GUI_aux1_gain_togui
-AUX1 0 -6 0 8 -228992 -1 -1 0 256;
-#X obj 135 354 tgl 15 0 \$0GUI_aux1_pre_fromgui \$0GUI_aux1_pre_togui
-pre 18 7 0 8 -262144 -1 -1 0 1;
-#X obj 98 385 nbx 3 14 -100 50 0 0 \$0GUI_aux2_gain_fromgui \$0GUI_aux2_gain_togui
-AUX2 0 -6 0 8 -228992 -1 -1 0 256;
-#X obj 135 384 tgl 15 0 \$0GUI_aux2_pre_fromgui \$0GUI_aux2_pre_togui
-pre 18 7 0 8 -262144 -1 -1 0 1;
-#X obj 98 415 nbx 3 14 -100 50 0 0 \$0GUI_aux3_gain_fromgui \$0GUI_aux3_gain_togui
-AUX3 0 -6 0 8 -228992 -1 -1 0 256;
-#X obj 135 414 tgl 15 0 \$0GUI_aux3_pre_fromgui \$0GUI_aux3_pre_togui
-pre 18 7 0 8 -262144 -1 -1 0 1;
-#X obj 98 445 nbx 3 14 -100 50 0 0 \$0GUI_aux4_gain_fromgui \$0GUI_aux4_gain_togui
-AUX4 0 -6 0 8 -228992 -1 -1 0 256;
-#X obj 135 444 tgl 15 0 \$0GUI_aux4_pre_fromgui \$0GUI_aux4_pre_togui
-pre 18 7 0 8 -262144 -1 -1 0 1;
-#X obj 63 513 r \$0GUI_channel_togui;
-#X obj 55 548 s \$0GUI_channel_fromgui;
-#X obj 13 36 cnv 15 15 15 empty \$0GUI_inchannel_numcnv empty 10 25
-0 72 -233017 -66577 0;
-#X msg 576 395 label m;
-#X msg 571 12 options none;
-#X obj 29 612 inchannel/code \$0;
-#X obj 140 153 cnv 15 33 114 empty \$0GUIinchannel_EQ_gain_cnv gain
-6 4 0 8 -212212 -166441 0;
-#X obj 174 153 cnv 15 40 114 empty \$0GUIinchannel_EQ_freq_cnv freq
-10 4 0 8 -195568 -166441 0;
-#X obj 142 180 nbx 3 14 -100 20 0 0 \$0GUI_input_EQ_hi_gain_fromgui
-\$0GUI_input_EQ_hi_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
-0 256;
-#X obj 142 197 nbx 3 14 -100 20 0 0 \$0GUI_input_EQ_mid1_gain_fromgui
-\$0GUI_input_EQ_mid1_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
-0 256;
-#X obj 142 214 nbx 3 14 -100 20 0 0 \$0GUI_input_EQ_mid2_gain_fromgui
-\$0GUI_input_EQ_mid2_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
-0 256;
-#X obj 142 231 nbx 3 14 -100 20 0 0 \$0GUI_input_EQ_lo_gain_fromgui
-\$0GUI_input_EQ_lo_gain_togui empty 0 -6 0 8 -228992 -166441 -166441
-0 256;
-#X obj 175 163 nbx 4 14 20 9999 1 0 \$0GUI_input_EQ_hicut_f_fromgui
-\$0GUI_input_EQ_hicut_f_togui HiCut -70 7 0 8 -187584 -166441 -166441
-20 256;
-#X obj 175 180 nbx 4 14 20 9999 1 0 \$0GUI_input_EQ_hi_f_fromgui \$0GUI_input_EQ_hi_f_togui
-High -70 7 0 8 -187584 -166441 -166441 20 256;
-#X obj 175 197 nbx 4 14 20 9999 1 0 \$0GUI_input_EQ_mid1_f_fromgui
-\$0GUI_input_EQ_mid1_f_togui Mid1 -70 7 0 8 -187584 -166441 -166441
-20 256;
-#X obj 175 214 nbx 4 14 20 9999 1 0 \$0GUI_input_EQ_mid2_f_fromgui
-\$0GUI_input_EQ_mid2_f_togui Mid2 -70 7 0 8 -187584 -166441 -166441
-20 256;
-#X obj 175 231 nbx 4 14 20 9999 1 0 \$0GUI_input_EQ_lo_f_fromgui \$0GUI_input_EQ_lo_f_togui
-Low -70 7 0 8 -187584 -166441 -166441 20 256;
-#X obj 175 248 nbx 4 14 20 9999 1 0 \$0GUI_input_EQ_locut_f_fromgui
-\$0GUI_input_EQ_locut_f_togui LoCut -70 7 0 8 -187584 -166441 -166441
-20 256;
-#X obj 214 185 cnv 15 34 50 empty \$0GUIinchannel_EQ_q_cnv q 10 4 0
-8 -212212 -166441 0;
-#X obj 215 197 nbx 3 14 0.1 10 1 0 \$0GUI_input_EQ_mid1_q_fromgui \$0GUI_input_EQ_mid1_q_togui
-empty 0 -6 0 8 -162485 -166441 -166441 0.1 256;
-#X obj 215 214 nbx 3 14 0.1 10 1 0 \$0GUI_input_EQ_mid2_q_fromgui \$0GUI_input_EQ_mid2_q_togui
-empty 0 -6 0 8 -162485 -166441 -166441 0.1 256;
-#X obj 223 163 tgl 14 0 \$0GUI_input_EQ_hicut_fromgui \$0GUI_input_EQ_hicut_togui
-empty 0 -6 0 8 -262144 -166441 -166441 0 1;
-#X obj 223 248 tgl 14 0 \$0GUI_input_EQ_locut_fromgui \$0GUI_input_EQ_locut_togui
-empty 0 -6 0 8 -262144 -166441 -166441 0 1;
-#X obj 19 301 cnv 17 17 17 empty empty empty 20 12 0 14 -258699 -66577
+#X obj 41 288 cnv 17 17 17 empty empty empty 20 12 0 14 -24198 -66577
 0;
-#X obj 41 301 cnv 17 17 17 empty empty empty 20 12 0 14 -24198 -66577
-0;
-#X obj 43 303 tgl 13 0 \$0GUI_input_solo_fromgui \$0GUI_input_solo_togui
+#X obj 43 290 tgl 13 0 \$0GUI_input_solo_fromgui \$0GUI_input_solo_togui
 S 3 6 0 12 -262144 -262144 -1 0 16;
-#X obj 21 303 tgl 13 0 \$0GUI_input_mute_fromgui \$0GUI_input_mute_togui
+#X obj 21 290 tgl 13 0 \$0GUI_input_mute_fromgui \$0GUI_input_mute_togui
 on 1 7 0 10 -262144 -262144 -1 0 1;
-#X obj 256 365 cube_sphere 0 54 18 62783 233016 262143 54 0;
-#X obj 267 525 s \$0inchannel_ambisphere_fromgui;
-#X obj 410 494 r \$0inchannel_ambisphere_togui;
-#N canvas 0 0 450 300 spat-popup 0;
-#X obj 120 191 r \$0GUI_input_spat_togui;
-#X obj 120 265 outlet;
-#X obj 119 36 inlet;
-#X obj 119 72 s \$0GUI_input_spat_fromgui;
-#X obj 120 214 route float list symbol;
-#X msg 120 241 set \$1;
-#X connect 0 0 4 0;
-#X connect 2 0 3 0;
-#X connect 4 0 5 0;
-#X connect 4 1 5 0;
-#X connect 4 2 5 0;
-#X connect 4 3 1 0;
-#X connect 5 0 1 0;
-#X restore 586 339 pd spat-popup;
-#X obj 273 637 inchannel/helper/aux_popup_sr \$0GUI_aux4;
-#X obj 274 608 inchannel/helper/aux_popup_sr \$0GUI_aux3;
-#X obj 268 575 inchannel/helper/aux_popup_sr \$0GUI_aux2;
-#X obj 266 549 inchannel/helper/aux_popup_sr \$0GUI_aux1;
 #X obj 156 13 iem_image PICS/IEM.gif 0 0 empty empty;
-#X obj 389 73 iem_image PICS/locked.gif 0 0 empty empty;
-#X obj 290 38 r \$0lockimg;
-#X obj 254 123 inchannel/helper/plugin_gop \$0 1;
-#X obj 399 123 inchannel/helper/plugin_gop \$0 2;
-#X obj 254 197 inchannel/helper/plugin_gop \$0 3;
-#X obj 399 197 inchannel/helper/plugin_gop \$0 4;
-#X connect 22 0 57 0;
-#X connect 24 0 42 0;
-#X connect 36 0 86 0;
-#X connect 41 0 24 0;
-#X connect 43 0 90 0;
-#X connect 44 0 89 0;
-#X connect 45 0 88 0;
-#X connect 46 0 87 0;
-#X connect 56 0 22 0;
-#X connect 59 0 19 0;
-#X connect 60 0 24 0;
-#X connect 83 0 84 0;
-#X connect 85 0 83 0;
-#X connect 86 0 36 0;
-#X connect 87 0 46 0;
-#X connect 88 0 45 0;
-#X connect 89 0 44 0;
-#X connect 90 0 43 0;
-#X connect 93 0 92 0;
+#X obj 259 73 iem_image PICS/unlocked.gif 0 0 empty empty;
+#X obj 259 38 r \$0lockimg;
+#X obj 274 104 inchannel/helper/plugin_gop \$0 1;
+#X obj 274 233 inchannel/helper/plugin_gop \$0 2;
+#X obj 274 147 inchannel/helper/plugin_gop \$0 3;
+#X obj 274 190 inchannel/helper/plugin_gop \$0 4;
+#X obj 87 104 inchannel/eq \$0;
+#X obj 87 282 inchannel/auxes \$0;
+#X obj 295 7 inchannel/input \$0;
+#X obj 5 7 inchannel/selector \$0;
+#X obj 217 282 inchannel/spat \$0;
+#X connect 18 0 17 0;
 #X coords 0 0 1 1 544 480 1 0 0;

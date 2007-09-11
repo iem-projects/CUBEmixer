@@ -1,13 +1,18 @@
 #N canvas 895 229 450 300 10;
-#X obj 47 100 popup 115 20 #ffffff plugin COMPANDER DISTANCE none;
-#X obj 45 65 cnv 15 140 70 empty empty plugin\$2 20 12 0 14 -233017
+#X obj 48 83 popup 115 20 #ffffff plugin none;
+#X obj 45 65 cnv 15 140 40 empty empty plugin\$2 20 10 0 14 -233017
 -66577 0;
-#X obj 165 91 tgl 15 0 \$1GUI_plugin\$2_on_fromgui \$1GUI_plugin\$2_on_togui
+#X obj 165 68 tgl 15 0 \$1GUI_plugin\$2_on_fromgui \$1GUI_plugin\$2_on_togui
 empty 0 -6 0 8 -262144 -1 -1 0 1;
-#X obj 165 117 bng 15 250 50 0 \$1GUI_plugin\$2_settings_fromgui \$1GUI_plugin\$2_settings_togui
+#X obj 165 86 bng 15 250 50 0 \$1GUI_plugin\$2_settings_fromgui \$1GUI_plugin\$2_settings_togui
 empty 0 -6 0 8 -62784 -1 -1;
-#X obj 47 40 r \$1GUI_plugin\$2_togui;
-#X obj 47 182 s \$1GUI_plugin\$2_fromgui;
+#X obj 48 40 r \$1GUI_plugin\$2_togui;
+#X obj 48 112 s \$1GUI_plugin\$2_fromgui;
+#X obj 208 83 s \$1GUI_plugin\$2_togui;
+#X msg 208 60 options none \, name plugin;
+#X obj 208 40 loadbang;
 #X connect 0 0 5 0;
 #X connect 4 0 0 0;
-#X coords 0 -1 1 1 140 70 2 45 65;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X coords 0 -1 1 1 140 40 2 45 65;

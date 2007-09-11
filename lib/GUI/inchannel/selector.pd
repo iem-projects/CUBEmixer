@@ -1,0 +1,16 @@
+#N canvas 0 0 450 300 10;
+#X obj 108 104 popup 124 25 #ffffff ---;
+#X obj 100 100 cnv 15 140 90 empty empty channel 5 10 0 24 -233017
+-233017 0;
+#X obj 108 75 r \$1GUI_channel_togui;
+#X obj 108 199 s \$1GUI_channel_fromgui;
+#X obj 108 129 cnv 15 15 15 empty \$1GUI_inchannel_numcnv empty 10
+25 0 72 -233017 -66577 0;
+#X obj 268 169 s \$1GUI_channel_togui;
+#X msg 268 144 name --- \, options;
+#X obj 268 120 loadbang;
+#X connect 0 0 3 0;
+#X connect 2 0 0 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X coords 0 -1 1 1 140 90 2 100 100;

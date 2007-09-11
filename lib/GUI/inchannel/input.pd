@@ -1,0 +1,19 @@
+#N canvas 0 0 450 300 10;
+#X obj 103 114 popup 115 20 #ffffff INPUT none;
+#X obj 100 100 cnv 15 120 90 empty empty empty 20 12 0 14 -195568 -66577
+0;
+#X obj 141 140 nbx 3 14 -100 50 0 0 \$1GUI_input_ingain_fromgui \$1GUI_input_ingain_togui
+gain -30 7 0 8 -228992 -1 -1 0 256;
+#X obj 182 139 tgl 15 0 \$1GUI_input_invert_fromgui \$1GUI_input_invert_togui
+inv 17 7 0 8 -262144 -1 -1 0 1;
+#X obj 108 161 nbx 3 14 0 999 0 0 \$1GUI_input_delay_fromgui \$1GUI_input_delay_togui
+delay[ms] 40 7 0 8 -262144 -1 -1 0 256;
+#X obj 245 135 r \$1GUI_input_select_togui;
+#X obj 245 163 s \$1GUI_input_select_fromgui;
+#X msg 252 105 options none;
+#X obj 252 83 loadbang;
+#X connect 0 0 6 0;
+#X connect 5 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 7 0;
+#X coords 0 -1 1 1 120 90 2 100 100;
