@@ -1,4 +1,4 @@
-#N canvas 0 0 575 300 10;
+#N canvas 0 0 1034 300 10;
 #X obj 171 103 popup 45 20 #ffffff AUX AUX 01 AUX 02 AUX 03 AUX 04
 AUX 05 AUX 06 AUX 07 AUX 08;
 #X obj 238 111 inchannel/helper/aux_popup_sr \$1GUI_aux\$2;
@@ -11,8 +11,14 @@ pre 18 7 0 8 -262144 -1 -1 0 1;
 #X obj 224 149 loadbang;
 #X obj 224 194 s \$1GUI_aux\$2_togui;
 #X msg 224 169 options \, name AUX \, disable 1;
+#X obj 416 169 DSPnamesGUI AUX;
+#X obj 500 86 r \$1GUI_inchannel_selected;
+#X obj 500 106 inchannel/helper/auxiliary \$1GUI_aux\$2 /IN/%d/AUX/\$2
+;
 #X connect 0 0 1 0;
 #X connect 1 0 0 0;
 #X connect 5 0 7 0;
 #X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;
 #X coords 0 -1 1 1 120 25 1 100 100;
