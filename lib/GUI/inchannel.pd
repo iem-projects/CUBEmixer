@@ -1,13 +1,13 @@
-#N canvas 19 0 806 635 10;
-#X obj 1 1 cnv 15 543 478 empty empty empty 20 12 0 14 -83187 -66577
+#N canvas 207 110 806 635 10;
+#X obj 1 1 cnv 15 425 458 empty empty empty 20 12 0 14 -83187 -66577
 0;
 #X obj 150 7 cnv 15 265 90 empty empty empty 20 40 0 80 -233017 -66577
 0;
-#X obj 5 105 cnv 15 75 357 empty empty empty 20 12 0 14 -195568 -66577
+#X obj 5 105 cnv 15 75 347 empty empty empty 20 12 0 14 -195568 -66577
 0;
-#X obj 19 316 vsl 25 128 0 127 0 0 \$0GUI_input_gain_fromgui \$0GUI_input_gain_togui
+#X obj 19 312 vsl 25 128 0 127 0 0 \$0GUI_input_gain_fromgui \$0GUI_input_gain_togui
 empty 0 -8 0 8 -228992 -1 -1 0 1;
-#X obj 47 316 vsl 15 128 0 127 0 0 \$0GUI_input_sub_fromgui \$0GUI_input_sub_togui
+#X obj 47 312 vsl 15 128 0 127 0 0 \$0GUI_input_sub_fromgui \$0GUI_input_sub_togui
 empty 0 -8 0 8 -245568 -1 -1 0 1;
 #X obj 12 115 cnv 15 59 165 empty empty empty 4 8 0 8 -233017 -66577
 0;
@@ -15,30 +15,27 @@ empty 0 -8 0 8 -245568 -1 -1 0 1;
 -1 1 0;
 #X obj 15 131 hradio 15 1 0 3 \$0GUI_input_vuselect_fromgui \$0GUI_input_vuselect_togui
 InPrePost 0 -6 0 8 -262144 -1 -1 0;
-#X obj 64 321 vfad_scale -1;
-#X obj 7 321 vfad_scale -1;
+#X obj 64 317 vfad_scale -1;
+#X obj 7 317 vfad_scale -1;
 #X obj 258 71 tgl 22 0 \$0GUI_input_lock_fromgui \$0GUI_input_lock_togui
 lock 0 -6 0 8 -262144 -1 -1 0 1;
 #X obj 77 499 inchannel/code \$0;
-#X obj 19 288 cnv 17 17 17 empty empty empty 20 12 0 14 -258699 -66577
+#X obj 19 286 cnv 17 17 17 empty empty empty 20 12 0 14 -258699 -66577
 0;
-#X obj 41 288 cnv 17 17 17 empty empty empty 20 12 0 14 -24198 -66577
+#X obj 41 286 cnv 17 17 17 empty empty empty 20 12 0 14 -24198 -66577
 0;
-#X obj 43 290 tgl 13 0 \$0GUI_input_solo_fromgui \$0GUI_input_solo_togui
+#X obj 43 288 tgl 13 0 \$0GUI_input_solo_fromgui \$0GUI_input_solo_togui
 S 3 6 0 12 -262144 -262144 -1 0 16;
-#X obj 21 290 tgl 13 0 \$0GUI_input_mute_fromgui \$0GUI_input_mute_togui
+#X obj 21 288 tgl 13 0 \$0GUI_input_mute_fromgui \$0GUI_input_mute_togui
 on 1 7 0 10 -262144 -262144 -1 0 1;
 #X obj 156 13 iem_image PICS/IEM.gif 0 0 empty empty;
 #X obj 259 73 iem_image PICS/unlocked.gif 0 0 empty empty;
 #X obj 259 38 r \$0lockimg;
-#X obj 274 104 inchannel/helper/plugin_gop \$0 1;
-#X obj 274 233 inchannel/helper/plugin_gop \$0 2;
-#X obj 274 147 inchannel/helper/plugin_gop \$0 3;
-#X obj 274 190 inchannel/helper/plugin_gop \$0 4;
 #X obj 87 104 inchannel/eq \$0;
-#X obj 87 282 inchannel/auxes \$0;
-#X obj 295 7 inchannel/input \$0;
+#X obj 87 283 inchannel/auxes \$0;
+#X obj 301 7 inchannel/input \$0;
 #X obj 5 7 inchannel/selector \$0;
-#X obj 217 282 inchannel/spat \$0;
+#X obj 252 283 inchannel/spat \$0;
+#X obj 252 104 inchannel/plugins \$0;
 #X connect 18 0 17 0;
-#X coords 0 0 1 1 544 480 1 0 0;
+#X coords 0 0 1 1 427 460 1 0 0;
