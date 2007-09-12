@@ -165,7 +165,7 @@
 #X obj 496 355 t b f;
 #X obj 535 375 t b f;
 #X obj 575 395 t b f;
-#X obj 614 415 t b f;
+#X obj 614 413 t b f;
 #X obj 496 335 receive_parameter /OUT/BUS/13/GAIN;
 #X obj 535 355 receive_parameter /OUT/BUS/14/GAIN;
 #X obj 575 375 receive_parameter /OUT/BUS/15/GAIN;
@@ -239,7 +239,7 @@
 #X connect 44 1 53 0;
 #X connect 45 0 1 0;
 #X connect 45 1 54 0;
-#X connect 46 0 1 1;
+#X connect 46 0 1 0;
 #X connect 46 1 55 0;
 #X connect 47 0 43 0;
 #X connect 48 0 44 0;
