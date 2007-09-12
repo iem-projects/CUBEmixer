@@ -39,7 +39,7 @@ GUI_OPTIONS="-nrt"
 ##
 DSP_PATCH="lib/DSP/DSP+NET+MIDI+CUE.pd"
 DSP_AUDIO="-alsa -channels 26 -r 44100 -audiobuf 23"
-DSP_MIDI="-alsamidi -mididev 1"
+DSP_MIDI="-alsamidi -mididev 1,1"
 DSP_OPTIONS="-rt"
 #DSP_PATH=
 #DSP_LIB=
