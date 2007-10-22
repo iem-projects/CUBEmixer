@@ -1,4 +1,4 @@
-#N canvas 10 326 740 509 10;
+#N canvas 1296 282 740 509 10;
 #N canvas 163 378 469 423 ambi 0;
 #X obj 61 82 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
@@ -21,20 +21,30 @@
 #X connect 8 1 2 0;
 #X connect 9 0 0 0;
 #X restore 127 410 pd ambi vs direct;
-#N canvas 0 242 662 313 select 0;
+#N canvas 281 319 662 313 select 0;
 #X obj 115 90 r \$1GUIinchan_select;
 #X obj 115 111 t b;
 #X text 109 51 FILL IN;
 #X obj 363 77 r GUI_getInChannelNums;
 #X obj 363 126 s GUI_InChannelNum;
 #X obj 363 102 f \$2;
-#X obj 115 161 s GUI_channel_select;
+#X obj 115 159 s GUI_channel_select;
 #X obj 115 136 f \$2;
+#X obj 214 181 r GUI_channel_select;
+#X obj 214 202 select \$2;
+#X obj 214 271 s \$1-background;
+#X msg 272 250 pos 21 21 \, vis_size 66 459 \, color 20 0;
+#X msg 214 228 pos 18 21 \, vis_size 72 459 \, color -5262537 0;
 #X connect 0 0 1 0;
 #X connect 1 0 7 0;
 #X connect 3 0 5 0;
 #X connect 5 0 4 0;
 #X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 12 0;
+#X connect 9 1 11 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 0;
 #X restore 63 138 pd select;
 #N canvas 0 0 521 206 aux 0;
 #X obj 27 17 inlet \$0GUI-prepend;

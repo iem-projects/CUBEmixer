@@ -1,4 +1,7 @@
 #N canvas 819 214 393 502 10;
+#X obj 111 -2 inchan/code \$0 \$1;
+#X obj 21 21 cnv 15 66 459 empty \$0-background empty 20 12 0 14 -62784
+-262144 0;
 #X obj 21 21 cnv 10 66 459 empty empty empty 5 12 0 14 -195568 -66577
 0;
 #X obj 23 62 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux1_gain_fromgui \$0GUIinchan_aux1_gain_togui
@@ -9,7 +12,7 @@ aux1 0 -4 0 8 -228992 -1 -1 -100 256;
 #X obj 58 355 vsl 8 109 0 108 0 0 \$0GUIinchan_subfader_fromgui \$0GUIinchan_subfader_togui
 empty 0 -8 0 8 -245568 -1 -1 0 1;
 #X obj 32 21 hradio 15 1 0 3 \$0GUIinchan_select \$0GUIinchan_select
-empty 0 -6 0 8 -262144 -1 -1 0;
+empty 0 -6 0 8 -262144 -1 -1 1;
 #X obj 55 62 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux2_gain_fromgui \$0GUIinchan_aux2_gain_togui
 aux2 0 -4 0 8 -228992 -1 -1 -100 256;
 #X obj 55 85 nbx 3 14 -100 50 0 0 \$0GUIinchan_aux4_gain_fromgui \$0GUIinchan_aux4_gain_togui
@@ -91,7 +94,6 @@ empty 0 -6 0 8 -262144 -1 -1 0 1;
 -195568 0;
 #X obj 21 39 cnv 15 66 15 empty \$0GUIinchan_inputselectname empty
 15 8 0 8 -233017 -66577 0;
-#X obj 111 -2 inchan/code \$0 \$1;
 #X obj 22 193 tgl 15 0 \$0GUIinchan_plugin1_tgl_fromgui \$0GUIinchan_plugin1_tgl_togui
 plugin1 20 7 0 8 -262144 -1 -1 0 1;
 #X obj 22 210 tgl 15 0 \$0GUIinchan_plugin2_tgl_fromgui \$0GUIinchan_plugin2_tgl_togui
@@ -109,13 +111,13 @@ on 1 5 0 8 -262144 -262144 -1 0 1;
 #X obj 74 420 tgl 11 0 \$0GUIinchan_solo_fromgui \$0GUIinchan_solo_togui
 S 2 5 0 12 -262144 -262144 -1 0 1;
 #X obj 20 227 inchan/spat \$0 \$1;
-#X connect 10 0 13 0;
-#X connect 10 0 14 0;
-#X connect 10 0 16 0;
-#X connect 10 0 17 0;
-#X connect 10 1 18 0;
-#X connect 10 1 15 0;
-#X connect 10 2 12 0;
-#X connect 10 2 11 0;
-#X connect 19 0 10 0;
+#X connect 12 0 15 0;
+#X connect 12 0 16 0;
+#X connect 12 0 18 0;
+#X connect 12 0 19 0;
+#X connect 12 1 20 0;
+#X connect 12 1 17 0;
+#X connect 12 2 14 0;
+#X connect 12 2 13 0;
+#X connect 21 0 12 0;
 #X coords 0 0 1 1 68 460 1 20 20;
