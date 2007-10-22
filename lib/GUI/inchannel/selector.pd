@@ -1,7 +1,5 @@
 #N canvas 0 0 943 701 10;
-#X obj 108 104 popup 124 25 #ffffff --- channel:01 channel:02 channel:03
-channel:04 channel:05 channel:06 channel:07 channel:08 channel:09 channel:10
-channel:11 channel:12 channel:13 channel:14 channel:15 channel:16;
+#X obj 108 104 popup 124 25 #ffffff ---;
 #X obj 100 100 cnv 15 140 90 empty empty channel 5 10 0 24 -233017
 -233017 0;
 #X obj 108 75 r \$1GUI_channel_togui;
