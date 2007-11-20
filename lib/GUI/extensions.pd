@@ -3,8 +3,11 @@
 -66577 0;
 #X obj 119 133 bng 50 250 50 0 \$0-bang \$0-bang empty 17 7 0 10 -62784
 -1 -1;
-#N canvas 1349 144 127 225 \$0-extensions 0;
-#X obj 12 10 REV2/GUI;
+#N canvas 1349 144 597 222 \$0-extensions 0;
+#X obj 166 10 REV2/GUI;
+#X obj 22 10 VUBANK/GUI;
+#X obj 91 10 TESTTONE/GUI;
+#X obj 237 10 OGGCAST/GUI;
 #X restore 201 167 pd \$0-extensions;
 #X obj 201 114 r \$0-bang;
 #X obj 201 147 s pd-\$0-extensions;
