@@ -1,4 +1,4 @@
-#N canvas 297 497 770 340 10;
+#N canvas 298 189 770 340 10;
 #X msg 126 203 \; pd dsp \$1;
 #X obj 126 180 f;
 #X obj 232 182 dsp;
@@ -11,17 +11,17 @@
 #X obj 428 198 send DSP_setLabel;
 #X msg 428 141 \$1 bang;
 #X obj 162 32 inlet;
-#X obj 161 112 print send;
-#X obj 161 93 spigot;
-#X obj 211 91 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+#X obj 162 112 print send;
+#X obj 162 93 spigot;
+#X obj 212 91 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
 #X obj 271 93 spigot;
-#X obj 321 91 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+#X obj 321 91 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
 ;
 #X obj 271 112 print receive;
 #X msg 211 33 bang;
-#X obj 349 31 r DSP_NET;
-#X obj 162 60 autonet 6666 localhost:6667;
+#X obj 342 31 r DSP_NET;
+#X obj 162 60 cubemixer_server 6666 localhost:6667;
 #X obj 432 234 r DSP_setLabel;
 #X obj 432 279 s GLOBAL_NETSEND;
 #X obj 232 260 s DSP_NET;
@@ -30,6 +30,7 @@
 #X obj 436 60 sendreceive /DSP/LABELS/GET;
 #X msg 232 235 /CPU/DSP \$1 \$2;
 #X obj 432 256 list prepend /DSP/LABELS/SET;
+#X obj 409 30 r GLOBAL_NETSEND;
 #X connect 1 0 0 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
@@ -56,3 +57,4 @@
 #X connect 26 0 6 0;
 #X connect 27 0 23 0;
 #X connect 28 0 22 0;
+#X connect 29 0 20 1;

@@ -1,14 +1,14 @@
-#N canvas 43 413 842 286 10;
+#N canvas 1353 48 842 286 10;
 #X obj 132 28 r GUInet_init;
 #X obj 162 136 print send;
 #X obj 162 116 spigot;
-#X obj 208 115 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+#X obj 208 115 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1
 1;
 #X obj 253 115 spigot;
 #X obj 298 115 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
 1;
 #X obj 253 136 print receive;
-#X obj 162 72 autonet 6667 localhost:6666;
+#X obj 162 72 cubemixer_client 6667 localhost:6666;
 #X obj 132 49 t b b;
 #X obj 132 198 del 1000;
 #X obj 364 239 once;
@@ -19,6 +19,7 @@
 #X obj 233 192 route disconnect;
 #X obj 162 94 t a b;
 #X msg 132 220 /NET connect localhost:6667;
+#X obj 409 49 r GLOBAL_NETSEND;
 #X connect 0 0 8 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 1;
@@ -36,3 +37,4 @@
 #X connect 16 0 2 0;
 #X connect 16 1 13 0;
 #X connect 17 0 7 1;
+#X connect 18 0 7 1;
