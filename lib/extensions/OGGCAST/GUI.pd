@@ -1,21 +1,21 @@
-#N canvas 1581 251 452 586 10;
+#N canvas 1440 202 452 586 10;
 #X text 109 18 open_close_EDIT;
 #X msg 118 37 1;
 #X obj 11 11 cnv 15 63 198 empty empty OGGCAST 2 10 0 12 -228992 -66577
 0;
 #X obj 19 38 tgl 15 0 \$0_ON_fromgui \$0_ON_togui ON 0 -6 0 8 -233017
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 45 38 bng 15 250 50 0 \$0sEDIT \$0rEDIT EDIT 0 -6 0 8 -62784
 -1 -1;
 #X obj 118 59 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
 ;
 #X obj 55 68 vfad_scale -1;
 #X obj 13 107 cnv 2 40 2 empty empty empty 20 12 0 14 -1 -66577 0;
-#X obj 19 64 vsl 30 131 0 130 0 0 \$0_ogg_vol_gui \$0_ogg_vol_gui -inf
-1 140 0 8 -233017 -1 -1 0 1;
+#X obj 19 64 vsl 30 131 0 130 0 0 \$0_ogg_vol_gui \$0_ogg_vol_gui +00
+1 140 0 8 -233017 -1 -1 8500 1;
 #X obj 11 -17 gui_sr_offset \$0_ON /EXT/OGGCAST/ON 0;
 #N canvas 1475 161 1065 589 guts 0;
-#X obj 71 253 sendreceive /EXT/OGGCAST/PARAM;
+#X obj 71 260 sendreceive /EXT/OGGCAST/PARAM;
 #X text 719 172 should load send PBANK File;
 #X obj 634 115 route float;
 #X obj 714 322 - 100;
@@ -32,13 +32,13 @@
 #X obj 725 243 sendreceive /EXT/OGGCAST/GAIN;
 #X obj 634 94 r \$0_ogg_vol_gui;
 #X obj 635 406 s \$0_ogg_vol_gui;
-#X text 70 233 <server> <port> <stream> <password>;
+#X text 70 242 <server> <port> <stream> <password>;
 #X obj 94 99 r \$0-s_server;
 #X obj 194 99 r \$0-s_port;
 #X obj 389 99 r \$0-s_pwd;
 #X obj 289 99 r \$0-s_stream;
 #X obj 71 168 pack 0 s 0 s s;
-#X obj 71 144 r \$0-s_submit;
+#X obj 41 124 r \$0-s_submit;
 #X obj 71 194 route 0;
 #X obj 71 359 s \$0-r_server;
 #X obj 171 359 s \$0-r_port;
@@ -58,6 +58,9 @@
 #X obj 71 485 pack 0 2;
 #X msg 71 506 color \$1 \$2;
 #X obj 148 439 loadbang;
+#X obj 41 145 t b b;
+#X msg 41 197 1;
+#X obj 41 219 s \$0_ON_togui;
 #X connect 0 0 31 0;
 #X connect 2 0 12 0;
 #X connect 3 0 10 0;
@@ -81,7 +84,7 @@
 #X connect 20 0 22 4;
 #X connect 21 0 22 3;
 #X connect 22 0 24 0;
-#X connect 23 0 22 0;
+#X connect 23 0 43 0;
 #X connect 24 0 0 0;
 #X connect 29 0 25 0;
 #X connect 29 1 26 0;
@@ -101,16 +104,17 @@
 #X connect 40 0 41 0;
 #X connect 41 0 36 0;
 #X connect 42 0 37 0;
+#X connect 43 0 44 0;
+#X connect 43 1 22 0;
+#X connect 44 0 45 0;
 #X restore 256 96 pd guts;
 #N canvas 1367 587 450 300 \$0-OGGCAST 0;
 #X obj 7 8 cnv 15 430 280 empty empty OGGCAST 2 10 0 12 -228992 -66577
 0;
-#X obj 19 48 tgl 15 0 \$0_ON_fromgui \$0_ON_togui ON 0 -6 0 8 -233017
--1 -1 0 1;
 #X obj 55 98 vfad_scale -1;
 #X obj 13 137 cnv 2 40 2 empty empty empty 20 12 0 14 -1 -66577 0;
-#X obj 19 94 vsl 30 131 0 130 0 0 \$0_ogg_vol_gui \$0_ogg_vol_gui -inf
-1 140 0 8 -233017 -1 -1 0 1;
+#X obj 19 94 vsl 30 131 0 130 0 0 \$0_ogg_vol_gui \$0_ogg_vol_gui +00
+1 140 0 8 -233017 -1 -1 8500 1;
 #X obj 106 107 cnv 15 300 120 empty empty empty 20 12 0 14 -166441
 -66577 0;
 #X obj 118 206 bng 15 250 50 0 \$0-s_submit \$0-r_submit submit 17
@@ -127,7 +131,7 @@
 #X floatatom 343 128 6 1 65535 2 port #0-r_port #0-s_port;
 #X symbolatom 117 168 15 0 0 2 password #0-r_pwd #0-s_pwd;
 #X symbolatom 238 168 21 0 0 2 stream #0-r_stream #0-s_stream;
-#X obj 372 206 cnv 15 15 15 empty \$0-r_state state: -60 7 0 14 -260818
+#X obj 372 206 cnv 15 15 15 empty \$0-r_state state: -60 7 0 14 -24198
 -66577 0;
 #N canvas 0 0 923 353 src 0;
 #X obj 336 140 gui_sr_beautify-uglify \$0_SRC_1 /EXT/OGGCAST/IN/1/SRC
@@ -143,8 +147,28 @@
 #X obj 120 61 r \$0_SRC_1_togui;
 #X obj 182 80 r \$0_SRC_2_togui;
 #X msg 363 -3 options;
-#X obj 120 131 popup 45 20 #ffffff SRC;
-#X obj 183 131 popup 45 20 #ffffff SRC;
+#X obj 120 131 popup 45 20 #ffffff SRC ADC 01 ADC 02 ADC 03 ADC 04
+ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
+ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
+ADC 25 ADC 26 ADC 27 ADC 28 ADC 29 ADC 30 ADC 31 ADC 32 ADC 33 ADC 34
+ADC 35 ADC 36 ADC 37 ADC 38 ADC 39 ADC 40 ADC 41 ADC 42 ADC 43 ADC 44
+ADC 45 ADC 46 ADC 47 ADC 48 ADC 49 ADC 50 ADC 51 ADC 52 ADC 53 ADC 54
+ADC 55 ADC 56 ADC 57 ADC 58 ADC 59 ADC 60 ADC 61 ADC 62 ADC 63 ADC 64
+AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 16:01
+PLAY 16:02 PLAY 16:03 PLAY 16:04 PLAY 16:05 PLAY 16:06 PLAY 16:07 PLAY 16:08
+PLAY 16:09 PLAY 16:10 PLAY 16:11 PLAY 16:12 PLAY 16:13 PLAY 16:14 PLAY 16:15
+PLAY 16:16 TESTTONE none;
+#X obj 183 131 popup 45 20 #ffffff SRC ADC 01 ADC 02 ADC 03 ADC 04
+ADC 05 ADC 06 ADC 07 ADC 08 ADC 09 ADC 10 ADC 11 ADC 12 ADC 13 ADC 14
+ADC 15 ADC 16 ADC 17 ADC 18 ADC 19 ADC 20 ADC 21 ADC 22 ADC 23 ADC 24
+ADC 25 ADC 26 ADC 27 ADC 28 ADC 29 ADC 30 ADC 31 ADC 32 ADC 33 ADC 34
+ADC 35 ADC 36 ADC 37 ADC 38 ADC 39 ADC 40 ADC 41 ADC 42 ADC 43 ADC 44
+ADC 45 ADC 46 ADC 47 ADC 48 ADC 49 ADC 50 ADC 51 ADC 52 ADC 53 ADC 54
+ADC 55 ADC 56 ADC 57 ADC 58 ADC 59 ADC 60 ADC 61 ADC 62 ADC 63 ADC 64
+AUX 01 AUX 02 AUX 03 AUX 04 AUX 05 AUX 06 AUX 07 AUX 08 PLAY 16:01
+PLAY 16:02 PLAY 16:03 PLAY 16:04 PLAY 16:05 PLAY 16:06 PLAY 16:07 PLAY 16:08
+PLAY 16:09 PLAY 16:10 PLAY 16:11 PLAY 16:12 PLAY 16:13 PLAY 16:14 PLAY 16:15
+PLAY 16:16 TESTTONE none;
 #X obj 101 101 cnv 15 148 58 empty empty SOURCES: 20 12 0 14 -233017
 -66577 0;
 #X connect 2 0 5 0;
