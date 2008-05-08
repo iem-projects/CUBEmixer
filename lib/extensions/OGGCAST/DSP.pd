@@ -26,9 +26,15 @@
 #X obj 388 103 pack s 8100 s s;
 #X obj 388 83 list;
 #X obj 388 62 t a b;
+#X obj 369 341 env~;
+#X floatatom 369 367 5 0 0 0 - - -;
+#X obj 437 344 env~;
+#X floatatom 437 370 5 0 0 0 - - -;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
+#X connect 1 0 27 0;
 #X connect 1 1 0 1;
+#X connect 1 1 29 0;
 #X connect 3 0 14 0;
 #X connect 4 0 26 0;
 #X connect 6 0 2 0;
@@ -58,3 +64,5 @@
 #X connect 25 0 24 0;
 #X connect 26 0 25 0;
 #X connect 26 1 6 0;
+#X connect 27 0 28 0;
+#X connect 29 0 30 0;
