@@ -30,7 +30,6 @@ iem_spec2	https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/external
 iemlib		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/iemlib/
 iemmatrix	https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/iem/iemmatrix/
 miXed		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/miXed/
-popup		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/bbogart/popup/
 osc		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/mrpeach/osc
 net		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/mrpeach/net
 zexy		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/zexy
