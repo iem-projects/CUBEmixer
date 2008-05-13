@@ -53,6 +53,7 @@ aconnect-locinstall: aconnect-build
 aconnect: aconnect-locinstall
 
 aconnect-clean:
+	make -C aconnect clean
 
 ######### hcs's folder_list ###############
 
@@ -160,15 +161,15 @@ miXed-clean:
 
 # ############  local popup ###############
 popup-build:
-	make -C ../popup pd_linux
+	make -C popup pd_linux
 
 popup-locinstall: popup-build
-	cp ../popup/*.$(EXT) $(LOCINSTALL_DIR)
+	cp popup/*.$(EXT) $(LOCINSTALL_DIR)
 
 popup: popup-locinstall
 
 popup-clean:
-	make -C ../popup clean
+	make -C popup clean
 
 ######## OSC ##################
 
