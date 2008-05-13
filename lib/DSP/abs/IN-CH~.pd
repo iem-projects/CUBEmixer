@@ -249,7 +249,7 @@
 #X text 249 126 52_ADC \, 1_AUX;
 #X obj 47 263 \$5_EFF_PLUG_IN~ \$1;
 #X text 183 72 6.arg: <float> n_ambisonic_order;
-#X obj 174 538 \$4_bus_sends_post \$1;
+#X obj 174 538 \$4_bus_sends_post~ \$1;
 #N canvas 0 0 567 440 para_EQ_4 0;
 #X obj 63 51 inlet~;
 #X obj 72 362 outlet~;
