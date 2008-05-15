@@ -57,7 +57,10 @@ aconnect-clean:
 
 ######### hcs's folder_list ###############
 
-folder_list-build: 
+folder_list/folder_list.c: hcs/folder_list.c
+	cp hcs/folder_list.c folder_list/folder_list.c
+
+folder_list-build: folder_list/folder_list.c
 	$(CC) -DPD -O2 -funroll-loops -fomit-frame-pointer -fPIC -I$(PDSOURCE) -export_dynamic -shared -lc -lm -o folder_list/folder_list.$(EXT) folder_list/folder_list.c
 
 folder_list-locinstall: folder_list-build
