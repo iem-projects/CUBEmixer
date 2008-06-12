@@ -90,7 +90,7 @@ H 6 8 0 8 -262144 -166441 -166441 0 1;
 1200 256;
 #X obj 26 105 tgl 20 0 \$0GUIinchan_eq_tgl_fromgui \$0GUIinchan_eq_tgl_togui
 empty 0 -6 0 8 -262144 -1 -1 0 1;
-#X obj 21 21 cnv 15 67 15 empty \$0GUIinchan_name ch:01 3 9 0 14 -83187
+#X obj 21 21 cnv 15 67 15 empty \$0GUIinchan_name ch:-- 3 9 0 14 -83187
 -195568 0;
 #X obj 21 39 cnv 15 66 15 empty \$0GUIinchan_inputselectname empty
 15 8 0 8 -233017 -66577 0;

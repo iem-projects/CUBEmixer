@@ -63,5 +63,4 @@ lock 0 -6 0 8 -262144 -1 -1 1 1;
 #X connect 14 0 11 0;
 #X connect 15 0 16 0;
 #X connect 16 0 2 0;
-#X connect 16 1 17 0;
 #X coords 0 -1 1 1 22 33 2 100 100;
