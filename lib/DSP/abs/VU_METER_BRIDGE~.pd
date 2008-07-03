@@ -13,6 +13,8 @@
 #X text 584 67 VU-Meter-Bridge;
 #X obj 32 32 BRIDGE_ELEMENT~ 1;
 #X obj 370 149 any;
+#X obj 10 7 inlet~;
+#X obj 350 354 outlet;
 #X obj 32 52 BRIDGE_ELEMENT~ 2;
 #X obj 32 72 BRIDGE_ELEMENT~ 3;
 #X obj 32 92 BRIDGE_ELEMENT~ 4;
@@ -64,8 +66,8 @@
 #X obj 32 252 BRIDGE_ELEMENT~ 12;
 #X obj 32 232 BRIDGE_ELEMENT~ 11;
 #X obj 32 213 BRIDGE_ELEMENT~ 10;
-#X obj 10 7 inlet~;
-#X obj 350 354 outlet;
+#X obj 525 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 0 0 7 0;
 #X connect 2 0 6 0;
 #X connect 2 0 9 0;
@@ -81,8 +83,6 @@
 #X connect 10 0 7 1;
 #X connect 10 0 2 0;
 #X connect 13 0 12 0;
-#X connect 13 0 14 0;
-#X connect 13 0 15 0;
 #X connect 13 0 16 0;
 #X connect 13 0 17 0;
 #X connect 13 0 18 0;
@@ -132,3 +132,6 @@
 #X connect 13 0 62 0;
 #X connect 13 0 63 0;
 #X connect 13 0 64 0;
+#X connect 13 0 65 0;
+#X connect 13 0 66 0;
+#X connect 67 0 2 0;
