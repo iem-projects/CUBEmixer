@@ -143,7 +143,6 @@
 #X text 689 216 11.arg: <float> ambisonic outputs ("dac");
 #X text 689 173 08.arg: <symbol> ambisonic type;
 #X text 689 202 10.arg: <float> ambisonic order;
-#X obj 238 154 AUX_PLUG_IN_\$5_\$6~;
 #X obj 73 325 \$8_\$9_\$10_AMBIBUS~;
 #X obj 74 474 DAC_Routing_Compensation~ \$2 presets/compensation.mtx
 ;
@@ -151,16 +150,16 @@
 #X obj 74 222 \$3_IN_MIX_CH~ \$1 \$5 \$7 \$4 \$8\$9D\$10O;
 #X text 689 188 09.arg: <float> ambisonic dimension (2D \, 3D);
 #X obj 73 371 AMBI-Gain-Decode-OUT~ \$8 \$9 \$10 \$11;
+#X obj 238 154 # AUX_PLUG_IN_\$5_\$6~;
 #X connect 0 0 2 0;
-#X connect 6 0 144 0;
-#X connect 69 0 144 0;
-#X connect 72 0 142 1;
+#X connect 6 0 143 0;
+#X connect 69 0 143 0;
+#X connect 72 0 141 1;
 #X connect 73 0 72 0;
-#X connect 129 0 140 0;
-#X connect 140 0 144 0;
-#X connect 141 0 146 0;
-#X connect 143 0 66 0;
-#X connect 143 0 142 0;
-#X connect 144 0 65 0;
-#X connect 144 0 141 0;
-#X connect 146 0 143 0;
+#X connect 129 0 143 0;
+#X connect 140 0 145 0;
+#X connect 142 0 66 0;
+#X connect 142 0 141 0;
+#X connect 143 0 65 0;
+#X connect 143 0 140 0;
+#X connect 145 0 142 0;
