@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #ECHO=echo
 
@@ -76,11 +76,11 @@ if [ "x" != "x${4}" ]; then
 fi
 
 if [ "x${NOGUI}" = "x" ]; then
-${ECHO} ${PD} ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${GUI_PATH} ${PD_PATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH} ${GUI_EXTPATH} ${GUI_EXTPATCH}\
+${ECHO} ${PD} -noprefs ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${GUI_PATH} ${PD_PATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH} ${GUI_EXTPATH} ${GUI_EXTPATCH}\
       -send "${GUI_MESSAGE}" -send "${PD_MESSAGE}" &
 fi
 
 if [ "x${NODSP}" = "x" ]; then
-${ECHO} ${PD} ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${DSP_PATH} ${PD_PATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH}  ${DSP_EXTPATH} ${DSP_EXTPATCH} \
+${ECHO} ${PD} -noprefs ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${DSP_PATH} ${PD_PATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH}  ${DSP_EXTPATH} ${DSP_EXTPATCH} \
       -send "${DSP_MESSAGE}" -send "${PD_MESSAGE}"
 fi
