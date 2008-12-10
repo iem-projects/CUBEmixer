@@ -1,0 +1,10 @@
+#N canvas 446 145 466 249 10;
+#X obj 160 92 t b f;
+#X obj 192 114 dbtorms;
+#X obj 160 70 receive_parameter \$1;
+#X obj 160 157 s \$2-bang;
+#X obj 192 134 outlet;
+#X connect 0 0 3 0;
+#X connect 0 1 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 0;
