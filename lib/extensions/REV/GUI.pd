@@ -20,8 +20,8 @@
 #X obj 121 236 sendreceive /EXT/REV/PARAM;
 #X obj 55 68 vfad_scale -1;
 #X obj 13 107 cnv 2 40 2 empty empty empty 20 12 0 14 -1 -66577 0;
-#X obj 19 64 vsl 30 131 0 130 0 0 \$0_rev_vol_gui \$0_rev_vol_gui +135402576
-1 140 0 8 -233017 -1 -1 3900 1;
+#X obj 19 64 vsl 30 131 0 130 0 0 \$0_rev_vol_gui \$0_rev_vol_gui -inf
+1 140 0 8 -233017 -1 -1 0 1;
 #X text 127 293 should load send PBANK File;
 #X obj 499 67 route float;
 #X msg 499 245 label \$1;

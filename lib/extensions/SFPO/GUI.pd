@@ -8,7 +8,7 @@
 #X obj 55 68 vfad_scale -1;
 #X obj 13 107 cnv 2 40 2 empty empty empty 20 12 0 14 -1 -66577 0;
 #X obj 19 64 vsl 30 131 0 130 0 0 \$0_sfpo_vol_gui \$0_sfpo_vol_gui
-+135402576 1 140 0 8 -233017 -1 -1 4000 1;
+-inf 1 140 0 8 -233017 -1 -1 0 1;
 #X obj 312 74 route float;
 #X msg 312 163 label \$1;
 #X obj 312 119 t f f;
@@ -136,7 +136,7 @@ OUT 55 OUT 56 OUT 57 OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64
 0 8 -228992 -1 -1;
 #X obj 55 69 vfad_scale -1;
 #X obj 19 65 vsl 30 131 0 130 0 0 \$0_sfpo_vol_gui \$0_sfpo_vol_gui
-+135402576 1 140 0 8 -233017 -1 -1 4000 1;
+-inf 1 140 0 8 -233017 -1 -1 0 1;
 #X symbolatom 14 41 0 0 0 2 soundfile #0_filename_togui #0_filename_fromgui
 ;
 #X text 135 94 Channel 1-24;
