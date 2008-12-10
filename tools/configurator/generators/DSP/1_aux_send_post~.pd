@@ -67,7 +67,7 @@
 #X msg 108 136 reset;
 #X msg 148 17 4;
 #X obj 85 376 patchwriter \$1;
-#X msg 62 68 symbol \$1_aux_sends_post~;
+#X msg 62 68 symbol CHANNEL/AUXS/\$1_send_post~;
 #X connect 0 0 1 0;
 #X connect 1 0 9 0;
 #X connect 1 1 5 0;

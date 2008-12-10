@@ -74,7 +74,7 @@
 #X obj 85 173 t l b b;
 #X msg 108 136 reset;
 #X obj 85 377 patchwriter \$1;
-#X msg 62 68 symbol \$1_IN_MIX_CH~;
+#X msg 62 68 symbol CHANNEL/\$1~;
 #X connect 0 0 1 0;
 #X connect 1 0 8 0;
 #X connect 1 1 5 0;
