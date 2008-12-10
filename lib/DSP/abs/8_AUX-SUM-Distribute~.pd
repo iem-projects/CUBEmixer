@@ -1,10 +1,5 @@
 #N canvas 164 21 612 668 10;
-#N canvas 0 0 490 340 null~ 0;
-#X obj 39 50 catch~ 0_AUX_SUM;
-#X obj 39 87 s~ 0_AUX_SUM;
-#X connect 0 0 1 0;
-#X restore 48 55 pd null~;
-#X text 148 53 1.arg: <float> number of AUX-SENDs;
+#X text 156 87 1.arg: <float> number of AUX-SENDs;
 #X obj 50 27 inlet~;
 #X obj 52 254 outlet~;
 #X obj 50 80 aux_2_sum~ 1;
@@ -15,3 +10,4 @@
 #X obj 50 180 aux_2_sum~ 6;
 #X obj 50 200 aux_2_sum~ 7;
 #X obj 50 220 aux_2_sum~ 8;
+#X obj 50 55 aux_0_sum~ 0;
