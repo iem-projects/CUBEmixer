@@ -1,0 +1,4 @@
+#N canvas 0 0 450 300 10;
+#X obj 39 50 catch~ 0_AUX;
+#X obj 39 87 s~ 0_AUX;
+#X connect 0 0 1 0;
