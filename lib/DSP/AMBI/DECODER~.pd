@@ -29,7 +29,7 @@
 #X floatatom 259 248 5 0 0 0 - - -;
 #X text 229 37 2.arg: <float> #speakers;
 #X obj 462 49 loadbang;
-#X obj 54 281 \$1\$2D\$3O_AMBIDEC_OUT\$4~;
+#X obj 54 281 AMBI/\$1\$2D\$3O_DECODER_OUT\$4~;
 #X connect 4 0 22 0;
 #X connect 5 0 22 0;
 #X connect 6 0 22 0;

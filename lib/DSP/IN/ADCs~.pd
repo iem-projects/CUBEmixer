@@ -1,0 +1,7 @@
+#N canvas 250 398 286 211 10;
+#X text 36 17 1.arg: <float> number of ADCs;
+#X obj 49 148 outlet~;
+#X obj 48 48 inlet~;
+#X obj 48 120 IN/ADC/\$1~;
+#X obj 48 78 IN/ADC/null~;
+#X connect 3 0 1 0;

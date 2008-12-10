@@ -1,0 +1,5 @@
+#N canvas 0 0 450 300 10;
+#X obj 53 101 sig~ 0;
+#X obj 52 138 s~ 0_ADC;
+#X obj 208 134 DSP_label IN none;
+#X connect 0 0 1 0;
