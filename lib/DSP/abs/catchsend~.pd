@@ -1,0 +1,4 @@
+#N canvas 533 280 450 300 10;
+#X obj 169 140 catch~ \$1;
+#X obj 169 162 s~ \$1;
+#X connect 0 0 1 0;
