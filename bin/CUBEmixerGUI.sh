@@ -8,6 +8,8 @@
 ##    /path/to/CUBEmixerGUI.sh my_concertGUI.pd /path/to/my_concert
 
 #ECHO=echo
+ETC=etc/CUBEmixer
+
 
 function test_pd() {
 ## this function returns the first of its arguments that is
@@ -32,11 +34,15 @@ done
 CUBEMIXERPATH=$(dirname $0)/..
 cd ${CUBEMIXERPATH}
 
-LOCALVARSTEMPLATE="etc/CUBEmixer/LocalVars.template.sh"
-LOCALVARS="etc/CUBEmixer/LocalVars.sh"
+LOCALVARSTEMPLATE="${ETC}/LocalVars.template.sh"
+STARTUPPATCHES="${ETC}/patches.sh"
+LOCALVARS="${ETC}/LocalVars.sh"
 
 if [ -e ${LOCALVARSTEMPLATE} ]; then
  . ${LOCALVARSTEMPLATE}
+fi
+if [ -e ${STARTUPPATCHES} ]; then
+ . ${STARTUPPATCHES}
 fi
 if [ -e ${LOCALVARS} ]; then
  . ${LOCALVARS}

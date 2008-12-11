@@ -1,10 +1,16 @@
 @echo off
 
-set LOCALVARSTEMPLATE=../etc/CUBEmixer/LocalVars.template.bat
-set LOCALVARS=../etc/CUBEmixer/LocalVars.bat
+set ETCDIR=../etc/CUBEmixer
+
+set LOCALVARSTEMPLATE=%ETCDIR%/LocalVars.template.bat
+set STARTUPPATCHES=%ETCDIR%/patches.bat
+set LOCALVARS=%ETCDIR%/LocalVars.bat
 
 REM default values
 if exist %LOCALVARSTEMPLATE% (call %LOCALVARSTEMPLATE%)
+
+REM ***** overrides the startup-patch *********
+if exist %STARTUPPATCHES% (call %STARTUPPATCHES%)
 
 REM ***** optionally overrides the PD_INSTALL variable *********
 if exist %LOCALVARS% (call %LOCALVARS%)
