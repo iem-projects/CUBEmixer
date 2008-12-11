@@ -5,10 +5,10 @@
 #X obj 50 150 s dec_out;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
-#X restore 71 435 pd dec;
-#X obj 71 416 s dec_in;
-#X obj 71 455 r dec_out;
-#N canvas 39 22 1277 819 (subpatch) 0;
+#X restore 70 435 pd dec;
+#X obj 70 416 s dec_in;
+#X obj 70 455 r dec_out;
+#N canvas 39 22 1249 819 (subpatch) 0;
 #X obj 48 43 inlet;
 #X text 209 33 list \; 1.arg: <symbol> kind of loudspeaker arrangement
 \; [circle \, hemisphere \, sphere] \; 2.arg: <float> ambisonic order
@@ -220,7 +220,7 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X connect 52 0 53 0;
 #X connect 53 0 54 1;
 #X connect 54 0 30 0;
-#X restore 53 300 pd;
+#X restore 54 300 pd;
 #N canvas 0 22 1235 630 helps 0;
 #X text 548 417 1.arg: <float> ambisonic order;
 #X obj 621 354 round_zero 1e-06;
@@ -347,14 +347,13 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X connect 29 0 30 0;
 #X connect 30 0 16 0;
 #X restore 873 1323 pd helps;
-#N canvas 121 41 426 625 (subpatch) 0;
+#N canvas 200 177 1249 625 (subpatch) 0;
 #X obj 137 390 pp real_ls;
 #X msg 114 419 begin_pseudo_inverse;
 #X msg 93 444 end_pseudo_inverse;
 #X obj 94 507 outlet;
 #X obj 91 81 t b b b;
-#X obj 89 28 inlet;
-#X obj 90 54 route decode;
+#X obj 91 28 inlet;
 #X obj 135 104 s to_nbxm;
 #X obj 135 128 r from_nbxm;
 #X obj 135 149 route matrix;
@@ -369,35 +368,36 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X obj 135 245 t b b f;
 #X obj 178 313 t b l;
 #X obj 183 361 iem_append;
+#X obj 91 54 route DECODE;
 #X connect 0 0 3 0;
 #X connect 1 0 3 0;
 #X connect 2 0 3 0;
 #X connect 4 0 2 0;
 #X connect 4 1 1 0;
-#X connect 4 2 7 0;
-#X connect 5 0 6 0;
-#X connect 6 0 4 0;
+#X connect 4 2 6 0;
+#X connect 5 0 20 0;
+#X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 9 0 10 0;
+#X connect 9 1 13 1;
 #X connect 10 0 11 0;
-#X connect 10 1 14 1;
-#X connect 11 0 12 0;
-#X connect 11 1 12 1;
+#X connect 10 1 11 1;
+#X connect 11 0 17 0;
 #X connect 12 0 18 0;
-#X connect 13 0 19 0;
-#X connect 14 0 13 0;
-#X connect 15 0 16 0;
-#X connect 16 0 15 1;
-#X connect 16 0 20 0;
-#X connect 17 0 15 1;
+#X connect 13 0 12 0;
+#X connect 14 0 15 0;
+#X connect 15 0 14 1;
+#X connect 15 0 19 0;
+#X connect 16 0 14 1;
+#X connect 17 0 13 0;
+#X connect 17 1 16 0;
+#X connect 17 2 12 1;
 #X connect 18 0 14 0;
-#X connect 18 1 17 0;
-#X connect 18 2 13 1;
-#X connect 19 0 15 0;
-#X connect 19 1 20 1;
-#X connect 20 0 0 0;
-#X restore 71 394 pd;
-#X obj 71 475 round_zero 1e-06;
+#X connect 18 1 19 1;
+#X connect 19 0 0 0;
+#X connect 20 0 4 0;
+#X restore 70 394 pd;
+#X obj 70 475 round_zero 1e-06;
 #X obj 621 64 nbxm 24 2 6 12 -360 360 0 from_nbxm to_nbxm #000000 0
 10;
 #N canvas 0 22 679 618 configure_nbxm 0;
@@ -441,7 +441,7 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X obj 218 183 cnv 13 23 13 empty empty empty 20 12 0 14 -260929 -66577
 0;
 #X obj 106 129 vradio 15 1 0 3 empty empty empty 0 -8 0 10 -260929
--1 -1 0;
+-1 -1 2;
 #X text 124 128 circle;
 #X text 124 143 hemisphere;
 #X text 124 158 sphere;
@@ -531,19 +531,19 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X connect 46 0 37 0;
 #X coords 0 -1 1 1 350 100 2 100 100;
 #X restore 54 169 pd;
-#X msg 106 301 circ 5 23 circ12ls.mtx;
-#X obj 217 501 mtx;
+#X msg 106 301 sphere 4 17;
+#X obj 216 501 mtx;
 #X obj 216 457 savepanel;
 #X obj 216 413 bng 40 250 50 0 empty empty empty 17 7 0 10 -259265
 -1 -1;
 #X msg 216 477 write \$1;
-#X obj 72 372 cnv 15 45 15 empty empty empty 20 12 0 14 -260929 -66577
+#X obj 71 372 cnv 15 45 15 empty empty empty 20 12 0 14 -260929 -66577
 0;
 #X obj 70 502 t a a a;
 #X obj 70 528 nbxm 24 15 4 12 -360 360 0 empty empty #000000 0 8;
 #X msg 130 503 dim \$1 \$2;
 #X text 588 23 LOUDSPEAKER-POSITIONS;
-#X msg 71 372 DECODE;
+#X msg 70 372 DECODE;
 #X text 774 63 Instruction Manual \; 1.) choose LOUDSPEAKER-LAYOUT
 \; 2.) choose AMBISONIC-ORDER \; 3.) choose NUMBER OF LOUDSPEAKERS
 \; 4.) choose LOUDSPEAKER-POSITION-FILE or CLEAR it \; 5.) display
