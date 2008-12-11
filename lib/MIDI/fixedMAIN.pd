@@ -1,0 +1,16 @@
+#N canvas 0 62 535 483 10;
+#X obj 109 33 inlet reset;
+#X msg 109 62 bang;
+#X text 145 65 reset MIDI connections;
+#X obj 109 89 MIDI/aconnector;
+#X obj 86 138 MIDI/inchannel/sr_solo 65 16 /IN/SOLO;
+#X obj 87 158 MIDI/inchannel/sr_xtoggle 33 16 /IN/SELECT;
+#X obj 100 224 MIDI/out/sr_gain 121 1 /OUT/AMBI/SPEAKER/GAIN;
+#X obj 99 244 MIDI/out/sr_gain 122 1 /OUT/LFC/1/GAIN;
+#X obj 99 263 MIDI/out/sr_gain 122 2 /OUT/LFC/2/GAIN;
+#X obj 99 284 MIDI/out/sr_gain 124 1 /OUT/MASTER/GAIN;
+#X obj 98 323 MIDI/out/sr_gain 125 1 /EXT/REV/GAIN;
+#X obj 97 345 MIDI/out/sr_gain 126 1 /EXT/RRR/GAIN;
+#X obj 98 365 MIDI/out/sr_gain 127 1 /EXT/CTL;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
