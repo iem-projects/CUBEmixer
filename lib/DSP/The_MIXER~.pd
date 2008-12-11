@@ -92,7 +92,7 @@
 #X text 689 173 08.arg: <symbol> ambisonic type;
 #X text 689 202 10.arg: <float> ambisonic order;
 #X text 689 188 09.arg: <float> ambisonic dimension (2D \, 3D);
-#X obj 74 416 OUT/BUS/\$7_OUT\$2~;
+#X obj 74 416 OUT/BUS/\$7_LFC2_OUT\$2~;
 #X obj 73 474 OUT/DACs~ \$2 presets/compensation.mtx;
 #X obj 238 78 AUXS/\$6_SUM~;
 #X obj 74 222 CHANNEL/\$3~ \$1 \$5 \$7 \$4 \$8\$9D\$10O;
