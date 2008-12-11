@@ -61,7 +61,8 @@ folder_list/folder_list.c: hcs/folder_list.c
 	cp hcs/folder_list.c folder_list/folder_list.c
 
 folder_list-build: folder_list/folder_list.c
-	$(CC) -DPD -O2 -funroll-loops -fomit-frame-pointer -fPIC -I$(PDSOURCE) -export_dynamic -shared -lc -lm -o folder_list/folder_list.$(EXT) folder_list/folder_list.c
+	PDSOURCE=$(PDSOURCE) make -C folder_list -f ../Makefile.subdir
+#	$(CC) -DPD -O2 -funroll-loops -fomit-frame-pointer -fPIC -I$(PDSOURCE) -export_dynamic -shared -lc -lm -o folder_list/folder_list.$(EXT) folder_list/folder_list.c
 
 folder_list-locinstall: folder_list-build
 	cp folder_list/folder_list.$(EXT) $(LOCINSTALL_DIR)
@@ -69,6 +70,7 @@ folder_list-locinstall: folder_list-build
 folder_list: folder_list-locinstall
 
 folder_list-clean:
+	make -C folder_list -f ../Makefile.subdir clean
 
 ######### IEM AMBI ###############
 
@@ -81,6 +83,21 @@ iem_ambi-locinstall: iem_ambi-build
 iem_ambi: iem_ambi-locinstall
 
 iem_ambi-clean:
+	make -C iem_ambi/src clean
+
+######### IEM AMBI2 ###############
+
+iem_ambi2-build: 
+	make -C iem_ambi2/src -f makefile_linux
+
+iem_ambi2-locinstall: iem_ambi2-build
+	cp iem_ambi2/src/iem_ambi2.$(EXT) $(LOCINSTALL_DIR)
+
+iem_ambi2: iem_ambi2-locinstall
+
+iem_ambi2-clean:
+	make -C iem_ambi2/src -f makefile_linux clean
+
 
 ######### IEM BIN AMBI ###############
 
@@ -215,11 +232,11 @@ zexy: zexy-locinstall
 
 sources: folder_list-src
 
-build: aconnect-build folder_list-build iem_ambi-build iem_bin_ambi-build iemgui-build iemlib-build iemmatrix-build iem_spec2-build miXed-build net-build osc-build popup-build zexy-build
+build: aconnect-build folder_list-build iem_ambi-build iem_ambi2-build iem_bin_ambi-build iemgui-build iemlib-build iemmatrix-build iem_spec2-build miXed-build net-build osc-build popup-build zexy-build
 
-locinstall: aconnect-locinstall folder_list-locinstall iem_ambi-locinstall iem_bin_ambi-locinstall iemgui-locinstall iemlib-locinstall iemmatrix-locinstall iem_spec2-locinstall miXed-locinstall net-locinstall osc-locinstall popup-locinstall zexy-locinstall
+locinstall: aconnect-locinstall folder_list-locinstall iem_ambi-locinstall iem_ambi2-locinstall iem_bin_ambi-locinstall iemgui-locinstall iemlib-locinstall iemmatrix-locinstall iem_spec2-locinstall miXed-locinstall net-locinstall osc-locinstall popup-locinstall zexy-locinstall
 
-clean: aconnect-clean folder_list-clean iem_ambi-clean iem_bin_ambi-clean iemgui-clean iemlib-clean iemmatrix-clean iem_spec2-clean miXed-clean net-clean osc-clean popup-clean zexy-clean
+clean: aconnect-clean folder_list-clean iem_ambi-clean iem_ambi2-clean iem_bin_ambi-clean iemgui-clean iemlib-clean iemmatrix-clean iem_spec2-clean miXed-clean net-clean osc-clean popup-clean zexy-clean
 	rm -f sf-login
 
 distclean: clean
