@@ -1,0 +1,104 @@
+#N canvas 167 29 1008 638 10;
+#X text 28 440 1.arg: <float> ambisonic order;
+#X text 795 45 -180 <= phi <= +180;
+#X text 495 176 input: <ambi_weight> one mul-factor for each;
+#X text 79 549 IEM KUG;
+#X text 63 537 musil;
+#X text 100 537 @;
+#X text 108 537 iem.at;
+#X text 62 559 Graz \, Austria;
+#X obj 102 356 cnv 15 126 15 empty empty empty 20 12 0 14 -260818 -66577
+0;
+#X obj 101 377 round_zero 1e-06;
+#X obj 31 37 bng 35 250 50 0 empty empty empty 0 -6 0 8 -24198 -42246
+-1;
+#X msg 89 158 ambi_weight 1 1 1 1;
+#X msg 69 187 1 90 0 \, 2 45 45 \, 3 45 135 \, 4 45 225 \, 5 45 315
+\, 6 0 0 \, 7 0 45 \, 8 0 90 \, 9 0 135 \, 10 0 180 \, 11 0 225 \,
+12 0 270 \, 13 0 315;
+#X obj 69 221 pp real_ls;
+#X msg 51 250 begin_pseudo_inverse;
+#X msg 31 322 end_pseudo_inverse;
+#X text 161 18 AMBISONIC DECODING;
+#X text 445 9 n_ao = ambisonic-order;
+#X text 471 46 all angles in degree;
+#X text 540 187 ambisonic order group to suppress the side-lobe-phenomena
+;
+#X text 494 278 input: <begin_pseudo_inverse> starts the encoding;
+#X text 537 289 of all (real + phantom) loudspeaker positions \,;
+#X text 538 313 and calculates the pseudo inverse.;
+#X text 541 301 multiplicates the ambi order weight;
+#X msg 235 299 sing_range 1e-10;
+#X text 850 332 mirror_weight;
+#X text 546 358 phantom speaker with the factor "mirror_weight" and
+adds;
+#X text 495 206 input: <sing_range> singularity range;
+#X text 538 217 when calculating the inverse of the matrix by gauss
+;
+#X text 538 227 algorithm \, you have to divide a row by a certain
+number \,;
+#X text 538 247 outside of this range (> sing_range \, or < -sing_range).
+;
+#X text 494 389 input: <end_pseudo_inverse> outputs only the first
+part of;
+#X text 540 402 the inverted matrix (row 1 to row n_pht_ls). The part
+;
+#X text 542 414 with the phantom speakers \, we ignore.;
+#X text 538 259 Otherwise we say \, this matrix is singular.;
+#X text 538 237 to achieve the identity matrix. This number has to
+be;
+#X obj 101 400 mtx_print;
+#X text 444 20 n_re_ls = number of real loudspeakers;
+#X text 444 32 n_vi_ls = number of virtual phantom loudspeakers;
+#X text 495 92 input: <real_ls> re_ls_index + theta + phi .. 3-dimensional
+;
+#X text 495 133 input: <pht_ls> vi_ls_index + theta + phi .. 3-dimensional
+;
+#X text 795 33 -90 <= theta <= +90;
+#X text 787 9 1 <= re_ls_index <= n_re_ls;
+#X text 787 20 1 <= vi_ls_index <= n_vi_ls;
+#X text 60 427 initial arguments:;
+#X text 130 40 calculates a ambisonic;
+#X text 154 51 decoder matrix;
+#X text 530 104 encodes the re_ls_index row of a matrix;
+#X text 526 145 encodes the (re_ls_index + vi_ls_index) row of a matrix
+;
+#X text 533 157 we need them to achieve a nonsingular matrix;
+#X text 494 332 input: <ipht_ireal_muladd> vi_ls_index re_ls_index
+;
+#X text 487 487 <float> n_row = (n_re_ls) = number of real loudspeakers
+;
+#X text 819 499 ambisonic-channels;
+#X text 545 371 this column to the column "re_ls_index" of real speaker
+;
+#X text 547 345 multiplies the column "vi_ls_index + n_re_ls" of;
+#X text 28 453 2.arg: <float> number of real existing loudspeakers
+;
+#X text 28 465 3.arg: <float> number of virtual phantom_loudspeakers
+;
+#X text 14 526 (c) Thomas Musil 2000 - 2008;
+#X obj 101 356 ambi2_decode_hemi 3 13 0;
+#X msg 104 131 ambi_weight 1.05 0.8 0.3904;
+#X obj 31 81 t b b b b;
+#X text 19 13 ambi2_decode_hemi;
+#X msg 46 287 ipht_ireal_muladd \$1 \$2 \$3;
+#X text 805 475 (n_ao+2)/2+2) floats :;
+#X text 461 475 output in case of 3d: <matrix> (n_re_ls*(n_ao+1)*;
+#X text 818 512 of the decoder matrix;
+#X text 475 512 + (n_ao+1)*(n_ao+2)/2 * n_re_ls <float> elements;
+#X text 475 499 + <float> n_col = (n_ao+1)*(nao+2)/2 = number of;
+#X connect 9 0 36 0;
+#X connect 10 0 60 0;
+#X connect 11 0 58 0;
+#X connect 12 0 13 0;
+#X connect 13 0 58 0;
+#X connect 14 0 58 0;
+#X connect 15 0 58 0;
+#X connect 24 0 58 0;
+#X connect 58 0 9 0;
+#X connect 59 0 58 0;
+#X connect 60 0 15 0;
+#X connect 60 1 14 0;
+#X connect 60 2 12 0;
+#X connect 60 3 11 0;
+#X connect 62 0 58 0;

@@ -1,0 +1,415 @@
+#N canvas 12 31 1259 783 10;
+#X obj 376 246 cnv 15 78 15 empty empty empty 20 12 0 14 -260818 -66577
+0;
+#X obj 375 290 print;
+#X msg 485 82 col 2 \$1;
+#X msg 413 84 row 1 \$1;
+#X msg 248 210 col 3 \$1 \$2;
+#X obj 248 187 pack 0 0;
+#X obj 266 165 t b f;
+#X obj 375 267 round_zero 1e-06;
+#X obj 142 190 pack 0 0;
+#X obj 160 168 t b f;
+#X floatatom 69 147 5 -180 180 0 - - -;
+#X floatatom 20 148 5 -90 90 0 - - -;
+#X obj 51 208 pack 0 0;
+#X obj 69 186 t b f;
+#X text 71 128 phi;
+#X text 22 9 ambi_encode;
+#X text 35 293 ambisonic-order = n_ao;
+#X text 586 476 for crossfading of 2 ambisonic-systems;
+#X msg 606 185 ambi_weight 1 1 1;
+#X text 346 476 ambisonic-order-group;
+#X text 90 516 -180 <= phi <= +180;
+#X text 569 491 or for bluring a signal-source-direction;
+#X text 32 548 order of ambisonic-channels in 2d-case: W X1 Y1 X2 Y2
+X3 Y3;
+#X text 452 548 X4 Y4 X5 Y5 ....;
+#X text 228 562 W := 1 \, X-term ... cos(i*phi) \, Y-term ... sin(i*phi)
+;
+#X text 31 602 order of ambisonic-channels in 3d-case: W Z1X1 Z1Y1
+Z1;
+#X text 414 602 Z2X2 Z2Y2 Z2X1 Z2Y1 Z2 Z3X3 Z3Y3 Z3X2 Z3Y2 Z3X1 Z3Y1
+Z3 ...;
+#X text 167 616 W := 1 \, X-term ... cos(i*phi) \, Y-term ... sin(i*phi)
+\,;
+#X text 34 320 input: <float> phi [degree] .. 2-dimensional;
+#X text 32 476 input: <ambi_weight> one mul-factor for each;
+#X text 305 534 |0| 1 | 2 | 3 | 4 | 5 |;
+#X text 403 589 |;
+#X text 304 589 |0| 1 | 2 | 3;
+#X floatatom 184 139 5 -180 180 0 - - -;
+#X floatatom 135 140 5 -90 90 0 - - -;
+#X text 186 120 phi;
+#X floatatom 287 138 5 -180 180 0 - - -;
+#X floatatom 238 139 5 -90 90 0 - - -;
+#X text 289 119 phi;
+#X floatatom 371 67 5 -180 180 0 - - -;
+#X text 373 48 phi;
+#X floatatom 413 66 5 -180 180 0 - - -;
+#X text 415 47 phi;
+#X floatatom 485 64 5 -180 180 0 - - -;
+#X text 487 45 phi;
+#X msg 142 215 row 4 \$1 \$2;
+#X text 83 851 "float"-message: <float> azimuth-angle phi [degree]
+-> two-dimensional ambisonic-system -> output a <list> of (2*n_ao +
+1) <float> elements;
+#X text 479 852 "list"-message: 1.item <float> elevation-angle delta
+[degree] \, 2.item <float> azimuth-angle phi [degree] -> three-dimensional
+ambisonic-system -> output a <list> of (n_ao + 1)^2 <float> elements
+;
+#X text 88 916 "row"-message: <float> row-index of ambisonic-encoder-matrix
+\, <float> azimuth-angle phi [degree] -> two-dimensional ambisonic-system
+-> output a "row"-message + <float> row-index + (2*n_ao + 1) <float>
+elements;
+#X text 481 921 "row"-message: 1.item <float> elevation-angle delta
+[degree] \, 2.item <float> azimuth-angle phi [degree] -> three-dimensional
+ambisonic-system -> output a <list> of (n_ao + 1)^2 <float> elements
+;
+#X text 106 493 1 <= index <= nr_sources;
+#X text 121 8 AMBISONIC ENCODING;
+#X text 367 10 calculates a row or column of;
+#X text 373 22 a ambisonic-encoder-matrix;
+#X obj 645 56 cnv 15 126 15 empty empty empty 20 12 0 14 -260818 -66577
+0;
+#N canvas 64 28 645 494 3D-5.Order-example 0;
+#X obj 83 105 pack 0 0;
+#X floatatom 83 63 5 -90 90 0 - - -;
+#X floatatom 126 64 5 -180 180 0 - - -;
+#X text 49 46 -90 .. +90;
+#X text 152 34 phi;
+#X text 125 48 -180 .. +180;
+#X obj 101 84 t b f;
+#X obj 102 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 112 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 122 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 132 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 142 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 152 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 162 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 172 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 182 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 192 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 202 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 212 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 222 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 232 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 242 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 252 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 262 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 272 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 282 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 292 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 302 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 312 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 322 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 332 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 92 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 473 98 ambi_encode 4;
+#X floatatom 473 77 5 -180 180 0 - - -;
+#X text 485 40 phi;
+#X text 458 54 -180 .. +180;
+#X obj 166 209 print 3d;
+#X obj 473 141 print 2d;
+#X obj 83 209 route row;
+#X obj 166 187 round_zero 1e-06;
+#X floatatom 45 265 5 0 0 0 - - -;
+#X obj 83 132 pp row 7;
+#X text 16 275 row-index;
+#X obj 473 120 round_zero 1e-06;
+#X text 453 268 +1;
+#X text 453 368 -1;
+#X text 456 319 0;
+#X obj 83 230 unpack 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X obj 342 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 352 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 362 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 372 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 382 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 392 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 402 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 412 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 422 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 432 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X obj 442 276 vsl 8 101 -1 1 0 0 empty empty empty 0 -8 0 8 -225280
+-1109 -1 0 1;
+#X msg 265 65 ambi_weight 1 1 1 1 1 1;
+#X msg 265 103 ambi_weight 1 1 1 1 0 0;
+#X msg 265 122 ambi_weight 1 1 1 0 0 0;
+#X msg 265 142 ambi_weight 1 1 0 0 0 0;
+#X msg 265 162 ambi_weight 1 0 0 0 0 0;
+#X msg 265 84 ambi_weight 1 1 1 1 1 0;
+#X text 98 410 IEM KUG;
+#X text 73 398 musil;
+#X text 109 398 @;
+#X text 118 398 iem.at;
+#X text 81 420 Graz \, Austria;
+#X text 68 33 theta;
+#X obj 83 159 ambi2_encode 5;
+#X text 22 387 (c) Thomas Musil 2000 - 2008;
+#X connect 0 0 41 0;
+#X connect 1 0 0 0;
+#X connect 2 0 6 0;
+#X connect 6 0 0 0;
+#X connect 6 1 0 1;
+#X connect 32 0 43 0;
+#X connect 33 0 32 0;
+#X connect 38 0 47 0;
+#X connect 39 0 36 0;
+#X connect 41 0 71 0;
+#X connect 43 0 37 0;
+#X connect 47 0 40 0;
+#X connect 47 1 31 0;
+#X connect 47 2 7 0;
+#X connect 47 3 8 0;
+#X connect 47 4 9 0;
+#X connect 47 5 10 0;
+#X connect 47 6 11 0;
+#X connect 47 7 12 0;
+#X connect 47 8 13 0;
+#X connect 47 9 14 0;
+#X connect 47 10 15 0;
+#X connect 47 11 16 0;
+#X connect 47 12 17 0;
+#X connect 47 13 18 0;
+#X connect 47 14 19 0;
+#X connect 47 15 20 0;
+#X connect 47 16 21 0;
+#X connect 47 17 22 0;
+#X connect 47 18 23 0;
+#X connect 47 19 24 0;
+#X connect 47 20 25 0;
+#X connect 47 21 26 0;
+#X connect 47 22 27 0;
+#X connect 47 23 28 0;
+#X connect 47 24 29 0;
+#X connect 47 25 30 0;
+#X connect 47 26 48 0;
+#X connect 47 27 49 0;
+#X connect 47 28 50 0;
+#X connect 47 29 51 0;
+#X connect 47 30 52 0;
+#X connect 47 31 53 0;
+#X connect 47 32 54 0;
+#X connect 47 33 55 0;
+#X connect 47 34 56 0;
+#X connect 47 35 57 0;
+#X connect 47 36 58 0;
+#X connect 59 0 71 0;
+#X connect 60 0 71 0;
+#X connect 61 0 71 0;
+#X connect 62 0 71 0;
+#X connect 63 0 71 0;
+#X connect 64 0 71 0;
+#X connect 71 0 38 0;
+#X restore 644 55 pd 3D-5.Order-example;
+#X text 94 684 IEM KUG;
+#X text 69 672 musil;
+#X text 105 672 @;
+#X text 114 672 iem.at;
+#X text 77 694 Graz \, Austria;
+#X text 17 129 theta;
+#X text 132 121 theta;
+#X text 235 120 theta;
+#X text 90 504 -90 <= theta <= +90;
+#X text 545 616 Z-term ... cos(j*theta)*sin(k*theta);
+#X obj 60 74 cnv 15 204 15 empty empty empty 20 12 0 14 -260818 -66577
+0;
+#N canvas 0 22 628 317 Definition 0;
+#X text 176 233 IEM KUG;
+#X text 151 221 musil;
+#X text 187 221 @;
+#X text 196 221 iem.at;
+#X text 159 243 Graz \, Austria;
+#X text 108 154 o-;
+#X text 116 149 _____;
+#X text 108 147 |;
+#X text 108 141 |;
+#X text 108 135 |;
+#X text 108 129 |;
+#X text 108 125 ^;
+#X text 107 140 +;
+#X text 112 140 -;
+#X text 104 140 -;
+#X text 116 141 -;
+#X text 119 140 .;
+#X text 120 140 .;
+#X text 121 140 .;
+#X text 122 141 .;
+#X text 123 141 .;
+#X text 124 142 .;
+#X text 125 143 .;
+#X text 126 144 .;
+#X text 146 154 > +x;
+#X text 104 115 +y;
+#X text 96 159 +z;
+#X text 127 145 .;
+#X text 127 146 .;
+#X text 128 147 .;
+#X text 128 148 .;
+#X text 128 149 .;
+#X text 129 150 .;
+#X text 129 151 .;
+#X text 69 140 +phi <;
+#X text 278 154 o-;
+#X text 278 129 |;
+#X text 278 125 ^;
+#X text 290 140 .;
+#X text 291 140 .;
+#X text 292 141 .;
+#X text 293 141 .;
+#X text 294 142 .;
+#X text 295 143 .;
+#X text 296 144 .;
+#X text 297 145 .;
+#X text 297 146 .;
+#X text 298 147 .;
+#X text 298 148 .;
+#X text 298 149 .;
+#X text 299 150 .;
+#X text 299 151 .;
+#X text 266 159 +x;
+#X text 316 154 > +y;
+#X text 274 115 +z;
+#X text 278 135 |;
+#X text 278 141 |;
+#X text 278 147 |;
+#X text 288 149 _____;
+#X text 291 135 _;
+#X text 288 143 |;
+#X text 295 135 +theta;
+#X text 74 55 theta .. elevation \, geodetical pos. orientation;
+#X text 75 42 phi .... azimute in math. pos. orientation;
+#X text 418 65 theta = -90 on south pole \;;
+#X text 418 75 theta = 0 equator );
+#X text 406 55 ( theta = +90 on north pole \;;
+#X text 372 42 ( counter clockwise in xy-plane );
+#X text 74 67 radius . is always 1;
+#X text 273 23 we use the spherical coordinate system;
+#X text 109 23 for ambisonic encoding \,;
+#X text 102 210 (c) Thomas Musil 2000 - 2008;
+#X restore 59 73 pd Definition of Coordinate System;
+#X obj 375 245 ambi2_encode 2;
+#X text 479 245 1.arg: <float> ambisonic order (0...+inf);
+#X text 20 661 (c) Thomas Musil 2000 - 2008;
+#X text 62 24 with schmidt;
+#X msg 589 164 ambi_weight 1.05 0.8 0.3904;
+#X floatatom 555 64 5 -180 180 0 - - -;
+#X text 557 45 phi;
+#X msg 555 82 matrix \$1;
+#X msg 358 211 matrix \$1 \$2;
+#X obj 357 187 pack 0 0;
+#X obj 375 165 t b f;
+#X floatatom 396 138 5 -180 180 0 - - -;
+#X floatatom 347 139 5 -90 90 0 - - -;
+#X text 398 119 phi;
+#X text 344 120 theta;
+#X text 34 333 input: <list> <float> theta [degree] + <float> phi [degree]
+;
+#X text 444 353 .. 2-dimensional;
+#X text 34 353 input: <row> <float> index [-] + <float> phi [degree]
+;
+#X text 34 365 input: <row> <float> index [-] + <float> theta [degree]
++;
+#X text 444 383 .. 2-dimensional;
+#X text 34 383 input: <col> <float> index [-] + <float> phi [degree]
+;
+#X text 34 395 input: <col> <float> index [-] + <float> theta [degree]
++;
+#X text 34 413 input: <matrix> <float> phi [degree] .. 2-dimensional
+;
+#X text 34 425 input: <matrix> <float> theta [degree] + <float> phi
+;
+#X text 405 425 [degree] .. 3-dimensional;
+#X text 451 333 .. 3-dimensional;
+#X text 706 355 -> output: <row> +;
+#X text 838 355 <float> index + (2*n_ao+1) * <float> elements;
+#X text 440 365 <float> phi [degree] .. 3-dimensional -> output: <row>
+;
+#X text 818 365 + <float> index + (n_ao+1)*(n_ao+1) * <float> elements
+;
+#X text 838 385 <float> index + (2*n_ao+1) * <float> elements;
+#X text 825 395 + <float> index + (n_ao+1)*(n_ao+1) * <float> elements
+;
+#X text 706 385 -> output: <col> +;
+#X text 440 395 <float> phi [degree] .. 3-dimensional -> output: <col>
+;
+#X text 570 322 -> output: <list> of (2*n_ao+1) * <float> elements
+;
+#X text 570 333 -> output: <list> of (n_ao+1)*(n_ao+1) * <float> elements
+;
+#X text 586 415 -> output: <matrix> + <float> index;
+#X text 836 415 + <float> 1 + (2*n_ao+1) * <float> elements;
+#X text 586 425 -> output: <matrix> + <float> index;
+#X text 836 425 + <float> 1 + (n_ao+1)*(n_ao+1) * <float> elements
+;
+#X connect 2 0 68 0;
+#X connect 3 0 68 0;
+#X connect 4 0 68 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 6 1 5 1;
+#X connect 7 0 1 0;
+#X connect 8 0 45 0;
+#X connect 9 0 8 0;
+#X connect 9 1 8 1;
+#X connect 10 0 13 0;
+#X connect 11 0 12 0;
+#X connect 12 0 68 0;
+#X connect 13 0 12 0;
+#X connect 13 1 12 1;
+#X connect 18 0 68 0;
+#X connect 33 0 9 0;
+#X connect 34 0 8 0;
+#X connect 36 0 6 0;
+#X connect 37 0 5 0;
+#X connect 39 0 68 0;
+#X connect 41 0 3 0;
+#X connect 43 0 2 0;
+#X connect 45 0 68 0;
+#X connect 68 0 7 0;
+#X connect 72 0 68 0;
+#X connect 73 0 75 0;
+#X connect 75 0 68 0;
+#X connect 76 0 68 0;
+#X connect 77 0 76 0;
+#X connect 78 0 77 0;
+#X connect 78 1 77 1;
+#X connect 79 0 78 0;
+#X connect 80 0 77 0;
