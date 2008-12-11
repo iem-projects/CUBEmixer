@@ -72,9 +72,10 @@
 #X obj 281 165 OUT/BUS/catch~ 14_BUS;
 #X obj 296 185 OUT/BUS/catch~ 15_BUS;
 #X obj 311 206 OUT/BUS/catch~ 16_BUS;
-#X obj 664 204 OUT/BUS/2_LF~;
-#X obj 672 343 OUT/BUS/2_LF2OUT~;
+#X obj 664 204 OUT/BUS/2_LFC~;
+#X obj 672 343 OUT/BUS/2_LFC2OUT~;
 #X obj 148 11 OUT/BUS/parameters 16 52 2;
+#X text 528 26 this is really only 16_OUT52~ !!!;
 #X connect 54 0 55 1;
 #X connect 54 1 55 2;
 #X connect 54 2 55 3;
