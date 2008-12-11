@@ -24,6 +24,12 @@
 #N canvas 443 326 450 413 \$0-gui 0;
 #X obj 101 101 cnv 15 96 20 empty empty plugins 6 10 0 14 -233017 -66577
 0;
+#X obj 104 130 tgl 15 0 \$0-COMPANDER \$0-COMPANDER COMPANDER 17 7
+0 10 -262144 -1 -1 1 1;
+#X obj 304 130 gPluginHelper COMPANDER \$0-COMPANDER \$0;
+#X obj 104 150 tgl 15 0 \$0-DISTANCE \$0-DISTANCE DISTANCE 17 7 0 10
+-262144 -1 -1 1 1;
+#X obj 304 150 gPluginHelper DISTANCE \$0-DISTANCE \$0;
 #X coords 0 -1 1 1 98 260 1 100 100;
 #X restore 101 139 pd \$0-gui;
 #N canvas 435 354 744 494 generate 0;
@@ -97,7 +103,6 @@
 #X floatatom 304 330 5 0 0 0 - - -;
 #X obj 246 362 + 1;
 #X obj 152 533 textfile;
-#X msg 211 448 write ../../lib/DSP/abs/EFF_PLUG_IN~.pd;
 #X msg 273 292 list \$2 \$1 $ 0 1 2;
 #X msg 273 309 #X obj 60 \$1 CUBEmixer_plugin~ \$3\$4 \$2 \$3\$5 \$3\$6
 ;
@@ -105,6 +110,7 @@
 #X msg 152 112 #N canvas 0 0 450 300 10 \, #X obj 0 0 inlet~ \, #X
 obj 0 200 outlet~ \, #X obj 0 50 CUBEmixer_plugin0~ \$1\$2 \$1\$3 \$1\$4
 ;
+#X msg 211 448 write ../../lib/DSP/CHANNEL/FX/plugin~.pd;
 #X connect 0 0 25 0;
 #X connect 1 0 2 0;
 #X connect 2 0 25 0;
@@ -113,15 +119,15 @@ obj 0 200 outlet~ \, #X obj 0 50 CUBEmixer_plugin0~ \$1\$2 \$1\$3 \$1\$4
 #X connect 4 1 10 0;
 #X connect 4 2 5 0;
 #X connect 5 0 7 0;
-#X connect 6 0 27 0;
+#X connect 6 0 26 0;
 #X connect 7 0 6 0;
 #X connect 7 1 8 0;
 #X connect 8 0 14 0;
 #X connect 8 0 15 0;
-#X connect 9 0 29 0;
+#X connect 9 0 28 0;
 #X connect 9 1 0 0;
 #X connect 9 2 13 0;
-#X connect 10 0 26 0;
+#X connect 10 0 30 0;
 #X connect 10 1 16 0;
 #X connect 11 0 12 0;
 #X connect 12 0 6 1;
@@ -140,11 +146,11 @@ obj 0 200 outlet~ \, #X obj 0 50 CUBEmixer_plugin0~ \$1\$2 \$1\$3 \$1\$4
 #X connect 21 0 19 0;
 #X connect 22 0 1 0;
 #X connect 24 0 18 0;
-#X connect 26 0 25 0;
-#X connect 27 0 28 0;
-#X connect 28 0 1 0;
-#X connect 29 0 30 0;
-#X connect 30 0 1 0;
+#X connect 26 0 27 0;
+#X connect 27 0 1 0;
+#X connect 28 0 29 0;
+#X connect 29 0 1 0;
+#X connect 30 0 25 0;
 #X restore 582 388 pd generateDSPpatch;
 #N canvas 42 446 845 410 generateGUIpatch 0;
 #X msg 190 350 clear;

@@ -1,0 +1,7 @@
+#N canvas 0 0 450 300 10;
+#X msg 55 154 symbol MAIN_ADC\$1_DAC\$1_IN\$4_FX\$5_AUX\$8_\$9_BUS\$6_\$12\$10D\$11O\$13
+;
+#X obj 55 119 inlet;
+#X obj 55 198 outlet;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;

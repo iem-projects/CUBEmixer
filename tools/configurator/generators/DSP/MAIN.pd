@@ -1,0 +1,48 @@
+#N canvas 213 353 324 447 10;
+#X obj 62 43 t l l b;
+#N canvas 1439 112 765 319 generic 0;
+#X obj 76 44 inlet;
+#X obj 76 228 outlet;
+#X obj 76 76 t b b;
+#X msg 76 113 text 100 100 DSP-Engine MAIN Patch \, obj 100 150 fixedMAIN
+\, text 100 300 ---------- EXTENSIONS --------- \, obj 100 320 DSP/extensions
+;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X restore 108 201 pd generic;
+#X obj 85 294 t a;
+#N canvas 552 369 625 487 generator 0;
+#X obj 93 47 inlet;
+#X obj 94 324 outlet;
+#X obj 94 117 t l l;
+#X msg 140 153 \$4 \$6;
+#X msg 140 180 obj 100 175 MIDI/MAIN_IN\$1_BUS\$2 \, connect 1 0 4
+0;
+#X obj 94 266 t a;
+#X msg 94 217 obj 100 250 The_MIXER~ \$1 \$2 \$4 \$5 \$8 \$9 \$6 \$12
+\$10 \$11 \$13 \, connect 5 0 3 0 \, connect 5 1 3 1;
+#X connect 0 0 2 0;
+#X connect 2 0 6 0;
+#X connect 2 1 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 6 0 5 0;
+#X restore 85 236 pd generator;
+#X obj 85 173 t l b b;
+#X msg 108 136 reset;
+#X obj 62 74 patchname_dsp;
+#X obj 62 20 inlet;
+#X obj 85 376 patchwriter \$1;
+#X connect 0 0 6 0;
+#X connect 0 1 4 0;
+#X connect 0 2 5 0;
+#X connect 1 0 2 0;
+#X connect 2 0 8 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 4 1 1 0;
+#X connect 5 0 8 1;
+#X connect 6 0 8 1;
+#X connect 7 0 0 0;

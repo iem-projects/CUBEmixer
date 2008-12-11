@@ -1,0 +1,6 @@
+#N canvas 0 0 643 324 10;
+#X obj 55 119 inlet;
+#X obj 55 198 outlet;
+#X obj 55 165 patchname_dsp;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
