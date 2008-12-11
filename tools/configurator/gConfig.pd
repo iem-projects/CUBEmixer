@@ -1,0 +1,188 @@
+#N canvas 99 179 1041 516 10;
+#X obj 101 101 cnv 15 398 40 empty empty I/O 10 12 0 14 -233017 -66577
+0;
+#X obj 167 123 nbx 5 14 0 128 0 0 \$0_adcs \$0_adcs ADCs 0 -8 0 10
+-262144 -1 -1 64 256;
+#X obj 267 123 nbx 5 14 0 128 0 0 \$0_dacs \$0_dacs DACs 0 -8 0 10
+-262144 -1 -1 64 256;
+#X obj 335 122 hsl 128 15 0 64 0 0 \$0_daccs \$0_daccs compensated:24
+-2 -8 0 10 -262144 -1 -1 4762 1;
+#X obj 101 146 cnv 15 398 40 empty empty channel 10 12 0 14 -191407
+-66577 0;
+#X obj 186 168 nbx 5 14 0 64 0 0 \$0_channels \$0_channels CHANNELs
+0 -8 0 10 -262144 -1 -1 16 256;
+#X obj 266 168 nbx 5 14 0 16 0 0 \$0_fx \$0_fx FX-slots 0 -8 0 10 -262144
+-1 -1 4 256;
+#X obj 101 299 cnv 15 398 40 empty empty BUSses 10 12 0 14 -228856
+-66577 0;
+#X obj 186 321 nbx 5 14 0 64 0 0 \$0_bus \$0_bus BUSs 0 -8 0 10 -262144
+-1 -1 16 256;
+#X obj 101 359 cnv 15 199 40 empty empty SETTINGs 10 12 0 14 -191407
+-66577 0;
+#X obj 101 249 cnv 15 398 40 empty empty AMBISONICS 10 12 0 14 -191407
+-66577 0;
+#X obj 215 270 hradio 15 1 0 2 \$0_ambidim \$0_ambidim dim 0 -8 0 10
+-262144 -1 -1 1;
+#X obj 266 271 nbx 5 14 0 16 0 0 \$0_ambiorder \$0_ambiorder order
+0 -8 0 10 -262144 -1 -1 4 256;
+#X obj 340 264 popup 80 20 #ffffff type sphere;
+#X obj 339 262 cnv 15 81 23 empty empty type 0 -6 0 10 -1 -1 0;
+#X obj 156 380 bng 15 250 50 0 \$0_save \$0_save save 17 7 0 10 -257985
+-1 -1;
+#X obj 206 380 bng 15 250 50 0 \$0_load \$0_load load 17 7 0 10 -4034
+-1 -1;
+#X obj 300 359 cnv 15 199 40 empty empty GENERATE 10 12 0 14 -66577
+-191407 0;
+#X obj 459 360 bng 38 250 50 0 \$0_generate \$0_generate empty 17 7
+0 10 -258113 -257985 -1;
+#X obj 329 382 tgl 12 0 \$0_force \$0_force overwrite 17 7 0 10 -262144
+-1 -191407 0 1;
+#X obj 459 440 route 0;
+#X msg 459 402 0;
+#X obj 101 192 cnv 15 398 40 empty empty AUX 10 12 0 14 -228856 -66577
+0;
+#X obj 186 213 nbx 5 14 4 4 0 0 \$0_auxsend \$0_auxsend AUX-sends 0
+-8 0 10 -262144 -1 -1 4 256;
+#X obj 356 213 nbx 5 14 0 16 0 0 \$0_auxsums \$0_auxsums AUX-sums 0
+-8 0 10 -262144 -1 -1 8 256;
+#X obj 356 321 nbx 5 14 2 2 0 0 \$0_lfc \$0_lfc LFCs 0 -8 0 10 -262144
+-1 -1 2 256;
+#X text 545 315 missing: LFCs \, (BUSdacs) \, compensated-dacs \, (offsets?)
+;
+#X obj 606 239 unpack 0 s;
+#X obj 673 262 s \$0_ambitype;
+#N canvas 79 54 1170 582 packit 0;
+#X obj 55 56 r \$0_adcs;
+#X obj 125 56 r \$0_dacs;
+#X obj 195 56 r \$0_daccs;
+#X obj 305 56 r \$0_channels;
+#X obj 405 56 r \$0_fx;
+#X obj 805 56 r \$0_auxsend;
+#X obj 895 56 r \$0_auxsums;
+#X obj 515 56 r \$0_bus;
+#X obj 393 195 r \$0_ambidim;
+#X obj 493 195 r \$0_ambiorder;
+#X obj 603 195 r \$0_ambitype;
+#X obj 713 195 r \$0_ambidacs;
+#X obj 31 301 inlet;
+#X obj 585 56 r \$0_lfc;
+#X obj 91 327 pack 0 0 0 0 0 0 0 0 0 0 0 0 s 0 0 0;
+#X obj 91 423 outlet #adc #dac #dacc #channels #fx #bus #lfc #auxsend
+#auxsum #ambidim #ambiorder ambitype #ambidacs;
+#X obj 393 218 + 2;
+#X text 420 219 for radio!;
+#X obj 91 385 l2i;
+#X connect 0 0 14 1;
+#X connect 1 0 14 2;
+#X connect 2 0 14 3;
+#X connect 3 0 14 4;
+#X connect 4 0 14 5;
+#X connect 5 0 14 8;
+#X connect 6 0 14 9;
+#X connect 7 0 14 6;
+#X connect 8 0 16 0;
+#X connect 9 0 14 11;
+#X connect 10 0 14 12;
+#X connect 11 0 14 13;
+#X connect 12 0 14 0;
+#X connect 13 0 14 7;
+#X connect 14 0 18 0;
+#X connect 16 0 14 10;
+#X connect 18 0 15 0;
+#X restore 459 421 pd packit;
+#X msg 340 38 name type \, options sphere;
+#N canvas 1368 267 1161 546 init 0;
+#X obj 175 136 s \$0_adcs;
+#X obj 245 136 s \$0_dacs;
+#X obj 315 136 s \$0_daccs;
+#X obj 175 196 s \$0_channels;
+#X obj 275 196 s \$0_fx;
+#X obj 245 256 s \$0_lfc;
+#X obj 175 256 s \$0_bus;
+#X obj 175 306 s \$0_auxsend;
+#X obj 265 306 s \$0_auxsums;
+#X obj 275 376 s \$0_ambiorder;
+#X obj 175 376 s \$0_ambidim;
+#X obj 385 376 s \$0_ambitype;
+#X obj 495 376 s \$0_ambidacs;
+#X msg 175 176 16;
+#X obj 82 99 t b;
+#X obj 82 159 t b;
+#X obj 82 219 t b;
+#X obj 82 269 t b;
+#X obj 82 319 t b;
+#X obj 31 93 t b;
+#X msg 31 70 bang;
+#X msg 175 116 64;
+#X msg 245 116 64;
+#X msg 315 116 24;
+#X msg 275 176 4;
+#X msg 245 236 2;
+#X msg 175 286 4;
+#X msg 265 286 8;
+#X msg 175 336 3;
+#X msg 275 336 4;
+#X msg 385 336 symbol sphere;
+#X msg 495 336 24;
+#X obj 175 356 - 2;
+#X text 202 357 for radio!;
+#X obj 31 47 inlet;
+#X msg 175 236 16;
+#X connect 13 0 3 0;
+#X connect 14 0 21 0;
+#X connect 14 0 22 0;
+#X connect 14 0 23 0;
+#X connect 15 0 13 0;
+#X connect 15 0 24 0;
+#X connect 16 0 35 0;
+#X connect 16 0 25 0;
+#X connect 17 0 26 0;
+#X connect 17 0 27 0;
+#X connect 18 0 28 0;
+#X connect 18 0 29 0;
+#X connect 18 0 30 0;
+#X connect 18 0 31 0;
+#X connect 19 0 14 0;
+#X connect 19 0 15 0;
+#X connect 19 0 16 0;
+#X connect 19 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 19 0;
+#X connect 21 0 0 0;
+#X connect 22 0 1 0;
+#X connect 23 0 2 0;
+#X connect 24 0 4 0;
+#X connect 25 0 5 0;
+#X connect 26 0 7 0;
+#X connect 27 0 8 0;
+#X connect 28 0 32 0;
+#X connect 29 0 9 0;
+#X connect 30 0 11 0;
+#X connect 31 0 12 0;
+#X connect 32 0 10 0;
+#X connect 34 0 20 0;
+#X connect 35 0 6 0;
+#X restore 596 153 pd init;
+#X msg 332 73 range 0 \$1 \, bang;
+#X obj 596 119 loadbang;
+#X msg 663 119 bang;
+#X obj 347 146 i;
+#X msg 378 146 label compensated:\$1;
+#X obj 459 459 generators tmp;
+#X obj 329 485 value gPlugin_forceoverwrite;
+#X connect 2 0 32 0;
+#X connect 3 0 35 0;
+#X connect 13 0 27 0;
+#X connect 18 0 21 0;
+#X connect 19 0 38 0;
+#X connect 20 0 37 0;
+#X connect 21 0 29 0;
+#X connect 27 1 28 0;
+#X connect 29 0 20 0;
+#X connect 30 0 13 0;
+#X connect 32 0 3 0;
+#X connect 33 0 31 0;
+#X connect 34 0 31 0;
+#X connect 35 0 36 0;
+#X connect 36 0 3 0;
+#X coords 0 -1 1 1 400 300 2 100 100;
