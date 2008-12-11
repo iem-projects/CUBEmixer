@@ -121,8 +121,6 @@
 #X obj 339 211 + 1;
 #X msg 300 211 0;
 #X msg 266 190 50;
-#X msg 254 318 obj 300 250 mtx_*~ \$1 \$3 50 ______________________________
-;
 #X obj 300 254 list prepend obj 300 200 multiline~;
 #X obj 90 47 t l l;
 #X msg 90 254 \$2 700;
@@ -133,11 +131,13 @@
 #X msg 371 137 obj 300 100 OUT/BUS/parameters \$1 \$3 \$2;
 #X msg 90 369 obj \$2 180 OUT/BUS/\$1_LFC~ \, obj \$2 220 OUT/BUS/\$1_LFC2OUT~
 ;
-#X connect 0 0 14 0;
+#X msg 254 318 obj 300 250 mtx_*~ \$3 \$1 50 ______________________________
+;
+#X connect 0 0 13 0;
 #X connect 2 0 1 0;
-#X connect 3 0 12 0;
+#X connect 3 0 21 0;
 #X connect 3 1 4 0;
-#X connect 3 2 20 0;
+#X connect 3 2 19 0;
 #X connect 4 0 5 0;
 #X connect 4 1 5 1;
 #X connect 5 0 7 0;
@@ -145,15 +145,15 @@
 #X connect 7 0 11 0;
 #X connect 7 1 6 0;
 #X connect 7 2 9 0;
-#X connect 8 0 13 0;
+#X connect 8 0 12 0;
 #X connect 9 0 8 1;
 #X connect 10 0 8 0;
 #X connect 11 0 8 0;
 #X connect 12 0 2 0;
-#X connect 13 0 2 0;
-#X connect 14 0 15 0;
-#X connect 14 1 3 0;
-#X connect 15 0 21 0;
+#X connect 13 0 14 0;
+#X connect 13 1 3 0;
+#X connect 14 0 20 0;
+#X connect 19 0 2 0;
 #X connect 20 0 2 0;
 #X connect 21 0 2 0;
 #X restore 375 159 pd simple-objects;
