@@ -244,13 +244,13 @@
 #X obj 76 44 inlet;
 #X obj 76 228 outlet;
 #X obj 76 76 t b b;
-#X msg 108 113 obj 100 100 inlet~ \, obj 200 100 outlet~;
 #X msg 76 143 obj 100 130 inlet weights \, obj 200 130 inlet gain[dB]
 \, obj 300 130 inlet on/off \, obj 400 130 inlet rot/Z \, obj 400 180
 switch~;
+#X msg 108 113 obj 50 100 inlet~ \, obj 150 100 outlet~;
 #X connect 0 0 2 0;
-#X connect 2 0 4 0;
-#X connect 2 1 3 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
 #X connect 3 0 1 0;
 #X connect 4 0 1 0;
 #X restore 117 201 pd generic;
