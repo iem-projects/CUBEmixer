@@ -1,4 +1,4 @@
-#N canvas 46 90 1025 591 10;
+#N canvas 1480 367 1025 591 10;
 #X obj 215 158 inlet~;
 #X obj 325 216 switch~;
 #X text 576 332 set throw-name to 0_AMBI \, if not used;
@@ -34,7 +34,8 @@
 #X obj 565 354 AMBI/throwbus~ \$0 24;
 #X obj 618 508 AMBI/throwbus~ \$0 25;
 #X obj 216 192 onoff_switch~ \$0;
-#X obj 47 156 sphere3D4O_ENCODER 1;
+#X obj 47 240 ambiencoder_control \$1;
+#X obj 47 262 sphere3D_encode 4;
 #X connect 0 0 34 0;
 #X connect 3 0 8 2;
 #X connect 4 0 34 1;
@@ -65,4 +66,5 @@
 #X connect 8 24 33 0;
 #X connect 34 0 8 1;
 #X connect 34 1 1 0;
-#X connect 35 0 8 0;
+#X connect 35 0 36 0;
+#X connect 36 0 8 0;
