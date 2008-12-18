@@ -176,6 +176,8 @@
 #X obj 769 136 pack s 0;
 #X obj 769 109 symbol sphere;
 #X obj 459 459 generators ../../lib;
+#X text 614 465 tmp: for testing;
+#X text 611 446 ../../lib: for production;
 #X connect 2 0 30 0;
 #X connect 3 0 33 0;
 #X connect 12 0 26 0;
