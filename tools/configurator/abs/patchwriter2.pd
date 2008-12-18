@@ -1,12 +1,13 @@
 #N canvas 411 260 624 423 10;
 #X obj 273 35 inlet control;
 #X obj 160 37 inlet content;
-#N canvas 0 0 450 300 \$0-test 1;
+#N canvas 0 0 450 300 \$0-test 0;
 #X restore 395 129 pd \$0-test;
 #X obj 160 124 s pd-\$0-test;
 #X obj 273 62 route reset symbol;
 #X msg 273 88 vis 1 \, clear;
 #X obj 160 59 list trim;
+#X obj 479 25 inlet size;
 #X connect 0 0 4 0;
 #X connect 1 0 6 0;
 #X connect 4 0 5 0;
