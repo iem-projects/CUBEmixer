@@ -1,4 +1,4 @@
-#N canvas 86 395 640 447 10;
+#N canvas 11 487 640 447 10;
 #X obj 62 43 t l l b;
 #N canvas 481 375 749 371 generator 0;
 #X obj 68 29 inlet;
@@ -6,11 +6,11 @@
 #X obj 68 161 t l l l;
 #X obj 68 312 t a;
 #X text 127 29 #type #dim #order;
-#X obj 90 114 calc_ambichans;
+#X obj 90 94 calc_ambichans;
 #X obj 68 134 pack s 0 0 0 s;
 #X obj 68 52 t l l b;
 #X obj 240 99 dollsym 1;
-#X msg 90 94 list \$1 \$3;
+#X msg 90 74 list \$1 \$3;
 #N canvas 720 349 542 543 ambibus 0;
 #X obj 90 23 inlet;
 #X obj 90 425 outlet;
@@ -68,14 +68,17 @@
 \, connect 5 0 8 2;
 #X msg 163 181 obj 100 200 ambiencoder_control \$5 \, obj 100 225 \$1\$2D_encode
 \$3 \, obj 100 250 mtx_*~ \$4 1 50 _____________________;
+#X floatatom 312 141 5 0 0 0 - - -;
+#X obj 42 114 unpack s 0 0;
 #X connect 0 0 7 0;
 #X connect 2 0 10 0;
 #X connect 2 1 11 0;
 #X connect 2 2 12 0;
 #X connect 3 0 1 0;
 #X connect 5 0 6 3;
+#X connect 5 0 13 0;
 #X connect 6 0 2 0;
-#X connect 7 0 6 0;
+#X connect 7 0 14 0;
 #X connect 7 1 9 0;
 #X connect 7 2 8 0;
 #X connect 8 0 6 4;
@@ -83,6 +86,9 @@
 #X connect 10 0 3 0;
 #X connect 11 0 3 0;
 #X connect 12 0 3 0;
+#X connect 14 0 6 0;
+#X connect 14 1 6 1;
+#X connect 14 2 6 2;
 #X restore 85 236 pd generator;
 #X msg 108 136 reset;
 #N canvas 350 88 765 319 generic 0;
