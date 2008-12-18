@@ -55,7 +55,9 @@ pd/DSP/ambisonic:
     gerechnet und dann auf den jeweiligen aux-kanal aufaddiert
 
   - ambisonic gewichtung pro kanal (?)
-    (bei r<1 werden die gewichte ja schon verändert!)
+       (bei r<1 werden die gewichte ja schon verändert!)
+  - ist nun teilweise implementiert (damit die R-gewichtung aus dem encoder 
+       rausfliegt) aber nicht getestet 
 
 
 pd/GUI:
@@ -84,10 +86,12 @@ pd/GUI:
   - bus zuordnung in channel-detail-view und inchan wird nicht immer korrekt upgedated
 
   - VU-Bank
+  = input VU-bank gibts, output fehlt noch
 
   - zoom-funktion für die BUS-Matrix
 
   - statt edit bangs edit toggles zum auf/zumachen der subfenster
+
 
 pd/MIDI:
 
@@ -108,6 +112,16 @@ pd/NET:
   + existiert nur noch als zusatz-funktion (z.b. für pattern-matching)
 
   - OSC-pattern-matching 
+  + done
+
+  - OSC-pattern-matching braucht zuviel leistung
+  = 2 ports: einmal mit und einmal ohne
+
+  - OSC-prefix 
+  = z.b. /CUBEmixer, evtl setzbar!
+
+  - does port 6666 work with /NET OSC-messages
+    (some problem tm experienced a problem with MELE)
 
 pd/plugins:
 
@@ -123,9 +137,14 @@ pd/plugins:
   + [plugin~] in [CUBEmixer_plugin~] umbenannt
 
 
-  - die DIRECT/INTerruptible logik ist völlig unverständlich! (logik erlaubt doppeldeutigkeiten; namen "direkt" und "int" sind belegt)
-  = evtl. ein msg-plugin, das defaultmäßig die koordinaten durchroutet; auf jedenfall konsistentere namen
+  - die DIRECT/INTerruptible logik ist völlig unverständlich! 
+      (logik erlaubt doppeldeutigkeiten; namen "direkt" und "int" sind belegt)
+  = evtl. ein msg-plugin, das defaultmäßig die koordinaten durchroutet; 
+      auf jeden Fall konsistentere Namen
   + auf DSP-seite können nun "alle" parameter überbrückt werden
+
+
+  - 3D-blur, dass die alte "blurring" funktionialität im encoder nachbaut: R->AMBI_WEIGHT
 
 pd/extensions:
 
@@ -133,6 +152,12 @@ pd/extensions:
   + eingebunden (ist beinahe identisch mit simplerev)
   + ersetzt durch ARRR
   + ein zweiter hall mit 6 in und 6 out ist nun auch eingebunden
+
+  - BINaural decoder ist noch hardcoded auf 3d/4o, was sich schlecht mit CONFIGURATOR verträgt
+
+  - mechanismus zum abfragen von laufzeit parametern (welche ordnung, welche dimension,...)
+
+
 
 pd/CUE:
 
@@ -150,6 +175,28 @@ pd/CUE:
     und nur einen einzigen "load" button anbieten (nachteil bei reload!)
   + neue CUE-struktur: nur ein "load" button, bei "save" kann man auswählen (auch filter)
 
+
+tools/configurator:
+
+  - pd/GUI
+   + im augenblick werden die kanäle richtig vervielfacht
+   - es fehlt: BUS, AUX
+
+  - decoder: tm's DecoderWizard sollte teil des Konfigurators werden
+  = ist vor allem wichtig, wenn man z.b. ein 2D setting baut und noch immer
+      die alte 3D decodermatrix geladen wird!
+
+  - speichern/overwrite
+  = mehrstufiges overwrite: 
+     z.b. konfiguration(/etc/CUBEmixer) und decoder-matrix überschreiben auch 
+     wenn patches nicht neu überschrieben werden
+
+  - arbeitsrichtung (links-oben -> rechs-oben -> links-unten -> rechts->unten) 
+     sollte explizit dokumentiert werden
+
+  - SAVE button(s) (generell und speziell)
+
+  - extensions/plugins mitCONFIGurieren?
 
 hardware/bc{f,r}2000:
 
@@ -170,7 +217,10 @@ system/libraries:
   + fixed; problem war ein compiler-flag das nicht von pd übernommen worden ist
 
 system/pd:
-  - pd>=0.40 hat $args grundlegend geändert: $args inder mitte werden nun geparsed und nicht mehr als "bla-$2-blu" sondern als "bla-\$2-blu" abgespeichert
-  . dadurch müssen alle objekte bei denen "$" vorkommt, geändert werden, am besten mit einem script wie diesem:
-     find . -name "*.pd" | while read f; do sed -i -e 's|\([^\\]\)\$|\1\\$|g' $f; done
+  - pd>=0.40 hat $args grundlegend geändert: $args inder mitte werden nun 
+      geparsed und nicht mehr als "bla-$2-blu" sondern als "bla-\$2-blu" 
+      abgespeichert
+      dadurch müssen alle objekte bei denen "$" vorkommt, geändert werden, 
+      am besten mit einem script wie diesem:
+      % find . -name "*.pd" | while read f; do sed -i -e 's|\([^\\]\)\$|\1\\$|g' $f; done
   + done
