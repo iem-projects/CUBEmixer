@@ -2,4 +2,4 @@
 
 cd  ${0%%/*}
 
-pd -path ../../lib/libs/:abs -lib zexy MAIN.pd
+pd -nosound -nomidi -path ../../lib/libs/:abs -lib zexy MAIN.pd
