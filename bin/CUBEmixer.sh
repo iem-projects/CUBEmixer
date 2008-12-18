@@ -80,6 +80,17 @@ if [ "x" != "x${4}" ]; then
     GUI_EXTPATH="-path $4"
 fi
 
+let DSP_ADCS=DSP_ADCS
+if [ ${DSP_ADCS} -gt 0 ]; then
+  DSP_AUDIO="${DSP_AUDIO} -inchannels ${DSP_ADCS}"
+fi
+
+let DSP_DACS=DSP_DACS
+if [ ${DSP_DACS} -gt 0 ]; then
+  DSP_AUDIO="${DSP_AUDIO} -outchannels ${DSP_DACS}"
+fi
+
+
 if [ "x${NOGUI}" = "x" ]; then
 ${ECHO} ${PD} -noprefs ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${GUI_PATH} ${PD_PATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH} ${GUI_EXTPATH} ${GUI_EXTPATCH}\
       -send "${GUI_MESSAGE}" -send "${PD_MESSAGE}" &

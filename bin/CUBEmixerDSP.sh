@@ -75,5 +75,16 @@ if [ "x" != "x${2}" ]; then
     DSP_EXTPATH="-path $2"
 fi
 
+let DSP_ADCS=DSP_ADCS
+if [ ${DSP_ADCS} -gt 0 ]; then
+  DSP_AUDIO="${DSP_AUDIO} -inchannels ${DSP_ADCS}"
+fi
+
+let DSP_DACS=DSP_DACS
+if [ ${DSP_DACS} -gt 0 ]; then
+  DSP_AUDIO="${DSP_AUDIO} -outchannels ${DSP_DACS}"
+fi
+
+
 ${ECHO} ${PD} ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${DSP_PATH} ${PD_PATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH}  ${DSP_EXTPATH} ${DSP_EXTPATCH} \
       -send "${DSP_MESSAGE}" -send "${PD_MESSAGE}"
