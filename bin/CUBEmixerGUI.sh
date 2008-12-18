@@ -35,7 +35,7 @@ CUBEMIXERPATH=$(dirname $0)/..
 cd ${CUBEMIXERPATH}
 
 LOCALVARSTEMPLATE="${ETC}/LocalVars.template.sh"
-STARTUPPATCHES="${ETC}/patches.sh"
+STARTUPPATCHES="${ETC}/configured.sh"
 LOCALVARS="${ETC}/LocalVars.sh"
 
 if [ -e ${LOCALVARSTEMPLATE} ]; then

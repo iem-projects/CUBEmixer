@@ -3,7 +3,7 @@
 set ETCDIR=../etc/CUBEmixer
 
 set LOCALVARSTEMPLATE=%ETCDIR%/LocalVars.template.bat
-set STARTUPPATCHES=%ETCDIR%/patches.bat
+set STARTUPPATCHES=%ETCDIR%/configured.bat
 set LOCALVARS=%ETCDIR%/LocalVars.bat
 
 REM default values

@@ -1,7 +1,7 @@
 @echo off
 
 set LOCALVARSTEMPLATE=../etc/CUBEmixer/LocalVars.template.bat
-set STARTUPPATCHES=%ETCDIR%/patches.bat
+set STARTUPPATCHES=%ETCDIR%/configured.bat
 set LOCALVARS=../etc/CUBEmixer/LocalVars.bat
 
 REM default values

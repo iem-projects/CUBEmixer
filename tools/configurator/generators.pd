@@ -131,7 +131,7 @@
 #X obj 14 29 inlet #adc #dac #dacc #channels #fx #bus #lfc #auxsend
 #auxsum #ambidim #ambiorder ambitype #ambidacs;
 #X obj 14 69 t l l;
-#X obj 46 113 generators/ETC/patches.sh \$1/ETC;
+#X obj 46 113 generators/ETC/configured.sh \$1/../etc/CUBEmixer;
 #X connect 0 0 1 0;
 #X connect 1 1 2 0;
 #X restore 14 185 pd etc;
