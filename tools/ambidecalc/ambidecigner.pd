@@ -115,7 +115,8 @@ h H;
 #X msg 229 281 add2 \$1;
 #X obj 40 17 inlet;
 #X obj 39 42 t b l b;
-#X msg 133 324 matrix 3 1 1 2 3;
+#X msg 133 324 matrix 32 1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+18 19 20 21 22 23 24 25 26 27 28 29 30 31 32;
 #X obj 132 351 s \$0_to_index;
 #X connect 0 1 2 0;
 #X connect 1 0 11 0;
@@ -424,8 +425,8 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X connect 28 0 27 0;
 #X connect 29 0 30 0;
 #X connect 30 0 16 0;
-#X restore 873 1323 pd helps;
-#X obj 621 64 nbxm 3 1 6 12 -360 360 0 1002_from_nbxm 1002_to_nbxm
+#X restore 830 1323 pd helps;
+#X obj 621 64 nbxm 32 2 6 12 -360 360 0 1002_from_nbxm 1002_to_nbxm
 #000000 0 10;
 #N canvas 0 22 691 630 configure_nbxm 0;
 #X obj 204 355 outlet;
@@ -458,31 +459,28 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X connect 12 0 13 0;
 #X connect 13 0 0 0;
 #X restore 704 1322 pd configure_nbxm;
-#X obj 591 64 nbxm 3 1 3 12 0 1e+06 0 empty 1002_to_index #009900 0
-10;
-#X obj 620 43 cnv 4 1 1 empty \$0_label_elv1 azimuth 4 2 1 10 -262144
+#X obj 591 64 nbxm 32 1 3 12 0 1e+06 0 empty 1002_to_index #009900
+0 10;
+#X obj 620 43 cnv 4 1 1 empty \$0_label_elv1 elevation 4 2 1 10 -262144
 -1 0;
 #X obj 581 43 cnv 4 1 1 empty empty index 4 2 1 10 -262144 -1 0;
-#X obj 680 43 cnv 4 1 1 empty \$0_label_azm1 empty 4 2 1 10 -262144
+#X obj 680 43 cnv 4 1 1 empty \$0_label_azm1 azimuth 4 2 1 10 -262144
 -1 0;
 #X obj 627 53 cnv 4 1 1 empty \$0_label_elv2 degree 4 2 1 10 -262144
 -1 0;
 #X obj 591 53 cnv 4 1 1 empty empty --- 4 2 1 10 -262144 -1 0;
-#X obj 682 53 cnv 4 1 1 empty \$0_label_azm2 empty 4 2 1 10 -262144
+#X obj 682 53 cnv 4 1 1 empty \$0_label_azm2 degree 4 2 1 10 -262144
 -1 0;
-#X msg 54 59 circ 5 12 circ12ls.mtx;
-#X msg 54 81 hemi 4 24 hemi24ls.mtx;
-#X msg 54 103 sphere 4 32 sphere32ls.mtx;
-#X msg 255 65 circ 7 18;
-#X msg 255 84 hemi 5 29;
-#X msg 254 105 sphere 4 25;
+#X msg 313 64 circ 7 18;
+#X msg 313 83 hemi 5 29;
+#X msg 312 104 sphere 4 25;
 #N canvas 1419 130 603 779 (subpatch) 0;
 #X obj 238 326 cnv 13 23 13 empty empty empty 20 12 0 14 -260929 -66577
 0;
 #X obj 238 383 cnv 13 23 13 empty empty empty 20 12 0 14 -260929 -66577
 0;
 #X obj 116 329 vradio 15 1 0 3 empty empty empty 0 -8 0 10 -260929
--1 -1 0;
+-1 -1 2;
 #X text 134 328 circle;
 #X text 134 343 hemisphere;
 #X text 134 358 sphere;
@@ -709,12 +707,12 @@ H;
 #X connect 73 1 68 1;
 #X coords 0 -1 1 1 400 100 2 100 300;
 #X restore 54 216 pd;
-#X msg 106 349 circ 3 3 hemi24ls.mtx;
+#X msg 106 349 sphere 3 32 layouts/sphere32ls.mtx;
 #X obj 170 397 bng 40 250 50 0 empty empty empty 17 7 0 10 -259265
 -1 -1;
 #X obj 70 410 cnv 15 45 15 empty empty empty 20 12 0 14 -260929 -66577
 0;
-#X obj 70 468 nbxm 3 3 4 12 -360 360 0 empty empty #000000 0 8;
+#X obj 70 468 nbxm 32 16 4 12 -360 360 0 empty empty #000000 0 8;
 #X text 588 23 LOUDSPEAKER-POSITIONS;
 #X msg 69 410 DECODE;
 #X text 794 18 Instruction Manual \; 1.) choose LOUDSPEAKER-LAYOUT
@@ -760,7 +758,7 @@ DECODEr-matrix \; 8.) SAVE DECODEr-matrix file;
 #X msg 155 558 dim \$1 \$2;
 #N canvas 0 22 522 372 \$0_dec 0;
 #X obj 50 50 r 1002_dec_in;
-#X obj 50 100 ambi2_decode 3 2 3 0;
+#X obj 50 100 ambi2_decode 3 3 32 0;
 #X obj 50 150 s 1002_dec_out;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
@@ -806,7 +804,7 @@ DECODEr-matrix \; 8.) SAVE DECODEr-matrix file;
 #X connect 28 0 20 0;
 #X connect 29 0 22 0;
 #X restore 70 444 pd calc_decoder;
-#X text 260 45 Presets plain to be filled;
+#X text 312 45 Presets plain to be filled;
 #X text 50 40 Presets w. layout Files;
 #X text 51 18 EXAMPLES;
 #X text 105 326 for storing presets;
@@ -814,14 +812,18 @@ DECODEr-matrix \; 8.) SAVE DECODEr-matrix file;
 ;
 #X text 220 405 SAVE the DECODER-matrix;
 #X text 224 425 USE Extension for file name "*.mtx";
-#X connect 11 0 17 0;
-#X connect 12 0 17 0;
-#X connect 13 0 17 0;
-#X connect 14 0 17 0;
-#X connect 15 0 17 0;
-#X connect 16 0 17 0;
-#X connect 17 0 0 0;
-#X connect 17 1 18 0;
-#X connect 19 0 34 1;
-#X connect 23 0 34 0;
-#X connect 34 0 21 0;
+#X msg 54 59 circ 5 12 layouts/circ12ls.mtx;
+#X msg 54 81 hemi 4 24 layouts/hemi24ls.mtx;
+#X msg 54 103 sphere 4 32 layouts/sphere32ls.mtx;
+#X text 576 1322 developper helps:;
+#X connect 11 0 14 0;
+#X connect 12 0 14 0;
+#X connect 13 0 14 0;
+#X connect 14 0 0 0;
+#X connect 14 1 15 0;
+#X connect 16 0 31 1;
+#X connect 20 0 31 0;
+#X connect 31 0 18 0;
+#X connect 39 0 14 0;
+#X connect 40 0 14 0;
+#X connect 41 0 14 0;
