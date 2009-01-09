@@ -11,11 +11,9 @@ from SVN (see b)
 
 A) What you need:
 
-1)  PD: Version  0.39-2 or higher Version
+1)  PD: Version  0.41 or higher Version
 
 	see http://crca.ucsd.edu/~msp/software.html
-
-        sh: wget http://crca.ucsd.edu/~msp/Software/pd-0.39-2.src.tar.gz
 
 2.) Get this package (chances are high, you already have it...)
 
@@ -24,11 +22,7 @@ A) What you need:
 
     Download as complete Package from
 
-    IEM Project Page - http://sourceforge.net/projects/iem/
-
-   or directly:
-
-    http://sourceforge.net/project/showfiles.php?group_id=132916&package_id=181748
+    IEM Project Page - http://ambisonics.iem.at/xchange/products/cubemixer/
 
    Unpack and follow instruction there.
 
@@ -43,6 +37,9 @@ A) What you need:
     http://svn.sourceforge.net/viewcvs.cgi/iem/spatialization/CUBEmixer/branches/
 
 3.) Configuration
+
+   TO BE UPDATED: use tools to configure
+
 
    if needed your system can be configured with local settings which ar in  folder etc/CUBEmixer/
 
