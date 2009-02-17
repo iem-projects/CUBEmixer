@@ -188,7 +188,7 @@ pdogg_objects=oggamp~  oggcast~  oggread~  oggwrite~
 pdogg_externals=$(pdogg_objects:=.pd_linux)
 
 pdogg-locinstall: pdogg-build
-        cp -v pdogg/pdogg.pd_linux $(LOCINSTALL_DIR)
+	cp -v pdogg/pdogg.pd_linux $(LOCINSTALL_DIR)
 	for i in $(pdogg_objects); do cp pdogg/$$i/*.pd* $(LOCINSTALL_DIR); done
 
 pdogg: pdogg-locinstall
