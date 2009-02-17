@@ -179,6 +179,23 @@ miXed: miXed-locinstall
 
 miXed-clean:
 
+########### pdogg needed for streaming  ##########################
+
+pdogg-build:
+	make -C pdogg LINUXINCLUDES=$(PDSOURCE) pd_linux
+
+pdogg_objects=oggamp~  oggcast~  oggread~  oggwrite~
+pdogg_externals=$(pdogg_objects:=.pd_linux)
+
+pdogg-locinstall: pdogg-build
+        cp -v pdogg/pdogg.pd_linux $(LOCINSTALL_DIR)
+	for i in $(pdogg_objects); do cp pdogg/$$i/*.pd* $(LOCINSTALL_DIR); done
+
+pdogg: pdogg-locinstall
+
+pdogg-clean:
+	make -C pdogg clean
+
 # ############  local popup ###############
 popup-build:
 	make -C popup pd_linux

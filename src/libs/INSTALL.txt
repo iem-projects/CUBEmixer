@@ -1,6 +1,6 @@
 Installtion of needed pd-externals for Cubemixer:
 =================================================
-(since version 1.0.1)
+(since version 3.0)
 
 A) Overview pd-externals needed for CUBEmixer:
 ----------------------------------------------
@@ -13,6 +13,10 @@ A) Overview pd-externals needed for CUBEmixer:
  iem_spec2
  popup
  zexy
+
+optional for streaming feature:
+
+ pdogg (You also need the ogg vorbis libraries to compile them, see README there)
 
 they will be installed in lib/libs/ 
 (just copy everything in it without directory-hierarchy to this path)
