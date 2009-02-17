@@ -33,3 +33,4 @@ miXed		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/m
 osc		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/mrpeach/osc
 net		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/mrpeach/net
 zexy		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/zexy
+pdogg           https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/pdogg
