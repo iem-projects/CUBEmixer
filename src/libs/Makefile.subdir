@@ -89,7 +89,7 @@ d_fat: $(FATOBJECTS)
 
 .SUFFIXES: .d_ppc .d_fat
 
-DARWINCFLAGS = -DPD -O2 -Wall -W -Wshadow -Wstrict-prototypes \
+DARWINCFLAGS = -DPD -DUNIX -O2 -Wall -W -Wshadow -Wstrict-prototypes \
     -Wno-unused -Wno-parentheses -Wno-switch
 
 .c.d_ppc:
