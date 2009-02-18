@@ -313,7 +313,7 @@ way.;
 #X text 809 125 copy the matrix to CUBEmixer/lib/DSP/presets/compensation.mtx
 ;
 #X obj 76 325 vsl 15 128 0 100 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 2391 1;
+-1 -1 2295 1;
 #X obj 97 324 > 99;
 #X obj 96 374 bng 30 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
@@ -334,6 +334,8 @@ way.;
 #X text 224 135 num;
 #X text 151 113 mdB;
 #X text 152 89 and number of speaker to calibrate;
+#X obj 335 169 bng 15 250 50 0 reinit reinit reinit 17 7 0 10 -262144
+-1 -1;
 #X connect 2 0 40 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
