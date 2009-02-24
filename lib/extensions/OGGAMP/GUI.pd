@@ -1,0 +1,92 @@
+#N canvas 0 135 602 337 10;
+#X msg 71 237 play;
+#X obj 101 101 cnv 15 188 88 empty empty oggstream_\$1 4 8 0 14 -233017
+-66577 0;
+#X obj 130 117 bng 20 250 50 0 \$0stop \$0stop empty 5 9 0 16 -262144
+-258699 -1;
+#X obj 163 118 bng 20 250 50 0 empty empty R 8 10 0 12 -228992 -1 -1
+;
+#N canvas 258 230 228 256 time 0;
+#X obj 74 149 % 60;
+#X obj 23 148 / 60;
+#X obj 30 12 inlet;
+#X obj 38 79 i;
+#X obj 40 108 change;
+#X obj 21 173 i;
+#X obj 22 196 change;
+#X obj 22 217 outlet;
+#X obj 75 216 outlet;
+#X obj 32 60 metro 1000;
+#X obj 74 80 + 1;
+#X obj 29 40 select 1 0;
+#X msg 111 56 0;
+#X connect 0 0 8 0;
+#X connect 1 0 5 0;
+#X connect 2 0 11 0;
+#X connect 3 0 4 0;
+#X connect 3 0 10 0;
+#X connect 4 0 1 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 9 0 3 0;
+#X connect 10 0 3 1;
+#X connect 11 0 9 0;
+#X connect 11 1 9 0;
+#X connect 11 1 12 0;
+#X connect 12 0 3 1;
+#X restore 382 84 pd time;
+#X obj 407 108 s \$0-curr-s;
+#X obj 382 127 s \$0-curr-m;
+#X obj 106 116 bng 20 250 50 0 \$0play \$0play empty 7 10 0 16 -262144
+-24198 -1;
+#X obj 106 116 iem_image PICS/play.gif 0 0 empty empty;
+#X obj 130 117 iem_image PICS/stop.gif 0 0 empty empty;
+#X obj 241 44 del 100;
+#X obj 241 22 loadbang;
+#X msg 234 68 open PICS/stop.gif;
+#X obj 258 106 nbx 2 14 -1e+37 1e+37 0 0 \$0-curr-s \$0-curr-s empty
+0 -6 0 10 -262144 -1 -1 0 256;
+#X obj 215 106 nbx 3 14 -1e+37 1e+37 0 0 \$0-curr-m \$0-curr-m empty
+0 -6 0 10 -262144 -1 -1 0 256;
+#X text 213 117 time min sec;
+#X obj 266 131 tgl 15 0 empty empty state -30 7 0 10 -4034 -1 -1 0
+1;
+#X obj 450 83 s \$0-state;
+#X obj 69 297 sendreceive /EXT/OGGAMP/CTRL;
+#X obj 242 174 nbx 4 14 -1e+37 1e+37 0 0 empty empty port 0 -6 0 10
+-228856 -1 -1 0 256;
+#X symbolatom 106 175 22 0 0 2 streamname - -;
+#X msg 107 236 stop;
+#X obj 19 81 sendreceive /EXT/OGGAMP/STREAM;
+#X obj 36 200 sendreceive /EXT/OGGAMP/HOST;
+#X obj 311 161 sendreceive /EXT/OGGAMP/PORT;
+#X symbolatom 106 151 30 0 0 2 host_name_or_IP - -;
+#X obj 372 51 sendreceive /EXT/OGGAMP/STATE;
+#X msg 148 237 recover;
+#X msg 205 238 reconnect;
+#X obj 188 118 bng 20 250 50 0 empty empty RR 4 10 0 12 -228992 -1
+-1;
+#X connect 0 0 18 0;
+#X connect 2 0 21 0;
+#X connect 3 0 27 0;
+#X connect 4 0 6 0;
+#X connect 4 1 5 0;
+#X connect 7 0 0 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 12 0 9 0;
+#X connect 19 0 24 0;
+#X connect 20 0 22 0;
+#X connect 21 0 18 0;
+#X connect 22 0 20 0;
+#X connect 23 0 25 0;
+#X connect 24 0 19 0;
+#X connect 25 0 23 0;
+#X connect 26 0 4 0;
+#X connect 26 0 17 0;
+#X connect 26 0 16 0;
+#X connect 27 0 18 0;
+#X connect 28 0 18 0;
+#X connect 29 0 28 0;
+#X coords 0 -1 1 1 190 90 1 100 100;
