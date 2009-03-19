@@ -318,6 +318,7 @@ static void popup_vis(t_gobj *z, t_glist *glist, int vis)
   //post("DEBUG: vis: %d",vis);
   if (vis) {
 #ifdef PD_MINOR_VERSION
+    if (!glist->gl_editor) canvas_create_editor(glist);
     y = (t_rtext *) rtext_new(glist, (t_text *)z);
 #else
     y = (t_rtext *) rtext_new(glist, (t_text *)z,0,0);
