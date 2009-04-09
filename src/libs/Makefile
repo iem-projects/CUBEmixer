@@ -1,4 +1,4 @@
-EXT=pd_linux
+EXT?=pd_linux
 
 CVSROOT=-d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data
 REVISION=HEAD
@@ -169,7 +169,7 @@ miXed-build:
 	make -C miXed PD_DIR=$(PDSOURCE)
 
 miXed_objects=seq midiflush midiformat midiparse tot
-miXed_externals=$(miXed_objects:=.pd_linux)
+miXed_externals=$(miXed_objects:=.$(EXT))
 
 miXed-locinstall: miXed-build
 	for i in $(miXed_externals); do cp -v miXed/bin/$$i $(LOCINSTALL_DIR); done
@@ -179,9 +179,26 @@ miXed: miXed-locinstall
 
 miXed-clean:
 
+########### pdogg needed for streaming  ##########################
+
+pdogg-build:
+	make -C pdogg LINUXINCLUDES=$(PDSOURCE) $(EXT)
+
+pdogg_objects=oggamp~  oggcast~  oggread~  oggwrite~
+pdogg_externals=$(pdogg_objects:=.$(EXT))
+
+pdogg-locinstall: pdogg-build
+	cp -v pdogg/pdogg.$(EXT) $(LOCINSTALL_DIR)
+	for i in $(pdogg_objects); do cp pdogg/$$i/*.pd* $(LOCINSTALL_DIR); done
+
+pdogg: pdogg-locinstall
+
+pdogg-clean:
+	make -C pdogg clean
+
 # ############  local popup ###############
 popup-build:
-	make -C popup pd_linux
+	make -C popup $(EXT)
 
 popup-locinstall: popup-build
 	cp popup/*.$(EXT) $(LOCINSTALL_DIR)
