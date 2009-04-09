@@ -32,4 +32,5 @@ iemmatrix	https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/external
 miXed		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/miXed/
 osc		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/mrpeach/osc
 net		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/mrpeach/net
-zexy	-r 10528 	https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/zexy
+zexy		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/zexy
+pdogg           https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/pdogg
