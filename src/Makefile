@@ -4,19 +4,18 @@
 EXT?=pd_linux
 
 LOCINSTALL_DIR=../lib/pd
-PDCONFIG=-enable-alsa --enable-jack
-
 # how to make absolute pathname out of it ?
 
-.PHONY: install locinstall checkpddir 
+PDCONFIG=-enable-alsa --enable-jack
 
-install: checkpddir locinstall
+
+.PHONY: install locinstall
+
+install: locinstall
 
 pd-build: 
-        cd pd/src
-	autoconf
-	./configure --prefix=$(LOCINSTALL_DIR) $(PDCONFIG)
-	make 
+	cd pd/src; autoconf; ./configure --prefix=$(LOCINSTALL_DIR) $(PDCONFIG)
+	make -C pd/src
 
 pd-locinstall: pd-build
 	make -C pd/src install
