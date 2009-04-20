@@ -4,7 +4,7 @@
 # based on  various developments on IEM Graz 
 #
 # COMPILE / INSTALL INSTRUCTIONS for OS-X by 
-# (02/20009) Noisternig / Zmoelnig
+# (02/2009) Noisternig / Zmoelnig
 #============================================================= */
 
 
