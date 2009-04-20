@@ -13,6 +13,7 @@ ifeq (,$(findstring clean, $(MAKECMDGOALS)))
 checkpddir:
 	@if [ ! -d "$(PDSOURCE)" ]; then \
 	  echo "please give the path to your PD-Sources with: make PDSOURCE=/path/to/pd/src";\
+          echo "for local installed PD use as  path an absolute path to the PDSOURCE=pathto_CUBEMIXER/src/pd/src";\
 	exit -1; fi
 endif
 
@@ -182,7 +183,7 @@ miXed-clean:
 ########### pdogg needed for streaming  ##########################
 
 pdogg-build:
-	make -C pdogg LINUXINCLUDES=$(PDSOURCE) $(EXT)
+	make -C pdogg LINUXINCLUDE="-I $(PDSOURCE)" $(EXT)
 
 pdogg_objects=oggamp~  oggcast~  oggread~  oggwrite~
 pdogg_externals=$(pdogg_objects:=.$(EXT))
@@ -252,6 +253,8 @@ sources: folder_list-src
 build: aconnect-build folder_list-build iem_ambi-build iem_ambi2-build iem_bin_ambi-build iemgui-build iemlib-build iemmatrix-build iem_spec2-build miXed-build net-build osc-build popup-build zexy-build
 
 locinstall: aconnect-locinstall folder_list-locinstall iem_ambi-locinstall iem_ambi2-locinstall iem_bin_ambi-locinstall iemgui-locinstall iemlib-locinstall iemmatrix-locinstall iem_spec2-locinstall miXed-locinstall net-locinstall osc-locinstall popup-locinstall zexy-locinstall
+
+optional: pdogg
 
 clean: aconnect-clean folder_list-clean iem_ambi-clean iem_ambi2-clean iem_bin_ambi-clean iemgui-clean iemlib-clean iemmatrix-clean iem_spec2-clean miXed-clean net-clean osc-clean popup-clean zexy-clean
 	rm -f sf-login
