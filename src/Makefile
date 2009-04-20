@@ -3,18 +3,19 @@
 
 EXT?=pd_linux
 
-LOCINSTALL_DIR=../lib/pd
-# how to make absolute pathname out of it ?
+# for INSTALLDIR even if relative we need an absolute path, since configure will complain.
+PWD=$(shell pwd)
+LOCINSTALL_DIR=$(PWD)/../lib/pd
 
-PDCONFIG=-enable-alsa --enable-jack
-
+PDCONFIGS=-enable-alsa --enable-jack
 
 .PHONY: install locinstall
 
+# default build and locally install
 install: locinstall
 
 pd-build: 
-	cd pd/src; autoconf; ./configure --prefix=$(LOCINSTALL_DIR) $(PDCONFIG)
+	cd pd/src; autoconf; ./configure --prefix=$(LOCINSTALL_DIR) $(PDCONFIGS)
 	make -C pd/src
 
 pd-locinstall: pd-build
@@ -26,9 +27,6 @@ pd-clean:
 pd: pd-locinstall
 
 ######## doit #################################
-
-sources: folder_list-src
-
 build: pd-build
 
 locinstall: pd-locinstall
