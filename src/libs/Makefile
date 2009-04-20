@@ -256,7 +256,7 @@ locinstall: aconnect-locinstall folder_list-locinstall iem_ambi-locinstall iem_a
 
 optional: pdogg
 
-clean: aconnect-clean folder_list-clean iem_ambi-clean iem_ambi2-clean iem_bin_ambi-clean iemgui-clean iemlib-clean iemmatrix-clean iem_spec2-clean miXed-clean net-clean osc-clean popup-clean zexy-clean
+clean: aconnect-clean folder_list-clean iem_ambi-clean iem_ambi2-clean iem_bin_ambi-clean iemgui-clean iemlib-clean iemmatrix-clean iem_spec2-clean miXed-clean net-clean osc-clean popup-clean zexy-clean pdogg-clean
 	rm -f sf-login
 
 distclean: clean
