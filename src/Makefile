@@ -19,6 +19,7 @@ pd-build:
 	make -C pd/src
 
 pd-locinstall: pd-build
+	-rm -rf $(LOCINSTALL_DIR)/*
 	make -C pd/src install
 
 pd-clean:
@@ -29,9 +30,13 @@ pd: pd-locinstall
 ######## doit #################################
 build: pd-build
 
-locinstall: pd-locinstall
+locinstall: pd-locinstall externals
 
 clean: pd-clean
 
 distclean: clean
 	rm -rf $(LOCINSTALL_DIR)/*
+
+########### external libs ####################
+externals:
+	make -C libs PDSOURCE=$(PWD)/pd/src
