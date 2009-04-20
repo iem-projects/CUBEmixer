@@ -18,7 +18,6 @@
 # you should be able to retrieve this file by running
 # 		svn propget svn:externals .
 
-## example:
 hdspm_mixer	https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/iem/hdspm_mixer/
 aconnect	https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/iem/aconnect/
 hcs		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/hcs/
