@@ -48,4 +48,4 @@ fi
 
 CONFIGURATOR_PATCH=MAIN.pd
 
-${ECHO} ${PD} ${PD_OPTIONS} ${PD_PATH} ${PD_LIB} -path ../../lib/libs -lib zexy:folder_list -open ${CONFIGURATOR_PATCH}
+${ECHO} ${PD} ${PD_OPTIONS} ${PD_PATH} ${PD_LIB} -path ../../lib/libs:abs -lib zexy:folder_list -open ${CONFIGURATOR_PATCH}
