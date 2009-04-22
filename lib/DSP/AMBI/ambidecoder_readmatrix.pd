@@ -4,7 +4,7 @@
 #X obj 66 238 symbol;
 #X obj 66 185 t b;
 #X obj 66 166 route bang float;
-#X obj 66 207 symbol ../etc/CUBEmixer/decoder.mtx;
+#X obj 66 207 symbol decoder.mtx;
 #X obj 66 433 matrix;
 #X obj 66 467 mtx_resize \$1 \$2;
 #X obj 271 297 splitfilename .;
