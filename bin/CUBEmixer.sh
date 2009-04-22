@@ -92,11 +92,11 @@ fi
 
 
 if [ "x${NOGUI}" = "x" ]; then
-${ECHO} ${PD} -noprefs ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${GUI_EXTPATH} ${GUI_PATH} ${PD_PATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH}  ${GUI_EXTPATCH}\
+${ECHO} ${PD} -noprefs ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${GUI_EXTPATH} ${GUI_PATH} ${PD_PATH} ${ETC_PATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH}  ${GUI_EXTPATCH} \
       -send "${GUI_MESSAGE}" -send "${PD_MESSAGE}" &
 fi
 
 if [ "x${NODSP}" = "x" ]; then
-${ECHO} ${PD} -noprefs ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${DSP_EXTPATH} ${DSP_PATH} ${PD_PATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH}  ${DSP_EXTPATCH} \
+${ECHO} ${PD} -noprefs ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${DSP_EXTPATH} ${DSP_PATH} ${PD_PATH} ${ETC_PATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH}  ${DSP_EXTPATCH} \
       -send "${DSP_MESSAGE}" -send "${PD_MESSAGE}"
 fi
