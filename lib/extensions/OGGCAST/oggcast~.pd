@@ -1,0 +1,11 @@
+#N canvas 272 321 797 309 10;
+#X obj 127 70 inlet~;
+#X obj 272 71 inlet~;
+#X obj 110 222 outlet;
+#X text 141 151 just a fake!!!;
+#X obj 273 156 loadbang;
+#X obj 271 226 print oggcast~;
+#X msg 276 187 using fake object as fallback! please install the oggcast~-external
+;
+#X connect 4 0 6 0;
+#X connect 6 0 5 0;
