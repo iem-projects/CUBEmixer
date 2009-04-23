@@ -5,19 +5,19 @@
 #X obj 15 36 vsl 15 131 0 130 0 0 \$0GUIbusout_1_fader_fromgui \$0GUIbusout_1_fader_togui
 -inf 1 140 0 8 -228992 -1 -1 0 1;
 #X obj 35 36 vsl 15 131 0 130 0 0 \$0GUIbusout_2_fader_fromgui \$0GUIbusout_2_fader_togui
-+00 1 140 0 8 -228992 -1 -1 0 1;
+-inf 1 140 0 8 -228992 -1 -1 0 1;
 #X obj 55 36 vsl 15 131 0 130 0 0 \$0GUIbusout_3_fader_fromgui \$0GUIbusout_3_fader_togui
-+00 1 140 0 8 -228992 -1 -1 0 1;
+-inf 1 140 0 8 -228992 -1 -1 0 1;
 #X obj 75 36 vsl 15 131 0 130 0 0 \$0GUIbusout_4_fader_fromgui \$0GUIbusout_4_fader_togui
-+00 1 140 0 8 -228992 -1 -1 0 1;
+-inf 1 140 0 8 -228992 -1 -1 0 1;
 #X obj 94 36 vsl 15 131 0 130 0 0 \$0GUIbusout_5_fader_fromgui \$0GUIbusout_5_fader_togui
-+00 1 140 0 8 -228992 -1 -1 0 1;
+-inf 1 140 0 8 -228992 -1 -1 0 1;
 #X obj 114 36 vsl 15 131 0 130 0 0 \$0GUIbusout_6_fader_fromgui \$0GUIbusout_6_fader_togui
-+00 1 140 0 8 -228992 -1 -1 0 1;
+-inf 1 140 0 8 -228992 -1 -1 0 1;
 #X obj 133 36 vsl 15 131 0 130 0 0 \$0GUIbusout_7_fader_fromgui \$0GUIbusout_7_fader_togui
-+00 1 140 0 8 -228992 -1 -1 0 1;
+-inf 1 140 0 8 -228992 -1 -1 0 1;
 #X obj 153 36 vsl 15 131 0 130 0 0 \$0GUIbusout_8_fader_fromgui \$0GUIbusout_8_fader_togui
-+00 1 140 0 8 -228992 -1 -1 0 1;
+-inf 1 140 0 8 -228992 -1 -1 0 1;
 #N canvas 435 371 292 244 code 0;
 #X obj 46 27 OUT/AUXS/sr \$0GUIbusout 1;
 #X obj 47 51 OUT/AUXS/sr \$0GUIbusout 2;
