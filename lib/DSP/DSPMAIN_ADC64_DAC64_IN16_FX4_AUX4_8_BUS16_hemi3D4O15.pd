@@ -1,0 +1,10 @@
+#N canvas 0 0 600 300 10;
+#X text 100 100 DSP-Engine MAIN Patch;
+#X obj 100 150 fixedMAIN;
+#X text 100 300 ---------- EXTENSIONS ---------;
+#X obj 100 320 DSP/extensions;
+#X obj 100 175 MIDI/MAIN_IN16_BUS16;
+#X connect 1 0 4 0;
+#X obj 100 250 The_MIXER~ 64 64 16 4 4 8 16 hemi 3 4 15;
+#X connect 5 0 3 0;
+#X connect 5 1 3 1;

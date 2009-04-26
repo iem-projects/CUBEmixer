@@ -1,0 +1,18 @@
+#N canvas 0 0 600 300 10;
+#X obj 100 100 inlet~;
+#X obj 200 100 outlet~;
+#X obj 100 150 AMBI/BUS-catch~ 1_AMBI;
+#X obj 100 175 AMBI/BUS-catch~ 2_AMBI;
+#X obj 100 200 AMBI/BUS-catch~ 3_AMBI;
+#X obj 100 225 AMBI/BUS-catch~ 4_AMBI;
+#X obj 100 250 AMBI/BUS-catch~ 5_AMBI;
+#X obj 100 275 AMBI/BUS-catch~ 6_AMBI;
+#X obj 100 300 AMBI/BUS-catch~ 7_AMBI;
+#X obj 100 325 AMBI/BUS-catch~ 8_AMBI;
+#X obj 100 350 AMBI/BUS-catch~ 9_AMBI;
+#X obj 100 375 AMBI/BUS-catch~ 10_AMBI;
+#X obj 100 400 AMBI/BUS-catch~ 11_AMBI;
+#X obj 100 425 AMBI/BUS-catch~ 12_AMBI;
+#X obj 100 450 AMBI/BUS-catch~ 13_AMBI;
+#X obj 100 475 AMBI/BUS-catch~ 14_AMBI;
+#X obj 100 500 AMBI/BUS-catch~ 15_AMBI;
