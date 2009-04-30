@@ -4,7 +4,7 @@
 #X obj 949 488 OUT/AUXS/8;
 #X obj 949 670 OUT/main;
 #X obj 554 487 OUT/BUS/16;
-#X obj 6 497 inchannel;
+#X obj 6 487 inchannel;
 #X obj 1067 873 system;
 #X obj 718 874 extensions;
 #X obj 812 874 logo;
