@@ -1,0 +1,47 @@
+#N canvas 997 439 492 582 10;
+#X obj 101 101 cnv 15 338 58 empty empty decodermatrix 20 12 0 14 -233017
+-66577 0;
+#X obj 138 139 bng 15 250 50 0 \$0-load \$0-load load -27 8 0 10 -4034
+-1 -1;
+#X obj 161 139 cnv 15 270 15 empty \$0-label <DEFAULT> 0 8 0 14 -191407
+-66577 0;
+#X obj 104 196 r \$0-load;
+#X obj 226 514 s \$0-label;
+#X msg 226 494 label \$1;
+#X obj 104 243 openpanel;
+#X msg 123 220 bang;
+#X obj 124 426 splitfilename /;
+#X obj 104 280 symbol;
+#X obj 226 449 select symbol;
+#X obj 226 470 symbol;
+#X obj 104 405 t s s s b;
+#X obj 360 393 loadbang;
+#X msg 360 418 symbol <DEFAULT>;
+#X obj 104 371 sendreceive /OUT/AMBI/DECODERMATRIX/FILE;
+#X obj 284 179 bng 15 250 50 0 \$0-reset \$0-reset empty 17 7 0 10
+-262144 -1 -1;
+#X obj 282 201 r \$0-reset;
+#X obj 104 304 t s b;
+#X msg 136 324 symbol;
+#X obj 104 349 select symbol;
+#X connect 3 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 9 0;
+#X connect 7 0 6 0;
+#X connect 8 1 10 0;
+#X connect 9 0 18 0;
+#X connect 10 0 11 0;
+#X connect 10 1 11 0;
+#X connect 11 0 5 0;
+#X connect 12 1 8 0;
+#X connect 12 2 11 1;
+#X connect 13 0 14 0;
+#X connect 14 0 11 0;
+#X connect 15 0 12 0;
+#X connect 17 0 9 0;
+#X connect 18 0 20 0;
+#X connect 18 1 19 0;
+#X connect 19 0 10 1;
+#X connect 19 0 20 1;
+#X connect 20 1 15 0;
+#X coords 0 -1 1 1 340 60 1 100 100;
