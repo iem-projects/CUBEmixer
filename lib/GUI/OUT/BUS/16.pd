@@ -20,7 +20,7 @@
 -inf 1 140 0 8 -228992 -1 -1 0 1;
 #N canvas 127 6 547 300 code 0;
 #X obj 84 53 OUT/BUS/helper/sr \$0GUIbusout 1;
-#X obj 109 246 OUT/BUS/matrix52x16;
+#X obj 109 246 OUT/BUS/matrix64x16;
 #X obj 84 73 OUT/BUS/helper/sr \$0GUIbusout 2;
 #X obj 84 93 OUT/BUS/helper/sr \$0GUIbusout 3;
 #X obj 84 113 OUT/BUS/helper/sr \$0GUIbusout 4;
