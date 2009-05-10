@@ -1,0 +1,9 @@
+#N canvas 0 0 600 300 10;
+#X obj 139 206 MAIN_IN16_BUS16;
+#X obj 139 184 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 275 204 NET/MIDInet;
+#X obj 275 183 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;
