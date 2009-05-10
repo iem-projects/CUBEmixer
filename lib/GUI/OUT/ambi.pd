@@ -6,8 +6,8 @@
 #X obj 45 5 bng 15 250 50 0 \$0GUIambi_showsettings \$0GUIambi_showsettings
 set 0 20 0 8 -62784 -1 -1;
 #X obj 10 54 vsl 30 131 0 130 0 0 \$0GUIambiout_fader \$0GUIambiout_fader
-+00 1 140 0 8 -228992 -1 -1 8500 1;
-#N canvas 1352 10 803 573 code 0;
+-inf 1 140 0 8 -228992 -1 -1 0 1;
+#N canvas 1117 10 803 573 code 0;
 #X obj 52 141 route float;
 #X msg 52 334 label \$1;
 #X obj 52 208 t f f;
@@ -100,8 +100,6 @@ set 0 20 0 8 -62784 -1 -1;
 #X connect 6 0 7 0;
 #X restore 49 35 pd rotation;
 #X msg 488 189 1 1 1 1 1;
-#X obj 220 31 r \$0_24_fromgui;
-#X obj 220 75 s \$0_24_togui;
 #X obj 219 100 r \$0_BIN_fromgui;
 #X obj 219 144 s \$0_BIN_togui;
 #X obj 152 171 r \$0_mirrorweight_fromgui;
@@ -129,10 +127,12 @@ we also want them to be applied to /AMBI/BIN;
 #X connect 5 0 4 0;
 #X restore 456 367 pd replicate speakers->binaural;
 #X obj 52 289 dbtosym;
+#X obj 220 31 r \$0_LS_fromgui;
+#X obj 220 75 s \$0_LS_togui;
 #X connect 0 0 3 0;
 #X connect 1 0 6 0;
-#X connect 2 0 33 0;
-#X connect 2 1 29 0;
+#X connect 2 0 31 0;
+#X connect 2 1 27 0;
 #X connect 3 0 2 0;
 #X connect 4 0 6 0;
 #X connect 5 0 0 0;
@@ -140,42 +140,37 @@ we also want them to be applied to /AMBI/BIN;
 #X connect 9 0 8 0;
 #X connect 10 0 9 0;
 #X connect 13 0 12 0;
-#X connect 13 0 20 0;
-#X connect 14 0 24 0;
-#X connect 16 0 28 0;
-#X connect 17 0 31 0;
-#X connect 19 0 30 0;
-#X connect 21 0 26 0;
-#X connect 21 0 27 0;
-#X connect 24 0 13 0;
-#X connect 24 1 16 0;
-#X connect 24 2 25 0;
-#X connect 25 0 18 0;
-#X connect 26 0 22 0;
-#X connect 26 0 23 0;
-#X connect 29 0 4 0;
-#X connect 30 0 20 0;
-#X connect 31 0 18 0;
-#X connect 33 0 1 0;
+#X connect 13 0 18 0;
+#X connect 14 0 22 0;
+#X connect 16 0 26 0;
+#X connect 17 0 28 0;
+#X connect 19 0 24 0;
+#X connect 19 0 25 0;
+#X connect 22 0 13 0;
+#X connect 22 1 16 0;
+#X connect 22 2 23 0;
+#X connect 23 0 33 0;
+#X connect 24 0 20 0;
+#X connect 24 0 21 0;
+#X connect 27 0 4 0;
+#X connect 28 0 18 0;
+#X connect 29 0 33 0;
+#X connect 31 0 1 0;
+#X connect 32 0 29 0;
 #X restore 78 9 pd code;
-#N canvas 1559 66 361 691 \$0-ambisonic.settings 0;
+#N canvas 1559 66 361 691 \$0-ambisonic.settings 1;
 #X obj 58 10 cnv 15 185 190 empty empty weights 10 12 0 14 -195568
 -66577 0;
 #X obj 60 199 nbx 5 14 -100 22 0 0 \$0GUI_0_ambiweight_nbx_fromgui
-\$0GUI_0_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 4.43668
-256;
+\$0GUI_0_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 0 256;
 #X obj 96 179 nbx 5 14 -100 22 0 0 \$0GUI_1_ambiweight_nbx_fromgui
-\$0GUI_1_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 3.56002
-256;
+\$0GUI_1_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 0 256;
 #X obj 132 199 nbx 5 14 -100 22 0 0 \$0GUI_2_ambiweight_nbx_fromgui
-\$0GUI_2_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 0.756653
-256;
+\$0GUI_2_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 0 256;
 #X obj 168 179 nbx 5 14 -100 22 0 0 \$0GUI_3_ambiweight_nbx_fromgui
-\$0GUI_3_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 -4.79333
-256;
+\$0GUI_3_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 0 256;
 #X obj 204 199 nbx 6 14 -100 22 0 0 \$0GUI_4_ambiweight_nbx_fromgui
-\$0GUI_4_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 -15.96
-256;
+\$0GUI_4_ambiweight_nbx_togui empty 0 -6 0 10 -245568 -1 -1 0 256;
 #X obj 10 10 cnv 15 44 190 empty empty gain 1 12 0 14 -195568 -66577
 0;
 #X obj 14 92 cnv 2 22 2 empty empty empty 20 12 0 14 -99865 -66577
@@ -183,19 +178,19 @@ we also want them to be applied to /AMBI/BIN;
 #X obj 61 89 cnv 2 174 2 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 70 46 vsl 15 128 0 127 0 0 \$0GUI_0_ambiweight_fromgui \$0GUI_0_ambiweight_togui
-0 5 -8 0 8 -245568 -1 -1 10331 1;
+0 5 -8 0 8 -245568 -1 -1 8400 1;
 #X obj 106 46 vsl 15 128 0 127 0 0 \$0GUI_1_ambiweight_fromgui \$0GUI_1_ambiweight_togui
-1 5 -8 0 8 -245568 -1 -1 10068 1;
+1 5 -8 0 8 -245568 -1 -1 8400 1;
 #X obj 142 46 vsl 15 128 0 127 0 0 \$0GUI_2_ambiweight_fromgui \$0GUI_2_ambiweight_togui
-2 5 -8 0 8 -245568 -1 -1 8854 1;
+2 5 -8 0 8 -245568 -1 -1 8400 1;
 #X obj 178 46 vsl 15 128 0 127 0 0 \$0GUI_3_ambiweight_fromgui \$0GUI_3_ambiweight_togui
-3 5 -8 0 8 -245568 -1 -1 6362 1;
+3 5 -8 0 8 -245568 -1 -1 8400 1;
 #X obj 214 46 vsl 15 128 0 127 0 0 \$0GUI_4_ambiweight_fromgui \$0GUI_4_ambiweight_togui
-4 5 -8 0 8 -245568 -1 -1 4206 1;
+4 5 -8 0 8 -245568 -1 -1 8400 1;
 #X obj 38 54 vfad_scale -1;
 #X obj 8 226 ambisonic/sphere;
 #X obj 17 46 vsl 15 131 0 130 0 0 \$0GUIambiout_fader \$0GUIambiout_fader
-+00 1 140 0 8 -228992 -1 -1 8500 1;
+-inf 1 140 0 8 -228992 -1 -1 0 1;
 #N canvas 1911 538 450 300 BIN 0;
 #X obj 11 11 cnv 15 98 188 empty empty BIN 0 12 0 14 -195568 -66577
 0;
@@ -286,7 +281,7 @@ empty 0 -6 0 10 -245568 -1 -1 0 256;
 #X obj 8 600 ambisonic/decoderselect;
 #X restore 1 205 pd \$0-ambisonic.settings;
 #X obj 44 61 vfad_scale -1;
-#X obj 3 31 tgl 15 0 \$0_24_fromgui \$0_24_togui 24 3 -6 0 8 -262144
+#X obj 3 31 tgl 15 0 \$0_LS_fromgui \$0_LS_togui LS 3 -6 0 8 -262144
 -1 -1 1 1;
 #X obj 26 31 tgl 15 0 \$0_BIN_fromgui \$0_BIN_togui BIN 0 -6 0 8 -262144
 -1 -1 0 1;
