@@ -1,0 +1,40 @@
+#N canvas 265 19 534 564 10;
+#X obj 112 112 mtx;
+#X obj 115 58 openpanel;
+#X obj 113 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 113 84 read \$1;
+#X obj 125 450 print;
+#X obj 62 58 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 121 163 mtx_transpose;
+#X obj 120 195 mtx;
+#X obj 82 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 127 300 mtx_egg 2 2;
+#X obj 145 345 mtx_mul;
+#X obj 95 398 mtx;
+#X obj 57 371 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 111 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 226 368 write \$1;
+#X obj 226 346 savepanel;
+#X obj 226 325 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 6 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 7 0 10 1;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 4 0;
+#X connect 12 0 11 0;
+#X connect 13 0 9 0;
+#X connect 14 0 11 0;
+#X connect 15 0 14 0;
+#X connect 16 0 15 0;
