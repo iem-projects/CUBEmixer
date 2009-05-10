@@ -1,9 +1,9 @@
 #N canvas 997 439 492 582 10;
-#X obj 101 101 cnv 15 338 58 empty empty decodermatrix 20 12 0 14 -233017
+#X obj 101 101 cnv 15 338 43 empty empty decodermatrix 20 12 0 14 -233017
 -66577 0;
-#X obj 138 139 bng 15 250 50 0 \$0-load \$0-load load -27 8 0 10 -4034
+#X obj 138 123 bng 15 250 50 0 \$0-load \$0-load load -27 8 0 10 -4034
 -1 -1;
-#X obj 161 139 cnv 15 270 15 empty \$0-label <DEFAULT> 0 8 0 14 -191407
+#X obj 161 123 cnv 15 270 15 empty \$0-label <DEFAULT> 0 8 0 14 -191407
 -66577 0;
 #X obj 104 196 r \$0-load;
 #X obj 226 514 s \$0-label;
@@ -44,4 +44,4 @@
 #X connect 19 0 10 1;
 #X connect 19 0 20 1;
 #X connect 20 1 15 0;
-#X coords 0 -1 1 1 340 60 1 100 100;
+#X coords 0 -1 1 1 340 45 1 100 100;
