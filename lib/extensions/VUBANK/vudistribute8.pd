@@ -18,7 +18,6 @@
 #X obj 117 164 t f f;
 #X obj 281 256 makefilename %02d;
 #X msg 281 279 label \$1;
-#X obj 196 263 print vudist;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 3 0 5 0;
@@ -32,7 +31,6 @@
 #X connect 10 0 14 0;
 #X connect 10 0 16 0;
 #X connect 11 0 0 0;
-#X connect 11 0 19 0;
 #X connect 12 0 5 0;
 #X connect 13 0 8 0;
 #X connect 16 0 4 0;
