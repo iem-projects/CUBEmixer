@@ -45,3 +45,9 @@ DSP_OPTIONS="-rt"
 #DSP_PATH=
 #DSP_LIB=
 #DSP_MESSAGE=""
+
+##
+## settings regarding only the MIDI-part of the CUBEmixer
+##
+#MIDI_PATCH=""
+
