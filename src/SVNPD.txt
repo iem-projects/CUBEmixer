@@ -7,16 +7,15 @@
 #         e.g. "https://" instead of "http://"
 #
 #       - finally run:
-# 		% svn propset svn:externals -F SVNEXTERNALS.txt .
+# 		% svn propset svn:externals -F SVNPD.txt .
 # 		% svn commit
 #
 # deleting external-references:
 # 	- just delete the offending reference and re-run:
-# 		% svn propset svn:externals -F SVNEXTERNALS.txt .
+# 		% svn propset svn:externals -F SVNPD.txt .
 # 		% svn commit
 #
 # you should be able to retrieve this file by running
 # 		svn propget svn:externals .
 
-pd           https://pure-data.svn.sourceforge.net/svnroot/pure-data/tags/pd/0.42-3
-
+pd           https://pure-data.svn.sourceforge.net/svnroot/pure-data/tags/pd/0.42-5
