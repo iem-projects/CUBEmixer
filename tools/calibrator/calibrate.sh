@@ -6,4 +6,10 @@ CALIBRATOR_PATCH="CALIBRATOR.pd"
 CALIBRATOR_PATH="-path ../../lib/libs/"
 CALIBRATOR_LIBS="-lib zexy:iemmatrix"
 
-pd -rt -inchannels 2 ${CALIBRATOR_PATH} ${CALIBRATOR_LIBS} ${CALIBRATOR_PATCH}
+. ../../lib/functions.sh
+
+PDINSTANCE=../../lib/pd/bin/pd
+
+PD=$(test_pd $PD $PDINSTANCE)
+
+$PD -rt -inchannels 2 ${CALIBRATOR_PATH} ${CALIBRATOR_LIBS} ${CALIBRATOR_PATCH}
