@@ -11,10 +11,15 @@
 0;
 #X obj 146 113 cnv 16 16 16 empty empty CUBEmixer 0 8 0 24 -237184
 -33289 0;
-#X msg 95 422 tot destroy .^.m;
+#X msg 95 429 tot destroy .^.m;
 #X obj 95 448 tot .parent;
 #X msg 110 382 tot destroy .^.m \, tot bind .^.c <Control-Key> "";
 #X text 111 367 this would even disable the control-keys!;
+#X obj 213 496 s gui_loadbang;
+#X obj 213 476 del 1000;
+#X msg 283 473 bang;
 #X connect 6 0 7 0;
 #X connect 7 3 6 0;
+#X connect 11 0 10 0;
+#X connect 12 0 10 0;
 #X coords 0 -1 1 1 250 90 2 100 100;
