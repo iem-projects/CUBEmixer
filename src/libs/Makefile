@@ -4,6 +4,8 @@ CVSROOT=-d:pserver:anonymous@cvs.pd.iem.at:/cvsroot/pure-data
 REVISION=HEAD
 
 LOCINSTALL_DIR=../../lib/libs/
+# since libs/* is cleaned we need it outside
+LOCHELP_DIR=$(LOCINSTALL_DIR)/../helps/
 
 .PHONY: install locinstall checkpddir 
 
@@ -35,7 +37,8 @@ hdspm_mixer-build:
 	make -C hdspm_mixer
 
 hdspm_mixer-locinstall: hdspm_mixer-build
-	cp hdspm_mixer/*.$(EXT) hdspm_mixer/hdspmmixer-help.pd $(LOCINSTALL_DIR)
+	cp hdspm_mixer/*.$(EXT) $(LOCINSTALL_DIR)
+	cp hdspm_mixer/hdspmmixer-help.pd $(LOCHELP_DIR)
 
 hdspm_mixer: hdspm_mixer-locinstall
 
@@ -50,6 +53,7 @@ aconnect-build:
 
 aconnect-locinstall: aconnect-build
 	cp aconnect/*.$(EXT) aconnect/aconnects.pd $(LOCINSTALL_DIR)
+	cp aconnect/*-help.pd $(LOCHELP_DIR)
 
 aconnect: aconnect-locinstall
 
@@ -80,6 +84,7 @@ iem_ambi-build:
 
 iem_ambi-locinstall: iem_ambi-build
 	cp iem_ambi/iem_ambi.$(EXT) $(LOCINSTALL_DIR)
+	cp iem_ambi/*-help.pd $(LOCHELP_DIR)
 
 iem_ambi: iem_ambi-locinstall
 
@@ -93,6 +98,7 @@ iem_ambi2-build:
 
 iem_ambi2-locinstall: iem_ambi2-build
 	cp iem_ambi2/src/iem_ambi2.$(EXT) $(LOCINSTALL_DIR)
+	cp iem_ambi/*-help.pd $(LOCHELP_DIR)
 
 iem_ambi2: iem_ambi2-locinstall
 
@@ -107,6 +113,7 @@ iem_bin_ambi-build:
 
 iem_bin_ambi-locinstall: iem_bin_ambi-build
 	cp iem_bin_ambi/src/iem_bin_ambi.$(EXT) $(LOCINSTALL_DIR)
+	cp iem_bin_ambi/*-help.pd $(LOCHELP_DIR)
 
 iem_bin_ambi: iem_bin_ambi-locinstall
 
@@ -119,6 +126,8 @@ iemgui-build:
 
 iemgui-locinstall: iemgui-build
 	cp iemgui/iemgui.$(EXT) $(LOCINSTALL_DIR)
+	cp iemgui/*-help.pd $(LOCHELP_DIR)
+
 
 iemgui: iemgui-locinstall
 
@@ -131,6 +140,7 @@ iem_spec2-build:
 
 iem_spec2-locinstall: iem_spec2-build
 	cp iem_spec2/iem_spec2.$(EXT) $(LOCINSTALL_DIR)
+	cp iem_spec2/*-help.pd $(LOCHELP_DIR)
 
 iem_spec2: iem_spec2-locinstall
 
@@ -144,6 +154,11 @@ iemlib-build:
 iemlib-locinstall: iemlib-build
 	cp iemlib/lib/*.$(EXT) $(LOCINSTALL_DIR)
 	cp iemlib/iemabs/*.pd $(LOCINSTALL_DIR)
+	cp iemlib/iemlib1/*-help.pd $(LOCHELP_DIR)
+	cp iemlib/iemlib2/*-help.pd $(LOCHELP_DIR)
+	cp iemlib/iem_mp3/*-help.pd $(LOCHELP_DIR)
+	cp iemlib/iem_t3_lib/*-help.pd $(LOCHELP_DIR)
+
 
 iemlib: iemlib-locinstall
 
@@ -157,11 +172,11 @@ iemmatrix-build:
 iemmatrix-locinstall: iemmatrix-build
 	cp iemmatrix/*.$(EXT) $(LOCINSTALL_DIR)
 	cp iemmatrix/abs/*.pd $(LOCINSTALL_DIR)
+	cp iemmatrix/doc/*-help.pd $(LOCHELP_DIR)
 
 iemmatrix: iemmatrix-locinstall
 
 iemmatrix-clean:
-
 
 ########### miXed needed for the seq external in cyclone ##########################
 # maybe substituted by xeq in future
@@ -171,10 +186,14 @@ miXed-build:
 
 miXed_objects=seq midiflush midiformat midiparse tot
 miXed_externals=$(miXed_objects:=.$(EXT))
+miXed_helps=$(miXed_objects:=-help.pd)
+
 
 miXed-locinstall: miXed-build
 	for i in $(miXed_externals); do cp -v miXed/bin/$$i $(LOCINSTALL_DIR); done
 #	for i in $(miXed_objects); do cp -v miXed/test/cyclone/$$i-test.pd $(LOCINSTALL_DIR)/$$i-help.pd; done
+	for i in $(miXed_externals); do cp -v miXed/bin/$$i $(LOCINSTALL_DIR); done
+	for i in $(miXed_helps); do find miXed/ -name $$i -exec cp -v \{} $(LOCHELP_DIR) \; ; done
 
 miXed: miXed-locinstall
 
@@ -187,10 +206,12 @@ pdogg-build:
 
 pdogg_objects=oggamp~  oggcast~  oggread~  oggwrite~
 pdogg_externals=$(pdogg_objects:=.$(EXT))
+pdogg_helps=$(pdogg_objects:=-help.pd)
 
 pdogg-locinstall: pdogg-build
 	cp -v pdogg/pdogg.$(EXT) $(LOCINSTALL_DIR)
-	for i in $(pdogg_objects); do cp pdogg/$$i/*.pd* $(LOCINSTALL_DIR); done
+	for i in $(pdogg_objects); do cp -v pdogg/$$i/*.pd* $(LOCINSTALL_DIR); done
+	for i in $(pdogg_helps); do cp -v pdogg/$$i/*help.pd $(LOCHELP_DIR); done
 
 pdogg: pdogg-locinstall
 
@@ -203,6 +224,7 @@ popup-build:
 
 popup-locinstall: popup-build
 	cp popup/*.$(EXT) $(LOCINSTALL_DIR)
+	cp popup/*-help.pd $(LOCHELP_DIR)
 
 popup: popup-locinstall
 
@@ -216,6 +238,7 @@ osc-build:
 
 osc-locinstall: osc-build
 	cp osc/*.$(EXT) $(LOCINSTALL_DIR)
+	cp osc/*-help.pd $(LOCHELP_DIR)
 
 osc-clean:
 
@@ -228,6 +251,7 @@ net-build:
 
 net-locinstall: net-build
 	cp net/*.$(EXT) $(LOCINSTALL_DIR)
+	cp net/*-help.pd $(LOCHELP_DIR)
 
 net-clean:
 
@@ -241,6 +265,7 @@ zexy-build:
 zexy-locinstall: zexy-build
 	cp zexy/*.$(EXT) $(LOCINSTALL_DIR)
 	cp zexy/abs/*.pd $(LOCINSTALL_DIR)
+	cp zexy/reference/*-help.pd $(LOCHELP_DIR)
 
 zexy-clean:
 
@@ -253,6 +278,7 @@ sources: folder_list-src
 build: aconnect-build folder_list-build iem_ambi-build iem_ambi2-build iem_bin_ambi-build iemgui-build iemlib-build iemmatrix-build iem_spec2-build miXed-build net-build osc-build popup-build zexy-build
 
 locinstall: aconnect-locinstall folder_list-locinstall iem_ambi-locinstall iem_ambi2-locinstall iem_bin_ambi-locinstall iemgui-locinstall iemlib-locinstall iemmatrix-locinstall iem_spec2-locinstall miXed-locinstall net-locinstall osc-locinstall popup-locinstall zexy-locinstall
+	mv $(LOCINSTALL_DIR)/*-help.pd $(LOCHELP_DIR)/
 
 optional: pdogg
 
@@ -261,3 +287,5 @@ clean: aconnect-clean folder_list-clean iem_ambi-clean iem_ambi2-clean iem_bin_a
 
 distclean: clean
 	rm -rf $(LOCINSTALL_DIR)/*
+	rm -rf $(LOCHELP_DIR)/*
+
