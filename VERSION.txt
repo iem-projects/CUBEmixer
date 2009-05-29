@@ -1,2 +1,2 @@
-3.0RC1 - (no documentation updated !!!)
+3.0RC3 -  documentation in Ambisonics site will be added soon.
 
