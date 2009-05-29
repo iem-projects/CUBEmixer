@@ -33,6 +33,7 @@ build: pd-build
 locinstall: pd-locinstall externals
 
 clean: pd-clean
+	make -C libs clean
 
 distclean: clean
 	rm -rf $(LOCINSTALL_DIR)/*
