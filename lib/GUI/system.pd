@@ -1,7 +1,7 @@
-#N canvas 423 314 601 439 10;
-#X obj 101 101 cnv 15 70 88 empty empty SYSTEM 3 12 0 14 -195568 -66577
+#N canvas 1012 242 601 439 10;
+#X obj 101 101 cnv 15 88 88 empty empty SYSTEM 3 12 0 12 -195568 -66577
 0;
-#X obj 153 122 bng 15 250 50 0 \$0_open \$0_open open -40 7 0 12 -62784
+#X obj 152 113 bng 30 250 50 0 \$0_open \$0_open open -40 17 0 14 -62784
 -1 -1;
 #X text 99 64 system-settings go in here;
 #X obj 230 135 r \$0_open;
@@ -15,9 +15,9 @@
 #X connect 3 0 2 0;
 #X restore 242 99 pd \$0-system-settings;
 #X obj 230 185 makefilename pd-%d-system-settings;
-#X obj 102 147 tgl 15 0 \$0-really \$0-really really 16 7 0 12 -258699
+#X obj 111 154 tgl 15 0 \$0-really \$0-really really 16 7 0 12 -258699
 -1 -1 0 1;
-#X obj 153 163 bng 15 250 50 0 \$0-quit \$0-quit quit -37 7 0 12 -258699
+#X obj 162 170 bng 15 250 50 0 \$0-quit \$0-quit quit -37 7 0 12 -258699
 -1 -1;
 #X obj 88 255 spigot;
 #X obj 89 287 t b b b;
@@ -48,4 +48,4 @@
 #X connect 18 0 17 0;
 #X connect 21 0 10 1;
 #X connect 21 1 8 0;
-#X coords 0 -1 1 1 72 90 1 100 100;
+#X coords 0 -1 1 1 90 90 1 100 100;
