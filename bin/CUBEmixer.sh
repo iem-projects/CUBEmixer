@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Start CUBEmixer with optional arguments
+
+## ARGS: [DSP_PATCH] [GUI_PATCH] [DSP_PATH] [GUI_PATH]
+##  dsp_patch ... external DSP-patch
+##  dsp_patch ... external DSP Patch
+##  dsp_path  ... external DSP path
+##  dsp_patch ... external DSP path
+
 #ECHO=echo
 ETC=etc/CUBEmixer
 
@@ -12,6 +20,8 @@ cd ${CUBEMIXERPATH}
 LOCALVARSTEMPLATE="${ETC}/LocalVars.template.sh"
 STARTUPPATCHES="${ETC}/configured.sh"
 LOCALVARS="${ETC}/LocalVars.sh"
+
+PD_INSTALL="lib/pd/bin"
 
 if [ -e ${LOCALVARSTEMPLATE} ]; then
  . ${LOCALVARSTEMPLATE}
@@ -75,11 +85,11 @@ fi
 
 
 if [ "x${NOGUI}" = "x" ]; then
-${ECHO} ${PD} -noprefs ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${GUI_EXTPATH} ${GUI_PATH} ${PD_PATH} ${ETC_PATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH}  ${GUI_EXTPATCH} \
+${ECHO} ${PD} -noprefs ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${ETC_PATH} ${GUI_EXTPATH} ${GUI_PATH} ${PD_PATH} ${PD_HELPPATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH}  ${GUI_EXTPATCH} \
       -send "${GUI_MESSAGE}" -send "${PD_MESSAGE}" &
 fi
 
 if [ "x${NODSP}" = "x" ]; then
-${ECHO} ${PD} -noprefs ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${DSP_EXTPATH} ${DSP_PATH} ${PD_PATH} ${ETC_PATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH}  ${DSP_EXTPATCH} \
+${ECHO} ${PD} -noprefs ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${ETC_PATH} ${DSP_EXTPATH} ${DSP_PATH} ${PD_PATH} ${PD_HELPPATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH}  ${DSP_EXTPATCH} \
       -send "${DSP_MESSAGE}" -send "${PD_MESSAGE}"
 fi
