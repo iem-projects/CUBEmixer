@@ -1,0 +1,13 @@
+Index: src/Make.config.in
+===================================================================
+--- src/Make.config.in	(Revision 11604)
++++ src/Make.config.in	(Arbeitskopie)
+@@ -13,7 +13,7 @@
+ 
+ EXT = @EXT@ 
+ DEFS = @DFLAGS@
+-IFLAGS = -I. @INCLUDES@
++IFLAGS = -I. @INCLUDES@ -I$(PDSOURCE)
+ 
+ CC = @CC@
+ LD = @LD@

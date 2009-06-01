@@ -1,0 +1,28 @@
+Index: src/makefile_linux
+===================================================================
+--- src/makefile_linux	(Revision 11604)
++++ src/makefile_linux	(Arbeitskopie)
+@@ -2,7 +2,8 @@
+ 
+ .SUFFIXES: .pd_linux
+ 
+-INCLUDE = -I. -I/usr/local/src/pd/src
++PDSOURCE?=/usr/local/src/pd/src
++INCLUDE = -I. -I$(PDSOURCE)
+ 
+ LDFLAGS = -export-dynamic -shared
+ LIB = -ldl -lm -lpthread
+Index: src/makefile
+===================================================================
+--- src/makefile	(Revision 11604)
++++ src/makefile	(Arbeitskopie)
+@@ -2,7 +2,8 @@
+ 
+ .SUFFIXES: .pd_linux
+ 
+-INCLUDE = -I. -I/usr/local/src/pd/src
++PDSOURCE?=/usr/local/src/pd/src
++INCLUDE = -I. -I$(PDSOURCE)
+ 
+ LDFLAGS = -export-dynamic -shared
+ LIB = -ldl -lm -lpthread
