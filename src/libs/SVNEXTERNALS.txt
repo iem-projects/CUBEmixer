@@ -35,4 +35,4 @@ zexy		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/ze
 
 # Optional
 pdogg           https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/pdogg
-Gem		https://pd-gem.svn.sourceforge.net/svnroot/pd-gem/trunk/Gem
+#Gem		https://pd-gem.svn.sourceforge.net/svnroot/pd-gem/trunk/Gem
