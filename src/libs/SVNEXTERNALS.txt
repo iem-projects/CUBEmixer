@@ -32,4 +32,7 @@ miXed		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/m
 osc		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/mrpeach/osc
 net		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/mrpeach/net
 zexy		https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/zexy
+
+# Optional
 pdogg           https://pure-data.svn.sourceforge.net/svnroot/pure-data/trunk/externals/pdogg
+Gem		https://pd-gem.svn.sourceforge.net/svnroot/pd-gem/trunk/Gem
