@@ -49,7 +49,7 @@ hdspm_mixer-clean:
 ######## ACONNECT ################
 
 aconnect-build:
-	make -C aconnect
+	make -C aconnect INLCUDES="-I$(PDSOURCE)"
 
 aconnect-locinstall: aconnect-build
 	cp aconnect/*.$(EXT) aconnect/aconnects.pd $(LOCINSTALL_DIR)
@@ -260,7 +260,7 @@ net: net-locinstall
 ######## ZEXY ##################
 
 zexy-build: 
-	make -C zexy/src
+	make -C zexy/src CONFIGUREFLAGS="--includedir=/home/wini/CUBEmixer/src/pd/src"
 
 zexy-locinstall: zexy-build
 	cp zexy/*.$(EXT) $(LOCINSTALL_DIR)
