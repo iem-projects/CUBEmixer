@@ -7,6 +7,8 @@ LOCINSTALL_DIR=../../lib/libs/
 # since libs/* is cleaned we need it outside
 LOCHELP_DIR=$(LOCINSTALL_DIR)/../helps/
 
+PDSOURCE?=$(CURDIR)/../pd/src
+
 .PHONY: install locinstall checkpddir 
 
 install: checkpddir locinstall
@@ -210,8 +212,7 @@ pdogg_helps=$(pdogg_objects:=-help.pd)
 
 pdogg-locinstall: pdogg-build
 	cp -v pdogg/pdogg.$(EXT) $(LOCINSTALL_DIR)
-	for i in $(pdogg_objects); do cp -v pdogg/$$i/*.pd* $(LOCINSTALL_DIR); done
-	for i in $(pdogg_helps); do cp -v pdogg/$$i/*help.pd $(LOCHELP_DIR); done
+	for i in $(pdogg_objects); do cp -v pdogg/$$i/*help.pd $(LOCHELP_DIR); done
 
 pdogg: pdogg-locinstall
 
@@ -260,7 +261,7 @@ net: net-locinstall
 ######## ZEXY ##################
 
 zexy-build: 
-	make -C zexy/src CONFIGUREFLAGS="--includedir=/home/wini/CUBEmixer/src/pd/src"
+	make -C zexy/src CONFIGUREFLAGS="--includedir=$(PDSOURCE)"
 
 zexy-locinstall: zexy-build
 	cp zexy/*.$(EXT) $(LOCINSTALL_DIR)
