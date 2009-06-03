@@ -1,0 +1,8 @@
+#N canvas 414 561 450 300 10;
+#X obj 146 184 outlet;
+#X obj 134 58 r route_ambi_to_out;
+#X obj 132 91 route \$1;
+#X msg 145 154 set \$1_OUT;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
