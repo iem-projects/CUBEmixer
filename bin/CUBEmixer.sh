@@ -8,7 +8,7 @@
 ##  dsp_path  ... external DSP path
 ##  dsp_patch ... external DSP path
 
-#ECHO=echo
+ECHO=echo
 ETC=etc/CUBEmixer
 
 CUBEMIXERPATH=$(dirname $0)/..
@@ -73,15 +73,15 @@ if [ "x" != "x${4}" ]; then
     GUI_EXTPATH="-path $4"
 fi
 
-let DSP_ADCS=DSP_ADCS
-if [ ${DSP_ADCS} -gt 0 ]; then
-  DSP_AUDIO="${DSP_AUDIO} -inchannels ${DSP_ADCS}"
-fi
+#let DSP_ADCS=DSP_ADCS
+#if [ ${DSP_ADCS} -gt 0 ]; then
+#  DSP_AUDIO="${DSP_AUDIO} -inchannels ${DSP_ADCS}"
+#fi
 
-let DSP_DACS=DSP_DACS
-if [ ${DSP_DACS} -gt 0 ]; then
-  DSP_AUDIO="${DSP_AUDIO} -outchannels ${DSP_DACS}"
-fi
+#let DSP_DACS=DSP_DACS
+#if [ ${DSP_DACS} -gt 0 ]; then
+#  DSP_AUDIO="${DSP_AUDIO} -outchannels ${DSP_DACS}"
+#fi
 
 
 if [ "x${NOGUI}" = "x" ]; then

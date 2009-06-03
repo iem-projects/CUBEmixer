@@ -1,8 +1,7 @@
-#N canvas 189 52 998 688 10;
+#N canvas 189 52 719 688 12;
 #N canvas 441 514 686 382 IN~OUT 0;
 #X obj 23 29 noise~;
 #X obj 183 110 s~ IN;
-#X obj 183 80 adc~ 1;
 #X obj 23 130 s~ OUT~;
 #X obj 64 162 out_calibrate 1;
 #X obj 181 162 out_calibrate 2;
@@ -43,33 +42,34 @@
 #X msg 362 147 13;
 #X msg 403 152 16;
 #X obj 451 116 loadbang;
-#X connect 0 0 28 0;
-#X connect 2 0 1 0;
-#X connect 28 0 31 0;
-#X connect 29 0 30 0;
-#X connect 30 0 28 1;
-#X connect 31 0 3 0;
+#X obj 183 79 adc~ 9;
+#X connect 0 0 27 0;
+#X connect 27 0 30 0;
+#X connect 28 0 29 0;
+#X connect 29 0 27 1;
+#X connect 30 0 2 0;
+#X connect 31 0 30 0;
 #X connect 32 0 31 0;
-#X connect 33 0 32 0;
-#X connect 34 0 31 0;
-#X connect 35 0 36 0;
-#X connect 36 0 39 0;
-#X connect 38 0 37 0;
-#X connect 39 0 40 0;
-#X connect 39 1 41 0;
-#X connect 40 0 38 0;
-#X connect 41 0 38 0;
-#X connect 42 0 40 0;
-#X restore 884 460 pd IN~OUT;
-#X obj 534 96 r~ IN;
-#X obj 534 115 env~;
-#X floatatom 534 135 4 0 0 0 - - -;
-#X msg 760 458 bang;
-#X obj 760 479 s t_scope;
-#X obj 517 370 s calibrate_activate;
-#X floatatom 517 349 4 0 0 0 - - -;
-#X floatatom 517 409 4 0 0 0 - - -;
-#X obj 517 388 r calibrate_activate;
+#X connect 33 0 30 0;
+#X connect 34 0 35 0;
+#X connect 35 0 38 0;
+#X connect 37 0 36 0;
+#X connect 38 0 39 0;
+#X connect 38 1 40 0;
+#X connect 39 0 37 0;
+#X connect 40 0 37 0;
+#X connect 41 0 39 0;
+#X connect 42 0 1 0;
+#X restore 565 474 pd IN~OUT;
+#X obj 461 84 r~ IN;
+#X obj 461 103 env~;
+#X floatatom 461 123 4 0 0 0 - - -;
+#X msg 460 471 bang;
+#X obj 460 492 s t_scope;
+#X obj 460 339 s calibrate_activate;
+#X floatatom 460 318 4 0 0 0 - - -;
+#X floatatom 460 378 4 0 0 0 - - -;
+#X obj 460 357 r calibrate_activate;
 #N canvas 371 204 295 230 samp2m 0;
 #X obj 136 39 inlet;
 #X obj 173 74 samplerate~;
@@ -90,9 +90,9 @@
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 9 0 6 0;
-#X restore 755 171 pd samp2m;
-#X text 556 409 current speaker;
-#X floatatom 755 189 4 0 0 0 - - -;
+#X restore 568 130 pd samp2m;
+#X text 499 378 current speaker;
+#X floatatom 568 148 4 0 0 0 - - -;
 #N canvas 520 287 520 236 save 0;
 #X obj 79 22 inlet;
 #X msg 79 165 \; scope write \$1;
@@ -122,13 +122,13 @@
 #X connect 11 0 10 0;
 #X connect 11 1 12 0;
 #X connect 12 0 7 1;
-#X restore 518 501 pd save raumimpulsantwort;
-#X text 746 212 dist[m];
-#X obj 755 149 unpack;
-#X obj 821 171 rmstodb;
-#X floatatom 821 190 4 0 0 0 - - -;
-#X obj 755 129 r values;
-#X text 820 212 amp[dB];
+#X restore 460 441 pd save raumimpulsantwort;
+#X text 559 171 dist[m];
+#X obj 568 108 unpack;
+#X obj 634 130 rmstodb;
+#X floatatom 634 149 4 0 0 0 - - -;
+#X obj 568 88 r values;
+#X text 633 171 amp[dB];
 #N canvas 115 91 378 142 printer 0;
 #X obj 25 22 r values;
 #X obj 25 40 print VALUES;
@@ -139,11 +139,11 @@
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 4 0 5 0;
-#X restore 884 480 pd printer;
-#X text 553 350 activate speaker;
-#X msg 556 474 auto on;
-#X msg 613 474 auto off;
-#X msg 518 473 bang;
+#X restore 565 494 pd printer;
+#X text 496 319 activate speaker;
+#X msg 498 414 auto on;
+#X msg 555 414 auto off;
+#X msg 460 413 bang;
 #N canvas 156 72 1249 835 readme 0;
 #X text 60 70 this is the calibration-patch !!;
 #X text 62 86 you will need this for calibrating your audio-setup.
@@ -269,17 +269,17 @@ maybe want to test the latency of your PC+soundcard. there is a "LATENCY.pd"
 file around somewhere in this directory \, which you can use.;
 #X text 82 201 first of all you should set up your speakers in a proper
 way.;
-#X restore 768 20 pd readme;
-#X text 661 20 what is this ?;
+#X restore 554 15 pd readme;
+#X text 447 15 what is this ?;
 #X text 273 16 CALIBRATOR patch;
 #X text 273 26 ================;
-#X obj 534 182 vsl 15 128 0 100 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 7261 1;
-#X obj 555 181 > 99;
-#X obj 554 231 bng 30 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+#X obj 461 170 vsl 15 128 0 100 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 6651 1;
+#X obj 482 169 > 99;
+#X obj 481 219 bng 30 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X obj 554 203 sel 1;
-#X text 554 261 CLIP;
+#X obj 481 191 sel 1;
+#X text 481 249 CLIP;
 #X obj 35 76 cnv 15 400 600 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X floatatom 208 423 4 0 0 0 - - -;
@@ -342,11 +342,11 @@ can be found in this directory;
 -66577 0;
 #X text 213 608 copy the matrix to CUBEmixer/etc/CUBEmixer/compensation.mtx
 ;
-#X obj 35 14 cnv 15 100 60 empty \$0-dspstate empty 20 12 0 14 -258699
+#X obj 35 14 cnv 15 100 60 empty \$0-dspstate empty 20 12 0 14 -24198
 -262144 0;
 #X msg 50 27 \; pd dsp 1;
 #X obj 231 150 nbx 3 14 0 512 0 0 speakers speakers num:speakers 0
--8 0 10 -262144 -1 -1 3 256;
+-8 0 10 -262144 -1 -1 24 256;
 #X text 43 148 1 set number of speakers;
 #X msg 206 484 write compensation.mtx;
 #X connect 1 0 2 0;

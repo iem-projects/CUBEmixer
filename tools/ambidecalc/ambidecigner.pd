@@ -1,12 +1,12 @@
-#N canvas 1280 61 1148 651 10;
-#N canvas 39 22 1198 565 (subpatch) 0;
+#N canvas 631 0 1148 844 10;
+#N canvas 445 0 1198 565 (subpatch) 0;
 #X obj 48 43 inlet;
 #X text 209 33 list \; 1.arg: <symbol> kind of loudspeaker arrangement
 \; [circle \, hemisphere \, sphere] \; 2.arg: <float> ambisonic order
 \; 3.arg: <float> number of loudspeakers \;;
 #X obj 48 122 route list;
 #X obj 49 186 route circle Circle CIRCLE circ Circ CIRC c C;
-#X obj 359 207 route hemisphere Hemisphere HEMISPHERE hemi Hemi HEMI
+#X obj 356 209 route hemisphere Hemisphere HEMISPHERE hemi Hemi HEMI
 h H;
 #X obj 752 229 route sphere Sphere SPHERE s S;
 #X obj 957 276 print UNI_DECODE_error;
@@ -55,7 +55,7 @@ h H;
 #X connect 7 0 11 0;
 #X connect 8 0 11 0;
 #X restore 266 441 pd labels;
-#N canvas 202 122 985 653 read_position_matrix 0;
+#N canvas 127 195 985 653 read_position_matrix 0;
 #X msg 309 258 bang;
 #X msg 349 257 read \$1;
 #X obj 309 282 mtx;
@@ -75,9 +75,14 @@ h H;
 #X obj 396 189 route dim;
 #X obj 309 306 mtx_resize;
 #X obj 63 119 r \$0_to_nbxm;
-#X obj 164 324 s \$0_to_nbxm;
+#X obj 157 351 s \$0_to_nbxm;
 #X obj 396 167 r \$0_to_nbxm;
 #X obj 159 45 inlet;
+#X obj 678 149 inlet;
+#X obj 687 202 savepanel;
+#X msg 687 224 write \$1;
+#X obj 755 101 r \$0_from_nbxm;
+#X obj 775 302 mtx;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 2 0 17 0;
@@ -102,6 +107,10 @@ h H;
 #X connect 18 0 11 0;
 #X connect 20 0 16 0;
 #X connect 21 0 5 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 26 0;
+#X connect 25 0 26 0;
 #X restore 70 476 pd read_position_matrix;
 #N canvas 0 22 423 471 index_col 0;
 #X obj 40 99 unpack f f;
@@ -115,8 +124,8 @@ h H;
 #X msg 229 281 add2 \$1;
 #X obj 40 17 inlet;
 #X obj 39 42 t b l b;
-#X msg 133 324 matrix 32 1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
-18 19 20 21 22 23 24 25 26 27 28 29 30 31 32;
+#X msg 133 324 matrix 29 1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+18 19 20 21 22 23 24 25 26 27 28 29;
 #X obj 132 351 s \$0_to_index;
 #X connect 0 1 2 0;
 #X connect 1 0 11 0;
@@ -238,6 +247,7 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X connect 13 0 5 0;
 #X connect 14 0 1 0;
 #X restore 87 332 pd dyn_patched_decoder_circle;
+#X obj 160 48 inlet;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
 #X connect 2 1 3 0;
@@ -299,6 +309,7 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X connect 24 1 26 0;
 #X connect 25 0 18 1;
 #X connect 26 0 25 0;
+#X connect 33 0 28 1;
 #X restore 54 348 pd;
 #N canvas 0 22 1235 630 helps 0;
 #X text 548 417 1.arg: <float> ambisonic order;
@@ -426,7 +437,7 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X connect 29 0 30 0;
 #X connect 30 0 16 0;
 #X restore 830 1323 pd helps;
-#X obj 621 64 nbxm 32 2 6 12 -360 360 0 1002_from_nbxm 1002_to_nbxm
+#X obj 621 64 nbxm 29 2 6 12 -360 360 0 1002_from_nbxm 1002_to_nbxm
 #000000 0 10;
 #N canvas 0 22 691 630 configure_nbxm 0;
 #X obj 204 355 outlet;
@@ -459,7 +470,7 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X connect 12 0 13 0;
 #X connect 13 0 0 0;
 #X restore 704 1322 pd configure_nbxm;
-#X obj 591 64 nbxm 32 1 3 12 0 1e+06 0 empty 1002_to_index #009900
+#X obj 591 64 nbxm 29 1 3 12 0 1e+06 0 empty 1002_to_index #009900
 0 10;
 #X obj 620 43 cnv 4 1 1 empty \$0_label_elv1 elevation 4 2 1 10 -262144
 -1 0;
@@ -474,13 +485,13 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X msg 313 64 circ 7 18;
 #X msg 313 83 hemi 5 29;
 #X msg 312 104 sphere 4 25;
-#N canvas 1419 130 603 779 (subpatch) 0;
+#N canvas 1317 130 603 779 (subpatch) 0;
 #X obj 238 326 cnv 13 23 13 empty empty empty 20 12 0 14 -260929 -66577
 0;
 #X obj 238 383 cnv 13 23 13 empty empty empty 20 12 0 14 -260929 -66577
 0;
 #X obj 116 329 vradio 15 1 0 3 empty empty empty 0 -8 0 10 -260929
--1 -1 2;
+-1 -1 1;
 #X text 134 328 circle;
 #X text 134 343 hemisphere;
 #X text 134 358 sphere;
@@ -707,12 +718,12 @@ H;
 #X connect 73 1 68 1;
 #X coords 0 -1 1 1 400 100 2 100 300;
 #X restore 54 216 pd;
-#X msg 106 349 sphere 3 32 layouts/sphere32ls.mtx;
-#X obj 170 397 bng 40 250 50 0 empty empty empty 17 7 0 10 -259265
+#X msg 106 349 hemi 5 29;
+#X obj 170 397 bng 40 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
 #X obj 70 410 cnv 15 45 15 empty empty empty 20 12 0 14 -260929 -66577
 0;
-#X obj 70 468 nbxm 32 16 4 12 -360 360 0 empty empty #000000 0 8;
+#X obj 70 468 nbxm 29 21 4 12 -360 360 0 empty empty #000000 0 8;
 #X text 588 23 LOUDSPEAKER-POSITIONS;
 #X msg 69 410 DECODE;
 #X text 794 18 Instruction Manual \; 1.) choose LOUDSPEAKER-LAYOUT
@@ -729,7 +740,7 @@ DECODEr-matrix \; 8.) SAVE DECODEr-matrix file;
 #X obj 571 70 cnv 4 1 1 empty empty 6.) 0 2 1 10 -262144 -1 0;
 #X obj 50 413 cnv 4 1 1 empty empty 7.) 0 2 1 10 -262144 -1 0;
 #X obj 149 412 cnv 4 1 1 empty empty 8.) 0 2 1 10 -262144 -1 0;
-#N canvas 41 80 429 682 calc_decoder 0;
+#N canvas 41 80 429 682 calc_decoder 1;
 #X obj 137 390 pp real_ls;
 #X msg 114 419 begin_pseudo_inverse;
 #X msg 93 444 end_pseudo_inverse;
@@ -758,14 +769,14 @@ DECODEr-matrix \; 8.) SAVE DECODEr-matrix file;
 #X msg 155 558 dim \$1 \$2;
 #N canvas 0 22 522 372 \$0_dec 0;
 #X obj 50 50 r 1002_dec_in;
-#X obj 50 100 ambi2_decode 3 3 32 0;
+#X obj 50 100 ambi2_decode_hemi 5 29 0;
 #X obj 50 150 s 1002_dec_out;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 95 490 pd \$0_dec;
 #X obj 95 471 s \$0_dec_in;
 #X obj 95 510 r \$0_dec_out;
-#X obj 300 21 inlet;
+#X obj 299 27 inlet;
 #X obj 96 605 outlet;
 #X connect 0 0 27 0;
 #X connect 1 0 27 0;
@@ -808,7 +819,7 @@ DECODEr-matrix \; 8.) SAVE DECODEr-matrix file;
 #X text 50 40 Presets w. layout Files;
 #X text 51 18 EXAMPLES;
 #X text 105 326 for storing presets;
-#X text 110 193 PLEASE WATCH THE CONSOLE FOR WARNINGS ON DISPLAY !!!
+#X text 109 186 PLEASE WATCH THE CONSOLE FOR WARNINGS ON DISPLAY !!!
 ;
 #X text 220 405 SAVE the DECODER-matrix;
 #X text 224 425 USE Extension for file name "*.mtx";
@@ -816,6 +827,15 @@ DECODEr-matrix \; 8.) SAVE DECODEr-matrix file;
 #X msg 54 81 hemi 4 24 layouts/hemi24ls.mtx;
 #X msg 54 103 sphere 4 32 layouts/sphere32ls.mtx;
 #X text 576 1322 developper helps:;
+#X obj 903 288 s \$0_to_nbxm;
+#X obj 903 312 r \$0_from_nbxm;
+#X obj 902 257 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 903 343 matrix;
+#X msg 819 310 write \$1;
+#X obj 819 261 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 819 287 savepanel;
 #X connect 11 0 14 0;
 #X connect 12 0 14 0;
 #X connect 13 0 14 0;
@@ -827,3 +847,8 @@ DECODEr-matrix \; 8.) SAVE DECODEr-matrix file;
 #X connect 39 0 14 0;
 #X connect 40 0 14 0;
 #X connect 41 0 14 0;
+#X connect 44 0 46 0;
+#X connect 45 0 43 0;
+#X connect 47 0 46 0;
+#X connect 48 0 49 0;
+#X connect 49 0 47 0;
