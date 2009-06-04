@@ -1,5 +1,5 @@
-#N canvas 631 0 1148 844 10;
-#N canvas 445 0 1198 565 (subpatch) 0;
+#N canvas 1362 0 1148 844 10;
+#N canvas 445 0 1198 565 (subpatch) 1;
 #X obj 48 43 inlet;
 #X text 209 33 list \; 1.arg: <symbol> kind of loudspeaker arrangement
 \; [circle \, hemisphere \, sphere] \; 2.arg: <float> ambisonic order
@@ -485,13 +485,13 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X msg 313 64 circ 7 18;
 #X msg 313 83 hemi 5 29;
 #X msg 312 104 sphere 4 25;
-#N canvas 1317 130 603 779 (subpatch) 0;
+#N canvas 1270 34 1113 791 (subpatch) 0;
 #X obj 238 326 cnv 13 23 13 empty empty empty 20 12 0 14 -260929 -66577
 0;
 #X obj 238 383 cnv 13 23 13 empty empty empty 20 12 0 14 -260929 -66577
 0;
 #X obj 116 329 vradio 15 1 0 3 empty empty empty 0 -8 0 10 -260929
--1 -1 1;
+-1 -1 2;
 #X text 134 328 circle;
 #X text 134 343 hemisphere;
 #X text 134 358 sphere;
@@ -514,18 +514,18 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 -1 -1;
 #X text 352 376 MATRIX:;
 #X text 351 366 DISPLAY;
-#X symbolatom 313 327 0 0 0 0 - - -;
+#X symbolatom 314 324 0 0 0 0 - - -;
 #X text 334 301 OPEN LOUDSPEAKER-;
 #X text 340 311 -POSITION FILE;
 #X obj 122 553 symbol;
 #X obj 122 582 pack s f f s;
 #X obj 262 674 outlet;
 #X obj 288 410 openpanel;
-#X obj 288 439 splitfilename /;
+#X obj 424 477 splitfilename /;
 #X msg 97 495 circ;
 #X obj 313 345 bng 10 250 50 0 empty empty empty 17 7 0 10 -258699
 -1 -1;
-#X msg 514 323 symbol;
+#X msg 449 325 symbol;
 #X text 325 341 NEW/CLEAR POS;
 #X obj 342 651 pp set;
 #X obj 343 676 outlet;
@@ -653,14 +653,15 @@ H;
 #X connect 16 0 68 0;
 #X connect 19 0 26 0;
 #X connect 20 0 29 0;
-#X connect 23 0 27 3;
 #X connect 26 0 27 0;
 #X connect 27 0 41 0;
 #X connect 29 0 30 0;
+#X connect 29 0 27 3;
 #X connect 30 1 23 0;
 #X connect 31 0 8 0;
 #X connect 32 0 33 0;
 #X connect 33 0 23 0;
+#X connect 33 0 27 3;
 #X connect 35 0 36 0;
 #X connect 37 0 28 0;
 #X connect 38 0 45 0;
@@ -690,6 +691,7 @@ H;
 #X connect 51 1 11 0;
 #X connect 51 2 16 0;
 #X connect 51 3 23 0;
+#X connect 51 3 27 3;
 #X connect 52 0 55 0;
 #X connect 52 1 11 0;
 #X connect 52 2 61 0;
@@ -717,13 +719,12 @@ H;
 #X connect 73 0 68 0;
 #X connect 73 1 68 1;
 #X coords 0 -1 1 1 400 100 2 100 300;
-#X restore 54 216 pd;
-#X msg 106 349 hemi 5 29;
+#X restore 59 215 pd;
 #X obj 170 397 bng 40 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
 #X obj 70 410 cnv 15 45 15 empty empty empty 20 12 0 14 -260929 -66577
 0;
-#X obj 70 468 nbxm 29 21 4 12 -360 360 0 empty empty #000000 0 8;
+#X obj 70 468 nbxm 29 25 4 12 -360 360 0 empty empty #000000 0 8;
 #X text 588 23 LOUDSPEAKER-POSITIONS;
 #X msg 69 410 DECODE;
 #X text 794 18 Instruction Manual \; 1.) choose LOUDSPEAKER-LAYOUT
@@ -740,7 +741,7 @@ DECODEr-matrix \; 8.) SAVE DECODEr-matrix file;
 #X obj 571 70 cnv 4 1 1 empty empty 6.) 0 2 1 10 -262144 -1 0;
 #X obj 50 413 cnv 4 1 1 empty empty 7.) 0 2 1 10 -262144 -1 0;
 #X obj 149 412 cnv 4 1 1 empty empty 8.) 0 2 1 10 -262144 -1 0;
-#N canvas 41 80 429 682 calc_decoder 1;
+#N canvas 756 144 429 682 calc_decoder 0;
 #X obj 137 390 pp real_ls;
 #X msg 114 419 begin_pseudo_inverse;
 #X msg 93 444 end_pseudo_inverse;
@@ -769,7 +770,7 @@ DECODEr-matrix \; 8.) SAVE DECODEr-matrix file;
 #X msg 155 558 dim \$1 \$2;
 #N canvas 0 22 522 372 \$0_dec 0;
 #X obj 50 50 r 1002_dec_in;
-#X obj 50 100 ambi2_decode_hemi 5 29 0;
+#X obj 50 100 ambi2_decode 4 3 29 0;
 #X obj 50 150 s 1002_dec_out;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
@@ -827,28 +828,36 @@ DECODEr-matrix \; 8.) SAVE DECODEr-matrix file;
 #X msg 54 81 hemi 4 24 layouts/hemi24ls.mtx;
 #X msg 54 103 sphere 4 32 layouts/sphere32ls.mtx;
 #X text 576 1322 developper helps:;
-#X obj 903 288 s \$0_to_nbxm;
-#X obj 903 312 r \$0_from_nbxm;
-#X obj 902 257 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#N canvas 1801 260 450 300 save_ls 0;
+#X obj 101 101 cnv 15 83 58 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 419 138 s \$0_to_nbxm;
+#X obj 419 162 r \$0_from_nbxm;
+#X obj 419 193 matrix;
+#X msg 335 160 write \$1;
+#X obj 335 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 903 343 matrix;
-#X msg 819 310 write \$1;
-#X obj 819 261 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 819 287 savepanel;
+#X obj 335 137 savepanel;
+#X obj 335 89 t b b;
+#X obj 123 138 bng 15 250 50 0 empty empty save 17 7 0 10 -258699 -1
+-1;
+#X text 109 107 LS layout;
+#X connect 2 0 3 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 5 0;
+#X connect 7 1 1 0;
+#X connect 8 0 7 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
+#X restore 777 267 pd save_ls;
 #X connect 11 0 14 0;
 #X connect 12 0 14 0;
 #X connect 13 0 14 0;
 #X connect 14 0 0 0;
-#X connect 14 1 15 0;
-#X connect 16 0 31 1;
-#X connect 20 0 31 0;
-#X connect 31 0 18 0;
+#X connect 15 0 30 1;
+#X connect 19 0 30 0;
+#X connect 30 0 17 0;
+#X connect 38 0 14 0;
 #X connect 39 0 14 0;
 #X connect 40 0 14 0;
-#X connect 41 0 14 0;
-#X connect 44 0 46 0;
-#X connect 45 0 43 0;
-#X connect 47 0 46 0;
-#X connect 48 0 49 0;
-#X connect 49 0 47 0;
