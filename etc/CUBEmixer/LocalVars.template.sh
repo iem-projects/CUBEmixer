@@ -23,7 +23,7 @@
 PD_PATH="-path mylib:.:lib:lib/abs/:lib/libs/:lib/plugins/:lib/extensions/:lib/GUI/:lib/DSP/:lib/GUI/abs:lib/DSP/abs:lib/libs/iemabs:lib/libs/zexyabs"
 PD_HELPPATH="-helppath lib/helps"
 ETC_PATH="-path etc/CUBEmixer"
-PD_LIB="-lib zexy:iemlib1:iemlib2:iemmatrix:iem_ambi:iem_bin_ambi:iemgui:iem_spec2"
+PD_LIB="-lib zexy:iemlib1:iemlib2:iemmatrix:iem_ambi:iem_ambi2:iem_bin_ambi:iemgui:iem_spec2"
 
 ##
 ## settings regarding only the GUI-part of the CUBEmixer
