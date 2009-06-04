@@ -1,5 +1,5 @@
 #N canvas 1362 0 1148 844 10;
-#N canvas 445 0 1198 565 (subpatch) 1;
+#N canvas 445 0 1198 565 (subpatch) 0;
 #X obj 48 43 inlet;
 #X text 209 33 list \; 1.arg: <symbol> kind of loudspeaker arrangement
 \; [circle \, hemisphere \, sphere] \; 2.arg: <float> ambisonic order
@@ -491,7 +491,7 @@ obj 50 100 ambi2_decode \$1 2 \$2 0 \; pd-dec obj 50 150 s dec_out
 #X obj 238 383 cnv 13 23 13 empty empty empty 20 12 0 14 -260929 -66577
 0;
 #X obj 116 329 vradio 15 1 0 3 empty empty empty 0 -8 0 10 -260929
--1 -1 2;
+-1 -1 0;
 #X text 134 328 circle;
 #X text 134 343 hemisphere;
 #X text 134 358 sphere;
@@ -719,7 +719,7 @@ H;
 #X connect 73 0 68 0;
 #X connect 73 1 68 1;
 #X coords 0 -1 1 1 400 100 2 100 300;
-#X restore 59 215 pd;
+#X restore 57 215 pd;
 #X obj 170 397 bng 40 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
 #X obj 70 410 cnv 15 45 15 empty empty empty 20 12 0 14 -260929 -66577
