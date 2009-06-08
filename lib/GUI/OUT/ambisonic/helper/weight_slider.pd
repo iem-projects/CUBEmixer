@@ -1,0 +1,58 @@
+#N canvas 0 175 786 411 10;
+#X obj 100 102 vsl 25 128 -2 2 0 0 \$0-slider \$0-slider \$1 0 -9 0
+10 -262144 -1 -1 9800 1;
+#X obj 81 40 namecanvas \$0-myslider;
+#X obj 100 165 cnv 2 12 2 empty \$0-zero empty 20 12 0 14 -128992 -66577
+0;
+#N canvas 531 258 731 473 gui 0;
+#X obj 183 330 s \$0-myslider;
+#X msg 183 297 donecanvasdialog 1 -1 3 0 -1 1 1 \$1 \$2 100 100;
+#X obj 183 98 loadbang;
+#X obj 183 183 t f f;
+#X obj 183 220 t f f;
+#X obj 383 248 s \$0-zero;
+#X obj 183 141 max 8;
+#X obj 183 120 i \$2;
+#X obj 266 213 s \$0-slider;
+#X msg 262 180 size \$1 128;
+#X msg 160 61 bang;
+#X obj 183 269 pack 15 133;
+#X obj 383 199 / 2;
+#X msg 383 223 vis_size \$1 2;
+#X connect 1 0 0 0;
+#X connect 2 0 7 0;
+#X connect 3 0 4 0;
+#X connect 3 1 9 0;
+#X connect 3 1 12 0;
+#X connect 4 0 11 0;
+#X connect 6 0 3 0;
+#X connect 7 0 6 0;
+#X connect 9 0 8 0;
+#X connect 10 0 7 0;
+#X connect 11 0 1 0;
+#X connect 12 0 13 0;
+#X connect 13 0 5 0;
+#X restore 160 147 pd gui;
+#X obj 278 66 loadbang;
+#X obj 620 277 pack 0 \$1;
+#X msg 620 301 \$2 \$1;
+#X obj 458 70 r \$3-weight;
+#X obj 620 321 s \$3-weight;
+#X obj 458 92 route \$1;
+#X msg 458 124 set \$1;
+#X obj 112 134 cnv 2 12 2 empty \$0-zero empty 20 12 0 14 -128992 -66577
+0;
+#X obj 112 197 cnv 2 12 2 empty \$0-zero empty 20 12 0 14 -128992 -66577
+0;
+#X msg 278 88 1;
+#X obj 562 72 r \$3-setweight;
+#X connect 0 0 5 0;
+#X connect 4 0 13 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 7 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 0;
+#X connect 13 0 0 0;
+#X connect 14 0 9 0;
+#X coords 0 -1 1 1 25 133 2 100 100;

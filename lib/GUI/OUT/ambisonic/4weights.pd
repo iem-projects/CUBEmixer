@@ -1,0 +1,9 @@
+#N canvas 0 0 450 300 10;
+#X obj 101 101 cnv 15 183 148 empty empty empty 10 12 0 14 -195568
+-66577 0;
+#X obj 119 115 helper/weight_slider 0 25 \$1;
+#X obj 209 115 helper/weight_slider 3 25 \$1;
+#X obj 149 115 helper/weight_slider 1 25 \$1;
+#X obj 179 115 helper/weight_slider 2 25 \$1;
+#X obj 239 115 helper/weight_slider 4 25 \$1;
+#X coords 0 -1 1 1 185 150 2 100 100;
