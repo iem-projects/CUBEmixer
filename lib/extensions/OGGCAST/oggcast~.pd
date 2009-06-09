@@ -1,0 +1,9 @@
+#N canvas 0 0 450 469 10;
+#X obj 167 130 inlet~;
+#X obj 246 131 inlet~;
+#X obj 186 204 outlet;
+#X obj 113 309 loadbang;
+#X obj 113 362 print warning;
+#X msg 113 335 using dummy [oggcast~] replacement;
+#X connect 3 0 5 0;
+#X connect 5 0 4 0;
