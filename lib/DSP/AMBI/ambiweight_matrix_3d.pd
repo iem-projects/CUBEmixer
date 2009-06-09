@@ -1,6 +1,6 @@
-#N canvas 236 103 370 459 10;
+#N canvas 236 103 719 540 10;
 #X obj 101 58 inlet list;
-#X obj 101 391 outlet matrix;
+#X obj 101 421 outlet matrix;
 #X obj 119 94 length;
 #X obj 101 248 i;
 #X obj 125 248 + 1;
@@ -15,7 +15,10 @@
 #X obj 119 131 *;
 #X obj 101 76 t l l b;
 #X obj 101 183 repack 1;
-#X obj 101 356 mtx_diag;
+#X obj 101 386 mtx_diag;
+#X text 95 37 weights per order: e.g. "w0 w1 w2";
+#X text 111 358 weights per channel: e.g. "w0 w1 w1 w1 w2 w2 w2 w2
+w2";
 #X connect 0 0 14 0;
 #X connect 2 0 12 0;
 #X connect 3 0 4 0;
