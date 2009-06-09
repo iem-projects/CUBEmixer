@@ -1,11 +1,11 @@
-#N canvas 95 188 853 587 10;
+#N canvas 480 244 853 587 10;
 #X obj 548 119 r DSP_MIX_INTERPOL_TIME;
 #X obj 495 277 dbtorms;
 #X obj 495 357 f 0;
 #X msg 727 165 rho_z \$1;
 #X msg 222 169 interpol_time \$1;
 #X obj 727 74 inlet rot/Z;
-#N canvas 1308 333 868 511 ambi_dec_read_matrix 0;
+#N canvas 183 245 868 511 ambi_dec_read_matrix 0;
 #X obj 292 189 ambiweight_matrix;
 #X obj 359 35 inlet weights;
 #X obj 292 162 list 1 1 1 1 1 1;
@@ -60,7 +60,6 @@
 #X msg 341 239 \$1 \$1;
 #X obj 125 109 ambidecoder_readmatrix \$1 \$2;
 #X text 285 92 24 25;
-#X obj 471 195 LATER ambiweights need notion of order!;
 #X connect 0 0 17 1;
 #X connect 1 0 9 0;
 #X connect 2 0 0 0;
