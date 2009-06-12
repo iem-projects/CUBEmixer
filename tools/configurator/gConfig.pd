@@ -1,12 +1,12 @@
 #N canvas 96 139 1041 516 10;
 #X obj 101 101 cnv 15 398 40 empty empty I/O 10 12 0 14 -233017 -66577
 0;
-#X obj 167 123 nbx 5 14 0 128 0 0 \$0_adcs \$0_adcs ADCs 0 -8 0 10
--262144 -1 -1 24 256;
+#X obj 148 123 nbx 5 14 0 128 0 0 \$0_adcs \$0_adcs ADCs 0 -8 0 10
+-262144 -1 -1 64 256;
 #X obj 101 146 cnv 15 398 40 empty empty channel 10 12 0 14 -191407
 -66577 0;
 #X obj 186 168 nbx 5 14 0 64 0 0 \$0_channels \$0_channels CHANNELs
-0 -8 0 10 -262144 -1 -1 16 256;
+0 -8 0 10 -262144 -1 -1 24 256;
 #X obj 266 168 nbx 5 14 0 16 0 0 \$0_fx \$0_fx FX-slots 0 -8 0 10 -262144
 -1 -1 4 256;
 #X obj 101 299 cnv 15 398 40 empty empty BUSses 10 12 0 14 -228856
@@ -30,7 +30,7 @@
 #X obj 459 360 bng 38 250 50 0 \$0_generate \$0_generate empty 17 7
 0 10 -258113 -257985 -1;
 #X obj 329 382 tgl 12 0 \$0_force \$0_force overwrite 17 7 0 10 -262144
--1 -191407 0 1;
+-1 -191407 1 1;
 #X obj 459 440 route 0;
 #X msg 459 402 0;
 #X obj 101 192 cnv 15 398 40 empty empty AUX 10 12 0 14 -228856 -66577
@@ -167,7 +167,7 @@
 #X msg 827 254 2;
 #X msg 70 38 name type \, options sphere hemi circ;
 #X obj 426 271 nbx 5 14 0 300 0 0 \$0_ambidacs \$0_ambidacs DACs 0
--8 0 10 -262144 -1 -1 24 256;
+-8 0 10 -262144 -1 -1 29 256;
 #X obj 866 56 r \$0_ambiorder;
 #X obj 779 82 t b f;
 #X obj 769 163 calc_ambichans;
@@ -182,8 +182,8 @@
 #X obj 566 51 symbol;
 #X obj 136 455 saveload_settings \$0;
 #X obj 402 32 r \$0_daccs;
-#N canvas 1349 334 450 373 dacrouting 0;
-#X obj 225 174 r \$0-dacrouting;
+#N canvas 850 203 600 373 dacrouting 0;
+#X obj 224 171 r \$0-dacrouting;
 #X obj 225 296 dacrouter \$0;
 #X obj 225 253 pack 0 0;
 #X obj 225 229 f;
@@ -197,16 +197,20 @@
 #X connect 4 0 3 0;
 #X connect 5 0 3 1;
 #X connect 6 0 2 1;
-#X restore 862 410 pd dacrouting;
+#X restore 793 369 pd dacrouting;
 #X obj 459 459 generators ../../lib \$0;
-#X obj 277 137 cnv 2 200 2 empty empty empty 20 12 0 14 -162280 -66577
+#X obj 211 137 cnv 2 280 2 empty empty empty 20 12 0 14 -162280 -66577
 0;
-#X obj 277 123 nbx 5 14 0 128 0 0 \$0_dacs \$0_dacs DACs 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 342 123 nbx 5 14 0 30 0 0 \$0_daccs \$0_daccs compensatedDACs
-0 -8 0 10 -262144 -1 -1 0 256;
-#X obj 461 121 bng 15 250 50 0 \$0-dacrouting \$0-dacrouting routing
+#X obj 211 123 nbx 5 14 0 128 0 0 \$0_dacs \$0_dacs DACs 0 -8 0 10
+-262144 -1 -1 67 256;
+#X obj 276 123 nbx 5 14 0 67 0 0 \$0_daccs \$0_daccs compensatedDACs
+0 -8 0 10 -262144 -1 -1 29 256;
+#X obj 390 121 bng 15 250 50 0 \$0-dacrouting \$0-dacrouting routing
 -20 -7 0 10 -203904 -4160 -1;
+#X obj 443 121 bng 15 250 50 0 dac_routing_save dac_routing_save save
+17 7 0 10 -257985 -1 -1;
+#X obj 443 106 bng 15 250 50 0 dac_routing_load dac_routing_load load
+17 7 0 10 -4034 -1 -1;
 #X connect 10 0 24 0;
 #X connect 15 0 18 0;
 #X connect 16 0 33 0;
