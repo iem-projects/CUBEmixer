@@ -13,5 +13,6 @@
 #X obj 111 151 REV2/DSP;
 #X obj 43 172 RRR/DSP;
 #X obj 45 243 OGGCAST/DSP;
+#X obj 157 206 TESTSPK/DSP;
 #X connect 1 0 6 0;
 #X connect 1 0 7 0;
