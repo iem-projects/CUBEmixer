@@ -1,4 +1,4 @@
-#N canvas 214 90 323 367 10;
+#N canvas 81 395 323 367 10;
 #X obj 157 33 r calibrate_activate;
 #X obj 157 58 select \$1;
 #X obj 157 120 switch~;
@@ -9,10 +9,12 @@
 #X obj 27 192 *~;
 #X obj 40 173 line~;
 #X msg 41 155 1 100;
-#X msg 58 136 0;
+#X msg 67 139 0;
 #X obj 41 119 t b b;
 #X obj 157 76 t b b;
 #X obj 27 212 dac~ \$1;
+#X obj 50 27 r prepare_all;
+#X obj 50 49 t b f;
 #X connect 0 0 1 0;
 #X connect 1 0 12 0;
 #X connect 1 1 5 0;
@@ -28,3 +30,6 @@
 #X connect 11 1 10 0;
 #X connect 12 0 11 0;
 #X connect 12 1 3 0;
+#X connect 14 0 15 0;
+#X connect 15 0 11 0;
+#X connect 15 1 2 0;

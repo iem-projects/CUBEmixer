@@ -1,8 +1,23 @@
-#N canvas 189 52 719 688 12;
-#N canvas 441 514 686 382 IN~OUT 0;
+#N canvas 491 47 719 688 12;
+#N canvas 421 582 1028 549 IN~OUT 0;
 #X obj 23 29 noise~;
-#X obj 183 110 s~ IN;
 #X obj 23 130 s~ OUT~;
+#X obj 23 86 *~ 0;
+#X obj 42 47 r outgain;
+#X obj 42 66 min 1;
+#X obj 23 109 quantize~;
+#X msg 115 35 16bit;
+#X obj 115 17 loadbang;
+#X msg 182 34 8bit;
+#X obj 320 37 r pd;
+#X obj 320 62 route dsp;
+#X obj 329 198 s \$0-dspstate;
+#X msg 321 164 color \$1 0;
+#X obj 320 93 select 0 1;
+#X msg 318 118 13;
+#X msg 359 123 16;
+#X obj 407 87 loadbang;
+#X obj 305 236 out_calibrate 25;
 #X obj 64 162 out_calibrate 1;
 #X obj 181 162 out_calibrate 2;
 #X obj 64 179 out_calibrate 3;
@@ -27,49 +42,38 @@
 #X obj 181 341 out_calibrate 22;
 #X obj 64 358 out_calibrate 23;
 #X obj 181 358 out_calibrate 24;
-#X obj 23 86 *~ 0;
-#X obj 42 47 r outgain;
-#X obj 42 66 min 1;
-#X obj 23 109 quantize~;
-#X msg 115 35 16bit;
-#X obj 115 17 loadbang;
-#X msg 182 34 8bit;
-#X obj 364 66 r pd;
-#X obj 364 91 route dsp;
-#X obj 373 227 s \$0-dspstate;
-#X msg 365 193 color \$1 0;
-#X obj 364 122 select 0 1;
-#X msg 362 147 13;
-#X msg 403 152 16;
-#X obj 451 116 loadbang;
-#X obj 183 79 adc~ 9;
-#X connect 0 0 27 0;
-#X connect 27 0 30 0;
-#X connect 28 0 29 0;
-#X connect 29 0 27 1;
-#X connect 30 0 2 0;
-#X connect 31 0 30 0;
-#X connect 32 0 31 0;
-#X connect 33 0 30 0;
-#X connect 34 0 35 0;
-#X connect 35 0 38 0;
-#X connect 37 0 36 0;
-#X connect 38 0 39 0;
-#X connect 38 1 40 0;
-#X connect 39 0 37 0;
-#X connect 40 0 37 0;
-#X connect 41 0 39 0;
-#X connect 42 0 1 0;
-#X restore 565 474 pd IN~OUT;
-#X obj 461 84 r~ IN;
-#X obj 461 103 env~;
-#X floatatom 461 123 4 0 0 0 - - -;
-#X msg 460 471 bang;
-#X obj 460 492 s t_scope;
-#X obj 460 339 s calibrate_activate;
-#X floatatom 460 318 4 0 0 0 - - -;
-#X floatatom 460 378 4 0 0 0 - - -;
-#X obj 460 357 r calibrate_activate;
+#X obj 305 252 out_calibrate 26;
+#X obj 305 270 out_calibrate 27;
+#X obj 305 287 out_calibrate 28;
+#X obj 305 307 out_calibrate 29;
+#X obj 305 323 out_calibrate 30;
+#X obj 305 341 out_calibrate 31;
+#X obj 305 360 out_calibrate 32;
+#X connect 0 0 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 1;
+#X connect 5 0 1 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 5 0;
+#X connect 9 0 10 0;
+#X connect 10 0 13 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 13 1 15 0;
+#X connect 14 0 12 0;
+#X connect 15 0 12 0;
+#X connect 16 0 14 0;
+#X restore 586 474 pd IN~OUT;
+#X obj 477 103 env~;
+#X floatatom 477 123 4 0 0 0 - - -;
+#X msg 481 471 bang;
+#X obj 481 492 s t_scope;
+#X obj 477 339 s calibrate_activate;
+#X floatatom 477 318 4 0 0 0 - - -;
+#X floatatom 477 378 4 0 0 0 - - -;
+#X obj 477 357 r calibrate_activate;
 #N canvas 371 204 295 230 samp2m 0;
 #X obj 136 39 inlet;
 #X obj 173 74 samplerate~;
@@ -91,7 +95,7 @@
 #X connect 8 0 9 0;
 #X connect 9 0 6 0;
 #X restore 568 130 pd samp2m;
-#X text 499 378 current speaker;
+#X text 516 378 current speaker;
 #X floatatom 568 148 4 0 0 0 - - -;
 #N canvas 520 287 520 236 save 0;
 #X obj 79 22 inlet;
@@ -122,7 +126,7 @@
 #X connect 11 0 10 0;
 #X connect 11 1 12 0;
 #X connect 12 0 7 1;
-#X restore 460 441 pd save raumimpulsantwort;
+#X restore 481 441 pd save raumimpulsantwort;
 #X text 559 171 dist[m];
 #X obj 568 108 unpack;
 #X obj 634 130 rmstodb;
@@ -139,11 +143,11 @@
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 4 0 5 0;
-#X restore 565 494 pd printer;
-#X text 496 319 activate speaker;
-#X msg 498 414 auto on;
-#X msg 555 414 auto off;
-#X msg 460 413 bang;
+#X restore 585 495 pd printer;
+#X text 513 319 activate speaker;
+#X msg 519 414 auto on;
+#X msg 576 414 auto off;
+#X msg 481 413 bang;
 #N canvas 156 72 1249 835 readme 0;
 #X text 60 70 this is the calibration-patch !!;
 #X text 62 86 you will need this for calibrating your audio-setup.
@@ -169,8 +173,8 @@ data !!;
 #X text 650 42 the actual measurement:;
 #X text 679 55 measuring your audio-system is (hopefully) made easy
 with this patch:;
-#X text 693 207 distortion will also distort your measurement;
-#X text 691 108 1.) adjust the output level as needed by your system.
+#X text 693 215 distortion will also distort your measurement;
+#X text 691 116 1.) adjust the output level as needed by your system.
 remember that a level of 100dB equals the maximum digital output of
 any soundcard. since you might use audio-hardware (like limiters) after
 your D/A-conversion \, it might be a good idea \, to adjust the level
@@ -269,18 +273,20 @@ maybe want to test the latency of your PC+soundcard. there is a "LATENCY.pd"
 file around somewhere in this directory \, which you can use.;
 #X text 82 201 first of all you should set up your speakers in a proper
 way.;
+#X text 680 83 there are 8 inputs \, please open an assign your adc
+\, then select the proper one with gain;
 #X restore 554 15 pd readme;
 #X text 447 15 what is this ?;
 #X text 273 16 CALIBRATOR patch;
 #X text 273 26 ================;
-#X obj 461 170 vsl 15 128 0 100 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 6651 1;
-#X obj 482 169 > 99;
-#X obj 481 219 bng 30 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+#X obj 477 170 vsl 15 128 0 100 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 498 169 > 99;
+#X obj 497 219 bng 30 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X obj 481 191 sel 1;
-#X text 481 249 CLIP;
-#X obj 35 76 cnv 15 400 600 empty empty empty 20 12 0 14 -233017 -66577
+#X obj 497 191 sel 1;
+#X text 497 249 CLIP;
+#X obj 19 76 cnv 15 440 600 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X floatatom 208 423 4 0 0 0 - - -;
 #X msg 208 379 START;
@@ -342,36 +348,153 @@ can be found in this directory;
 -66577 0;
 #X text 213 608 copy the matrix to CUBEmixer/etc/CUBEmixer/compensation.mtx
 ;
-#X obj 35 14 cnv 15 100 60 empty \$0-dspstate empty 20 12 0 14 -24198
+#X obj 35 14 cnv 15 100 60 empty \$0-dspstate empty 20 12 0 14 -258699
 -262144 0;
 #X msg 50 27 \; pd dsp 1;
 #X obj 231 150 nbx 3 14 0 512 0 0 speakers speakers num:speakers 0
 -8 0 10 -262144 -1 -1 24 256;
 #X text 43 148 1 set number of speakers;
 #X msg 206 484 write compensation.mtx;
+#N canvas 912 362 680 257 INS 0;
+#X obj 27 31 cnv 15 438 68 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 24 3 adc~ 1;
+#X obj 24 128 gain;
+#X obj 33 157 env~;
+#X obj 31 48 nbx 3 14 -1e+37 1e+37 0 0 empty empty gain 0 -8 0 10 -257985
+-1 -1 0 256;
+#X obj 32 79 nbx 3 14 -1e+37 1e+37 0 0 empty empty vu 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 75 129 gain;
+#X obj 84 158 env~;
+#X obj 82 49 nbx 3 14 -1e+37 1e+37 0 0 empty empty gain 0 -8 0 10 -257985
+-1 -1 0 256;
+#X obj 83 80 nbx 3 14 -1e+37 1e+37 0 0 empty empty vu 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 128 130 gain;
+#X obj 137 159 env~;
+#X obj 135 50 nbx 3 14 -1e+37 1e+37 0 0 empty empty gain 0 -8 0 10
+-257985 -1 -1 0 256;
+#X obj 136 81 nbx 3 14 -1e+37 1e+37 0 0 empty empty vu 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 180 130 gain;
+#X obj 189 159 env~;
+#X obj 187 50 nbx 3 14 -1e+37 1e+37 0 0 empty empty gain 0 -8 0 10
+-257985 -1 -1 0 256;
+#X obj 188 81 nbx 3 14 -1e+37 1e+37 0 0 empty empty vu 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 236 130 gain;
+#X obj 245 159 env~;
+#X obj 243 50 nbx 3 14 -1e+37 1e+37 0 0 empty empty gain 0 -8 0 10
+-257985 -1 -1 0 256;
+#X obj 244 81 nbx 3 14 -1e+37 1e+37 0 0 empty empty vu 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 290 131 gain;
+#X obj 299 160 env~;
+#X obj 297 51 nbx 3 14 -1e+37 1e+37 0 0 empty empty gain 0 -8 0 10
+-257985 -1 -1 0 256;
+#X obj 298 82 nbx 3 14 -1e+37 1e+37 0 0 empty empty vu 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 341 132 gain;
+#X obj 350 161 env~;
+#X obj 348 52 nbx 3 14 -1e+37 1e+37 0 0 empty empty gain 0 -8 0 10
+-257985 -1 -1 0 256;
+#X obj 349 83 nbx 3 14 -1e+37 1e+37 0 0 empty empty vu 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 391 131 gain;
+#X obj 400 160 env~;
+#X obj 398 51 nbx 3 14 -1e+37 1e+37 0 0 empty empty gain 0 -8 0 10
+-257985 -1 -1 0 256;
+#X obj 399 82 nbx 3 14 -1e+37 1e+37 0 0 empty empty vu 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 75 4 adc~ 2;
+#X obj 128 5 adc~ 3;
+#X obj 180 5 adc~ 4;
+#X obj 236 4 adc~ 5;
+#X obj 290 6 adc~ 6;
+#X obj 341 7 adc~ 7;
+#X obj 391 6 adc~ 8;
+#X obj 25 188 throw~ IN;
+#X obj 74 218 throw~ IN;
+#X obj 181 220 throw~ IN;
+#X obj 290 220 throw~ IN;
+#X obj 390 224 throw~ IN;
+#X obj 129 190 throw~ IN;
+#X obj 237 190 throw~ IN;
+#X obj 342 192 throw~ IN;
+#X obj 473 222 s~ IN;
+#X obj 471 187 catch~ IN;
+#X obj 443 61 tgl 15 0 prepare_all prepare_all ALL 0 -7 0 10 -257985
+-1 -1 0 1;
+#X text 466 58 noise to all spk;
+#X text 426 70 noise;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
-#X connect 3 0 29 0;
-#X connect 3 0 30 0;
-#X connect 4 0 5 0;
-#X connect 7 0 6 0;
-#X connect 9 0 8 0;
-#X connect 10 0 12 0;
-#X connect 15 0 10 0;
-#X connect 15 1 16 0;
-#X connect 16 0 17 0;
-#X connect 18 0 15 0;
-#X connect 22 0 13 0;
-#X connect 23 0 13 0;
-#X connect 24 0 13 0;
-#X connect 30 0 32 0;
-#X connect 32 0 31 0;
-#X connect 36 0 49 0;
-#X connect 38 0 39 0;
-#X connect 39 0 37 0;
-#X connect 40 0 36 0;
-#X connect 41 0 40 0;
-#X connect 44 0 43 0;
-#X connect 46 0 49 1;
-#X connect 49 0 35 0;
-#X connect 61 0 43 0;
+#X connect 2 0 41 0;
+#X connect 3 0 5 0;
+#X connect 4 0 2 1;
+#X connect 6 0 7 0;
+#X connect 6 0 42 0;
+#X connect 7 0 9 0;
+#X connect 8 0 6 1;
+#X connect 10 0 11 0;
+#X connect 10 0 46 0;
+#X connect 11 0 13 0;
+#X connect 12 0 10 1;
+#X connect 14 0 15 0;
+#X connect 14 0 43 0;
+#X connect 15 0 17 0;
+#X connect 16 0 14 1;
+#X connect 18 0 19 0;
+#X connect 18 0 47 0;
+#X connect 19 0 21 0;
+#X connect 20 0 18 1;
+#X connect 22 0 23 0;
+#X connect 22 0 44 0;
+#X connect 23 0 25 0;
+#X connect 24 0 22 1;
+#X connect 26 0 27 0;
+#X connect 26 0 48 0;
+#X connect 27 0 29 0;
+#X connect 28 0 26 1;
+#X connect 30 0 31 0;
+#X connect 30 0 45 0;
+#X connect 31 0 33 0;
+#X connect 32 0 30 1;
+#X connect 34 0 6 0;
+#X connect 35 0 10 0;
+#X connect 36 0 14 0;
+#X connect 37 0 18 0;
+#X connect 38 0 22 0;
+#X connect 39 0 26 0;
+#X connect 40 0 30 0;
+#X connect 50 0 49 0;
+#X coords 0 -1 1 1 440 70 1 25 30;
+#X restore 18 170 pd INS;
+#X obj 477 84 r~ IN;
+#X connect 1 0 2 0;
+#X connect 2 0 28 0;
+#X connect 2 0 29 0;
+#X connect 3 0 4 0;
+#X connect 6 0 5 0;
+#X connect 8 0 7 0;
+#X connect 9 0 11 0;
+#X connect 14 0 9 0;
+#X connect 14 1 15 0;
+#X connect 15 0 16 0;
+#X connect 17 0 14 0;
+#X connect 21 0 12 0;
+#X connect 22 0 12 0;
+#X connect 23 0 12 0;
+#X connect 29 0 31 0;
+#X connect 31 0 30 0;
+#X connect 35 0 48 0;
+#X connect 37 0 38 0;
+#X connect 38 0 36 0;
+#X connect 39 0 35 0;
+#X connect 40 0 39 0;
+#X connect 43 0 42 0;
+#X connect 45 0 48 1;
+#X connect 48 0 34 0;
+#X connect 60 0 42 0;
+#X connect 62 0 1 0;
