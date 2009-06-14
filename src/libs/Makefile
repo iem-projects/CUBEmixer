@@ -86,7 +86,7 @@ iem_ambi-build:
 
 iem_ambi-locinstall: iem_ambi-build
 	cp iem_ambi/iem_ambi.$(EXT) $(LOCINSTALL_DIR)
-	cp iem_ambi/*-help.pd $(LOCHELP_DIR)
+	cp iem_ambi/help/*-help.pd $(LOCHELP_DIR)
 
 iem_ambi: iem_ambi-locinstall
 
@@ -100,7 +100,7 @@ iem_ambi2-build:
 
 iem_ambi2-locinstall: iem_ambi2-build
 	cp iem_ambi2/src/iem_ambi2.$(EXT) $(LOCINSTALL_DIR)
-	cp iem_ambi/*-help.pd $(LOCHELP_DIR)
+	cp iem_ambi2/*-help.pd $(LOCHELP_DIR)
 
 iem_ambi2: iem_ambi2-locinstall
 
@@ -115,7 +115,7 @@ iem_bin_ambi-build:
 
 iem_bin_ambi-locinstall: iem_bin_ambi-build
 	cp iem_bin_ambi/src/iem_bin_ambi.$(EXT) $(LOCINSTALL_DIR)
-	cp iem_bin_ambi/*-help.pd $(LOCHELP_DIR)
+	cp iem_bin_ambi/help/*-help.pd $(LOCHELP_DIR)
 
 iem_bin_ambi: iem_bin_ambi-locinstall
 
@@ -128,7 +128,7 @@ iemgui-build:
 
 iemgui-locinstall: iemgui-build
 	cp iemgui/iemgui.$(EXT) $(LOCINSTALL_DIR)
-	cp iemgui/*-help.pd $(LOCHELP_DIR)
+	cp iemgui/help/*-help.pd $(LOCHELP_DIR)
 
 
 iemgui: iemgui-locinstall
@@ -142,7 +142,7 @@ iem_spec2-build:
 
 iem_spec2-locinstall: iem_spec2-build
 	cp iem_spec2/iem_spec2.$(EXT) $(LOCINSTALL_DIR)
-	cp iem_spec2/*-help.pd $(LOCHELP_DIR)
+	cp iem_spec2/help/*-help.pd $(LOCHELP_DIR)
 
 iem_spec2: iem_spec2-locinstall
 

@@ -14,9 +14,13 @@ PDCONFIGS=-enable-alsa --enable-jack
 # default build and locally install
 install: locinstall
 
-pd-build: 
+pd/src/configure: pd/src/configure.in
 	cd pd/src; autoconf; ./configure --prefix=$(LOCINSTALL_DIR) $(PDCONFIGS)
+
+pd/bin/pd: pd/src/configure
 	make -C pd/src
+
+pd-build: pd/bin/pd
 
 pd-locinstall: pd-build
 	-rm -rf $(LOCINSTALL_DIR)/*
