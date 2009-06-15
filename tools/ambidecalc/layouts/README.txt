@@ -1,4 +1,5 @@
-Speaker Layouts are placed in here
+Sample Speaker Layouts are placed in here
+Please see at the files for specific notion
 
 Default examples:
   
