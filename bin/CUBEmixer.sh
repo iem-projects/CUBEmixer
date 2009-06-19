@@ -8,7 +8,7 @@
 ##  dsp_path  ... external DSP path
 ##  dsp_patch ... external DSP path
 
-ECHO=echo
+#ECHO=echo
 
 ETC=etc/CUBEmixer
 ETC_PATH="-path ${ETC}"
