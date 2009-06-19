@@ -8,15 +8,15 @@
 ##  dsp_path  ... external DSP path
 ##  dsp_patch ... external DSP path
 
-#ECHO=echo
+ECHO=echo
 
 ETC=etc/CUBEmixer
 ETC_PATH="-path ${ETC}"
 echo config directories: $ETC $LOCALETC
 
-if [ ! -d ${LOCALETC} ]; then
-  LOCALETC=${ETC}
+if [ "x"{LOCALETC} != "x" -a -d ${LOCALETC} ]; then
   LOCALETC_PATH="-path ${LOCALETC}"
+  echo using LOCALETC: ${LOCALETC}
 fi
 
 CUBEMIXERPATH=$(dirname $0)/..
@@ -92,9 +92,6 @@ fi
 #if [ ${DSP_DACS} -gt 0 ]; then
 #  DSP_AUDIO="${DSP_AUDIO} -outchannels ${DSP_DACS}"
 #fi
-if [ "x${ECHO}" == "xecho" ]; then
-  echo localetc_path: ${LOCALETC_PATH}
-fi
 
 if [ "x${NOGUI}" = "x" ]; then
 ${ECHO} ${PD} -noprefs ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${LOCALETC_PATH} ${ETC_PATH} ${GUI_EXTPATH} ${GUI_PATH} ${PD_PATH} ${PD_HELPPATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH}  ${GUI_EXTPATCH} \
