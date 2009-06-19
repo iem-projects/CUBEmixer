@@ -14,10 +14,8 @@ ETC=etc/CUBEmixer
 ETC_PATH="-path ${ETC}"
 echo config directories: $ETC $LOCALETC
 
-LOCALETC_PATH=
 if [ ! -d ${LOCALETC} ]; then
   LOCALETC=${ETC}
-else
   LOCALETC_PATH="-path ${LOCALETC}"
 fi
 
@@ -30,7 +28,7 @@ CUBEMIXERPATH=$(pwd)
 
 LOCALVARSTEMPLATE="${ETC}/LocalVars.template.sh"
 
-STARTUPPATCHES="${LOCALETC}/configured.sh"
+STARTUPPATCHES="${ETC}/configured.sh"
 LOCALVARS="${LOCALETC}/LocalVars.sh"
 
 PD_INSTALL="lib/pd/bin"
@@ -94,7 +92,9 @@ fi
 #if [ ${DSP_DACS} -gt 0 ]; then
 #  DSP_AUDIO="${DSP_AUDIO} -outchannels ${DSP_DACS}"
 #fi
-
+if [ "x${ECHO}" == "xecho" ]; then
+  echo localetc_path: ${LOCALETC_PATH}
+fi
 
 if [ "x${NOGUI}" = "x" ]; then
 ${ECHO} ${PD} -noprefs ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${LOCALETC_PATH} ${ETC_PATH} ${GUI_EXTPATH} ${GUI_PATH} ${PD_PATH} ${PD_HELPPATH} ${GUI_LIB} ${PD_LIB} ${GUI_PATCH}  ${GUI_EXTPATCH} \
@@ -102,6 +102,8 @@ ${ECHO} ${PD} -noprefs ${GUI_AUDIO} ${GUI_MIDI} ${GUI_OPTIONS} ${PD_OPTIONS} ${L
 fi
 
 if [ "x${NODSP}" = "x" ]; then
-${ECHO} ${PD} -noprefs ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} ${LOCALETC_PATH} ${ETC_PATH} ${DSP_EXTPATH} ${DSP_PATH} ${PD_PATH} ${PD_HELPPATH} ${DSP_LIB} ${PD_LIB} ${DSP_PATCH}  ${DSP_EXTPATCH} \
-      -send "${DSP_MESSAGE}" -send "${PD_MESSAGE}"
+${ECHO} ${PD} -noprefs ${DSP_AUDIO} ${DSP_MIDI} ${DSP_OPTIONS} ${PD_OPTIONS} \
+${LOCALETC_PATH} ${ETC_PATH} ${DSP_EXTPATH} ${DSP_PATH} ${PD_PATH} ${PD_HELPPATH} \
+${DSP_LIB} ${PD_LIB} ${DSP_PATCH}  ${DSP_EXTPATCH} \
+-send "${DSP_MESSAGE}" -send "${PD_MESSAGE}"
 fi
