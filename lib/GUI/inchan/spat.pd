@@ -4,9 +4,9 @@
 #X obj 8 31 nbx 4 14 0 999 0 0 \$1GUIambisonic_r_fromgui \$1GUIambisonic_r_togui
 r 50 8 0 8 -262144 -1 -1 1 256;
 #X obj 8 79 nbx 4 14 -360 360 0 0 \$1GUIambisonic_phi_fromgui \$1GUIambisonic_phi_togui
-AZI 40 8 0 8 -262144 -1 -1 0 256;
-#X obj 8 55 nbx 2 14 -1e+37 1e+37 0 0 \$1GUIambisonic_theta_fromgui
-\$1GUIambisonic_theta_togui ELV 28 8 0 8 -262144 -1 -1 0 256;
+AZI 40 8 0 8 -262144 -1 -1 -61.5258 256;
+#X obj 8 55 nbx 3 14 -1e+37 1e+37 0 0 \$1GUIambisonic_theta_fromgui
+\$1GUIambisonic_theta_togui ELV 33 8 0 8 -262144 -1 -1 -19 256;
 #X obj 1 121 cnv 15 66 98 2 empty direct 10 8 0 8 -233017 -66577 0
 ;
 #X obj 4 141 tgl 15 0 \$1GUIdirect_bus1_fromgui \$1GUIdirect_bus1_togui
@@ -58,4 +58,4 @@ AZI 40 8 0 8 -262144 -1 -1 0 256;
 #X connect 27 0 26 0;
 #X connect 28 0 27 0;
 #X connect 29 0 28 0;
-#X coords 0 -1 1 1 68 100 2 0 120;
+#X coords 0 -1 1 1 68 100 2 0 0;

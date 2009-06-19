@@ -1,0 +1,7 @@
+#N canvas 0 0 632 300 10;
+#X obj 101 101 cnv 15 163 138 empty empty gui_settings 0 7 0 14 -233017
+-66577 0;
+#X obj 296 124 gui_sr_clip \$0GUIminelv /GUI/MINELV -90 89;
+#X obj 109 144 nbx 3 14 -1e+37 1e+37 0 0 \$0GUIminelv_fromgui \$0GUIminelv_togui
+MIN_ELEVATION 0 -8 0 10 -262144 -1 -1 34 256;
+#X coords 0 -1 1 1 165 140 1 100 100;
