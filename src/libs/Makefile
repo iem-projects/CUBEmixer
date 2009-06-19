@@ -219,6 +219,23 @@ pdogg: pdogg-locinstall
 pdogg-clean:
 	make -C pdogg clean
 
+########### pdogg needed for streaming  ##########################
+
+Gem-build:
+	make -C Gem/src LINUXINCLUDE="-I $(PDSOURCE)" 
+
+Gem_objects=Gem
+Gem_externals=$(Gem_objects:=.$(EXT))
+
+Gem-locinstall: Gem-build
+	cp -v Gem/src/Gem.$(EXT) $(LOCINSTALL_DIR)
+	cp -v Gem/help/* $(LOCHELP_DIR)
+
+Gem: Gem-locinstall
+
+Gem-clean:
+	make -C Gem/src clean
+
 # ############  local popup ###############
 popup-build:
 	make -C popup $(EXT)
