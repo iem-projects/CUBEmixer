@@ -1,0 +1,95 @@
+Distance in Ambisonics
+======================
+
+author: winfried ritsch
+
+Implementing a distance function in Ambisonics domain, especially for the CUBEmixer is discussed here and some pratical tricks are shown. Here is a proposal for a solution.
+
+In a first attempt we distinguish two areas, which are splitted at the ambisonics unity radius.  This is should be the radius of the actual ambisonics-sphere, but can be set as needed. In pratical usage we can indepently handle the blurring function from others. Also we can  enhance the distance reception going beyond physical limitations and real world parameters. For a more intuitive handling, we use real dimensions and introduce a virtual speed of sound.
+
+Three main effects are used for modelling the the distance, filtering, widening (blurr) and delay with reverberation, reflection can be handled additional with different tools. 
+
+Dimensions are implemented in meter, using the soundspeed default of 340 m/s.
+
+1.) Volume and Filtering as a function of  distance
+---------------------------------------------------
+
+Scaling:
+........
+
+The trick is, since we do not want a infinitly fade-out, that we define a hearing range (HR). Especially on Ambisonics productions with many sources, far away sounds can be omitted switching off the rendering of the channel to reduce cpu load.
+
+in an 3D space we can define the hearing range as a function for different directions. As a first attempt we use the model
+of a cuboid, with length, width and height as parameters.
+
+Scaling gets us a value between 0..(HR), where 0 is the center and HR is the farest point we can hear inside the cuboid in each direction.
+
+lowpass and volume
+..................
+
+A lowpass first order filter is used to simulate the air damping. We can use the lowpass also for scaling the volume of the signal, so a fade-out is also lowering the lop-frequence::
+
+ lower limit: 10Hz default
+ high limit: sampling rate/2 or 20kHz which comes first
+
+Additional an amplitude scaling is done, which is done between linear and quadratic function, since we want an  effect between and plane and free field.
+
+
+2) Blurring the signal
+----------------------
+
+If a signal comes near we cannot focus it as a point and we think of it, as if it got widened. If the source crossing the virtual middle of the room is spatialized from all around, so we can make sound pathes through the listening space, even not defined on Ambisonics.
+
+ Note: This effect happens especial for spatialisation inside the ambisonics radius which also could be handled extra or prohibited, since normally no sounds can enter the space inside the ambisonics radius. This is simulated by widening the signal.
+
+Widening is done with reducing the Ambisonics-order on encoding. Since we want a direction dependend widening, we have to pick out the right signals. This is done via bell-functions shifted (see implementation for further details).
+
+3) Delay and Reverberation
+--------------------------
+
+Early reflections should be calculated, but these depends ont the virtual room situation and should be done seperatly.
+
+Notes on old Implementations
+============================
+
+On an old implementation of distance following rules have been used. This is for documentation and providing a hand made doing upgrade path on old pieces with this spatialisation::
+
+  For each order we define a factor to scale
+
+   R = -(log(max(r,r0) - log(r0))
+
+    R ... radiusfunction
+    r ... radius
+    r0 ... smallest radius, eg. 1
+
+   S_n = exp(K_n * R) * I
+
+    I ... Input signal
+    S_n ... Signal volume for order n
+    K_n ... Scaling factor for order n
+
+  X(0,0) = 1/sqrt(2)
+
+  X(1,1) = S_1 * cos(phi) * cos(theta)
+  X(-1,1) = S_1 * sin(phi) * cos(theta)
+  X(0,1) = S_1 * sin(theta)
+
+  X(0,2) = S_2 * 1.5 * sin(theta) * sin(theta) - 0.5
+  X(1,2) = S_2 * cos(phi) * sin(2 * theta)
+  X(-1,2) = S_2 * sin(phi) * sin(2 * theta)
+  X(2,2) = S_2 * cos(2*phi) * cos^2(theta)
+  X(-2,2) = S_2 * sin(2*phi) * cos^2(theta)
+
+  X(0,3) = 0.5 * sin(theta) * (5 * sin2(theta)-3)
+  X(3,3) = 8 * sin(phi) * cos(theta) * (5 * sin^2(theta) - 1)/11
+  X(-3,3) = 8 * cos(phi) * cos(theta)*(5 * sin^2(theta) - 1)/11
+  X(2,3) = cos(2*phi) * sin(theta) * cos^2(theta)
+  X(-2,3) = sin(2*phi) * sin(theta) * cos^2(theta)
+  X(1,3) = sin(3*phi) * cos^3(theta)
+  X(-1,3) = cos(3*phi) * cos^3(theta)
+
+    phi ... azimuth
+    theta ... elevation
+    X(0,0)  X(-1,1) X(0,1) X(1,1) X(-2,2) X(-1,2) X(0,2) X(1,2) X(2,2) ... Ambisonics signals
+   
+    (unsure of numbering...)
