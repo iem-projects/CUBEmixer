@@ -13,13 +13,12 @@ Quick Instruction:
  Please start Mixer with skript located in the 'bin' folder for your
 
  linux: Cubemixer.sh
- windows: first start 'CUBEmixerDSP.bat' and then 'CubemixerGUI.bat'
 
 
 installation and configuration:
 -------------------------------
 
- see INSTALL.txt
+ see in doc folder the Installtutorial.
 
 
 Content:
@@ -40,8 +39,8 @@ Content:
   ./lib/MIDI/extern		- interface to external MIDI-sequencer
   ./lib/SEQUENCER		- cue-sequencer
 
- add-on modules: ???
-  ./lib/plugins/<pluginname>/	- DSP/GUI/MIDI/... part of plugins
+ add-on modules: 
+  ./lib/plugins/<pluginname>/	- DSP/GUI/MIDI/... place of plugins
  helpers:
   ./lib/abs			- general abstractions
   ./lib/libs			- external libraries collector (binaries, if needed and not in system)
