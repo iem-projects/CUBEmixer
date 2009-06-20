@@ -1,0 +1,43 @@
+MIDI Controllers now mapped to OSC and vice versa.
+
+Here is our scheme for assigning MIDIcontroller to the parameter.
+This is a hint likely to be changed in future, when a edit window for the maopping
+will be realized.
+
+Anyhow we prefer OSC-control to MIDI in future.
+
+Most controls are grouped in 8th in one channel. If more are used we use the next MIDI-Channel.
+
+e.g.::
+	1 FADER_GAIN: 105, ch 1
+	2 FADER_GAIN: 106, ch 1
+        ...
+	9 FADER_GAIN: 105, ch 2
+
+So here the actual numbers where $1 is the channel number:
+
+$1_IN_FADER_GAIN: 105-112
+$1 IN_SOLO		: 65-72
+$1_IN_ON	: 73-80
+$1 IN_SELECT	: 33-40
+$1_IN_LFC_GAIN	: 1-8
+$1_IN_AMBI_AZM	: 97-104
+$1_IN_AMBI_ELV	: 89-96
+$1_IN_AMBI_RAD	: 81-88
+
+$1_OUT_BUS_GAIN : 113-120
+OUT_AMBI_GAIN	: 121
+$1_OUT_LFC_GAIN	: 122-123
+OUT_MASTER_GAIN	: 124
+
+EXT_REV_MASTER_VOL: 125
+EXT_RRR_MASTER_VOL: 126
+
+
+Please note: MIDI is limited in transmission over MIDI-cables so on fast updates it is easy to
+overload a MIDI-connection with the CUBEmixer.
+
+
+Controller in CUBE are The BC{F,r}2000.
+
+How to programm see in CUBEmixer tools directory !
