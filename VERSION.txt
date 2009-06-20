@@ -1,2 +1,1 @@
-3.0RC3 -  documentation in Ambisonics site will be added soon.
-
+Version 3.0 
