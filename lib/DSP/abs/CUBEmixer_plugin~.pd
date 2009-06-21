@@ -1,7 +1,7 @@
 #N canvas 436 215 639 300 10;
 #X obj 92 35 inlet~;
 #X obj 93 272 outlet~;
-#N canvas 336 218 450 300 plugin~ 0;
+#N canvas 336 218 306 300 plugin~ 0;
 #X obj 52 70 inlet~;
 #X obj 51 235 outlet~;
 #X obj 216 67 inlet;
@@ -9,6 +9,7 @@
 #X obj 51 168 \$2/DSP \$3 \$4 \$2;
 #X connect 0 0 4 0;
 #X connect 2 0 3 0;
+#X connect 2 0 4 1;
 #X connect 4 0 1 0;
 #X restore 93 192 pd plugin~;
 #X obj 93 239 mull~ 1 50;
@@ -23,7 +24,7 @@
 #X obj 161 207 i;
 #X obj 161 74 inlet;
 #X obj 161 239 outlet switch;
-#X obj 204 267 outlet gain;
+#X obj 253 238 outlet gain;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 1 0 3 0;
@@ -50,8 +51,8 @@
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
-#X connect 4 0 3 1;
-#X connect 4 1 2 1;
+#X connect 4 0 2 1;
+#X connect 4 1 3 1;
 #X connect 5 0 4 0;
 #X connect 5 1 6 0;
 #X connect 8 0 9 0;

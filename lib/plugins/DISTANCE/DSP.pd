@@ -1,4 +1,4 @@
-#N canvas 1408 262 415 612 10;
+#N canvas 787 171 479 612 10;
 #X obj 31 38 inlet~;
 #X obj 32 513 outlet~;
 #N canvas 0 0 470 320 delwrite 0;
@@ -20,7 +20,7 @@
 #X obj 104 266 line~;
 #X obj 104 244 pack 0 100;
 #X obj 169 220 r DSP_MIX_INTERPOL_TIME;
-#X obj 104 108 receive_regname /IN/\$1/SPAT/AMBI/POS/RAD;
+#X obj 104 83 receive_regname /IN/\$1/SPAT/AMBI/POS/RAD;
 #X obj 104 201 / 0.34;
 #X text 155 201 c/1000;
 #X obj 104 164 t f f;
@@ -34,6 +34,12 @@
 #X obj 134 297 * 1.36;
 #X msg 134 360 136 \$1;
 #X obj 134 416 mtof;
+#X obj 197 291 receive_regname /IN/SPAT/AMBI/HEARINGRANGE;
+#X text 216 272 global hearing range;
+#X obj 199 327 receive_pluginparam \$1 \$2 \$3/HEARINGRANGE;
+#X text 224 309 indiviual overwrite;
+#X obj 388 58 inlet switch;
+#X obj 104 114 spigot;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
@@ -41,7 +47,7 @@
 #X connect 5 0 2 1;
 #X connect 6 0 5 0;
 #X connect 7 0 6 1;
-#X connect 8 0 12 0;
+#X connect 8 0 27 0;
 #X connect 9 0 6 0;
 #X connect 11 0 9 0;
 #X connect 11 1 19 0;
@@ -52,3 +58,5 @@
 #X connect 19 0 16 0;
 #X connect 20 0 15 0;
 #X connect 21 0 4 1;
+#X connect 26 0 27 1;
+#X connect 27 0 12 0;
