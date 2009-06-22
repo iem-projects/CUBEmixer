@@ -31,7 +31,8 @@ OBJ = $(SRC:.c=.o)
 #
 
 clean:
-	rm *.o
+	-rm *.o
+	-rm $(TARGET)
 
 all: $(OBJ)
 	@echo :: $(OBJ)
