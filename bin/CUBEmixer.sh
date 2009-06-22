@@ -14,7 +14,7 @@ ETC=etc/CUBEmixer
 ETC_PATH="-path ${ETC}"
 echo config directories: $ETC $LOCALETC
 
-if [ "x"{LOCALETC} != "x" -a -d ${LOCALETC} ]; then
+if [ -d "${LOCALETC}" ]; then
   LOCALETC_PATH="-path ${LOCALETC}"
   echo using LOCALETC: ${LOCALETC}
 fi
