@@ -37,11 +37,11 @@
 #X connect 7 0 9 0;
 #X connect 8 0 2 0;
 #X connect 9 0 8 0;
-#X restore 504 244 pd draw;
+#X restore 490 246 pd draw;
 #X obj 296 312 r ambidecoder_dimenorder;
 #X obj 297 339 unpack 3 4;
 #X obj 147 467 tabread \$0_weightfade;
-#N canvas 0 0 450 300 generate 1;
+#N canvas 0 0 450 300 generate 0;
 #X obj 33 126 until;
 #X obj 33 100 t f b;
 #X msg 112 131 set;
@@ -97,7 +97,7 @@
 #X array \$0_ampcorr 128 float 2;
 #X coords 0 10 128 0 128 100 1;
 #X restore 520 344 graph;
-#N canvas 883 589 450 300 drawcorr 1;
+#N canvas 883 589 450 300 drawcorr 0;
 #X obj 86 130 * 6.28319;
 #X obj 88 34 for++ 0 127 1;
 #X obj 89 61 t f f;
@@ -118,7 +118,7 @@
 #X connect 6 0 8 0;
 #X connect 8 0 9 0;
 #X connect 9 0 7 0;
-#X restore 529 458 pd drawcorr;
+#X restore 523 461 pd drawcorr;
 #X obj 119 522 tabread \$0_ampcorr;
 #X obj 107 342 t f b f b;
 #X obj 105 406 t b f;
