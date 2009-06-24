@@ -1,4 +1,4 @@
-#N canvas 719 296 561 238 10;
+#N canvas 616 449 561 312 10;
 #X obj 43 44 catch~ \$1_OUT;
 #X obj 42 18 inlet~;
 #X obj 42 113 *~;
@@ -11,7 +11,18 @@
 #X text 156 115 1.arg: <float> out index;
 #X text 156 142 3.arg: <float> dollar-0 unique number of parent patch
 ;
+#X obj 299 287 send_regname /DAC/\$1/VU/LEVEL;
+#X obj 299 196 prvu~;
+#X obj 299 219 unpack;
+#X obj 299 241 change;
+#X obj 299 262 pack;
 #X connect 0 0 2 0;
 #X connect 2 0 6 0;
 #X connect 2 0 7 0;
+#X connect 2 0 12 0;
 #X connect 3 0 2 1;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 13 1 15 1;
+#X connect 14 0 15 0;
+#X connect 15 0 11 0;
