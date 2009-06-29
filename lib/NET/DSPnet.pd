@@ -64,7 +64,7 @@
 #X text 460 280 this is because we now don't use DSP_setLabel to propagte
 the "<id> bang|reset" messages anymore.;
 #X text 451 248 NOTE: this used to work with DSP and GUI in the same
-instance but does not do so any more;
+instance but might not do so any more;
 #X connect 1 0 3 0;
 #X connect 1 0 7 0;
 #X connect 2 0 20 0;
