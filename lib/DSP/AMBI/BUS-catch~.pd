@@ -1,3 +1,4 @@
 #N canvas 586 186 448 315 10;
 #X obj 52 107 DSP_label AMBI_OUT \$1;
 #X obj 52 129 catchsend~ \$1_BUS;
+#X obj 208 107 DSP_label IN \$1_BUS;
