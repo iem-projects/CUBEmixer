@@ -100,6 +100,7 @@
 #X obj 73 325 AMBI/\$8\$9D\$10O_AMBIBUS~;
 #X obj 73 371 AMBI/DECODER~ \$8 \$9 \$10 \$11;
 #X obj 357 222 AMBI/Order_Weight_Morphing;
+#X obj 672 278 receive_parameter /GUI/MINELV;
 #X connect 0 0 1 0;
 #X connect 18 0 92 0;
 #X connect 21 0 90 1;
