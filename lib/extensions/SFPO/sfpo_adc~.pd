@@ -1,0 +1,12 @@
+#N canvas 159 223 450 300 10;
+#X obj 78 218 outlet~;
+#X obj 78 191 r~ \$1_ADC;
+#X msg 78 169 set \$1;
+#X obj 78 145 symbol;
+#X obj 194 151 print xxx;
+#X obj 78 113 receive_setting /EXT/SFPO/ADC/\$1/SOURCE;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 5 0 3 0;
+#X connect 5 0 4 0;
