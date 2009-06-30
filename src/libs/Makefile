@@ -82,7 +82,7 @@ folder_list-clean:
 ######### IEM AMBI ###############
 
 iem_ambi-build: 
-	make -C iem_ambi/src
+	make -C iem_ambi/src PDSOURCE=$(PDSOURCE)
 
 iem_ambi-locinstall: iem_ambi-build
 	cp iem_ambi/iem_ambi.$(EXT) $(LOCINSTALL_DIR)
@@ -111,7 +111,7 @@ iem_ambi2-clean:
 ######### IEM BIN AMBI ###############
 
 iem_bin_ambi-build:
-	make -C iem_bin_ambi/src
+	make -C iem_bin_ambi/src PDSOURCE=$(PDSOURCE)
 
 iem_bin_ambi-locinstall: iem_bin_ambi-build
 	cp iem_bin_ambi/src/iem_bin_ambi.$(EXT) $(LOCINSTALL_DIR)
