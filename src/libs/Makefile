@@ -124,7 +124,7 @@ iem_bin_ambi-clean:
 ######## IEM GUI ##################
 
 iemgui-build: 
-	make -C iemgui/src
+	make -C iemgui/src PDSOURCE=$(PDSOURCE)
 
 iemgui-locinstall: iemgui-build
 	cp iemgui/iemgui.$(EXT) $(LOCINSTALL_DIR)
