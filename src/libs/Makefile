@@ -151,7 +151,7 @@ iem_spec2-clean:
 ######## IEM LIB ##################
 
 iemlib-build:
-	make -C iemlib
+	make -C iemlib PDSOURCE=$(PDSOURCE)
 
 iemlib-locinstall: iemlib-build
 	cp iemlib/lib/*.$(EXT) $(LOCINSTALL_DIR)
@@ -238,7 +238,7 @@ Gem-clean:
 
 # ############  local popup ###############
 popup-build:
-	make -C popup $(EXT)
+	make -C popup $(EXT) PDSOURCE=$(PDSOURCE)
 
 popup-locinstall: popup-build
 	cp popup/*.$(EXT) $(LOCINSTALL_DIR)
@@ -265,7 +265,7 @@ osc: osc-locinstall
 ######## NET ##################
 
 net-build:
-	make -C net -f ../Makefile.subdir $(EXT)
+	make -C net -f ../Makefile.subdir $(EXT) PDSOURCE=$(PDSOURCE)
 
 net-locinstall: net-build
 	cp net/*.$(EXT) $(LOCINSTALL_DIR)
