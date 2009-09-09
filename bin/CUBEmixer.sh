@@ -47,7 +47,7 @@ if [ -e ${LOCALVARS} ]; then
  . ${LOCALVARS}
 fi
 
-PD=$(test_pd $PD ${PD_INSTALL}/pd)
+PD=$(test_pd ${PD_INSTALL}/pd $PD)
 
 if [ "x$PD" = "x" ]
 then
