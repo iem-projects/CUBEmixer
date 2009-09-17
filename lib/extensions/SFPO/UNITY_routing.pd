@@ -1,0 +1,15 @@
+#N canvas 1406 358 450 300 10;
+#X obj 56 36 inlet;
+#X obj 65 204 outlet;
+#X obj 59 125 t f f;
+#X obj 57 76 t f;
+#X obj 59 104 + 1;
+#X obj 63 149 *;
+#X obj 63 177 mtx_eye;
+#X connect 0 0 3 0;
+#X connect 2 0 5 0;
+#X connect 2 1 5 1;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
