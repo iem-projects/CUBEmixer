@@ -2,13 +2,13 @@
 #X obj 11 11 cnv 15 58 198 empty empty SF_OUT 2 10 0 12 -225271 -66577
 0;
 #X obj 14 32 tgl 20 0 \$0_PLAY_gui \$0_PLAY_gui empty 0 -6 0 8 -233017
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 46 38 bng 15 250 50 0 \$0_sfpo_edit \$0_sfpo_edit EDIT 0 -6
 0 8 -62784 -1 -1;
 #X obj 55 68 vfad_scale -1;
 #X obj 13 107 cnv 2 40 2 empty empty empty 20 12 0 14 -1 -66577 0;
 #X obj 19 64 vsl 30 131 0 130 0 0 \$0_sfpo_vol_gui \$0_sfpo_vol_gui
-+07 1 140 0 8 -233017 -1 -1 0 1;
++02 1 140 0 8 -233017 -1 -1 9800 1;
 #X obj 312 74 route float;
 #X msg 312 163 label \$1;
 #X obj 312 119 t f f;
@@ -23,7 +23,7 @@
 #X msg 109 390 \; \$1-edit vis 1;
 #X obj 109 320 r \$0_sfpo_edit;
 #N canvas 1280 0 547 343 \$0-edit 1;
-#N canvas 1456 21 931 439 gui 1;
+#N canvas 1456 21 931 439 gui 0;
 #X obj 236 254 popup 80 20 #ffffff ------------ DACOUTS AMBIBUS;
 #X obj 416 252 popup 60 20 #ffffff OUT OUT 01 OUT 02 OUT 03 OUT 04
 OUT 05 OUT 06 OUT 07 OUT 08 OUT 09 OUT 10 OUT 11 OUT 12 OUT 13 OUT 14
@@ -70,12 +70,12 @@ OUT 55 OUT 56 OUT 57 OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64
 #X obj 11 11 cnv 15 498 298 empty empty SF_OUT 2 10 0 12 -225271 -66577
 0;
 #X obj 82 200 tgl 15 0 \$0_PLAY_gui \$0_PLAY_gui PLAY 0 -6 0 8 -258113
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 82 166 bng 15 250 50 0 \$0_sfpo_open \$0_sfpo_open OPEN 0 -6
 0 8 -4034 -1 -1;
 #X obj 55 163 vfad_scale -1;
 #X obj 19 159 vsl 30 131 0 130 0 0 \$0_sfpo_vol_gui \$0_sfpo_vol_gui
-+07 1 140 0 8 -233017 -1 -1 0 1;
++02 1 140 0 8 -233017 -1 -1 9800 1;
 #X symbolatom 17 121 0 0 0 2 soundfile #0_filename_togui #0_filename_fromgui
 ;
 #X text 335 257 Channel 26;
@@ -176,13 +176,13 @@ SAVE 0 -6 0 8 -260097 -1 -1;
 #X restore 765 420 pd setadc;
 #X obj 377 173 nbx 5 14 0 128 0 0 \$0_firstadc \$0_firstadc 1st_adc
 0 -8 0 10 -262144 -1 -1 0 256;
-#X obj 297 36 vradio 15 1 0 3 \$0-router \$0-router empty 0 -8 0 10
--262144 -1 -1 0;
+#X obj 297 36 vradio 15 1 0 4 \$0-router \$0-router empty 0 -8 0 10
+-262144 -1 -1 3;
 #X text 423 34 unity;
 #X text 320 49 N3D->SN3D;
 #X text 319 66 SN3D->N3D;
 #X obj 397 36 vradio 15 1 0 3 \$0-weighter \$0-weighter empty 0 -8
-0 10 -262144 -1 -1 0;
+0 10 -262144 -1 -1 2;
 #X text 421 50 ACN->SID;
 #X text 318 34 unity;
 #X text 421 69 FuMa->SID;
@@ -213,7 +213,7 @@ SAVE 0 -6 0 8 -260097 -1 -1;
 #X connect 10 0 6 0;
 #X connect 11 0 1 0;
 #X restore 742 263 pd sourceselect;
-#N canvas 0 0 883 394 matrices 1;
+#N canvas 1308 156 883 394 matrices 0;
 #X obj 53 268 sendreceive /EXT/SFPO/MATRIX;
 #X msg 74 93 N3DtoSN3D;
 #X msg 61 63 UNITY;
@@ -250,6 +250,7 @@ SAVE 0 -6 0 8 -260097 -1 -1;
 #X connect 13 0 11 0;
 #X connect 14 0 12 0;
 #X restore 616 161 pd matrices;
+#X text 318 79 Fuma->SID;
 #X connect 0 0 30 0;
 #X connect 1 0 2 0;
 #X connect 2 0 1 0;
@@ -278,7 +279,7 @@ SAVE 0 -6 0 8 -260097 -1 -1;
 #X restore 13 217 pd \$0-edit;
 #X obj 122 55 r \$0_PLAY_gui;
 #X obj 122 150 s \$0_PLAY_gui;
-#X obj 14 32 iem_image PICS/play_bg.gif 0 0 empty empty;
+#X obj 14 32 iem_image PICS/stop_bg.gif 0 0 empty empty;
 #X obj 122 77 route float;
 #X obj 122 99 t f f;
 #X obj 157 177 select 0;

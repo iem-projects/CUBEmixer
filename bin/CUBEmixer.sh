@@ -32,7 +32,7 @@ CUBEMIXERPATH=$(pwd)
 
 LOCALVARSTEMPLATE="${ETC}/LocalVars.template.sh"
 
-STARTUPPATCHES="${ETC}/configured.sh"
+STARTUPPATCHES="${LOCALETC}/configured.sh"
 LOCALVARS="${LOCALETC}/LocalVars.sh"
 
 PD_INSTALL="lib/pd/bin"
