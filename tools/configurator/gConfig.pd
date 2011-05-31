@@ -1,24 +1,24 @@
 #N canvas 96 139 1041 516 10;
 #X obj 101 101 cnv 15 398 40 empty empty I/O 10 12 0 14 -233017 -66577
 0;
-#X obj 148 123 nbx 5 14 0 128 0 0 \$0_adcs \$0_adcs ADCs 0 -8 0 10
--262144 -1 -1 64 256;
+#X obj 138 123 nbx 5 14 0 128 0 0 \$0_adcs \$0_adcs INs 0 -8 0 10 -262144
+-1 -1 64 256;
 #X obj 101 146 cnv 15 398 40 empty empty channel 10 12 0 14 -191407
 -66577 0;
 #X obj 186 168 nbx 5 14 0 64 0 0 \$0_channels \$0_channels CHANNELs
-0 -8 0 10 -262144 -1 -1 24 256;
+0 -8 0 10 -262144 -1 -1 16 256;
 #X obj 266 168 nbx 5 14 0 16 0 0 \$0_fx \$0_fx FX-slots 0 -8 0 10 -262144
 -1 -1 4 256;
 #X obj 101 299 cnv 15 398 40 empty empty BUSses 10 12 0 14 -228856
 -66577 0;
 #X obj 186 321 nbx 5 14 0 64 0 0 \$0_bus \$0_bus BUSs 0 -8 0 10 -262144
--1 -1 16 256;
+-1 -1 0 256;
 #X obj 101 359 cnv 15 199 40 empty empty SETTINGs 10 12 0 14 -191407
 -66577 0;
 #X obj 101 249 cnv 15 398 40 empty empty AMBISONICS 10 12 0 14 -191407
 -66577 0;
 #X obj 326 271 nbx 5 14 0 16 0 0 \$0_ambiorder \$0_ambiorder order
-0 -8 0 10 -262144 -1 -1 4 256;
+0 -8 0 10 -262144 -1 -1 3 256;
 #X obj 220 264 popup 80 20 #ffffff type sphere hemi circ;
 #X obj 219 262 cnv 15 81 23 empty empty type 0 -6 0 10 -1 -1 0;
 #X obj 156 380 bng 15 250 50 0 \$0_save \$0_save save 17 7 0 10 -257985
@@ -30,7 +30,7 @@
 #X obj 459 360 bng 38 250 50 0 \$0_generate \$0_generate empty 17 7
 0 10 -258113 -257985 -1;
 #X obj 329 382 tgl 12 0 \$0_force \$0_force overwrite 17 7 0 10 -262144
--1 -191407 1 1;
+-1 -191407 0 1;
 #X obj 459 440 route 0;
 #X msg 459 402 0;
 #X obj 101 192 cnv 15 398 40 empty empty AUX 10 12 0 14 -228856 -66577
@@ -166,8 +166,8 @@
 #X msg 795 254 3;
 #X msg 827 254 2;
 #X msg 70 38 name type \, options sphere hemi circ;
-#X obj 426 271 nbx 5 14 0 300 0 0 \$0_ambidacs \$0_ambidacs DACs 0
--8 0 10 -262144 -1 -1 29 256;
+#X obj 426 271 nbx 5 14 0 300 0 0 \$0_ambidacs \$0_ambidacs OUTs 0
+-8 0 10 -262144 -1 -1 40 256;
 #X obj 866 56 r \$0_ambiorder;
 #X obj 779 82 t b f;
 #X obj 769 163 calc_ambichans;
@@ -201,16 +201,18 @@
 #X obj 459 459 generators ../../lib \$0;
 #X obj 211 137 cnv 2 280 2 empty empty empty 20 12 0 14 -162280 -66577
 0;
-#X obj 211 123 nbx 5 14 0 128 0 0 \$0_dacs \$0_dacs DACs 0 -8 0 10
--262144 -1 -1 67 256;
-#X obj 276 123 nbx 5 14 0 67 0 0 \$0_daccs \$0_daccs compensatedDACs
-0 -8 0 10 -262144 -1 -1 29 256;
-#X obj 390 121 bng 15 250 50 0 \$0-dacrouting \$0-dacrouting routing
+#X obj 261 123 nbx 5 14 0 128 0 0 \$0_dacs \$0_dacs DACs 0 -8 0 10
+-262144 -1 -1 64 256;
+#X obj 317 123 nbx 5 14 0 67 0 0 \$0_daccs \$0_daccs compensated 0
+-8 0 10 -262144 -1 -1 24 256;
+#X obj 410 121 bng 15 250 50 0 \$0-dacrouting \$0-dacrouting routing
 -20 -7 0 10 -203904 -4160 -1;
 #X obj 443 121 bng 15 250 50 0 dac_routing_save dac_routing_save save
 17 7 0 10 -257985 -1 -1;
 #X obj 443 106 bng 15 250 50 0 dac_routing_load dac_routing_load load
 17 7 0 10 -4034 -1 -1;
+#X obj 194 123 nbx 5 14 0 128 0 0 \$0_outs \$0_outs OUTs 0 -8 0 10
+-262144 -1 -1 0 256;
 #X connect 10 0 24 0;
 #X connect 15 0 18 0;
 #X connect 16 0 33 0;
