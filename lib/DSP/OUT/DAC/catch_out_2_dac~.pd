@@ -1,4 +1,4 @@
-#N canvas 59 57 563 553 10;
+#N canvas 353 126 563 553 10;
 #X obj 44 171 z~ 0;
 #X obj 145 69 unpack f f;
 #X obj 43 44 catch~ \$1_OUT;
@@ -10,8 +10,8 @@
 #X obj 129 240 r DSP_MIX_INTERPOL_TIME;
 #X obj 45 272 mull~ 0 50;
 #X obj 305 118 DSP_label OUT \$1_OUT;
-#X obj 45 327 dac~ \$2;
-#X obj 141 324 s~ \$2_DAC;
+#X obj 45 385 dac~ \$2;
+#X obj 114 385 s~ \$2_DAC;
 #X obj 64 197 r \$3lin_OUT_MASTER_GAIN;
 #X text 161 294 3.arg: <float> dollar-0 unique number of parent patch
 ;
@@ -21,13 +21,23 @@
 #X obj 176 123 samplerate~;
 #X obj 119 123 / 44100;
 #X obj 119 145 * 44100;
-#X obj 299 436 send_regname /DAC/\$1/VU/LEVEL;
-#X obj 299 325 prvu~;
-#X obj 299 349 unpack;
-#X obj 299 371 change;
-#X obj 299 392 pack;
-#X obj 46 301 hp4_butt~ 100;
-#X obj 236 194 receive_parameter /OUT/LFC/HIGHCUT/FREQ;
+#X obj 199 483 send_regname /DAC/\$1/VU/LEVEL;
+#X obj 199 372 prvu~;
+#X obj 199 396 unpack;
+#X obj 199 418 change;
+#X obj 199 439 pack;
+#N canvas 529 83 622 430 lowcut 0;
+#X obj 66 25 inlet~;
+#X obj 69 361 outlet~;
+#X text 308 166 75;
+#X obj 68 218 hp3_bess~ 75 300;
+#X obj 175 195 r DSP_MIX_INTERPOL_TIME;
+#X obj 123 165 r /OUT/LFC/1/HIGHCUT/FREQ;
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 2;
+#X connect 5 0 3 1;
+#X restore 45 347 pd lowcut;
 #X connect 0 0 9 0;
 #X connect 1 0 17 0;
 #X connect 1 1 6 0;
@@ -37,8 +47,6 @@
 #X connect 6 1 7 1;
 #X connect 7 0 9 1;
 #X connect 8 0 9 2;
-#X connect 9 0 12 0;
-#X connect 9 0 22 0;
 #X connect 9 0 26 0;
 #X connect 13 0 7 0;
 #X connect 17 0 19 0;
@@ -52,4 +60,5 @@
 #X connect 24 0 25 0;
 #X connect 25 0 21 0;
 #X connect 26 0 11 0;
-#X connect 27 0 26 1;
+#X connect 26 0 12 0;
+#X connect 26 0 22 0;
