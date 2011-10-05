@@ -1,14 +1,14 @@
-#N canvas 1638 229 877 586 10;
+#N canvas 598 293 877 586 10;
 #X obj 100 140 \$1weights \$0;
 #X obj 319 104 helper/weights_logic \$0 \$1;
 #X obj 101 101 cnv 15 183 40 empty empty weights 10 12 0 14 -195568
 -66577 0;
 #X obj 216 104 nbx 6 14 -2 2 0 0 \$0GUI_ambiweight_nbx \$0GUI_ambiweight_nbx
 empty -15 7 0 10 -245568 -1 -1 0 256;
-#X obj 104 122 bng 15 250 50 0 \$0-reset \$0-reset reset 17 7 0 10
+#X obj 104 122 bng 15 250 50 0 \$0-reset \$0-reset unity 19 7 0 11
 -262144 -1 -1;
-#X obj 164 122 bng 15 250 50 0 \$0_set_max_re \$0_set_max_re max_re
-19 7 0 10 -262144 -1 -1;
+#X obj 164 122 bng 15 250 50 0 \$0_set_max_re \$0_set_max_re focus
+19 7 0 11 -262144 -1 -1;
 #X connect 1 0 3 0;
 #X connect 3 0 1 0;
 #X coords 0 -1 1 1 185 190 1 100 100;
