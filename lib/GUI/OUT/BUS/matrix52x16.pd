@@ -1,4 +1,4 @@
-#N canvas 117 132 650 727 10;
+#N canvas 117 132 507 731 10;
 #X obj 36 101 cnv 3 1 1 empty empty DAC01 0 0 0 8 -262144 -1 0;
 #X obj 36 112 cnv 3 1 1 empty empty DAC02 0 0 0 8 -262144 -1 0;
 #X obj 36 123 cnv 3 1 1 empty empty DAC03 0 0 0 8 -262144 -1 0;
@@ -266,7 +266,7 @@
 #X obj 395 90 cnv 3 1 1 empty empty 4 0 0 0 8 -262144 -1 0;
 #X obj 419 90 cnv 3 1 1 empty empty 5 0 0 0 8 -262144 -1 0;
 #X obj 443 90 cnv 3 1 1 empty empty 6 0 0 0 8 -262144 -1 0;
-#N canvas 516 264 450 300 (subpatch) 1;
+#N canvas 516 264 450 300 (subpatch) 0;
 #X obj 0 39 cnv 15 400 16 empty dummy BUS-ROUTING 135 10 0 14 -233017
 -66577 0;
 #N canvas 505 31 717 448 bus_sendreceive 0;
@@ -364,7 +364,7 @@
 0;
 #X obj 73 94 cnv 2 384 2 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 500 78 r \$0BUS_matrix_togui;
-#X obj 482 667 s \$0BUS_matrix_fromgui;
+#X obj 540 78 r \$0BUS_matrix_togui;
+#X obj 532 667 s \$0BUS_matrix_fromgui;
 #X connect 186 0 285 0;
 #X connect 284 0 186 0;
