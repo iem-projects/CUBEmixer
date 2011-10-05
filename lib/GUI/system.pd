@@ -7,12 +7,13 @@
 #X obj 230 135 r \$0_open;
 #X obj 230 159 f \$0;
 #X msg 230 213 \; \$1 vis 1;
-#N canvas 1173 645 631 379 \$0-system-settings 0;
+#N canvas 414 165 631 379 \$0-system-settings 0;
 #X obj 23 142 GUI/net;
 #X obj 23 17 CUEstorage;
 #X obj 197 324 tests/srnames;
 #X msg 197 301 bang;
 #X obj 22 216 guisettings;
+#X obj 194 17 OUT/load_compensationfile;
 #X connect 3 0 2 0;
 #X restore 242 99 pd \$0-system-settings;
 #X obj 230 185 makefilename pd-%d-system-settings;

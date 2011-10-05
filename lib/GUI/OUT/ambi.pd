@@ -1,4 +1,4 @@
-#N canvas 1065 175 255 250 10;
+#N canvas 617 182 522 317 10;
 #X obj 2 1 cnv 15 63 198 empty empty AMBI 1 12 0 14 -233017 -66577
 0;
 #X obj 5 99 cnv 2 38 2 empty empty empty 20 12 0 14 -33289 -66577 0
@@ -95,7 +95,7 @@ we also want them to be applied to /AMBI/BIN;
 #X connect 30 0 17 0;
 #X connect 32 0 1 0;
 #X restore 78 9 pd code;
-#N canvas 463 27 366 721 \$0-ambisonic.settings 0;
+#N canvas 463 27 361 635 \$0-ambisonic.settings 0;
 #X obj 9 10 cnv 15 44 189 empty empty gain 1 12 0 14 -195568 -66577
 0;
 #X obj 13 92 cnv 2 22 2 empty empty empty 20 12 0 14 -99865 -66577
@@ -107,26 +107,20 @@ we also want them to be applied to /AMBI/BIN;
 #N canvas 1911 538 450 300 BIN 0;
 #X obj 11 11 cnv 15 98 188 empty empty BIN 0 12 0 14 -195568 -66577
 0;
-#X obj 48 115 popup 60 20 #ffffff OUT OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float;
-#X obj 48 155 popup 60 20 #ffffff OUT OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float OUT float OUT float
-OUT float OUT float OUT float OUT float OUT float;
+#X obj 48 115 popup 60 20 #ffffff OUT OUT 01 OUT 02 OUT 03 OUT 04 OUT 05
+OUT 06 OUT 07 OUT 08 OUT 09 OUT 10 OUT 11 OUT 12 OUT 13 OUT 14 OUT 15
+OUT 16 OUT 17 OUT 18 OUT 19 OUT 20 OUT 21 OUT 22 OUT 23 OUT 24 OUT 25
+OUT 26 OUT 27 OUT 28 OUT 29 OUT 30 OUT 31 OUT 32 OUT 33 OUT 34 OUT 35
+OUT 36 OUT 37 OUT 38 OUT 39 OUT 40 OUT 41 OUT 42 OUT 43 OUT 44 OUT 45
+OUT 46 OUT 47 OUT 48 OUT 49 OUT 50 OUT 51 OUT 52 OUT 53 OUT 54 OUT 55
+OUT 56 OUT 57 OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64;
+#X obj 48 155 popup 60 20 #ffffff OUT OUT 01 OUT 02 OUT 03 OUT 04 OUT 05
+OUT 06 OUT 07 OUT 08 OUT 09 OUT 10 OUT 11 OUT 12 OUT 13 OUT 14 OUT 15
+OUT 16 OUT 17 OUT 18 OUT 19 OUT 20 OUT 21 OUT 22 OUT 23 OUT 24 OUT 25
+OUT 26 OUT 27 OUT 28 OUT 29 OUT 30 OUT 31 OUT 32 OUT 33 OUT 34 OUT 35
+OUT 36 OUT 37 OUT 38 OUT 39 OUT 40 OUT 41 OUT 42 OUT 43 OUT 44 OUT 45
+OUT 46 OUT 47 OUT 48 OUT 49 OUT 50 OUT 51 OUT 52 OUT 53 OUT 54 OUT 55
+OUT 56 OUT 57 OUT 58 OUT 59 OUT 60 OUT 61 OUT 62 OUT 63 OUT 64;
 #X text 77 97 Left;
 #X text 69 138 Right;
 #N canvas 1437 411 551 231 outrouting_1 0;
@@ -195,10 +189,10 @@ empty 0 -6 0 10 -245568 -1 -1 0 256;
 #X obj 232 552 cnv 2 2 21 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 133 555 hsl 201 15 181 -181 0 0 \$0GUI_ambisonic_rotZ_fromgui
-\$0GUI_ambisonic_rotZ_togui empty -2 -8 0 10 -262144 -1 -1 9945 1;
+\$0GUI_ambisonic_rotZ_togui empty -2 -8 0 10 -262144 -1 -1 10000 1
+;
 #X obj 58 10 ambisonic/weights \$4;
 #X obj 8 579 ambisonic/load_decodermatrixfile;
-#X obj 8 625 load_compensationfile;
 #X restore 1 205 pd \$0-ambisonic.settings;
 #X obj 44 61 vfad_scale -1;
 #X obj 3 31 tgl 15 0 \$0_LS_fromgui \$0_LS_togui LS 3 -6 0 8 -262144
