@@ -1,9 +1,11 @@
 #N canvas 1186 256 734 335 10;
-#N canvas 90 17 425 221 \$0-INPUT-METERS 0;
+#N canvas 90 17 690 236 \$0-INPUT-METERS 0;
+#X obj 185 18 cnv 15 300 20 empty empty INPUT-METER-BRIDGE 60 12 0
+14 -233017 -66577 0;
 #X obj 21 44 bank8 /IN 0;
-#X obj 195 44 bank8 /IN 1;
-#X obj 65 18 cnv 15 300 20 empty empty INPUT-METER-BRIDGE 60 12 0 14
--233017 -66577 0;
+#X obj 171 44 bank8 /IN 1;
+#X obj 321 44 bank8 /IN 2;
+#X obj 471 44 bank8 /IN 3;
 #X restore 302 163 pd \$0-INPUT-METERS;
 #X obj 101 101 cnv 15 63 198 empty empty METERS 2 10 0 12 -228992 -66577
 0;
@@ -12,17 +14,17 @@
 #X obj 302 85 r \$0sINPUT;
 #X obj 302 125 s pd-\$0-INPUT-METERS;
 #X msg 302 105 vis 1;
-#N canvas 308 112 1249 218 \$0-OUTPUT-METERS 0;
-#X obj 21 44 bank8 /DAC 0;
-#X obj 195 44 bank8 /DAC 1;
-#X obj 369 44 bank8 /DAC 2;
-#X obj 543 44 bank8 /DAC 3;
-#X obj 717 44 bank8 /DAC 4;
-#X obj 891 44 bank8 /DAC 5;
-#X obj 1065 44 bank8 /DAC 6;
-#X obj 1239 44 bank8 /DAC 7;
-#X obj 575 18 cnv 15 300 20 empty empty OUTPUT-METER-BRIDGE 60 12 0
+#N canvas 308 112 1238 223 \$0-OUTPUT-METERS 0;
+#X obj 7 44 bank8 /DAC 0;
+#X obj 464 18 cnv 15 300 20 empty empty OUTPUT-METER-BRIDGE 60 12 0
 14 -233017 -66577 0;
+#X obj 157 44 bank8 /DAC 1;
+#X obj 307 44 bank8 /DAC 2;
+#X obj 457 44 bank8 /DAC 3;
+#X obj 607 44 bank8 /DAC 4;
+#X obj 757 44 bank8 /DAC 5;
+#X obj 907 44 bank8 /DAC 6;
+#X obj 1057 44 bank8 /DAC 7;
 #X restore 462 163 pd \$0-OUTPUT-METERS;
 #X msg 462 105 vis 1;
 #X obj 462 85 r \$0sOUTPUT;
