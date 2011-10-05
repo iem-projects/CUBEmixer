@@ -1,4 +1,4 @@
-#N canvas 1381 262 1032 564 10;
+#N canvas 131 77 922 578 10;
 #X obj 533 53 unpack;
 #X msg 572 72 set \$1;
 #X obj 533 113 makefilename %02d:;
@@ -15,7 +15,7 @@
 #X obj 455 306 del 50;
 #X obj 478 418 sendreceive /OUT/AMBI/SPEAKER/ORDER_WEIGHT;
 #X obj 553 443 list prepend 0;
-#N canvas 0 0 450 370 serialize 0;
+#N canvas 0 22 450 370 serialize 0;
 #X obj 218 194 list split 1;
 #X obj 218 154 until;
 #X obj 218 174 list append;
@@ -89,6 +89,23 @@
 #X obj 743 271 r \$1-reset;
 #X obj 743 301 t b b b;
 #X obj 718 509 t b;
+#X obj 39 139 f \$2;
+#X obj 39 115 t b;
+#X obj 39 93 r \$1_set_max_re;
+#X msg 76 400 1.53392 1.47312 1.35514 1.18697 0.978508 0.741929 0.490868
+0.23954;
+#X msg 30 237 1.2678 0.732204;
+#X msg 39 259 1.37828 1.06845 0.553269;
+#X msg 48 282 1.43813 1.23902 0.882156 0.440689;
+#X msg 55 305 1.47557 1.33752 1.08079 0.741107 0.365005;
+#X msg 61 328 1.50118 1.40006 1.20803 0.944381 0.635317 0.311032;
+#X msg 68 363 1.51979 1.44261 1.29414 1.08562 0.832759 0.554349 0.27073
+;
+#X obj 156 65 print ERROR_weights_logic;
+#X msg 23 215 1;
+#X obj 40 181 sel 0 1 2 3 4 5 6 7;
+#X msg 155 42 ambisonic order greater than 7 or less than 0;
+#X obj 155 19 t b;
 #X connect 0 0 7 0;
 #X connect 0 1 1 0;
 #X connect 1 0 4 0;
@@ -137,3 +154,24 @@
 #X connect 42 1 40 0;
 #X connect 42 2 43 0;
 #X connect 43 0 36 0;
+#X connect 44 0 56 0;
+#X connect 45 0 44 0;
+#X connect 46 0 45 0;
+#X connect 47 0 30 0;
+#X connect 48 0 30 0;
+#X connect 50 0 30 0;
+#X connect 51 0 30 0;
+#X connect 52 0 30 0;
+#X connect 53 0 30 0;
+#X connect 55 0 30 0;
+#X connect 56 0 55 0;
+#X connect 56 1 48 0;
+#X connect 56 2 49 0;
+#X connect 56 3 50 0;
+#X connect 56 4 51 0;
+#X connect 56 5 52 0;
+#X connect 56 6 53 0;
+#X connect 56 7 47 0;
+#X connect 56 8 58 0;
+#X connect 57 0 54 0;
+#X connect 58 0 57 0;
