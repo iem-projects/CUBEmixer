@@ -1,0 +1,28 @@
+#N canvas 1688 491 450 300 10;
+#X obj 11 11 cnv 8 338 40 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 89 25 cnv 8 251 12 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 17 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -216768 -1
+-1;
+#X symbolatom 87 24 36 0 0 0 - - -;
+#X obj 13 51 openpanel;
+#X obj 13 99 splitfilename /;
+#X obj 13 74 symbol;
+#X obj 107 129 send_regname /OUT/AMBI/DECODERMATRIX/FILE;
+#X obj 38 11 cnv 8 1 1 empty empty load 0 6 0 10 -191407 -1 0;
+#X obj 39 23 cnv 8 1 1 empty empty decoder 0 6 0 10 -191407 -1 0;
+#X obj 39 35 cnv 8 1 1 empty empty matrix 0 6 0 10 -191407 -1 0;
+#X obj 176 64 loadbang;
+#X msg 177 86 symbol decoder.mtx;
+#X obj 163 39 cnv 8 1 1 empty empty CUBEMixer3/etc/CUBEMixer/ 0 6 0
+12 -99865 -66577 0;
+#X text 124 10 AMBISONICS DECODER;
+#X connect 2 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 1 3 0;
+#X connect 5 1 7 0;
+#X connect 6 0 5 0;
+#X connect 11 0 12 0;
+#X connect 12 0 3 0;
+#X coords 0 -1 1 1 340 42 2 10 10;
