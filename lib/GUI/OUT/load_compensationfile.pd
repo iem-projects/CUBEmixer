@@ -1,4 +1,4 @@
-#N canvas 1688 491 450 300 10;
+#N canvas 1796 76 450 300 10;
 #X obj 11 11 cnv 8 338 40 empty empty empty 20 12 0 14 -191407 -66577
 0;
 #X obj 93 25 cnv 8 251 12 empty empty empty 20 12 0 14 -262144 -66577
@@ -16,26 +16,26 @@
 #X obj 161 39 cnv 8 1 1 empty empty CUBEMixer3/etc/CUBEMixer/ 0 6 0
 12 -191407 -66577 0;
 #X msg 177 119 symbol compensation.mtx;
-#X obj 107 162 send_regname /OUT/AMBI/COMPENSATION/FILE;
 #X obj 89 40 cnv 8 1 1 empty empty matrix 0 6 0 10 -191407 -1 0;
 #X obj 41 12 tgl 15 0 \$0_comp_on_fromgui \$0_comp_on_togui empty 17
-7 0 10 -204800 -1 -1 0 1;
+7 0 10 -204800 -1 -1 1 1;
 #X obj 60 14 cnv 12 17 12 empty empty ON 1 6 0 12 -99865 -4032 0;
 #X obj 268 187 loadbang;
 #X msg 268 209 1;
-#X obj 52 241 sendreceive /OUT/AMBI/COMPENSATION/ON;
 #X obj 52 219 r \$0_comp_on_fromgui;
 #X obj 52 263 s \$0_comp_on_togui;
 #X text 107 9 COMPENSATION;
+#X obj 107 162 send_regname /OUT/MASTER/COMPENSATION/FILE;
+#X obj 52 241 sendreceive /OUT/MASTER/COMPENSATION/ON;
 #X connect 2 0 4 0;
 #X connect 4 0 6 0;
 #X connect 5 1 3 0;
-#X connect 5 1 12 0;
+#X connect 5 1 20 0;
 #X connect 6 0 5 0;
 #X connect 9 0 11 0;
 #X connect 11 0 3 0;
-#X connect 16 0 17 0;
-#X connect 17 0 20 0;
-#X connect 18 0 20 0;
-#X connect 19 0 18 0;
+#X connect 15 0 16 0;
+#X connect 16 0 18 0;
+#X connect 17 0 21 0;
+#X connect 21 0 18 0;
 #X coords 0 -1 1 1 340 42 2 10 10;
