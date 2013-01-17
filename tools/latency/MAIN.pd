@@ -1,4 +1,4 @@
-#N canvas 51 77 986 576 10;
+#N canvas 52 76 986 576 10;
 #X text 86 12 DO NOT use this with speakers ON !!!;
 #X text 51 56 1 unplug your speakers (otherwise your ears might fail)
 ;
@@ -210,15 +210,15 @@ burst instead of the 1st sample.;
 #X restore 118 520 pd samples2ms;
 #X floatatom 118 541 6 0 0 1 ms - -;
 #X obj 211 453 nbx 3 14 0 100 0 0 \$0-m_thresh \$0-m_thresh empty 0
--6 1728 10 -262144 -1 -1 80 256;
-#X obj 207 321 vu 15 120 \$0-m_level empty -1 -8 576 8 -66577 -1 1
-0;
+-6 0 10 -262144 -1 -1 80 256;
+#X obj 207 321 vu 15 120 \$0-m_level empty -1 -8 0 8 -66577 -1 1 0
+;
 #X obj 118 368 +~;
 #N canvas 217 116 674 220 tabwrite 0;
 #X obj 392 252 inlet;
 #X obj 231 253 inlet~;
 #X obj 278 253 inlet~;
-#N canvas 0 0 450 300 graph2 0;
+#N canvas 0 0 450 300 (subpatch) 0;
 #X array scope 600 float 0;
 #X array scope2 600 float 0;
 #X coords 0 1 599 -1 600 200 1;
@@ -253,10 +253,10 @@ burst instead of the 1st sample.;
 #X obj 118 301 t f f;
 #X obj 118 401 dac~adc;
 #X obj 69 251 vsl 15 128 1 100 0 0 \$0-m_thresh \$0-m_thresh thresh
--8 -8 1728 8 -262144 -1 -1 10134 1;
+-8 -8 0 8 -262144 -1 -1 10134 1;
 #X obj 410 113 cnv 15 420 450 empty empty CONTINUITY 20 12 0 14 -233017
 -66577 0;
-#N canvas 0 51 428 539 continuity 0;
+#N canvas 1486 152 428 539 continuity 0;
 #N canvas 0 0 419 384 highfreq 0;
 #X obj 79 35 loadbang;
 #X obj 109 178 samplerate~;
@@ -309,8 +309,8 @@ a signal-block.;
 #X obj 319 354 t b f;
 #X obj 264 497 s \$0-c_thresh;
 #X obj 264 450 loadbang;
-#X msg 264 474 10;
 #X obj 284 377 pack -100 -90;
+#X msg 264 474 100;
 #X connect 0 0 4 0;
 #X connect 1 0 22 0;
 #X connect 3 0 6 0;
@@ -320,7 +320,7 @@ a signal-block.;
 #X connect 5 0 15 0;
 #X connect 5 0 23 0;
 #X connect 6 0 5 0;
-#X connect 7 0 28 0;
+#X connect 7 0 27 0;
 #X connect 8 0 9 0;
 #X connect 9 0 11 0;
 #X connect 11 0 12 0;
@@ -335,30 +335,31 @@ a signal-block.;
 #X connect 22 0 2 0;
 #X connect 23 0 8 0;
 #X connect 23 0 14 0;
-#X connect 24 0 28 0;
-#X connect 24 1 28 1;
-#X connect 26 0 27 0;
-#X connect 27 0 25 0;
-#X connect 28 0 20 0;
+#X connect 24 0 27 0;
+#X connect 24 1 27 1;
+#X connect 26 0 28 0;
+#X connect 27 0 20 0;
+#X connect 28 0 25 0;
 #X restore 665 287 pd continuity;
 #X floatatom 665 307 8 0 0 0 - - -;
 #X msg 665 420 add2 \$1;
-#X obj 768 274 vu 15 120 \$0-c_level empty -1 -8 576 8 -66577 -1 1
-0;
+#X obj 768 274 vu 15 120 \$0-c_level empty -1 -8 0 8 -66577 -1 1 0
+;
 #X obj 665 271 nbx 3 14 0 100 0 0 \$0-c_thresh \$0-c_thresh empty 0
--6 1728 10 -262144 -1 -1 10 256;
+-6 0 10 -262144 -1 -1 100 256;
 #X obj 626 282 vsl 15 128 0 100 0 0 \$0-c_thresh \$0-c_thresh thresh
--8 -8 1728 8 -262144 -1 -1 1270 1;
-#X msg 412 437 results;
+-8 -8 0 8 -262144 -1 -1 12700 1;
+#X msg 412 437 results 40.089 0.139 0.174 0.15 0.046 0.267 0.255 0.081
+0.243 0.127 0.325;
 #X obj 40 483 bng 30 250 50 0 \$0-showtables empty show_tables -10
--6 1152 8 -225271 -1 -1;
+-6 0 8 -225271 -1 -1;
 #X text 31 144 3 hit "bang";
 #X text 30 160 4 we send out a dirac~pulse and measure the time (in
 samples) it takes to reappear on the (virtual) adc~;
 #X text 565 119 (measure clicks and pops);
 #X text 415 165 4 wait until the adjusted CPUload is reached.;
 #X text 415 150 3 adjust the "CPUload";
-#N canvas 0 0 450 566 reset! 0;
+#N canvas 4 52 450 566 reset! 0;
 #X obj 132 54 r pd;
 #X obj 132 75 route dsp;
 #X obj 132 98 route float;
@@ -423,9 +424,9 @@ samples) it takes to reappear on the (virtual) adc~;
 0;
 #X obj 418 334 cpueater;
 #X obj 418 316 nbx 3 14 0 100 0 0 empty empty CPUload 40 8 0 10 -262144
--1 -1 50 256;
+-1 -1 0 256;
 #X obj 418 278 hradio 15 0 0 10 empty empty empty 0 -6 0 8 -262144
--1 -1 5;
+-1 -1 0;
 #X obj 418 296 * 10;
 #X text 412 200 5 we send out a high-pitched carrier-tone at the 2nd
 dac and get it back on the 2nd adc. The tone is filtered out. crackles
