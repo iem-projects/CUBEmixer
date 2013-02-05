@@ -75,7 +75,7 @@ typedef struct _popup
 
 static char* popup_send2pd = "pd";
 static void popup_checkversion(void) {
-#if PD_MINOR_VERSION >= 43
+#if PD_MINOR_VERSION >= 42
   int major=0, minor=0, bugfix=0;
   sys_getversion(&major, &minor, &bugfix);
   if(minor>=43)
