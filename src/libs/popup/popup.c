@@ -72,6 +72,17 @@ typedef struct _popup
   int         x_column_break_height; /*  */
 } t_popup;
 
+
+static char* popup_send2pd = "pd";
+static void popup_checkversion(void) {
+#if PD_MINOR_VERSION >= 43
+  int major=0, minor=0, bugfix=0;
+  sys_getversion(&major, &minor, &bugfix);
+  if(minor>=43)
+    popup_send2pd="pdsend";
+#endif
+}
+
 /* widget helper functions */
 
 /* Append " x " to the following line to show debugging messages */
@@ -672,7 +683,7 @@ static void *popup_new(t_symbol *s, int argc, t_atom *argv)
   pd_bind(&x->x_obj.ob_pd, x->x_sym);
   
   /* define proc in tcl/tk where "popup%p" is the receive, "output" is the method, and "$index" is an argument. */
-  sys_vgui("proc popup_sel%x {index} {\n pd [concat popup%p output $index \\;]\n }\n", x, x);
+  sys_vgui("proc popup_sel%x {index} {\n %s [concat popup%p output $index \\;]\n }\n", x, popup_send2pd, x);
   
   /* Add symbol inlet (hard to say how this actually works?? */
   outlet_new(&x->x_obj, &s_list);
@@ -718,6 +729,7 @@ void popup_setup(void) {
 #if PD_MINOR_VERSION >= 37
   class_setsavefn(popup_class,&popup_save);
 #endif
-  
+
+  popup_checkversion();
   post("Popup v0.2 Ben Bogart.\nCVS: $Revision$ $Date$");
 }
